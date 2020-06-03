@@ -1,0 +1,21 @@
+name: Deploy blog to server
+
+on:
+  schedule:
+    - cron: "0 19 * * *"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+
+      - name: Deploy
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          ftp-server: ftp://mrhope.site/
+          ftp-username: mrhope
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
