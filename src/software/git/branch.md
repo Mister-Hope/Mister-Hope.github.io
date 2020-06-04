@@ -1,13 +1,13 @@
 ---
+title: 分支管理
 icon: branch
+author: 廖雪峰
 category: Git
 tags:
   - Git
   - 软件
 copyright: Copyright by 廖雪峰 Edited by Mr.Hope
 ---
-
-# 分支管理
 
 ## 概述
 
@@ -73,7 +73,7 @@ $ git checkout dev
 Switched to branch 'dev'
 ```
 
-然后，用`git branch`命令查看当前分支:
+然后，用 `git branch` 命令查看当前分支:
 
 ```sh
 $ git branch
@@ -304,8 +304,6 @@ Deleted branch feature1 (was 14096d0).
 - 当 Git 无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。解决冲突就是把 Git 合并失败的文件手动编辑为我们希望的内容，再提交。
 
 - 用 `git log --graph` 命令可以看到分支合并图。
-
----
 
 ## 分支管理策略
 

@@ -6,7 +6,7 @@ module.exports = {
 
     "/linux/": require("./linux"),
 
-    "/code/windows/": ["", "shortcutKey", "addPath", "cmd"],
+    "/code/windows/": ["", "shortcutKey", "addPath", "cmd", "notepad"],
 
     "/code/website/": require("./website"),
 

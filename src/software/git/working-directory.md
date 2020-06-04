@@ -1,5 +1,7 @@
 ---
+title: 工作区和暂存区
 icon: workingDirectory
+author: 廖雪峰
 category: Git
 tags:
   - Git
@@ -7,9 +9,9 @@ tags:
 copyright: Copyright by 廖雪峰 Edited by Mr.Hope
 ---
 
-# 工作区和暂存区
-
 Git 和其他版本控制系统如 SVN 的一个不同之处就是有暂存区的概念。
+
+<!-- more -->
 
 ## 工作区(Working Directory)
 
@@ -72,7 +74,7 @@ Changes to be committed:
 
 现在，暂存区的状态就变成这样了:
 
-![示例图6](./assets/git4.jpg)
+![状态示意图](./assets/git4.jpg)
 
 所以，`git add` 命令实际上就是把要提交的所有修改放到暂存区(Stage)，然后，执行 `git commit` 就可以一次性把暂存区的所有修改提交到分支。
 

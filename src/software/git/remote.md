@@ -1,13 +1,13 @@
 ---
+title: 远程仓库
 icon: remote
+author: 廖雪峰
 category: Git
 tags:
   - Git
   - 软件
 copyright: Copyright by 廖雪峰 Edited by Mr.Hope
 ---
-
-# 远程仓库
 
 ## 什么是远程仓库
 

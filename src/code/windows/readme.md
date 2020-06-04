@@ -12,3 +12,7 @@ category: 基础
 - [添加到 path](addPath.md)
 
 - [Windows 快捷键](shortcutKey.md)
+
+- [快速打开 CMD](cmd.md)
+
+- [记事本的遗留问题](notepad.md)

@@ -122,7 +122,14 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 3: invalid 
 
 第二行注释是为了告诉 Python 解释器，按照 UTF-8 编码读取源代码，否则，您在源代码中写的中文输出可能会有乱码。
 
-申明了 UTF-8 编码并不意味着您的 `.py` 文件就是 UTF-8 编码的，必须并且要确保文本编辑器正在使用 "UTF-8 without BOM" 编码。(旧版 Windows 记事本的 UTF-8 是 UTF-8 with BOM)
+申明了 UTF-8 编码并不意味着您的 `.py` 文件就是 UTF-8 编码的，必须并且要确保文本编辑器正在使用 "UTF-8 without BOM" 编码。
+
+::: tip
+旧版 Windows 记事本的 UTF-8 是 UTF-8 with BOM。
+
+- 具体详情请见 [记事本的遗留问题](../../../windows/notepad.md)
+
+:::
 
 如果 `.py` 文件本身使用 UTF-8 编码，并且也申明了 `# -*- coding: utf-8 -*-`，打开命令提示符测试就可以正常显示中文。
 

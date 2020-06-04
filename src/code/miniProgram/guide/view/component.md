@@ -1,5 +1,5 @@
 ---
-title: 基础组件 
+title: 基础组件
 icon: extension
 category: 小程序
 ---

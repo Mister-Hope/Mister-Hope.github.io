@@ -1,13 +1,13 @@
 ---
-icon: repeal
+title: 版本回退
+icon: return
+author: 廖雪峰
 category: Git
 tags:
   - Git
   - 软件
 copyright: Copyright by 廖雪峰 Edited by Mr.Hope
 ---
-
-# 版本回退
 
 修改 readme.txt 文件如下:
 
@@ -92,6 +92,9 @@ eaadf4e385e865d25c48e7ca9c8395c3f7dfaef0 wrote a readme file
 每提交一个新版本，实际上 Git 就会把它们自动串成一条时间线。如果使用可视化工具查看 Git 历史，就可以更清楚地看到提交历史的时间线:
 
 ![Git 时间线](./assets/timeline.jpg)
+
+::: tip 更多选项
+关于 `git log` 的更多选项，请见 [ProGit 书籍](/file/git/progit_v2.1.45.pdf) 的 P43。
 
 ## 回退版本
 

@@ -1,13 +1,13 @@
 ---
+title: 修改管理
 icon: change
+author: 廖雪峰
 category: Git
 tags:
   - Git
   - 软件
 copyright: Copyright by 廖雪峰 Edited by Mr.Hope
 ---
-
-# 修改管理
 
 ## 管理修改
 
