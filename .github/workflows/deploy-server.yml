@@ -23,4 +23,4 @@ jobs:
           git log
           ls
       - name: Deploy
-        run: git push -f git@mrhope.site:/www/wwwroot/mrhope gh-pages
+        run: git push -f git@mrhope.site:/www/wwwroot/blog gh-pages
