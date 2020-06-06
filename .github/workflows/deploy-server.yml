@@ -1,8 +1,6 @@
 name: Deploy blog to server
 
-on:
-  schedule:
-    - cron: "0 19 * * *"
+on: page_build
 
 jobs:
   deploy:
@@ -12,10 +10,17 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: gh-pages
+          fetch-depth: 0
 
+      - name: Configuration environment
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan mrhope.site >> ~/.ssh/known_hosts
+          git config --global user.name 'Mr.Hope'
+          git config --global user.email 'zhangbowang1998@gmail.com'
+          git log
+          ls
       - name: Deploy
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
-        with:
-          ftp-server: ftp://mrhope.site/
-          ftp-username: mrhope
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
+        run: git push -f git@mrhope.site:/www/wwwroot/mrhope gh-pages

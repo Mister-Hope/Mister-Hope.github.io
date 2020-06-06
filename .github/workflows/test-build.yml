@@ -1,8 +1,8 @@
-name: Deploy blog to github pages
+name: Test blog build
 
 on:
   push:
-    branches:
+    branches-ignore:
       - master
 
 jobs:
@@ -30,11 +30,3 @@ jobs:
 
       - name: Build Blog
         run: yarn run super:build
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages
-          CLEAN: true
-          FOLDER: dist
