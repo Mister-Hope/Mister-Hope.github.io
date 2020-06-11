@@ -20,7 +20,8 @@ jobs:
           ssh-keyscan mrhope.site >> ~/.ssh/known_hosts
           git config --global user.name 'Mr.Hope'
           git config --global user.email 'zhangbowang1998@gmail.com'
-          git log
-          ls
+
       - name: Deploy
-        run: git push -f git@mrhope.site:/www/wwwroot/blog gh-pages
+        run: |
+          git push -f git@mrhope.site:/www/wwwroot/blog gh-pages
+          ssh git@mrhope.site "cd /www/wwwroot/blog && git reset --hard HEAD"
