@@ -31,11 +31,11 @@ find -ls
 
 find 有它自己的一套复杂的过滤语句。下面列举的是一些最常用的您可以用以获取某些文件列表的过滤器:
 
-- find -name '\*.c' —— 查找符合某 shell 式样式的文件名的文件。用 iname 开启大小写不敏感搜索。
-- find -path '_test_' —— 查找符合某 shell 式样式的路径的文件。用 ipath 开启大小写不敏感搜索。
-- find -mtime -5 —— 查找近五天内编辑过的文件。您也可以用 +5 来查找五天之前编辑过的文件。
-- find -newer server.c —— 查找比 server.c 更新的文件。
-- find -type d —— 查找所有文件夹。如果想找出所有文件，那就用 -type f；找符号连接就用 -type l。
+- `find -name '*.c'` —— 查找符合某 shell 式样式的文件名的文件。用 iname 开启大小写不敏感搜索。
+- `find -path '_test_'` —— 查找符合某 shell 式样式的路径的文件。用 ipath 开启大小写不敏感搜索。
+- `find -mtime -5` —— 查找近五天内编辑过的文件。您也可以用 +5 来查找五天之前编辑过的文件。
+- `find -newer server.c` —— 查找比 server.c 更新的文件。
+- `find -type d` —— 查找所有文件夹。如果想找出所有文件，那就用 `-type f`；找符号连接就用 `-type l`。
 
 要注意，上面提到的这些过滤器都是可以组合使用的，例如找出近两天内编辑过的 C 源码:
 

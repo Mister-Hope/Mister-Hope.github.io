@@ -835,23 +835,23 @@ Object.prototype.toString.call(x); // "[object xxx]"
 
 ES6 新增内置对象的`Symbol.toStringTag`属性值如下。
 
-- `JSON[Symbol.toStringTag]`: 'JSON'
-- `Math[Symbol.toStringTag]`: 'Math'
-- Module 对象`M[Symbol.toStringTag]`: 'Module'
-- `ArrayBuffer.prototype[Symbol.toStringTag]`: 'ArrayBuffer'
-- `DataView.prototype[Symbol.toStringTag]`: 'DataView'
-- `Map.prototype[Symbol.toStringTag]`: 'Map'
-- `Promise.prototype[Symbol.toStringTag]`: 'Promise'
-- `Set.prototype[Symbol.toStringTag]`: 'Set'
-- `%TypedArray%.prototype[Symbol.toStringTag]`: 'Uint8Array'等
-- `WeakMap.prototype[Symbol.toStringTag]`: 'WeakMap'
-- `WeakSet.prototype[Symbol.toStringTag]`: 'WeakSet'
-- `%MapIteratorPrototype%[Symbol.toStringTag]`: 'Map Iterator'
-- `%SetIteratorPrototype%[Symbol.toStringTag]`: 'Set Iterator'
-- `%StringIteratorPrototype%[Symbol.toStringTag]`: 'String Iterator'
-- `Symbol.prototype[Symbol.toStringTag]`: 'Symbol'
-- `Generator.prototype[Symbol.toStringTag]`: 'Generator'
-- `GeneratorFunction.prototype[Symbol.toStringTag]`: 'GeneratorFunction'
+- `JSON[Symbol.toStringTag]`: `'JSON'`
+- `Math[Symbol.toStringTag]`: `'Math'`
+- Module 对象`M[Symbol.toStringTag]`: `'Module'`
+- `ArrayBuffer.prototype[Symbol.toStringTag]`: `'ArrayBuffer'`
+- `DataView.prototype[Symbol.toStringTag]`: `'DataView'`
+- `Map.prototype[Symbol.toStringTag]`: `'Map'`
+- `Promise.prototype[Symbol.toStringTag]`: `'Promise'`
+- `Set.prototype[Symbol.toStringTag]`: `'Set'`
+- `%TypedArray%.prototype[Symbol.toStringTag]`: `'Uint8Array'` 等
+- `WeakMap.prototype[Symbol.toStringTag]`: `'WeakMap'`
+- `WeakSet.prototype[Symbol.toStringTag]`: `'WeakSet'`
+- `%MapIteratorPrototype%[Symbol.toStringTag]`: `'Map Iterator'`
+- `%SetIteratorPrototype%[Symbol.toStringTag]`: `'Set Iterator'`
+- `%StringIteratorPrototype%[Symbol.toStringTag]`: `'String Iterator'`
+- `Symbol.prototype[Symbol.toStringTag]`: `'Symbol'`
+- `Generator.prototype[Symbol.toStringTag]`: `'Generator'`
+- `GeneratorFunction.prototype[Symbol.toStringTag]`: `'GeneratorFunction'`
 
 ### Symbol.unscopables
 

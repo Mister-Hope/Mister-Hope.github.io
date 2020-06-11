@@ -5,7 +5,7 @@
 它的使用格式如下。
 
 ```bash
-$ cut OPTION [FILE]
+cut OPTION [FILE]
 ```
 
 如果没有指定文件名，将读取标准输入。

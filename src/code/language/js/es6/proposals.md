@@ -608,8 +608,8 @@ BigInt 对象继承了 Object 提供的实例方法。
 
 此外，还提供了三个静态方法。
 
-- `BigInt.asUintN(width, BigInt)`: 对给定的大整数，返回 0 到 2<sup>width</sup> - 1 之间的大整数形式。
-- `BigInt.asIntN(width, BigInt)`: 对给定的大整数，返回 -2<sup>width - 1</sup> 到 2<sup>width - 1</sup> - 1 之间的大整数形式。
+- `BigInt.asUintN(width, BigInt)`: 对给定的大整数，返回 0 到 2^width^ - 1 之间的大整数形式。
+- `BigInt.asIntN(width, BigInt)`: 对给定的大整数，返回 -2^width - 1^ 到 2^width - 1^ - 1 之间的大整数形式。
 - `BigInt.parseInt(string[, radix])`: 近似于`Number.parseInt`，将一个字符串转换成指定进制的大整数。
 
 ```js

@@ -158,9 +158,9 @@ tags:
 
 当我们想要在口语中添加强调，我们重读某些词，以便隐含的说出我们想要说的意思。类似的，在写作中，我们通过将文字写成斜体来强调它。比如，接下来的两个句子就有不同的含义.
 
-I am glad you weren't late.
+I am glad you weren’t late.
 
-I am _glad_ you weren't _late_.
+I am _glad_ you weren’t _late_.
 
 第一句话听起来真的像松了一口气因为没有迟到。相反，第二句话听起来具有讽刺性而且有隐含的攻击性，表达对一个人迟到的恼怒。
 

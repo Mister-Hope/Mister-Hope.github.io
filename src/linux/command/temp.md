@@ -92,15 +92,24 @@ groupdel groupname 　　删除用户组
 ##　添加用户到用户组
 将一个用户添加到用户组中，千万不能直接用:
 
+```sh
 usermod -G groupA
-这样做会使您离开其他用户组，仅仅做为 这个用户组 groupA 的成员。
-应该用 加上 -a 选项:
+```
 
+这样做会使您离开其他用户组，仅仅做为 这个用户组 groupA 的成员。
+
+应该用 加上 `-a` 选项:
+
+```sh
 usermod -a -G groupA user
 (FC4: usermod -G groupA,groupB,groupC user)
--a 代表 append， 也就是 将自己添加到 用户组 groupA 中，而不必离开 其他用户组。
+```
+
+`-a` 代表 `append`， 也就是 将自己添加到 用户组 groupA 中，而不必离开 其他用户组。
 
 命令的所有的选项，及其含义:
+
+```
 Options:
 
 -c, –comment COMMENT new value of the GECOS field
@@ -123,13 +132,19 @@ location (use only with -d)
 -s, –shell SHELL new login shell for the user account
 -u, –uid UID new UID for the user account
 -U, –unlock unlock the user account
+```
 
 查看用户所属的组使用命令:
 
-\$ groups user
+```sh
+groups user
+```
+
 或者查看文件:
 
-\$ cat /etc/group
+```sh
+cat /etc/group
+```
 
 ## 用户
 
@@ -143,9 +158,9 @@ sudo useradd [用户名]
 
 创建新用户: useradd
 
--d 指定目录文件夹
+`-d` 指定目录文件夹
 
--m 新账号名
+`-m` 新账号名
 
 如:
 
@@ -153,12 +168,12 @@ sudo useradd [用户名]
 useradd -d /www/abc -m abc
 ```
 
-- -c comment 指定一段注释性描述。
-- -d 目录 指定用户主目录，如果此目录不存在，则同时使用-m 选项，可以创建主目录。
-- -g 用户组 指定用户所属的用户组。
-- -G 用户组，用户组 指定用户所属的附加组。
-- -s Shell 文件 指定用户的登录 Shell。
-- -u 用户号 指定用户的用户号，如果同时有-o 选项，则可以重复使用其他用户的标识号。
+- `-c`: comment 指定一段注释性描述。
+- `-d`: 目录 指定用户主目录，如果此目录不存在，则同时使用-m 选项，可以创建主目录。
+- `-g`: 用户组 指定用户所属的用户组。
+- `-G`: 用户组，用户组 指定用户所属的附加组。
+- `-s`: Shell 文件 指定用户的登录 Shell。
+- `-u`: 用户号 指定用户的用户号，如果同时有-o 选项，则可以重复使用其他用户的标识号。
 
 ### 设置密码
 
@@ -185,30 +200,30 @@ Linux 服务管理两种方式 service 和 systemctl
 
 1. service 命令
 
-service 命令其实是去 `/etc/init.d` 目录下，去执行相关程序
+   service 命令其实是去 `/etc/init.d` 目录下，去执行相关程序
 
-- service 命令启动 redis 脚本
+   - service 命令启动 redis 脚本
 
-```bash
-service redis start
-```
+   ```bash
+   service redis start
+   ```
 
-- 直接启动 redis 脚本
+   - 直接启动 redis 脚本
 
-```bash
-/etc/init.d/redis start
-```
+   ```bash
+   /etc/init.d/redis start
+   ```
 
-- 开机自启动
+   - 开机自启动
 
-```bash
-update-rc.d redis defaults
-```
+   ```bash
+   update-rc.d redis defaults
+   ```
 
-其中脚本需要我们自己编写
+   其中脚本需要我们自己编写
 
 2. systemctl 命令
 
-systemd 是 Linux 系统最新的初始化系统(init),作用是提高系统的启动速度，尽可能启动较少的进程，尽可能更多进程并发启动。
+   systemd 是 Linux 系统最新的初始化系统(init),作用是提高系统的启动速度，尽可能启动较少的进程，尽可能更多进程并发启动。
 
-systemd 对应的进程管理命令是 systemctl
+   systemd 对应的进程管理命令是 systemctl

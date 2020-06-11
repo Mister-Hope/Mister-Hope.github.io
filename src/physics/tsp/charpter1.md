@@ -64,7 +64,7 @@ $$(p + \frac{an^2}{V^2})(V - nb) = nRT$$
 
 3. 如果认为固体和液体在一定范围内可以把 $\alpha$ 和 $\kappa _T$ 视为常量，则有:
 
-   $$V(T, p) - V_0 (T_0, 0)[1+ \alpha (T - T_0)-\kappa_Tp]$$
+   $$V(T, p) - V_0 (T_0, 0) [1+ \alpha (T - T_0)-\kappa_Tp]$$
 
 ## $\text{\S 1.4}$
 

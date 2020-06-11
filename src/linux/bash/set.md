@@ -319,50 +319,50 @@ globstar  off
 
 上面例子表示 `globstar` 参数默认是关闭的。
 
-**(1)-s**
+1. **`-s`**
 
-`-s` 用来打开某个参数。
+   `-s` 用来打开某个参数。
 
-```bash
-shopt -s optionNameHere
-```
+   ```bash
+   shopt -s optionNameHere
+   ```
 
-**(2)-u**
+2. **`-u`**
 
-`-u` 用来关闭某个参数。
+   `-u` 用来关闭某个参数。
 
-```bash
-shopt -u optionNameHere
-```
+   ```bash
+   shopt -u optionNameHere
+   ```
 
-举例来说，`histappend` 这个参数表示退出当前 Shell 时，将操作历史追加到历史文件中。这个参数默认是打开的，如果使用下面的命令将其关闭，那么当前 Shell 的操作历史将替换掉整个历史文件。
+   举例来说，`histappend` 这个参数表示退出当前 Shell 时，将操作历史追加到历史文件中。这个参数默认是打开的，如果使用下面的命令将其关闭，那么当前 Shell 的操作历史将替换掉整个历史文件。
 
-```bash
-shopt -u histappend
-```
+   ```bash
+   shopt -u histappend
+   ```
 
-**(3)-q**
+3. **`-q`**
 
-`-q` 的作用也是查询某个参数是否打开，但不是直接输出查询结果，而是通过命令的执行状态 (`$?`) 表示查询结果。如果状态为 `0`，表示该参数打开；如果为 `1`，表示该参数关闭。
+   `-q` 的作用也是查询某个参数是否打开，但不是直接输出查询结果，而是通过命令的执行状态 (`$?`) 表示查询结果。如果状态为 `0`，表示该参数打开；如果为 `1`，表示该参数关闭。
 
-```bash
-$ shopt -q globstar
-$ echo $?
-1
-```
+   ```bash
+   $ shopt -q globstar
+   $ echo $?
+   1
+   ```
 
-上面命令查询 `globstar` 参数是否打开。返回状态为 `1`，表示该参数是关闭的。
+   上面命令查询 `globstar` 参数是否打开。返回状态为 `1`，表示该参数是关闭的。
 
-这个用法主要用于脚本，供 `if` 条件结构使用。
+   这个用法主要用于脚本，供 `if` 条件结构使用。
 
-```bash
-if shopt -q globstar; then
-  ...
-if
-```
+   ```bash
+   if shopt -q globstar; then
+     ...
+   if
+   ```
 
 ## 参考链接
 
 - [The Set Builtin](https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html)
-- [Safer bash scripts with 'set -euxo pipefail'](https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/)
+- [Safer bash scripts with 'set -euxo pipefail’](https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/)
 - [Writing Robust Bash Shell Scripts](http://www.davidpashley.com/articles/writing-robust-shell-scripts/)

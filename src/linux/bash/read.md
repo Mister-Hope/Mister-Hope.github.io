@@ -84,91 +84,91 @@ done < $filename
 
 `read` 命令的参数如下。
 
-**(1)-t 参数**
+1. **`-t` 参数**
 
-`read` 命令的 `-t` 参数，设置了超时的秒数。如果超过了指定时间，用户仍然没有输入，脚本将放弃等待，继续向下执行。
+   `read` 命令的 `-t` 参数，设置了超时的秒数。如果超过了指定时间，用户仍然没有输入，脚本将放弃等待，继续向下执行。
 
-```bash
-#!/bin/bash
+   ```bash
+   #!/bin/bash
 
-echo -n "输入一些文本 > "
-if read -t 3 response; then
-  echo "用户已经输入了"
-else
-  echo "用户没有输入"
-fi
-```
+   echo -n "输入一些文本 > "
+   if read -t 3 response; then
+     echo "用户已经输入了"
+   else
+     echo "用户没有输入"
+   fi
+   ```
 
-上面例子中，输入命令会等待 3 秒，如果用户超过这个时间没有输入，这个命令就会执行失败。`if` 根据命令的返回值，转入 `else` 代码块，继续往下执行。
+   上面例子中，输入命令会等待 3 秒，如果用户超过这个时间没有输入，这个命令就会执行失败。`if` 根据命令的返回值，转入 `else` 代码块，继续往下执行。
 
-环境变量 `TMOUT` 也可以起到同样作用，指定 `read` 命令等待用户输入的时间(单位为秒)。
+   环境变量 `TMOUT` 也可以起到同样作用，指定 `read` 命令等待用户输入的时间(单位为秒)。
 
-```bash
-TMOUT=3
-read response
-```
+   ```bash
+   TMOUT=3
+   read response
+   ```
 
-上面例子也是等待 3 秒，如果用户还没有输入，就会超时。
+   上面例子也是等待 3 秒，如果用户还没有输入，就会超时。
 
-**(2)-p 参数**
+2. **`-p` 参数**
 
-`-p` 参数指定用户输入的提示信息。
+   `-p` 参数指定用户输入的提示信息。
 
-```bash
-read -p "Enter one or more values > "
-echo "REPLY = '$REPLY'"
-```
+   ```bash
+   read -p "Enter one or more values > "
+   echo "REPLY = '$REPLY'"
+   ```
 
-上面例子中，先显示`Enter one or more values >`，再接受用户的输入。
+   上面例子中，先显示`Enter one or more values >`，再接受用户的输入。
 
-**(3)-a 参数**
+3. **`-a` 参数**
 
-`-a` 参数把用户的输入赋值给一个数组，从零号位置开始。
+   `-a` 参数把用户的输入赋值给一个数组，从零号位置开始。
 
-```bash
-$ read -a people
-alice duchess dodo
-$ echo ${people[2]}
-dodo
-```
+   ```bash
+   $ read -a people
+   alice duchess dodo
+   $ echo ${people[2]}
+   dodo
+   ```
 
-上面例子中，用户输入被赋值给一个数组 `people`，这个数组的 2 号成员就是 `dodo`。
+   上面例子中，用户输入被赋值给一个数组 `people`，这个数组的 2 号成员就是 `dodo`。
 
-**(4)-n 参数**
+4. **`-n` 参数**
 
-`-n` 参数指定只读取若干个字符作为变量值，而不是整行读取。
+   `-n` 参数指定只读取若干个字符作为变量值，而不是整行读取。
 
-```bash
-$ read -n 3 letter
-abcdefghij
-$ echo $letter
-abc
-```
+   ```bash
+   $ read -n 3 letter
+   abcdefghij
+   $ echo $letter
+   abc
+   ```
 
-上面例子中，变量`letter`只包含 3 个字母。
+   上面例子中，变量 `letter` 只包含 3 个字母。
 
-**(5)-e 参数**
+5. **-e 参数**
 
-`-e` 参数允许用户输入的时候，使用 `readline` 库提供的快捷键，比如自动补全。具体的快捷键可以参阅《行操作》一章。
+   `-e` 参数允许用户输入的时候，使用 `readline` 库提供的快捷键，比如自动补全。具体的快捷键可以参阅《行操作》一章。
 
-```bash
-#!/bin/bash
+   ```bash
+   #!/bin/bash
 
-echo Please input the path to the file:
+   echo Please input the path to the file:
 
-read -e fileName
+   read -e fileName
 
-echo $fileName
-```
+   echo $fileName
+   ```
 
-上面例子中，`read`命令接受用户输入的文件名。这时，用户可能想使用 Tab 键的文件名“自动补全”功能，但是 `read` 命令的输入默认不支持 `readline` 库的功能。`-e` 参数就可以允许用户使用自动补全。
+   上面例子中，`read`命令接受用户输入的文件名。这时，用户可能想使用 Tab 键的文件名“自动补全”功能，但是 `read` 命令的输入默认不支持 `readline` 库的功能。`-e` 参数就可以允许用户使用自动补全。
 
-**(6)其他参数**
+6. **其他参数**
 
-- `-d delimiter`: 定义字符串 `delimiter` 的第一个字符作为用户输入的结束，而不是一个换行符。
-- `-r`: raw 模式，表示不把用户输入的反斜杠字符解释为转义字符。
-- `-s`: 使得用户的输入不显示在屏幕上，这常常用于输入密码或保密信息。
-- `-u fd`: 使用文件描述符 `fd` 作为输入。
+   - `-d delimiter`: 定义字符串 `delimiter` 的第一个字符作为用户输入的结束，而不是一个换行符。
+   - `-r`: raw 模式，表示不把用户输入的反斜杠字符解释为转义字符。
+   - `-s`: 使得用户的输入不显示在屏幕上，这常常用于输入密码或保密信息。
+   - `-u fd`: 使用文件描述符 `fd` 作为输入。
 
 ## IFS 变量
 

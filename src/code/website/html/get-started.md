@@ -59,7 +59,7 @@ A tag is:
 
 开始标签常被称为 **起始标签(Opening tag)**，结束标签常称为 **闭合标签(Closing tag)**
 
-e.g.
+比如:
 
 ```html
 <h1>我是内容</h1>

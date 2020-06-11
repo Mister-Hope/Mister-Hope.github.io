@@ -14,5 +14,5 @@ $ ps | grep vi
 `-u`参数列出指定用户拥有的进程。
 
 ```bash
-$ ps -u yourusername
+ps -u yourusername
 ```

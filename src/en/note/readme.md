@@ -14,7 +14,7 @@ This is a collection of prose poems I wrote in Senior 1, originally published in
 
 Later I also wrote some poems to add in, among which "Autumn Thought" has most poems.
 
-Recently, I moved it as a teenager's memory in my blog.
+Recently, I moved it as a teenager’s memory in my blog.
 :::
 
 - [Autumn Thought](fall/catalog.md)
@@ -34,7 +34,7 @@ Also check [Qzone Album](https://user.qzone.qq.com/1178522294)
 ::: tip Introduction
 This is the sentiment of life I wrote in Senior 1, originally published in the qzone dairy.
 
-Recently, I moved it as a teenager's memory in my blog.
+Recently, I moved it as a teenager’s memory in my blog.
 :::
 
 - [Details](life/readme.md)
@@ -44,7 +44,7 @@ Recently, I moved it as a teenager's memory in my blog.
 ::: tip Introduction
 This is some small prose poems I wrote in Senior 1, originally published in the qzone dairy.
 
-Recently, I moved it as a teenager's memory in my blog.
+Recently, I moved it as a teenager’s memory in my blog.
 :::
 
 - [Details](poem/readme.md)

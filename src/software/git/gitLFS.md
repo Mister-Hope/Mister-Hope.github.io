@@ -18,15 +18,15 @@ Git Large File Storage (LFS) replaces large files such as audio samples, videos,
    git lfs install
    ```
 
-   You'll need to run this in your repository directory, once per repository.
+   You’ll need to run this in your repository directory, once per repository.
 
-2. Select the file types you'd like Git LFS to manage (or directly edit your .gitattributes). You can configure additional file extensions at anytime.
+2. Select the file types you’d like Git LFS to manage (or directly edit your .gitattributes). You can configure file extensions at anytime.
 
    ```sh
    git lfs track "*.psd"
    ```
 
-   Make sure .gitattributes is tracked
+   Make sure to track `.gitattributes`
 
    ```sh
    git add .gitattributes

@@ -6,7 +6,7 @@ icon: nginx
 
 ## Intro
 
-Nginx is a high performance HTTP and reverse proxy server and an IMAP / POP3 / SMTP proxy server. It features low memory, high concurrency, high stability, and Nginx's friendly and flexible configuration.
+Nginx is a high performance HTTP and reverse proxy server and an IMAP / POP3 / SMTP proxy server. It features low memory, high concurrency, high stability, and Nginx’s friendly and flexible configuration.
 
 ## Starting, Stopping, and Reloading Configuration
 
@@ -180,6 +180,6 @@ server {
 
 This will set up a server that will route all requests except for requests for static images to the proxied server operating on `localhost:9000` through the FastCGI protocol.
 
-## Offical Docs
+## Official Docs
 
 - [Navigate](https://docs.nginx.com/nginx/admin-guide/)

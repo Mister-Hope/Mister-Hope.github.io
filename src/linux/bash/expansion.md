@@ -669,119 +669,119 @@ $ shopt -u [optionname]
 $ shopt [optionname]
 ```
 
-**(1)dotglob 参数**
+1. **dotglob 参数**
 
-`dotglob` 参数可以让扩展结果包括隐藏文件(即点开头的文件)。
+   `dotglob` 参数可以让扩展结果包括隐藏文件(即点开头的文件)。
 
-正常情况下，扩展结果不包括隐藏文件。
+   正常情况下，扩展结果不包括隐藏文件。
 
-```bash
-$ ls *
-abc.txt
-```
+   ```bash
+   $ ls *
+   abc.txt
+   ```
 
-打开 `dotglob`，就会包括隐藏文件。
+   打开 `dotglob`，就会包括隐藏文件。
 
-```bash
-$ shopt -s dotglob
-$ ls *
-abc.txt .config
-```
+   ```bash
+   $ shopt -s dotglob
+   $ ls *
+   abc.txt .config
+   ```
 
-**(2)nullglob 参数**
+2. **nullglob 参数**
 
-`nullglob` 参数可以让通配符不匹配任何文件名时，返回空字符。
+   `nullglob` 参数可以让通配符不匹配任何文件名时，返回空字符。
 
-默认情况下，通配符不匹配任何文件名时，会保持不变。
+   默认情况下，通配符不匹配任何文件名时，会保持不变。
 
-```bash
-$ rm b*
-rm: 无法删除'b*': 没有那个文件或目录
-```
+   ```bash
+   $ rm b*
+   rm: 无法删除'b*': 没有那个文件或目录
+   ```
 
-上面例子中，由于当前目录不包括 `b` 开头的文件名，导致 `b*` 不会发生文件名扩展，保持原样不变，所以 `rm` 命令报错没有 `b*` 这个文件。
+   上面例子中，由于当前目录不包括 `b` 开头的文件名，导致 `b*` 不会发生文件名扩展，保持原样不变，所以 `rm` 命令报错没有 `b*` 这个文件。
 
-打开 `nullglob` 参数，就可以让不匹配的通配符返回空字符串。
+   打开 `nullglob` 参数，就可以让不匹配的通配符返回空字符串。
 
-```bash
-$ shopt -s nullglob
-$ rm b*
-rm: 缺少操作数
-```
+   ```bash
+   $ shopt -s nullglob
+   $ rm b*
+   rm: 缺少操作数
+   ```
 
-上面例子中，由于没有 `b*` 匹配的文件名，所以 `rm b*` 扩展成了 `rm`，导致报错变成了”缺少操作数“。
+   上面例子中，由于没有 `b*` 匹配的文件名，所以 `rm b*` 扩展成了 `rm`，导致报错变成了”缺少操作数“。
 
-**(3)failglob 参数**
+3. **failglob 参数**
 
-`failglob` 参数使得通配符不匹配任何文件名时，Bash 会直接报错，而不是让各个命令去处理。
+   `failglob` 参数使得通配符不匹配任何文件名时，Bash 会直接报错，而不是让各个命令去处理。
 
-```bash
-$ shopt -s failglob
-$ rm b*
-bash: 无匹配: b*
-```
+   ```bash
+   $ shopt -s failglob
+   $ rm b*
+   bash: 无匹配: b*
+   ```
 
-上面例子中，打开 `failglob` 以后，由于 `b*` 不匹配任何文件名，Bash 直接报错了，不再让 `rm` 命令去处理。
+   上面例子中，打开 `failglob` 以后，由于 `b*` 不匹配任何文件名，Bash 直接报错了，不再让 `rm` 命令去处理。
 
-**(4)extglob 参数**
+4. **extglob 参数**
 
-`extglob` 参数使得 Bash 支持 ksh 的一些扩展语法。它默认应该是打开的。
+   `extglob` 参数使得 Bash 支持 ksh 的一些扩展语法。它默认应该是打开的。
 
-```bash
-$ shopt extglob
-extglob         on
-```
+   ```bash
+   $ shopt extglob
+   extglob         on
+   ```
 
-它的主要应用是支持量词语法。如果不希望支持量词语法，可以用下面的命令关闭。
+   它的主要应用是支持量词语法。如果不希望支持量词语法，可以用下面的命令关闭。
 
-```bash
-shopt -u extglob
-```
+   ```bash
+   shopt -u extglob
+   ```
 
-**(5)nocaseglob 参数**
+5. **nocaseglob 参数**
 
-`nocaseglob` 参数可以让通配符扩展不区分大小写。
+   `nocaseglob` 参数可以让通配符扩展不区分大小写。
 
-```bash
-$ shopt -s nocaseglob
-$ ls /windows/program*
-/windows/ProgramData
-/windows/Program Files
-/windows/Program Files (x86)
-```
+   ```bash
+   $ shopt -s nocaseglob
+   $ ls /windows/program*
+   /windows/ProgramData
+   /windows/Program Files
+   /windows/Program Files (x86)
+   ```
 
-上面例子中，打开 `nocaseglob` 以后，`program*` 就不区分大小写了，可以匹配 `ProgramData` 等。
+   上面例子中，打开 `nocaseglob` 以后，`program*` 就不区分大小写了，可以匹配 `ProgramData` 等。
 
-**(6)globstar 参数**
+6. **globstar 参数**
 
-`globstar` 参数可以使得 `**` 匹配零个或多个子目录。该参数默认是关闭的。
+   `globstar` 参数可以使得 `**` 匹配零个或多个子目录。该参数默认是关闭的。
 
-假设有下面的文件结构。
+   假设有下面的文件结构。
 
-```bash
-a.txt
-sub1/b.txt
-sub1/sub2/c.txt
-```
+   ```bash
+   a.txt
+   sub1/b.txt
+   sub1/sub2/c.txt
+   ```
 
-上面的文件结构中，顶层目录、第一级子目录 `sub1`、第二级子目录 `sub1\sub2` 里面各有一个文本文件。请问怎样才能使用通配符，将它们显示出来？
+   上面的文件结构中，顶层目录、第一级子目录 `sub1`、第二级子目录 `sub1\sub2` 里面各有一个文本文件。请问怎样才能使用通配符，将它们显示出来？
 
-默认情况下，只能写成下面这样。
+   默认情况下，只能写成下面这样。
 
-```bash
-$ ls *.txt */*.txt */*/*.txt
-a.txt  sub1/b.txt  sub1/sub2/c.txt
-```
+   ```bash
+   $ ls *.txt */*.txt */*/*.txt
+   a.txt  sub1/b.txt  sub1/sub2/c.txt
+   ```
 
-这是因为 `*` 只匹配当前目录，如果要匹配子目录，只能一层层写出来。
+   这是因为 `*` 只匹配当前目录，如果要匹配子目录，只能一层层写出来。
 
-打开 `globstar` 参数以后，`**` 匹配零个或多个子目录。因此，`**/*.txt` 就可以得到想要的结果。
+   打开 `globstar` 参数以后，`**` 匹配零个或多个子目录。因此，`**/*.txt` 就可以得到想要的结果。
 
-```bash
-$ shopt -s globstar
-$ ls **/*.txt
-a.txt  sub1/b.txt  sub1/sub2/c.txt
-```
+   ```bash
+   $ shopt -s globstar
+   $ ls **/*.txt
+   a.txt  sub1/b.txt  sub1/sub2/c.txt
+   ```
 
 ## 参考链接
 

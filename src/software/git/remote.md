@@ -49,7 +49,7 @@ Git 是分布式版本控制系统，同一个 Git 仓库，可以分布到不�
 
 现在的情景是，您已经在本地创建了一个 Git 仓库后，又想在 Github 创建一个 Git 仓库，并且让这两个仓库进行远程同步，这样，Github 上的仓库既可以作为备份，又可以让其他人通过该仓库来协作，真是一举多得。
 
-首先，登陆 Github，然后，在右上角找到“+”按钮，点击 "New Repository"。
+首先，登陆 Github，然后，在右上角找到 “+” 按钮，点击 "New Repository"。
 
 在项目填入 learngit，其他保持默认设置，点击“创建”按钮，就成功地创建了一个新的 Git 仓库:
 
@@ -61,7 +61,7 @@ Git 是分布式版本控制系统，同一个 Git 仓库，可以分布到不�
 git remote add origin git@github.com:nenuyouth/learngit.git
 ```
 
-请千万注意，把上面的 nenuStudentUnion 替换成您自己的 Github 账户名，否则，您在本地关联的就是我的远程库，关联没有问题，但是推送是推不上去的，因为您的 SSH Key 公钥不在我的账户列表中。
+请千万注意，把上面的 nenuyouth 替换成您自己的 Github 账户名，否则，您在本地关联的就是东北师范大学校学生会的远程库，关联没有问题，但是推送是推不上去的，因为您的 SSH Key 公钥不在东北师范大学校学生会的账户列表中。
 
 添加后，远程库的名字就是 `origin`，这是 Git 默认的叫法，也可以改成别的。
 
@@ -104,7 +104,7 @@ RSA key fingerprint is xx.xx.xx.xx.xx.
 Are you sure you want to continue connecting (yes/no)?
 ```
 
-这是因为 Git 使用 SSH 连接，而 SSH 连接在第一次验证 Github 服务器的 Key 时，需要您确认 Github 的 Key 的指纹信息是否真的来自 Github 的服务器，输入`yes`回车即可。
+这是因为 Git 使用 SSH 连接，而 SSH 连接在第一次验证 Github 服务器的 Key 时，需要您确认 Github 的 Key 的指纹信息是否真的来自 Github 的服务器，输入 `yes` 回车即可。
 
 Git 会输出一个警告，告诉您已经把 Github 的 Key 添加到本机的一个信任列表里了:
 
@@ -114,11 +114,11 @@ Warning: Permanently added 'Github.com' (RSA) to the list of known hosts.
 
 这个警告只会出现一次，后面的操作就不会有任何警告了。
 
-如果您实在担心有人冒充 Github 服务器，输入 yes 前可以对照 Github 的 RSA Key 的指纹信息是否与 SSH 连接给出的一致。
+如果您实在担心有人冒充 Github 服务器，输入 `yes` 前可以对照 Github 的 RSA Key 的指纹信息是否与 SSH 连接给出的一致。
 
 ### 关联小结
 
-要关联一个远程库，使用命令 git remote add origin git@server-name:path/repo-name.git；
+要关联一个远程库，使用命令 `git remote add origin git@<server-name>:<path>/<repo-name>.git`；
 
 关联后，使用命令 `git push -u origin master` 第一次推送 master 分支的所有内容；
 
@@ -146,6 +146,10 @@ remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 3
 Receiving objects: 100% (3/3), done.
 ```
 
+::: tip
+如果你使用 clone 命令克隆了一个仓库，命令会自动将其添加为远程仓库并默认以 “origin” 为简写。
+:::
+
 注意把 Git 库的地址换成您自己的，然后进入 `gitskills` 目录看看，已经有 README.md 文件了:
 
 ```sh
@@ -165,3 +169,72 @@ README.md
 要克隆一个仓库，首先必须知道仓库的地址，然后使用 `git clone` 命令克隆。
 
 Git 支持多种协议，包括 https，但通过 ssh 支持的原生 git 协议速度最快。
+
+## 从远程仓库中抓取
+
+从远程仓库中获得数据，可以执行:
+
+```sh
+git fetch <remote>
+```
+
+这个命令会访问远程仓库，从中拉取所有你还没有的数据。执行完成后，你将会拥有那个远程仓库中所有分支的引用，可以随时合并或查看。
+
+`git fetch origin` 会抓取克隆(或上一次抓取)后新推送的所有工作。 必须注意 `git fetch` 命令只会将数据下载到你的本地仓库——它并不会自动合并或修改你当前的工作。 当准备好时你必须手动将其合并入你的工作。
+
+## 推送到远程仓库
+
+当你想分享你的项目时，必须将其推送到上游。 这个命令很简单: `git push <remote> <branch>`。 当你
+想要将 master 分支推送到 origin 服务器时(再次说明，克隆时通常会自动帮你设置好那两个名字)， 那么
+运行这个命令就可以将你所做的备份到服务器:
+
+```sh
+git push origin master
+```
+
+只有当你有所克隆服务器的写入权限，并且之前没有人推送过时，这条命令才能生效。当你和其他人在同一时间克隆，他们先推送到上游然后你再推送到上游，你的推送就会毫无疑问地被拒绝。你必须先抓取他们的工作并将其合并进你的工作后才能推送。
+
+## 查看某个远程仓库
+
+如果想要查看某一个远程仓库的更多信息，可以使用 `git remote show <remote>` 命令。 如果想以一个特
+定的缩写名运行这个命令，例如 origin，会得到像下面类似的信息:
+
+```sh
+$ git remote show origin
+* remote origin
+Fetch URL: https://github.com/schacon/ticgit
+Push URL: https://github.com/schacon/ticgit
+HEAD branch: master
+Remote branches:
+master tracked
+dev-branch tracked
+Local branch configured for 'git pull':
+master merges with remote master
+Local ref configured for 'git push':
+master pushes to master (up to date)
+```
+
+它同样会列出远程仓库的 URL 与跟踪分支的信息。这些信息非常有用，它告诉你正处于 master 分支，并且如果运行 `git pull`，就会抓取所有的远程引用，然后将远程 master 分支合并到本地 master 分支。它也会列出拉取到的所有远程引用。
+
+## 远程仓库的重命名与移除
+
+你可以运行 `git remote rename` 来修改一个远程仓库的简写名。 例如，想要将 pb 重命名为 paul，可以用 `git remote rename` 这样做:
+
+```sh
+$ git remote rename pb paul
+$ git remote
+origin
+paul
+```
+
+值得注意的是这同样也会修改你所有远程跟踪的分支名字。 那些过去引用 `pb/master` 的现在会引用 `paul/master`。
+
+如果因为一些原因想要移除一个远程仓库——你已经从服务器上搬走了或不再想使用某一个特定的镜像了，又或者某一个贡献者不再贡献了——可以使用 `git remote remove` 或 `git remote rm`:
+
+```sh
+$ git remote remove paul
+$ git remote
+origin
+```
+
+一旦你使用这种方式删除了一个远程仓库，那么所有和这个远程仓库相关的远程跟踪分支以及配置信息也会一起被删除。

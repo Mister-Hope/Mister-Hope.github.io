@@ -21,7 +21,7 @@ tags:
 
 [安装](https://cn.vuejs.org/v2/guide/installation.html)
 
-尝试 Vue.js 最简单的方法是使用 [JSFiddle 上的 Hello World 例子](https://jsfiddle.net/chrisvfritz/50wL7mdz/)。您可以在浏览器新标签页中打开它，跟着例子学习一些基础用法。或者您也可以创建一个 <code>.html</code> 文件，然后通过如下方式引入 Vue:
+尝试 Vue.js 最简单的方法是使用 [JSFiddle 上的 Hello World 例子](https://jsfiddle.net/chrisvfritz/50wL7mdz/)。您可以在浏览器新标签页中打开它，跟着例子学习一些基础用法。或者您也可以创建一个 `.html` 文件，然后通过如下方式引入 Vue:
 
 ```html
 <!-- 开发环境版本，包含了有帮助的命令行警告 -->

@@ -1,12 +1,13 @@
 ---
+title: 语言
 icon: language
 time: 2019-11-16
 category: Linux
 ---
 
-# 语言
-
 Linux 中大量使用脚本语言，而不是 C 语言！
+
+<!-- more -->
 
 说到在 Linux 下的编程，很多人会想到用 C 语言，Linux 的内核、shell、基础命令程序，也的确是用 C 语言编写的，这首先证明了一点，C 语言很强很通用。
 

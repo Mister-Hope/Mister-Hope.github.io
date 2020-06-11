@@ -14,7 +14,7 @@ Bash 可以使用的命令分成四类。
 `type`命令可以显示命令类型。
 
 ```bash
-$ type command
+type command
 ```
 
 下面是几个例子。
@@ -99,14 +99,14 @@ $ which ls
 `help`命令用于查看 Shell 内置命令的帮助信息，`man`命令用于查看可执行命令的帮助信息。
 
 ```bash
-$ help cd
-$ man ls
+help cd
+man ls
 ```
 
 `man`里面的文档一共有 8 类，如果同一个命令，匹配多个文档，`man`命令总是返回第一个匹配。如果想看指定类型的文档，命令可以采用下面的形式。
 
 ```bash
-$ man 5 passwd
+man 5 passwd
 ```
 
 ## script
@@ -114,7 +114,7 @@ $ man 5 passwd
 `script`命令会将输入的命令和它的输出，都保存进一个文件。
 
 ```bash
-$ script [file]
+script [file]
 ```
 
 如果没有指定文件名，则所有结果会保存进当前目录下`typescript`文件。结束录制的时候，可以按下`Ctrl + d`。

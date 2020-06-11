@@ -6,4 +6,5 @@ module.exports = [
   "encoding",
   "debug",
   "license",
+  "open-source-and-free.md",
 ];

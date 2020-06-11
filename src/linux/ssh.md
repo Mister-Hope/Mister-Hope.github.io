@@ -39,4 +39,4 @@ category: 基础
 
 ## 断开链接
 
-`Ctrl+D` 或 输入 `logout`.
+`Ctrl + D` 或 输入 `logout`.

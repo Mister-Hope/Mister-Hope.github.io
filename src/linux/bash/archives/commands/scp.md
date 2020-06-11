@@ -16,68 +16,68 @@
 
 注意，如果传输的文件在本机和远程系统，有相同的名称和位置，`scp`会在没有警告的情况下覆盖文件。
 
-**(1)本地文件复制到远程系统**
+1. **本地文件复制到远程系统**
 
-复制本机文件到远程系统的基本语法如下。
+   复制本机文件到远程系统的基本语法如下。
 
-```bash
-# 语法
-$ scp SourceFile user@host:directory/TargetFile
+   ```bash
+   # 语法
+   $ scp SourceFile user@host:directory/TargetFile
 
-# 示例
-$ scp file.txt remote_username@10.10.0.2:/remote/directory
-```
+   # 示例
+   $ scp file.txt remote_username@10.10.0.2:/remote/directory
+   ```
 
-下面是复制整个目录。
+   下面是复制整个目录。
 
-```bash
-# 将本机的 documents 目录拷贝到远程主机，
-# 会在远程主机创建 documents 目录
-$ scp -r documents username@server_ip:/path_to_remote_directory
+   ```bash
+   # 将本机的 documents 目录拷贝到远程主机，
+   # 会在远程主机创建 documents 目录
+   $ scp -r documents username@server_ip:/path_to_remote_directory
 
-# 将本机整个目录拷贝到远程目录下
-$ scp -r localmachine/path_to_the_directory username@server_ip:/path_to_remote_directory/
+   # 将本机整个目录拷贝到远程目录下
+   $ scp -r localmachine/path_to_the_directory username@server_ip:/path_to_remote_directory/
 
-# 将本机目录下的所有内容拷贝到远程目录下
-$ scp -r localmachine/path_to_the_directory/* username@server_ip:/path_to_remote_directory/
-```
+   # 将本机目录下的所有内容拷贝到远程目录下
+   $ scp -r localmachine/path_to_the_directory/* username@server_ip:/path_to_remote_directory/
+   ```
 
-**(2)远程文件复制到本地**
+2. **远程文件复制到本地**
 
-从远程主机复制文件到本地的语法如下。
+   从远程主机复制文件到本地的语法如下。
 
-```bash
-# 语法
-$ scp user@host:directory/SourceFile TargetFile
+   ```bash
+   # 语法
+   $ scp user@host:directory/SourceFile TargetFile
 
-# 示例
-$ scp remote_username@10.10.0.2:/remote/file.txt /local/directory
-```
+   # 示例
+   $ scp remote_username@10.10.0.2:/remote/file.txt /local/directory
+   ```
 
-下面是复制整个目录的例子。
+   下面是复制整个目录的例子。
 
-```bash
-# 拷贝一个远程目录到本机目录下
-$ scp -r username@server_ip:/path_to_remote_directory local-machine/path_to_the_directory/
+   ```bash
+   # 拷贝一个远程目录到本机目录下
+   $ scp -r username@server_ip:/path_to_remote_directory local-machine/path_to_the_directory/
 
-# 拷贝远程目录下的所有内容，到本机目录下
-$ scp -r username@server_ip:/path_to_remote_directory/* local-machine/path_to_the_directory/
-$ scp -r user@host:directory/SourceFolder TargetFolder
-```
+   # 拷贝远程目录下的所有内容，到本机目录下
+   $ scp -r username@server_ip:/path_to_remote_directory/* local-machine/path_to_the_directory/
+   $ scp -r user@host:directory/SourceFolder TargetFolder
+   ```
 
-**(3)两个远程系统之间的复制**
+3. **两个远程系统之间的复制**
 
-本机发出指令，从远程主机 A 拷贝到远程主机 B 的语法如下。
+   本机发出指令，从远程主机 A 拷贝到远程主机 B 的语法如下。
 
-```bash
-# 语法
-$ scp user@host1:directory/SourceFile user@host2:directory/SourceFile
+   ```bash
+   # 语法
+   $ scp user@host1:directory/SourceFile user@host2:directory/SourceFile
 
-# 示例
-$ scp user1@host1.com:/files/file.txt user2@host2.com:/files
-```
+   # 示例
+   $ scp user1@host1.com:/files/file.txt user2@host2.com:/files
+   ```
 
-系统将提示您输入两个远程帐户的密码。数据将直接从一个远程主机传输到另一个远程主机。
+   系统将提示您输入两个远程帐户的密码。数据将直接从一个远程主机传输到另一个远程主机。
 
 ## 参数
 

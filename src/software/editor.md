@@ -26,7 +26,8 @@ tags:
   - [atom](https://atom.io/)
   - [sublime text](https://www.sublimetext.com/3)
 
-::: tip 编辑器 与 IDE
+::: tip IDE 与编辑器
+
 IDE 和编辑器是有区别的:
 
 - IDE: 对代码会有较好的智能提示，同时侧重于工程项目，对项目的开发、调试工作有较好的图像化界面的支持，因此比较笨重。比如 Eclipse 的定位就是 IDE。
@@ -34,4 +35,5 @@ IDE 和编辑器是有区别的:
 - 编辑器: 要相对轻量许多，侧重于文本的编辑。比如 Sublime Text 的定位就是编辑器。再比如 Windows 系统自带的「记事本」就是最简单的编辑器。
 
 需要注意的是，VS Code 的定位是编辑器，而非 IDE。但 VS Code 又比一般的编辑器的功能要丰富许多。
+
 :::

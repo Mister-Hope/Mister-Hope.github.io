@@ -1,5 +1,10 @@
 ---
 title: 服务器搭建
+icon: network
+category: Git
+tags:
+  - Git
+  - 软件
 ---
 
 在远程仓库一节中，我们讲了远程仓库实际上和本地仓库没啥不同，纯粹为了 7x24 小时开机并交换大家的修改。
@@ -8,7 +13,7 @@ GitHub 就是一个免费托管代码的远程仓库。但是对于某些视源�
 
 <!-- more -->
 
-搭建 Git 服务器需要准备一台运行 Linux 的机器，强烈推荐用 Ubuntu 或 Debian，这样，通过几条简单的 apt 命令就可以完成安装。
+搭建 Git 服务器需要准备一台运行 Linux 的机器，强烈推荐用 Ubuntu 或 Debian，这样，通过几条简单的 `apt` 命令就可以完成安装。
 
 - **Ubuntu 或 Debian**
 
@@ -28,17 +33,17 @@ GitHub 就是一个免费托管代码的远程仓库。但是对于某些视源�
 
   - 第三步，创建证书登录:
 
-    收集所有需要登录的用户的公钥，就是他们自己的`id_rsa.pub`文件，把所有公钥导入到`/home/git/.ssh/authorized_keys`文件里，一行一个。
+    收集所有需要登录的用户的公钥，就是他们自己的 `id_rsa.pub` 文件，把所有公钥导入到 `/home/git/.ssh/authorized_keys` 文件里，一行一个。
 
   - 第四步，初始化 Git 仓库:
 
-    先选定一个目录作为 Git 仓库，假定是/srv/sample.git，在/srv 目录下输入命令:
+    先选定一个目录作为 Git 仓库，假定是 `/srv/sample.git`，在 `/srv` 目录下输入命令:
 
     ```sh
     sudo git init --bare sample.git
     ```
 
-    Git 就会创建一个裸仓库，裸仓库没有工作区，因为服务器上的 Git 仓库纯粹是为了共享，所以不让用户直接登录到服务器上去改工作区，并且服务器上的 Git 仓库通常都以.git 结尾。然后，把 owner 改为 git:
+    Git 就会创建一个裸仓库，裸仓库没有工作区，因为服务器上的 Git 仓库纯粹是为了共享，所以不让用户直接登录到服务器上去改工作区，并且服务器上的 Git 仓库通常都以 `.git` 结尾。然后，把 owner 改为 git:
 
     ```sh
     sudo chown -R git:git sample.git
@@ -46,7 +51,7 @@ GitHub 就是一个免费托管代码的远程仓库。但是对于某些视源�
 
   - 第五步，禁用 shell 登录:
 
-    出于安全考虑，第二步创建的 git 用户不允许登录 shell，这可以通过编辑`/etc/passwd`文件完成。找到类似下面的一行:
+    出于安全考虑，第二步创建的 git 用户不允许登录 shell，这可以通过编辑 `/etc/passwd` 文件完成。找到类似下面的一行:
 
     ```md
     git:x:1001:1001:,,,:/home/git:/bin/bash
@@ -62,7 +67,7 @@ GitHub 就是一个免费托管代码的远程仓库。但是对于某些视源�
 
   - 第六步，克隆远程仓库:
 
-    现在，可以通过`git clone`命令克隆远程仓库了，在各自的电脑上运行:
+    现在，可以通过 `git clone` 命令克隆远程仓库了，在各自的电脑上运行:
 
     ```sh
     $ git clone git@server:/srv/sample.git
@@ -90,7 +95,7 @@ GitHub 就是一个免费托管代码的远程仓库。但是对于某些视源�
 
   2. 创建证书登录
 
-     收集所有需要登录的用户的公钥，公钥位于 `id_rsa.pub` 文件中，将公钥导入到 `/home/git/.ssh/authorized_keys`文件里，一行一个。
+     收集所有需要登录的用户的公钥，公钥位于 `id_rsa.pub` 文件中，将公钥导入到 `/home/git/.ssh/authorized_keys` 文件里，一行一个。
 
      如果没有该文件创建它:
 

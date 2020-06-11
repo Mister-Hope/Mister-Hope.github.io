@@ -3,14 +3,14 @@
 `export`命令用于向子 Shell 输出变量。
 
 ```bash
-$ export hotellogs="/workspace/hotel-api/storage/logs"
+export hotellogs="/workspace/hotel-api/storage/logs"
 ```
 
 然后执行下面的命令，新建一个子 Shell。
 
 ```bash
-$ bash
-$ cd hotellogs
+bash
+cd hotellogs
 ```
 
 上面命令的执行结果会进入`hotellogs`变量指向的目录。

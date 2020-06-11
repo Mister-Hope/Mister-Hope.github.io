@@ -118,7 +118,7 @@ C:\Workspace>node calc.js
 
 ## 使用严格模式
 
-如果在 JavaScript 文件开头写上'use strict';，那么 Node 在执行该 JavaScript 时将使用严格模式。但是，在服务器环境下，如果有很多 JavaScript 文件，每个文件都写上'use strict';很麻烦。我们可以给 Nodejs 传递一个参数，让 Node 直接为所有 js 文件开启严格模式:
+如果在 JavaScript 文件开头写上 `'use strict';`，那么 Node 在执行该 JavaScript 时将使用严格模式。但是，在服务器环境下，如果有很多 JavaScript 文件，每个文件都写上 `'use strict';` 很麻烦。我们可以给 Nodejs 传递一个参数，让 Node 直接为所有 js 文件开启严格模式:
 
 ```sh
 node --use_strict calc.js
@@ -136,4 +136,4 @@ Node 的交互模式和直接运行`.js`文件有什么区别呢？
 
 直接运行`node hello.js`文件相当于启动了 Node 解释器，然后一次性把`hello.js`文件的源代码给执行了，您是没有机会以交互的方式输入源代码的。
 
-在编写 JavaScript 代码的时候，完全可以一边在文本编辑器里写代码，一边开一个 Node 交互式命令窗口，在写代码的过程中，把部分代码粘到命令行去验证，事半功倍！前提是得有个 27'的超大显示器！
+在编写 JavaScript 代码的时候，完全可以一边在文本编辑器里写代码，一边开一个 Node 交互式命令窗口，在写代码的过程中，把部分代码粘到命令行去验证，事半功倍！前提是得有个 27 寸的超大显示器！

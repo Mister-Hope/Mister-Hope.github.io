@@ -27,6 +27,7 @@ module.exports = [
       "intro",
       "create-repo",
       "status",
+      "recall",
       "reset",
       "working-directory",
       "change",

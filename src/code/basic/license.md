@@ -96,8 +96,6 @@ LGPL 允许商业软件通过类库引用(link)的方式使用 LGPL 类库，而
 @flowstart
 st=>start: Start
 e=>end: End
-op1=>operation: My Operation|past
-op2=>operation: Stuff|current
 cond1=>condition: 他人修改源码后
 是否可以闭源
 cond2=>condition: 每一个修改过的文件
