@@ -1,5 +1,7 @@
 module.exports = {
   zh: {
+    "/physics/": require("./physics"),
+
     "/note/": require("./note"),
 
     "/software/": require("./software"),

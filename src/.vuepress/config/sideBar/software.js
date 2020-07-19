@@ -44,7 +44,7 @@ module.exports = [
     icon: "Github",
     collapsable: false,
     prefix: "git/github/",
-    children: ["", "github-pages"],
+    children: ["", "github-pages", "actions", "deploy"],
   },
   {
     title: "COMSOL",
