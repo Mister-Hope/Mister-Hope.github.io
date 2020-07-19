@@ -95,6 +95,7 @@ eaadf4e385e865d25c48e7ca9c8395c3f7dfaef0 wrote a readme file
 
 ::: tip 更多选项
 关于 `git log` 的更多选项，请见 [ProGit 书籍](/file/git/progit_v2.1.45.pdf) 的 P43。
+:::
 
 ## 回退版本
 
