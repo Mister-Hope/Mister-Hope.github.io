@@ -17,9 +17,9 @@ category: 小程序
 | content   |  否   | `ComponentConfig[]` | 页面的内容         | 数组的每个对象会最终渲染为一个组件                                                           |
 | hidden    |  否   |      `Boolean`      | 隐藏导航栏         | 默认显示导航栏                                                                               |
 | from      |  否   |      `String`       | 左上角返回按钮文字 | 设置左上角文字，默认为上一级页面标题，一般不用填写                                           |
-| shareable |  否   |      `Boolean`      | 是否可被分享       | 是否可以使用小程序的界面分享，默认为 false                                                   |
-| contact   |  否   |      `Boolean`      | “联系开发者”按钮   | 是否在分享弹出菜单中显示，默认为 true                                                        |
-| feedback  |  否   |      `Boolean`      | “意见反馈”按钮     | 是否在分享弹出菜单中显示，默认为 true                                                        |
+| shareable |  否   |      `Boolean`      | 是否可被分享       | 是否可以使用小程序的界面分享，默认为 `false`                                                 |
+| contact   |  否   |      `Boolean`      | “联系开发者”按钮   | 是否在分享弹出菜单中显示，默认为 `true`                                                      |
+| feedback  |  否   |      `Boolean`      | “意见反馈”按钮     | 是否在分享弹出菜单中显示，默认为 `true`                                                      |
 
 ## content 格式
 

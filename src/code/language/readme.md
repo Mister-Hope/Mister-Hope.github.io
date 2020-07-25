@@ -18,6 +18,10 @@ category: 教程
 
 - [Markdown 教程](https://vuepress-theme.mrhope.site/basic/markdown/)
 
+- [YAML 教程](yaml/readme.md)
+
+- [JSON 教程](json/readme.md)
+
 ::: tip
 C 、C++、Java、PHP 正在编写中
 :::

@@ -4,74 +4,390 @@ icon: creative
 category: 小程序
 ---
 
-## 开发准备
-
 这里是开发前应当了解的内容，阅读时长大约为五分钟。
+
+## yaml 介绍
+
+YAML 是专门用来写配置文件的语言，非常简洁和强大。
+
+### 如何打开或编辑 yaml
+
+推荐使用 vscode，具体详见[vscode 简单介绍](../../../software/vscode/simple.md)。
+
+### yaml 中的值
+
+合法的值大家编辑用到的一共有五种:
+
+- **number**(数字)
+- **boolean**(布尔值)
+- **string**(字符串)
+- **array**(数组)
+- **object**(对象)
+
+### 什么是**number**
+
+**number**是可以直接参与运算数值，整数和小数直接表示
+
+**例:**
+
+- `5201314`
+- `-1`
+- `3.141592654`
+
+**总结:** 想要表达具体的数量使用数字，直接表示即可。
+
+### 什么是**boolean**
+
+**boolean**是布尔值，表示真假。只有两个: `true`和`false`。
+
+### 什么是**string**
+
+**string**是字符串，用于表达一串文本。
+
+字符串默认不使用引号表示。
+
+- 如果字符串之中包含空格或特殊字符，需要放在双引号之中。
+
+- 如果双引号中包含双引号，需要使用 `\` 转义。
+
+- 如果字符串有多行，可以以 `|-` 开头，并正常换行书写，无需再包含双引号。
+
+```yml
+str: |-
+  这是一段文字。
+  这是新一段文字。
+   1. 序号1，前面有空格
+   2. 序号2，前面有空格
+```
+
+**例:**
+
+- `Mr.Hope is handsome`
+- `春眠不觉晓，处处闻啼鸟`
+- `"内容: 字符串"`(含有 `:` 特殊字符并尾随空格)
+- `"A saying goes: \"Great hopes make great man.\""`
+
+**请注意:** `1` 是 **number**，可以参加运算；`"1"` 是**string**，字符串内容为 1；同理，`"true"` 是**string**，`true` 才是表示“真”的 **boolean**。
+
+**其他注意事项:** 如果想要在字符串中表示回车，请输入`\n`。
+
+### 什么是**array**
+
+array 中文名叫数组，它是一个内容的集合，每个数组的每一项叫一个元素(element)。每个元素(element)可以是其他的任何值类型。
+
+一组连词线开头的行，构成一个数组。
+
+**例:**
+
+- ```yml
+  - Cat
+  - Dog
+  - Goldfish
+  ```
+
+- ```yml
+  - -5
+  - abc
+  - true
+  ```
+
+  在此数组中第一项是数字 `-5`，第二项是字符串 `"abc"`，第三项是布尔值 `true`，该数组是合法的，数组的元素也可以是接下来的 object
+
+**总结:**
+
+**array** 是一个包含若干 **元素** 的集合，其中**元素**可以是其他数据类型。
+
+### 什么是**object**
+
+**object** 中文名叫对象(不是您想的那个对象)，它是一组“键-值”对集合。每个键(key)对应着一个值(value)，用冒号对应。该值(value)可以是任何内容。
+
+**例:**
+
+- ```yml
+  a: 1
+  b: "2"
+  c: true
+  d: "false"
+  ```
+
+  该对象有四项，分别是:
+  
+  - 值为数字 `1` 的`a`
+  - 值为字符串 `2` 的 `b`
+  - 值为布尔值 真(`true`)的 `c`
+  - 值为字符串 `false` 的 `d`
+
+- ```yml
+  tag: text
+  heading: 校园卡说明
+  text: 校园卡是东师的金融消费卡
+  ```
+
+**总结:**
+
+**object**是一个拥有若干键值对的集合，其中值可以是其他数据类型。
+
+### 关于值的嵌套
+
+由于**array**的元素和 **object** 的值可以是五种值的任一个，故可以发生嵌套。
+
+**如:**
+
+```yml
+animal:
+  - dog
+  - cat
+  - fish
+
+personal-info:
+  name: Mr.Hope
+  gender: male
+  address:
+    - province: Liao Ning
+      city: AnShan
+    - province: Ji Lin
+      city: Changchun
+```
+
+就是一个对象，它有两个键 `animal` 和 `personal-info`，`animal` 键对应的值是一个数组，包含三个字符串 `dog`、`cat` 和 `fish`，而 `personal-info` 的值又是一个对象。该对象的 `address` 的值还是一个数组，数组的每个元素又是一个个对象
+
+### json 文件中合法的值有哪些
+
+合法的值大家编辑用到的一共有五种:
+**number**(数字)、**boolean**(布尔值)、**string**(字符串)、**array**(数组)和**object**(对象)。
+
+## json 介绍
+
+### 对象
+
+对象的一组键值对，使用冒号结构表示。
+
+```yml
+animal: pets
+```
+
+转为 JavaScript 如下。
+
+```js
+{ animal: 'pets' }
+```
+
+Yaml 也允许另一种写法，将所有键值对写成一个行内对象。
+
+```yml
+hash: { name: Steve, foo: bar }
+```
+
+转为 JavaScript 如下。
+
+```js
+{ hash: { name: 'Steve', foo: 'bar' } }
+```
+
+### 数组
+
+一组连词线开头的行，构成一个数组。
+
+```yml
+- Cat
+- Dog
+- Goldfish
+```
+
+转为 JavaScript 如下。
+
+```js
+[ 'Cat', 'Dog', 'Goldfish' ]
+```
+
+数据结构的子成员是一个数组，则可以在该项下面缩进一个空格。
+
+```yml
+-
+  - Cat
+  - Dog
+  - Goldfish
+```
+
+转为 JavaScript 如下。
+
+```js
+[ [ 'Cat', 'Dog', 'Goldfish' ] ]
+```
+
+数组也可以采用行内表示法。
+
+```yml
+animal: [Cat, Dog]
+```
+
+转为 JavaScript 如下。
+
+```js
+{ animal: [ 'Cat', 'Dog' ] }
+```
+
+### 复合结构
+
+对象和数组可以结合使用，形成复合结构。
+
+```yml
+languages:
+
+- Ruby
+- Perl
+- Python
+websites:
+ YAML: yaml.org
+ Ruby: ruby-lang.org
+ Python: python.org
+ Perl: use.perl.org
+```
+
+转为 JavaScript 如下。
+
+```yml
+{
+  languages: [ 'Ruby', 'Perl', 'Python' ],
+  websites: {
+    YAML: 'yaml.org',
+    Ruby: 'ruby-lang.org',
+    Python: 'python.org',
+    Perl: 'use.perl.org'
+  }
+}
+```
+
+### 纯量
+
+纯量是最基本的、不可再分的值。以下数据类型都属于 JavaScript 的纯量。
+
+- 字符串
+- 布尔值
+- 整数
+- 浮点数
+- Null
+- 时间
+- 日期
+
+数值直接以字面量的形式表示。
+
+```yml
+number: 12.30
+```
+
+转为 JavaScript 如下。
+
+```js
+{ number: 12.30 }
+```
+
+布尔值用 `true` 和 `false` 表示。
+
+```yml
+isSet: true
+```
+
+转为 JavaScript 如下。
+
+```js
+{ isSet: true }
+```
 
 ### 如何打开或编辑 json
 
 推荐使用 vscode，具体详见[vscode 简单介绍](../../../software/vscode/simple.md)。
 
-### json 文件中合法的值有哪些
+### json 中的值
 
 合法的值大家编辑用到的一共有五种:
-**Number**(数字)、**Boolean**(布尔值)、**String**(字符串)、**Array**(数组)和**Object**(对象)。
 
----
+- **number**(数字)
+- **boolean**(布尔值)
+- **string**(字符串)
+- **array**(数组)
+- **object**(对象)
 
-### 什么是**Number**
+### 什么是**number**
 
-**Number**是可以直接参与运算数值，整数和小数直接表示，科学计数法小数部分和指数部分用 e 连接。
+**number**是可以直接参与运算数值，整数和小数直接表示
 
-**例:**`5201314`、`-1`、`3.141592654`、`6.23e23`(科学计数法)
+**例:**
 
-**总结:** 想要表达具体的数量使用数字，直接表示即可。。
+- `5201314`
+- `-1`
+- `3.141592654`
 
----
+**总结:** 想要表达具体的数量使用数字，直接表示即可。
 
-### 什么是**Boolean**
+### 什么是**boolean**
 
-**Boolean**是布尔值，表示真假。只有两个: `true`和`false`。
+**boolean**是布尔值，表示真假。只有两个: `true`和`false`。
 
----
+### 什么是**string**
 
-### 什么是**String**
+**string**是字符串，用于表达一串文本。在文本内容外面套上英文双引号 `"` 即可表示**string**。
 
-**String**是字符串，用于表达一串文本。在文本内容外面套上英文双引号`"` `"`即可表示**String**。
+**例:**
 
-**例:**`"小程序必火"`、`"NENUYouth"`、`"1998年6月6日"`
+- `"Mr.Hope is handsome"`
+- `"春眠不觉晓，处处闻啼鸟"`
+- `"A saying goes: \"Great hopes make great man.\""`
 
-**请注意:**`1` 是**Number**，可以参加运算；`"1"`是**String**，字符串内容为 1；同理，`"true"`是**String**，`true`才是表示“真”的**Boolean**。
+**请注意:** `1` 是 **number**，可以参加运算；`"1"` 是**string**，字符串内容为 1；同理，`"true"` 是**string**，`true` 才是表示“真”的 **boolean**。
 
-**其他注意事项:**如果想要在字符串中表示回车，请输入`\n`。
+**其他注意事项:** 如果想要在字符串中表示回车，请输入`\n`。
 
----
+### 什么是**array**
 
-### 什么是**Array**
+array 中文名叫数组，它是用 `[` `]` 包括起来的、用英文逗号(comma)分隔开的内容的集合，每个项叫数组(array)的一个元素(element)。每个元素(element)可以是其他的任何值类型。
 
-Array 中文名叫数组，它是用`[` `]`包括起来的、用英文逗号(comma)分隔开的内容的集合，每个项叫数组(array)的一个元素(element)。每个元素(element)可以是其他的任何值类型。
+**例:**
 
-**例:**`[1,2,3]`、`[-5，"abc",true]`(在此数组中第一项是数组-5，第二项是字符串`"abc"`，第三项是布尔值 true，该数组是合法的，数组的元素也可以是接下来的 Object)、`["小程序必火","666","Mr.Hope有点帅"]`。
+- `[1, 2, 3]`
+- `[-5, "abc", true]`
+  (在此数组中第一项是数字 `-5`，第二项是字符串 `"abc"`，第三项是布尔值 `true`，该数组是合法的，数组的元素也可以是接下来的 object)
+- `["小程序必火", "666", "Mr.Hope有点帅"]`
 
-**请注意:**`[1,2,3,]`是非法的，因为最后多了一个逗号导致格式不正确。`[1,2,3`也是非法的，因为没有结束标识符`]`导致格式不正确。
+**请注意:**
 
-**总结:** **Array**是一个包含若干**element**的集合，用`[` `]`表示，每一个**element**之间需要用**comma**隔开，即`Array = [element1 , element2 , ...]`，其中**element**可以是其他数据类型。
+- `[1,2,3,]`是非法的，因为最后多了一个逗号导致格式不正确
+- `[1,2,3` 也是非法的，因为没有结束标识符 `]` 导致格式不正确
 
----
+**总结:**
 
-### 什么是**Object**
+**array** 是一个包含若干 **元素** 的集合，用 `[` `]` 表示，每一个 **元素** 之间需要用 **英文逗号** 隔开，即`array = [element1 , element2 , ...]`，其中**元素**可以是其他数据类型。
 
-**Object**中文名叫对象(不是您想的那个对象)，它是用`{` `}`包括起来的用逗号分隔开的一堆属性(property)的集合，每个属性(property)是一个不可重复的字符串，对应着一个值(value)，用冒号对应。该值(value)可以是任何内容。
+### 什么是**object**
 
-**例:**`{"a":1,"b":"2","c":true,"d":"false"}`(该对象有四项，分别是值为`Number`1 的`a`、值为`String`2 的`b`、值为`Boolean`真(true)的`c`和值为`String`false 的`d`)、`{"tag":"p","head":"校园卡说明","text":"校园卡是东师的金融消费卡"}`。
+**object** 中文名叫对象(不是您想的那个对象)，它是用 `{` `}` 包括起来的用逗号分隔开的一堆属性(property)的集合，每个属性(property)是一个不可重复的字符串，对应着一个值(value)，用冒号对应。该值(value)可以是任何内容。
 
-**请注意:**`{a:1,b:2}`是非法的，因为属性不是一个字符串；
-`{"a":1,"a":2}`是非法的，因为属性`a`出现了两次无法确定其值；
-`{a:1,b:2,}`、`a:1,b:2}`是非法的，因为格式不正确。
+**例:**
 
-**总结:** **Object**是一个拥有若干**property**的集合，用`{` `}`表示，每一个**property**都是不可重复的**String**，而每个**property**对应着一个**value**即`Object = { property1 : value1 , proprety2 : value2 , ... }`，其中**value**可以是其他数据类型。
+- `{"a":1,"b":"2","c":true,"d":"false"}`
 
-**提示:**使用 vscode 可以格式化**Object**，可以使**Object**更易于阅读。
+  该对象有四项，分别是:
+  
+  - 值为数字 `1` 的`a`
+  - 值为字符串 `2` 的 `b`
+  - 值为布尔值 真(`true`)的 `c`
+  - 值为字符串 `false` 的 `d`
+
+- `{"tag":"p","head":"校园卡说明","text":"校园卡是东师的金融消费卡"}`。
+
+**请注意:**
+
+- `{a:1,b:2}`是非法的，因为属性不是一个字符串
+- `{"a":1,"a":2}`是非法的，因为属性 `a` 出现了两次无法确定其值
+- `{a:1,b:2,}`、`a:1,b:2}`是非法的，因为格式不正确。
+
+**总结:**
+
+**object**是一个拥有若干**property**的集合，用 `{` `}` 表示，每一个**property**都是不可重复的**string**，而每个**property**对应着一个**value**即 `object = { property1 : value1 , proprety2 : value2 , ... }`，其中**value**可以是其他数据类型。
+
+**提示:**
+
+使用 vscode 可以格式化**object**，可以使**object**更易于阅读。
 
 如:
 
@@ -81,40 +397,18 @@ Array 中文名叫数组，它是用`[` `]`包括起来的、用英文逗号(com
 
 ```json
 {
-  "tag": "p",
-  "head": "校园卡说明",
+  "tag": "text",
+  "heading": "校园卡说明",
   "text": "校园卡是东师的金融消费卡"
 }
 ```
 
----
-
 ### 关于值的嵌套
 
-由于**array**的**element**和 Object 的**value**可以是五种值的任一个，故可以发生嵌套。
+由于**array**的**element**和 **object** 的**value**可以是五种值的任一个，故可以发生嵌套。
 
-在需要编写的 json 中，整个 json 为一个**Array**。其中**Array**的每个**element**都是一个**object**。
+**如:**
 
-**如:**`[{"a":"Mr.Hope"},{"b":"Ms.Hope"}]`
+`[{"a":"Mr.Hope"},{"b":"Ms.Hope"}]`
 
-上面得代码就是一个数组: `[ element1 , element2 ]`，而该数组的**element1**是**Object**`{ "a" : "Mr.Hope" }`，**element2**是**Object**`{ "b" : "Ms.Hope" }`
-
----
-
-学会了这些，下面就可以对照参数表以及对应的描述来阅读和改编 json 文件。
-
-## json 文件的编写方法
-
-### 命名
-
-每个 json 文件，其文件名为“文件主题+编号”格式，如 card1.json、network4.json。
-
-### 内容
-
-json 中只包含一个**Array**，其中每个**element**均为一个**Object**，小程序读取识别每一个**Object**中的信息渲染出了界面的一部分。
-
-需要根据[tag 值参数表](tagList.md)编写每一个**Object**。
-
-对于每个**Object**来说，其内必须包含一个拥有合法值的`tag`属性，`tag`的具体值决定了该**object**所显示的内容。
-
-依据[tag 值参数表](tagList.md)填写每个对象的剩余属性以及其对应的值。
+就是一个数组: `[ element1 , element2 ]`，而该数组的**element1**是**object**`{ "a" : "Mr.Hope" }`，**element2**是**object**`{ "b" : "Ms.Hope" }`
