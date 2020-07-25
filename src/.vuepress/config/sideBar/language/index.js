@@ -1,1 +1,9 @@
-module.exports = ["", "learning", "js/", "typescript/", "python/"];
+module.exports = [
+  "",
+  "learning",
+  "js/",
+  "typescript/",
+  "python/",
+  "json/",
+  "yaml/",
+];
