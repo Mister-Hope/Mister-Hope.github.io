@@ -61,15 +61,21 @@ tags:
   "workbench.colorTheme": "One Dark Pro",
   "workbench.commandPalette.preserveInput": true,
   "workbench.enableExperiments": false,
+  "workbench.editor.scrollToSwitchTabs": true,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
   "material-icon-theme.folders.associations": {
+    "about": "Command",
+    "intro": "Command",
+    "file": "Public",
     "service-worker": "config",
     "store": "Vuex-store",
+    "vuex": "Vuex-store",
     "module": "plugin",
     "router": "Routes",
     ".vuepress": "vue",
     "vuepress": "vue",
+    "workflows": "Ci",
     "guide": "content",
     "en": "I18n",
     "types": "typescript"
@@ -86,6 +92,7 @@ tags:
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.enableBell": true,
   "terminal.integrated.shell.windows": "C:/Program Files/PowerShell/7/pwsh.exe",
+  "terminal.integrated.shellArgs.windows": "-nologo",
   "terminal.integrated.shell.linux": "/bin/bash",
   "terminal.external.linuxExec": "bash",
   // git设置
@@ -189,6 +196,7 @@ tags:
   ],
   // gitLens设置
   "gitlens.advanced.messages": {
+    "suppressLineUncommittedWarning": true,
     "suppressSupportGitLensNotification": true
   },
   "gitlens.gitCommands.closeOnFocusOut": true,
@@ -228,12 +236,12 @@ tags:
       "sortAttributes": false
     },
     "prettier": {
-      "printWidth": 120,
-      "singleQuote": true,
+      "printWidth": 80,
+      "singleQuote": false,
       "tabWidth": 2,
       "useTabs": false,
       "semi": true,
-      "trailingComma": "none",
+      "trailingComma": "es5",
       "bracketSpacing": true,
       "parser": "babel"
     }
@@ -270,9 +278,6 @@ tags:
   "leetcode.defaultLanguage": "javascript",
   "leetcode.endpoint": "leetcode",
   "leetcode.hint.configWebviewMarkdown": false,
-  // php cs
-  "phpcs.enable": true,
-  "phpcs.executablePath": "${extensionPath}/php-cs-fixer.phar",
   // ProjectManager
   "projectManager.any.ignoredFolders": [
     "dist",
@@ -307,13 +312,30 @@ tags:
     "svelte",
     "typescript",
     "typescriptreact",
-    "vue",
+    // "vue",
     "vue-html",
     "vue-postcss",
     "xml",
     "xsl",
     "wxss"
-  ]
+  ],
+  "vsonline.accountProvider": "Microsoft",
+  "diffEditor.renderSideBySide": true,
+  "java.semanticHighlighting.enabled": true,
+  "python.jediEnabled": false,
+  "python.pythonPath": "C:\\Users\\zhang\\AppData\\Local\\Programs\\Python\\Python38\\python.exe",
+  "codespaces.accountProvider": "Microsoft",
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "leetcode.workspaceFolder": "C:\\Users\\zhang\\.leetcode"
 }
 ```
 

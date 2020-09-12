@@ -59,5 +59,5 @@ VS Code 扩展允许第三方添加对以下内容的支持:
 扩展可以通过按 `F1` 或者 `Ctrl + Shift + P` 来打开命令行窗口，并输入 `ext install 扩展名称` 来进行安装
 
 ::: tip
-关于一些非常有用的扩展请见 [VS Code 推荐扩展](vscodeExtension.md)
+关于一些非常有用的扩展请见 [VS Code 推荐扩展](extension.md)
 :::
