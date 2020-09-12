@@ -20,20 +20,27 @@ category: 小程序
 
 以下是一些补充与细节的配置项，在初期可以不用掌握与配置。
 
-| 属性                           | 类型     | 必填 | 描述                                                              | 最低版本                |
-| ------------------------------ | -------- | ---- | ----------------------------------------------------------------- | ----------------------- |
-| networkTimeout                 | Object   | 否   | 网络超时时间                                                      |                         |
-| debug                          | boolean  | 否   | 是否开启 debug 模式，默认关闭                                     |                         |
-| functionalPages                | boolean  | 否   | 是否启用插件功能页，默认关闭                                      | 2.1.0                   |
-| subpackages                    | Object[] | 否   | 分包结构配置                                                      | 1.7.3                   |
-| workers                        | string   | 否   | Worker 代码放置的目录                                             | 1.9.90                  |
-| requiredBackgroundModes        | string[] | 否   | 需要在后台使用的能力，如「音乐播放」                              |                         |
-| plugins                        | Object   | 否   | 使用到的插件                                                      | 1.9.6                   |
-| preloadRule                    | Object   | 否   | 分包预下载规则                                                    | 2.3.0                   |
-| resizable                      | boolean  | 否   | iPad 小程序是否支持屏幕旋转、Windows 系统下是否宽屏显示，默认关闭 | 2.3.0                   |
-| navigateToMiniProgramAppIdList | string[] | 否   | 需要跳转的小程序列表                                              | 2.4.0                   |
-| usingComponents                | Object   | 否   | 全局自定义组件配置                                                | 开发者工具 1.02.1810190 |
-| permission                     | Object   | 否   | 小程序接口权限相关设置                                            | 微信客户端 7.0.0        |
+| 属性                    | 类型     | 必填 | 描述                                                              | 最低版本                |
+| ----------------------- | -------- | ---- | ----------------------------------------------------------------- | ----------------------- |
+| entryPagePath           | string   | 否   | 小程序默认启动首页                                                |                         |
+| networkTimeout          | Object   | 否   | 网络超时时间                                                      |                         |
+| debug                   | boolean  | 否   | 是否开启 debug 模式，默认关闭                                     |                         |
+| functionalPages         | boolean  | 否   | 是否启用插件功能页，默认关闭                                      | 2.1.0                   |
+| subpackages             | Object[] | 否   | 分包结构配置                                                      | 1.7.3                   |
+| workers                 | string   | 否   | Worker 代码放置的目录                                             | 1.9.90                  |
+| requiredBackgroundModes | string[] | 否   | 需要在后台使用的能力，如「音乐播放」                              |                         |
+| plugins                 | Object   | 否   | 使用到的插件                                                      | 1.9.6                   |
+| preloadRule             | Object   | 否   | 分包预下载规则                                                    | 2.3.0                   |
+| resizable               | boolean  | 否   | iPad 小程序是否支持屏幕旋转、Windows 系统下是否宽屏显示，默认关闭 | 2.3.0                   |
+| usingComponents         | Object   | 否   | 全局自定义组件配置                                                | 开发者工具 1.02.1810190 |
+| permission              | Object   | 否   | 小程序接口权限相关设置                                            | 微信客户端 7.0.0        |
+| sitemapLocation         | string   | 是   | 指明                                                              | sitemap.json 的位置     |
+| style                   | string   | 否   | 指定使用升级后的weui样式                                          | 2.8.0                   |
+| useExtendedLib          | Object   | 否   | 指定需要引用的扩展库                                              | 2.2.1                   |
+| darkmode                | boolean  | 否   | 小程序支持 DarkMode                                               | 2.11.0                  |
+| themeLocation           | string   | 否   | 指明 theme.json 的位置，darkmode为true为必填                      | 开发者工具 1.03.2004271 |
+| lazyCodeLoading         | string   | 否   | 配置自定义组件代码按需注入                                        | 2.11.1                  |
+| singlePage              | Object   | 否   | 单页模式相关配置                                                  | 2.12.0                  |
 
 ## pages
 
@@ -244,6 +251,122 @@ PermissionObject 结构
   }
 }
 ```
+
+### sitemapLocation
+
+指明 sitemap.json 的位置；默认为 `'sitemap.json'` 即在 app.json 同级目录下名字的 sitemap.json 文件
+
+#### 配置示例
+
+```json
+{
+  "pages": ["pages/index/index", "pages/logs/index"],
+  "window": {
+    "navigationBarTitleText": "Demo"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+}
+```
+
+### style
+
+> 基础库 2.8.0 开始支持，低版本需做兼容处理。
+
+微信客户端 7.0 开始，UI 界面进行了大改版。小程序也进行了基础组件的样式升级。app.json 中配置 `"style": "v2"` 可表明启用新版的组件样式。
+
+本次改动涉及的组件有 `button` `icon` `radio` `checkbox` `switch` `slider`。可前往小程序示例进行体验。
+
+### useExtendedLib
+
+> 基础库 2.2.1 开始支持，低版本需做兼容处理。
+>
+> 最新的 nightly 版开发者工具开始支持，同时基础库从支持 npm 的版本（2.2.1）起支持
+
+指定需要引用的扩展库。目前支持以下项目：
+
+- kbone: [多端开发框架](https://developers.weixin.qq.com/miniprogram/dev/extended/kbone/)
+- weui: [WeUI 组件库](https://developers.weixin.qq.com/miniprogram/dev/extended/weui/)
+
+指定后，相当于引入了对应扩展库相关的最新版本的 npm 包，同时也不占用小程序的包体积。目前暂不支持在分包中引用。用法如下：
+
+```json
+{
+  "useExtendedLib": {
+    "kbone": true,
+    "weui": true
+  }
+}
+```
+
+### darkmode
+
+> 开发者工具 1.03.2004271 及以上版本支持，基础库 2.11.0 及以上版本支持
+
+微信iOS客户端 7.0.12 版本、Android客户端 7.0.13 版本正式支持 DarkMode，可通过配置 `"darkmode": true` 表示当前小程序可适配 DarkMode，所有基础组件均会根据系统主题展示不同的默认样式，navigation bar 和 tab bar 也会根据开发者的配置自动切换。
+
+配置后，请根据 [DarkMode 适配指南](https://developers.weixin.qq.com/miniprogram/dev/framework/ability/darkmode.html) 自行完成基础样式以外的适配工作。
+
+```json
+{
+  "darkmode": true
+}
+```
+
+### themeLocation
+
+自定义 theme.json 的路径，当配置 `"darkmode":true` 时，当前配置文件为必填项。
+
+```json
+{
+  "themeLocation": "/path/to/theme.json"
+}
+```
+
+### lazyCodeLoading
+
+> 基础库 2.11.1 及以上版本支持，2.11.1 以下兼容但无优化效果
+
+通常情况下，在小程序启动期间，所有页面及自定义组件的代码都会进行注入，当前页面没有使用到的自定义组件和页面在注入后其实并没有被使用。
+
+自基础库版本 2.11.1 起，小程序支持有选择地注入必要的代码，以降低小程序的启动时间和运行时内存。
+
+```json
+{
+  "lazyCodeLoading": "requiredComponents"
+}
+```
+
+当配置了这一项时，小程序仅注入当前页面需要的自定义组件和页面代码，在页面中必然不会用到的自定义组件不会被加载和初始化。
+
+::: warning
+添加这项配置后，未使用到的代码文件将不被执行。
+:::
+
+### singlePage
+
+> 基础库 2.11.3 及以上版本支持，目前分享到朋友圈 (Beta) 后打开会进入单页模式
+
+单页模式相关配置
+
+| 属性             | 类型   | 必填 | 默认值                                                            | 描述                                                                                                                      |
+| ---------------- | ------ | ---- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| navigationBarFit | String | 否   | 默认自动调整，若原页面是自定义导航栏，则为 `float`，否则为 `squeezed` | 导航栏与页面的相交状态，值为 `float` 时表示导航栏浮在页面上，与页面相交；值为 `squeezed` 时表示页面被导航栏挤压，与页面不相交 |
 
 ## 配置示例
 
