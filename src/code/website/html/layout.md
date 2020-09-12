@@ -156,9 +156,7 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
       </p>
       <img src="../products/3333-0985/" alt="Silver earrings" />
     </li>
-    <li>
-      ...
-    </li>
+    <li>...</li>
   </ul>
   <p>售价: $237.89</p>
 </div>

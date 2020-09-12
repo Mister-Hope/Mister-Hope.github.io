@@ -55,7 +55,7 @@ ES6 规格大量使用`[[Notation]]`这种书写法，比如`[[Value]]`、`[[Wri
 所有的 JavaScript 函数都有一个内部属性`[[Call]]`，用来运行该函数。
 
 ```js
-F.[[Call]](V, argumentsList)
+F[[Call]](V, argumentsList);
 ```
 
 上面代码中，`F`是一个函数对象，`[[Call]]`是它的内部方法，`F.[[call]]()`表示运行该函数，`V`表示`[[Call]]`运行时`this`的值，`argumentsList`则是调用时传入函数的参数。

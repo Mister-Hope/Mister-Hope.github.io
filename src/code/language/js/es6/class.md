@@ -461,8 +461,12 @@ class Point {
     #x = +x; // 写成 this.#x 亦可
   }
 
-  get x() { return #x }
-  set x(value) { #x = +value }
+  get x() {
+    return #x;
+  }
+  set x(value) {
+    #x = +value;
+  }
 }
 ```
 
@@ -487,9 +491,16 @@ class Point {
 class Foo {
   #a;
   #b;
-  #sum() { return #a + #b; }
-  printSum() { console.log(#sum()); }
-  constructor(a, b) { #a = a; #b = b; }
+  #sum() {
+    return #a + #b;
+  }
+  printSum() {
+    console.log(#sum());
+  }
+  constructor(a, b) {
+    #a = a;
+    #b = b;
+  }
 }
 ```
 
@@ -501,7 +512,9 @@ class Foo {
 class Counter {
   #xValue = 0;
 
-  get #x() { return #xValue; }
+  get #x() {
+    return #xValue;
+  }
   set #x(value) {
     this.#xValue = value;
   }

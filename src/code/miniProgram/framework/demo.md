@@ -1,5 +1,5 @@
 ---
-title: YAMl 文件案例
+title: YAML 文件案例
 icon: discover
 category: 小程序
 ---

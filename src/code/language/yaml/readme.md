@@ -46,7 +46,9 @@ animal: pets
 转为 JavaScript 如下。
 
 ```js
-{ animal: 'pets' }
+{
+  animal: "pets";
+}
 ```
 
 Yaml 也允许另一种写法，将所有键值对写成一个行内对象。
@@ -74,14 +76,13 @@ hash: { name: Steve, foo: bar }
 转为 JavaScript 如下。
 
 ```js
-[ 'Cat', 'Dog', 'Goldfish' ]
+["Cat", "Dog", "Goldfish"];
 ```
 
 数据结构的子成员是一个数组，则可以在该项下面缩进一个空格。
 
 ```yml
--
-  - Cat
+- - Cat
   - Dog
   - Goldfish
 ```
@@ -89,7 +90,7 @@ hash: { name: Steve, foo: bar }
 转为 JavaScript 如下。
 
 ```js
-[ [ 'Cat', 'Dog', 'Goldfish' ] ]
+[["Cat", "Dog", "Goldfish"]];
 ```
 
 数组也可以采用行内表示法。
@@ -101,7 +102,9 @@ animal: [Cat, Dog]
 转为 JavaScript 如下。
 
 ```js
-{ animal: [ 'Cat', 'Dog' ] }
+{
+  animal: ["Cat", "Dog"];
+}
 ```
 
 ### 复合结构
@@ -125,13 +128,14 @@ websites:
 
 ```yml
 {
-  languages: [ 'Ruby', 'Perl', 'Python' ],
-  websites: {
-    YAML: 'yaml.org',
-    Ruby: 'ruby-lang.org',
-    Python: 'python.org',
-    Perl: 'use.perl.org'
-  }
+  languages: ["Ruby", "Perl", "Python"],
+  websites:
+    {
+      YAML: "yaml.org",
+      Ruby: "ruby-lang.org",
+      Python: "python.org",
+      Perl: "use.perl.org",
+    },
 }
 ```
 
@@ -156,7 +160,9 @@ number: 12.30
 转为 JavaScript 如下。
 
 ```js
-{ number: 12.30 }
+{
+  number: 12.3;
+}
 ```
 
 布尔值用 `true` 和 `false` 表示。
@@ -168,7 +174,9 @@ isSet: true
 转为 JavaScript 如下。
 
 ```js
-{ isSet: true }
+{
+  isSet: true;
+}
 ```
 
 null 用 `~` 表示。
@@ -180,7 +188,9 @@ parent: ~
 转为 JavaScript 如下。
 
 ```js
-{ parent: null }
+{
+  parent: null;
+}
 ```
 
 时间采用 ISO8601 格式。
@@ -192,7 +202,9 @@ iso8601: 2001-12-14t21:59:43.10-05:00
 转为 JavaScript 如下。
 
 ```js
-{ iso8601: new Date('2001-12-14t21:59:43.10-05:00') }
+{
+  iso8601: new Date("2001-12-14t21:59:43.10-05:00");
+}
 ```
 
 日期采用复合 iso8601 格式的年、月、日表示。
@@ -204,7 +216,9 @@ date: 1976-07-31
 转为 JavaScript 如下。
 
 ```js
-{ date: new Date('1976-07-31') }
+{
+  date: new Date("1976-07-31");
+}
 ```
 
 YAML 允许使用两个感叹号，强制转换数据类型。
@@ -233,19 +247,23 @@ str: 这是一行字符串
 转为 JavaScript 如下。
 
 ```js
-{ str: '这是一行字符串' }
+{
+  str: "这是一行字符串";
+}
 ```
 
 如果字符串之中包含空格或特殊字符，需要放在引号之中。
 
 ```yml
-str: '内容: 字符串'
+str: "内容: 字符串"
 ```
 
 转为 JavaScript 如下。
 
 ```js
-{ str: '内容: 字符串' }
+{
+  str: "内容: 字符串";
+}
 ```
 
 单引号和双引号都可以使用，双引号不会对特殊字符转义。
@@ -264,13 +282,15 @@ s2: "内容\n字符串"
 单引号之中如果还有单引号，必须连续使用两个单引号转义。
 
 ```yml
-str: 'labor''s day'
+str: "labor's day"
 ```
 
 转为 JavaScript 如下。
 
 ```js
-{ str: 'labor\'s day' }
+{
+  str: "labor's day";
+}
 ```
 
 字符串可以写成多行，从第二行开始，必须有一个单空格缩进。换行符会被转为空格。
@@ -284,7 +304,9 @@ str: 这是一段
 转为 JavaScript 如下。
 
 ```js
-{ str: '这是一段 多行 字符串' }
+{
+  str: "这是一段 多行 字符串";
+}
 ```
 
 多行字符串可以使用 `|` 保留换行符，也可以使用 `>` 折叠换行。
@@ -329,8 +351,8 @@ s3: |-
 
 ```yml
 defaults: &defaults
-  adapter:  postgres
-  host:     localhost
+  adapter: postgres
+  host: localhost
 
 development:
   database: myapp_development
@@ -345,18 +367,18 @@ test:
 
 ```yml
 defaults:
-  adapter:  postgres
-  host:     localhost
+  adapter: postgres
+  host: localhost
 
 development:
   database: myapp_development
-  adapter:  postgres
-  host:     localhost
+  adapter: postgres
+  host: localhost
 
 test:
   database: myapp_test
-  adapter:  postgres
-  host:     localhost
+  adapter: postgres
+  host: localhost
 ```
 
 `&` 用来建立锚点（defaults），`<<` 表示合并到当前数据，`*` 用来引用锚点。
@@ -374,7 +396,7 @@ test:
 转为 JavaScript 代码如下。
 
 ```js
-[ 'Steve', 'Clark', 'Brian', 'Oren', 'Steve' ]
+["Steve", "Clark", "Brian", "Oren", "Steve"];
 ```
 
 ## 函数和正则表达式的转换
@@ -391,13 +413,11 @@ reg: /test/
 解析上面的 yml 文件的代码如下。
 
 ```js
-var yaml = require('js-yaml');
-var fs   = require('fs');
+var yaml = require("js-yaml");
+var fs = require("fs");
 
 try {
-  var doc = yaml.load(
-    fs.readFileSync('./example.yml', 'utf8')
-  );
+  var doc = yaml.load(fs.readFileSync("./example.yml", "utf8"));
   console.log(doc);
 } catch (e) {
   console.log(e);
@@ -407,20 +427,18 @@ try {
 从 JavaScript 对象还原到 yaml 文件的代码如下。
 
 ```js
-var yaml = require('js-yaml');
-var fs   = require('fs');
+var yaml = require("js-yaml");
+var fs = require("fs");
 
 var obj = {
-  fn: function () { return 1 },
-  reg: /test/
+  fn: function () {
+    return 1;
+  },
+  reg: /test/,
 };
 
 try {
-  fs.writeFileSync(
-    './example.yml',
-    yaml.dump(obj),
-    'utf8'
-  );
+  fs.writeFileSync("./example.yml", yaml.dump(obj), "utf8");
 } catch (e) {
   console.log(e);
 }

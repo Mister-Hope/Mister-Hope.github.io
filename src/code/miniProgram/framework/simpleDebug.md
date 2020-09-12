@@ -111,7 +111,7 @@ array 中文名叫数组，它是一个内容的集合，每个数组的每一�
   ```
 
   该对象有四项，分别是:
-  
+
   - 值为数字 `1` 的`a`
   - 值为字符串 `2` 的 `b`
   - 值为布尔值 真(`true`)的 `c`
@@ -169,7 +169,9 @@ animal: pets
 转为 JavaScript 如下。
 
 ```js
-{ animal: 'pets' }
+{
+  animal: "pets";
+}
 ```
 
 Yaml 也允许另一种写法，将所有键值对写成一个行内对象。
@@ -197,14 +199,13 @@ hash: { name: Steve, foo: bar }
 转为 JavaScript 如下。
 
 ```js
-[ 'Cat', 'Dog', 'Goldfish' ]
+["Cat", "Dog", "Goldfish"];
 ```
 
 数据结构的子成员是一个数组，则可以在该项下面缩进一个空格。
 
 ```yml
--
-  - Cat
+- - Cat
   - Dog
   - Goldfish
 ```
@@ -212,7 +213,7 @@ hash: { name: Steve, foo: bar }
 转为 JavaScript 如下。
 
 ```js
-[ [ 'Cat', 'Dog', 'Goldfish' ] ]
+[["Cat", "Dog", "Goldfish"]];
 ```
 
 数组也可以采用行内表示法。
@@ -224,7 +225,9 @@ animal: [Cat, Dog]
 转为 JavaScript 如下。
 
 ```js
-{ animal: [ 'Cat', 'Dog' ] }
+{
+  animal: ["Cat", "Dog"];
+}
 ```
 
 ### 复合结构
@@ -233,28 +236,28 @@ animal: [Cat, Dog]
 
 ```yml
 languages:
-
-- Ruby
-- Perl
-- Python
+  - Ruby
+  - Perl
+  - Python
 websites:
- YAML: yaml.org
- Ruby: ruby-lang.org
- Python: python.org
- Perl: use.perl.org
+  YAML: yaml.org
+  Ruby: ruby-lang.org
+  Python: python.org
+  Perl: use.perl.org
 ```
 
 转为 JavaScript 如下。
 
 ```yml
 {
-  languages: [ 'Ruby', 'Perl', 'Python' ],
-  websites: {
-    YAML: 'yaml.org',
-    Ruby: 'ruby-lang.org',
-    Python: 'python.org',
-    Perl: 'use.perl.org'
-  }
+  languages: ["Ruby", "Perl", "Python"],
+  websites:
+    {
+      YAML: "yaml.org",
+      Ruby: "ruby-lang.org",
+      Python: "python.org",
+      Perl: "use.perl.org",
+    },
 }
 ```
 
@@ -279,7 +282,9 @@ number: 12.30
 转为 JavaScript 如下。
 
 ```js
-{ number: 12.30 }
+{
+  number: 12.3;
+}
 ```
 
 布尔值用 `true` 和 `false` 表示。
@@ -291,7 +296,9 @@ isSet: true
 转为 JavaScript 如下。
 
 ```js
-{ isSet: true }
+{
+  isSet: true;
+}
 ```
 
 ### 如何打开或编辑 json
@@ -367,7 +374,7 @@ array 中文名叫数组，它是用 `[` `]` 包括起来的、用英文逗号(c
 - `{"a":1,"b":"2","c":true,"d":"false"}`
 
   该对象有四项，分别是:
-  
+
   - 值为数字 `1` 的`a`
   - 值为字符串 `2` 的 `b`
   - 值为布尔值 真(`true`)的 `c`

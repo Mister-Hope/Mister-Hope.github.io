@@ -130,11 +130,7 @@ else request = new ActiveXObject('Microsoft.XMLHTTP');
 
 一是通过 Flash 插件发送 HTTP 请求，这种方式可以绕过浏览器的安全限制，但必须安装 Flash，并且跟 Flash 交互。不过 Flash 用起来麻烦，而且现在用得也越来越少了。
 
-二是通过在同源域名下架设一个代理服务器来转发，JavaScript 负责把请求发送到代理服务器:
-
-```js
-"/proxy?url=https://www.sina.com.cn";
-```
+二是通过在同源域名下架设一个代理服务器来转发，JavaScript 负责把请求发送到代理服务器 `/proxy?url=https://www.sina.com.cn`
 
 代理服务器再把结果返回，这样就遵守了浏览器的同源策略。这种方式麻烦之处在于需要服务器端额外做开发。
 

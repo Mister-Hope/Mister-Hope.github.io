@@ -248,17 +248,13 @@ export default route;
 
   ```html
   <!-- 点击导航至guide -->
-  <router-link to="/guide">
-    点击导航
-  </router-link>
+  <router-link to="/guide"> 点击导航 </router-link>
 
   <table>
     <tr>
       <!-- 点击导航至doc，此时router-link标签不再渲染为a标签，而是渲染为td标签。
       这是因为tr标签直接包含a标签是不合法的且不会显示 -->
-      <router-link to="/doc" tab="td">
-        点击导航
-      </router-link>
+      <router-link to="/doc" tab="td"> 点击导航 </router-link>
     </tr>
   </table>
   ```

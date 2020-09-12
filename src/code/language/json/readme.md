@@ -14,7 +14,7 @@ JSON: JavaScript Object Notation(JavaScript 对象表示法)
 
 - JSON 是轻量级的文本数据交换格式
 
-- JSON 独立于语言：JSON 使用 Javascript语法来描述数据对象，但是 JSON 仍然独立于语言和平台。JSON 解析器和 JSON 库支持许多不同的编程语言。 目前非常多的动态（PHP，JSP，.NET）编程语言都支持JSON。
+- JSON 独立于语言：JSON 使用 Javascript 语法来描述数据对象，但是 JSON 仍然独立于语言和平台。JSON 解析器和 JSON 库支持许多不同的编程语言。 目前非常多的动态（PHP，JSP，.NET）编程语言都支持 JSON。
 
 - JSON 具有自我描述性，更易理解
 

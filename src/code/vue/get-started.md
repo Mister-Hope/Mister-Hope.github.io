@@ -46,9 +46,7 @@ tags:
 Vue.js 的核心是一个允许采用简洁的模板语法来声明式地将数据渲染进 DOM 的系统:
 
 ```html
-<div id="app">
-  {{ message }}
-</div>
+<div id="app">{{ message }}</div>
 ```
 
 ```js
@@ -113,9 +111,7 @@ const app3 = new Vue({
 ```html
 <div id="app-4">
   <ol>
-    <li v-for="todo in todos">
-      {{ todo.text }}
-    </li>
+    <li v-for="todo in todos">{{ todo.text }}</li>
   </ol>
 </div>
 ```

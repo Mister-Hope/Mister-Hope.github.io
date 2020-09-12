@@ -86,9 +86,7 @@ jQuery 能够绑定的事件主要包括:
     </script>
   </head>
   <body>
-    <form id="testForm">
-      ...
-    </form>
+    <form id="testForm">...</form>
   </body>
 </html>
 ```
@@ -109,9 +107,7 @@ jQuery 能够绑定的事件主要包括:
     </script>
   </head>
   <body>
-    <form id="testForm">
-      ...
-    </form>
+    <form id="testForm">...</form>
   </body>
 </html>
 ```

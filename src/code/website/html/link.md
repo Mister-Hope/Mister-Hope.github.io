@@ -134,9 +134,7 @@ URL 使用路径查找文件。路径指定文件系统中您感兴趣的文件�
 
 ```html
 <p>
-  <a href="https://firefox.com/">
-    下载Firefox
-  </a>
+  <a href="https://firefox.com/"> 下载Firefox </a>
 </p>
 ```
 
@@ -144,9 +142,7 @@ URL 使用路径查找文件。路径指定文件系统中您感兴趣的文件�
 
 ```html
 <p>
-  <a href="https://firefox.com/">
-    点击这里
-  </a>
+  <a href="https://firefox.com/"> 点击这里 </a>
   下载Firefox
 </p>
 ```
@@ -187,9 +183,7 @@ URL 使用路径查找文件。路径指定文件系统中您感兴趣的文件�
 </p>
 
 <p>
-  <a href="http://www.example.com/car-game">
-    进入汽车游戏
-  </a>
+  <a href="http://www.example.com/car-game"> 进入汽车游戏 </a>
 </p>
 ```
 
