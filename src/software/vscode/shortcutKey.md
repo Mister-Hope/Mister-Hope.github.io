@@ -135,7 +135,6 @@ tags:
 ::: tip
 更多请见
 
-- [Windows 快捷键介绍](../../windows/shortCutKey.md)
-- [VScode 快捷键介绍](https://nenuyouth.com/Res/doc/private/software/vscode/vscodeKeyboardShortcutsWindows.pdf)
+- [Windows 快捷键介绍](../../code/windows/shortcutKey.md)
 
 :::
