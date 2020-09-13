@@ -1,6 +1,6 @@
 ---
 title: 命令补全
-icon: roundcheckfill
+icon: square-check
 time: 2019-11-20
 category: Linux
 ---

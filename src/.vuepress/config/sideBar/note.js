@@ -114,7 +114,7 @@ module.exports = [
   },
   {
     title: "轻言细语",
-    icon: "likefill",
+    icon: "like",
     prefix: "poem/",
     children: [
       "",

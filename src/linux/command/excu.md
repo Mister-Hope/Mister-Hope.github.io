@@ -1,6 +1,6 @@
 ---
 title: 命令执行
-icon: playfill
+icon: play
 time: 2019-11-20
 category: Linux
 ---

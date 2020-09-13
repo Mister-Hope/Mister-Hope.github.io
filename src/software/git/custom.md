@@ -1,6 +1,6 @@
 ---
 title: 自定义 Git
-icon: skinfill
+icon: skin
 author: 廖雪峰
 category: Git
 tags:

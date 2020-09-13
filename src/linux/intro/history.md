@@ -1,5 +1,5 @@
 ---
-icon: timefill
+icon: time
 time: 2019-11-15
 category: Linux
 tags:

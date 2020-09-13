@@ -1,6 +1,6 @@
 ---
 title: 标签管理
-icon: tagfill
+icon: tag
 author: 廖雪峰
 category: Git
 tags:

@@ -1,5 +1,5 @@
 ---
-icon: peoplefill
+icon: people
 ---
 
 # About Mr.Hope

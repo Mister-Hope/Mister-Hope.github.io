@@ -1,6 +1,6 @@
 ---
 title: 链接
-icon: askfill
+icon: ask
 time: 2019-11-20
 category: Linux
 ---

@@ -1,6 +1,6 @@
 ---
 title: read 命令
-icon: readfill
+icon: read
 author: 阮一峰
 category: Linux
 tags:

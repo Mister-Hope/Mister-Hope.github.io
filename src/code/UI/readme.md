@@ -1,6 +1,6 @@
 ---
 title: UI 设计
-icon: skinfill
+icon: skin
 time: 2019-11-24
 category: UI
 ---

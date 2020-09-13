@@ -1,6 +1,6 @@
 ---
 title: 忽略特殊文件
-icon: skinfill
+icon: skin
 author: 廖雪峰
 category: Git
 tags:

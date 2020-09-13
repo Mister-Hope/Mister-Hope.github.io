@@ -1,19 +1,10 @@
-/*
- * @Author: Mr.Hope
- * @Date: 2019-07-05 00:14:26
- * @LastEditors: Mr.Hope
- * @LastEditTime: 2020-03-23 19:29:48
- * @Description: Vuepress配置
- */
-
 const resolve = require("vuepress-theme-hope/resolve");
-
 const navBarConfig = require("./config/navBarConfig");
 const sideBarConfig = require("./config/sideBar");
 
 module.exports = resolve({
   title: "我是 Mr.Hope",
-  description: "Mr.Hope的个人博客",
+  description: "Mr.Hope 的个人博客",
   headOption: {
     icon: "/favicon.ico",
     pwa: {

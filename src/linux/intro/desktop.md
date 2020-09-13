@@ -1,5 +1,5 @@
 ---
-icon: computerfill
+icon: computer
 time: 2019-11-16
 category: Linux
 ---

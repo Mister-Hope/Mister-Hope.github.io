@@ -1,6 +1,6 @@
 ---
 title: 评分方法
-icon: rankfill
+icon: rank
 category: 小程序
 ---
 

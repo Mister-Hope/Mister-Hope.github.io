@@ -1,7 +1,7 @@
 ---
 blog: true
 home: true
-icon: homefill
+icon: home
 heroImage: /logo.png
 heroText: 𝓜𝓻. 𝓗𝓸𝓹𝓮
 tagline: Where there is light, there is hope

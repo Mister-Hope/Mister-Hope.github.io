@@ -1,6 +1,6 @@
 module.exports = {
   zh: [
-    { text: "主页", link: "/", icon: "homefill" },
+    { text: "主页", link: "/", icon: "home" },
     {
       text: "随笔",
       icon: "note",
@@ -20,7 +20,7 @@ module.exports = {
           text: "其他作品",
           items: [
             { text: "笑谈人生", link: "life/", icon: "form" },
-            { text: "轻言细语", link: "poem/", icon: "likefill" },
+            { text: "轻言细语", link: "poem/", icon: "like" },
           ],
         },
         { text: "Node.js", link: "nodeJS/", icon: "nodeJS" },
@@ -82,7 +82,7 @@ module.exports = {
     },
   ],
   en: [
-    { text: "Home", link: "/en/", icon: "homefill" },
+    { text: "Home", link: "/en/", icon: "home" },
     { text: "Note", link: "/en/note/", icon: "note" },
     {
       text: "Code Note",

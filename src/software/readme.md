@@ -11,7 +11,7 @@ icon: software
 
 开发项目的代码版本管理以及多人协作使用 Git 软件
 
-- [Git](git/readme.md)
+- [Git 教程](git/readme.md)
 
 - [Github 介绍](git/github/readme.md)
 
@@ -19,7 +19,7 @@ icon: software
 
 在开发中，调试网页推荐使用 Chrome。
 
-- [Chrome](Chrome/readme.md)
+- [Chrome 介绍](Chrome/readme.md)
 
 ## 后端
 
