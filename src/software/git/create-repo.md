@@ -20,7 +20,7 @@ copyright: Copyright by 廖雪峰 Edited by Mr.Hope
 ```sh
 mkdir learngit
 cd learngit
-pwd /nenuStudentUnion/learngit
+pwd /hope-studio/learngit
 ```
 
 `pwd` 命令用于显示当前目录。
@@ -33,7 +33,7 @@ pwd /nenuStudentUnion/learngit
 
 ```sh
 $ git init
-Initialized empty Git repository in /nenuStudentUnion/learngit/.git/
+Initialized empty Git repository in /hope-studio/learngit/.git/
 ```
 
 瞬间 Git 就把仓库建好了，而且告诉您是一个空的仓库(empty Git repository)，可以发现当前目录下多了一个.git 的目录，这个目录是 Git 来跟踪管理仓库的，如果这个目录里面的文件破坏了，Git 仓库也破坏了。

@@ -12,7 +12,7 @@ tags:
 
 1. HTML 定义了网页的内容
 2. CSS 描述了网页的样式
-3. JavaScript 编写网页的行为
+3. JavaScript 编写网页的行为
 
 <!-- more -->
 

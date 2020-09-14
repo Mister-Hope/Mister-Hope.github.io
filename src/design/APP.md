@@ -2,7 +2,9 @@
 title: APP 组件设计规范
 icon: app
 time: 2019-11-24
-category: UI
+category: 设计
+tag:
+  - UI
 ---
 
 本文对应用程序设计中常见的组件及其作用进行了介绍。

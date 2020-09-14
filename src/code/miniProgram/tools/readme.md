@@ -1,6 +1,6 @@
 ---
 title: 工具使用
-icon: audit
+icon: tool
 category: 小程序
 ---
 

@@ -49,10 +49,10 @@ module.exports = {
           ],
         },
         {
-          text: "其他教程",
+          text: "前端开发",
           prefix: "/code/",
           items: [
-            { text: "前端开发", link: "website/", icon: "network" },
+            { text: "网页教程", link: "website/", icon: "network" },
             { text: "Vue 教程", link: "vue/", icon: "vue" },
             {
               text: "小程序教程",
@@ -61,7 +61,14 @@ module.exports = {
             },
           ],
         },
-        { text: "linux 教程", link: "/linux/", icon: "linux" },
+        {
+          text: "产品设计",
+          items: [{ text: "设计教程", link: "/design/", icon: "skin" }],
+        },
+        {
+          text: "后端运维",
+          items: [{ text: "Linux 教程", link: "/linux/", icon: "linux" }],
+        },
       ],
     },
     {

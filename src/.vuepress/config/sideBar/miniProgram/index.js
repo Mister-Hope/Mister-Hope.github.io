@@ -9,14 +9,14 @@ module.exports = [
   },
   {
     title: "开发者工具",
-    icon: "audit",
+    icon: "tool",
     collapsable: false,
     prefix: "tools/",
     children: ["", "interface", "debug", "npm", "audit"],
   },
   {
     title: "小程序框架",
-    icon: "module",
+    icon: "frame",
     collapsable: false,
     prefix: "framework/",
     children: [

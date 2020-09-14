@@ -58,10 +58,10 @@ Git 是分布式版本控制系统，同一个 Git 仓库，可以分布到不�
 现在，我们根据 Github 的提示，在本地的 learngit 仓库下运行命令:
 
 ```sh
-git remote add origin git@github.com:nenuyouth/learngit.git
+git remote add origin git@github.com:Hope-Studio/learngit.git
 ```
 
-请千万注意，把上面的 nenuyouth 替换成您自己的 Github 账户名，否则，您在本地关联的就是东北师范大学校学生会的远程库，关联没有问题，但是推送是推不上去的，因为您的 SSH Key 公钥不在东北师范大学校学生会的账户列表中。
+请千万注意，把上面的 Hope-Studio 替换成您自己的 Github 账户名，否则，您在本地关联的就是东北师范大学校学生会的远程库，关联没有问题，但是推送是推不上去的，因为您的 SSH Key 公钥不在东北师范大学校学生会的账户列表中。
 
 添加后，远程库的名字就是 `origin`，这是 Git 默认的叫法，也可以改成别的。
 
@@ -75,7 +75,7 @@ Compressing objects: 100% (15/15), done.
 Writing objects: 100% (20/20), 1.64 KiB | 560.00 KiB/s, done.
 Total 20 (delta 5), reused 0 (delta 0)
 remote: Resolving deltas: 100% (5/5), done.
-To github.com:nenuyouth/learngit.git
+To github.com:Hope-Studio/learngit.git
  * [new branch]      master -> master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 ```
@@ -139,7 +139,7 @@ Warning: Permanently added 'Github.com' (RSA) to the list of known hosts.
 现在，远程库已经准备好了，下一步是用命令 `git clone` 克隆一个本地库:
 
 ```sh
-$ git clone git@github.com:nenuyouth/gitskills.git
+$ git clone git@github.com:Hope-Studio/gitskills.git
 Cloning into 'gitskills'...
 remote: Counting objects: 3, done.
 remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 3
@@ -160,7 +160,7 @@ README.md
 
 如果有多个人协作开发，那么每个人各自从远程克隆一份就可以了。
 
-您也许还注意到，Github 给出的地址不止一个，还可以用 [https://github.com/nenuyouth/gitskills.git](https://github.com/nenuyouth/gitskills.git) 这样的地址。实际上，Git 支持多种协议，默认的 `git://` 使用 ssh，但也可以使用 https 等其他协议。
+您也许还注意到，Github 给出的地址不止一个，还可以用 [https://github.com/Hope-Studio/gitskills.git](https://github.com/Hope-Studio/gitskills.git) 这样的地址。实际上，Git 支持多种协议，默认的 `git://` 使用 ssh，但也可以使用 https 等其他协议。
 
 使用 https 除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放 http 端口的公司内部就无法使用 ssh 协议而只能用 https。
 

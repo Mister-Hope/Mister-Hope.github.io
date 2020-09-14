@@ -1,6 +1,8 @@
 name: Deploy blog to server
 
-on: page_build
+on:
+  - deployment
+  - page_build
 
 jobs:
   deploy:
