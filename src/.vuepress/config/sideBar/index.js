@@ -8,6 +8,8 @@ module.exports = {
 
     "/linux/": require("./linux"),
 
+    "/design/": require("./design"),
+
     "/code/windows/": ["", "shortcutKey", "addPath", "cmd", "notepad"],
 
     "/code/website/": require("./website"),
@@ -47,7 +49,6 @@ module.exports = {
       "vue/",
       "miniProgram/",
       "windows/",
-      "UI/",
       "backEnd/",
       "Android/",
       "Angular/",

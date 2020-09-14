@@ -14,24 +14,24 @@ JSON: JavaScript Object Notation(JavaScript 对象表示法)
 
 - JSON 是轻量级的文本数据交换格式
 
-- JSON 独立于语言：JSON 使用 Javascript 语法来描述数据对象，但是 JSON 仍然独立于语言和平台。JSON 解析器和 JSON 库支持许多不同的编程语言。 目前非常多的动态（PHP，JSP，.NET）编程语言都支持 JSON。
+- JSON 独立于语言: JSON 使用 Javascript 语法来描述数据对象，但是 JSON 仍然独立于语言和平台。JSON 解析器和 JSON 库支持许多不同的编程语言。 目前非常多的动态(PHP，JSP，.NET)编程语言都支持 JSON。
 
 - JSON 具有自我描述性，更易理解
 
 ## JSON 值
 
-JSON 值可以是：
+JSON 值可以是:
 
-- 数字（整数或浮点数）
-- 字符串（在双引号中）
-- 逻辑值（`true` 或 `false`）
-- 数组（在中括号中）
-- 对象（在大括号中）
+- 数字(整数或浮点数)
+- 字符串(在双引号中)
+- 逻辑值(`true` 或 `false`)
+- 数组(在中括号中)
+- 对象(在大括号中)
 - null
 
 ## JSON 数字
 
-JSON 数字可以是整型或者浮点型：
+JSON 数字可以是整型或者浮点型:
 
 **例:**
 

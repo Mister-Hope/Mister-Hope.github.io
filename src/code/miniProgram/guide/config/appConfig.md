@@ -35,10 +35,10 @@ category: 小程序
 | usingComponents         | Object   | 否   | 全局自定义组件配置                                                | 开发者工具 1.02.1810190 |
 | permission              | Object   | 否   | 小程序接口权限相关设置                                            | 微信客户端 7.0.0        |
 | sitemapLocation         | string   | 是   | 指明                                                              | sitemap.json 的位置     |
-| style                   | string   | 否   | 指定使用升级后的weui样式                                          | 2.8.0                   |
+| style                   | string   | 否   | 指定使用升级后的 weui 样式                                        | 2.8.0                   |
 | useExtendedLib          | Object   | 否   | 指定需要引用的扩展库                                              | 2.2.1                   |
 | darkmode                | boolean  | 否   | 小程序支持 DarkMode                                               | 2.11.0                  |
-| themeLocation           | string   | 否   | 指明 theme.json 的位置，darkmode为true为必填                      | 开发者工具 1.03.2004271 |
+| themeLocation           | string   | 否   | 指明 theme.json 的位置，darkmode 为 true 为必填                   | 开发者工具 1.03.2004271 |
 | lazyCodeLoading         | string   | 否   | 配置自定义组件代码按需注入                                        | 2.11.1                  |
 | singlePage              | Object   | 否   | 单页模式相关配置                                                  | 2.12.0                  |
 
@@ -280,7 +280,7 @@ PermissionObject 结构
     "request": 10000,
     "downloadFile": 10000
   },
-  "debug": true,
+  "debug": true
 }
 ```
 
@@ -296,14 +296,14 @@ PermissionObject 结构
 
 > 基础库 2.2.1 开始支持，低版本需做兼容处理。
 >
-> 最新的 nightly 版开发者工具开始支持，同时基础库从支持 npm 的版本（2.2.1）起支持
+> 最新的 nightly 版开发者工具开始支持，同时基础库从支持 npm 的版本(2.2.1)起支持
 
-指定需要引用的扩展库。目前支持以下项目：
+指定需要引用的扩展库。目前支持以下项目:
 
 - kbone: [多端开发框架](https://developers.weixin.qq.com/miniprogram/dev/extended/kbone/)
 - weui: [WeUI 组件库](https://developers.weixin.qq.com/miniprogram/dev/extended/weui/)
 
-指定后，相当于引入了对应扩展库相关的最新版本的 npm 包，同时也不占用小程序的包体积。目前暂不支持在分包中引用。用法如下：
+指定后，相当于引入了对应扩展库相关的最新版本的 npm 包，同时也不占用小程序的包体积。目前暂不支持在分包中引用。用法如下:
 
 ```json
 {
@@ -318,7 +318,7 @@ PermissionObject 结构
 
 > 开发者工具 1.03.2004271 及以上版本支持，基础库 2.11.0 及以上版本支持
 
-微信iOS客户端 7.0.12 版本、Android客户端 7.0.13 版本正式支持 DarkMode，可通过配置 `"darkmode": true` 表示当前小程序可适配 DarkMode，所有基础组件均会根据系统主题展示不同的默认样式，navigation bar 和 tab bar 也会根据开发者的配置自动切换。
+微信 iOS 客户端 7.0.12 版本、Android 客户端 7.0.13 版本正式支持 DarkMode，可通过配置 `"darkmode": true` 表示当前小程序可适配 DarkMode，所有基础组件均会根据系统主题展示不同的默认样式，navigation bar 和 tab bar 也会根据开发者的配置自动切换。
 
 配置后，请根据 [DarkMode 适配指南](https://developers.weixin.qq.com/miniprogram/dev/framework/ability/darkmode.html) 自行完成基础样式以外的适配工作。
 
@@ -364,8 +364,8 @@ PermissionObject 结构
 
 单页模式相关配置
 
-| 属性             | 类型   | 必填 | 默认值                                                            | 描述                                                                                                                      |
-| ---------------- | ------ | ---- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| 属性             | 类型   | 必填 | 默认值                                                                | 描述                                                                                                                          |
+| ---------------- | ------ | ---- | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | navigationBarFit | String | 否   | 默认自动调整，若原页面是自定义导航栏，则为 `float`，否则为 `squeezed` | 导航栏与页面的相交状态，值为 `float` 时表示导航栏浮在页面上，与页面相交；值为 `squeezed` 时表示页面被导航栏挤压，与页面不相交 |
 
 ## 配置示例

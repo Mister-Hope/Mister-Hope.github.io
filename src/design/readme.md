@@ -2,7 +2,7 @@
 title: UI 设计
 icon: skin
 time: 2019-11-24
-category: UI
+category: 设计
 ---
 
 本文列出了一些 UI 设计相关的资源。
@@ -11,7 +11,7 @@ category: UI
 
 ## 图标
 
-- [iconfont](https://www.iconfont.cn/)
+- [图标设计教程](icon/readme.md)
 
 ## 配色
 

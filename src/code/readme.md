@@ -24,8 +24,6 @@ breadcrumb: false
 
 - [后端开发](backEnd/readme.md)
 
-- [UI 设计](UI/readme.md)
-
 - [Node.js](nodeJS/readme.md)
 
 - [Android 开发](Android/readme.md)

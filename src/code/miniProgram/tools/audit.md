@@ -1,6 +1,6 @@
 ---
 title: 体验评分
-icon: audit
+icon: tool
 category: 小程序
 ---
 
