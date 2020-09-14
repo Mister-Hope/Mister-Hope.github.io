@@ -35,7 +35,7 @@ module.exports = [
       "",
       {
         title: "WXML",
-        icon: "html",
+        icon: "code",
         children: [
           "wxml",
           "databind",

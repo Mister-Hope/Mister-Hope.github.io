@@ -591,8 +591,8 @@ origin
 
 ```sh
 $ git remote -v
-origin  git@github.com:nenuyouth/learngit.git (fetch)
-origin  git@github.com:nenuyouth/learngit.git (push)
+origin  git@github.com:Hope-Studio/learngit.git (fetch)
+origin  git@github.com:Hope-Studio/learngit.git (push)
 ```
 
 上面显示了可以抓取和推送的 `origin` 的地址。如果没有推送权限，就看不到 push 的地址。
@@ -630,7 +630,7 @@ git push origin dev
 现在，模拟一个您的小伙伴，可以在另一台电脑 (注意要把 SSH Key 添加到 Github) 或者同一台电脑的另一个目录下克隆:
 
 ```sh
-$ git clone git@github.com:nenuyouth/learngit.git
+$ git clone git@github.com:Hope-Studio/learngit.git
 Cloning into 'learngit'...
 remote: Counting objects: 40, done.
 remote: Compressing objects: 100% (21/21), done.
@@ -668,7 +668,7 @@ Delta compression using up to 4 threads.
 Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 308 bytes | 308.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
-To github.com:nenuyouth/learngit.git
+To github.com:Hope-Studio/learngit.git
    f52c633..7a5e5dd  dev -> dev
 ```
 
@@ -688,9 +688,9 @@ $ git commit -m "add new env"
  create mode 100644 env.txt
 
 $ git push origin dev
-To github.com:nenuyouth/learngit.git
+To github.com:Hope-Studio/learngit.git
  ! [rejected]        dev -> dev (non-fast-forward)
-error: failed to push some refs to 'git@github.com:nenuyouth/learngit.git'
+error: failed to push some refs to 'git@github.com:Hope-Studio/learngit.git'
 hint: Updates were rejected because the tip of your current branch is behind
 hint: its remote counterpart. Integrate the remote changes (e.g.
 hint: 'git pull ...') before pushing again.
@@ -740,7 +740,7 @@ Delta compression using up to 4 threads.
 Compressing objects: 100% (4/4), done.
 Writing objects: 100% (6/6), 621 bytes | 621.00 KiB/s, done.
 Total 6 (delta 0), reused 0 (delta 0)
-To github.com:nenuyouth/learngit.git
+To github.com:Hope-Studio/learngit.git
    7a5e5dd..57c53ab  dev -> dev
 ```
 
@@ -832,9 +832,9 @@ $ git log --graph --pretty=oneline --abbrev-commit
 
 ```sh
 $ git push origin master
-To github.com:nenuyouth/learngit.git
+To github.com:Hope-Studio/learngit.git
  ! [rejected]        master -> master (fetch first)
-error: failed to push some refs to 'git@github.com:nenuyouth/learngit.git'
+error: failed to push some refs to 'git@github.com:Hope-Studio/learngit.git'
 hint: Updates were rejected because the remote contains work that you do
 hint: not have locally. This is usually caused by another repository pushing
 hint: to the same ref. You may want to first integrate the remote changes
@@ -850,7 +850,7 @@ remote: Counting objects: 3, done.
 remote: Compressing objects: 100% (1/1), done.
 remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
 Unpacking objects: 100% (3/3), done.
-From github.com:nenuyouth/learngit
+From github.com:Hope-Studio/learngit
    d1be385..f005ed4  master     -> origin/master
  * [new tag]         v1.0       -> v1.0
 Auto-merging hello.py
@@ -876,7 +876,7 @@ nothing to commit, working tree clean
 
 ```sh
 $ git log --graph --pretty=oneline --abbrev-commit
-*   e0ea545 (HEAD -> master) Merge branch 'master' of github.com:nenuyouth/learngit
+*   e0ea545 (HEAD -> master) Merge branch 'master' of github.com:Hope-Studio/learngit
 |\
 | * f005ed4 (origin/master) set exit=1
 * | 582d922 add author
@@ -940,7 +940,7 @@ Compressing objects: 100% (5/5), done.
 Writing objects: 100% (6/6), 576 bytes | 576.00 KiB/s, done.
 Total 6 (delta 2), reused 0 (delta 0)
 remote: Resolving deltas: 100% (2/2), completed with 1 local object.
-To github.com:nenuyouth/learngit.git
+To github.com:Hope-Studio/learngit.git
    f005ed4..7e61ed4  master -> master
 ```
 

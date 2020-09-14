@@ -129,7 +129,7 @@ LogLevel info
 <VirtualHost *:80>
   ServerAdmin zhangbowang1998@gmail.com
   ServerName nenu.com
-  ServerAlias nenuyouth
+  ServerAlias innenu
   DocumentRoot "${SRVROOT}/htdocs"
 </VirtualHost>
 

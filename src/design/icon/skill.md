@@ -1,6 +1,6 @@
 ---
 title: 图标设计技巧
-icon: guide
+icon: creative
 time: 2020-09-13
 category: 设计
 tag:

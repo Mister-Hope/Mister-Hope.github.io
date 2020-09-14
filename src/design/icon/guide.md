@@ -1,6 +1,6 @@
 ---
 title: 图标设计指南
-icon: creative
+icon: guide
 time: 2020-09-13
 category: 设计
 tag:

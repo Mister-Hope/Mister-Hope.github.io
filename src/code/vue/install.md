@@ -41,7 +41,7 @@ tags:
 
 1. 打开文件管理器窗口找到合适位置，并在地址栏输入 cmd，以在当前界面打开终端。
 
-1. 使用 `git clone git@github.com:nenuyouth/Vue2TSTemplate.git` 克隆模板。
+1. 使用 `git clone git@github.com:Mister-Hope/vue-template.git` 克隆模板。
 
 1. 使用 vscode 打开刚刚克隆出来的文件夹，按下 `Ctrl` + \` 打开终端。
 

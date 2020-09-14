@@ -27,7 +27,7 @@ project:
   # - name: in东师官网
   #   type: project
   #   desc: 提供各种功能的聚合入口，校历、讲座资讯
-  #   link: https://nenuyouth.com/
+  #   link: https://innenu.com/
   - name: ftp-hope
     type: project
     desc: 一个 node 环境下基于 Promise 的 FTP 客户端

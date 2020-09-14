@@ -170,7 +170,7 @@ Deleted tag 'v0.1' (was f15b0dd)\
 ```sh
 $ git push origin v1.0
 Total 0 (delta 0), reused 0 (delta 0)
-To github.com:nenuyouth/learngit.git
+To github.com:Hope-Studio/learngit.git
  * [new tag]         v1.0 -> v1.0
 ```
 
@@ -179,7 +179,7 @@ To github.com:nenuyouth/learngit.git
 ```sh
 $ git push origin --tags
 Total 0 (delta 0), reused 0 (delta 0)
-To github.com:nenuyouth/learngit.git
+To github.com:Hope-Studio/learngit.git
  * [new tag]         v0.9 -> v0.9
 ```
 
@@ -194,7 +194,7 @@ Deleted tag 'v0.9' (was f52c633)
 
 ```sh
 $ git push origin :refs/tags/v0.9
-To github.com:nenuyouth/learngit.git
+To github.com:Hope-Studio/learngit.git
  - [deleted]         v0.9
 ```
 

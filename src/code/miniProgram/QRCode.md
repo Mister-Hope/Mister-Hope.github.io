@@ -42,36 +42,10 @@ POST https://api.weixin.qq.com/wxa/getwxacodeunlimit?access_token=ACCESS_TOKEN
 具体格式如下:
 
 ```html
-文本内容<a
+<a
   href="不支持小程序时打开的网页"
   data-miniprogram-appid="小程序的appid"
   data-miniprogram-path="小程序路径"
-  >点击跳小程序</a
+  >文本内容</a
 >
 ```
-
-在此处，我们的小程序 appid 为 `wx9ce37d9662499df3`。
-
-如果需要跳转到东师攻略指南页面的话，需要按照如下格式填写:
-
-```html
-<a
-  href="https://nenuyouth.com/guide/JSON名称"
-  data-miniprogram-appid="wx9ce37d9662499df3"
-  data-miniprogram-path="module/sharePage?aim=JSON名称"
-  >跳转主题名称</a
->
-```
-
-例子:
-
-```html
-<a
-  href="https://nenuyouth.com/guide/check5"
-  data-miniprogram-appid="wx9ce37d9662499df3"
-  data-miniprogram-path="module/sharePage?aim=check5"
-  >新生接站</a
->
-```
-
-> 需要注意的是如果页面名称为 `XXX0`，则网页中不包含 `0`。比如: `check0` 的网址需要写作`https://nenuyouth.com/guide/check`。
