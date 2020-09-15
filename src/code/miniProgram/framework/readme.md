@@ -23,7 +23,7 @@ category: 小程序
 2. 整理界面所需的图片和图标，图片和图标请使用[压缩网站](https://tinypng.com)压缩至 800Kb 以下(带有文字或需要查看及其详细细节的图片可以提升至不多于 1.2Mb)，并按照 `页面文件名称-图片` 的形式命名，如 `hope-good-school-logo.jpg`。
 
 3. 在 yaml 中通过 `title` 写入页面的标题，并通过 `content` 写入文件内容。
-   `content` 为一个 yaml 数组，数组的每个元素均为一个 yaml 对象，其内必须包含一个有效的 `tag` 值。([您在说什么？](simpleDebug.md))
+   `content` 为一个 yaml 数组，数组的每个元素均为一个 yaml 对象，其内必须包含一个有效的 `tag` 值。([您在说什么?](simpleDebug.md))
 
    每一个 yaml 对象最终作为配置被渲染成为了页面中的一个组件。
 

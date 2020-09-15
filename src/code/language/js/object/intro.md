@@ -25,7 +25,7 @@ typeof {}; // 'object'
 
 可见，`number`、`string`、`boolean`、`function` 和 `undefined` 有别于其他类型。特别注意 `null` 的类型是 `object`，`Array` 的类型也是 `object`，如果我们用 `typeof` 将无法区分出 `null`、`Array` 和通常意义上的 object —— `{}`。
 
-JavaScript 的所有数据都可以看成对象，那是不是我们已经在使用面向对象编程了呢？
+JavaScript 的所有数据都可以看成对象，那是不是我们已经在使用面向对象编程了呢?
 
 当然不是。如果我们只使用 `Number`、`Array`、`string` 以及基本的 `{...}` 定义的对象，还无法发挥出面向对象编程的威力。
 

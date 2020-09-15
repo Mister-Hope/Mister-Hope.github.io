@@ -58,7 +58,7 @@ True
 True
 ```
 
-您可能会问，为什么 list、dict、str 等数据类型不是 `Iterator`？
+您可能会问，为什么 list、dict、str 等数据类型不是 `Iterator`?
 
 这是因为 Python 的 Iterator 对象表示的是一个数据流，Iterator 对象可以被 `next()` 函数调用并不断返回下一个数据，直到没有数据时抛出 StopIteration 错误。可以把这个数据流看做是一个有序序列，但我们却不能提前知道序列的长度，只能不断通过 next()函数实现按需计算下一个数据，所以 Iterator 的计算是惰性的，只有在需要返回下一个数据时它才会计算。
 

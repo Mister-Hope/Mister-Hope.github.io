@@ -21,7 +21,7 @@ PHP 手册:
 
 ### ASP
 
-ASP 文件可包含文本、HTML 标签和脚本。ASP 文件中的脚本可在服务器上执行。由于 ASP 在服务器上运行，浏览器无需支持客户端脚本就可以显示 ASP 文件！
+ASP 文件可包含文本、HTML 标签和脚本。ASP 文件中的脚本可在服务器上执行。由于 ASP 在服务器上运行，浏览器无需支持客户端脚本就可以显示 ASP 文件!
 
 - [W3School 教程](http://www.w3school.com.cn/asp/index.asp)
 

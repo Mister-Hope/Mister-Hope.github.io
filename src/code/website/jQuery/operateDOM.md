@@ -11,11 +11,11 @@ category: jQuery
 
 <!-- more -->
 
-jQuery 的选择器很强大，用起来又简单又灵活，但是搞了这么久，我拿到了 jQuery 对象，到底要干什么？
+jQuery 的选择器很强大，用起来又简单又灵活，但是搞了这么久，我拿到了 jQuery 对象，到底要干什么?
 
-答案当然是操作对应的 DOM 节点啦！
+答案当然是操作对应的 DOM 节点啦!
 
-回顾一下修改 DOM 的 CSS、文本、设置 HTML 有多么麻烦，而且有的浏览器只有 innerHTML，有的浏览器支持 innerText，有了 jQuery 对象，不需要考虑浏览器差异了，全部统一操作！
+回顾一下修改 DOM 的 CSS、文本、设置 HTML 有多么麻烦，而且有的浏览器只有 innerHTML，有的浏览器支持 innerText，有了 jQuery 对象，不需要考虑浏览器差异了，全部统一操作!
 
 ## 修改 Text 和 HTML
 
@@ -55,7 +55,7 @@ Java & JavaScript
 一个 jQuery 对象可以包含 0 个或任意个 DOM 对象，它的方法实际上会作用在对应的每个 DOM 节点上。在上面的例子中试试:
 
 ```js
-$("#test-ul li").text("JS"); // 是不是两个节点都变成了JS？
+$("#test-ul li").text("JS"); // 是不是两个节点都变成了JS?
 ```
 
 所以 jQuery 对象的另一个好处是我们可以执行一个操作，作用在对应的一组 DOM 节点上。即使选择器没有返回任何 DOM 节点，调用 jQuery 对象的方法仍然不会报错:

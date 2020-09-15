@@ -14,7 +14,7 @@ jQuery 能帮我们干这些事情:
 - 消除浏览器差异: 您不需要自己写冗长的代码来针对不同的浏览器来绑定事件，编写 AJAX 等代码；
 - 简洁的操作 DOM 的方法: 写 `$('#test')` 肯定比 `document.getElementById('test')` 来得简洁；
 - 轻松实现动画、修改 CSS 等各种操作。
-- jQuery 的理念 “Write Less, Do More“，让您写更少的代码，完成更多的工作！
+- jQuery 的理念 “Write Less, Do More“，让您写更少的代码，完成更多的工作!
 
 <!-- more -->
 

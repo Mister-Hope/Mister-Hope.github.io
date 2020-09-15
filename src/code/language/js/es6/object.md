@@ -124,7 +124,7 @@ const cart = {
 
   set wheels(value) {
     if (value < this._wheels) {
-      throw new Error("数值太小了！");
+      throw new Error("数值太小了!");
     }
     this._wheels = value;
   },

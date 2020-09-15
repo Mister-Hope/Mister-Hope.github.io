@@ -9,7 +9,7 @@ tags:
 copyright: Copyright by 廖雪峰 Edited by Mr.Hope
 ---
 
-什么是仓库呢？英文名**repository**，您可以简单理解成一个目录，这个目录里面的所有文件都可以被 Git 管理起来，每个文件的修改、删除， Git 都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还原”。
+什么是仓库呢? 英文名**repository**，您可以简单理解成一个目录，这个目录里面的所有文件都可以被 Git 管理起来，每个文件的修改、删除， Git 都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还原”。
 
 <!-- more -->
 
@@ -43,7 +43,7 @@ Initialized empty Git repository in /hope-studio/learngit/.git/
 也不一定必须在空目录下创建 Git 仓库，选择一个已经有东西的目录也是可以的。
 
 ::: danger
-请不要用已经在使用的项目练习 Git！
+请不要用已经在使用的项目练习 Git!
 :::
 
 ## 把文件添加到仓库
@@ -96,7 +96,7 @@ Git is free software.
 
    `git commit` 命令执行成功后会告诉您，`1 file changed`: 1 个文件被改动(我们新添加的 readme.txt 文件)；`2 insertions`: 插入了两行内容(readme.txt 有两行内容)。
 
-为什么 Git 添加文件需要 `add`，`commit` 一共两步呢？因为 `commit` 可以一次提交很多文件，所以您可以多次 `add` 不同的文件，比如:
+为什么 Git 添加文件需要 `add`，`commit` 一共两步呢? 因为 `commit` 可以一次提交很多文件，所以您可以多次 `add` 不同的文件，比如:
 
 ```sh
 git add file1.txt

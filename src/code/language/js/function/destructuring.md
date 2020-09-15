@@ -8,7 +8,7 @@ category: JavaScript
 
 从 ES6 开始，JavaScript 引入了解构赋值，可以同时对一组变量进行赋值。
 
-什么是解构赋值？我们先看看传统的做法，如何把一个数组的元素分别赋值给几个变量:
+什么是解构赋值? 我们先看看传统的做法，如何把一个数组的元素分别赋值给几个变量:
 
 ```js
 const array = ["hello", "JavaScript", "ES6"];

@@ -7,7 +7,7 @@ category: JavaScript
 
 在上面的章节中我们看到了 JavaScript 的对象模型是基于原型实现的，特点是简单，缺点是理解起来比传统的类－实例模型要困难，最大的缺点是继承的实现需要编写大量代码，并且需要正确实现原型链。
 
-有没有更简单的写法？有！
+有没有更简单的写法? 有!
 
 新的关键字 `class` 从 ES6 开始正式被引入到 JavaScript 中。`class` 的目的就是让定义类更简单。
 
@@ -68,4 +68,4 @@ class PrimaryStudent extends Student {
 
 `PrimaryStudent` 已经自动获得了父类 `Student` 的 `hello` 方法，我们又在子类中定义了新的 `myGrade` 方法。
 
-ES6 引入的 `class` 和原有的 JavaScript 原型继承有什么区别呢？实际上它们没有任何区别，`class` 的作用就是让 JavaScript 引擎去实现原来需要我们自己编写的原型链代码。简而言之，用 `class` 的好处就是极大地简化了原型链代码。
+ES6 引入的 `class` 和原有的 JavaScript 原型继承有什么区别呢? 实际上它们没有任何区别，`class` 的作用就是让 JavaScript 引擎去实现原来需要我们自己编写的原型链代码。简而言之，用 `class` 的好处就是极大地简化了原型链代码。

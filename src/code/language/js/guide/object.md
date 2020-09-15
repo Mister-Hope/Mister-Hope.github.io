@@ -58,7 +58,7 @@ xiaohng.name; // '小红'
 
 实际上 JavaScript 对象的所有属性都是字符串，不过属性对应的值可以是任意数据类型。
 
-如果访问一个不存在的属性会返回什么呢？JavaScript 规定，访问不存在的属性不报错，而是返回 `undefined`:
+如果访问一个不存在的属性会返回什么呢? JavaScript 规定，访问不存在的属性不报错，而是返回 `undefined`:
 
 ```js
 "use strict";

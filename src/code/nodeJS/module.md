@@ -11,7 +11,7 @@ tags:
 
 为了编写可维护的代码，我们把很多函数分组，分别放到不同的文件里，这样，每个文件包含的代码就相对较少，很多编程语言都采用这种组织代码的方式。在 Node 环境中，一个`.js`文件就称之为一个模块(module)。
 
-使用模块有什么好处？
+使用模块有什么好处?
 
 最大的好处是大大提高了代码的可维护性。其次，编写代码不必从零开始。当一个模块编写完毕，就可以被其他地方引用。我们在编写程序的时候，也经常引用其他模块，包括 Node 内置的模块和来自第三方的模块。
 
@@ -37,7 +37,7 @@ module.exports = greet;
 
 函数`greet()`是我们在 hello 模块中定义的，您可能注意到最后一行是一个奇怪的赋值语句，它的意思是，把函数`greet`作为模块的输出暴露出去，这样其他模块就可以使用`greet`函数了。
 
-问题是其他模块怎么使用 hello 模块的这个`greet`函数呢？我们再编写一个`main.js`文件，调用`hello`模块的`greet`函数:
+问题是其他模块怎么使用 hello 模块的这个`greet`函数呢? 我们再编写一个`main.js`文件，调用`hello`模块的`greet`函数:
 
 ```js
 "use strict";
@@ -56,7 +56,7 @@ greet(s); // Hello, Michael!
 const greet = require("./hello");
 ```
 
-引入的模块作为变量保存在`greet`变量中，那 greet 变量到底是什么东西？其实变量`greet`就是在`hello.js`中我们用`module.exports = greet;`输出的`greet`函数。所以，`main.js`就成功地引用了`hello.js`模块中定义的`greet()`函数，接下来就可以直接使用它了。
+引入的模块作为变量保存在`greet`变量中，那 greet 变量到底是什么东西? 其实变量`greet`就是在`hello.js`中我们用`module.exports = greet;`输出的`greet`函数。所以，`main.js`就成功地引用了`hello.js`模块中定义的`greet()`函数，接下来就可以直接使用它了。
 
 在使用`require()`引入模块的时候，请注意模块的相对路径。因为 main.js 和 hello.js 位于同一个目录，所以我们用了当前目录.:
 
@@ -128,7 +128,7 @@ const s = "global";
 
 也就是说，JavaScript 语言本身并没有一种模块机制来保证不同模块可以使用相同的变量名。
 
-那 Node.js 是如何实现这一点的？
+那 Node.js 是如何实现这一点的?
 
 其实要实现“模块”这个功能，并不需要语法层面的支持。Node.js 也并不会增加任何 JavaScript 语法。实现“模块”功能的奥妙就在于 JavaScript 是一种函数式编程语言，它支持闭包。如果我们把一段 JavaScript 代码用一个函数包装起来，这段代码的所有“全局”变量就变成了函数内部的局部变量。
 
@@ -158,7 +158,7 @@ Node.js 加载了 hello.js 后，它可以把代码包装一下，变成这样�
 
 所以，Node 利用 JavaScript 的函数式编程的特性，轻而易举地实现了模块的隔离。
 
-但是，模块的输出`module.exports`怎么实现？
+但是，模块的输出`module.exports`怎么实现?
 
 这个也很容易实现，Node 可以先准备一个对象`module`:
 

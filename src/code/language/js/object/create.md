@@ -54,7 +54,7 @@ function Student(name) {
 }
 ```
 
-您会问，咦，这不是一个普通函数吗？
+您会问，咦，这不是一个普通函数吗?
 
 这确实是一个普通函数，但是在 JavaScript 中，可以用关键字 `new` 来调用这个函数，并返回一个对象:
 
@@ -92,7 +92,7 @@ Object.getPrototypeOf(xiaoming) === Student.prototype; // true
 xiaoming instanceof Student; // true
 ```
 
-看晕了吧？用一张图来表示这些乱七八糟的关系就是:
+看晕了吧? 用一张图来表示这些乱七八糟的关系就是:
 
 ![protos](../assets/protos.png)
 
@@ -114,7 +114,7 @@ xiaoming.hello === xiaohong.hello; // false
 
 `xiaoming` 和 `xiaohong` 各自的 `name` 不同，这是对的，否则我们无法区分谁是谁了。
 
-`xiaoming` 和 `xiaohong` 各自的 `hello` 是一个函数，但它们是两个不同的函数，虽然函数名称和代码都是相同的！
+`xiaoming` 和 `xiaohong` 各自的 `hello` 是一个函数，但它们是两个不同的函数，虽然函数名称和代码都是相同的!
 
 如果我们通过 `new Student()` 创建了很多对象，这些对象的 `hello` 函数实际上只需要共享同一个函数就可以了，这样可以节省很多内存。
 
@@ -134,11 +134,11 @@ Student.prototype.hello = function () {
 };
 ```
 
-用 `new` 创建基于原型的 JavaScript 的对象就是这么简单！
+用 `new` 创建基于原型的 JavaScript 的对象就是这么简单!
 
 ## 忘记写 new 怎么办
 
-如果一个函数被定义为用于创建对象的构造函数，但是调用时忘记了写 new 怎么办？
+如果一个函数被定义为用于创建对象的构造函数，但是调用时忘记了写 new 怎么办?
 
 在 strict 模式下，`this.name = name` 将报错，因为 `this` 绑定为 `undefined`，在非 `strict` 模式下，`this.name = name` 不报错，因为 `this` 绑定为 `window`，于是无意间创建了全局变量 `name`，并且返回 `undefined`，这个结果更糟糕。
 

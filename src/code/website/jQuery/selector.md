@@ -9,7 +9,7 @@ category: jQuery
 
 <!-- more -->
 
-为什么 jQuery 要发明选择器？回顾一下 DOM 操作中我们经常使用的代码:
+为什么 jQuery 要发明选择器? 回顾一下 DOM 操作中我们经常使用的代码:
 
 ```js
 // 按ID查找:
@@ -66,7 +66,7 @@ const div = $("#abc");
 
 注意，`#abc` 以 `#` 开头。返回的对象是 jQuery 对象。
 
-什么是 jQuery 对象？jQuery 对象类似数组，它的每个元素都是一个引用了 DOM 节点的对象。
+什么是 jQuery 对象? jQuery 对象类似数组，它的每个元素都是一个引用了 DOM 节点的对象。
 
 以上面的查找为例，如果 id 为 `abc` 的 `<div>` 存在，返回的 jQuery 对象如下:
 
@@ -115,7 +115,7 @@ const a = $(".red"); // 所有节点包含`class="red"`都将返回
 通常很多节点有多个 **class**，我们可以查找同时包含 `red` 和 `green` 的节点:
 
 ```js
-const a = $(".red.green"); // 注意没有空格！
+const a = $(".red.green"); // 注意没有空格!
 // 符合条件的节点:
 // <div class="red green">...</div>
 // <div class="blue green red">...</div>

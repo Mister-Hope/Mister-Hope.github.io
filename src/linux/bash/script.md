@@ -338,7 +338,7 @@ cd $some_directory
 if [ "$?" = "0" ]; then
   rm *
 else
-  echo "无法切换目录！" 1>&2
+  echo "无法切换目录!" 1>&2
   exit 1
 fi
 ```

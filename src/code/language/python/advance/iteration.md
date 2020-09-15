@@ -48,7 +48,7 @@ C
 
 所以，当我们使用 for 循环时，只要作用于一个可迭代对象，for 循环就可以正常运行，而我们不太关心该对象究竟是 list 还是其他数据类型。
 
-那么，如何判断一个对象是可迭代对象呢？方法是通过 collections 模块的 Iterable 类型判断:
+那么，如何判断一个对象是可迭代对象呢? 方法是通过 collections 模块的 Iterable 类型判断:
 
 ```py
 >>> from collections import Iterable
@@ -60,7 +60,7 @@ True
 False
 ```
 
-最后一个小问题，如果要对 list 实现类似 Java 那样的下标循环怎么办？Python 内置的 `enumerate` 函数可以把一个 list 变成索引-元素对，这样就可以在 for 循环中同时迭代索引和元素本身:
+最后一个小问题，如果要对 list 实现类似 Java 那样的下标循环怎么办? Python 内置的 `enumerate` 函数可以把一个 list 变成索引-元素对，这样就可以在 for 循环中同时迭代索引和元素本身:
 
 ```py
 >>> for i, value in enumerate(['A', 'B', 'C']):

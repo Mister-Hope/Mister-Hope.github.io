@@ -545,7 +545,7 @@ let template = `
 
 上面代码在模板字符串之中，放置了一个常规模板。该模板使用`<%...%>`放置 JavaScript 代码，使用`<%= ... %>`输出 JavaScript 表达式。
 
-怎么编译这个模板字符串呢？
+怎么编译这个模板字符串呢?
 
 一种思路是将其转换为 JavaScript 表达式字符串。
 
@@ -785,7 +785,7 @@ message;
 
 ```js
 i18n`Welcome to ${siteName}, you are visitor number ${visitorNumber}!`;
-// "欢迎访问xxx，您是第xxxx位访问者！"
+// "欢迎访问xxx，您是第xxxx位访问者!"
 ```
 
 模板字符串本身并不能取代 Mustache 之类的模板库，因为没有条件判断和循环处理功能，但是通过标签函数，您可以自己添加这些功能。

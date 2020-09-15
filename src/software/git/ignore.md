@@ -64,7 +64,7 @@ db.ini
 deploy_key_rsa
 ```
 
-最后一步就是把 `.gitignore` 也提交到 Git，就完成了！当然检验 `.gitignore` 的标准是 `git status` 命令是不是说 `working directory clean`。
+最后一步就是把 `.gitignore` 也提交到 Git，就完成了! 当然检验 `.gitignore` 的标准是 `git status` 命令是不是说 `working directory clean`。
 
 使用 Windows 的童鞋注意了，如果您在资源管理器里新建一个 `.gitignore` 文件，它会非常弱智地提示您必须输入文件名，但是在文本编辑器里“保存”或者“另存为”就可以把文件保存为 `.gitignore` 了。
 
@@ -142,4 +142,4 @@ GitHub 有一个十分详细的针对数十种项目及语言的 .gitignore 文�
 
 - 忽略某些文件时，需要编写 `.gitignore`；
 
-- `.gitignore` 文件本身要放到版本库里，并且可以对 `.gitignore` 做版本管理！
+- `.gitignore` 文件本身要放到版本库里，并且可以对 `.gitignore` 做版本管理!

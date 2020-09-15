@@ -57,7 +57,7 @@ new PrimaryStudent() ----> PrimaryStudent.prototype ----> Student.prototype ----
 PrimaryStudent.prototype = Student.prototype;
 ```
 
-是不行的！如果这样的话，`PrimaryStudent` 和 `Student` 共享一个原型对象，那还要定义 `PrimaryStudent` 干啥？
+是不行的! 如果这样的话，`PrimaryStudent` 和 `Student` 共享一个原型对象，那还要定义 `PrimaryStudent` 干啥?
 
 我们必须借助一个中间对象来实现正确的原型链，这个中间对象的原型要指向 `Student.prototype`。为了实现这一点，参考发明 JSON 的道格拉斯的代码，中间对象可以用一个空函数 `F` 来实现:
 

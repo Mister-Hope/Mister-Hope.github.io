@@ -29,7 +29,7 @@ category: jQuery
 </div>
 ```
 
-如何向列表新增一个语言？首先要拿到 `<ul>` 节点:
+如何向列表新增一个语言? 首先要拿到 `<ul>` 节点:
 
 ```js
 const ul = $("#test-div>ul");

@@ -19,7 +19,7 @@ JavaScript 提供 `if` 结构和 `switch` 结构，完成条件判断，即只�
 
 [^truefalse]: **布尔值的转换**
 
-    如果 `if` 的条件判断语句结果不是 `true` 或 `false` 怎么办？例如:
+    如果 `if` 的条件判断语句结果不是 `true` 或 `false` 怎么办? 例如:
 
     ```js
     const s = "123";

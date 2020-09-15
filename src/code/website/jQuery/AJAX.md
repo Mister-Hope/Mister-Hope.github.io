@@ -40,9 +40,9 @@ const jqxhr = $.ajax("/api/categories", {
 // 请求已经发送了
 ```
 
-不过，如何用回调函数处理返回的数据和出错时的响应呢？
+不过，如何用回调函数处理返回的数据和出错时的响应呢?
 
-还记得 Promise 对象吗？jQuery 的 `jqXHR` 对象类似一个 Promise 对象，我们可以用链式写法来处理各种回调:
+还记得 Promise 对象吗? jQuery 的 `jqXHR` 对象类似一个 Promise 对象，我们可以用链式写法来处理各种回调:
 
 ```js
 "use strict";

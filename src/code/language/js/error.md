@@ -189,7 +189,7 @@ console.log(n);
 
 ## 错误传播
 
-如果代码发生了错误，又没有被 `try ... catch` 捕获，那么，程序执行流程会跳转到哪呢？
+如果代码发生了错误，又没有被 `try ... catch` 捕获，那么，程序执行流程会跳转到哪呢?
 
 ```js
 function getLength(s) {
@@ -236,7 +236,7 @@ function bar(s) {
 main(null);
 ```
 
-当`bar()`函数传入参数`null`时，代码会报错，错误会向上抛给调用方`foo()`函数，`foo()`函数没有`try ... catch`语句，所以错误继续向上抛给调用方`main()`函数，`main()`函数有`try ... catch`语句，所以错误最终在`main()`函数被处理了。
+当 `bar()` 函数传入参数 `null` 时，代码会报错，错误会向上抛给调用方 `foo()` 函数，`foo()` 函数没有 `try ... catch` 语句，所以错误继续向上抛给调用方 `main()` 函数，`main()` 函数有 `try ... catch` 语句，所以错误最终在 `main()` 函数被处理了。
 
 至于在哪些地方捕获错误比较合适，需要视情况而定。
 
@@ -244,7 +244,7 @@ main(null);
 
 编写 JavaScript 代码时，我们要时刻牢记，JavaScript 引擎是一个事件驱动的执行引擎，代码总是以单线程执行，而回调函数的执行需要等到下一个满足条件的事件出现后，才会被执行。
 
-例如，`setTimeout()`函数可以传入回调函数，并在指定若干毫秒后执行:
+例如，`setTimeout()` 函数可以传入回调函数，并在指定若干毫秒后执行:
 
 ```js
 function printTime() {
@@ -255,9 +255,9 @@ setTimeout(printTime, 1000);
 console.log("done");
 ```
 
-上面的代码会先打印`done`，1 秒后才会打印`It is time!`。
+上面的代码会先打印 `done`，1 秒后才会打印 `It is time!`。
 
-如果`printTime()`函数内部发生了错误，我们试图用`try`包裹`setTimeout()`是无效的:
+如果 `printTime()` 函数内部发生了错误，我们试图用 `try` 包裹 `setTimeout()` 是无效的:
 
 ```js
 "use strict";
@@ -274,7 +274,7 @@ try {
 }
 ```
 
-原因就在于调用`setTimeout()`函数时，传入的`printTime`函数并未立刻执行！紧接着，JavaScript 引擎会继续执行`console.log('done');`语句，而此时并没有错误发生。直到 1 秒钟后，执行`printTime`函数时才发生错误，但此时除了在`printTime`函数内部捕获错误外，外层代码并无法捕获。
+原因就在于调用 `setTimeout()` 函数时，传入的 `printTime` 函数并未立刻执行! 紧接着，JavaScript 引擎会继续执行 `console.log('done');` 语句，而此时并没有错误发生。直到 1 秒钟后，执行 `printTime` 函数时才发生错误，但此时除了在 `printTime` 函数内部捕获错误外，外层代码并无法捕获。
 
 所以，涉及到异步代码，无法在调用时捕获，原因就是在捕获的当时，回调函数并未执行。
 

@@ -21,7 +21,7 @@ git config --global color.ui true
 
 ## 配置别名
 
-有没有经常敲错命令？比如 `git status`？`status` 这个单词真心不好记。
+有没有经常敲错命令? 比如 `git status`? `status` 这个单词真心不好记。
 
 如果敲 `git st` 就表示 `git status` 那就简单多了，当然这种偷懒的办法我们是极力赞成的。
 
@@ -95,13 +95,13 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 
 ![git lg 示例图](./assets/git16.png)
 
-为什么不早点告诉我？别激动，咱不是为了多记几个英文单词嘛！
+为什么不早点告诉我? 别激动，咱不是为了多记几个英文单词嘛!
 
 ## 配置文件
 
 配置 Git 的时候，加上 `--global` 是针对当前用户起作用的，如果不加，那只针对当前的仓库起作用。
 
-配置文件放哪了？每个仓库的 Git 配置文件都放在 `.git/config` 文件中:
+配置文件放哪了? 每个仓库的 Git 配置文件都放在 `.git/config` 文件中:
 
 ```sh
 $ cat .git/config

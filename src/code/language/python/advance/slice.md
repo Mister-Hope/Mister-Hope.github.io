@@ -11,7 +11,7 @@ category: Python
 >>> L = ['Michael', 'Sarah', 'Tracy', 'Bob', 'Jack']
 ```
 
-取前 3 个元素，应该怎么做？
+取前 3 个元素，应该怎么做?
 
 笨办法:
 

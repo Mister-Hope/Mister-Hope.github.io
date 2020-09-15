@@ -48,13 +48,13 @@ tags:
 
    ![Git 安装示意图8](./assets/install8.png)
 
-安装完成后，在开始菜单里找到 “Git” -> “Git Bash” (Mac 上叫 Git Shell)，蹦出一个类似命令行窗口的东西，就说明 Git 安装成功！
+安装完成后，在开始菜单里找到 “Git” -> “Git Bash” (Mac 上叫 Git Shell)，蹦出一个类似命令行窗口的东西，就说明 Git 安装成功!
 
 ![Git Bash](./assets/shell.png)
 
 ## Git 的初次配置
 
-1. 为配置配置用户名和密码。
+1. 为 Git 全局配置用户名和密码。
 
    ```bash
    git config --global user.name "Your Name"
@@ -63,7 +63,14 @@ tags:
 
    将上方的字符串换成您自己的名字和邮箱。
 
-   ::: tip
+   如:
+
+   ```bash
+   git config --global user.name "Mr.Hope"
+   git config --global user.email "zhangbowang1998@gmail.com"
+   ```
+
+   ::: info
    由于 Git 是一个多人协作的版本控制系统，首先你应当设置你的身份。
    :::
 
@@ -75,11 +82,13 @@ tags:
 
    您需要把邮件地址换成您自己的邮件地址，然后一路回车，使用默认值即可，由于这个 Key 也不是用于军事目的，所以也无需设置密码。
 
-   如果一切顺利的话，可以在用户主目录里找到.ssh 目录，里面有 id_rsa 和 id_rsa.pub 两个文件，这两个就是 SSH Key 的秘钥对，id_rsa 是私钥，不能泄露出去，id_rsa.pub 是公钥，可以放心地告诉任何人。
+   如果一切顺利的话，可以在用户主目录里找到 .ssh 目录，里面有 id_rsa 和 id_rsa.pub 两个文件，这两个就是 SSH Key 的秘钥对，id_rsa 是私钥，不能泄露出去，id_rsa.pub 是公钥，可以放心地告诉任何人。
 
    ::: tip
    这一步是生成你的身份识别信息，你可以放心的把公钥交给别人，留下自己的私钥。
+   :::
 
+   ::: info RSA
    RSA 是一种不对称加密，公钥的加密只能通过私钥解开，反之私钥的加密只能由公钥解开。也就是说当你给别热门自己的公钥的时候，他们也无法冒充你。
    :::
 

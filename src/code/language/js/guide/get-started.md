@@ -129,7 +129,7 @@ Node.js 是一个著名的基于 JavaScript 的后端工具，可以很方便快
 
 写 JavaScript 的时候，如果期望显示 `ABC` ，结果却显示 `XYZ` ，找出问题代码，这就需要调试。
 
-怎么在浏览器中调试 JavaScript 代码呢？
+怎么在浏览器中调试 JavaScript 代码呢?
 
 首先，安装 Google Chrome 浏览器，Chrome 浏览器对开发者非常友好，可以方便地调试 JavaScript 代码。
 

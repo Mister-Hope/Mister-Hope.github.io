@@ -89,7 +89,7 @@ fileInput.addEventListener("change", () => {
 
 上面的代码还演示了 JavaScript 的一个重要的特性就是单线程执行模式。在 JavaScript 中，浏览器的 JavaScript 执行引擎在执行 JavaScript 代码时，总是以单线程模式执行，也就是说，任何时候，JavaScript 代码都不可能同时有多于 `1` 个线程在执行。
 
-您可能会问，单线程模式执行的 JavaScript，如何处理多任务？
+您可能会问，单线程模式执行的 JavaScript，如何处理多任务?
 
 在 JavaScript 中，执行多任务实际上都是异步调用，比如上面的代码:
 

@@ -93,7 +93,7 @@ isAdult(50); // true
     };
     ```
 
-    成了！现在函数更简洁了，但是这还不够。
+    成了! 现在函数更简洁了，但是这还不够。
 
     您又想起了条件表达式就是布尔值， 也就是说 `age >= 18` 本身就是一个布尔值。:wink:
 
@@ -105,7 +105,7 @@ isAdult(50); // true
     };
     ```
 
-    这不就变成了只有一条语句的箭头函数了么？我们当然可以直接返回它!:laughing:
+    这不就变成了只有一条语句的箭头函数了么? 我们当然可以直接返回它!:laughing:
 
     ```js
     const isAdult = (age) => age >= 18;
@@ -117,7 +117,7 @@ isAdult(50); // true
     const isAdult = (age) => age >= 18;
     ```
 
-    恭喜您，您已经得到了最简形式！:satisfied:
+    恭喜您，您已经得到了最简形式! :satisfied:
 
 ## 买书
 
@@ -281,7 +281,7 @@ bookPrice(6，30); // 144
         : price * ammount * 0.8;
     ```
 
-    它太长了，为什么不把公共的 `price * ammount` 提取出来呢？
+    它太长了，为什么不把公共的 `price * ammount` 提取出来呢? 
 
     ```js
     const bookPrice = (price, ammount) =>
@@ -320,7 +320,7 @@ getTimes([1, 1, 2, 3, 4, 4, 4], 4); // 3
     equal=>condition: element === x?
     addcount=>operation: count = count + 1
     equal=>condition: element === x?
-    islast=>condition: x 是数组的最后一个元素么？
+    islast=>condition: x 是数组的最后一个元素么? 
     movex=>operation: 让 x 成为下一个元素
     return=>inputoutput: 返回 count
     end=>end: 结束
@@ -348,7 +348,7 @@ getTimes([1, 1, 2, 3, 4, 4, 4], 4); // 3
     equal=>condition: element === arr[i]?
     addcount=>operation: count = count + 1
     equal=>condition: element === x?
-    islast=>condition: i <= arr.length - 1？
+    islast=>condition: i <= arr.length - 1? 
     movex=>operation: i = i + 1
     return=>inputoutput: 返回 count
     end=>end: 结束

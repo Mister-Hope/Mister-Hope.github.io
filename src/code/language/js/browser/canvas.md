@@ -51,7 +51,7 @@ if (canvas.getContext) {
 let ctx = canvas.getContext("2d");
 ```
 
-如果需要绘制 3D 怎么办？HTML5 还有一个 WebGL 规范，允许在 Canvas 中绘制 3D 图形:
+如果需要绘制 3D 怎么办? HTML5 还有一个 WebGL 规范，允许在 Canvas 中绘制 3D 图形:
 
 ```js
 gl = canvas.getContext("webgl");

@@ -109,7 +109,7 @@ p.style.paddingTop = "2em";
 
 ## 插入 DOM
 
-当我们获得了某个 DOM 节点，想在这个 DOM 节点内插入新的 DOM，应该如何做？
+当我们获得了某个 DOM 节点，想在这个 DOM 节点内插入新的 DOM，应该如何做?
 
 如果这个 DOM 节点是空的，例如，`<div></div>`，那么，直接使用 `innerHTML = '<span>child</span>'` 就可以修改 DOM 节点的内容，相当于“插入”了新的 DOM 节点。
 
@@ -187,7 +187,7 @@ document.getElementsByTagName("head")[0].appendChild(d);
 
 ### insertBefore
 
-如果我们要把子节点插入到指定的位置怎么办？可以使用 `parentElement.insertBefore(newElement, referenceElement);`，子节点会插入到 `referenceElement` 之前。
+如果我们要把子节点插入到指定的位置怎么办? 可以使用 `parentElement.insertBefore(newElement, referenceElement);`，子节点会插入到 `referenceElement` 之前。
 
 还是以上面的 HTML 为例，假定我们要把 `Haskell` 插入到 `Python` 之前:
 

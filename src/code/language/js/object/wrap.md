@@ -16,7 +16,7 @@ const b = new Boolean(true); // true,生成了新的包装类型
 const s = new String("str"); // 'str',生成了新的包装类型
 ```
 
-虽然包装对象看上去和原来的值一模一样，显示出来也是一模一样，但他们的类型已经变为 `object` 了！所以，包装对象和原始值用 `===` 比较会返回 `false`:
+虽然包装对象看上去和原来的值一模一样，显示出来也是一模一样，但他们的类型已经变为 `object` 了! 所以，包装对象和原始值用 `===` 比较会返回 `false`:
 
 ```js
 typeof new Number(123); // 'object'
@@ -29,9 +29,9 @@ typeof new String("str"); // 'object'
 new String("str") === "str"; // false
 ```
 
-所以不要使用包装对象！尤其是针对 `string` 类型！！！
+所以不要使用包装对象! 尤其是针对 `string` 类型!!!
 
-如果我们在使用 `Number`、`Boolean` 和 `String` 时，没有写 new 会发生什么情况？
+如果我们在使用 `Number`、`Boolean` 和 `String` 时，没有写 new 会发生什么情况?
 
 此时，`Number()`、`Boolean()` 和 `String()` 被当做普通函数，把任何类型的数据转换为 `number`、`boolean` 和 `string` 类型(注意不是其包装类型):
 
@@ -42,7 +42,7 @@ typeof n; // 'number'
 const b = Boolean("true"); // true
 typeof b; // 'boolean'
 
-const b2 = Boolean("false"); // true! 'false'字符串转换结果为true！因为它是非空字符串！
+const b2 = Boolean("false"); // true! 'false'字符串转换结果为true!因为它是非空字符串!
 const b3 = Boolean(""); // false
 
 const s = String(123.45); // '123.45'
@@ -75,6 +75,6 @@ typeof s; // 'string'
   123.toString(); // SyntaxError
   // 遇到这种情况，要特殊处理一下:
 
-  123..toString(); // '123', 注意是两个点！
+  123..toString(); // '123', 注意是两个点!
   (123).toString(); // '123'
   ```

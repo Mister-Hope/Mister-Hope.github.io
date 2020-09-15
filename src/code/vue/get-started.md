@@ -58,14 +58,14 @@ const app = new Vue({
 });
 ```
 
-我们已经成功创建了第一个 Vue 应用！现在数据和 DOM 已经被建立了关联，所有东西都是**响应式的**。也就是说如果 `data` 中的 `message` 值被改变，那么视图层中的 `message` 马上会更新。
+我们已经成功创建了第一个 Vue 应用! 现在数据和 DOM 已经被建立了关联，所有东西都是**响应式的**。也就是说如果 `data` 中的 `message` 值被改变，那么视图层中的 `message` 马上会更新。
 
 除了文本插值，我们还可以像这样来绑定元素特性:
 
 ```html
 <div id="app-2">
   <span v-bind:title="message">
-    鼠标悬停几秒钟查看此处动态绑定的提示信息！
+    鼠标悬停几秒钟查看此处动态绑定的提示信息!
   </span>
 </div>
 ```
@@ -373,7 +373,7 @@ new Vue({
 ```html
 <div id="app">
   <p>{{ foo }}</p>
-  <!-- 这里的 `foo` 不会更新！ -->
+  <!-- 这里的 `foo` 不会更新!  -->
   <button v-on:click="foo = 'baz'">Change it</button>
 </div>
 ```

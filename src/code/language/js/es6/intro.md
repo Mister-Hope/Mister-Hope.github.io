@@ -13,7 +13,7 @@ ECMAScript 6.0(以下简称 ES6)是 JavaScript 语言的下一代标准，已经
 
 ## ECMAScript 和 JavaScript 的关系
 
-一个常见的问题是，ECMAScript 和 JavaScript 到底是什么关系？
+一个常见的问题是，ECMAScript 和 JavaScript 到底是什么关系?
 
 要讲清楚这个问题，需要回顾历史。1996 年 11 月，JavaScript 的创造者 Netscape 公司，决定将 JavaScript 提交给标准化组织 ECMA，希望这种语言能够成为国际标准。次年，ECMA 发布 262 号标准文件(ECMA-262)的第一版，规定了浏览器脚本语言的标准，并将这种语言称为 ECMAScript，这个版本就是 1.0 版。
 
@@ -23,7 +23,7 @@ ECMAScript 6.0(以下简称 ES6)是 JavaScript 语言的下一代标准，已经
 
 ## ES6 与 ECMAScript 2015 的关系
 
-ECMAScript 2015(简称 ES2015)这个词，也是经常可以看到的。它与 ES6 是什么关系呢？
+ECMAScript 2015(简称 ES2015)这个词，也是经常可以看到的。它与 ES6 是什么关系呢?
 
 2011 年，ECMAScript 5.1 版发布后，就开始制定 6.0 版了。因此，ES6 这个词的原意，就是指 JavaScript 语言的下一个版本。
 
@@ -61,7 +61,7 @@ ES6 从开始制定到最后发布，整整用了 15 年。
 
 2000 年，ECMAScript 4.0 开始酝酿。这个版本最后没有通过，但是它的大部分内容被 ES6 继承了。因此，ES6 制定的起点其实是 2000 年。
 
-为什么 ES4 没有通过呢？因为这个版本太激进了，对 ES3 做了彻底升级，导致标准委员会的一些成员不愿意接受。ECMA 的第 39 号技术专家委员会(Technical Committee 39，简称 TC39)负责制订 ECMAScript 标准，成员包括 Microsoft、Mozilla、Google 等大公司。
+为什么 ES4 没有通过呢? 因为这个版本太激进了，对 ES3 做了彻底升级，导致标准委员会的一些成员不愿意接受。ECMA 的第 39 号技术专家委员会(Technical Committee 39，简称 TC39)负责制订 ECMAScript 标准，成员包括 Microsoft、Mozilla、Google 等大公司。
 
 2007 年 10 月，ECMAScript 4.0 版草案发布，本来预计次年 8 月发布正式版本。但是，各方对于是否通过这个标准，发生了严重分歧。以 Yahoo、Microsoft、Google 为首的大公司，反对 JavaScript 的大幅升级，主张小幅改动；以 JavaScript 创造者 Brendan Eich 为首的 Mozilla 公司，则坚持当前的草案。
 

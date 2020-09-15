@@ -254,7 +254,7 @@ if (items.any((element) => element.contains('Z'))) {
 
 前面的部分介绍了 `firstWhere()` 与 `singleWhere()` 这些可以帮助您找到满足特定谓词的元素的方法。
 
-但是，如果要查找满足特定条件的所有元素怎么办？您可以使用 `where()` 方法来完成。
+但是，如果要查找满足特定条件的所有元素怎么办? 您可以使用 `where()` 方法来完成。
 
 ```dart
 var evenNumbers = numbers.where((number) => number.isEven);

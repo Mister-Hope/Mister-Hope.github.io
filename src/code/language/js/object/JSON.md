@@ -160,4 +160,4 @@ const obj = JSON.parse('{"name":"小明","age":14}', (key, value) =>
 console.log(JSON.stringify(obj)); // {name: '小明同学', age: 14}
 ```
 
-在 JavaScript 中使用 JSON，就是这么简单！
+在 JavaScript 中使用 JSON，就是这么简单!

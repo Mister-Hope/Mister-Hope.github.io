@@ -99,13 +99,13 @@ e=>end: End
 cond1=>condition: 他人修改源码后
 是否可以闭源
 cond2=>condition: 每一个修改过的文件
-是否都要放置版权说明？
+是否都要放置版权说明?
 cond3=>condition: 衍生软件的广告
-能否用您的名字促销？
+能否用您的名字促销?
 cond4=>condition: 新增代码是否要
-用相同许可证？
+用相同许可证?
 cond5=>condition: 是否要对源码的修改
-提供说明文档？
+提供说明文档?
 Apache=>inputoutput: Apache
 MIT=>inputoutput: MIT
 BSD=>inputoutput: BSD

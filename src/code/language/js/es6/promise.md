@@ -278,7 +278,7 @@ getJSON("/posts.json")
   })
   .catch(function (error) {
     // 处理 getJSON 和 前一个回调函数运行时发生的错误
-    console.log("发生错误！", error);
+    console.log("发生错误!", error);
   });
 ```
 
@@ -954,7 +954,7 @@ console.log("next");
 
 上面代码中，函数`f`是同步的，但是用 Promise 包装了以后，就变成异步执行了。
 
-那么有没有一种方法，让同步函数同步执行，异步函数异步执行，并且让它们具有统一的 API 呢？回答是可以的，并且还有两种写法。第一种写法是用`async`函数来写。
+那么有没有一种方法，让同步函数同步执行，异步函数异步执行，并且让它们具有统一的 API 呢? 回答是可以的，并且还有两种写法。第一种写法是用`async`函数来写。
 
 ```js
 const f = () => console.log("now");

@@ -13,17 +13,17 @@ copyright: Copyright by 廖雪峰 Edited by Mr.Hope
 
 分支就是科幻电影里面的平行宇宙，当您正在电脑前努力学习 Git 的时候，另一个您正在另一个平行宇宙里努力学习 SVN。
 
-如果两个平行宇宙互不干扰，那对现在的您也没啥影响。不过，在某个时间点，两个平行宇宙合并了，结果，您既学会了 Git 又学会了 SVN！
+如果两个平行宇宙互不干扰，那对现在的您也没啥影响。不过，在某个时间点，两个平行宇宙合并了，结果，您既学会了 Git 又学会了 SVN!
 
 ![learn-branches](./assets/learn-branches.png)
 
-分支在实际中有什么用呢？假设您准备开发一个新功能，但是需要两周才能完成，第一周您写了 50% 的代码，如果立刻提交，由于代码还没写完，不完整的代码库会导致别人不能干活了。如果等代码全部写完再一次提交，又存在丢失每天进度的巨大风险。
+分支在实际中有什么用呢? 假设您准备开发一个新功能，但是需要两周才能完成，第一周您写了 50% 的代码，如果立刻提交，由于代码还没写完，不完整的代码库会导致别人不能干活了。如果等代码全部写完再一次提交，又存在丢失每天进度的巨大风险。
 
 现在有了分支，就不用怕了。您创建了一个属于您自己的分支，别人看不到，还继续在原来的分支上正常工作，而您在自己的分支上干活，想提交就提交，直到开发完毕后，再一次性合并到原来的分支上，这样，既安全，又不影响别人工作。
 
 其他版本控制系统如 SVN 等都有分支管理，但是用过之后您会发现，这些版本控制系统创建和切换分支比蜗牛还慢，简直让人无法忍受，结果分支功能成了摆设，大家都不去用。
 
-但 Git 的分支是与众不同的，无论创建、切换和删除分支，Git 在 1 秒钟之内就能完成！无论您的版本库是 1 个文件还是 1 万个文件。
+但 Git 的分支是与众不同的，无论创建、切换和删除分支，Git 在 1 秒钟之内就能完成! 无论您的版本库是 1 个文件还是 1 万个文件。
 
 ## 创建与合并分支
 
@@ -39,17 +39,17 @@ copyright: Copyright by 廖雪峰 Edited by Mr.Hope
 
 ![示意图](./assets/git7.png)
 
-您看，Git 创建一个分支很快，因为除了增加一个 `dev` 指针，改改 `HEAD` 的指向，工作区的文件都没有任何变化！
+您看，Git 创建一个分支很快，因为除了增加一个 `dev` 指针，改改 `HEAD` 的指向，工作区的文件都没有任何变化!
 
 不过，从现在开始，对工作区的修改和提交就是针对 dev 分支了，比如新提交一次后，`dev` 指针往前移动一步，而 `master` 指针不变:
 
 ![示意图](./assets/git8.png)
 
-假如我们在 dev 上的工作完成了，就可以把 dev 合并到 master 上。Git 怎么合并呢？最简单的方法，就是直接把 master 指向 dev 的当前提交，就完成了合并:
+假如我们在 dev 上的工作完成了，就可以把 dev 合并到 master 上。Git 怎么合并呢? 最简单的方法，就是直接把 master 指向 dev 的当前提交，就完成了合并:
 
 ![示意图](./assets/git9.png)
 
-所以 Git 合并分支也很快！就改改指针，工作区内容也不变！
+所以 Git 合并分支也很快! 就改改指针，工作区内容也不变!
 
 合并完分支后，甚至可以删除 dev 分支。删除 dev 分支就是把 dev 指针给删掉，删掉后，我们就剩下了一条 master 分支:
 
@@ -104,7 +104,7 @@ $ git checkout master
 Switched to branch 'master'
 ```
 
-切换回 master 分支后，再查看一个 `readme.txt` 文件，刚才添加的内容不见了！因为那个提交是在 dev 分支上，而 master 分支此刻的提交点并没有变:
+切换回 master 分支后，再查看一个 `readme.txt` 文件，刚才添加的内容不见了! 因为那个提交是在 dev 分支上，而 master 分支此刻的提交点并没有变:
 
 ![示例图](./assets/git11.png)
 
@@ -218,7 +218,7 @@ CONFLICT (content): Merge conflict in readme.txt
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
-果然冲突了！Git 告诉我们，`readme.txt` 文件存在冲突，必须手动解决冲突后再提交。`git status` 也可以告诉我们冲突的文件:
+果然冲突了! Git 告诉我们，`readme.txt` 文件存在冲突，必须手动解决冲突后再提交。`git status` 也可以告诉我们冲突的文件:
 
 ```sh
 $ git status
@@ -366,7 +366,7 @@ $ git log --graph --pretty=oneline --abbrev-commit
 
 首先，`master` 分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；
 
-那在哪干活呢？干活都在 `dev` 分支上，也就是说，`dev` 分支是不稳定的，到某个时候，比如 `1.0` 版本发布时，再把 `dev` 分支合并到 `master` 上，在`master` 分支发布 `1.0` 版本；
+那在哪干活呢? 干活都在 `dev` 分支上，也就是说，`dev` 分支是不稳定的，到某个时候，比如 `1.0` 版本发布时，再把 `dev` 分支合并到 `master` 上，在`master` 分支发布 `1.0` 版本；
 
 您和您的小伙伴们每个人都在 `dev` 分支上干活，每个人都有自己的分支，时不时地往 `dev` 分支上合并就可以了。
 
@@ -403,7 +403,7 @@ Changes not staged for commit:
     modified:   readme.txt
 ```
 
-并不是您不想提交，而是工作只进行到一半，还没法提交，预计完成还需 1 天时间。但是，必须在两个小时内修复该 bug，怎么办？
+并不是您不想提交，而是工作只进行到一半，还没法提交，预计完成还需 1 天时间。但是，必须在两个小时内修复该 bug，怎么办?
 
 幸好，Git 还提供了一个 `stash` 功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作:
 
@@ -449,7 +449,7 @@ Merge made by the 'recursive' strategy.
  1 file changed, 1 insertion(+), 1 deletion(-)
 ```
 
-太棒了，原计划两个小时的 bug 修复只花了 5 分钟！现在，是时候接着回到 `dev` 分支干活了！
+太棒了，原计划两个小时的 bug 修复只花了 5 分钟! 现在，是时候接着回到 `dev` 分支干活了!
 
 ```sh
 $ git checkout dev
@@ -460,7 +460,7 @@ On branch dev
 nothing to commit, working tree clean
 ```
 
-工作区是干净的，刚才的工作现场存到哪去了？用 `git stash list` 命令看看:
+工作区是干净的，刚才的工作现场存到哪去了? 用 `git stash list` 命令看看:
 
 ```sh
 $ git stash list
@@ -545,9 +545,9 @@ git checkout dev
 
 一切顺利的话，feature 分支和 bug 分支是类似的，合并，然后删除。
 
-但是！
+但是!
 
-就在此时，接到上级命令，因经费不足，新功能必须取消！
+就在此时，接到上级命令，因经费不足，新功能必须取消!
 
 虽然白干了，但是这个包含机密资料的分支还是必须就地销毁:
 
@@ -566,7 +566,7 @@ $ git branch -D feature-vulcan
 Deleted branch feature-vulcan (was 287773e).
 ```
 
-终于删除成功！
+终于删除成功!
 
 ### 删除小结
 
@@ -611,7 +611,7 @@ git push origin master
 git push origin dev
 ```
 
-但是，并不是一定要把本地分支往远程推送，那么，哪些分支需要推送，哪些不需要呢？
+但是，并不是一定要把本地分支往远程推送，那么，哪些分支需要推送，哪些不需要呢?
 
 `master` 分支是主分支，因此要时刻与远程同步；
 
@@ -621,7 +621,7 @@ git push origin dev
 
 `feature` 分支是否推到远程，取决于您是否和您的小伙伴合作在上面开发。
 
-总之，就是在 Git 中，分支完全可以在本地自己藏着玩，是否推送，视您的心情而定！
+总之，就是在 Git 中，分支完全可以在本地自己藏着玩，是否推送，视您的心情而定!
 
 ### 抓取分支
 
@@ -752,7 +752,7 @@ To github.com:Hope-Studio/learngit.git
 
 如果合并有冲突，则解决冲突，并在本地提交；
 
-没有冲突或者解决掉冲突后，再用 `git push origin <branch-name>` 推送就能成功！
+没有冲突或者解决掉冲突后，再用 `git push origin <branch-name>` 推送就能成功!
 
 如果 `git pull` 提示 `no tracking information`，则说明本地分支和远程分支的链接关系没有创建，用命令 `git branch --set-upstream-to <branch-name> origin/<branch-name>`。
 
@@ -804,7 +804,7 @@ $ git log --graph --pretty=oneline --abbrev-commit
 *   cf810e4 conflict fixed
 ```
 
-总之看上去很乱，有强迫症的童鞋会问: 为什么 Git 的提交历史不能是一条干净的直线？其实是可以做到的！
+总之看上去很乱，有强迫症的童鞋会问: 为什么 Git 的提交历史不能是一条干净的直线? 其实是可以做到的!
 
 Git 有一种称为 `rebase` 的操作，有人把它翻译成“变基”。
 
@@ -886,17 +886,17 @@ $ git log --graph --pretty=oneline --abbrev-commit
 ...
 ```
 
-对强迫症童鞋来说，现在事情有点不对头，提交历史分叉了。如果现在把本地分支 `push` 到远程，有没有问题？
+对强迫症童鞋来说，现在事情有点不对头，提交历史分叉了。如果现在把本地分支 `push` 到远程，有没有问题?
 
-有！
+有!
 
-什么问题？
+什么问题?
 
-不好看！
+不好看!
 
-有没有解决方法？
+有没有解决方法?
 
-有！
+有!
 
 这个时候，rebase 就派上了用场。我们输入命令 `git rebase` 试试:
 
@@ -915,7 +915,7 @@ Falling back to patching base and 3-way merge...
 Auto-merging hello.py
 ```
 
-输出了一大堆操作，到底是啥效果？再用 `git log` 看看:
+输出了一大堆操作，到底是啥效果? 再用 `git log` 看看:
 
 ```sh
 $ git log --graph --pretty=oneline --abbrev-commit
@@ -926,7 +926,7 @@ $ git log --graph --pretty=oneline --abbrev-commit
 ...
 ```
 
-原本分叉的提交现在变成一条直线了！这种神奇的操作是怎么实现的？其实原理非常简单。我们注意观察，发现 Git 把我们本地的提交“挪动”了位置，放到了 `f005ed4 (origin/master) set exit=1` 之后，这样，整个提交历史就成了一条直线。rebase 操作前后，最终的提交内容是一致的，但是，我们本地的 commit 修改内容已经变化了，它们的修改不再基于 `d1be385 init hello`，而是基于 `f005ed4 (origin/master) set exit=1`，但最后的提交 `7e61ed4` 内容是一致的。
+原本分叉的提交现在变成一条直线了! 这种神奇的操作是怎么实现的? 其实原理非常简单。我们注意观察，发现 Git 把我们本地的提交“挪动”了位置，放到了 `f005ed4 (origin/master) set exit=1` 之后，这样，整个提交历史就成了一条直线。rebase 操作前后，最终的提交内容是一致的，但是，我们本地的 commit 修改内容已经变化了，它们的修改不再基于 `d1be385 init hello`，而是基于 `f005ed4 (origin/master) set exit=1`，但最后的提交 `7e61ed4` 内容是一致的。
 
 这就是 `rebase` 操作的特点: 把分叉的提交历史“整理”成一条直线，看上去更直观。缺点是本地的分叉提交已经被修改过了。
 

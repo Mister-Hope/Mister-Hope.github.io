@@ -41,7 +41,7 @@ request.onreadystatechange = () => {
 
 把回调函数 `success(request.responseText)` 和 `fail(request.status)` 写到一个 AJAX 操作里很正常，但是不好看，而且不利于代码复用。
 
-有没有更好的写法？比如写成这样:
+有没有更好的写法? 比如写成这样:
 
 ```js
 const ajax = ajaxGet("https://...");

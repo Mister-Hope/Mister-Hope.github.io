@@ -55,7 +55,7 @@ const xiaoming = {
 的简写方式。
 :::
 
-绑定到对象上的函数称为方法，和普通函数也没啥区别，但是它在内部使用了一个 `this` 关键字，这个东东是什么？
+绑定到对象上的函数称为方法，和普通函数也没啥区别，但是它在内部使用了一个 `this` 关键字，这个东东是什么?
 
 在一个方法内部，`this` 是一个特殊变量，它始终指向当前对象，也就是 `xiaoming` 这个变量。所以，`this.birth` 可以拿到 `xiaoming` 的 `birth` 属性。
 
@@ -76,17 +76,17 @@ xiaoming.age(); // 25, 正常结果
 getAge(); // NaN
 ```
 
-单独调用函数`getAge()`怎么返回了 `NaN`？请注意，我们已经进入到了 JavaScript 的一个大坑里。
+单独调用函数`getAge()`怎么返回了 `NaN`? 请注意，我们已经进入到了 JavaScript 的一个大坑里。
 
-JavaScript 的函数内部如果调用了 `this`，那么这个 `this` 到底指向谁？
+JavaScript 的函数内部如果调用了 `this`，那么这个 `this` 到底指向谁?
 
-答案是，视情况而定！
+答案是，视情况而定!
 
 如果以对象的方法形式调用，比如 `xiaoming.age()`，该函数的 `this` 指向被调用的对象，也就是 `xiaoming`，这是符合我们预期的。
 
 如果单独调用函数，比如 `getAge()`，此时，该函数的 `this` 指向全局对象，也就是 `window`。
 
-坑爹啊！
+坑爹啊!
 
 更坑爹的是，如果这么写:
 
@@ -96,7 +96,7 @@ const fn = xiaoming.age; // 先拿到 xiaoming 的 page 函数
 fn(); // NaN
 ```
 
-也是不行的！要保证 `this` 指向正确，必须用 `obj.xxx()` 的形式调用！
+也是不行的! 要保证 `this` 指向正确，必须用 `obj.xxx()` 的形式调用!
 
 由于这是一个巨大的设计错误，要想纠正可没那么简单。ECMA 决定，在 strict 模式下让函数的 `this` 指向 `undefined`，因此，在 strict 模式下，您会得到一个错误:
 
@@ -137,7 +137,7 @@ const xiaoming = {
 xiaoming.age(); // Uncaught TypeError: Cannot read property 'birth' of undefined
 ```
 
-结果又报错了！原因是 `this` 指针只在 `age` 方法的函数内指向 `xiaoming`，在函数内部定义的函数，`this` 又指向 `undefined` 了！(在非 strict 模式下，它重新指向全局对象 `window`！)
+结果又报错了! 原因是 `this` 指针只在 `age` 方法的函数内指向 `xiaoming`，在函数内部定义的函数，`this` 又指向 `undefined` 了! (在非 strict 模式下，它重新指向全局对象 `window`! )
 
 修复的办法也不是没有，我们用一个 `that` 变量首先捕获 `this`:
 
@@ -166,7 +166,7 @@ xiaoming.age(); // 25
 
 ## apply
 
-虽然在一个独立的函数调用中，根据是否是 `strict` 模式，`this` 指向 `undefined` 或 `window`，不过，我们还是可以控制 `this` 的指向的！
+虽然在一个独立的函数调用中，根据是否是 `strict` 模式，`this` 指向 `undefined` 或 `window`，不过，我们还是可以控制 `this` 的指向的!
 
 要指定函数的 `this` 指向哪个对象，可以用函数本身的 `apply` 方法，它接收两个参数，第一个参数就是需要绑定的 `this` 变量，第二个参数是 `Array`，表示函数本身的参数。
 

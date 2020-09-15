@@ -81,8 +81,8 @@ const packageOther = require("packageName/other");
 1. 不支持依赖 c++ addon，不支持依赖 nodejs 的内置库:
 
    ```js
-   const addon = require("./addon.node"); // 不支持！
-   const http = require("http"); // 不支持！
+   const addon = require("./addon.node"); // 不支持!
+   const http = require("http"); // 不支持!
    ```
 
    ::: tip

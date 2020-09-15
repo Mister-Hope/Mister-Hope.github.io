@@ -15,7 +15,7 @@ $("span.hl").css("backgroundColor", "#fffceb").css("color", "#d85030");
 $("p a.hl").css("backgroundColor", "#fffceb").css("color", "#d85030");
 ```
 
-总是写重复代码可不好，万一以后还要修改字体就更麻烦了，能不能统一起来，写个 `highlight()` 方法？
+总是写重复代码可不好，万一以后还要修改字体就更麻烦了，能不能统一起来，写个 `highlight()` 方法?
 
 ```js
 $("span.hl").highlight();
@@ -57,7 +57,7 @@ $.fn.highlight1 = function () {
 $("#test-highlight1 span").highlight1();
 ```
 
-细心的您可能发现了，为什么最后要 `return this` ;？因为 jQuery 对象支持链式操作，我们自己写的扩展方法也要能继续链式下去:
+细心的您可能发现了，为什么最后要 `return this` ;? 因为 jQuery 对象支持链式操作，我们自己写的扩展方法也要能继续链式下去:
 
 ```js
 $("span.hl").highlight1().slideDown();
@@ -65,7 +65,7 @@ $("span.hl").highlight1().slideDown();
 
 不然，用户调用的时候，就不得不把上面的代码拆成两行。
 
-但是这个版本并不完美。有的用户希望高亮的颜色能自己来指定，怎么办？
+但是这个版本并不完美。有的用户希望高亮的颜色能自己来指定，怎么办?
 
 我们可以给方法加个参数，让用户自己把参数用对象传进去。于是我们有了第二个版本的 `highlight2()`:
 
@@ -121,11 +121,11 @@ const opts = $.extend(
 );
 ```
 
-紧接着用户对 `highlight2()` 提出了意见: 每次调用都需要传入自定义的设置，能不能让我自己设定一个缺省值，以后的调用统一使用无参数的 `highlight2()`？
+紧接着用户对 `highlight2()` 提出了意见: 每次调用都需要传入自定义的设置，能不能让我自己设定一个缺省值，以后的调用统一使用无参数的 `highlight2()`?
 
 也就是说，我们设定的默认值应该能允许用户修改。
 
-那默认值放哪比较合适？放全局变量肯定不合适，最佳地点是 `$.fn.highlight2` 这个函数对象本身。
+那默认值放哪比较合适? 放全局变量肯定不合适，最佳地点是 `$.fn.highlight2` 这个函数对象本身。
 
 于是最终版的 `highlight()` 终于诞生了:
 
@@ -191,11 +191,11 @@ $("#test-highlight p:last-child span").highlight({
 
 ## 针对特定元素的扩展
 
-我们知道 jQuery 对象的有些方法只能作用在特定 DOM 元素上，比如 `submit()` 方法只能针对 form。如果我们编写的扩展只能针对某些类型的 DOM 元素，应该怎么写？
+我们知道 jQuery 对象的有些方法只能作用在特定 DOM 元素上，比如 `submit()` 方法只能针对 form。如果我们编写的扩展只能针对某些类型的 DOM 元素，应该怎么写?
 
-还记得 jQuery 的选择器支持 `filter()` 方法来过滤吗？我们可以借助这个方法来实现针对特定元素的扩展。
+还记得 jQuery 的选择器支持 `filter()` 方法来过滤吗? 我们可以借助这个方法来实现针对特定元素的扩展。
 
-举个例子，现在我们要给所有指向外链的超链接加上跳转提示，怎么做？
+举个例子，现在我们要给所有指向外链的超链接加上跳转提示，怎么做?
 
 先写出用户调用的代码:
 
@@ -220,7 +220,7 @@ $.fn.external = function () {
         .removeAttr("target")
         .append(' <i class="uk-icon-external-link"></i>')
         .click(function () {
-          if (confirm("您确定要前往" + url + "？")) {
+          if (confirm("您确定要前往" + url + "? ")) {
             window.open(url);
           }
         });
@@ -234,7 +234,7 @@ $.fn.external = function () {
 ```html
 <!-- HTML结构 -->
 <div id="test-external">
-  <p>如何学习<a href="https://jquery.com">jQuery</a>？</p>
+  <p>如何学习<a href="https://jquery.com">jQuery</a>?</p>
   <p>
     首先，您要学习<a
       href="/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000"

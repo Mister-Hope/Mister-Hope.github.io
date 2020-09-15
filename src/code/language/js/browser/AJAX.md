@@ -126,7 +126,7 @@ else request = new ActiveXObject('Microsoft.XMLHTTP');
 
 完全一致的意思是，域名要相同 (www.example.com 和 example.com 不同)，协议要相同 (http 和 https 不同)，端口号要相同(默认是:80 端口，它和 `:8080` 就不同)。有的浏览器口子松一点，允许端口不同，大多数浏览器都会严格遵守这个限制。
 
-那是不是用 JavaScript 无法请求外域(就是其他网站)的 URL 了呢？方法还是有的，大概有这么几种:
+那是不是用 JavaScript 无法请求外域(就是其他网站)的 URL 了呢? 方法还是有的，大概有这么几种:
 
 一是通过 Flash 插件发送 HTTP 请求，这种方式可以绕过浏览器的安全限制，但必须安装 Flash，并且跟 Flash 交互。不过 Flash 用起来麻烦，而且现在用得也越来越少了。
 

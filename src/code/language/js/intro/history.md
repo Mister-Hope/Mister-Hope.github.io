@@ -68,7 +68,7 @@ JavaScript 因为互联网而生，紧跟着浏览器的出现而问世。回顾
 
 这里有一段复杂的历史[^ecma]，不过简单说来就是，ECMAScript 是一种语言标准，而 JavaScript 是网景公司对 ECMAScript 标准的一种实现。
 
-那为什么不直接把 JavaScript 定为标准呢？因为人家是网景的注册商标。
+那为什么不直接把 JavaScript 定为标准呢? 因为人家是网景的注册商标。
 
 不过大多数时候，我们还是用 JavaScript 这个词。如果您遇到 ECMAScript 这个词，简单把它替换为 JavaScript 就行了。
 

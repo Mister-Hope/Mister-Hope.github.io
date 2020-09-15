@@ -407,7 +407,7 @@ class Foo {
   }
   method() {
     if (!foos.has(this)) {
-      throw new TypeError("Foo.prototype.method 只能在Foo的实例上调用！");
+      throw new TypeError("Foo.prototype.method 只能在Foo的实例上调用!");
     }
   }
 }
