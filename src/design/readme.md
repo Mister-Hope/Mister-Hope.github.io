@@ -9,9 +9,11 @@ category: 设计
 
 <!-- more -->
 
-## 图标
+## 相关教程
 
 - [图标设计教程](icon/readme.md)
+
+- [导航设计教程](navigation/readme.md)
 
 ## 配色
 

@@ -26,7 +26,7 @@ module.exports = [
     collapsable: false,
     prefix: "navigation/",
     children: [
-      "explain",
+      "intro",
       "navbar",
       "navbar-design",
       "sidebar-navigate",

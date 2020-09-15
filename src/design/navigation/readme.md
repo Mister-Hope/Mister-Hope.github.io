@@ -9,7 +9,7 @@ tags:
 
 ## 目录
 
-- [UI 导航设计](explain.md)
+- [导航设计介绍](intro.md)
 
 - [导航栏概述与设计方式](navbar.md)
 

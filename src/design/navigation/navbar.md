@@ -18,7 +18,7 @@ tags:
 
 在安卓上，Google 公司在 Material Design 中也赋予了它同样的定义，但是却给了它另一个名称，顶部应用栏(Top App Bar)。
 
-![iOS与安卓的规范与命名区别](./assets/navbar-name.jpg)
+![iOS 与安卓的规范与命名区别](./assets/navbar-name.jpg)
 
 请务必要记住: 导航栏是用于构架当前屏幕的内容，阐述当前屏幕的状态，并且起到连接父子级页面层次结构的作用。所以回到开头的小故事，为什么标签栏不能叫做底部导航，因为标签栏是构架了多个屏幕之间平级页面的内容切换，和「导航」的定义没有关系。
 
@@ -54,13 +54,13 @@ tags:
 
 iOS 规定导航按钮位置仅能用于放置返回按钮，可以添加一个层级的面包屑，帮助用户有效地明确当前页面层级；Material Design 中，不仅可以放置返回按钮，还另有作用，菜单图标-用于打开导航抽屉或者关闭图标-关闭工具栏。
 
-![iOS与安卓的导航按钮区域区别](./assets/ios-nav-back.jpg)
+![iOS 与安卓的导航按钮区域区别](./assets/ios-nav-back.jpg)
 
-![iOS与安卓的导航按钮区域区别](./assets/android-nav-back.gif)
+![iOS 与安卓的导航按钮区域区别](./assets/android-nav-back.gif)
 
 这一点与 iOS 的定义有着天壤之别，iOS 非常明确地赋予了工具栏的定义，并且将导航栏和工具栏(Toolbars)彻底地分离开，典型案例就是 Safari。
 
-![iOS明确地将导航栏与工具栏分离开](./assets/safari.jpg)
+![iOS 明确地将导航栏与工具栏分离开](./assets/safari.jpg)
 
 在内容控件上 iOS 与 Material Design 也大相径庭，Material Design 不去限制你的内容控件多少，因为它提供了溢出菜单，并可以根据屏宽的变化，自适应释出和收纳溢出菜单中的控件。
 
