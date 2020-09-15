@@ -103,3 +103,9 @@ tags:
    ![Github 界面简介](./assets/githubSSH.png)
 
    在标题中填写公钥的备注名称，把 id_rsa.pub 文件的内容粘贴到底下的输入框中，设置一个自己可以记起的备注。
+
+   ::: tip Win10 查看隐藏文件
+
+   详见 [显示隐藏的文件](../../code/windows/hidden-file.md)
+
+   :::

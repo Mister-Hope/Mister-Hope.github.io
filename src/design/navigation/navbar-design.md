@@ -3,7 +3,7 @@ title: 导航栏设计技巧
 icon: nav
 time: 2020-09-15
 category: 设计
-tag:
+tags:
   - 导航
   - Navbar
 ---

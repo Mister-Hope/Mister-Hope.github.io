@@ -10,7 +10,14 @@ module.exports = {
 
     "/design/": require("./design"),
 
-    "/code/windows/": ["", "shortcutKey", "addPath", "cmd", "notepad"],
+    "/code/windows/": [
+      "",
+      "shortcutKey",
+      "hidden-file",
+      "add-path",
+      "cmd",
+      "notepad",
+    ],
 
     "/code/website/": require("./website"),
 

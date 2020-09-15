@@ -3,6 +3,8 @@ title: 打开命令行
 icon: cmd
 time: 2019-09-08
 category: 基础
+tags:
+  - Win10
 ---
 
 打开命令行 (命令提示符) 有多种方式。

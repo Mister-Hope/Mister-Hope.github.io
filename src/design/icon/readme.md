@@ -3,7 +3,7 @@ title: 图标
 icon: discover
 time: 2020-09-13
 category: 设计
-tag:
+tags:
   - icon
 ---
 

@@ -5,6 +5,7 @@ time: 2019-09-07
 category: 基础
 tags:
   - 快捷键
+  - Win10
 ---
 
 熟练掌握各种 Windows 快捷键，能够更加高效的使用 Windows。

@@ -56,3 +56,7 @@ W3CSchool 网站出品的 APP，可以在手机上查看网站所整理的各语
 一个代码在线学习社区，只有英文版。由于代码语义贴近英文原生逻辑，十分建议在编辑代码时 “think in English”。
 
 软件中的 code playground 可以在线运行大部分代码，大家在手机上就可以进行练习与尝试。
+
+## Adobe 软件
+
+Adobe 全系软件的获取，请见 [vposy 的微博](https://www.weibo.com/vposy) 的置顶帖。
