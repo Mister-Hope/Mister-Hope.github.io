@@ -19,5 +19,13 @@ module.exports = [
       "apply",
     ],
   },
+  {
+    title: "导航",
+    icon: "navigate",
+    collapsable: false,
+    prefix: "navigation/",
+    children: ["explain", "navbar-design", "sidebar-navigate"],
+  },
+  "search",
   "APP",
 ];
