@@ -8,10 +8,11 @@ module.exports = [
     children: [
       "",
       "intro",
+      "type",
       "guide",
       "software",
+      "draw",
       "line",
-      "line-exercise",
       "flour",
       "decorative",
       "start",
