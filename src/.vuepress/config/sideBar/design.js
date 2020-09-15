@@ -30,6 +30,7 @@ module.exports = [
       "navbar-design",
       "sidebar-navigate",
       "tabbar",
+      "tabbar-design",
     ],
   },
   "search",

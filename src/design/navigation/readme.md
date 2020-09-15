@@ -18,3 +18,5 @@ tags:
 - [侧边导航设计](sidebar-navigate.md)
 
 - [标签导航设计](tabbar.md)
+
+- [标签导航设计技巧](tabbar-design.md)
