@@ -1,12 +1,11 @@
 ---
+title: VS Code 的简单介绍
 icon: creative
 category: VS Code
 tags:
   - VS Code
   - 软件
 ---
-
-# VS Code 的简单介绍
 
 ## 简介
 

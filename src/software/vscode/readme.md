@@ -25,11 +25,21 @@ Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可�
 
 - [快速上手](get-started.md)
 
+- [VS Code 的基础介绍](basic.md)
+
+- [VS Code 的个性化介绍](customization.md)
+
+- [VS Code 的文件介绍](file.md)
+
+- [VS Code 的编辑技巧](edit.md)
+
 - [VS Code 快捷键](shortcutKey.md)
 
 - [VS Code 设置](settings.md)
 
 - [VS Code 推荐扩展](extension.md)
+
+- [VS Code 的命令行介绍](command.md)
 
 ## 官方文档
 
