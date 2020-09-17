@@ -11,7 +11,7 @@ tags:
 
 ## 下载
 
-在 [官网下载地址](https://code.visualstudio.com/Download) 下载最新版 Win64User 安装包。
+在 [官网下载地址](https://code.visualstudio.com/Download) 下载最新版安装包(Window User 64bit, 那个大的蓝色按钮就是)。
 
 ## 安装
 
