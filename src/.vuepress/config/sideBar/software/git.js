@@ -1,0 +1,17 @@
+module.exports = [
+  "",
+  "install",
+  "intro",
+  "create-repo",
+  "status",
+  "recall",
+  "reset",
+  "working-directory",
+  "change",
+  "remote",
+  "branch",
+  "tag",
+  "ignore",
+  "working",
+  "custom",
+];

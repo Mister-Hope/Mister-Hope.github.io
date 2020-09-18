@@ -1,6 +1,6 @@
 ---
-title: VS Code 个性化
-icon: skin
+title: 个性化
+icon: decorate
 category: VS Code
 tags:
   - VS Code
@@ -10,10 +10,9 @@ tags:
 您可以做很多事情来个性化 VS Code。
 
 - 改变你的主题
+- 改变你的文件图标
 - 更改键盘快捷键
 - 调整设置
-- 添加 JSON 验证
-- 创建片段
 - 安装扩展
 
 ## 更改主题
@@ -40,7 +39,7 @@ Mr.Hope 个人推荐 `One Dark Pro` 主题和 `Material Icon Theme` 文件图标
 
 ## 调整你的设置
 
-默认情况下，VS Code 显示“设置”编辑器，你还可以通过使用 “打开设置(JSON)” 命令打开 `settings.json`。
+默认情况下，VS Code 显示 **设置** 编辑器，你还可以通过使用 **打开设置(JSON)** 命令打开 `settings.json`。
 
 键盘快捷键: `Ctrl + ,`
 
@@ -151,56 +150,5 @@ Mr.Hope 个人推荐 `One Dark Pro` 主题和 `Material Icon Theme` 文件图标
 ```
 
 ::: tip
-您还可以使用 “配置语言特定的设置” 命令来创建特定于语言的设置。
+您还可以使用  **配置语言特定的设置** 命令来创建特定于语言的设置。
 :::
-
-## 添加 JSON 验证
-
-默认情况下对许多文件类型启用。在 `settings.json` 中，你可以创建自己的架构和验证:
-
-```json
-"json.schemas": [
-    {
-        "fileMatch": [
-            "/bower.json"
-        ],
-        "url": "https://json.schemastore.org/bower"
-    }
-]
-```
-
-或在工作区内定义文件架构:
-
-```json
-"json.schemas": [
-    {
-        "fileMatch": [
-            "/foo.json"
-        ],
-        "url": "./myschema.json"
-    }
-]
-```
-
-或自定义架构
-
-```json
-"json.schemas": [
-    {
-        "fileMatch": [
-            "/.myconfig"
-        ],
-        "schema": {
-            "type": "object",
-            "properties": {
-                "name" : {
-                    "type": "string",
-                    "description": "The name of the entry"
-                }
-            }
-        }
-    }
-  ]
-```
-
-更多内请参阅 [JSON 文档](https://code.visualstudio.com/docs/languages/json)。

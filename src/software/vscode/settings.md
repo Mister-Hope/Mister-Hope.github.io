@@ -1,5 +1,5 @@
 ---
-title: 推荐配置
+title: 配置 VSCode
 icon: config
 category: VS Code
 tags:

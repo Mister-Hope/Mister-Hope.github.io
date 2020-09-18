@@ -15,6 +15,8 @@ tags:
 如果忘记点击或没有弹窗，请到侧边栏扩展搜索找到 "Chinese (Simplified) Language Pack for Visual Studio Code" 扩展进行安装，即可将 VSCode 改为中文页面。
 :::
 
+![VSCode UI 页面](./assets/layout.png)
+
 VS Code 最上方有一排菜单栏，其中有大量的快捷操作，对应的组合键会标于快捷操作旁。如果不能记忆快捷键可以到最上方的菜单栏处查看。
 
 最左侧是选项卡切换，从上至下依次是[资源管理器](#资源管理器)、[搜索](#搜索)、[源代码管理](#源代码管理)、[调试](#调试)和[扩展](#扩展)。
@@ -65,5 +67,5 @@ VS Code 扩展允许第三方添加对以下内容的支持:
 扩展可以通过按 `F1` 或者 `Ctrl + Shift + P` 来打开命令行窗口，并输入 `ext install 扩展名称` 来进行安装
 
 ::: tip
-关于一些非常有用的扩展请见 [VS Code 推荐扩展](extension.md)
+一些非常有用的扩展请见 [VS Code 推荐扩展](extension.md#推荐扩展)
 :::

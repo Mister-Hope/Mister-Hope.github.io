@@ -61,7 +61,7 @@ Git 是分布式版本控制系统，同一个 Git 仓库，可以分布到不�
 git remote add origin git@github.com:Hope-Studio/learngit.git
 ```
 
-请千万注意，把上面的 Hope-Studio 替换成您自己的 Github 账户名，否则，您在本地关联的就是东北师范大学校学生会的远程库，关联没有问题，但是推送是推不上去的，因为您的 SSH Key 公钥不在东北师范大学校学生会的账户列表中。
+请千万注意，把上面的 Hope-Studio 替换成您自己的 Github 账户名，否则，您在本地关联的就是希望工作室的远程库，关联没有问题，但是推送是推不上去的，因为您的 SSH Key 公钥不在希望工作室的账户列表中。
 
 添加后，远程库的名字就是 `origin`，这是 Git 默认的叫法，也可以改成别的。
 
@@ -82,7 +82,7 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 把本地库的内容推送到远程，用 `git push` 命令，实际上是把当前分支 `master` 推送到远程。
 
-由于远程库是空的，我们第一次推送 `master` 分支时，加上了-u 参数，Git 不但会把本地的 `master` 分支内容推送的远程新的 `master` 分支，还会把本地的 `master` 分支和远程的 `master` 分支关联起来，在以后的推送或者拉取时就可以简化命令。
+由于远程库是空的，我们第一次推送 `master` 分支时，加上了 `-u` 参数，Git 不但会把本地的 `master` 分支内容推送的远程新的 `master` 分支，还会把本地的 `master` 分支和远程的 `master` 分支关联起来，在以后的推送或者拉取时就可以简化命令。
 
 推送成功后，可以立刻在 Github 页面中看到远程库的内容已经和本地一模一样:
 

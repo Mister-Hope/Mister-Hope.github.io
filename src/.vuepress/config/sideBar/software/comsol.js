@@ -1,0 +1,17 @@
+module.exports = [
+  "",
+  "intro",
+  "install",
+  "get-started",
+  "geometry",
+  "view-geometry",
+  "build-geometry",
+  "select",
+  "material",
+  "physic-field",
+  "mesh",
+  "mesh-intro",
+  "study",
+  "result",
+  "app",
+];
