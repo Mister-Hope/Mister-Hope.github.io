@@ -35,11 +35,17 @@ module.exports = [
     ],
   },
   {
+    title: "交互",
+    icon: "interact",
+    collapsable: false,
+    prefix: "interact/",
+    children: ["", "search", "text-field"],
+  },
+  {
     title: "文章",
     icon: "note",
     prefix: "articles/",
     children: ["", "gestalt-principle", "left-or-right", "infomation-flow"],
   },
-  "search",
   "APP",
 ];
