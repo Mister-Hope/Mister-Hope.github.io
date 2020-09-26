@@ -38,7 +38,7 @@ module.exports = [
     title: "文章",
     icon: "note",
     prefix: "articles/",
-    children: ["", "gestalt-principle", "left-or-right"],
+    children: ["", "gestalt-principle", "left-or-right", "infomation-flow"],
   },
   "search",
   "APP",
