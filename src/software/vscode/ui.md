@@ -43,7 +43,7 @@ VS Code 具有简单直观的布局，可最大程度地为编辑器提供空间
 
 默认情况下，编辑器将打开到活动窗口的右侧。您可以通过设置更改此行为，`workbench.editor.openSideBySideDirection` 并配置为在活动编辑器的底部打开新编辑器。
 
-当你有一个以上的编辑器打开你可以按住 Ctrl 键的同时按 1、2 、3在它们之间迅速切换。
+当你有一个以上的编辑器打开你可以按住 Ctrl 键的同时按 1、2、3 在它们之间迅速切换。
 
 ::: tip
 您可以调整编辑器的大小并重新排序。拖放编辑器标题区域以重新定位编辑器或调整其大小。
@@ -102,7 +102,7 @@ VS Code 与您可能会使用的其他工具(特别是命令行工具)配合得�
 默认情况下，VS Code 从资源管理器中排除某些文件夹(例如 .git)。使用 `files.exclude` 设置可配置用于从资源管理器隐藏文件和文件夹的规则。
 
 ::: tip
-这对于隐藏派生的资源文件非常有用，例如Unity 中的 `*.meta` 、TypeScript 项目中的 `*.js`。为了使 Unity 排除 `*.cs.meta` 文件，要选择的模式是: `"**/*.cs.meta": true`。对于 TypeScript，可以使用以下命令排除为 TypeScript 文件生成的 JavaScript: `"**/*.js": {"when": "$(basename).ts"}`。
+这对于隐藏派生的资源文件非常有用，例如 Unity 中的 `*.meta` 、TypeScript 项目中的 `*.js`。为了使 Unity 排除 `*.cs.meta` 文件，要选择的模式是: `"**/*.cs.meta": true`。对于 TypeScript，可以使用以下命令排除为 TypeScript 文件生成的 JavaScript: `"**/*.js": {"when": "$(basename).ts"}`。
 :::
 
 ### 多选

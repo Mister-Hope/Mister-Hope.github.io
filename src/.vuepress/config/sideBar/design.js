@@ -34,6 +34,12 @@ module.exports = [
       "tabbar-design",
     ],
   },
+  {
+    title: "文章",
+    icon: "note",
+    prefix: "articles/",
+    children: ["", "gestalt-principle", "left-or-right"],
+  },
   "search",
   "APP",
 ];
