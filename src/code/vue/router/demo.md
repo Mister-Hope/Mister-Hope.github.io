@@ -37,8 +37,6 @@ tags:
 ## JavaScript
 
 ```js
-// 0. 如果使用模块化机制编程，导入Vue和VueRouter，要调用 Vue.use(VueRouter)
-
 // 1. 定义 (路由) 组件。
 // 可以从其他文件 import 进来
 const Foo = { template: "<div>foo</div>" };
@@ -56,16 +54,15 @@ const routes = [
 
 // 3. 创建 router 实例，然后传 `routes` 配置
 // 您还可以传别的配置参数, 不过先这么简单着吧。
-const router = new VueRouter({
+const router = VueRouter.createRouter({
+  history: VueRouter.createWebHashHistory(),
   routes, // (缩写) 相当于 routes: routes
 });
 
 // 4. 创建和挂载根实例。
 // 记得要通过 router 配置参数注入路由，
 // 从而让整个应用都有路由功能
-const app = new Vue({
-  router,
-}).$mount("#app");
+const app = Vue.createApp({}).use(router).$mount("#app");
 
 // 现在，应用已经启动了!
 ```
@@ -82,8 +79,12 @@ export default {
     },
   },
   methods: {
-    goBack() {
-      window.history.length > 1 ? this.$router.go(-1) : this.$router.push("/");
+    goToDashboard() {
+      if (isAuthenticated) {
+        this.$router.push('/dashboard')
+      } else {
+        this.$router.push('/login')
+      }
     },
   },
 };

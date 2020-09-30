@@ -14,124 +14,43 @@ tags:
 ## Sreen.ts
 
 ```ts
-/*
- * @Author: Mr.Hope
- * @Date: 2019-05-16 15:35:49
- * @LastEditors: Mr.Hope
- * @LastEditTime: 2019-09-15 17:26:35
- * @Description: Vuex Screen Module
- */
-
-import { ActionContext } from "vuex";
+import { Module } from "vuex";
 import { BaseState } from "../state";
 
-/** 屏幕状态 */
-export interface ScreenState {
-  [propName: string]: string | number | boolean;
-  /** 屏幕宽度 */
-  width: number;
-  /** 屏幕当前尺寸状态 */
-  status: string;
-  /** 屏幕是否符合xs状态 */
-  xs: boolean;
-  /** 屏幕是否符合sm状态 */
-  sm: boolean;
-  /** 屏幕是否符合md状态 */
-  md: boolean;
-  /** 屏幕是否符合lg状态 */
-  lg: boolean;
-  /** 屏幕是否符合xl状态 */
-  xl: boolean;
-  /** 屏幕是否符合xxl状态 */
-  xxl: boolean;
+export interface SWState {
+  status: string; // service-worker 状态
+  error?: Error;
 }
 
-/** 屏幕基础状态 */
-const screenState: ScreenState = {
-  width: 0,
-  status: "",
-  xs: false,
-  sm: false,
-  md: false,
-  lg: false,
-  xl: false,
-  xxl: false,
-};
+const swState: SWState = { status: "" };
 
-export default {
-  state: screenState,
+const swModule: Module<SWState, BaseState> = {
+  state: swState,
   mutations: {
     /**
-     * 设置屏幕状态
+     * @description: 设置 Service Worker 状态
      *
-     * @param state state
-     * @param width 屏幕宽度
+     * @param state swState
+     * @param status ServiceWorker状态
      */
-    changeScreen(state: ScreenState, width: number) {
-      let status;
-
-      // judge scrren status
-      if (width > 1200) status = width < 1600 ? "xl" : "xxl";
-      else if (width < 768) status = width < 576 ? "xs" : "sm";
-      else status = width < 992 ? "md" : "lg";
-
-      // if there is a new status, then handle state detail
-      if (state.status !== status) {
-        const hash = ["sm", "md", "lg", "xl", "xxl"];
-
-        state.status = status;
-
-        if (status === "xs") {
-          // make xs 'true' and the rest 'false'
-          if (!state.xs) state.xs = true;
-          hash.forEach((x) => {
-            if (state[x]) state[x] = false;
-          });
-        } else {
-          // mark xs false
-
-          if (state.xs) state.xs = false;
-
-          let index = hash.indexOf(status);
-          let index2 = hash.length - 1;
-
-          // change the elments after 'status' false
-          while (index2 > index) {
-            if (state[hash[index2]]) state[hash[index2]] = false;
-            index2 -= 1;
-          }
-          // change the elments before 'status' true
-          while (index + 1) {
-            if (!state[hash[index]]) state[hash[index]] = true;
-            index -= 1;
-          }
-        }
-      }
+    swState(state: SWState, status: string): void {
+      state.status = status;
     },
 
     /**
-     * 设置屏幕宽度
+     * @description: 设置 Service Worker 错误
      *
-     * @param state state
-     * @param width 屏幕宽度
+     * @param state imagestate
+     * @param error 遇到的错误
      */
-    screenWidth(state: ScreenState, width: number) {
-      state.width = width;
-    },
-  },
-  actions: {
-    /**
-     * 获取屏幕状态
-     *
-     * @param context state
-     * @param width 屏幕宽度
-     */
-    screen(context: ActionContext<ScreenState, BaseState>, width: number) {
-      context.commit("screenWidth", width);
-      context.commit("changeScreen", width);
+    swError(state: SWState, error: Error): void {
+      state.status = "error";
+      state.error = error;
     },
   },
 };
+
+export default swModule;
 ```
 
 本文件包含了完整的一份 state、数个 mutation 和一个 action。

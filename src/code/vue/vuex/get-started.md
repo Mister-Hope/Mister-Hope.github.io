@@ -13,8 +13,6 @@ Vuex 是 Vue 官方出品的状态管理组件，是一个专为 Vue.js 应用�
 
 我们可以从下面一个简单的状态管理案例开始。
 
-- 状态管理案例:
-
 ```js
 new Vue({
   // state
@@ -51,11 +49,7 @@ new Vue({
 
 此时，我们就需要进行复杂的组件通信，这在开发中很不方便。
 
----
-
-**所以此时**，我们就需要**Vuex**!
-
----
+**所以此时**，我们就需要 **Vuex**!
 
 ## Vuex 介绍
 
@@ -68,9 +62,7 @@ Vuex 的状态存储是响应式的。当 Vue 组件从 `store` 中读取状态�
 ### 最简单的 Store
 
 ```js
-// 如果在模块化构建系统中，请确保在开头调用了 Vue.use(Vuex)
-
-const store = new Vuex.Store({
+const store = Vuex.createStore({
   state: {
     count: 0,
   },
@@ -80,6 +72,10 @@ const store = new Vuex.Store({
     },
   },
 });
+
+...
+
+Vue.createApp({}).use(store).mount('#app')
 ```
 
 现在，可以通过 `store.state` 来获取状态对象，以及通过 `store.commit` 方法触发状态变更:
@@ -99,6 +95,10 @@ console.log(store.state.count); // -> 1
 在引入 Vuex 之后，Vuex 会被全局挂载，这意味着访问任何一个组件的 `this.$store` 都会指向同一个——我们引入的 Vuex。
 
 也就是说，我们可以在所有组件内使用 `this.$store.state` 来共享同一份数据，并在数据发生改变的时候得到更新。
+
+::: info
+在 setup 中，需要使用 useStore 函数来获取 store 对象。
+:::
 
 任何时候，提交一个 `mutation` 到 Vuex，会触发这份共享数据的变更，并通知全局的任何一个使用了变更数据的组件进行变更。
 
