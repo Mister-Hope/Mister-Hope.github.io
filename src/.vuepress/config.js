@@ -1,8 +1,8 @@
-const resolve = require("vuepress-theme-hope/resolve");
+const { config } = require("vuepress-theme-hope");
 const navBarConfig = require("./config/navBarConfig");
 const sideBarConfig = require("./config/sideBar");
 
-module.exports = resolve({
+module.exports = config({
   title: "我是 Mr.Hope",
   description: "Mr.Hope 的个人博客",
   headOption: {
@@ -62,6 +62,7 @@ module.exports = resolve({
   ],
 
   themeConfig: {
+    baseLang: "zh-CN",
     logo: "/logo.png",
     nav: navBarConfig.zh,
     sidebar: sideBarConfig.zh,
