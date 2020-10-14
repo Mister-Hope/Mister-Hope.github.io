@@ -49,9 +49,7 @@ x; // 5
 下面是一个更实际的例子，用户点击链接提交表单，但是不产生页面跳转。
 
 ```html
-<a href="javascript: void(document.form.submit())">
-  提交
-</a>
+<a href="javascript: void(document.form.submit())"> 提交 </a>
 ```
 
 ## 逗号运算符

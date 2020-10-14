@@ -175,6 +175,7 @@ i = 10; // i现在是全局变量
 
 ```js
 "use strict";
+
 ```
 
 这是一个字符串，不支持 `strict` 模式的浏览器会把它当做一个字符串语句执行，支持 `strict` 模式的浏览器将开启 `strict` 模式运行 JavaScript。

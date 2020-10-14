@@ -77,7 +77,6 @@ Page({
 高级用法，详见脚注[^wxs-event]。
 
 [^wxs-event]:
-
     从基础库版本 2.4.4 开始，支持使用 WXS 函数绑定事件，WXS 函数接受 2 个参数，第一个是 `event`，在原有的 `event` 的基础上加了 `event.instance` 对象，第二个参数是 `ownerInstance`，和 `event.instance` 一样是一个 `ComponentDescriptor` 对象。具体使用如下:
 
     在组件中绑定和注册事件处理的 WXS 函数。
@@ -168,7 +167,6 @@ WXML 的冒泡事件列表:
 这是一个很重要的内容，但不适合初学者直接学习，建议先了解其他内容。具体内容见脚注[^capture]。
 
 [^capture]:
-
     自基础库版本 1.5.0 起，触摸类事件支持捕获阶段。捕获阶段位于冒泡阶段之前，且在捕获阶段中，事件到达节点的顺序与冒泡阶段恰好相反。需要在捕获阶段监听事件时，可以采用 `capture-bind`、`capture-catch` 关键字，后者将中断捕获阶段和取消冒泡阶段。
 
     在下面的代码中，点击 inner view 会先后调用 `handleTap2`、`handleTap4`、`handleTap3`、`handleTap1`。
@@ -307,7 +305,7 @@ Page({
 });
 ```
 
-`mark` 和 `dataset` 很相似，主要区别在于:  `mark` 会包含从触发事件的节点到根节点上所有的 `mark`: 属性值；而 `dataset` 仅包含一个节点的 `data-` 属性值。
+`mark` 和 `dataset` 很相似，主要区别在于: `mark` 会包含从触发事件的节点到根节点上所有的 `mark`: 属性值；而 `dataset` 仅包含一个节点的 `data-` 属性值。
 
 细节注意事项:
 

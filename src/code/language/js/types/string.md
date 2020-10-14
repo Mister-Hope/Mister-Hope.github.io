@@ -54,10 +54,10 @@ c'
 
 ```js
 const longString =
-  'Long \
+  "Long \
 long \
 long \
-string';
+string";
 
 longString;
 // "Long long long string"
@@ -68,10 +68,10 @@ longString;
 连接运算符(`+`)可以连接多个单行字符串，将长字符串拆成多行书写，输出的时候也是单行。
 
 ```js
-const longString = 'Long '
-  + 'long '
-  + 'long '
-  + 'string';
+const longString = "Long "
+  + "long "
+  + "long "
+  + "string";
 ```
 
 如果想输出多行字符串，有一种利用多行注释的变通方法。
@@ -85,9 +85,9 @@ line 3
 */
 }
   .toString()
-  .split('\n')
+  .split("\n")
   .slice(1, -1)
-  .join('\n'));
+  .join("\n"));
 // "line 1
 // line 2
 // line 3"
@@ -115,7 +115,7 @@ line 3
 上面这些字符前面加上反斜杠，都表示特殊含义。
 
 ```js
-console.log('1\n2');
+console.log("1\n2");
 // 1
 // 2
 ```
@@ -139,19 +139,19 @@ console.log('1\n2');
    下面是这三种字符特殊写法的例子。
 
    ```js
-   '\251'; // "©"
-   '\xA9'; // "©"
-   '\u00A9'; // "©"
+   "\251"; // "©"
+   "\xA9"; // "©"
+   "\u00A9"; // "©"
 
-   '\172' === 'z'; // true
-   '\x7A' === 'z'; // true
-   '\u007A' === 'z'; // true
+   "\172" === "z"; // true
+   "\x7A" === "z"; // true
+   "\u007A" === "z"; // true
    ```
 
 如果在非特殊字符前面使用反斜杠，则反斜杠会被省略。
 
 ```js
-'\a';
+"\a";
 // "a"
 ```
 
@@ -160,7 +160,7 @@ console.log('1\n2');
 如果字符串的正常内容之中，需要包含反斜杠，则反斜杠前面需要再加一个反斜杠，用来对自身转义。
 
 ```js
-'Prev \\ Next';
+"Prev \\ Next";
 // "Prev \ Next"
 ```
 
@@ -183,9 +183,9 @@ console.log('1\n2');
 要把多个字符串连接起来，可以用 `+` 号连接:
 
 ```js
-const name = '小明';
+const name = "小明";
 const age = 20;
-const message = '您好, ' + name + ', 您今年' + age + '岁了!';
+const message = "您好, " + name + ", 您今年" + age + "岁了!";
 
 alert(message);
 ```
@@ -193,7 +193,7 @@ alert(message);
 如果有很多变量需要连接，用 `+` 号就比较麻烦。ES6 新增了一种模板字符串，表示方法和上面的多行字符串一样，但是它会自动替换字符串中的变量:
 
 ```js
-const name = '小明';
+const name = "小明";
 const age = 20;
 const message = `您好, ${name}, 您今年${age}岁了!`;
 
@@ -205,37 +205,37 @@ alert(message);
 字符串可以被视为字符数组，因此可以使用数组的方括号运算符，用来返回某个位置的字符(位置编号从 0 开始)。
 
 ```js
-const s = 'hello';
+const s = "hello";
 
 s[0]; // "h"
 s[1]; // "e"
 s[4]; // "o"
 
 // 直接对字符串使用方括号运算符
-'hello'[1]; // "e"
+"hello"[1]; // "e"
 ```
 
 如果方括号中的数字超过字符串的长度，或者方括号中根本不是数字，则返回`undefined`。
 
 ```js
-'abc'[3]; // undefined
-'abc'[-1]; // undefined
-'abc'['x']; // undefined
+"abc"[3]; // undefined
+"abc"[-1]; // undefined
+"abc"["x"]; // undefined
 ```
 
 ::: warning
 需要特别注意的是，字符串是不可变的，如果对字符串的某个索引赋值或进行删除操作，不会有任何错误，但是也没有任何效果:
 
 ```js
-const s = 'hello';
+const s = "hello";
 
 delete s[0];
 s; // "hello"
 
-s[1] = 'a';
+s[1] = "a";
 s; // "hello"
 
-s[5] = '!';
+s[5] = "!";
 s; // "hello"
 ```
 
@@ -246,7 +246,7 @@ s; // "hello"
 `length`属性返回字符串的长度，该属性也是无法改变的。
 
 ```js
-const s = 'hello';
+const s = "hello";
 
 s.length; // 5
 
@@ -266,7 +266,7 @@ JavaScript 使用 Unicode 字符集。JavaScript 引擎内部，所有字符都�
 JavaScript 不仅以 Unicode 储存字符，还允许直接在程序中使用 Unicode 码点表示字符，即将字符写成`\uxxxx`的形式，其中`xxxx`代表该字符的 Unicode 码点。比如，`\u00A9`代表版权符号。
 
 ```js
-const s = '\u00A9';
+const s = "\u00A9";
 
 s; // "©"
 ```
@@ -274,7 +274,7 @@ s; // "©"
 解析代码的时候，JavaScript 会自动识别一个字符是字面形式表示，还是 Unicode 形式表示。输出给用户的时候，所有字符都会转成字面形式。
 
 ```js
-const foo = 'abc';
+const foo = "abc";
 
 foo; // "abc"
 ```
@@ -288,7 +288,7 @@ foo; // "abc"
 JavaScript 对 UTF-16 的支持是不完整的，由于历史原因，只支持两字节的字符，不支持四字节的字符。这是因为 JavaScript 第一版发布的时候，Unicode 的码点只编到`U+FFFF`，因此两字节足够表示了。后来，Unicode 纳入的字符越来越多，出现了四字节的编码。但是，JavaScript 的标准此时已经定型了，统一将字符长度限制在两字节，导致无法识别四字节的字符。上一节的那个四字节字符`𝌆`，浏览器会正确识别这是一个字符，但是 JavaScript 无法识别，会认为这是两个字符。
 
 ```js
-'𝌆'.length; // 2
+"𝌆".length; // 2
 ```
 
 上面代码中，JavaScript 认为`𝌆`的长度为 2，而不是 1。
@@ -304,7 +304,7 @@ JavaScript 为字符串提供了一些常用方法，注意，调用这些方法
   `toUpperCase()` 把一个字符串全部变为大写:
 
   ```js
-  const s = 'Hello';
+  const s = "Hello";
   s.toUpperCase(); // 返回 'HELLO'
   ```
 
@@ -313,7 +313,7 @@ JavaScript 为字符串提供了一些常用方法，注意，调用这些方法
   `toLowerCase()` 把一个字符串全部变为小写:
 
   ```js
-  const s = 'Hello';
+  const s = "Hello";
   const lower = s.toLowerCase(); // 返回 'hello' 并赋值给变量 lower
 
   lower; // 'hello'
@@ -324,10 +324,10 @@ JavaScript 为字符串提供了一些常用方法，注意，调用这些方法
   `indexOf()` 会搜索指定字符串出现的位置:
 
   ```js
-  const s = 'hello, world';
+  const s = "hello, world";
 
-  s.indexOf('world'); // 返回 7
-  s.indexOf('World'); // 没有找到指定的子串，返回 -1
+  s.indexOf("world"); // 返回 7
+  s.indexOf("World"); // 没有找到指定的子串，返回 -1
   ```
 
 - substring
@@ -335,7 +335,7 @@ JavaScript 为字符串提供了一些常用方法，注意，调用这些方法
   `substring()` 返回指定索引区间的子串:
 
   ```js
-  const s = 'hello, world';
+  const s = "hello, world";
 
   s.substring(0, 5); // 从索引 0 开始到 5(不包括 5)，返回 'hello'
   s.substring(7); // 从索引 7 开始到结束，返回 'world'
@@ -353,16 +353,16 @@ JavaScript 原生提供两个 Base64 相关的方法。
 - `atob()`: Base64 编码转为原来的值
 
 ```js
-const string = 'Hello World!';
+const string = "Hello World!";
 
 btoa(string); // "SGVsbG8gV29ybGQh"
-atob('SGVsbG8gV29ybGQh'); // "Hello World!"
+atob("SGVsbG8gV29ybGQh"); // "Hello World!"
 ```
 
 注意，这两个方法不适合非 ASCII 码的字符，会报错。
 
 ```js
-btoa('您好'); // 报错
+btoa("您好"); // 报错
 ```
 
 要将非 ASCII 码字符转为 Base64 编码，必须中间插入一个转码环节，再使用这两个方法。
@@ -376,8 +376,8 @@ function b64Decode(str) {
   return decodeURIComponent(atob(str));
 }
 
-b64Encode('您好'); // "JUU0JUJEJUEwJUU1JUE1JUJE"
-b64Decode('JUU0JUJEJUEwJUU1JUE1JUJE'); // "您好"
+b64Encode("您好"); // "JUU0JUJEJUEwJUU1JUE1JUJE"
+b64Decode("JUU0JUJEJUEwJUU1JUE1JUJE"); // "您好"
 ```
 
 ## 参考链接

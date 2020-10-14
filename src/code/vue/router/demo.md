@@ -81,9 +81,9 @@ export default {
   methods: {
     goToDashboard() {
       if (isAuthenticated) {
-        this.$router.push('/dashboard')
+        this.$router.push("/dashboard");
       } else {
-        this.$router.push('/login')
+        this.$router.push("/login");
       }
     },
   },

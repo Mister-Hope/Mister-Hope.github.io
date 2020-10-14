@@ -281,7 +281,7 @@ bookPrice(6，30); // 144
         : price * ammount * 0.8;
     ```
 
-    它太长了，为什么不把公共的 `price * ammount` 提取出来呢? 
+    它太长了，为什么不把公共的 `price * ammount` 提取出来呢?
 
     ```js
     const bookPrice = (price, ammount) =>
@@ -320,7 +320,7 @@ getTimes([1, 1, 2, 3, 4, 4, 4], 4); // 3
     equal=>condition: element === x?
     addcount=>operation: count = count + 1
     equal=>condition: element === x?
-    islast=>condition: x 是数组的最后一个元素么? 
+    islast=>condition: x 是数组的最后一个元素么?
     movex=>operation: 让 x 成为下一个元素
     return=>inputoutput: 返回 count
     end=>end: 结束
@@ -348,7 +348,7 @@ getTimes([1, 1, 2, 3, 4, 4, 4], 4); // 3
     equal=>condition: element === arr[i]?
     addcount=>operation: count = count + 1
     equal=>condition: element === x?
-    islast=>condition: i <= arr.length - 1? 
+    islast=>condition: i <= arr.length - 1?
     movex=>operation: i = i + 1
     return=>inputoutput: 返回 count
     end=>end: 结束

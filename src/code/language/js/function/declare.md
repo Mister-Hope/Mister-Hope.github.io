@@ -295,7 +295,8 @@ f(1); // 1
 
 由于 JavaScript 函数允许接收任意个参数，于是我们就不得不用 arguments[^arguments] 来获取所有参数:
 
-[^arguments]: **arguments** <MyBadge text="不推荐使用" type="warning" /> <MyBadge text="使用 rest 替代" type="tip" />
+[^arguments]:
+    **arguments** <MyBadge text="不推荐使用" type="warning" /> <MyBadge text="使用 rest 替代" type="tip" />
 
     - arguments 的定义
 

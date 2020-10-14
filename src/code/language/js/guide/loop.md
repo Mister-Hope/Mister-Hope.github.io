@@ -7,7 +7,6 @@ tags:
   - 快速上手
 ---
 
-
 循环语句用于重复执行某个操作，它有多种形式，JavaScript 的循环有两种: `while` 循环和 `for` 循环。
 
 <!-- more -->
@@ -181,7 +180,8 @@ for (let key in o) {
 
 同时，`for ... in` 循环可以直接循环 Array。[^array]
 
-[^array]: Array 也是对象，而它的每个元素的索引被视为对象的属性，因此，`for ... in` 循环可以直接循环出 Array 的索引:
+[^array]:
+    Array 也是对象，而它的每个元素的索引被视为对象的属性，因此，`for ... in` 循环可以直接循环出 Array 的索引:
 
     ```js
     let a = ["A", "B", "C"];
