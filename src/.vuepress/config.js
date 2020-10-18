@@ -93,7 +93,7 @@ module.exports = config({
       status: "global",
     },
 
-    markdown: {
+    mdEnhance: {
       enableAll: true,
     },
 
