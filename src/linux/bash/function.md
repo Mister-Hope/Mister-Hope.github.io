@@ -5,7 +5,7 @@ author: 阮一峰
 category: Linux
 tags:
   - bash
-copyright: 本教程采用<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh">知识共享 署名-相同方式共享 3.0协议</a>
+copyrightText: 本教程采用<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh">知识共享 署名-相同方式共享 3.0协议</a>
 ---
 
 本章介绍 Bash 函数的用法。

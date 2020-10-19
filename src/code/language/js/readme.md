@@ -3,7 +3,7 @@ title: JavaScript 教程
 icon: js
 time: 2019-09-12
 category: JavaScript
-copyright: 此部分博客采用 <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh">知识共享 署名-相同方式共享 3.0协议</a>
+copyrightText: 此部分博客采用 <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh">知识共享 署名-相同方式共享 3.0协议</a>
 ---
 
 > 部分内容参考/来自廖雪峰、阮一峰书籍与博客

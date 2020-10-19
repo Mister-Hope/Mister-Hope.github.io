@@ -4,7 +4,8 @@ const sideBarConfig = require("./config/sideBar");
 
 module.exports = config({
   title: "我是 Mr.Hope",
-  description: "Mr.Hope 的个人博客",
+  description: "Where there is light, there is hope.",
+
   headOption: {
     icon: "/favicon.ico",
     pwa: {
@@ -32,8 +33,6 @@ module.exports = config({
   ],
 
   dest: "dist",
-
-  temp: "node_modules/.temp",
 
   locales: {
     "/en/": {

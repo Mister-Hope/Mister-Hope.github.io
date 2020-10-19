@@ -6,7 +6,7 @@ category: Git
 tags:
   - Git
   - 软件
-copyright: Copyright by 廖雪峰 Edited by Mr.Hope
+copyrightText: Copyright by 廖雪峰 Edited by Mr.Hope
 ---
 
 有些时候，您必须把某些文件放到 Git 工作目录中，但又不能提交它们，比如保存了数据库密码的配置文件啦，等等，每次 `git status` 都会显示 `Untracked files` ...，有强迫症的童鞋心里肯定不爽。

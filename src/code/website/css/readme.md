@@ -23,7 +23,7 @@ CSS 指层叠样式表 (Cascading Style Sheets)，它负责描述网页元素的
 
 - [CSS 大体介绍](detail.md)
 
-- [CSS 布局介绍](layout.md)
+- [CSS 布局介绍](layout/readme.md)
 
 ## CSS 手册
 

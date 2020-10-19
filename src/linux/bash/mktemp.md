@@ -5,7 +5,7 @@ author: 阮一峰
 category: Linux
 tags:
   - bash
-copyright: 本教程采用<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh">知识共享 署名-相同方式共享 3.0协议</a>
+copyrightText: 本教程采用<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh">知识共享 署名-相同方式共享 3.0协议</a>
 ---
 
 Bash 脚本有时需要创建临时文件或临时目录。常见的做法是，在 `/tmp` 目录里面创建文件或目录，这样做有很多弊端，使用 `mktemp` 命令是最安全的做法。

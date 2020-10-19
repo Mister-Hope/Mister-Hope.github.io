@@ -6,7 +6,7 @@ category: Git
 tags:
   - Git
   - 软件
-copyright: Copyright by 廖雪峰 Edited by Mr.Hope
+copyrightText: Copyright by 廖雪峰 Edited by Mr.Hope
 ---
 
 Git 和其他版本控制系统如 SVN 的一个不同之处就是有暂存区的概念。

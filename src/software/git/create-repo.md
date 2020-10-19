@@ -6,7 +6,7 @@ category: Git
 tags:
   - Git
   - 软件
-copyright: Copyright by 廖雪峰 Edited by Mr.Hope
+copyrightText: Copyright by 廖雪峰 Edited by Mr.Hope
 ---
 
 什么是仓库呢? 英文名**repository**，您可以简单理解成一个目录，这个目录里面的所有文件都可以被 Git 管理起来，每个文件的修改、删除， Git 都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还原”。

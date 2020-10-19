@@ -4,7 +4,7 @@ icon: async
 author: 阮一峰
 time: 2019-10-23
 category: JavaScript
-copyright: 此部分博客采用 <a href="http://creativecommons.org/licenses/by-nc/4.0/">“保持署名—非商用”创意共享4.0许可证</a>
+copyrightText: 此部分博客采用 <a href="http://creativecommons.org/licenses/by-nc/4.0/">“保持署名—非商用”创意共享4.0许可证</a>
 ---
 
 ES2017 标准引入了 async 函数，使得异步操作变得更加方便。

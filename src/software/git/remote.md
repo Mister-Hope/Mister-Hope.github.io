@@ -6,7 +6,7 @@ category: Git
 tags:
   - Git
   - 软件
-copyright: Copyright by 廖雪峰 Edited by Mr.Hope
+copyrightText: Copyright by 廖雪峰 Edited by Mr.Hope
 ---
 
 ## 什么是远程仓库

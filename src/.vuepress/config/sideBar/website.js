@@ -21,7 +21,18 @@ module.exports = [
     icon: "css",
     collapsable: false,
     prefix: "css/",
-    children: ["", "intro", "detail", "layout"],
+    children: [
+      "",
+      "intro",
+      "detail",
+      {
+        title: "CSS 布局",
+        icon: "layout",
+        collapsable: false,
+        prefix: "layout/",
+        children: ["", "box", "flex", "exercise", "grid"],
+      },
+    ],
   },
   "js",
   {

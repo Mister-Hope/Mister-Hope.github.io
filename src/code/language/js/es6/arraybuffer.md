@@ -4,7 +4,7 @@ icon: rank
 author: 阮一峰
 time: 2019-10-25
 category: JavaScript
-copyright: 此部分博客采用 <a href="http://creativecommons.org/licenses/by-nc/4.0/">“保持署名—非商用”创意共享4.0许可证</a>
+copyrightText: 此部分博客采用 <a href="http://creativecommons.org/licenses/by-nc/4.0/">“保持署名—非商用”创意共享4.0许可证</a>
 ---
 
 `ArrayBuffer`对象、`TypedArray`视图和`DataView`视图是 JavaScript 操作二进制数据的一个接口。这些对象早就存在，属于独立的规格(2011 年 2 月发布)，ES6 将它们纳入了 ECMAScript 规格，并且增加了新的方法。它们都是以数组的语法处理二进制数据，所以统称为二进制数组。

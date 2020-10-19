@@ -3,7 +3,7 @@ icon: notice
 author: 阮一峰
 time: 2019-10-21
 category: JavaScript
-copyright: 此部分博客采用 <a href="http://creativecommons.org/licenses/by-nc/4.0/">“保持署名—非商用”创意共享4.0许可证</a>
+copyrightText: 此部分博客采用 <a href="http://creativecommons.org/licenses/by-nc/4.0/">“保持署名—非商用”创意共享4.0许可证</a>
 ---
 
 # let 和 const 命令
