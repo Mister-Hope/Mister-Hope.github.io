@@ -11,7 +11,7 @@ tags:
 
 ### VS Code 安装
 
-- [安装 VS Code](../../../software/vscode.md#vscode的安装)
+- [安装 VS Code](../../software/vscode/install.md)
 
 #### 开发指南
 
