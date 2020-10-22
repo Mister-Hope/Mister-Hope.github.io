@@ -12,8 +12,8 @@ module.exports = config({
       manifest: "/manifest.json",
       themeColor: "#5c92d1",
       appleStatusBarColor: "black",
-      appleIcon: "/assets/icon/appleIcon152.png",
-      msTileImage: "/assets/icon/msIcon144.png",
+      appleIcon: "/assets/icon/apple-icon-152.png",
+      msTileImage: "/assets/icon/ms-icon-144.png",
       msTileColor: "#ffffff",
     },
   },
@@ -112,6 +112,41 @@ module.exports = config({
     algolia: {
       apiKey: "064a2d15d1a0f7b69df3ef1458d1a510",
       indexName: "mrhope",
+    },
+
+    pwa: {
+      manifest: {
+        name: "Mr.Hope 的个人博客",
+        short_name: "Mr.Hope Blog",
+        description: "Mr.Hope 的个人博客",
+        theme_color: "#5c92d1",
+        icons: [
+          {
+            src: "/assets/icon/chrome-192.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
+          {
+            src: "/assets/icon/chrome-512.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
+          {
+            src: "/assets/icon/chrome-mask-192.png",
+            sizes: "192x192",
+            purpose: "maskable",
+            type: "image/png",
+          },
+          {
+            src: "/assets/icon/chrome-mask-512.png",
+            sizes: "512x512",
+            purpose: "maskable",
+            type: "image/png",
+          },
+        ],
+      },
+      cacheHTML: false,
+      cacheMaxSize: 1512,
     },
 
     repo: "https://github.com/Mister-Hope/blog",
