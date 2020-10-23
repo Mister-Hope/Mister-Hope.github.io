@@ -226,7 +226,7 @@ module.exports = config({
         ],
       },
       cacheHTML: false,
-      cacheMaxSize: 1512,
+      maxSize: 2048,
     },
 
     repo: "https://github.com/Mister-Hope/blog",
