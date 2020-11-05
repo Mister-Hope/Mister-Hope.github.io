@@ -8,7 +8,7 @@ category: TypeScript
 
 ## 什么是声明语句
 
-假如我们想使用第三方库 jQuery，一种常见的方式是在 html 中通过 `<script>` 标签引入 jQuery，然后就可以使用全局变量 `$` 或 `jQuery` 了。
+假如我们想使用第三方库 jQuery，一种常见的方式是在 HTML 中通过 `<script>` 标签引入 jQuery，然后就可以使用全局变量 `$` 或 `jQuery` 了。
 
 我们通常这样获取一个 `id` 是 `foo` 的元素:
 

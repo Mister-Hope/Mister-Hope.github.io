@@ -9,7 +9,7 @@ axois 是一个基于 Promise 的 HTTP 客户端，用于浏览器和 node.js
 ## 特点
 
 - 从浏览器发出 XMLHttpRequests
-- 从 node.js 发出 HTTP 请求
+- 从 Node.js 发出 HTTP 请求
 - 支持 Promise API
 - 拦截请求和响应
 - 转换请求和响应数据
@@ -388,7 +388,7 @@ These are the available config options for making requests. Only the `url` is re
   // `config` is the config that was provided to `axios` for the request
   config: {},
   // `request` is the request that generated this response
-  // It is the last ClientRequest instance in node.js (in redirects)
+  // It is the last ClientRequest instance in Node.js (in redirects)
   // and an XMLHttpRequest instance in the browser
   request: {}
 }
@@ -627,7 +627,7 @@ axios.post("http://something.com/", querystring.stringify({ foo: "bar" }));
 
 #### 表格数据
 
-在 node.js 中，您可以使用 [`form-data`](https://github.com/form-data/form-data) 库，如下所示:
+在 Node.js 中，您可以使用 [`form-data`](https://github.com/form-data/form-data) 库，如下所示:
 
 ```js
 const FormData = require("form-data");

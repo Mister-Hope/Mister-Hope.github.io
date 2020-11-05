@@ -34,7 +34,7 @@ project:
   #   link: https://innenu.com/
   - name: ftp-hope
     type: project
-    desc: 一个 node 环境下基于 Promise 的 FTP 客户端
+    desc: 一个 Node.js 环境下基于 Promise 的 FTP 客户端
     link: https://github.com/Mister-Hope/ftp-hope
 
   # - name: mppage

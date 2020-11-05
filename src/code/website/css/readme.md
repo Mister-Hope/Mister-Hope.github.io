@@ -7,7 +7,7 @@ tags:
   - 介绍
 ---
 
-CSS 指层叠样式表 (Cascading Style Sheets)，它负责描述网页元素的具体样式。
+CSS 指层叠样式表 (**C**ascading **S**tyle **S**heets)，它负责描述网页元素的具体样式。
 
 - 样式定义如何显示 HTML 元素
 - 样式通常存储在样式表中
@@ -19,11 +19,17 @@ CSS 指层叠样式表 (Cascading Style Sheets)，它负责描述网页元素的
 现在的页面设计趋势趋近于扁平化，无需特别复杂的样式。只需要设置适当的阴影体现出层次感，应用合适的边距，在用户点击时给予适当的视觉反馈，即可制作出有质感的页面。
 :::
 
-- [CSS 简介](intro.md)
+- [快速上手](guide/readme.md)
 
-- [CSS 大体介绍](detail.md)
+  - [CSS 选择器](guide/selector.md)
+  - [CSS 声明](guide/declaration.md)
+  - [CSS 引入](guide/import.md)
+  - [CSS 常用属性介绍](guide/common.md)
+  - [CSS 媒体查询](guide/media.md)
 
 - [CSS 布局介绍](layout/readme.md)
+
+- [CSS 工作原理](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps/CSS%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C)
 
 ## CSS 手册
 
@@ -36,7 +42,7 @@ CSS 指层叠样式表 (Cascading Style Sheets)，它负责描述网页元素的
 
 CSS3 是最新的 CSS 标准，被拆分为"模块"。
 
-模块包括: 选择器、盒模型、背景和边框、文字特效、2D/3D 转换、动画、多列布局、用户。界面
+模块包括: 选择器、盒模型、背景和边框、文字特效、2D/3D 转换、动画、多列布局、用户界面。
 
 ## CSS3 手册
 

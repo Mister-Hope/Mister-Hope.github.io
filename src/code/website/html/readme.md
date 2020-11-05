@@ -17,9 +17,10 @@ HTML 指的是超文本标记语言 (Hyper Text Markup Language)，它不是一�
 
 ## 初学者教程
 
-- [HTML 快速入门](get-started.md)
+- [HTML 快速入门](guide/readme.md)
+- [HTML 常用标签](guide/tag.md)
 
-## HTMl 教程
+## HTML 教程
 
 - [Head 标签](head.md)
 - [基本标签](basic.md)

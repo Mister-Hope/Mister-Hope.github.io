@@ -9,7 +9,7 @@ Vue 文件即是一个组件文件，组件文件既可以成为其他 vue 文�
 
 Vue 文件主要由三部分构成:
 
-- `template` 对应网站视图树，即 html 部分
+- `template` 对应网站视图树，即 HTML 部分
 
 - `script` 对应网站的脚本。即 js 部分，默认为 Javascript，可以添加 `lang="ts"` 来指定页面脚本文件为 `Typescript`
 
@@ -17,7 +17,7 @@ Vue 文件主要由三部分构成:
 
 在脚本部分中，如有需要，需要使用 `export default{}` 向外暴露一个对象以供 Router 或其他 Vue 文件引用。
 
-在 html 标签中，由于页面都被 Router 托管，如需要跳转到本网站的其他视图上去，需要使用 `<route-link to="内部url地址">链接文字</route-link>`
+在 HTML 标签中，由于页面都被 Router 托管，如需要跳转到本网站的其他视图上去，需要使用 `<route-link to="内部url地址">链接文字</route-link>`
 
 ---
 

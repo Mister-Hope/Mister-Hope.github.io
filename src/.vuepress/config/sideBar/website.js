@@ -7,7 +7,13 @@ module.exports = [
     prefix: "html/",
     children: [
       "",
-      "get-started",
+      {
+        title: "快速上手",
+        icon: "creative",
+        collapsable: false,
+        prefix: "guide/",
+        children: ["", "tag"],
+      },
       "head",
       "basic",
       "link",
@@ -23,8 +29,20 @@ module.exports = [
     prefix: "css/",
     children: [
       "",
-      "intro",
-      "detail",
+      {
+        title: "快速上手",
+        icon: "creative",
+        collapsable: false,
+        prefix: "guide/",
+        children: [
+          "",
+          "selector",
+          "declaration",
+          "import",
+          "cascade",
+          "common",
+        ],
+      },
       {
         title: "CSS 布局",
         icon: "layout",
@@ -32,6 +50,7 @@ module.exports = [
         prefix: "layout/",
         children: ["", "box", "flex", "exercise", "grid"],
       },
+      "media",
     ],
   },
   "js",
