@@ -93,7 +93,7 @@ GitHub 就是一个免费托管代码的远程仓库。但是对于某些视源�
      useradd git -g git
      ```
 
-  2. 创建证书登录
+  1. 创建证书登录
 
      收集所有需要登录的用户的公钥，公钥位于 `id_rsa.pub` 文件中，将公钥导入到 `/home/git/.ssh/authorized_keys` 文件里，一行一个。
 
@@ -107,7 +107,7 @@ GitHub 就是一个免费托管代码的远程仓库。但是对于某些视源�
      chmod 644 .ssh/authorized_keys
      ```
 
-  3. 初始化 Git 仓库
+  1. 初始化 Git 仓库
 
      首先我们选定一个目录作为 Git 仓库，假定是 `/home/gitrepo/test.git`，在 `/home/gitrepo` 目录下输入命令:
 
@@ -127,7 +127,7 @@ GitHub 就是一个免费托管代码的远程仓库。但是对于某些视源�
      chown -R git:git runoob.git
      ```
 
-  4. 克隆仓库
+  1. 克隆仓库
 
   ```sh
   $ git clone git@192.168.45.4:/home/gitrepo/runoob.git

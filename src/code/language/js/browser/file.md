@@ -83,7 +83,7 @@ fileInput.addEventListener("change", () => {
 });
 ```
 
-上面的代码演示了如何通过 HTML5 的 File API 读取文件内容。以 DataURL 的形式读取到的文件是一个字符串，类似于 ` data:image/jpeg;base64,/9j/4AAQSk``...(base64编码)... `，常用于设置图像。如果需要服务器端处理，把字符串 `base64`,后面的字符发送给服务器并用 Base64 解码就可以得到原始文件的二进制内容。
+上面的代码演示了如何通过 HTML5 的 File API 读取文件内容。以 DataURL 的形式读取到的文件是一个字符串，类似于 `data:image/jpeg;base64,/9j/4AAQSk...(base64编码)...`，常用于设置图像。如果需要服务器端处理，把字符串 `base64`,后面的字符发送给服务器并用 base64 解码就可以得到原始文件的二进制内容。
 
 ## 回调
 

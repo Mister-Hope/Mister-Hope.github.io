@@ -19,7 +19,7 @@ category: 小程序
 - 可以配置端口，如 `https://myserver.com:8080`，但是配置后只能向 `https://myserver.com:8080` 发起请求。
 - 如果不配置端口。如 `https://myserver.com`，那么请求的 URL 中也不能包含端口，甚至是默认的 443 端口也不可以。
 - 域名必须经过 ICP 备案；
-- 出于安全考虑，api.weixin.qq.com 不能被配置为服务器域名，相关 API 也不能在小程序内调用。 开发者应将 AppSecret 保存到后台服务器中，通过服务器使用 getAccessToken 接口获取 access_token，并调用相关 API；
+- 出于安全考虑，`api.weixin.qq.com` 不能被配置为服务器域名，相关 API 也不能在小程序内调用。开发者应将 AppSecret 保存到后台服务器中，通过服务器使用 getAccessToken 接口获取 access_token，并调用相关 API；
 
 对于每个接口，分别可以配置最多 20 个域名。
 

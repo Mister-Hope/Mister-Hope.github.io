@@ -47,7 +47,7 @@ copyrightText: 此部分博客采用 <a href="http://creativecommons.org/license
 
    所以，建议不再使用`var`命令，而是使用`let`命令取代。
 
-2. 全局常量和线程安全
+1. 全局常量和线程安全
 
    在`let`和`const`之间，建议优先使用`const`，尤其是在全局环境，不应该设置变量，只应设置常量。
 

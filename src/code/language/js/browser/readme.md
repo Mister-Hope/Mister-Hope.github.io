@@ -9,7 +9,7 @@ category: JavaScript
 
 - [浏览器介绍](intro.md)
 
-- [浏览器对象](browserObject.md)
+- [浏览器对象](browser-object.md)
 
 - [操作 DOM](DOM.md)
 
@@ -17,7 +17,7 @@ category: JavaScript
 
 - [操作文件](file.md)
 
-- [AJAX](AJAX.md)
+- [Ajax](AJAX.md)
 
 - [Promise](promise.md)
 

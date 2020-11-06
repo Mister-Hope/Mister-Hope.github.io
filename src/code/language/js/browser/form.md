@@ -94,7 +94,7 @@ HTML5 新增了大量标准控件，常用的包括 `date`、`datetime`、`datet
 
 ## 提交表单
 
-最后，JavaScript 可以以两种方式来处理表单的提交 (AJAX 方式在后面章节介绍)。
+最后，JavaScript 可以以两种方式来处理表单的提交 (Ajax 方式在后面章节介绍)。
 
 方式一是通过 `<form>` 元素的 `submit()` 方法提交一个表单，例如，响应一个 `<button>` 的 click 事件，在 JavaScript 代码中提交表单:
 

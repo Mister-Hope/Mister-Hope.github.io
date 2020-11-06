@@ -7,7 +7,7 @@ tags:
   - 软件
 ---
 
-本文介绍如何利用 Git 和 Github Action，自动部署代码到服务器。
+本文介绍如何利用 Git 和 GitHub Action，自动部署代码到服务器。
 
 <!-- more -->
 
@@ -70,8 +70,8 @@ git config receive.denyCurrentBranch ignore
 
 这是由于 Git 默认拒绝外部对当前的推送操作，因为这可能会覆盖或变更工作区文件。
 
-## Github Actions 构建
+## GitHub Actions 构建
 
 在正常的工作流程中，完成页面的构建，并将其推送到 gh-pages 上。
 
-之后只需要使用 Github Action 推送到 `git@<ip>:<部署目录> gh-pages` 即可。
+之后只需要使用 GitHub Action 推送到 `git@<ip>:<部署目录> gh-pages` 即可。

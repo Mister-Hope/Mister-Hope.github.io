@@ -12,7 +12,7 @@ YAML 是专门用来写配置文件的语言，非常简洁和强大。
 
 YAML 语言(发音 /ˈjæməl/ )的设计目标，就是方便人类读写。它实质上是一种通用的数据串行化格式。
 
-YAML 的全称是 YAML Ain't Markup Language。
+YAML 的全称是 YAML Ain’t Markup Language。
 
 它的基本语法规则如下。
 
@@ -179,7 +179,7 @@ isSet: true
 }
 ```
 
-null 用 `~` 表示。
+`null` 用 `~` 表示。
 
 ```yml
 parent: ~

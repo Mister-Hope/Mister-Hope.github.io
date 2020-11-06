@@ -7,7 +7,7 @@ category: JavaScript
 copyrightText: 此部分博客采用 <a href="http://creativecommons.org/licenses/by-nc/4.0/">“保持署名—非商用”创意共享4.0许可证</a>
 ---
 
-异步编程对 JavaScript 语言太重要。Javascript 语言的执行环境是“单线程”的，如果没有异步编程，根本没法用，非卡死不可。本章主要介绍 Generator 函数如何完成异步操作。
+异步编程对 JavaScript 语言太重要。JavaScript 语言的执行环境是“单线程”的，如果没有异步编程，根本没法用，非卡死不可。本章主要介绍 Generator 函数如何完成异步操作。
 
 ## 传统方法
 
@@ -45,7 +45,7 @@ fs.readFile("/etc/passwd", "utf-8", function (err, data) {
 
 上面代码中，`readFile`函数的第三个参数，就是回调函数，也就是任务的第二段。等到操作系统返回了`/etc/passwd`这个文件以后，回调函数才会执行。
 
-一个有趣的问题是，为什么 Node 约定，回调函数的第一个参数，必须是错误对象`err`(如果没有错误，该参数就是`null`)?
+一个有趣的问题是，为什么 Node.js 约定，回调函数的第一个参数，必须是错误对象 `err`(如果没有错误，该参数就是 `null`)?
 
 原因是执行分成两段，第一段执行完以后，任务所在的上下文环境就已经结束了。在这以后抛出的错误，原来的上下文环境已经无法捕捉，只能当作参数，传入第二段。
 
@@ -760,7 +760,7 @@ function* somethingAsync(x) {
 
 ### 实例: 处理 Stream
 
-Node 提供 Stream 模式读写数据，特点是一次只处理数据的一部分，数据分成一块块依次处理，就好像“数据流”一样。这对于处理大规模数据非常有利。Stream 模式使用 EventEmitter API，会释放三个事件。
+Node.js 提供 Stream 模式读写数据，特点是一次只处理数据的一部分，数据分成一块块依次处理，就好像“数据流”一样。这对于处理大规模数据非常有利。Stream 模式使用 EventEmitter API，会释放三个事件。
 
 - `data`事件: 下一块数据块已经准备好了。
 - `end`事件: 整个“数据流”处理“完了。

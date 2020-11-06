@@ -7,7 +7,7 @@ category: JavaScript
 copyrightText: 此部分博客采用 <a href="http://creativecommons.org/licenses/by-nc/4.0/">“保持署名—非商用”创意共享4.0许可证</a>
 ---
 
-上一章介绍了模块的语法，本章介绍如何在浏览器和 Node 之中加载 ES6 模块，以及实际开发中经常遇到的一些问题(比如循环加载)。
+上一章介绍了模块的语法，本章介绍如何在浏览器和 Node.js 之中加载 ES6 模块，以及实际开发中经常遇到的一些问题(比如循环加载)。
 
 ## 浏览器加载
 
@@ -105,7 +105,7 @@ const isNotModuleScript = this !== undefined;
 
 ## ES6 模块与 CommonJS 模块的差异
 
-讨论 Node 加载 ES6 模块之前，必须了解 ES6 模块与 CommonJS 模块完全不同。
+讨论 Node.js 加载 ES6 模块之前，必须了解 ES6 模块与 CommonJS 模块完全不同。
 
 它们有两个重大差异。
 
@@ -268,29 +268,29 @@ $ babel-node main.js
 
 这就证明了`x.js`和`y.js`加载的都是`C`的同一个实例。
 
-## Node 加载
+## Node.js 加载
 
 ### 概述
 
-Node 对 ES6 模块的处理比较麻烦，因为它有自己的 CommonJS 模块格式，与 ES6 模块格式是不兼容的。目前的解决方案是，将两者分开，ES6 模块和 CommonJS 采用各自的加载方案。
+Node.js 对 ES6 模块的处理比较麻烦，因为它有自己的 CommonJS 模块格式，与 ES6 模块格式是不兼容的。目前的解决方案是，将两者分开，ES6 模块和 CommonJS 采用各自的加载方案。
 
-Node 要求 ES6 模块采用`.mjs`后缀文件名。也就是说，只要脚本文件里面使用`import`或者`export`命令，那么就必须采用`.mjs`后缀名。`require`命令不能加载`.mjs`文件，会报错，只有`import`命令才可以加载`.mjs`文件。反过来，`.mjs`文件里面也不能使用`require`命令，必须使用`import`。
+Node.js 要求 ES6 模块采用`.mjs`后缀文件名。也就是说，只要脚本文件里面使用`import`或者`export`命令，那么就必须采用`.mjs`后缀名。`require`命令不能加载`.mjs`文件，会报错，只有`import`命令才可以加载`.mjs`文件。反过来，`.mjs`文件里面也不能使用`require`命令，必须使用`import`。
 
-目前，这项功能还在试验阶段。安装 Node v8.5.0 或以上版本，要用`--experimental-modules`参数才能打开该功能。
+目前，这项功能还在试验阶段。安装 Node.js v8.5.0 或以上版本，要用`--experimental-modules`参数才能打开该功能。
 
 ```bash
 node --experimental-modules my-app.mjs
 ```
 
-为了与浏览器的`import`加载规则相同，Node 的`.mjs`文件支持 URL 路径。
+为了与浏览器的`import`加载规则相同，Node.js 的`.mjs`文件支持 URL 路径。
 
 ```js
 import "./foo?query=1"; // 加载 ./foo 传入参数 ?query=1
 ```
 
-上面代码中，脚本路径带有参数`?query=1`，Node 会按 URL 规则解读。同一个脚本只要参数不同，就会被加载多次，并且保存成不同的缓存。由于这个原因，只要文件名中含有`:`、`%`、`#`、`?`等特殊字符，最好对这些字符进行转义。
+上面代码中，脚本路径带有参数`?query=1`，Node.js 会按 URL 规则解读。同一个脚本只要参数不同，就会被加载多次，并且保存成不同的缓存。由于这个原因，只要文件名中含有`:`、`%`、`#`、`?`等特殊字符，最好对这些字符进行转义。
 
-目前，Node 的`import`命令只支持加载本地模块(`file:`协议)，不支持加载远程模块。
+目前，Node.js 的`import`命令只支持加载本地模块(`file:`协议)，不支持加载远程模块。
 
 如果模块名不含路径，那么`import`命令会去`node_modules`目录寻找这个模块。
 
@@ -309,13 +309,13 @@ import "../bar";
 import "/baz";
 ```
 
-如果脚本文件省略了后缀名，比如`import './foo'`，Node 会依次尝试四个后缀名: `./foo.mjs`、`./foo.js`、`./foo.json`、`./foo.node`。如果这些脚本文件都不存在，Node 就会去加载`./foo/package.json`的`main`字段指定的脚本。如果`./foo/package.json`不存在或者没有`main`字段，那么就会依次加载`./foo/index.mjs`、`./foo/index.js`、`./foo/index.json`、`./foo/index.node`。如果以上四个文件还是都不存在，就会抛出错误。
+如果脚本文件省略了后缀名，比如`import './foo'`，Node.js 会依次尝试四个后缀名: `./foo.mjs`、`./foo.js`、`./foo.json`、`./foo.node`。如果这些脚本文件都不存在，Node.js 就会去加载`./foo/package.json`的`main`字段指定的脚本。如果`./foo/package.json`不存在或者没有`main`字段，那么就会依次加载`./foo/index.mjs`、`./foo/index.js`、`./foo/index.json`、`./foo/index.node`。如果以上四个文件还是都不存在，就会抛出错误。
 
-最后，Node 的`import`命令是异步加载，这一点与浏览器的处理方法相同。
+最后，Node.js 的`import`命令是异步加载，这一点与浏览器的处理方法相同。
 
 ### 内部变量
 
-ES6 模块应该是通用的，同一个模块不用修改，就可以用在浏览器环境和服务器环境。为了达到这个目标，Node 规定 ES6 模块之中不能使用 CommonJS 模块的特有的一些内部变量。
+ES6 模块应该是通用的，同一个模块不用修改，就可以用在浏览器环境和服务器环境。为了达到这个目标，Node.js 规定 ES6 模块之中不能使用 CommonJS 模块的特有的一些内部变量。
 
 首先，就是`this`关键字。ES6 模块之中，顶层的`this`指向`undefined`；CommonJS 模块的顶层`this`指向当前模块，这是两者的一个重大差异。
 
@@ -343,7 +343,7 @@ const { __dirname } = expose;
 
 ### ES6 模块加载 CommonJS 模块
 
-CommonJS 模块的输出都定义在`module.exports`这个属性上面。Node 的`import`命令加载 CommonJS 模块，Node 会自动将`module.exports`属性，当作模块的默认输出，即等同于`export default xxx`。
+CommonJS 模块的输出都定义在`module.exports`这个属性上面。Node.js 的`import`命令加载 CommonJS 模块，Node.js 会自动将`module.exports`属性，当作模块的默认输出，即等同于`export default xxx`。
 
 下面是一个 CommonJS 模块。
 
@@ -521,7 +521,7 @@ CommonJS 的一个模块，就是一个脚本文件。`require`命令第一次�
 }
 ```
 
-上面代码就是 Node 内部加载模块后生成的一个对象。该对象的`id`属性是模块名，`exports`属性是模块输出的各个接口，`loaded`属性是一个布尔值，表示该模块的脚本是否执行完毕。其他还有很多属性，这里都省略了。
+上面代码就是 Node.js 内部加载模块后生成的一个对象。该对象的`id`属性是模块名，`exports`属性是模块输出的各个接口，`loaded`属性是一个布尔值，表示该模块的脚本是否执行完毕。其他还有很多属性，这里都省略了。
 
 以后需要用到这个模块的时候，就会到`exports`属性上面取值。即使再次执行`require`命令，也不会再次执行该模块，而是到缓存之中取值。也就是说，CommonJS 模块无论加载多少次，都只会在第一次加载时运行一次，以后再加载，就返回第一次运行的结果，除非手动清除系统缓存。
 
@@ -529,7 +529,7 @@ CommonJS 的一个模块，就是一个脚本文件。`require`命令第一次�
 
 CommonJS 模块的重要特性是加载时执行，即脚本代码在`require`的时候，就会全部执行。一旦出现某个模块被"循环加载"，就只输出已经执行的部分，还未执行的部分不会输出。
 
-让我们来看，Node [官方文档](https://nodejs.org/api/modules.html#modules_cycles)里面的例子。脚本文件`a.js`代码如下。
+让我们来看，Node.js [官方文档](https://nodejs.org/api/modules.html#modules_cycles)里面的例子。脚本文件`a.js`代码如下。
 
 ```js
 exports.done = false;

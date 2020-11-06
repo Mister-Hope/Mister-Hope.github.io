@@ -6,7 +6,7 @@ category: 小程序
 ---
 
 ::: tip
-在开发小程序之前。应当掌握[html 基本元素](../website/html/intro.md)、[布局方式](../website/css/layout.md)、[css](../website/css/intro.md)、[js 基础](../language/js/accidence/readme.md)以及 [ES6](../language/js/es6/readme.md)。
+在开发小程序之前。应当掌握[HTML 基本元素](../website/html/intro.md)、[布局方式](../website/css/layout.md)、[CSS](../website/css/intro.md)、[js 基础](../language/js/accidence/readme.md)以及 [ES6](../language/js/es6/readme.md)。
 :::
 
 <!-- more -->
@@ -87,7 +87,7 @@ category: 小程序
 
 ## 案例
 
-- [Github Repo](https://github.com/Mister-Hope/wxminiappdemo)
+- [GitHub repository](https://github.com/Mister-Hope/wxminiappdemo)
 
 ## Mr.Hope 框架说明
 
@@ -107,7 +107,7 @@ category: 小程序
 
 - [零基础开发小程序](https://www.bilibili.com/video/av22790583/)(比较新的视频，强调总体思想)
 
-- [小程序-从入门到入土](https://www.bilibili.com/video/av11938917)(比较老的视频，针对每个组件或者 api 进行了针对的讲解与示范，但部分内容已经与最新官方文档不符)
+- [小程序-从入门到入土](https://www.bilibili.com/video/av11938917)(比较老的视频，针对每个组件或者 API 进行了针对的讲解与示范，但部分内容已经与最新官方文档不符)
 
 ## 示例代码
 

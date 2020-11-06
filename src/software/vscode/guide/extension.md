@@ -12,9 +12,9 @@ tags:
 ## 查找扩展
 
 1. 在 VS Code 应用商店
-2. 在 VSCode 侧边栏中的 **扩展** 选项卡
-3. 查看扩展建议
-4. 社区策划的扩展列表，例如 awesome-vscode。
+1. 在 VSCode 侧边栏中的 **扩展** 选项卡
+1. 查看扩展建议
+1. 社区策划的扩展列表，例如 awesome-vscode。
 
 ![扩展选项卡](./assets/extension.png)
 
@@ -114,7 +114,7 @@ VS Code 不包含 Git，请自行安装 Git 并添加到 path 以实现版本管
 
 #### Color Info
 
-为 css 颜色详情显示更多信息
+为 CSS 颜色详情显示更多信息
 
 #### Debugger for Chrome
 
@@ -130,23 +130,19 @@ ES6 快速补全，提升代码编写利器
 
 #### IntelliSense for CSS class names in HTML
 
-通过检索 link 的外部 css 提供自动补全 class，当使用 bootstrap 的时候超有用
-
-#### language-stylus
-
-stylus 语言支持
+通过检索 link 的外部 CSS 提供自动补全 class，当使用 bootstrap 的时候超有用
 
 #### Live Server
 
 快速启动本地开发服务器
 
-#### Manta's Stylus Supremacy
+#### Manta’s Stylus Supremacy
 
 Stylus 格式化支持
 
 #### Quokka.js
 
-JavaScript Typescript 及时运行与结果显示
+JavaScript TypeScript 及时运行与结果显示
 
 #### SCSS IntelliSence
 
@@ -232,19 +228,19 @@ Python 格式化、调试支持
 
 为 Markdown 添加表情支持
 
-#### Markdown Preview Github Style
+#### Markdown Preview GitHub Style
 
-为 Markdown 预览应用 Github 风格
+为 Markdown 预览应用 GitHub 风格
 
 #### markdownlint
 
 检查 Markdown 文法错误
 
-### Node
+### Node.js
 
 #### Node.js Modules Intellisense
 
-提供 nodeJS 模块智能提示
+提供 Node.js 模块智能提示
 
 #### npm Intellisense
 
@@ -264,7 +260,7 @@ LaTeX 插件，支持常见功能与编译
 
 #### language-stylus
 
-stylus 格式化，高亮支持
+Stylus 格式化，高亮支持
 
 #### YAML
 

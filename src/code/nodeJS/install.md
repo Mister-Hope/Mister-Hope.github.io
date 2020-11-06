@@ -8,7 +8,7 @@ tags:
   - 安装
 ---
 
-由于 Node.js 平台是在后端运行 JavaScript 代码，所以，必须首先在本机安装 Node 环境。
+由于 Node.js 平台是在后端运行 JavaScript 代码，所以，必须首先在本机安装 Node.js 环境。
 
 <!-- more -->
 
@@ -46,7 +46,7 @@ tags:
 
 在正式开始 Node.js 学习之前，我们先认识一下 npm。
 
-npm 是什么东东? npm 其实是 Node.js 的包管理工具(package manager)。
+Npm 是什么东东? npm 其实是 Node.js 的包管理工具(package manager)。
 
 为啥我们需要一个包管理工具呢? 因为我们在 Node.js 上开发时，会用到很多别人写的 JavaScript 代码。如果我们要使用别人写的某个包，每次都根据名称搜索一下官方网站，下载代码，解压，再使用，非常繁琐。于是一个集中管理的工具应运而生: 大家都把自己开发的模块打包后放到 npm 官网上，如果要使用，直接通过 npm 安装就可以直接用，不用管代码存在哪，应该从哪下载。
 
@@ -78,7 +78,7 @@ where <command> is one of:
 
 ## 墙
 
-大家都知道天朝是有墙的，有的时候，访问国外的 nodeJS 服务器可能会十分缓慢以至于您想把它砸了。
+大家都知道天朝是有墙的，有的时候，访问国外的 Node.js 服务器可能会十分缓慢以至于您想把它砸了。
 
 所以贴心的马云爸爸提供了淘宝镜像，淘宝镜像有一个自己定制的 `cnpm` 工具，服务器在国内，十分快捷。不过大家在使用 `cnpm` 安装模块之后再使用 npm 安装会报错，只能重新删掉 `node_modules` 文件夹重新执行 `npm install` 全新安装才会不报错。
 
@@ -94,4 +94,4 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 ## 小结
 
-请在本机安装 Node.js 环境，并确保 node 和 npm 能正常运行。
+请在本机安装 Node.js 环境，并确保 Node.js 和 npm 能正常运行。

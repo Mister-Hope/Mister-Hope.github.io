@@ -9,7 +9,7 @@ tags:
 
 ## 快速上手
 
-- [Github 介绍](intro.md)
+- [GitHub 介绍](intro.md)
 
 ## 官方文档
 
@@ -26,7 +26,7 @@ tags:
 - [复刻仓库](https://docs.github.com/cn/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
 - [社交化](https://docs.github.com/cn/free-pro-team@latest/github/getting-started-with-github/be-social)
 
-### 了解 Github
+### 了解 GitHub
 
 - [账户类型](https://docs.github.com/cn/free-pro-team@latest/github/getting-started-with-github/types-of-github-accounts)
 - [GitHub 上的访问权限](https://docs.github.com/cn/free-pro-team@latest/github/getting-started-with-github/access-permissions-on-github#%E4%B8%AA%E4%BA%BA%E7%94%A8%E6%88%B7%E5%B8%90%E6%88%B7)
@@ -34,11 +34,11 @@ tags:
 
 ## 生态系统
 
-### Github Cli
+### GitHub Cli
 
 GitHub CLI 是用于在计算机上使用 GitHub 功能的命令行工具。
 
-GitHub CLI 是用于从计算机的命令行使用 GitHub 的开源工具。 从命令行操作时，您可以使用 GitHub CLI 来节省时间并避免切换上下文。
+GitHub CLI 是用于从计算机的命令行使用 GitHub 的开源工具。从命令行操作时，您可以使用 GitHub CLI 来节省时间并避免切换上下文。
 
 您可以将以下 GitHub 功能与 GitHub CLI 结合使用。
 
@@ -53,7 +53,7 @@ GitHub CLI 是用于从计算机的命令行使用 GitHub 的开源工具。 从
 
 GitHub Desktop 使用可视界面扩展并简化您的 Git 和 GitHub 工作流程。
 
-GitHub Desktop 是一种开源工具，可帮助您提高工作效率。 GitHub Desktop 鼓励您和您的团队使用最佳实践协作处理 Git 和 GitHub。
+GitHub Desktop 是一种开源工具，可帮助您提高工作效率。GitHub Desktop 鼓励您和您的团队使用最佳实践协作处理 Git 和 GitHub。
 
 您可以使用 GitHub Desktop 执行许多任务，包括:
 
@@ -70,7 +70,7 @@ GitHub Desktop 是一种开源工具，可帮助您提高工作效率。 GitHub 
 
 手机版 GitHub 目前作为 Android 和 iOS app 提供给 GitHub.com 用户。
 
-手机版 GitHub 为您提供随时随地快速高效使用 GitHub 的方式。 手机版 GitHub 是通过可信的第一方客户端应用程序访问 GitHub 数据的安全可靠方式。
+手机版 GitHub 为您提供随时随地快速高效使用 GitHub 的方式。手机版 GitHub 是通过可信的第一方客户端应用程序访问 GitHub 数据的安全可靠方式。
 
 通过 手机版 GitHub，您可以:
 

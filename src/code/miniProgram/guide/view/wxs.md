@@ -14,7 +14,7 @@ WXS (WeiXin Script) 是小程序的一套脚本语言，结合 WXML，可以构�
 1. WXS 与 JavaScript 是不同的语言，有自己的语法，并不和 JavaScript 一致。
 1. WXS 的运行环境和其他 JavaScript 代码是隔离的，WXS 中不能调用其他 JavaScript 文件中定义的函数，也不能调用小程序提供的 API。
 1. WXS 函数不能作为组件的事件回调。
-1. 由于运行环境的差异，在 iOS 设备上小程序内的 WXS 会比 JavaScript 代码快 2 ~ 20 倍。在 android 设备上二者运行效率无差异。
+1. 由于运行环境的差异，在 iOS 设备上小程序内的 WXS 会比 JavaScript 代码快 2 ~ 20 倍。在 Android 设备上二者运行效率无差异。
 
 <!-- more -->
 

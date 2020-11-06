@@ -7,7 +7,7 @@ tags:
   - 软件
 ---
 
-Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可在您的桌面上运行，并且可用于 Windows，macOS 和 Linux。 它具有对 JavaScript，TypeScript 和 Node.js 的内置支持，并具有丰富的其他语言 (例如 C ++，C＃，Java，Python，PHP，Go) 和运行时 (例如 .NET 和 Unity) 扩展的生态系统。由微软出品，因其开源，可扩展和众多插件成为全球最受欢迎的代码编辑器。
+Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可在您的桌面上运行，并且可用于 Windows，macOS 和 Linux。它具有对 JavaScript，TypeScript 和 Node.js 的内置支持，并具有丰富的其他语言 (例如 C ++，C＃，Java，Python，PHP，Go) 和运行时 (例如 .NET 和 Unity) 扩展的生态系统。由微软出品，因其开源，可扩展和众多插件成为全球最受欢迎的代码编辑器。
 
 ## 特点
 
@@ -47,7 +47,7 @@ Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可�
 
   - [命令行介绍](command.md)
 
-- [VS Code 快捷键](shortcutKey.md)
+- [VS Code 快捷键](shortcut-key.md)
 
 - [VS Code 设置](settings.md)
 

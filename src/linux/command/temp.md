@@ -61,7 +61,7 @@ category: Linux
 
 `chmod` 是权限管理命令 `change the permissions mode of a file` 的缩写。
 
-`u` 代表所有者，`x` 代表执行权限。 `+` 表示增加权限。
+`u` 代表所有者，`x` 代表执行权限。`+` 表示增加权限。
 
 ```bash
 chmod u+x file.sh

@@ -22,14 +22,16 @@ console.log("after setTimeout()");
 
 观察上述代码执行，在 Chrome 的控制台输出可以看到:
 
-    before setTimeout()
-    after setTimeout()
-    (等待1秒后)
-    Done
+```text
+before setTimeout()
+after setTimeout()
+(等待1秒后)
+Done
+```
 
 可见，异步操作会在将来的某个时间点触发一个函数调用。
 
-AJAX 就是典型的异步操作。以上一节的代码为例:
+Ajax 就是典型的异步操作。以上一节的代码为例:
 
 ```js
 request.onreadystatechange = () => {
@@ -39,7 +41,7 @@ request.onreadystatechange = () => {
 };
 ```
 
-把回调函数 `success(request.responseText)` 和 `fail(request.status)` 写到一个 AJAX 操作里很正常，但是不好看，而且不利于代码复用。
+把回调函数 `success(request.responseText)` 和 `fail(request.status)` 写到一个 Ajax 操作里很正常，但是不好看，而且不利于代码复用。
 
 有没有更好的写法? 比如写成这样:
 
@@ -49,7 +51,7 @@ const ajax = ajaxGet("https://...");
 ajax.ifSuccess(success).ifFail(fail);
 ```
 
-这种链式写法的好处在于，先统一执行 AJAX 逻辑，不关心如何处理结果，然后，根据结果是成功还是失败，在将来的某个时候调用`success`函数或`fail`函数。
+这种链式写法的好处在于，先统一执行 Ajax 逻辑，不关心如何处理结果，然后，根据结果是成功还是失败，在将来的某个时候调用`success`函数或`fail`函数。
 
 古人云: “君子一诺千金”，这种“承诺将来会执行”的对象在 JavaScript 中称为 `Promise` 对象。
 
@@ -203,7 +205,7 @@ p.then(multiply)
   });
 ```
 
-`setTimeout`可以看成一个模拟网络等异步执行的函数。现在，我们把上一节的 AJAX 异步执行函数转换为`Promise`对象，看看用`Promise`如何简化异步处理:
+`setTimeout`可以看成一个模拟网络等异步执行的函数。现在，我们把上一节的 Ajax 异步执行函数转换为`Promise`对象，看看用`Promise`如何简化异步处理:
 
 ```js
 "use strict";
@@ -269,6 +271,6 @@ Promise.race([p1, p2]).then(function (result) {
 });
 ```
 
-由于 p1 执行较快，Promise 的 `then()` 将获得结果 `'P1'`。p2 仍在继续执行，但执行结果将被丢弃。
+由于 p1 执行较快，Promise 的 `then()` 将获得结果 `'P1'`，p2 仍在继续执行，但执行结果将被丢弃。
 
 如果我们组合使用 Promise，就可以把很多异步任务以并行和串行的方式组合起来执行。

@@ -78,7 +78,7 @@ const packageOther = require("packageName/other");
 1. 只支持纯 js 包，不支持自定义组件。
 1. 必须有入口文件，即需要保证 package.json 中的 main 字段是指向一个正确的入口，如果 package.json 中没有 main 字段，则以 npm 包根目录下的 index.js 作为入口文件。
 1. 测试、构建相关的依赖请放入 devDependencies 字段中避免被一起打包到小程序包中，这一点和小程序 npm 包的要求相同。
-1. 不支持依赖 c++ addon，不支持依赖 nodejs 的内置库:
+1. 不支持依赖 c++ addon，不支持依赖 Node.js 的内置库:
 
    ```js
    const addon = require("./addon.node"); // 不支持!
@@ -86,7 +86,7 @@ const packageOther = require("packageName/other");
    ```
 
    ::: tip
-   对于一些纯 js 实现的 nodejs 内置库(如 path 模块)，可以通过额外安装其他开发者实现的 npm 包来支持。
+   对于一些纯 js 实现的 Node.js 内置库(如 path 模块)，可以通过额外安装其他开发者实现的 npm 包来支持。
    :::
 
 1. 使用 `require` 依赖的时候下列几种方式也是不允许的:
@@ -115,7 +115,7 @@ const packageOther = require("packageName/other");
 
 1. 构建打包分为两种: 小程序 npm 包会直接拷贝构建文件生成目录下的所有文件到 `miniprogram_npm` 中；其他 npm 包则会从入口 js 文件开始走一遍依赖分析和打包过程(类似 webpack)。
 
-1. 寻找 npm 包的过程和 npm 的实现类似，从依赖 npm 包的文件所在目录开始逐层往外找，直到找到可用的 npm 包或是小程序根目录为止。 下面简单介绍下构建打包前后的目录情况，构建之前的结构:
+1. 寻找 npm 包的过程和 npm 的实现类似，从依赖 npm 包的文件所在目录开始逐层往外找，直到找到可用的 npm 包或是小程序根目录为止。下面简单介绍下构建打包前后的目录情况，构建之前的结构:
 
 ```
 |--node_modules

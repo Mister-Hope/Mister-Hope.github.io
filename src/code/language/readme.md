@@ -10,7 +10,7 @@ category: 教程
 
 - [JavaScript 教程](js/readme.md)
 
-- [Typescript 教程](typescript/readme.md)
+- [TypeScript 教程](typescript/readme.md)
 
 - [Python 教程](python/readme.md) (编写中...)
 

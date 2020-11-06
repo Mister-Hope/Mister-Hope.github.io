@@ -418,7 +418,7 @@ setTimeout(() => {
 
 上面代码中，`someAsyncThing`函数产生的 Promise 对象，内部有语法错误。浏览器运行到这一行，会打印出错误提示`ReferenceError: x is not defined`，但是不会退出进程、终止脚本执行，2 秒之后还是会输出`123`。这就是说，Promise 内部的错误不会影响到 Promise 外部的代码，通俗的说法就是“Promise 会吃掉错误”。
 
-这个脚本放在服务器执行，退出码就是`0`(即表示执行成功)。不过，Node 有一个`unhandledRejection`事件，专门监听未捕获的`reject`错误，上面的脚本会触发这个事件的监听函数，可以在监听函数里面抛出错误。
+这个脚本放在服务器执行，退出码就是`0`(即表示执行成功)。不过，Node.js 有一个`unhandledRejection`事件，专门监听未捕获的`reject`错误，上面的脚本会触发这个事件的监听函数，可以在监听函数里面抛出错误。
 
 ```js
 process.on("unhandledRejection", function (err, p) {
@@ -428,7 +428,7 @@ process.on("unhandledRejection", function (err, p) {
 
 上面代码中，`unhandledRejection`事件的监听函数有两个参数，第一个是错误对象，第二个是报错的 Promise 实例，它可以用来了解发生错误的环境信息。
 
-注意，Node 有计划在未来废除`unhandledRejection`事件。如果 Promise 内部有未捕获的错误，会直接终止进程，并且进程的退出码不为 0。
+注意，Node.js 有计划在未来废除`unhandledRejection`事件。如果 Promise 内部有未捕获的错误，会直接终止进程，并且进程的退出码不为 0。
 
 再看下面的例子。
 
@@ -759,7 +759,7 @@ new Promise((resolve) => resolve("foo"));
 
    如果参数是 Promise 实例，那么`Promise.resolve`将不做任何修改、原封不动地返回这个实例。
 
-2. 参数是一个`thenable`对象
+1. 参数是一个`thenable`对象
 
    `thenable`对象指的是具有`then`方法的对象，比如下面这个对象。
 
@@ -788,7 +788,7 @@ new Promise((resolve) => resolve("foo"));
 
    上面代码中，`thenable`对象的`then`方法执行后，对象`p1`的状态就变为`resolved`，从而立即执行最后那个`then`方法指定的回调函数，输出 42。
 
-3. 参数不是具有`then`方法的对象，或根本就不是对象
+1. 参数不是具有`then`方法的对象，或根本就不是对象
 
    如果参数是一个原始值，或者是一个不具有`then`方法的对象，则`Promise.resolve`方法返回一个新的 Promise 对象，状态为`resolved`。
 
@@ -803,7 +803,7 @@ new Promise((resolve) => resolve("foo"));
 
    上面代码生成一个新的 Promise 对象的实例`p`。由于字符串`Hello`不属于异步操作(判断方法是字符串对象不具有 then 方法)，返回 Promise 实例的状态从一生成就是`resolved`，所以回调函数会立即执行。`Promise.resolve`方法的参数，会同时传给回调函数。
 
-4. 不带有任何参数
+1. 不带有任何参数
 
    `Promise.resolve`方法允许调用时不带参数，直接返回一个`resolved`状态的 Promise 对象。
 
@@ -817,7 +817,7 @@ new Promise((resolve) => resolve("foo"));
    });
    ```
 
-   上面代码的变量`p`就是一个 Promise 对象。
+   上面代码的变量 `p` 就是一个 Promise 对象。
 
    需要注意的是，立即`resolve`的 Promise 对象，是在本轮“事件循环”(event loop)的结束时，而不是在下一轮“事件循环”的开始时。
 

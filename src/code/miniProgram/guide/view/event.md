@@ -315,7 +315,7 @@ Page({
 
 #### touches
 
-touches 是一个数组，每个元素为一个 Touch 对象(canvas 触摸事件中携带的 touches 是 CanvasTouch 数组)。 表示当前停留在屏幕上的触摸点。
+touches 是一个数组，每个元素为一个 Touch 对象(canvas 触摸事件中携带的 touches 是 CanvasTouch 数组)。表示当前停留在屏幕上的触摸点。
 
 Touch 对象
 
@@ -334,7 +334,7 @@ CanvasTouch 对象
 
 #### changedTouches
 
-`changedTouches` 数据格式同 `touches`。 表示有变化的触摸点，如从无变有(`touchstart`)，位置变化(`touchmove`)，从有变无(`touchend`、`touchcancel`)。
+`changedTouches` 数据格式同 `touches`。表示有变化的触摸点，如从无变有(`touchstart`)，位置变化(`touchmove`)，从有变无(`touchend`、`touchcancel`)。
 
 #### detail
 

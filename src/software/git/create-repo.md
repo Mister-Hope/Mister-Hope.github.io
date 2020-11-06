@@ -86,7 +86,7 @@ Git is free software.
 
    执行上面的命令，没有任何显示，这就对了，Unix 的哲学是“没有消息就是好消息”，说明添加成功。
 
-2. 用命令 `git commit` 告诉 Git，把文件提交到仓库:
+1. 用命令 `git commit` 告诉 Git，把文件提交到仓库:
 
    ```sh
    $ git commit -m "wrote a readme file"

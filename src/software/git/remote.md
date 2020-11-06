@@ -180,11 +180,11 @@ git fetch <remote>
 
 这个命令会访问远程仓库，从中拉取所有你还没有的数据。执行完成后，你将会拥有那个远程仓库中所有分支的引用，可以随时合并或查看。
 
-`git fetch origin` 会抓取克隆(或上一次抓取)后新推送的所有工作。 必须注意 `git fetch` 命令只会将数据下载到你的本地仓库——它并不会自动合并或修改你当前的工作。 当准备好时你必须手动将其合并入你的工作。
+`git fetch origin` 会抓取克隆(或上一次抓取)后新推送的所有工作。必须注意 `git fetch` 命令只会将数据下载到你的本地仓库——它并不会自动合并或修改你当前的工作。当准备好时你必须手动将其合并入你的工作。
 
 ## 推送到远程仓库
 
-当你想分享你的项目时，必须将其推送到上游。 这个命令很简单: `git push <remote> <branch>`。 当你
+当你想分享你的项目时，必须将其推送到上游。这个命令很简单: `git push <remote> <branch>`。当你
 想要将 master 分支推送到 origin 服务器时(再次说明，克隆时通常会自动帮你设置好那两个名字)， 那么
 运行这个命令就可以将你所做的备份到服务器:
 
@@ -196,7 +196,7 @@ git push origin master
 
 ## 查看某个远程仓库
 
-如果想要查看某一个远程仓库的更多信息，可以使用 `git remote show <remote>` 命令。 如果想以一个特
+如果想要查看某一个远程仓库的更多信息，可以使用 `git remote show <remote>` 命令。如果想以一个特
 定的缩写名运行这个命令，例如 origin，会得到像下面类似的信息:
 
 ```sh
@@ -218,7 +218,7 @@ master pushes to master (up to date)
 
 ## 远程仓库的重命名与移除
 
-你可以运行 `git remote rename` 来修改一个远程仓库的简写名。 例如，想要将 pb 重命名为 paul，可以用 `git remote rename` 这样做:
+你可以运行 `git remote rename` 来修改一个远程仓库的简写名。例如，想要将 pb 重命名为 paul，可以用 `git remote rename` 这样做:
 
 ```sh
 $ git remote rename pb paul
@@ -227,7 +227,7 @@ origin
 paul
 ```
 
-值得注意的是这同样也会修改你所有远程跟踪的分支名字。 那些过去引用 `pb/master` 的现在会引用 `paul/master`。
+值得注意的是这同样也会修改你所有远程跟踪的分支名字。那些过去引用 `pb/master` 的现在会引用 `paul/master`。
 
 如果因为一些原因想要移除一个远程仓库——你已经从服务器上搬走了或不再想使用某一个特定的镜像了，又或者某一个贡献者不再贡献了——可以使用 `git remote remove` 或 `git remote rm`:
 

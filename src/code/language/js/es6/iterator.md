@@ -350,7 +350,7 @@ while (!$result.done) {
    // first='a'; rest=['b','c'];
    ```
 
-2. 扩展运算符
+1. 扩展运算符
 
    扩展运算符(...)也会调用默认的 Iterator 接口。
 
@@ -373,7 +373,7 @@ while (!$result.done) {
    let arr = [...iterable];
    ```
 
-3. yield\*
+1. yield\*
 
    `yield*`后面跟的是一个可遍历的结构，它会调用该结构的遍历器接口。
 
@@ -394,7 +394,7 @@ while (!$result.done) {
    iterator.next(); // { value: undefined, done: true }
    ```
 
-4. 其他场合
+1. 其他场合
 
    由于数组的遍历会调用遍历器接口，所以任何接受数组作为参数的场合，其实都调用了遍历器接口。下面是一些例子。
 

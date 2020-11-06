@@ -53,7 +53,7 @@ copyrightText: 此部分博客采用 <a href="https://creativecommons.org/licens
 
 - [JavaScript 在线教程](https://wangdoc.com/javascript/)
 
-- [Javascript MDN 教程](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
+- [JavaScript MDN 教程](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
 
 ## 许可协议
 

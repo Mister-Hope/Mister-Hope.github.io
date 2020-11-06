@@ -46,7 +46,7 @@ ES6 规格使用了一些专门的术语，了解这些术语，可以帮助您�
 
 ES6 规格将键值对(key-value map)的数据结构称为 Record，其中的每一组键值对称为 field。这就是说，一个 Record 由多个 field 组成，而每个 field 都包含一个键名(key)和一个键值(value)。
 
-### [[Notation]]
+### \[\[Notation\]\]
 
 ES6 规格大量使用`[[Notation]]`这种书写法，比如`[[Value]]`、`[[Writable]]`、`[[Get]]`、`[[Set]]`等等。它用来指代 field 的键名。
 

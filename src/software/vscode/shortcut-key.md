@@ -146,7 +146,7 @@ tags:
 `Ctrl + Y`: 恢复；
 
 ::: info
-更多请见 [Windows 快捷键介绍](../../code/windows/shortcutKey.md)
+更多请见 [Windows 快捷键介绍](../../code/windows/shortcut-key.md)
 :::
 
 ---

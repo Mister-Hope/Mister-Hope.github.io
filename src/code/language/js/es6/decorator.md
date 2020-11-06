@@ -391,7 +391,7 @@ const wrapped = loggingDecorator(doSomething);
    // true
    ```
 
-2. @readonly
+1. @readonly
 
    `readonly`修饰器使得属性或方法不可写。
 
@@ -408,7 +408,7 @@ const wrapped = loggingDecorator(doSomething);
    // Cannot assign to read only property 'entree' of [object Object]
    ```
 
-3. @override
+1. @override
 
    `override`修饰器检查子类的方法，是否正确覆盖了父类的同名方法，如果不正确会报错。
 
@@ -436,7 +436,7 @@ const wrapped = loggingDecorator(doSomething);
    }
    ```
 
-4. @deprecate (别名@deprecated)\*\*
+1. @deprecate (别名@deprecated)
 
    `deprecate`或`deprecated`修饰器在控制台显示一条警告，表示该方法将废除。
 
@@ -471,9 +471,9 @@ const wrapped = loggingDecorator(doSomething);
    //
    ```
 
-5. @suppressWarnings
+1. @suppressWarnings
 
-   `suppressWarnings`修饰器抑制`deprecated`修饰器导致的`console.warn()`调用。但是，异步代码发出的调用除外。
+   `suppressWarnings` 修饰器抑制 `deprecated` 修饰器导致的 `console.warn()` 调用。但是，异步代码发出的调用除外。
 
    ```js
    import { suppressWarnings } from "core-decorators";
@@ -546,7 +546,7 @@ foo.someMethod();
 foo.anotherMethod();
 ```
 
-以后，只要调用`someMethod`或者`anotherMethod`，就会自动发出一个事件。
+以后，只要调用 `someMethod` 或者 `anotherMethod`，就会自动发出一个事件。
 
 ```bash
 $ bash-node index.js
@@ -561,7 +561,7 @@ $ bash-node index.js
 
 ## Mixin
 
-在修饰器的基础上，可以实现`Mixin`模式。所谓`Mixin`模式，就是对象继承的一种替代方案，中文译为“混入”(mix in)，意为在一个对象之中混入另外一个对象的方法。
+在修饰器的基础上，可以实现 `Mixin` 模式。所谓 `Mixin` 模式，就是对象继承的一种替代方案，中文译为“混入”(mix in)，意为在一个对象之中混入另外一个对象的方法。
 
 请看下面的例子。
 

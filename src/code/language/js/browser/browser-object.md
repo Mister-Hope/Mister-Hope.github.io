@@ -105,7 +105,7 @@ else location.assign("/"); // 设置一个新的 URL 地址
 
 `document` 对象表示当前页面。由于 HTML 在浏览器中以 DOM 形式表示为树形结构，`document` 对象就是整个 DOM 树的根节点。
 
-document 的 title 属性是从 HTML 文档中的 `<title>xxx</title>` 读取的，但是可以动态改变:
+`document` 的 title 属性是从 HTML 文档中的 `<title>xxx</title>` 读取的，但是可以动态改变:
 
 ```js
 "use strict";
@@ -146,12 +146,14 @@ for (let i = 0; i < drinks.length; i++) s = s + drinks[i].innerHTML + ",";
 console.log(s);
 ```
 
-    摩卡
-    热摩卡咖啡
-    酸奶
-    北京老酸奶
-    果汁
-    鲜榨苹果汁
+```text
+摩卡
+热摩卡咖啡
+酸奶
+北京老酸奶
+果汁
+鲜榨苹果汁
+```
 
 `document` 对象还有一个 `cookie` 属性，可以获取当前页面的 Cookie。
 
@@ -185,8 +187,8 @@ document.cookie; // 'v=123; remember=true; prefer=zh'
 
 ## history
 
-history 对象保存了浏览器的历史记录，JavaScript 可以调用 history 对象的 `back()` 或 `forward ()`，相当于用户点击了浏览器的“后退”或“前进”按钮。
+`history` 对象保存了浏览器的历史记录，JavaScript 可以调用 history 对象的 `back()` 或 `forward ()`，相当于用户点击了浏览器的“后退”或“前进”按钮。
 
-这个对象属于历史遗留对象，对于现代 Web 页面来说，由于大量使用 AJAX 和页面交互，简单粗暴地调用 `history.back()` 可能会让用户感到非常愤怒。
+这个对象属于历史遗留对象，对于现代 Web 页面来说，由于大量使用 Ajax 和页面交互，简单粗暴地调用 `history.back()` 可能会让用户感到非常愤怒。
 
 新手开始设计 Web 页面时喜欢在登录页登录成功时调用 `history.back()`，试图回到登录前的页面。这是一种错误的方法。

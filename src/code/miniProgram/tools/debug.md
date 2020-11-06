@@ -124,7 +124,7 @@ Console panel 有两大功能:
 
   - openToolsLog: 打开工具日志目录
 
-  - checkProxy(url): 检查指定 url 的代理使用情况
+  - checkProxy(url): 检查指定 URL 的代理使用情况
 
 ### Sensor panel
 
@@ -158,7 +158,7 @@ Sensor panel 有两大功能:
 
 ![report_mp](https://res.wx.qq.com/wxdoc/dist/assets/img/report_mp.af47c41c.png)
 
-关闭窗口后，配置将全部失效，模拟器不再收到配置并不再触发上报(小程序中使用 wx.reportAnalytics API 进行的数据上报仍会在工具中输出)。 测试成功后，可到小程序后台发布事件配置，即可正式生效收集所定义的事件数据。
+关闭窗口后，配置将全部失效，模拟器不再收到配置并不再触发上报(小程序中使用 wx.reportAnalytics API 进行的数据上报仍会在工具中输出)。测试成功后，可到小程序后台发布事件配置，即可正式生效收集所定义的事件数据。
 
 ## 自动预览
 
@@ -191,7 +191,7 @@ Sensor panel 有两大功能:
 后续可以在小程序后台的运营中心可以利用上传的 Source Map 文件进行错误分析
 
 1. Source Map 文件不计入代码包大小计算。
-1. line sourcemap 不计入代码包大小计算。
+1. line source map 不计入代码包大小计算。
 1. 开发版代码包中由于包含了 .map 文件，实际代码包大小会比体验版和正式版大。
 
 ## 真机调试

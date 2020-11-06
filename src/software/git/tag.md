@@ -198,7 +198,7 @@ To github.com:Hope-Studio/learngit.git
  - [deleted]         v0.9
 ```
 
-要看看是否真的从远程库删除了标签，可以登陆 Github 查看。
+要看看是否真的从远程库删除了标签，可以登陆 GitHub 查看。
 
 ### 管理标签小结
 

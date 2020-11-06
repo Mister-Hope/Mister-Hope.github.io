@@ -13,7 +13,7 @@ tags:
 
 - [添加到 path](add-path.md)
 
-- [Windows 快捷键](shortcutKey.md)
+- [Windows 快捷键](shortcut-key.md)
 
 - [显示隐藏的文件](hidden-file.md)
 

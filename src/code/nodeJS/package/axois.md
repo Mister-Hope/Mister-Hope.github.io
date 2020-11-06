@@ -205,7 +205,7 @@ const instance = axios.create({
 
 ### 实例方法
 
-可用的实例方法在下面列出。 指定的配置将与实例配置合并。
+可用的实例方法在下面列出。指定的配置将与实例配置合并。
 
 - `axios#request(config)`
 - `axios#get(url[, config])`
@@ -434,7 +434,7 @@ instance.defaults.headers.common["Authorization"] = AUTH_TOKEN;
 
 ### 配置优先顺序
 
-Config 将以优先顺序合并。 顺序是在 [lib/defaults.js](https://github.com/axios/axios/blob/master/lib/defaults.js#L28) 中找到的库默认值，然后是实例的 `defaults` 属性，以及 最后是请求的 `config` 参数。 后者将优先于前者。 这是一个例子。
+Config 将以优先顺序合并。顺序是在 [lib/defaults.js](https://github.com/axios/axios/blob/master/lib/defaults.js#L28) 中找到的库默认值，然后是实例的 `defaults` 属性，以及 最后是请求的 `config` 参数。后者将优先于前者。这是一个例子。
 
 ```js
 // Create an instance using the config defaults provided by the library
@@ -595,7 +595,7 @@ cancel();
 
 ## Using application/x-www-form-urlencoded format
 
-默认情况下，axios 将 JavaScript 对象序列化为 `JSON`。 要改为以 `application/x-www-form-urlencoded` 格式发送数据，可以使用以下选项之一。
+默认情况下，axios 将 JavaScript 对象序列化为 `JSON`。要改为以 `application/x-www-form-urlencoded` 格式发送数据，可以使用以下选项之一。
 
 ### 浏览器
 

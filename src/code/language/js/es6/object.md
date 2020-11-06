@@ -464,7 +464,7 @@ Object.assign({ a: "b" }, { [Symbol("c")]: "d" });
 
    上面代码中，源对象`obj1`的`a`属性的值是一个对象，`Object.assign`拷贝得到的是这个对象的引用。这个对象的任何变化，都会反映到目标对象上面。
 
-2. 同名属性的替换
+1. 同名属性的替换
 
    对于这种嵌套的对象，一旦遇到同名属性，`Object.assign`的处理方法是替换，而不是添加。
 
@@ -479,7 +479,7 @@ Object.assign({ a: "b" }, { [Symbol("c")]: "d" });
 
    一些函数库提供`Object.assign`的定制版本(比如 Lodash 的`_.defaultsDeep`方法)，可以得到深拷贝的合并。
 
-3. 数组的处理
+1. 数组的处理
 
    `Object.assign`可以用来处理数组，但是会把数组视为对象。
 
@@ -490,7 +490,7 @@ Object.assign({ a: "b" }, { [Symbol("c")]: "d" });
 
    上面代码中，`Object.assign`把数组视为属性名为 0、1、2 的对象，因此源数组的 0 号属性`4`覆盖了目标数组的 0 号属性`1`。
 
-4. 取值函数的处理
+1. 取值函数的处理
 
    `Object.assign`只能进行值的复制，如果要复制的值是一个取值函数，那么将求值后再复制。
 
@@ -524,7 +524,7 @@ Object.assign({ a: "b" }, { [Symbol("c")]: "d" });
 
    上面方法通过`Object.assign`方法，将`x`属性和`y`属性添加到`Point`类的对象实例。
 
-2. 为对象添加方法
+1. 为对象添加方法
 
    ```js
    Object.assign(SomeClass.prototype, {
@@ -547,7 +547,7 @@ Object.assign({ a: "b" }, { [Symbol("c")]: "d" });
 
    上面代码使用了对象属性的简洁表示法，直接将两个函数放在大括号中，再使用`assign`方法添加到`SomeClass.prototype`之中。
 
-3. 克隆对象
+1. 克隆对象
 
    ```js
    function clone(origin) {
@@ -566,7 +566,7 @@ Object.assign({ a: "b" }, { [Symbol("c")]: "d" });
    }
    ```
 
-4. 合并多个对象
+1. 合并多个对象
 
    将多个对象合并到某个对象。
 
@@ -580,7 +580,7 @@ Object.assign({ a: "b" }, { [Symbol("c")]: "d" });
    const merge = (...sources) => Object.assign({}, ...sources);
    ```
 
-5. 为属性指定默认值
+1. 为属性指定默认值
 
    ```js
    const DEFAULTS = {
@@ -675,19 +675,19 @@ ES6 一共有 5 种方法可以遍历对象的属性。
 
    `for...in`循环遍历对象自身的和继承的可枚举属性(不含 Symbol 属性)。
 
-2. Object.keys(obj)
+1. Object.keys(obj)
 
    `Object.keys`返回一个数组，包括对象自身的(不含继承的)所有可枚举属性(不含 Symbol 属性)的键名。
 
-3. Object.getOwnPropertyNames(obj)
+1. Object.getOwnPropertyNames(obj)
 
    `Object.getOwnPropertyNames`返回一个数组，包含对象自身的所有属性(不含 Symbol 属性，但是包括不可枚举属性)的键名。
 
-4. Object.getOwnPropertySymbols(obj)
+1. Object.getOwnPropertySymbols(obj)
 
    `Object.getOwnPropertySymbols`返回一个数组，包含对象自身的所有 Symbol 属性的键名。
 
-5. Reflect.ownKeys(obj)
+1. Reflect.ownKeys(obj)
 
    `Reflect.ownKeys`返回一个数组，包含对象自身的所有键名，不管键名是 Symbol 或字符串，也不管是否可枚举。
 

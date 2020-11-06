@@ -35,7 +35,7 @@ Mr.Hope 个人推荐 `One Dark Pro` 主题和 `Material Icon Theme` 文件图标
 
 您可以搜索快捷方式并将自己的键绑定添加到 `keybindings.json` 文件中。
 
-有关更多信息，请参见 [快捷键键绑定](shortcutKey.md#快捷键编辑器)。
+有关更多信息，请参见 [快捷键键绑定](shortcut-key.md#快捷键编辑器)。
 
 ## 调整你的设置
 

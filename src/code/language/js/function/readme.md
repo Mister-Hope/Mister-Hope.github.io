@@ -19,13 +19,13 @@ category: JavaScript
 
 - [this 的指向](this.md)
 
-- [箭头函数](arrowFunction.md)
+- [箭头函数](arrow-function.md)
 
 ## 进阶
 
-- [高阶函数](higherOrderFunction.md)
+- [高阶函数](higher-order-function.md)
 
-- [map reduce 与 sort](mapAndReduce.md)
+- [map reduce 与 sort](map-and-reduce.md)
 
 - [闭包](closure.md)
 

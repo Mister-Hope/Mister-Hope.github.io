@@ -5,7 +5,7 @@ icon: ajax
 category: JavaScript
 ---
 
-AJAX 不是 JavaScript 的规范，它只是一个哥们“发明”的缩写: Asynchronous JavaScript and XML，意思就是用 JavaScript 执行异步网络请求。
+Ajax 不是 JavaScript 的规范，它只是一个哥们“发明”的缩写: Asynchronous JavaScript and XML，意思就是用 JavaScript 执行异步网络请求。
 
 <!-- more -->
 
@@ -15,11 +15,11 @@ AJAX 不是 JavaScript 的规范，它只是一个哥们“发明”的缩写: A
 
 如果要让用户留在当前页面中，同时发出新的 HTTP 请求，就必须用 JavaScript 发送这个新请求，接收到数据后，再用 JavaScript 更新页面，这样一来，用户就感觉自己仍然停留在当前页面，但是数据却可以不断地更新。
 
-最早大规模使用 AJAX 的就是 Gmail，Gmail 的页面在首次加载后，剩下的所有数据都依赖于 AJAX 来更新。
+最早大规模使用 Ajax 的就是 Gmail，Gmail 的页面在首次加载后，剩下的所有数据都依赖于 Ajax 来更新。
 
-用 JavaScript 写一个完整的 AJAX 代码并不复杂，但是需要注意: AJAX 请求是异步执行的，也就是说，要通过回调函数获得响应。
+用 JavaScript 写一个完整的 Ajax 代码并不复杂，但是需要注意: Ajax 请求是异步执行的，也就是说，要通过回调函数获得响应。
 
-在现代浏览器上写 AJAX 主要依靠 XMLHttpRequest 对象:
+在现代浏览器上写 Ajax 主要依靠 XMLHttpRequest 对象:
 
 ```js
 "use strict";
@@ -113,7 +113,7 @@ else request = new ActiveXObject('Microsoft.XMLHTTP');
 `XMLHttpRequest` 对象的 `open()` 方法有 3 个参数，第一个参数指定是 GET 还是 POST，第二个参数指定 URL 地址，第三个参数指定是否使用异步，默认是 `true`，所以不用写。
 
 ::: danger
-千万不要把第三个参数指定为 `false`，否则浏览器将停止响应，直到 AJAX 请求完成。如果这个请求耗时 10 秒，那么 10 秒内您会发现浏览器处于“假死”状态。
+千万不要把第三个参数指定为 `false`，否则浏览器将停止响应，直到 Ajax 请求完成。如果这个请求耗时 10 秒，那么 10 秒内您会发现浏览器处于“假死”状态。
 :::
 
 最后调用 `send()` 方法才真正发送请求。GET 请求不需要参数，POST 请求需要把 body 部分以字符串或者 `FormData` 对象传进去。
@@ -122,9 +122,9 @@ else request = new ActiveXObject('Microsoft.XMLHTTP');
 
 上面代码的 URL 使用的是相对路径。如果您把它改为 `'https://www.sina.com.cn/'`，再运行，肯定报错。在 Chrome 的控制台里，还可以看到错误信息。
 
-这是因为浏览器的同源策略导致的。默认情况下，JavaScript 在发送 AJAX 请求时，URL 的域名必须和当前页面完全一致。
+这是因为浏览器的同源策略导致的。默认情况下，JavaScript 在发送 Ajax 请求时，URL 的域名必须和当前页面完全一致。
 
-完全一致的意思是，域名要相同 (www.example.com 和 example.com 不同)，协议要相同 (http 和 https 不同)，端口号要相同(默认是:80 端口，它和 `:8080` 就不同)。有的浏览器口子松一点，允许端口不同，大多数浏览器都会严格遵守这个限制。
+完全一致的意思是，域名要相同 (www.example.com 和 example.com 不同)，协议要相同 (HTTP 和 HTTPS 不同)，端口号要相同(默认是 `:80` 端口，它和 `:8080` 就不同)。有的浏览器口子松一点，允许端口不同，大多数浏览器都会严格遵守这个限制。
 
 那是不是用 JavaScript 无法请求外域(就是其他网站)的 URL 了呢? 方法还是有的，大概有这么几种:
 
@@ -220,7 +220,7 @@ CORS 全称 `Cross-Origin Resource Sharing`，是 HTML5 规范定义的如何跨
 
 如果该 CDN 服务商未正确设置 `Access-Control-Allow-Origin`，那么浏览器无法加载字体资源。
 
-对于 PUT、DELETE 以及其他类型如 `application/json` 的 POST 请求，在发送 AJAX 请求之前，浏览器会先发送一个 `OPTIONS` 请求(称为 preflighted 请求)到这个 URL 上，询问目标服务器是否接受:
+对于 PUT、DELETE 以及其他类型如 `application/json` 的 POST 请求，在发送 Ajax 请求之前，浏览器会先发送一个 `OPTIONS` 请求(称为 preflighted 请求)到这个 URL 上，询问目标服务器是否接受:
 
 ```http
 OPTIONS /path/to/resource HTTP/1.1
@@ -238,7 +238,7 @@ Access-Control-Allow-Methods: POST, GET, PUT, OPTIONS
 Access-Control-Max-Age: 86400
 ```
 
-浏览器确认服务器响应的 `Access-Control-Allow-Methods` 头确实包含将要发送的 AJAX 请求的 Method，才会继续发送 AJAX，否则，抛出一个错误。
+浏览器确认服务器响应的 `Access-Control-Allow-Methods` 头确实包含将要发送的 Ajax 请求的 Method，才会继续发送 AJAX，否则，抛出一个错误。
 
 由于以 POST、PUT 方式传送 JSON 格式的数据在 REST 中很常见，所以要跨域正确处理 POST 和 PUT 请求，服务器端必须正确响应 OPTIONS 请求。
 

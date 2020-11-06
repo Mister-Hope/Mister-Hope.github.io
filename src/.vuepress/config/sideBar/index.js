@@ -12,7 +12,7 @@ module.exports = {
 
     "/code/windows/": [
       "",
-      "shortcutKey",
+      "shortcut-key",
       "hidden-file",
       "add-path",
       "cmd",

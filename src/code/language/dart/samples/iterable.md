@@ -5,7 +5,7 @@ time: 2020-05-30
 category: dart
 ---
 
-本节教您如何使用实现 [Iterable](https://api.dart.dev/stable/dart-core/Iterable-class.html) 类的集合 - 例如 [List](https://api.dart.dev/stable/dart-core/List-class.html) 和 [Set](https://api.dart.dev/stable/dart-core/Set-class.html)。 可迭代对象是各种 Dart 应用程序的基本构建块，即使您没有注意到，您可能已经在使用它们。
+本节教您如何使用实现 [Iterable](https://api.dart.dev/stable/dart-core/Iterable-class.html) 类的集合 - 例如 [List](https://api.dart.dev/stable/dart-core/List-class.html) 和 [Set](https://api.dart.dev/stable/dart-core/Set-class.html)。可迭代对象是各种 Dart 应用程序的基本构建块，即使您没有注意到，您可能已经在使用它们。
 
 本节包含以下内容:
 
@@ -42,7 +42,7 @@ category: dart
 Iterable<int> iterable = [1, 2, 3];
 ```
 
-一个 List 的不同之处 在于，使用 `Iterable`，您不能保证按索引读取元素将是有效的。 `Iterable` 相对 `List`，没有 `[]` 运算符。
+一个 List 的不同之处 在于，使用 `Iterable`，您不能保证按索引读取元素将是有效的。`Iterable` 相对 `List`，没有 `[]` 运算符。
 
 例如，考虑以下代码，该代码无效:
 
@@ -102,7 +102,7 @@ void main() {
 ```
 
 ::: warning
-因为访问 `Iterable` 的最后一个元素需要逐步浏览所有其他元素， 所以 `last` 可能很慢。 使用 `first` 或 `last` 在一个空 `Iterable` 会产生 `StateError`。
+因为访问 `Iterable` 的最后一个元素需要逐步浏览所有其他元素， 所以 `last` 可能很慢。使用 `first` 或 `last` 在一个空 `Iterable` 会产生 `StateError`。
 :::
 
 ### 使用 `firstWhere()`

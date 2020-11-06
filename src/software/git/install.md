@@ -20,31 +20,31 @@ tags:
 
    ![Git 安装示意图1](./assets/install1.png)
 
-2. 按照图示勾选。
+1. 按照图示勾选。
 
    ![Git 安装示意图2](./assets/install2.png)
 
-3. 选择使用 VS Code 作为 git 的默认编辑器。
+1. 选择使用 VS Code 作为 git 的默认编辑器。
 
    ![Git 安装示意图3](./assets/install3.png)
 
-4. 选择第二项。
+1. 选择第二项。
 
    ![Git 安装示意图4](./assets/install4.png)
 
-5. 选择默认选中的第一项。
+1. 选择默认选中的第一项。
 
    ![Git 安装示意图5](./assets/install5.png)
 
-6. 选择最后一项，直接检查与提交换行。
+1. 选择最后一项，直接检查与提交换行。
 
    ![Git 安装示意图6](./assets/install6.png)
 
-7. 选择第二项，使用 Windows 默认的控制台窗口。
+1. 选择第二项，使用 Windows 默认的控制台窗口。
 
    ![Git 安装示意图7](./assets/install7.png)
 
-8. 勾选全部特性，开始安装。
+1. 勾选全部特性，开始安装。
 
    ![Git 安装示意图8](./assets/install8.png)
 
@@ -74,7 +74,7 @@ tags:
    由于 Git 是一个多人协作的版本控制系统，首先你应当设置你的身份。
    :::
 
-2. 创建 SSH Key。打开 Shell (Windows 下打开 cmd)，创建 SSH Key:
+1. 创建 SSH Key。打开 Shell (Windows 下打开 cmd)，创建 SSH Key:
 
    ```bash
    ssh-keygen -t rsa -C "youremail@example.com"
@@ -96,7 +96,7 @@ tags:
    RSA 是一种不对称加密，公钥的加密只能通过私钥解开，反之私钥的加密只能由公钥解开。也就是说当你给别人自己的公钥的时候，他们也无法冒充你。
    :::
 
-3. 打开 [Github](https://github.com) 并选择 "Sign in" 注册自己的账号。
+1. 打开 [Github](https://github.com) 并选择 "Sign in" 注册自己的账号。
 
    ![Github 界面简介](./assets/github.png)
 

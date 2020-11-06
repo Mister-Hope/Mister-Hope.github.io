@@ -57,7 +57,7 @@ const ps = q1.querySelectorAll("div.highlighted > p");
 低版本的 IE < 8 不支持 `querySelector` 和 `querySelectorAll`。IE8 仅有限支持。
 :::
 
-严格地讲，我们这里的 DOM 节点是指 `Element`，但是 DOM 节点实际上是 `Node`，在 HTML 中，Node 包括`Element`、`Comment`、`CDATA_SECTION` 等很多种，以及根节点 `Document` 类型，但是，绝大多数时候我们只关心 `Element`，也就是实际控制页面结构的 `Node`，其他类型的 `Node` 忽略即可。根节点 Document 已经自动绑定为全局变量 `document`。
+严格地讲，我们这里的 DOM 节点是指 `Element`，但是 DOM 节点实际上是 `Node`，在 HTML 中，`Node` 包括 `Element`、`Comment`、`CDATA_SECTION` 等很多种，以及根节点 `Document` 类型，但是，绝大多数时候我们只关心 `Element`，也就是实际控制页面结构的 `Node`，其他类型的 `Node` 忽略即可。根节点 Document 已经自动绑定为全局变量 `document`。
 
 ## 更新 DOM
 

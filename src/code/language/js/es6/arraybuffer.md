@@ -216,7 +216,7 @@ TypedArray 数组提供 9 种构造函数，用来生成相应类型的数组实
 
    如果想从任意字节开始解读`ArrayBuffer`对象，必须使用`DataView`视图，因为 TypedArray 视图只提供 9 种固定的解读格式。
 
-2. TypedArray(length)
+1. TypedArray(length)
 
    视图还可以不通过`ArrayBuffer`对象，直接分配内存而生成。
 
@@ -229,7 +229,7 @@ TypedArray 数组提供 9 种构造函数，用来生成相应类型的数组实
 
    上面代码生成一个 8 个成员的`Float64Array`数组(共 64 字节)，然后依次对每个成员赋值。这时，视图构造函数的参数就是成员的个数。可以看到，视图数组的赋值操作与普通数组的操作毫无两样。
 
-3. TypedArray(typedArray)
+1. TypedArray(typedArray)
 
    TypedArray 数组的构造函数，可以接受另一个 TypedArray 实例作为参数。
 
@@ -265,7 +265,7 @@ TypedArray 数组提供 9 种构造函数，用来生成相应类型的数组实
    y[0]; // 2
    ```
 
-4. TypedArray(arrayLikeObject)
+1. TypedArray(arrayLikeObject)
 
    构造函数的参数也可以是一个普通数组，然后直接生成 TypedArray 实例。
 
@@ -829,9 +829,9 @@ const littleEndian = (function () {
 
 大量的 Web API 用到了`ArrayBuffer`对象和它的视图对象。
 
-### AJAX
+### Ajax
 
-传统上，服务器通过 AJAX 操作只能返回文本数据，即`responseType`属性默认为`text`。`XMLHttpRequest`第二版`XHR2`允许服务器返回二进制数据，这时分成两种情况。如果明确知道返回的二进制数据类型，可以把返回类型(`responseType`)设为`arraybuffer`；如果不知道，就设为`blob`。
+传统上，服务器通过 Ajax 操作只能返回文本数据，即`responseType`属性默认为`text`。`XMLHttpRequest`第二版`XHR2`允许服务器返回二进制数据，这时分成两种情况。如果明确知道返回的二进制数据类型，可以把返回类型(`responseType`)设为`arraybuffer`；如果不知道，就设为`blob`。
 
 ```js
 let xhr = new XMLHttpRequest();
@@ -1063,7 +1063,7 @@ onmessage = function (ev) {
 
 共享内存也可以在 Worker 线程创建，发给主线程。
 
-`SharedArrayBuffer`与`ArrayBuffer`一样，本身是无法读写的，必须在上面建立视图，然后通过视图读写。
+`SharedArrayBuffer` 与 `ArrayBuffer` 一样，本身是无法读写的，必须在上面建立视图，然后通过视图读写。
 
 ```js
 // 分配 10 万个 32 位整数占据的内存空间
@@ -1163,7 +1163,7 @@ Atomics.add(ia, 112, 1); // 正确
 
    上面代码中，主线程的`Atomics.store`向 42 号位置的赋值，一定是早于 37 位置的赋值。只要 37 号位置等于 163，Worker 线程就不会终止循环，而对 37 号位置和 42 号位置的取值，一定是在`Atomics.load`操作之后。
 
-2. Atomics.wait()，Atomics.wake()
+1. Atomics.wait()，Atomics.wake()
 
    使用`while`循环等待主线程的通知，不是很高效，如果用在主线程，就会造成卡顿，`Atomics`对象提供了`wait()`和`wake()`两个方法用于等待通知。这两个方法相当于锁内存，即在一个线程进行操作时，让其他线程休眠(建立锁)，等到操作结束，再唤醒那些休眠的线程(解除锁)。
 
@@ -1198,7 +1198,7 @@ Atomics.add(ia, 112, 1); // 正确
 
    注意，浏览器的主线程有权“拒绝”休眠，这是为了防止用户失去响应。
 
-3. 运算方法
+1. 运算方法
 
    共享内存上面的某些运算是不能被打断的，即不能在运算过程中，让其他线程改写内存上面的值。Atomics 对象提供了一些运算方法，防止数据被改写。
 
@@ -1232,7 +1232,7 @@ Atomics.add(ia, 112, 1); // 正确
 
    `Atomic.xor`用于将`vaule`与`sharedArray[index]`进行位运算`xor`，放入`sharedArray[index]`，并返回旧的值。
 
-4. 其他方法
+1. 其他方法
 
    `Atomics`对象还有以下方法。
 

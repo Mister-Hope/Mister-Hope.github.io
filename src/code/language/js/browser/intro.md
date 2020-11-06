@@ -15,7 +15,7 @@ category: JavaScript
 
 - Chrome: Google 出品的基于 Webkit 内核浏览器，内置了非常强悍的 JavaScript 引擎——V8。由于 Chrome 一经安装就时刻保持自升级，所以不用管它的版本，最新版早就支持 ES6 了；
 
-- Safari: Apple 的 Mac 系统自带的基于 Webkit 内核的浏览器，从 OS X 10.7 Lion 自带的 6.1 版本开始支持 ES6，目前最新的 OS X 10.15 对 ES6 支持已经相当良好；
+- Safari: Apple 的 Mac 系统自带的基于 Webkit 内核的浏览器，从 macOS 10.7 Lion 自带的 6.1 版本开始支持 ES6，目前最新的 macOS 10.15 对 ES6 支持已经相当良好；
 
 - Firefox: Mozilla 自己研制的 Gecko 内核和 JavaScript 引擎 OdinMonkey。早期的 Firefox 按版本发布，后来终于聪明地学习 Chrome 的做法进行自升级，时刻保持最新；
 
@@ -30,5 +30,5 @@ category: JavaScript
 在编写 JavaScript 的时候，就要充分考虑到浏览器的差异，尽量让同一份 JavaScript 代码能运行在不同的浏览器中。
 
 ::: tip
-为了让对新版本语法支持不好的浏览器也能够运行最新的代码，所以诞生了两大著名 Node package —— core-js 和 babel。两者都负责将最新的写法转换到浏览器可以支持的旧语法或提供相应的 pollyfill。
+为了让对新版本语法支持不好的浏览器也能够运行最新的代码，所以诞生了两大著名 Node.js package —— core-js 和 babel。两者都负责将最新的写法转换到浏览器可以支持的旧语法或提供相应的 pollyfill。
 :::

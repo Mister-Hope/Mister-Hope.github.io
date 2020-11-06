@@ -22,5 +22,5 @@ module.exports = [
   },
   "ui",
   "settings",
-  "shortcutKey",
+  "shortcut-key",
 ];

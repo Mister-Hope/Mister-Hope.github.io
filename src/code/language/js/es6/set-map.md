@@ -220,7 +220,7 @@ Set 结构的实例有四个遍历方法，可以用于遍历成员。
    // blue
    ```
 
-2. `forEach()`
+1. `forEach()`
 
    Set 结构的实例与数组一样，也拥有`forEach`方法，用于对每个成员执行某种操作，没有返回值。
 
@@ -236,7 +236,7 @@ Set 结构的实例有四个遍历方法，可以用于遍历成员。
 
    另外，`forEach`方法还可以有第二个参数，表示绑定处理函数内部的`this`对象。
 
-3. 遍历的应用
+1. 遍历的应用
 
    扩展运算符(`...`)内部使用`for...of`循环，所以也可以用于 Set 结构。
 
@@ -578,7 +578,7 @@ Map 结构的实例有以下属性和操作方法。
    map.size; // 2
    ```
 
-2. `set(key, value)`
+1. `set(key, value)`
 
    `set`方法设置键名`key`对应的键值为`value`，然后返回整个 Map 结构。如果`key`已经有值，则键值会被更新，否则就新生成该键。
 
@@ -596,7 +596,7 @@ Map 结构的实例有以下属性和操作方法。
    let map = new Map().set(1, "a").set(2, "b").set(3, "c");
    ```
 
-3. `get(key)`
+1. `get(key)`
 
    `get`方法读取`key`对应的键值，如果找不到`key`，返回`undefined`。
 
@@ -611,7 +611,7 @@ Map 结构的实例有以下属性和操作方法。
    m.get(hello); // Hello ES6!
    ```
 
-4. `has(key)`
+1. `has(key)`
 
    `has`方法返回一个布尔值，表示某个键是否在当前 Map 对象之中。
 
@@ -628,7 +628,7 @@ Map 结构的实例有以下属性和操作方法。
    m.has(undefined); // true
    ```
 
-5. `delete(key)`
+1. `delete(key)`
 
    `delete`方法删除某个键，返回`true`。如果删除失败，返回`false`。
 
@@ -641,7 +641,7 @@ Map 结构的实例有以下属性和操作方法。
    m.has(undefined); // false
    ```
 
-6. `clear()`
+1. `clear()`
 
    `clear`方法清除所有成员，没有返回值。
 
@@ -782,7 +782,7 @@ map.forEach(function (value, key, map) {
    // [ [ true, 7 ], [ { foo: 3 }, [ 'abc' ] ] ]
    ```
 
-2. 数组 转为 Map
+1. 数组 转为 Map
 
    将数组传入 Map 构造函数，就可以转为 Map。
 
@@ -797,7 +797,7 @@ map.forEach(function (value, key, map) {
    // }
    ```
 
-3. Map 转为对象
+1. Map 转为对象
 
    如果所有 Map 的键都是字符串，它可以无损地转为对象。
 
@@ -817,7 +817,7 @@ map.forEach(function (value, key, map) {
 
    如果有非字符串的键名，那么这个键名会被转成字符串，再作为对象的键名。
 
-4. 对象转为 Map
+1. 对象转为 Map
 
    ```js
    function objToStrMap(obj) {
@@ -832,7 +832,7 @@ map.forEach(function (value, key, map) {
    // Map {"yes" => true, "no" => false}
    ```
 
-5. Map 转为 JSON
+1. Map 转为 JSON
 
    Map 转为 JSON 要区分两种情况。一种情况是，Map 的键名都是字符串，这时可以选择转为对象 JSON。
 
@@ -858,7 +858,7 @@ map.forEach(function (value, key, map) {
    // '[[true,7],[{"foo":3},["abc"]]]'
    ```
 
-6. JSON 转为 Map
+1. JSON 转为 Map
 
    JSON 转为 Map，正常情况下，所有键名都是字符串。
 
