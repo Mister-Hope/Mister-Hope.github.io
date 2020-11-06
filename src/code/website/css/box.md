@@ -177,16 +177,12 @@ html {
 
 我们有两个段落。顶部段落 `margin-bottom`为 `50px`。第二段的 `margin-top` 为 `30px`。因为外边距折叠的概念，所以框之间的实际外边距是 `50px`，而不是两个外边距的总和。
 
-HTML:
-
 ```html
 <div class="container">
   <p class="one">I am paragraph one.</p>
   <p class="two">I am paragraph two.</p>
 </div>
 ```
-
-CSS:
 
 ```css
 .one {
@@ -243,15 +239,11 @@ CSS:
 ::: tip 例子
 请自行动手操作。
 
-HTML:
-
 ```html
 <div class="container">
   <div class="box">Change my borders.</div>
 </div>
 ```
-
-CSS:
 
 ```css
 .container {

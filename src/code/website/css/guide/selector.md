@@ -13,16 +13,12 @@ CSS 选择器是 CSS 规则的第一部分。它是元素和其他部分组合�
 
 <!-- more -->
 
-HTML:
-
 ```html
 <img src="/logo.png" alt="logo" style="max-width: 300px" />
 
 <p class="paragraph">Mr.Hope is handsome!</p>
 <p id="par">Mr.Hope is very handsome!</p>
 ```
-
-CSS:
 
 ```css
 p {

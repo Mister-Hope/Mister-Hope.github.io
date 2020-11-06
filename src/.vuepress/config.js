@@ -102,6 +102,10 @@ module.exports = config({
       indexName: "mrhope",
     },
 
+    lastUpdate: {
+      timezone: "Asia/Shanghai",
+    },
+
     pwa: {
       favicon: "/favicon.ico",
       themeColor: "#5c92d1",
@@ -148,15 +152,15 @@ module.exports = config({
             short_name: "分类",
             icons: [
               {
-                src: "/assets/icon/category-monochrome.png",
-                sizes: "192x192",
-                purpose: "monochrome",
-                type: "image/png",
-              },
-              {
                 src: "/assets/icon/category-maskable.png",
                 sizes: "192x192",
                 purpose: "maskable",
+                type: "image/png",
+              },
+              {
+                src: "/assets/icon/category-monochrome.png",
+                sizes: "192x192",
+                purpose: "monochrome",
                 type: "image/png",
               },
             ],
@@ -168,15 +172,15 @@ module.exports = config({
             short_name: "标签",
             icons: [
               {
-                src: "/assets/icon/tag-monochrome.png",
-                sizes: "192x192",
-                purpose: "monochrome",
-                type: "image/png",
-              },
-              {
                 src: "/assets/icon/tag-maskable.png",
                 sizes: "192x192",
                 purpose: "maskable",
+                type: "image/png",
+              },
+              {
+                src: "/assets/icon/tag-monochrome.png",
+                sizes: "192x192",
+                purpose: "monochrome",
                 type: "image/png",
               },
             ],
@@ -188,15 +192,15 @@ module.exports = config({
             short_name: "时间线",
             icons: [
               {
-                src: "/assets/icon/timeline-monochrome.png",
-                sizes: "192x192",
-                purpose: "monochrome",
-                type: "image/png",
-              },
-              {
                 src: "/assets/icon/timeline-maskable.png",
                 sizes: "192x192",
                 purpose: "maskable",
+                type: "image/png",
+              },
+              {
+                src: "/assets/icon/timeline-monochrome.png",
+                sizes: "192x192",
+                purpose: "monochrome",
                 type: "image/png",
               },
             ],
@@ -208,15 +212,15 @@ module.exports = config({
             short_name: "个人介绍",
             icons: [
               {
-                src: "/assets/icon/about-monochrome.png",
-                sizes: "192x192",
-                purpose: "monochrome",
-                type: "image/png",
-              },
-              {
                 src: "/assets/icon/about-maskable.png",
                 sizes: "192x192",
                 purpose: "maskable",
+                type: "image/png",
+              },
+              {
+                src: "/assets/icon/about-monochrome.png",
+                sizes: "192x192",
+                purpose: "monochrome",
                 type: "image/png",
               },
             ],

@@ -28,13 +28,9 @@ Stylesheets cascade(样式表层叠) 决定了 css 规则的顺序很重要。
 ::: tip 例子
 我们有两个关于 `h1` 的规则。这些规则有相同的优先级，顺序在最后的生效，所以 `h1` 最后显示为蓝色。
 
-HTML:
-
 ```html
 <h1>Mr.Hope is handsome!</h1>
 ```
-
-CSS:
 
 ```css
 h1 {
@@ -58,13 +54,9 @@ h1 {
 ::: tip 例子
 下面的 `h1` 会显示红色 (类选择器有更高的优先级，即使元素选择器顺序在它后面)。
 
-HTML:
-
 ```html
 <h1 class="main-heading">Mr.Hope is handsome!</h1>
 ```
-
-CSS:
 
 ```css
 .main-heading {
@@ -102,8 +94,6 @@ body {
 ::: tip 例子
 自己动手试一试
 
-HTML:
-
 ```html
 <ul class="main">
   <li>Item One</li>
@@ -129,8 +119,6 @@ HTML:
   </li>
 </ul>
 ```
-
-CSS:
 
 ```css
 .main {
@@ -167,8 +155,6 @@ CSS 为控制继承提供了四个特殊的通用属性值。每个 css 属性�
 
 CSS 的 shorthand 属性 `all` 可以用于同时将这些继承值中的一个应用于(几乎)所有属性。它的值可以是其中任意一个(`inherit`, `initial`, `unset`, `revert`)。这是一种撤销对样式所做更改的简便方法，以便回到默认状态。
 
-HTML:
-
 ```html
 <blockquote>
   <p>This blockquote is styled</p>
@@ -178,8 +164,6 @@ HTML:
   <p>This blockquote is not styled</p>
 </blockquote>
 ```
-
-CSS:
 
 ```css
 blockquote {
