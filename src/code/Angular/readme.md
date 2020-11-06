@@ -13,7 +13,7 @@ Angular 是 Google 官方在 2016 年 9 月出品的一款框架。
 
 <!-- more -->
 
-::: tip Angular 的优点
+::: info Angular 的优点
 
 1. 零配置 CLI，享受到 webpack 每次升级的好处，但是不用关心任何 webpack config
 1. 官方提供所有的必须组件(http、router、animation、ssr、e2e 等等)，在 2000+ 内部应用测试之后才会发布，基本零 bug，并且保证在未来很多年内一直保证兼容升级

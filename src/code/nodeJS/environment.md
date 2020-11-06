@@ -11,7 +11,7 @@ tags:
 
 <!-- more -->
 
-::: tip
+::: info
 有关 VS Code 使用教程请[访问这里](../../software/vscode/readme.md)
 :::
 

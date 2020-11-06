@@ -13,7 +13,7 @@ category: Python
 
 打开“命令提示符”，就进入到命令行模式，它的提示符类似 `C:\>`:
 
-::: tip
+::: info
 如何打开，请见 [打开命令行](../../../windows/cmd.md)
 :::
 
@@ -37,7 +37,7 @@ category: Python
 
 现在，我们就把上次的 `'hello, world'` 程序用文本编辑器写出来，保存下来。
 
-::: tip 文本编辑器
+::: info 文本编辑器
 关于文本编辑器，请使用 [VS Code](../../../../software/vscode/readme.md)
 :::
 

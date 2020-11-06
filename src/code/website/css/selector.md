@@ -133,7 +133,7 @@ p::first-line {
 
 其他的常见伪元素还有 `::before` `::after` `::fist-letter` `::last-child` 等。
 
-::: tip
+::: info
 关于全部的伪类与伪元素选择器，请见 [菜鸟教程](https://www.runoob.com/cssref/css-selectors.html) 或 [MDN 伪类](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes) [MDN 伪元素](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-elements)。
 :::
 

@@ -45,7 +45,7 @@ const packageOther = require("packageName/other");
 ```
 
 ::: tip
-此处使用 npm 包时如果只引入包名，则默认寻找包名下的`index.js` 文件或者 `index` 组件。
+此处使用 npm 包时如果只引入包名，则默认寻找包名下的 `index.js` 文件或者 `index` 组件。
 :::
 
 ## 发布 npm 包

@@ -31,7 +31,7 @@ yarn add axios
 
 ## 使用
 
-::: tip CommonJS 用法
+::: info CommonJS 用法
 为了在将 CommonJS 导入与``require()` 一起使用时获得 TypeScript 类型(用于智能感知/自动完成)，请使用以下方法:
 
 ```js

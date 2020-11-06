@@ -128,7 +128,7 @@ W·科勒还对这组黑猩猩使用其他工具进行了观察，如利用木�
 
 ![接近性原则](./assets/gestalt-principle-proximity2.jpg)
 
-::: tip 例子
+::: tip 案例
 
 ![App Store](./assets/gestalt-principle-proximity-app-store.jpg)
 
@@ -179,7 +179,7 @@ W·科勒还对这组黑猩猩使用其他工具进行了观察，如利用木�
 
 △ 左图我们不会认为是两个残缺的圆，而是两个相交的圆；中间的 IBM 商标我们之所以能看出来是 IBM，就是因为我们在视觉上看到的不是离散的线条，而是连续的图形；右图我们会看到是向两个方向连续的曲线。
 
-::: tip 例子
+::: tip 案例
 ![股市](./assets/gestalt-principle-continuity-stock.jpg)
 
 每天的股市数据构成走势图，视觉上会跟随曲线方向知道由左向右去看走势
@@ -197,7 +197,7 @@ W·科勒还对这组黑猩猩使用其他工具进行了观察，如利用木�
 
 ![闭合性原则](./assets/gestalt-principle-closure.jpg)
 
-::: tip 例子
+::: tip 案例
 
 ![Apple Music](./assets/gestalt-principle-closure-apple-music.jpg)
 
@@ -218,7 +218,7 @@ W·科勒还对这组黑猩猩使用其他工具进行了观察，如利用木�
 
 ![主体/背景原则](./assets/gestalt-principle-main.jpg)
 
-::: tip 例子
+::: tip 案例
 
 ![豆瓣 FM](./assets/gestalt-principle-main-doubanFM.jpg)
 
@@ -241,7 +241,7 @@ W·科勒还对这组黑猩猩使用其他工具进行了观察，如利用木�
 
 对称的构图是令人满意的，但它们也会变得有点沉闷。在对称的设计中加入不对称的元素可以在给人留下印象的同时吸引注意力。
 
-::: tip 例子
+::: tip 案例
 
 ![Pinterest](./assets/gestalt-principle-simple-pinterest.jpg)
 
@@ -260,7 +260,7 @@ W·科勒还对这组黑猩猩使用其他工具进行了观察，如利用木�
 
 向同一方向移动的元素，我们在处理的过程当中，会默认把它们归为一类。
 
-::: tip 例子
+::: tip 案例
 ![ios 桌面](./assets/gestalt-principle-common-destiny-iOS.jpg)
 
 iPhone 删除应用时候，所有图标都一起晃动起来(意思瑟瑟发抖，不要删我不要删我! )，左上角都有一个删除的按钮，要么删除，要么保留，这就是共同命运原则。
@@ -284,7 +284,7 @@ iPhone 删除应用时候，所有图标都一起晃动起来(意思瑟瑟发抖
 
 独特的外形暗示了它与别的元素有不同的功能
 
-::: tip 例子
+::: tip 案例
 ![淘宝](./assets/gestalt-principle-special-taobao.jpg)
 
 商品详情页有两个重要的操作按钮: 加入购物车、立即购买。为了促使用户尽快购买，给「立即购买」更重的红色以突出它的独特性

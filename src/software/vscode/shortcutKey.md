@@ -127,7 +127,7 @@ tags:
 
 `Ctrl + K Ctrl + /`: 折叠以块注释标记开头的所有区域；
 
-::: tip 官方文档
+::: info 官方文档
 [Windows 下 VSCode 快捷键指南](./assets/vscodeKeyboardShortcutsWindows.pdf) (英文)
 :::
 
@@ -145,7 +145,7 @@ tags:
 
 `Ctrl + Y`: 恢复；
 
-::: tip
+::: info
 更多请见 [Windows 快捷键介绍](../../code/windows/shortcutKey.md)
 :::
 

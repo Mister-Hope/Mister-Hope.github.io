@@ -67,7 +67,7 @@ Vue 在标签名属性用 `v-bind:prop="Javascript表达式"` 的写法、其简
 </block>
 ```
 
-::: tip
+::: info
 更多详情请见 [小程序条件渲染文档](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/conditional.html)
 :::
 
@@ -91,7 +91,7 @@ Vue 在标签名属性用 `v-bind:prop="Javascript表达式"` 的写法、其简
 </div>
 ```
 
-::: tip
+::: info
 更多相关请见 [Vue 条件渲染文档](https://cn.vuejs.org/v2/guide/#%E6%9D%A1%E4%BB%B6%E4%B8%8E%E5%BE%AA%E7%8E%AF)
 :::
 
@@ -115,7 +115,7 @@ Vue 在标签名属性用 `v-bind:prop="Javascript表达式"` 的写法、其简
 <view>5</view>
 ```
 
-::: tip
+::: info
 更多详情请见 [小程序循环渲染文档](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/list.html)
 :::
 
@@ -130,7 +130,7 @@ Vue 在标签名属性用 `v-bind:prop="Javascript表达式"` 的写法、其简
 </div>
 ```
 
-::: tip
+::: info
 更多相关请见 [Vue 循环渲染文档](https://cn.vuejs.org/v2/guide/#%E6%9D%A1%E4%BB%B6%E4%B8%8E%E5%BE%AA%E7%8E%AF)
 :::
 
