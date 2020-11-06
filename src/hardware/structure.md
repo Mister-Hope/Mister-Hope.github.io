@@ -10,7 +10,7 @@ CPU 内部已经含有一些微指令，我们所使用的软件都要经过 CPU
 
 精简指令集，(Reduced Instruction Set Computer, RISC) 的设计中，微指令集较为精简。每个指令的执行时间都很短，完成的动作也很单纯，指令的执行性能较佳；但是若要做复杂的事情，就要由多个指令来完成。常见的 RISC 微指令集 CPU 主要例如甲骨文(Oracle) 公司的 SPARC 系列、IBM 公司的 Power Architecture (包括 PowerPC) 系列、与 ARM 公司(ARM Holdings) 的 ARM CPU 系列等。
 
-在应用方面，SPARC CPU 的电脑常用于学术领域的大型工作站中，包括银行金融体系的主要伺服器也都有这类的电脑架构；至于 PowerPC 架构的应用上，例如索尼(Sony)公司出产的 Play Station 3(PS3)就是使用 PowerPC 架构的 Cell 处理器；那 ARM 的 ARM 呢? 你常使用的各厂牌手机、PDA、导航系统、网络设备(交换器、路由器等)等，几乎都是使用 ARM 架构的 CPU。目前世界上使用范围最广的 CPU 可能就是 ARM 这种架构。
+在应用方面，SPARC CPU 的电脑常用于学术领域的大型工作站中，包括银行金融体系的主要伺服器也都有这类的电脑架构；至于 PowerPC 架构的应用上，例如索尼(Sony)公司出产的 Play Station 3(PS3)就是使用 PowerPC 架构的 Cell 处理器；那 ARM 的 ARM 呢? 您常使用的各厂牌手机、PDA、导航系统、网络设备(交换器、路由器等)等，几乎都是使用 ARM 架构的 CPU。目前世界上使用范围最广的 CPU 可能就是 ARM 这种架构。
 
 ## 复杂指令集
 

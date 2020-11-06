@@ -125,6 +125,10 @@ a:active {
 
 ## 盒模型
 
+::: tip
+您可能需要先查看 [盒模型](box.md) 以理解此部分
+:::
+
 ![盒模型示意图](https://www.runoob.com/wp-content/uploads/2013/08/VlwVi.png)
 
 `margin` 和 `padding` 都可以接受 1 - 4 个参数。其参数默认以 `上` 侧为起始点，按照顺时针排序，即**上右下左**。

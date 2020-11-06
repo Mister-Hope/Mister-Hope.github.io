@@ -129,10 +129,10 @@ An element is:
 
 ### 标签的嵌套
 
-除了并列放置标签以外，标签的内容也可以放置其他标签，这就构成了标签的嵌套。比如你想强调 Mr.Hope 的帅:
+除了并列放置标签以外，标签的内容也可以放置其他标签，这就构成了标签的嵌套。比如您想强调 Mr.Hope 的帅:
 
 ```html
-<p>Mr.Hope is <strong>very<strong> handsome.</p>
+<p>Mr.Hope is <strong>very</strong> handsome.</p>
 ```
 
 > Mr.Hope is **very** handsome.
@@ -158,7 +158,7 @@ An element is:
 2. 属性名称，后面跟着一个等于号。
 3. 一个属性值，由一对引号 `" "` 引起来。
 
-比如 `<img src="./main.jpg" />`，`name` 为 `src`，`value` 是 `./main.jpg`
+比如 `<img src="/logo.png" />`，`attribute` 为 `src`，`value` 是 `/logo.png`
 
 属性值应该始终被包括在引号内。双引号是最常用的，不过使用单引号也没有问题。
 

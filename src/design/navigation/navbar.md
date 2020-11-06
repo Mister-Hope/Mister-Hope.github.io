@@ -62,7 +62,7 @@ iOS 规定导航按钮位置仅能用于放置返回按钮，可以添加一个�
 
 ![iOS 明确地将导航栏与工具栏分离开](./assets/safari.jpg)
 
-在内容控件上 iOS 与 Material Design 也大相径庭，Material Design 不去限制你的内容控件多少，因为它提供了溢出菜单，并可以根据屏宽的变化，自适应释出和收纳溢出菜单中的控件。
+在内容控件上 iOS 与 Material Design 也大相径庭，Material Design 不去限制您的内容控件多少，因为它提供了溢出菜单，并可以根据屏宽的变化，自适应释出和收纳溢出菜单中的控件。
 
 ![安卓动态调整](./assets/android-size-adjust.gif)
 

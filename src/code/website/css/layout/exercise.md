@@ -7,6 +7,10 @@ category: CSS
 copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可证)
 ---
 
+本章包括了一些经典的布局实战案例。
+
+<!-- more -->
+
 ## Flex 布局实战
 
 下面我们将通过骰子，来很好的在实战中展示 Flex 布局的功能与美丽。
@@ -17,7 +21,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 
 ![骰子轴线](./assets/dice-axis.png)
 
-下面，就来看看 Flex 如何实现，从 1 个点到 9 个点的布局。你可以到 [codepen](http://codepen.io/LandonSchropp/pen/KpzzGo) 查看本部分的 Demo。
+下面，就来看看 Flex 如何实现，从 1 个点到 9 个点的布局。您可以到 [codepen](http://codepen.io/LandonSchropp/pen/KpzzGo) 查看本部分的 Demo。
 
 ::: info
 

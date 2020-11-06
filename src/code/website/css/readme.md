@@ -2,7 +2,7 @@
 title: CSS
 icon: css
 time: 2019-09-05
-category: css
+category: CSS
 tags:
   - 介绍
 ---
@@ -15,9 +15,7 @@ CSS 指层叠样式表 (**C**ascading **S**tyle **S**heets)，它负责描述网
 
 <!-- more -->
 
-::: tip
-现在的页面设计趋势趋近于扁平化，无需特别复杂的样式。只需要设置适当的阴影体现出层次感，应用合适的边距，在用户点击时给予适当的视觉反馈，即可制作出有质感的页面。
-:::
+## CSS
 
 - [快速上手](guide/readme.md)
 
@@ -26,17 +24,15 @@ CSS 指层叠样式表 (**C**ascading **S**tyle **S**heets)，它负责描述网
   - [CSS 引入](guide/import.md)
   - [CSS 常用属性介绍](guide/common.md)
   - [CSS 媒体查询](guide/media.md)
+  - [CSS 盒模型](guide/box.md)
 
 - [CSS 布局介绍](layout/readme.md)
 
+  - [CSS 弹性模型](layout/flex.md)
+  - [CSS 布局实战](layout/exercise.md)
+  - [CSS 网格模型](layout/grid.md)
+
 - [CSS 工作原理](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps/CSS%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C)
-
-## CSS 手册
-
-- [W3CSchool 教程](https://www.w3cschool.cn/css/)
-- [W3School 教程](http://www.w3school.com.cn/css/index.asp)
-- [菜鸟教程](https://www.runoob.com/css/css-tutorial.html)
-- [MDN 教程](https://developer.mozilla.org/zh-CN/docs/Web/CSS)
 
 ## CSS3
 
@@ -44,7 +40,22 @@ CSS3 是最新的 CSS 标准，被拆分为"模块"。
 
 模块包括: 选择器、盒模型、背景和边框、文字特效、2D/3D 转换、动画、多列布局、用户界面。
 
-## CSS3 手册
+### 模块介绍
+
+- [CSS 选择器](selector.md)
+- [CSS 盒模型](box.md)
+- [背景与边框](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+
+## 手册
+
+### CSS
+
+- [W3CSchool 教程](https://www.w3cschool.cn/css/)
+- [W3School 教程](http://www.w3school.com.cn/css/index.asp)
+- [菜鸟教程](https://www.runoob.com/css/css-tutorial.html)
+- [MDN 教程](https://developer.mozilla.org/zh-CN/docs/Web/CSS)
+
+### CSS3
 
 - [W3CSchool 教程](https://www.w3cschool.cn/css3/)
 - [W3School 教程](http://www.w3school.com.cn/css3/index.asp)

@@ -30,13 +30,17 @@ breadcrumb: false
 
 ## 代码学习网站
 
-### 大佬网站
+### 优质网站
 
 - [网道](https://wangdoc.com/)
 
 - [廖雪峰的网站](https://www.liaoxuefeng.com/)
 
 - [MDN](https://developer.mozilla.org/zh-CN/)
+
+  ::: info
+  MDN 的中文文档翻译很差，大多都是机翻，十分建议直接阅读英文文档。
+  :::
 
 ### 杂牌网站
 

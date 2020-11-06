@@ -1,4 +1,5 @@
 ---
+title: Github
 icon: github
 time: 2019-11-20
 category: Git
@@ -6,98 +7,78 @@ tags:
   - Github
 ---
 
-# Github 教程
+## 快速上手
 
-## 简介
+- [Github 介绍](intro.md)
 
-### ~~Gayhub~~ Github 是世界上最大的 ~~同性交友~~ 代码托管网站
+## 官方文档
 
-:yum:当然在上面交友也是极好的(这是重点，圈起来要考的:sunglasses:)。
+- [全部文档](https://docs.github.com/cn/free-pro-team@latest/github)
 
-## 基本概念
+### 入门指南
 
-### repository
+- [查看详情](https://docs.github.com/cn/free-pro-team@latest/github/getting-started-with-github)
 
-仓库，简称 **Repo**。一个仓库即是一个项目。仓库是 Github 上的主要内容。每当您新建一个项目并想要在 Github。
+### 快速入门
 
-### Star
+- [设置 Git](https://docs.github.com/cn/free-pro-team@latest/github/getting-started-with-github/set-up-git)
+- [创建仓库](https://docs.github.com/cn/free-pro-team@latest/github/getting-started-with-github/create-a-repo)
+- [复刻仓库](https://docs.github.com/cn/free-pro-team@latest/github/getting-started-with-github/fork-a-repo)
+- [社交化](https://docs.github.com/cn/free-pro-team@latest/github/getting-started-with-github/be-social)
 
-收藏，在每一个仓库主页的上方可以看到 star 按钮。其上的数值为收藏该项目的人数。点击星星即可将当前 repo 收藏到您的账号上。您可以收藏一些您比较喜欢，或者项目对您来说有很大价值的项目。同时，点击数字可以看到哪些人收藏了这个项目。
+### 了解 Github
 
-### fork
+- [账户类型](https://docs.github.com/cn/free-pro-team@latest/github/getting-started-with-github/types-of-github-accounts)
+- [GitHub 上的访问权限](https://docs.github.com/cn/free-pro-team@latest/github/getting-started-with-github/access-permissions-on-github#%E4%B8%AA%E4%BA%BA%E7%94%A8%E6%88%B7%E5%B8%90%E6%88%B7)
+- [GitHub 词汇表](https://docs.github.com/cn/free-pro-team@latest/github/getting-started-with-github/github-glossary)
 
-复制仓库，在每一个仓库主页的上方可以看到 Fork 按钮。点击该按钮的作用是将当前项目复制一份到自己的仓库中，这样，您就可以在此仓库仓库上查看当前、历史的版本，切换分支、或者是随心所欲的进行修改。原项目的新的推送、对历史版本的修改、甚至原作者删除了他的 repo，都不会对您 fork 的项目产生任何影响。
+## 生态系统
 
-### issue
+### Github Cli
 
-问题。这是一个类似讨论区的地方。如果您在使用该项目的过程中遇到了问题，可以在相应项目的 Issue 板块按照项目的要求提出 Issue。在 Issue 中可以汇报一个 bug，或者是提出一个 Feature Request (功能请求)。项目的拥有者会针对您汇报的情况对您做出回复。同时，项目拥有者还可以为此 issue 增加 label (标签)，以帮助项目成员或是项目的其他使用者更好的理解您提出 issue。也可以将您的 issue assign (分派) 给特定的项目成员解决。
+GitHub CLI 是用于在计算机上使用 GitHub 功能的命令行工具。
 
-::: tip
-为了 Github 的友好交流环境，请在汇报 bug 时永远带上 bug 的一个简易的复现流程，可以直接建立一个简单的 bug repo 并把链接放置在您提出的 issue 中。
-:::
+GitHub CLI 是用于从计算机的命令行使用 GitHub 的开源工具。 从命令行操作时，您可以使用 GitHub CLI 来节省时间并避免切换上下文。
 
-### pull request
+您可以将以下 GitHub 功能与 GitHub CLI 结合使用。
 
-发起推送请求，简称 **PR**。如果是您自己的项目，您可以从一个分支向另一个分支发起推送请求。如果您想对别人的(您无权进行推送)项目进行代码的推送请求的化，需要先 fork 这个仓库。在自己 fork 的项目上进行修改，然后提交到自己的项目上，之后，建立一个从自己 repo 到对方 repo 的 PR。如果对方觉得您的新改动很不错，在经过测试或者 review 后就会接受它，这样原有项目就可拥有这些新的代码了.
+- 查看、创建、克隆和复刻仓库
+- 创建、关闭和列出议题和拉取请求
+- 审查、差异和合并拉取请求
+- 创建、编辑、列出和查看 Gist
 
-### watch
+有关 GitHub CLI 用途的更多信息，请参阅 [GitHub CLI 手册](https://cli.github.com/manual)。
 
-关注，在每一个仓库主页的上方可以看到 Watch 按钮。如果您关注了某个项目,那么这个项目有了变化的时候,您就会得到通知.在您点击关注后，您还可以点击下拉列表进一步设置关注级别。您可以选择接受 Release (新发布) 通知，也可以选择 Watching 来监听所有的通知。当您选择 Ignore 的话，即使有人在这个 repo 中 metion (提到) 了您，您也不会得到通知。
+### GitHub Desktop
 
-### review
+GitHub Desktop 使用可视界面扩展并简化您的 Git 和 GitHub 工作流程。
 
-代码确认。当项目收到 PR 时，项目的拥有成员可以对这份 PR 的代码改动进行代码确认，在 Review 的过程中，可以对代码的特定行或特定几行通过 comment(评论) 的方式来提出自己对代码改动的意见。
+GitHub Desktop 是一种开源工具，可帮助您提高工作效率。 GitHub Desktop 鼓励您和您的团队使用最佳实践协作处理 Git 和 GitHub。
 
-## 主页
+您可以使用 GitHub Desktop 执行许多任务，包括:
 
-![个人主页](./assets/mainPage.png)
+- 以交互方式将更改添加到提交中
+- 快速将合作作者提交到提交中
+- 检出具有拉取请求的分支并查看 CI 状态
+- 比较更改的图像
 
-[https://github.com](https://github.com)
+有关 GitHub Desktop 的更多信息，请参阅 GitHub Desktop 文档中的 [安装和配置 GitHub Desktop](https://docs.github.com/cn/free-pro-team@latest/desktop/installing-and-configuring-github-desktop)。
 
-主页，在您登陆后，屏幕的左侧会展示您和您加入团队的项目，以及您的团队详情。中部会显示您关注的项目、人的动态，右侧会根据算法展示一些您可能会感兴趣的 repo。
+### 手机版 GitHub
 
-## 个人主页
+从移动设备对 GitHub 上的工作进行分类、协作和管理。
 
-![个人主页](./assets/personalPage.png)
+手机版 GitHub 目前作为 Android 和 iOS app 提供给 GitHub.com 用户。
 
-**`https://github.com/<您的用户名>`**
+手机版 GitHub 为您提供随时随地快速高效使用 GitHub 的方式。 手机版 GitHub 是通过可信的第一方客户端应用程序访问 GitHub 数据的安全可靠方式。
 
-个人主页会有几个主要面板:
+通过 手机版 GitHub，您可以:
 
-### Overview
+- 管理、分类和清除通知
+- 阅读、审查及协作处理问题和拉取请求
+- 搜索、浏览用户、仓库和组织以及与之交互
+- 当有人提及您的用户名时收到推送通知
 
-个人概览，您可以在上方 pin(固定) 最多六个您想要展示给他人的仓库。
+#### 安装 手机版 GitHub
 
-下方就是您过去一年里向 github 的提交数量分布图，以及您在 github 上的活动比例。
-
-最下方是近几年您在 Github 上的活动记录。
-
-### Repositories
-
-![个人仓库](./assets/personalRepo.png)
-
-仓库列表，该面板会按照最后更新时间的倒序，展示该用户拥有的所有 reo，同时也会在面板上展示项目的 Descript(描述)、Star 数、Fork 数、语言、协议、标签，以及过去一年内项目的 commit 分布数量。这些都能够帮助浏览者在不进入具体仓库页面的情况下大致了解每一个仓库的内容、欢迎程度与维护情况。
-
-### Projects
-
-个人拥有的项目，在管理自己与团队跨 repo 的活动日程时很有用。可以设置涉及到的 repo，提出任务、代办、时间表等。
-
-### Packages
-
-个人在 Github 上拥有的包。目前较少人在 Github 上发布相关的包。
-
-### Stars
-
-和仓库列表完全相同，只不过展示该用户收藏的 repo。
-
-### Followers / Following
-
-关注您的人 / 关注的人。在个人主页的左侧就有 follow 按钮，follow 一个人意味着这个人在 Github 的的活动会出现在 Github 主页的 Activity List 上。
-
-## 仓库主页
-
-![仓库主页](./assets/repo.png)
-
-仓库主页主要显示项目的信息。从左到右的面板依次是: Code(代码)，Issues (问题)、Pull Requests (提交请求)、Actions (自动流程)、 Projects (项目)、 Wiki (项目介绍)、 Security (项目安全)、 Insights (项目数据统计) 与 Settings (项目设置)。
-
-在下方会展示代码文件以及项目说明 README.md 文件。
+要安装 Android 或 iOS 版 手机版 GitHub，请参阅 [手机版 GitHub](https://github.com/mobile)。

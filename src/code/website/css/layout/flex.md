@@ -9,6 +9,8 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 
 Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性。 <MyBadge text="来源: 阮一峰的博客" />
 
+<!-- more -->
+
 ## Flex 布局简介
 
 Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性。
