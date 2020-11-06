@@ -25,7 +25,7 @@ Where signal may be one of the following:
 
 ## Configuration File’s Structure
 
-nginx consists of modules which are controlled by directives specified in the configuration file. Directives are divided into simple directives and block directives. A simple directive consists of the name and parameters separated by spaces and ends with a semicolon (`;`). A block directive has the same structure as a simple directive, but instead of the semicolon it ends with a set of additional instructions surrounded by braces (`{` and `}`). If a block directive can have other directives inside braces, it is called a context (examples: `events`, `http`, `server`, and `location`).
+Nginx consists of modules which are controlled by directives specified in the configuration file. Directives are divided into simple directives and block directives. A simple directive consists of the name and parameters separated by spaces and ends with a semicolon (`;`). A block directive has the same structure as a simple directive, but instead of the semicolon it ends with a set of additional instructions surrounded by braces (`{` and `}`). If a block directive can have other directives inside braces, it is called a context (examples: `events`, `http`, `server`, and `location`).
 
 Directives placed in the configuration file outside of any contexts are considered to be in the main context. The `events` and `http` directives reside in the `main` context, `server` in `http`, and `location` in `server`.
 
@@ -35,7 +35,7 @@ The rest of a line after the `#` sign is considered a comment.
 
 An important web server task is serving out files (such as images or static HTML pages). You will implement an example where, depending on the request, files will be served from different local directories: `/data/www` (which may contain HTML files) and `/data/images` (containing images). This will require editing of the configuration file and setting up of a server block inside the http block with two location blocks.
 
-First, create the `/data/www` directory and put an index.html file with any text content into it and create the `/data/images` directory and place some images in it.
+First, create the `/data/www` directory and put an `index.html` file with any text content into it and create the `/data/images` directory and place some images in it.
 
 Next, open the configuration file. The default configuration file already includes several examples of the server block, mostly commented out. For now comment out all such blocks and start a new server block:
 
@@ -160,7 +160,7 @@ There are many more directives that may be used to further configure a proxy con
 
 ## Setting Up FastCGI Proxying
 
-nginx can be used to route requests to FastCGI servers which run applications built with various frameworks and programming languages such as PHP.
+Nginx can be used to route requests to FastCGI servers which run applications built with various frameworks and programming languages such as PHP.
 
 The most basic nginx configuration to work with a FastCGI server includes using the `fastcgi_pass` directive instead of the `proxy_pass` directive, and `fastcgi_param` directives to set parameters passed to a FastCGI server. Suppose the FastCGI server is accessible on `localhost:9000`. Taking the proxy configuration from the previous section as a basis, replace the `proxy_pass` directive with the fastcgi_pass directive and change the parameter to `localhost:9000`. In PHP, the `SCRIPT_FILENAME` parameter is used for determining the script name, and the `QUERY_STRING` parameter is used to pass request parameters. The resulting configuration would be:
 

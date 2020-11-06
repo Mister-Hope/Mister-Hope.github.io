@@ -262,7 +262,7 @@ Webkit 内核的浏览器，必须加上`-webkit`前缀。
 
 ### flex
 
-flex 属性是 `flex-grow`, `flex-shrink` 和 `flex-basis` 的简写，默认值为 `0 1 auto`。后两个属性可选。
+`flex` 属性是 `flex-grow`, `flex-shrink` 和 `flex-basis` 的简写，默认值为 `0 1 auto`。后两个属性可选。
 
 ```css
 .item {

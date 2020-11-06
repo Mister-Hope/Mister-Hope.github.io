@@ -20,4 +20,4 @@ Vuex 是 Vue 官方出品的状态管理组件，是一个专为 Vue.js 应用�
 
 - [Vuex 教程](https://v1.vuepress.vuejs.org/zh/guide/)
 - [Vuex 配置](https://v1.vuepress.vuejs.org/zh/config/)
-- [Vuex Repo](https://github.com/vuejs/vuepress)
+- [Vuex repository](https://github.com/vuejs/vuepress)

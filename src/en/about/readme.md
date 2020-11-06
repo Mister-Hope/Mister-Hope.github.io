@@ -8,7 +8,7 @@ icon: people
 
 Mr.Hope, male, born in Liaoning Province in 1998, is currently a grade 2016 undergraduate student at Northeast Normal University, marjors in physics.
 
-After enrolling at the university, Mr. Hope has been using his free time to self-study front-end development, server construction, maintenance and other related knowledge, and is committed to serving the NENU students. Mr.Hope also participates in a large number of student work, including serving others in grades, college committees, student unions, and Houpu Good School.
+After enrolling at the university, Mr. Hope has been using his free time to self-study frontend development, server construction, maintenance and other related knowledge, and is committed to serving the NENU students. Mr.Hope also participates in a large number of student work, including serving others in grades, college committees, student unions, and Houpu Good School.
 
 ## Major student cadres experience
 
@@ -46,4 +46,4 @@ Fishing, chess, roundhand, badminton, programming.
 
 ## Skills
 
-Full-stack development, front-end proficient in ES6, ES7 syntax, in-depth understanding of JS operating mechanism and principles, proficient in the use and development of Node, TypeScript and Vue framework; back-end operation and maintenance to understand a wide range of knowledge, Linux command, server common software package Very familiar with configuration and use. Learn about C, C++, and PHP in programming languages. Angular and React frameworks are also used and understood. Slightly involved in Java, Go, Kodin, and Python.
+Full-stack development, frontend proficient in ES6, ES2016 syntax, in-depth understanding of JS operating mechanism and principles, proficient in the use and development of Node, TypeScript and Vue framework; backend operation and maintenance to understand a wide range of knowledge, Linux command, server common software package Very familiar with configuration and use. Learn about C, C++, and PHP in programming languages. Angular and React frameworks are also used and understood. Slightly involved in Java, Go, Kodin, and Python.

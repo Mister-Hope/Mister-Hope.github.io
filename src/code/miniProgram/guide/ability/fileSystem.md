@@ -34,7 +34,7 @@ const fs = wx.getFileSystemManager();
 代码包文件的访问方式是从项目根目录开始写文件路径，不支持相对路径的写法。
 
 ::: warning
-这个和 Node 是不一样的，请特别注意一下。
+这个和 Node.js 是不一样的，请特别注意一下。
 
 如: `/a/b/c`、`a/b/c` 都是合法的，`./a/b/c` `../a/b/c` 则不合法。
 

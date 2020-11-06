@@ -62,7 +62,7 @@ TypeScript 是 JavaScript 的超集，扩展了 JavaScript 的语法，因此现
 
 TypeScript 可处理已有的 JavaScript 代码，并只对其中的 TypeScript 代码进行编译。
 
-## Typescript 官网文档
+## TypeScript 官网文档
 
 - [点击查看官网](http://www.typescriptlang.org/docs/home.html)
 - [点击查看第三方中文文档](https://www.tslang.cn/docs/home.html)

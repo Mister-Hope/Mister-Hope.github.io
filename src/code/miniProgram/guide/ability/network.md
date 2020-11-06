@@ -14,7 +14,7 @@ category: 小程序
 
 服务器域名请在 「小程序后台-设置-开发设置-服务器域名」 中进行配置，配置时需要注意:
 
-- 域名只支持 https (`wx.request`、`wx.uploadFile`、`wx.downloadFile`) 和 wss (`wx.connectSocket`) 协议；
+- 域名只支持 HTTPS (`wx.request`、`wx.uploadFile`、`wx.downloadFile`) 和 wss (`wx.connectSocket`) 协议；
 - 域名不能使用 IP 地址或 localhost；
 - 可以配置端口，如 `https://myserver.com:8080`，但是配置后只能向 `https://myserver.com:8080` 发起请求。
 - 如果不配置端口。如 `https://myserver.com`，那么请求的 URL 中也不能包含端口，甚至是默认的 443 端口也不可以。

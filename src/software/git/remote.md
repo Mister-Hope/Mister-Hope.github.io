@@ -17,7 +17,7 @@ Git 是分布式版本控制系统，同一个 Git 仓库，可以分布到不�
 
 完全可以自己搭建一台运行 Git 的服务器，不过现阶段，为了学 Git 先搭个服务器绝对是小题大作。好在这个世界上有个叫 GitHub 的神奇的网站，从名字就可以看出，这个网站就是提供 Git 仓库托管服务的，所以，只要注册一个 GitHub 账号，就可以免费获得 Git 远程仓库。
 
-在继续阅读后续内容前，请自行注册 Github 账号。由于您的本地 Git 仓库和 Github 仓库之间的传输是通过 SSH 加密的，所以，需要一点设置:
+在继续阅读后续内容前，请自行注册 GitHub 账号。由于您的本地 Git 仓库和 GitHub 仓库之间的传输是通过 SSH 加密的，所以，需要一点设置:
 
 - 第 1 步: 创建 SSH Key。在用户主目录下，看看有没有.ssh 目录，如果有，再看看这个目录下有没有 id_rsa 和 id_rsa.pub 这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开 Shell (Windows 下打开 Git Bash)，创建 SSH Key:
 
@@ -35,33 +35,33 @@ Git 是分布式版本控制系统，同一个 Git 仓库，可以分布到不�
 
   在标题中填写公钥的备注名称，把 id_rsa.pub 文件的内容粘贴到底下的输入框中。
 
-为什么 Github 需要 SSH Key 呢? 因为 Github 需要识别出您推送的提交确实是您推送的，而不是别人冒充的，而 Git 支持 SSH 协议，所以，Github 只要知道了您的公钥，就可以确认只有您自己才能推送。
+为什么 GitHub 需要 SSH Key 呢? 因为 GitHub 需要识别出您推送的提交确实是您推送的，而不是别人冒充的，而 Git 支持 SSH 协议，所以，GitHub 只要知道了您的公钥，就可以确认只有您自己才能推送。
 
-当然，Github 允许您添加多个 Key。假定您有若干电脑，您一会儿在公司提交，一会儿在家里提交，只要把每台电脑的 Key 都添加到 Github，就可以在每台电脑上往 Github 推送了。
+当然，GitHub 允许您添加多个 Key。假定您有若干电脑，您一会儿在公司提交，一会儿在家里提交，只要把每台电脑的 Key 都添加到 Github，就可以在每台电脑上往 GitHub 推送了。
 
-最后友情提示，在 Github 上免费托管的 Git 仓库，任何人都可以看到喔(但只有您自己才能改)。所以，不要把敏感信息放进去。
+最后友情提示，在 GitHub 上免费托管的 Git 仓库，任何人都可以看到喔(但只有您自己才能改)。所以，不要把敏感信息放进去。
 
-如果您不想让别人看到 Git 库，一是让 Github 把公开的仓库变成私有的，这样别人就看不见了(不可读更不可写)。另一个办法是自己动手，搭一个 Git 服务器，因为是您自己的 Git 服务器，所以别人也是看不见的。
+如果您不想让别人看到 Git 库，一是让 GitHub 把公开的仓库变成私有的，这样别人就看不见了(不可读更不可写)。另一个办法是自己动手，搭一个 Git 服务器，因为是您自己的 Git 服务器，所以别人也是看不见的。
 
-确保您拥有一个 Github 账号后，我们就即将开始远程仓库的学习。
+确保您拥有一个 GitHub 账号后，我们就即将开始远程仓库的学习。
 
 ## 添加远程库
 
-现在的情景是，您已经在本地创建了一个 Git 仓库后，又想在 Github 创建一个 Git 仓库，并且让这两个仓库进行远程同步，这样，Github 上的仓库既可以作为备份，又可以让其他人通过该仓库来协作，真是一举多得。
+现在的情景是，您已经在本地创建了一个 Git 仓库后，又想在 GitHub 创建一个 Git 仓库，并且让这两个仓库进行远程同步，这样，GitHub 上的仓库既可以作为备份，又可以让其他人通过该仓库来协作，真是一举多得。
 
 首先，登陆 Github，然后，在右上角找到 “+” 按钮，点击 "New Repository"。
 
 在项目填入 learngit，其他保持默认设置，点击“创建”按钮，就成功地创建了一个新的 Git 仓库:
 
-目前，在 Github 上的这个 learngit 仓库还是空的，Github 告诉我们，可以从这个仓库克隆出新的仓库，也可以把一个已有的本地仓库与之关联，然后，把本地仓库的内容推送到 Github 仓库。
+目前，在 GitHub 上的这个 learngit 仓库还是空的，GitHub 告诉我们，可以从这个仓库克隆出新的仓库，也可以把一个已有的本地仓库与之关联，然后，把本地仓库的内容推送到 GitHub 仓库。
 
-现在，我们根据 Github 的提示，在本地的 learngit 仓库下运行命令:
+现在，我们根据 GitHub 的提示，在本地的 learngit 仓库下运行命令:
 
 ```sh
 git remote add origin git@github.com:Hope-Studio/learngit.git
 ```
 
-请千万注意，把上面的 Hope-Studio 替换成您自己的 Github 账户名，否则，您在本地关联的就是希望工作室的远程库，关联没有问题，但是推送是推不上去的，因为您的 SSH Key 公钥不在希望工作室的账户列表中。
+请千万注意，把上面的 Hope-Studio 替换成您自己的 GitHub 账户名，否则，您在本地关联的就是希望工作室的远程库，关联没有问题，但是推送是推不上去的，因为您的 SSH Key 公钥不在希望工作室的账户列表中。
 
 添加后，远程库的名字就是 `origin`，这是 Git 默认的叫法，也可以改成别的。
 
@@ -84,7 +84,7 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 由于远程库是空的，我们第一次推送 `master` 分支时，加上了 `-u` 参数，Git 不但会把本地的 `master` 分支内容推送的远程新的 `master` 分支，还会把本地的 `master` 分支和远程的 `master` 分支关联起来，在以后的推送或者拉取时就可以简化命令。
 
-推送成功后，可以立刻在 Github 页面中看到远程库的内容已经和本地一模一样:
+推送成功后，可以立刻在 GitHub 页面中看到远程库的内容已经和本地一模一样:
 
 从现在起，只要本地作了提交，就可以通过命令:
 
@@ -96,7 +96,7 @@ git push origin master
 
 ## SSH 警告
 
-当您第一次使用 Git 的 clone 或者 push 命令连接 Github 时，会得到一个警告:
+当您第一次使用 Git 的 clone 或者 push 命令连接 GitHub 时，会得到一个警告:
 
 ```sh
 The authenticity of host 'github.com (xx.xx.xx.xx)' can't be established.
@@ -104,9 +104,9 @@ RSA key fingerprint is xx.xx.xx.xx.xx.
 Are you sure you want to continue connecting (yes/no)?
 ```
 
-这是因为 Git 使用 SSH 连接，而 SSH 连接在第一次验证 Github 服务器的 Key 时，需要您确认 Github 的 Key 的指纹信息是否真的来自 Github 的服务器，输入 `yes` 回车即可。
+这是因为 Git 使用 SSH 连接，而 SSH 连接在第一次验证 GitHub 服务器的 Key 时，需要您确认 GitHub 的 Key 的指纹信息是否真的来自 GitHub 的服务器，输入 `yes` 回车即可。
 
-Git 会输出一个警告，告诉您已经把 Github 的 Key 添加到本机的一个信任列表里了:
+Git 会输出一个警告，告诉您已经把 GitHub 的 Key 添加到本机的一个信任列表里了:
 
 ```md
 Warning: Permanently added 'Github.com' (RSA) to the list of known hosts.
@@ -114,7 +114,7 @@ Warning: Permanently added 'Github.com' (RSA) to the list of known hosts.
 
 这个警告只会出现一次，后面的操作就不会有任何警告了。
 
-如果您实在担心有人冒充 Github 服务器，输入 `yes` 前可以对照 Github 的 RSA Key 的指纹信息是否与 SSH 连接给出的一致。
+如果您实在担心有人冒充 GitHub 服务器，输入 `yes` 前可以对照 GitHub 的 RSA Key 的指纹信息是否与 SSH 连接给出的一致。
 
 ### 关联小结
 
@@ -134,7 +134,7 @@ Warning: Permanently added 'Github.com' (RSA) to the list of known hosts.
 
 首先，登陆 Github，创建一个新的仓库，名字叫 `gitskills`:
 
-我们勾选使用 “readme 初始化项目”，这样 Github 会自动为我们创建一个 README.md 文件。创建完毕后，可以看到 README.md 文件。
+我们勾选使用 “readme 初始化项目”，这样 GitHub 会自动为我们创建一个 README.md 文件。创建完毕后，可以看到 README.md 文件。
 
 现在，远程库已经准备好了，下一步是用命令 `git clone` 克隆一个本地库:
 
@@ -160,9 +160,9 @@ README.md
 
 如果有多个人协作开发，那么每个人各自从远程克隆一份就可以了。
 
-您也许还注意到，Github 给出的地址不止一个，还可以用 [https://github.com/Hope-Studio/gitskills.git](https://github.com/Hope-Studio/gitskills.git) 这样的地址。实际上，Git 支持多种协议，默认的 `git://` 使用 ssh，但也可以使用 https 等其他协议。
+您也许还注意到，GitHub 给出的地址不止一个，还可以用 [https://github.com/Hope-Studio/gitskills.git](https://github.com/Hope-Studio/gitskills.git) 这样的地址。实际上，Git 支持多种协议，默认的 `git://` 使用 ssh，但也可以使用 HTTPS 等其他协议。
 
-使用 https 除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放 http 端口的公司内部就无法使用 ssh 协议而只能用 https。
+使用 HTTPS 除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放 http 端口的公司内部就无法使用 ssh 协议而只能用 https。
 
 ### 克隆小结
 

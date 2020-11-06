@@ -107,7 +107,7 @@ Object object
 | fail     | function | 否   | 接口调用失败的回调函数                         |
 | complete | function | 否   | 接口调用结束的回调函数(调用成功、失败都会执行) |
 
-object.success 回调函数
+Object.success 回调函数
 
 参数
 
@@ -220,7 +220,7 @@ wx.clearStorage();
 
 ## wx.clearStorageSync()
 
-wx.clearStorage 的同步版本
+`wx.clearStorage` 的同步版本
 
 示例代码
 

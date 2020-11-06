@@ -363,6 +363,6 @@ globstar  off
 
 ## 参考链接
 
-- [The Set Builtin](https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html)
+- [The Set built-in](https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html)
 - [Safer bash scripts with 'set -euxo pipefail’](https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail/)
 - [Writing Robust Bash Shell Scripts](http://www.davidpashley.com/articles/writing-robust-shell-scripts/)

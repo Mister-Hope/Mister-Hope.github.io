@@ -96,11 +96,11 @@ tags:
    RSA 是一种不对称加密，公钥的加密只能通过私钥解开，反之私钥的加密只能由公钥解开。也就是说当你给别人自己的公钥的时候，他们也无法冒充你。
    :::
 
-1. 打开 [Github](https://github.com) 并选择 "Sign in" 注册自己的账号。
+1. 打开 [GitHub](https://github.com) 并选择 "Sign in" 注册自己的账号。
 
    ![Github 界面简介](./assets/github.png)
 
-   登陆 Github 后，点击右上角头像，进入设置。
+   登陆 GitHub 后，点击右上角头像，进入设置。
 
    进入 "安全设置" 下的 "SSH 公钥" 界面。
 

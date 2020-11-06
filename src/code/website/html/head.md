@@ -73,8 +73,8 @@ HTML 头部是包含在 `<head>` 元素里面的内容。不像 `<body>` 元素�
 
 页面添加图标的方式有:
 
-1. 将其保存在与网站的索引页面相同的目录中，以.ico 格式保存(大多数浏览器将支持更通用的格式，如.gif 或.png，但使用 ICO 格式将确保它能在如 Internet Explorer 6 一样久远的浏览器显示)
-2. 将以下行添加到 HTML `<head>` 中以引用它
+1. 将其保存在与网站的索引页面相同的目录中，以.ico 格式保存(大多数浏览器将支持更通用的格式，如 .gif 或.png，但使用 ICO 格式将确保它能在如 Internet Explorer 6 一样久远的浏览器显示)
+1. 将以下行添加到 HTML `<head>` 中以引用它
 
    ```html
    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />

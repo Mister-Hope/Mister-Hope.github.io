@@ -150,9 +150,9 @@ const fib = {
 
 用对象的属性来保存状态，相当繁琐。
 
-generator 还有另一个巨大的好处，就是把异步回调代码变成“同步”代码。这个好处要等到后面学了 AJAX 以后才能体会到。
+generator 还有另一个巨大的好处，就是把异步回调代码变成“同步”代码。这个好处要等到后面学了 Ajax 以后才能体会到。
 
-没有 generator 之前的黑暗时代，用 AJAX 时需要这么写代码:
+没有 generator 之前的黑暗时代，用 Ajax 时需要这么写代码:
 
 ```js
 ajax('https://url-1', data1, (err, result) => {
@@ -170,7 +170,7 @@ ajax('https://url-1', data1, (err, result) => {
 
 回调越多，代码越难看。
 
-有了 generator 的美好时代，用 AJAX 时可以这么写:
+有了 generator 的美好时代，用 Ajax 时可以这么写:
 
 ```js
 try {

@@ -5,7 +5,7 @@ tags:
   - TypeScript
 ---
 
-# Typescript 组件 Demo
+# TypeScript 组件 Demo
 
 BaseList.vue 组件:
 

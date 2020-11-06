@@ -108,13 +108,13 @@ Animal.isAnimal(a); // true
 a.isAnimal(a); // TypeError: a.isAnimal is not a function
 ```
 
-## ES7 中类的用法
+## ES2016 中类的用法
 
-ES7 中有一些关于类的提案，TypeScript 也实现了它们，这里做一个简单的介绍。
+ES2016 中有一些关于类的提案，TypeScript 也实现了它们，这里做一个简单的介绍。
 
 ### 实例属性
 
-ES6 中实例的属性只能通过构造函数中的 `this.xxx` 来定义，ES7 提案中可以直接在类里面定义:
+ES6 中实例的属性只能通过构造函数中的 `this.xxx` 来定义，ES2016 提案中可以直接在类里面定义:
 
 ```js
 class Animal {
@@ -131,7 +131,7 @@ console.log(a.name); // Jack
 
 ### 静态属性
 
-ES7 提案中，可以使用 `static` 定义一个静态属性:
+ES2016 提案中，可以使用 `static` 定义一个静态属性:
 
 ```js
 class Animal {

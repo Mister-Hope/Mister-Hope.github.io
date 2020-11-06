@@ -94,5 +94,5 @@ npm run lint
 ```
 
 ::: tip
-执行代码错误提示与修复功能，推荐使用 ESlint + @typescript-eslint/parser 检查。
+执行代码错误提示与修复功能，推荐使用 ESLint + @typescript-eslint/parser 检查。
 :::

@@ -83,7 +83,7 @@ wx.getSystemInfo({
 
 ## Object wx.getSystemInfoSync()
 
-wx.getSystemInfo 的同步版本
+`wx.getSystemInfo` 的同步版本
 
 直接返回异步版本的 `res`
 
@@ -125,7 +125,7 @@ try {
 
 监听向微信后台请求检查更新结果事件。微信在小程序冷启动时自动检查更新，不需由开发者主动触发。
 
-function callback
+Function callback
 
 向微信后台请求检查更新结果事件的回调函数
 

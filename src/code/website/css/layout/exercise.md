@@ -21,7 +21,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 
 ![骰子轴线](./assets/dice-axis.png)
 
-下面，就来看看 Flex 如何实现，从 1 个点到 9 个点的布局。您可以到 [codepen](http://codepen.io/LandonSchropp/pen/KpzzGo) 查看本部分的 Demo。
+下面，就来看看 Flex 如何实现，从 1 个点到 9 个点的布局。您可以到 [CodePen](http://codepen.io/LandonSchropp/pen/KpzzGo) 查看本部分的 Demo。
 
 ::: info
 

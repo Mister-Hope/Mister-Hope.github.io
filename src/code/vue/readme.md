@@ -27,7 +27,7 @@ Vue.js 是世界上主流的渐近式 JavaScript 框架。其生态比较繁荣�
 
 - [Vue 单文件组件说明](vue.md)
 
-- [使用 Typescript 进行 Vue 开发](ts-decorator.md)
+- [使用 TypeScript 进行 Vue 开发](ts-decorator.md)
 
 ## Vue 生态
 
@@ -53,7 +53,7 @@ Vue.js 是世界上主流的渐近式 JavaScript 框架。其生态比较繁荣�
 
 ### 其他 Vue 生态
 
-- [Vuepress](https://vuepress-theme.mrhope.site/basic/vuepress/): 静态站点生成器；
+- [VuePress](https://vuepress-theme.mrhope.site/basic/vuepress/): 静态站点生成器；
 - [Ant Design Vue](https://vue.ant.design/docs/vue/introduce-cn/): 阿里的一套 UI 组件库；
 - [BootstrapVue](https://bootstrap-vue.js.org/)
 

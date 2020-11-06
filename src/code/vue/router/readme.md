@@ -22,4 +22,4 @@ Vue Router 是 Vue 官方出品的路由组件，托管整个 Vue 项目路由�
 
 - [Vue-Router API 参考](https://router.vuejs.org/zh/api/)
 
-- [官方 Repo](https://github.com/vuejs/vue-router)
+- [官方仓库](https://github.com/vuejs/vue-router)

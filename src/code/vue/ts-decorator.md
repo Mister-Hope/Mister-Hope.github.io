@@ -6,7 +6,7 @@ tags:
   - TypeScript
 ---
 
-## 使用 Typescript 进行 Vue 开发
+## 使用 TypeScript 进行 Vue 开发
 
 在使用 `Typescript` 进行 Vue2.X 版本开发时，需要引入 `vue-property-decorator` 这个包进行开发。
 

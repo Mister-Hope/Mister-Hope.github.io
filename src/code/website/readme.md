@@ -8,7 +8,7 @@ tags:
   - 介绍
 ---
 
-网页需要三件套: **HTML**、**css** 和 **js**。
+网页需要三件套: **HTML**、**CSS** 和 **js**。
 
 1. HTML 定义了网页的内容
 2. CSS 描述了网页的样式
@@ -48,17 +48,17 @@ JavaScript 是一种轻量级的编程语言，为可插入 HTML 页面的编程
 
 - [JS 相关](js.md)
 
-### Typescript
+### TypeScript
 
-Typescript 是 Javascript 的一个超集，使得 JS 变成了一种强定义语言。Typescript 由于其诸多优良特性，目前在前端的份额越来越大。
+TypeScript 是 JavaScript 的一个超集，使得 JS 变成了一种强定义语言。TypeScript 由于其诸多优良特性，目前在前端的份额越来越大。
 
-- [Typescript 介绍](../language/typescript/readme.md)
+- [TypeScript 介绍](../language/typescript/readme.md)
 
-## Node
+## Node.js
 
 在深入了解并进行前端开发后，就避不开 Node。
 
-Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，拥有大量的模块。Node 主要以其丰富并及其容易导入的 Node package，以及其方便管理 NPM (Node Package Manager)闻名。
+Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，拥有大量的模块。Node.js 主要以其丰富并及其容易导入的 Node.js package，以及其方便管理 npm (Node.js Package Manager)闻名。
 
 - [查看详情](../nodeJS/readme.md)
 
@@ -81,7 +81,7 @@ jQuery 的优势在于它能够在互联网发展早期兼容各式各样的浏�
 
 Bootstrap 是全球最受欢迎的前端组件库，用于开发响应式布局、移动设备优先的 WEB 项目。
 
-Bootstrap 是一套用于 HTML、CSS 和 JS 开发的开源工具集。利用提供的 sass 变量和大量 mixin、响应式栅格系统、可扩展的预制组件、基于 jQuery 的强大的插件系统，能够快速为您的想法开发出原型或者构建整个 app 。
+Bootstrap 是一套用于 HTML、CSS 和 JS 开发的开源工具集。利用提供的 Sass 变量和大量 mixin、响应式栅格系统、可扩展的预制组件、基于 jQuery 的强大的插件系统，能够快速为您的想法开发出原型或者构建整个 app 。
 
 - [bootstrap 官方文档](https://getbootstrap.com/docs/4.1/getting-started/introduction/)
 
@@ -109,4 +109,4 @@ Vue 与 React、Angular 一起合称前端三大框架。
 
 ## 其他文档
 
-- [Https 介绍](https.md)
+- [HTTPS 介绍](https.md)

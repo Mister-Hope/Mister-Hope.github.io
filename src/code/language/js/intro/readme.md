@@ -15,7 +15,7 @@ JavaScript 也是一种嵌入式 (embedded) 语言。它本身提供的核心语
 
 ## JavaScript 简介
 
-目前，已经嵌入 JavaScript 的宿主环境有多种，最常见的环境就是浏览器，另外还有服务器环境，也就是 Node 项目。
+目前，已经嵌入 JavaScript 的宿主环境有多种，最常见的环境就是浏览器，另外还有服务器环境，也就是 Node.js 项目。
 
 从语法角度看，JavaScript 语言是一种“对象模型”语言。各种宿主环境通过这个模型，描述自己的功能和操作接口，从而通过 JavaScript 控制这些功能。但是，JavaScript 并不是纯粹的“面向对象语言”，还支持其他编程范式(比如函数式编程)。这导致几乎任何一个问题，JavaScript 都有多种解决方法。在根据本博客学习 JavaScript 的过程中，您会诧异于 JavaScript 语法的灵活性。
 
@@ -25,7 +25,7 @@ JavaScript 的核心语法部分相当精简，只包括两个部分: 基本的�
 - DOM 类: 操作网页的各种元素
 - Web 类: 实现互联网的各种功能
 
-如果宿主环境是服务器，则会提供各种操作系统的 API，比如文件操作 API、网络通信 API 等等。这些您都可以在 Node 环境中找到。
+如果宿主环境是服务器，则会提供各种操作系统的 API，比如文件操作 API、网络通信 API 等等。这些您都可以在 Node.js 环境中找到。
 
 ## 学习 JavaScript 的原因
 
@@ -47,9 +47,9 @@ JavaScript 的发明目的，就是作为浏览器的内置脚本语言，为网
 
    随着 HTML5 的出现，浏览器本身的功能越来越强，不再仅仅能浏览网页，而是越来越像一个平台，JavaScript 因此得以调用许多系统功能，比如操作本地文件、操作图片、调用摄像头和麦克风等等。这使得 JavaScript 可以完成许多以前无法想象的事情。
 
-1. Node
+1. Node.js
 
-   Node 项目使得 JavaScript 可以用于开发服务器端的大型项目，网站的前后端都用 JavaScript 开发已经成为了现实。有些嵌入式平台 (Raspberry Pi) 能够安装 Node，于是 JavaScript 就能为这些平台开发应用程序。
+   Node.js 项目使得 JavaScript 可以用于开发服务器端的大型项目，网站的前后端都用 JavaScript 开发已经成为了现实。有些嵌入式平台 (Raspberry Pi) 能够安装 Node，于是 JavaScript 就能为这些平台开发应用程序。
 
 1. 数据库操作
 
@@ -69,7 +69,7 @@ JavaScript 的发明目的，就是作为浏览器的内置脚本语言，为网
 
 1. 跨平台的桌面应用程序
 
-   Chromium OS、Windows 8 等操作系统直接支持 JavaScript 编写应用程序。Mozilla 的 Open Web Apps 项目、Google 的 [Chrome App 项目](http://developer.chrome.com/apps/about_apps)、GitHub 的 [Electron 项目](http://electron.atom.io/)、以及 [TideSDK 项目](http://tidesdk.multipart.net/docs/user-dev/generated/)，都可以用来编写运行于 Windows、Mac OS 和 Android 等多个桌面平台的程序，不依赖浏览器。
+   Chromium OS、Windows 8 等操作系统直接支持 JavaScript 编写应用程序。Mozilla 的 Open Web Apps 项目、Google 的 [Chrome App 项目](http://developer.chrome.com/apps/about_apps)、GitHub 的 [Electron 项目](http://electron.atom.io/)、以及 [TideSDK 项目](http://tidesdk.multipart.net/docs/user-dev/generated/)，都可以用来编写运行于 Windows、macOS 和 Android 等多个桌面平台的程序，不依赖浏览器。
 
 1. 小结
 

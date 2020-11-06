@@ -13,7 +13,7 @@ Vue 文件主要由三部分构成:
 
 - `script` 对应网站的脚本。即 js 部分，默认为 Javascript，可以添加 `lang="ts"` 来指定页面脚本文件为 `Typescript`
 
-- `style` 对应网站的样式，即 css 部分，可以通过添加 `scoped` 属性来指定样式只在当前文件生效。
+- `style` 对应网站的样式，即 CSS 部分，可以通过添加 `scoped` 属性来指定样式只在当前文件生效。
 
 在脚本部分中，如有需要，需要使用 `export default{}` 向外暴露一个对象以供 Router 或其他 Vue 文件引用。
 

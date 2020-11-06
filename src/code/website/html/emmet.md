@@ -110,7 +110,7 @@ Emmet 是一个快速创建 HTML 的方式，如果您想要成为一个高级 W
 
 ## 属性操作
 
-1. id 与 class: 元素与 `id` 属性值之间用 `#` 分隔，与 `class` 属性值之间用 `.` 分隔
+1. ID 与 class: 元素与 `id` 属性值之间用 `#` 分隔，与 `class` 属性值之间用 `.` 分隔
 
    ::: tip 案例
    `div#header+div.page+div#footer.class1.class2.class3`:

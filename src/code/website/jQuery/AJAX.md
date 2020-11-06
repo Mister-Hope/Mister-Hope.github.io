@@ -6,20 +6,20 @@ category: jQuery
 ---
 
 ::: tip 章节过时
-目前，一套代码已经可以在多个浏览器上运行良好了，所以 jQuery 的意义并不大。在 Node 中，我们使用 [axios](../../nodeJS/package/axois.md) 来进行请求。
+目前，一套代码已经可以在多个浏览器上运行良好了，所以 jQuery 的意义并不大。在 Node.js 中，我们使用 [axios](../../nodeJS/package/axois.md) 来进行请求。
 :::
 
 <!-- more -->
 
-用 JavaScript 写 AJAX 前面已经介绍过了，主要问题就是不同浏览器需要写不同代码，并且状态和错误处理写起来很麻烦。
+用 JavaScript 写 Ajax 前面已经介绍过了，主要问题就是不同浏览器需要写不同代码，并且状态和错误处理写起来很麻烦。
 
 用 jQuery 的相关对象来处理 AJAX，不但不需要考虑浏览器问题，代码也能大大简化。
 
-## ajax
+## Ajax
 
-jQuery 在全局对象 jQuery (也就是 `$`) 绑定了 `ajax()` 函数，可以处理 AJAX 请求。`ajax(url, settings)` 函数需要接收一个 URL 和一个可选的 settings 对象，常用的选项如下:
+jQuery 在全局对象 jQuery (也就是 `$`) 绑定了 `ajax()` 函数，可以处理 Ajax 请求。`ajax(url, settings)` 函数需要接收一个 URL 和一个可选的 settings 对象，常用的选项如下:
 
-- async: 是否异步执行 AJAX 请求，默认为 `true`；
+- async: 是否异步执行 Ajax 请求，默认为 `true`；
 
 - method: 发送的 Method，缺省为 `'GET'`，可指定为 `'POST'` 、`'PUT'` 等；
 
@@ -70,7 +70,7 @@ const jqxhr = $.ajax("/api/categories", {
 
 ## get
 
-对常用的 AJAX 操作，jQuery 提供了一些辅助方法。由于 GET 请求最常见，所以 jQuery 提供了 `get()` 方法，可以这么写:
+对常用的 Ajax 操作，jQuery 提供了一些辅助方法。由于 GET 请求最常见，所以 jQuery 提供了 `get()` 方法，可以这么写:
 
 ```js
 const jqxhr = $.get("/path/to/resource", {
@@ -113,8 +113,8 @@ const jqxhr = $.getJSON("/path/to/resource", {
 
 ## 安全限制
 
-jQuery 的 AJAX 完全封装的是 JavaScript 的 AJAX 操作，所以它的安全限制和前面讲的用 JavaScript 写 AJAX 完全一样。
+jQuery 的 Ajax 完全封装的是 JavaScript 的 Ajax 操作，所以它的安全限制和前面讲的用 JavaScript 写 Ajax 完全一样。
 
 如果需要使用 JSONP，可以在 `ajax()` 中设置 `jsonp: 'callback'`，让 jQuery 实现 JSONP 跨域加载数据。
 
-关于跨域的设置请参考浏览器 AJAX 一节中 CORS 的设置。
+关于跨域的设置请参考浏览器 Ajax 一节中 CORS 的设置。

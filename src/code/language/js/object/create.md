@@ -142,7 +142,7 @@ Student.prototype.hello = function () {
 
 在 strict 模式下，`this.name = name` 将报错，因为 `this` 绑定为 `undefined`，在非 `strict` 模式下，`this.name = name` 不报错，因为 `this` 绑定为 `window`，于是无意间创建了全局变量 `name`，并且返回 `undefined`，这个结果更糟糕。
 
-所以，调用构造函数千万不要忘记写 `new`。为了区分普通函数和构造函数，按照约定，构造函数首字母应当大写，而普通函数首字母应当小写，这样，一些语法检查工具如 eslint 将可以帮您检测到漏写的 `new`。
+所以，调用构造函数千万不要忘记写 `new`。为了区分普通函数和构造函数，按照约定，构造函数首字母应当大写，而普通函数首字母应当小写，这样，一些语法检查工具如 ESLint 将可以帮您检测到漏写的 `new`。
 
 最后，我们还可以编写一个 `createStudent()` 函数，在内部封装所有的 `new` 操作。一个常用的编程模式像这样:
 

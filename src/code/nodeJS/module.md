@@ -9,11 +9,11 @@ tags:
 
 在计算机程序的开发过程中，随着程序代码越写越多，在一个文件里代码就会越来越长，越来越不容易维护。
 
-为了编写可维护的代码，我们把很多函数分组，分别放到不同的文件里，这样，每个文件包含的代码就相对较少，很多编程语言都采用这种组织代码的方式。在 Node 环境中，一个`.js`文件就称之为一个模块(module)。
+为了编写可维护的代码，我们把很多函数分组，分别放到不同的文件里，这样，每个文件包含的代码就相对较少，很多编程语言都采用这种组织代码的方式。在 Node.js 环境中，一个`.js`文件就称之为一个模块(module)。
 
 使用模块有什么好处?
 
-最大的好处是大大提高了代码的可维护性。其次，编写代码不必从零开始。当一个模块编写完毕，就可以被其他地方引用。我们在编写程序的时候，也经常引用其他模块，包括 Node 内置的模块和来自第三方的模块。
+最大的好处是大大提高了代码的可维护性。其次，编写代码不必从零开始。当一个模块编写完毕，就可以被其他地方引用。我们在编写程序的时候，也经常引用其他模块，包括 Node.js 内置的模块和来自第三方的模块。
 
 使用模块还可以避免函数名和变量名冲突。相同名字的函数和变量完全可以分别存在不同的模块中，因此，我们自己在编写模块时，不必考虑名字会与其他模块冲突。
 
@@ -50,7 +50,7 @@ const s = "Michael";
 greet(s); // Hello, Michael!
 ```
 
-注意到引入`hello`模块用 Node 提供的`require`函数:
+注意到引入`hello`模块用 Node.js 提供的`require`函数:
 
 ```js
 const greet = require("./hello");
@@ -70,7 +70,7 @@ const greet = require("./hello"); // 不要忘了写相对目录!
 const greet = require("hello");
 ```
 
-则 Node 会依次在内置模块、全局模块和当前模块下查找 hello.js，您很可能会得到一个错误:
+则 Node.js 会依次在内置模块、全局模块和当前模块下查找 hello.js，您很可能会得到一个错误:
 
 ```js
 module.js
@@ -156,11 +156,11 @@ Node.js 加载了 hello.js 后，它可以把代码包装一下，变成这样�
 
 这样一来，原来的全局变量`s`现在变成了匿名函数内部的局部变量。如果 Node.js 继续加载其他模块，这些模块中定义的“全局”变量`s`也互不干扰。
 
-所以，Node 利用 JavaScript 的函数式编程的特性，轻而易举地实现了模块的隔离。
+所以，Node.js 利用 JavaScript 的函数式编程的特性，轻而易举地实现了模块的隔离。
 
 但是，模块的输出`module.exports`怎么实现?
 
-这个也很容易实现，Node 可以先准备一个对象`module`:
+这个也很容易实现，Node.js 可以先准备一个对象`module`:
 
 ```js
 // 准备module对象:
@@ -183,25 +183,25 @@ const exported = load(module);
 save(module, exported);
 ```
 
-可见，变量 module 是 Node 在加载 js 文件前准备的一个变量，并将其传入加载函数，我们在`hello.js`中可以直接使用变量`module`原因就在于它实际上是函数的一个参数:
+可见，变量 module 是 Node.js 在加载 js 文件前准备的一个变量，并将其传入加载函数，我们在`hello.js`中可以直接使用变量`module`原因就在于它实际上是函数的一个参数:
 
 ```js
 module.exports = greet;
 ```
 
-通过把参数`module`传递给`load()`函数，`hello.js`就顺利地把一个变量传递给了 Node 执行环境，Node 会把 module 变量保存到某个地方。
+通过把参数`module`传递给`load()`函数，`hello.js`就顺利地把一个变量传递给了 Node.js 执行环境，Node.js 会把 module 变量保存到某个地方。
 
-由于 Node 保存了所有导入的 module，当我们用`require()`获取 module 时，Node 找到对应的 module，把这个 module 的`exports`变量返回，这样，另一个模块就顺利拿到了模块的输出:
+由于 Node.js 保存了所有导入的 module，当我们用`require()`获取 module 时，Node.js 找到对应的 module，把这个 module 的`exports`变量返回，这样，另一个模块就顺利拿到了模块的输出:
 
 ```js
 const greet = require("./hello");
 ```
 
-以上是 Node 实现 JavaScript 模块的一个简单的原理介绍。
+以上是 Node.js 实现 JavaScript 模块的一个简单的原理介绍。
 
 ## module.exports vs exports
 
-很多时候，您会看到，在 Node 环境中，有两种方法可以在一个模块中输出变量:
+很多时候，您会看到，在 Node.js 环境中，有两种方法可以在一个模块中输出变量:
 
 方法一: 对 module.exports 赋值:
 
@@ -253,9 +253,9 @@ exports = {
 };
 ```
 
-如果您对上面的写法感到十分困惑，不要着急，我们来分析 Node 的加载机制:
+如果您对上面的写法感到十分困惑，不要着急，我们来分析 Node.js 的加载机制:
 
-首先，Node 会把整个待加载的 hello.js 文件放入一个包装函数 load 中执行。在执行这个 load()函数前，Node 准备好了 module 变量:
+首先，Node.js 会把整个待加载的 hello.js 文件放入一个包装函数 load 中执行。在执行这个 load()函数前，Node.js 准备好了 module 变量:
 
 ```js
 const module = {
@@ -277,7 +277,7 @@ const load = function (exports, module) {
 const exported = load(module.exports, module);
 ```
 
-也就是说，默认情况下，Node 准备的`exports`变量和`module.exports`变量实际上是同一个变量，并且初始化为空对象`{}`，于是，我们可以写:
+也就是说，默认情况下，Node.js 准备的`exports`变量和`module.exports`变量实际上是同一个变量，并且初始化为空对象`{}`，于是，我们可以写:
 
 ```js
 exports.foo = function () {
@@ -299,7 +299,7 @@ module.exports.bar = function () {
 };
 ```
 
-换句话说，Node 默认给您准备了一个空对象`{}`，这样您可以直接往里面加东西。
+换句话说，Node.js 默认给您准备了一个空对象`{}`，这样您可以直接往里面加东西。
 
 但是，如果我们要输出的是一个函数或数组，那么，只能给`module.exports`赋值:
 

@@ -31,7 +31,7 @@ tags:
 
 ### Node.js 环境安装
 
-请先安装 Node.js 并将 npm 与 node 添加至 path。
+请先安装 Node.js 并将 npm 与 Node.js 添加至 path。
 
 - [安装 Node.js](../nodeJS/install.md)
 

@@ -634,4 +634,4 @@ Type a character > a
 
 ## 参考链接
 
-- [The Linux Command Line](http://linuxcommand.org/tlcl.php), William Shotts
+- [The Linux command-line](http://linuxcommand.org/tlcl.php), William Shotts
