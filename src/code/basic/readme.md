@@ -17,6 +17,8 @@ category: 基础
 
 - [文件编码](encoding.md)
 
+- [路径](path.md)
+
 - [开发简介](debug.md)
 
 - [许可介绍](license.md)

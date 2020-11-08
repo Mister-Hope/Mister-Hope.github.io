@@ -24,13 +24,13 @@ d:\wwwroot\html\photo\c.html
 d:\wwwroot\html\photo\ours\d.html
 ```
 
-> `D:`与`d:`均可。盘符不分大小写。
+> `D:` 与 `d:` 均可。盘符不分大小写。
 
-一般来说物理路径可用于 Access 数据库或者不通过 WEB 服务器(如: 本地调试)等的情况下。
+一般来说物理路径可用于访问本地文件，即不通过 WEB 服务器(如: 本地调试)等的情况下。
 
 ## 相对路径
 
-相对路径的英文全称是 Relative Path，我们可以从以下三个方面来了解它的用法(以“物理路径”中的位置情况为例):
+相对路径的英文全称是 Relative Path，我们可以从以下三个方面来了解它的用法 (以“物理路径”中的位置情况为例):
 
 - 如何表示同级目录的文件
 
@@ -40,7 +40,7 @@ d:\wwwroot\html\photo\ours\d.html
   <a href="./c.html">同目录下文件间互相链接</a>
   ```
 
-  代码中的 `./` 代表一级上级目录(间隔一个目录)。
+  代码中的 `./` 代表同级目录。
 
   `./`是相对路径，也可以省略不写，省略不写，即直接以文件夹或文件名称开头的路径也是相对路径。
 
@@ -57,20 +57,21 @@ d:\wwwroot\html\photo\ours\d.html
   ```
 
   代码中的 `../` 代表一级上级目录(间隔一个目录)。
+
   需要注意的是: “`../../`”代表二级上级目录(间隔两个目录)，比如 a.html 是 d.html 的前两级目录，同时 d.html 需要链接到 a.html，可以在 d.html 中这样写:
 
   ```html
   <a href="../../a.html">链接到上级目录的上级目录中的文件</a>
   ```
 
-- 如何表示下级目录的文件
+- 如何表示子目录的文件
 
-  b.html 和 c.html 是 a.html 的下级目录中的文件，如果需要在 a.html 中链接到 b.html， 可以在 a.html 中这样写:
+  b.html 和 c.html 是 a.html 的子目录中的文件，如果需要在 a.html 中链接到 b.html， 可以在 a.html 中这样写:
 
   ```html
-  <a href="photo/b.html">链接到下级目录(photo)中的文件</a>
+  <a href="photo/b.html">链接到子目录(photo)中的文件</a>
   如果需要在a.html中链接到d.html，可以在a.html中这样写
-  <a href="photo/ours/d.html">链接到下级目录(photo/ourd/)中的文件</a>
+  <a href="photo/ours/d.html">链接到子目录(photo/ourd/)中的文件</a>
   ```
 
 ## 绝对路径

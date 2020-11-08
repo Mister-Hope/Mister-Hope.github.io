@@ -304,9 +304,9 @@ npm install --save-dev eslint-plugin-react
 ### VS Code 没有显示出 ESLint 的报错
 
 1. 检查「文件 => 首选项 => 设置」中有没有配置正确
-2. 检查必要的 npm 包有没有安装
-3. 检查 `.eslintrc.js` 有没有配置
-4. 检查文件是不是在 `.eslintignore` 中
+1. 检查必要的 npm 包有没有安装
+1. 检查 `.eslintrc.js` 有没有配置
+1. 检查文件是不是在 `.eslintignore` 中
 
 如果以上步骤都不奏效，则可以在「文件 => 首选项 => 设置」中配置 `"eslint.trace.server": "messages"`，按 `Ctrl`+`Shift`+`U` 打开输出面板，然后选择 ESLint 输出，查看具体错误。
 
@@ -334,13 +334,3 @@ npm install --save-dev eslint-plugin-react
 ### 启用了 noUnusedParameters 之后，只使用了第二个参数，但是又必须传入第一个参数，这就会报错了
 
 第一个参数以下划线开头即可，参考 <https://github.com/Microsoft/TypeScript/issues/9458>
-
-### 为什么有的错误 TSLint 可以检查出来，vscode 里的 TSLint 却检查不出来
-
-因为 TSLint 依赖 `tsconfig.json` 获得了类型信息，而 [vscode 里的 TSLint 暂不支持获取类型信息](https://github.com/Microsoft/vscode-tslint/tree/master/tslint#the-tslint-no-unused-variable-rule-doesnt-report-warnings-any-more)，所以 `no-unused-variable` 就失效了。
-
-不仅 `no-unused-variables` 失效了，[TSLint rules](https://palantir.github.io/tslint/rules/) 里面所有标有 `Requires Type Info` 的规则都失效了。
-
-[tslint]: https://palantir.github.io/tslint/
-[eslint]: https://eslint.org/
-[`typescript-eslint-parser`]: https://github.com/eslint/typescript-eslint-parser

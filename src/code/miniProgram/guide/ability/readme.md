@@ -10,6 +10,6 @@ category: 小程序
 
 - [存储](storage.md)
 
-- [文件系统](fileSystem.md)
+- [文件系统](file-system.md)
 
 - [调试](debug.md)

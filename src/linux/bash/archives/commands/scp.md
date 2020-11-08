@@ -42,7 +42,7 @@
    $ scp -r localmachine/path_to_the_directory/* username@server_ip:/path_to_remote_directory/
    ```
 
-2. **远程文件复制到本地**
+1. **远程文件复制到本地**
 
    从远程主机复制文件到本地的语法如下。
 
@@ -65,7 +65,7 @@
    $ scp -r user@host:directory/SourceFolder TargetFolder
    ```
 
-3. **两个远程系统之间的复制**
+1. **两个远程系统之间的复制**
 
    本机发出指令，从远程主机 A 拷贝到远程主机 B 的语法如下。
 

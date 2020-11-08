@@ -29,7 +29,7 @@ TypeScript 除了实现了所有 ES6 中的类的功能以外，还添加了一�
 
 ## ES6 中类的用法
 
-下面我们先回顾一下 ES6 中类的用法，更详细的介绍可以参考 [ECMAScript 6 入门 - Class]。
+下面我们先回顾一下 ES6 中类的用法，更详细的介绍可以参考 [ECMAScript 6 入门 - Class][]。
 
 ### 属性和方法
 
@@ -369,6 +369,6 @@ console.log(a.sayHi()); // My name is Jack
 ## 参考
 
 - [Classes](http://www.typescriptlang.org/docs/handbook/classes.html)([中文版](https://zhongsp.gitbooks.io/typescript-handbook/content/doc/handbook/Classes.html))
-- [ECMAScript 6 入门 - Class]
+- [ECMAScript 6 入门 - Class][]
 
 [ecmascript 6 入门 - class]: http://es6.ruanyifeng.com/#docs/class

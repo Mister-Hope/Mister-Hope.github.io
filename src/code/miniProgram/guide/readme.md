@@ -7,7 +7,7 @@ category: 小程序
 
 ## 目录
 
-- [文件结构](fileStructure.md)
+- [文件结构](file-structure.md)
 
 - [运行环境](env.md)
 
@@ -51,6 +51,6 @@ category: 小程序
 
   - [存储](ability/storage.md)
 
-  - [文件系统](ability/fileSystem.md)
+  - [文件系统](ability/file-system.md)
 
   - [调试](debug.md)

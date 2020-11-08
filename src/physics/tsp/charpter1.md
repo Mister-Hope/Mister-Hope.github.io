@@ -58,11 +58,11 @@ $$(p + \frac{an^2}{V^2})(V - nb) = nRT$$
 
 1. 由理想气体的物态方程推导出理想气体的 $\alpha$, $\beta$, $\kappa _T$。
 
-2. 证明物态关系满足
+1. 证明物态关系满足
 
    $$ln V = \int(\alpha dT - \kappa _Tdp)$$
 
-3. 如果认为固体和液体在一定范围内可以把 $\alpha$ 和 $\kappa _T$ 视为常量，则有:
+1. 如果认为固体和液体在一定范围内可以把 $\alpha$ 和 $\kappa _T$ 视为常量，则有:
 
    $$V(T, p) - V_0 (T_0, 0) [1+ \alpha (T - T_0)-\kappa_Tp]$$
 

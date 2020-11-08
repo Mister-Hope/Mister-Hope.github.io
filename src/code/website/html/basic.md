@@ -160,7 +160,7 @@ tags:
 
 I am glad you weren’t late.
 
-I am _glad_ you weren’t _late_.
+I am *glad* you weren’t *late*.
 
 第一句话听起来真的像松了一口气因为没有迟到。相反，第二句话听起来具有讽刺性而且有隐含的攻击性，表达对一个人迟到的恼怒。
 

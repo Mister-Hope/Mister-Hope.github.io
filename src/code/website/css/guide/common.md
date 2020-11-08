@@ -51,7 +51,7 @@ p.normal {
 
    :::
 
-2. RGB 与 RGBA 表示方法
+1. RGB 与 RGBA 表示方法
 
    **格式:**  
    RGB(R,G,B)  

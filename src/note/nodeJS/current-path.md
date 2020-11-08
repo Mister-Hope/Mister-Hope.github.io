@@ -5,7 +5,7 @@ tags:
   - node.js
 ---
 
-# **dirname 和**filename 和 process.cwd()三者的区别
+# `__dirname`、`__filename` 和 `process.cwd()` 三者的区别
 
 1. `process.cwd()` 方法返回 Node.js 进程当前工作的目录
 
@@ -18,7 +18,7 @@ tags:
 
    输出如下 `F:\自己的文件\自己在网上学习的知识点\node学习\node-API\process`
 
-2. `__dirname` 是 Node.js 的一个全局变量，获得当前文件所在目录的完整目录名
+1. `__dirname` 是 Node.js 的一个全局变量，获得当前文件所在目录的完整目录名
 
    还在上面的 js 文件中输入一下代码
 
@@ -32,7 +32,7 @@ tags:
    我用这个应用程序可以生产出一套完整的页面架构，在应用程序的配置文件中 console.log(cwd)
    在完整的这个页面架构中执行启动这个项目的命令，则对应的 cwd 就是当前项目所在的绝对路径,而不是应用程序的路径
 
-3. `__filename` 也是 Node.js 的全局变量 Node.js 中，在任何模块文件内部，可以使用 `__filename` 变量获取当前模块文件的带有完整绝对路径的文件名
+1. `__filename` 也是 Node.js 的全局变量 Node.js 中，在任何模块文件内部，可以使用 `__filename` 变量获取当前模块文件的带有完整绝对路径的文件名
 
 ```js
 console.log(__filename);

@@ -19,10 +19,10 @@ category: Python
 
 - [字符串](string.md)
 
-- [List 和 Tuple](listAndTuple.md)
+- [List 和 Tuple](list-and-tuple.md)
 
 - [条件判断](condition.md)
 
 - [循环](loop.md)
 
-- [Dictionary 和 Set](dictAndSet.md)
+- [Dictionary 和 Set](dict-and-set.md)

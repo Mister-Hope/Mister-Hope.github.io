@@ -11,8 +11,8 @@ tags:
 网页需要三件套: **HTML**、**CSS** 和 **js**。
 
 1. HTML 定义了网页的内容
-2. CSS 描述了网页的样式
-3. JavaScript 编写网页的行为
+1. CSS 描述了网页的样式
+1. JavaScript 编写网页的行为
 
 <!-- more -->
 

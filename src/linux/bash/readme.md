@@ -27,7 +27,7 @@ copyrightText: 本教程采用<a href="https://creativecommons.org/licenses/by-s
 - [行操作](readline.md)
 
 - [目录堆栈](stack.md)
--
+
 - [脚本入门](script.md)
 
 - [read 命令](read.md)

@@ -114,4 +114,4 @@ git commit -m "add 3 files."
 - 添加文件到 Git 仓库，分两步:
 
   1. 使用命令 `git add <file>`，可反复多次使用，添加多个文件；
-  2. 使用命令 `git commit -m <message>`，完成。
+  1. 使用命令 `git commit -m <message>`，完成。

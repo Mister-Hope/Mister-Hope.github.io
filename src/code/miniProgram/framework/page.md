@@ -67,7 +67,7 @@ import $page from "path/to/page";
   | ---------------------- | ---------------- |
   | object                 | 配置对象         |
   | page                   | 页面数据         |
-  | preload [default:true] | 是否预加载子页面 |
+  | preload \[default:true\] | 是否预加载子页面 |
 
   `object`参数:
 
@@ -75,7 +75,7 @@ import $page from "path/to/page";
   | ---------------------- | ------------------ |
   | option                 | 页面传参           |
   | ctx                    | 页面指针           |
-  | handle [default:false] | 页面是否已经被处理 |
+  | handle \[default:false\] | 页面是否已经被处理 |
 
 **案例:**
 
@@ -101,7 +101,7 @@ import $page from "path/to/page";
   | ---------------------- | ---------------- |
   | option                 | 页面跳转参数     |
   | ctx                    | 页面指针         |
-  | preload [default:true] | 是否预加载子页面 |
+  | preload \[default:true\] | 是否预加载子页面 |
 
 **案例:**
 
@@ -149,7 +149,7 @@ import $page from "path/to/page";
 
   | 参数                 | 描述               |
   | -------------------- | ------------------ |
-  | grey [default:false] | 页面是否为灰色背景 |
+  | grey \[default:false\] | 页面是否为灰色背景 |
 
 **案例:**
 

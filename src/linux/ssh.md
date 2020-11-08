@@ -16,7 +16,7 @@ category: 基础
    - username 即为前提条件中获得的默认帐号。
    - hostname or IP address 为您的 Linux 实例公网 IP 或自定义域名。
 
-2. 输入已获取的密码，按 Enter，即可完成登录。
+1. 输入已获取的密码，按 Enter，即可完成登录。
 
 ## 使用密钥登录
 
@@ -26,7 +26,7 @@ category: 基础
    chmod 400 <下载的与云服务器关联的私钥的绝对路径>
    ```
 
-2. 执行以下命令，进行远程登录。
+1. 执行以下命令，进行远程登录。
 
    ```shell
    ssh -i <下载的与云服务器关联的私钥的绝对路径> <username>@<hostname or IP address>

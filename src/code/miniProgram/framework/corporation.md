@@ -6,7 +6,7 @@ category: 小程序
 
 ## 准备工作
 
-请参照 [简单界面开发学习指南](simpleDebug.md) 初步了解界面 yaml 编写方法，按照 [开发说明](frameDescription.md) 编写界面 yaml 并以社团的英文名称命名做合理命名，和图片一起打包成压缩包，发给 [QQ:1178522294](https://wpa.qq.com/msgrd?v=3&uin=1178522294&site=qq)。
+请参照 [简单界面开发学习指南](simple-debug.md) 初步了解界面 yaml 编写方法，按照 [开发说明](frameDescription.md) 编写界面 yaml 并以社团的英文名称命名做合理命名，和图片一起打包成压缩包，发给 [QQ:1178522294](https://wpa.qq.com/msgrd?v=3&uin=1178522294&site=qq)。
 
 ---
 
@@ -40,7 +40,7 @@ content:
   > 要求
   >
   > 1. svg 格式最佳，也可为 png 格式
-  > 2. 图标底色应透明
+  > 1. 图标底色应透明
 
 ## Tips
 

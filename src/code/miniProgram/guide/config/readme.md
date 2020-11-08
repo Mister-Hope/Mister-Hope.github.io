@@ -45,7 +45,7 @@ category: 小程序
 }
 ```
 
-更多详情请见 [全局配置文档](appConfig.md)
+更多详情请见 [全局配置文档](app-config.md)
 
 ## 页面配置
 
@@ -63,7 +63,7 @@ category: 小程序
 }
 ```
 
-更多详情请见 [页面配置文档](pageConfig.md)
+更多详情请见 [页面配置文档](page-config.md)
 
 ## 索引配置 <MyBadge text="初学无需阅读" type="grey" />
 
@@ -72,10 +72,10 @@ category: 小程序
 ### 具体配置说明
 
 1. 页面收录设置: 可对整个小程序的索引进行关闭，小程序管理后台-设置-基本设置-页面收录设置
-2. sitemap 配置: 可对特定页面的索引进行关闭
+1. sitemap 配置: 可对特定页面的索引进行关闭
 
 ### sitemap 配置
 
 小程序根目录下的 sitemap.json 文件用来配置小程序及其页面是否允许被微信索引。
 
-完整配置项说明请参考 [sitemap 配置](sitemapConfig.md)
+完整配置项说明请参考 [sitemap 配置](sitemap-config.md)

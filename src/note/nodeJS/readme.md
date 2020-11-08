@@ -7,5 +7,4 @@ tags:
 
 ## 目录
 
-- [currentPath 相关](currentPath.md)
-- [path 相关](path.md)
+- [current-path 相关](current-path.md)

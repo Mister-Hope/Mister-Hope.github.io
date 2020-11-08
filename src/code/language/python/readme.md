@@ -32,13 +32,13 @@ category: Python
 
 - [字符串](guide/string.md)
 
-- [List 和 Tuple](guide/listAndTuple.md)
+- [List 和 Tuple](guide/list-and-tuple.md)
 
 - [条件判断](guide/condition.md)
 
 - [循环](guide/loop.md)
 
-- [Dictionary 和 Set](dictAndSet.md)
+- [Dictionary 和 Set](dict-and-set.md)
 
 ## Python 函数
 

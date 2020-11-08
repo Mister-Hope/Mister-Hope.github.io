@@ -14,10 +14,10 @@ module.exports = [
       "io",
       "basic",
       "string",
-      "listAndTuple",
+      "list-and-tuple",
       "condition",
       "loop",
-      "dictAndSet",
+      "dict-and-set",
     ],
   },
   {

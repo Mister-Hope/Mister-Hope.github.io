@@ -1,6 +1,6 @@
 module.exports = [
   "",
-  "fileStructure",
+  "file-structure",
   "env",
   "config/",
   "frame",
@@ -56,6 +56,6 @@ module.exports = [
     icon: "safe",
     collapsable: false,
     prefix: "ability/",
-    children: ["", "network", "storage", "fileSystem", "debug"],
+    children: ["", "network", "storage", "file-system", "debug"],
   },
 ];

@@ -21,12 +21,12 @@ module.exports = [
     prefix: "framework/",
     children: [
       "",
-      "simpleDebug",
-      "tagList",
-      "corporationDebug",
-      "setPage",
+      "simple-debug",
+      "tag-list",
+      "corporation",
+      "page",
       "demo",
     ],
   },
-  "QRCode",
+  "qr-code",
 ];

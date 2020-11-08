@@ -57,7 +57,7 @@ tags:
 
 ![个人主页](./assets/profile.png)
 
-**`https://github.com/<您的用户名>`**
+**地址:** `https://github.com/<您的用户名>`
 
 个人主页会有几个主要面板:
 

@@ -146,7 +146,7 @@ for (let i = 0; i < drinks.length; i++) s = s + drinks[i].innerHTML + ",";
 console.log(s);
 ```
 
-```text
+```
 摩卡
 热摩卡咖啡
 酸奶

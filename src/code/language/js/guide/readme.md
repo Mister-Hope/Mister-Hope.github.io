@@ -39,7 +39,7 @@ category: JavaScript
 
 ## 初步进阶
 
-- [Map&Set](mapAndSet.md)
+- [Map&Set](map-and-set.md)
 
 - [Iterable](iterable.md)
 

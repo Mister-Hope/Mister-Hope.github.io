@@ -44,22 +44,24 @@ CSS3 是最新的 CSS 标准，被拆分为"模块"。
 
 - [CSS 选择器](selector.md)
 - [CSS 盒模型](box.md)
-- [背景与边框](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [背景与边框](background-and-border.md)
+- [文本方向](text-direction.md)
+- [溢出](overflow.md)
 
 ## 手册
 
-### CSS
+- CSS
 
-- [W3CSchool 教程](https://www.w3cschool.cn/css/)
-- [W3School 教程](http://www.w3school.com.cn/css/index.asp)
-- [菜鸟教程](https://www.runoob.com/css/css-tutorial.html)
-- [MDN 教程](https://developer.mozilla.org/zh-CN/docs/Web/CSS)
+  - [W3CSchool 教程](https://www.w3cschool.cn/css/)
+  - [W3School 教程](http://www.w3school.com.cn/css/index.asp)
+  - [菜鸟教程](https://www.runoob.com/css/css-tutorial.html)
+  - [MDN 教程](https://developer.mozilla.org/zh-CN/docs/Web/CSS)
 
-### CSS3
+- CSS3
 
-- [W3CSchool 教程](https://www.w3cschool.cn/css3/)
-- [W3School 教程](http://www.w3school.com.cn/css3/index.asp)
-- [菜鸟教程](https://www.runoob.com/css3/css3-tutorial.html)
+  - [W3CSchool 教程](https://www.w3cschool.cn/css3/)
+  - [W3School 教程](http://www.w3school.com.cn/css3/index.asp)
+  - [菜鸟教程](https://www.runoob.com/css3/css3-tutorial.html)
 
 ## 在线练习网址
 

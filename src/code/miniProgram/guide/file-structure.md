@@ -89,7 +89,7 @@ app.json 是当前小程序的全局配置，包括了小程序的所有页面�
 
 - `window` 字段 —— 定义小程序所有页面的顶部背景颜色，文字颜色定义等。
 
-其他配置项可以参考文档 [全局配置](config/appConfig.md)。
+其他配置项可以参考文档 [全局配置](config/app-config.md)。
 
 ### 页面配置 page.json <MyBadge text="简单了解" />
 
@@ -97,7 +97,7 @@ app.json 是当前小程序的全局配置，包括了小程序的所有页面�
 
 如果您整个小程序的风格是蓝色调，那么您可以在 `app.json` 里边声明顶部颜色是蓝色即可。实际您可能希望小程序里边的每个页面都有不一样的色调来区分不同功能模块，`page.json` 就提供了定义每个页面的一些属性的能力。
 
-配置项可以参考文档 [页面配置](config/pageConfig.md)。
+配置项可以参考文档 [页面配置](config/page-config.md)。
 
 ### 工具配置 project.config.json <MyBadge text="不重要" type="grey" />
 

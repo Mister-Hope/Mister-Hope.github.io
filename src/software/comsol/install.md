@@ -24,6 +24,6 @@ tags:
 
    :::
 
-2. ~~打着学习交流的名义，科学上网在国外相关论坛上搜索 “LMCOMSOL_Multiphysics_SSQ.lic”~~ :x:
+1. ~~打着学习交流的名义，科学上网在国外相关论坛上搜索 “LMCOMSOL_Multiphysics_SSQ.lic”~~ :x:
 
    这是违法的，并且可能收到 COMSOL 公司的追责。

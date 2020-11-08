@@ -61,73 +61,73 @@ JavaScript 引擎内部首先比较首字符的 Unicode 码点。如果相等，
 
 如果两个运算子之中，至少有一个不是字符串，需要分成以下两种情况。
 
-1. **原始类型值**
+### 原始类型值
 
-   如果两个运算子都是原始类型的值，则是先转成数值再比较。
+如果两个运算子都是原始类型的值，则是先转成数值再比较。
 
-   ```js
-   5 > "4"; // true
-   // 等同于 5 > Number('4')
-   // 即 5 > 4
+```js
+5 > "4"; // true
+// 等同于 5 > Number('4')
+// 即 5 > 4
 
-   true > false; // true
-   // 等同于 Number(true) > Number(false)
-   // 即 1 > 0
+true > false; // true
+// 等同于 Number(true) > Number(false)
+// 即 1 > 0
 
-   2 > true; // true
-   // 等同于 2 > Number(true)
-   // 即 2 > 1
-   ```
+2 > true; // true
+// 等同于 2 > Number(true)
+// 即 2 > 1
+```
 
-   上面代码中，字符串和布尔值都会先转成数值，再进行比较。
+上面代码中，字符串和布尔值都会先转成数值，再进行比较。
 
-   这里需要注意与`NaN`的比较。任何值(包括`NaN`本身)与`NaN`比较，返回的都是`false`。
+这里需要注意与`NaN`的比较。任何值(包括`NaN`本身)与`NaN`比较，返回的都是`false`。
 
-   ```js
-   1 > NaN; // false
-   1 <= NaN; // false
-   "1" > NaN; // false
-   "1" <= NaN; // false
-   NaN > NaN; // false
-   NaN <= NaN; // false
-   ```
+```js
+1 > NaN; // false
+1 <= NaN; // false
+"1" > NaN; // false
+"1" <= NaN; // false
+NaN > NaN; // false
+NaN <= NaN; // false
+```
 
-2. **对象**
+### 对象
 
-   如果运算子是对象，会转为原始类型的值，再进行比较。
+如果运算子是对象，会转为原始类型的值，再进行比较。
 
-   对象转换成原始类型的值，算法是先调用`valueOf`方法；如果返回的还是对象，再接着调用`toString`方法，详细解释参见《数据类型的转换》一章。
+对象转换成原始类型的值，算法是先调用`valueOf`方法；如果返回的还是对象，再接着调用`toString`方法，详细解释参见《数据类型的转换》一章。
 
-   ```js
-   const x = [2];
+```js
+const x = [2];
 
-   x > "11"; // true
-   // 等同于 [2].valueOf().toString() > '11'
-   // 即 '2' > '11'
+x > "11"; // true
+// 等同于 [2].valueOf().toString() > '11'
+// 即 '2' > '11'
 
-   x.valueOf = function () {
-     return "1";
-   };
-   x > "11"; // false
-   // 等同于 [2].valueOf() > '11'
-   // 即 '1' > '11'
-   ```
+x.valueOf = function () {
+ return "1";
+};
+x > "11"; // false
+// 等同于 [2].valueOf() > '11'
+// 即 '1' > '11'
+```
 
-   两个对象之间的比较也是如此。
+两个对象之间的比较也是如此。
 
-   ```js
-   [2] > [1] // true
-   // 等同于 [2].valueOf().toString() > [1].valueOf().toString()
-   // 即 '2' > '1'
+```js
+[2] > [1] // true
+// 等同于 [2].valueOf().toString() > [1].valueOf().toString()
+// 即 '2' > '1'
 
-   [2] > [11] // true
-   // 等同于 [2].valueOf().toString() > [11].valueOf().toString()
-   // 即 '2' > '11'
+[2] > [11] // true
+// 等同于 [2].valueOf().toString() > [11].valueOf().toString()
+// 即 '2' > '11'
 
-   { x: 2 } >= { x: 1 } // true
-   // 等同于 { x: 2 }.valueOf().toString() >= { x: 1 }.valueOf().toString()
-   // 即 '[object Object]' >= '[object Object]'
-   ```
+{ x: 2 } >= { x: 1 } // true
+// 等同于 { x: 2 }.valueOf().toString() >= { x: 1 }.valueOf().toString()
+// 即 '[object Object]' >= '[object Object]'
+```
 
 ## 严格相等运算符
 

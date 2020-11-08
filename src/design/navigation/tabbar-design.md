@@ -98,10 +98,10 @@ tags:
 
    ![权重平分模式示例](./assets/tenghe.jpg)
 
-2. 强调信息模式示例
+1. 强调信息模式示例
 
    ![强调信息模式示例](./assets/zizaixiong.jpg)
 
-3. 引导操作模式示例
+1. 引导操作模式示例
 
    ![引导操作模式示例](./assets/yuyou.jpg)

@@ -22,7 +22,7 @@ console.log("after setTimeout()");
 
 观察上述代码执行，在 Chrome 的控制台输出可以看到:
 
-```text
+```
 before setTimeout()
 after setTimeout()
 (等待1秒后)

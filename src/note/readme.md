@@ -49,5 +49,5 @@ category: 随笔
 
 ## Node.js 相关
 
-- [currentPath 相关](nodeJS/currentPath.md)
+- [current-path 相关](nodeJS/current-path.md)
 - [path 相关](nodeJS/path.md)

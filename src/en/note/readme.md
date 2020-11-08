@@ -52,8 +52,3 @@ Recently, I moved it as a teenager’s memory in my blog.
 ## COMSOL
 
 - [Click Here](/note/comsol/readme.md)
-
-## Node.js
-
-- [currentPath](nodeJS/2019-9-10-currentPath.md)
-- [path](nodeJS/2019-9-20-path.md)

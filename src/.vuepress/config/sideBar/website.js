@@ -46,6 +46,9 @@ module.exports = [
       },
       "box",
       "selector",
+      "background-and-border",
+      "text-direction",
+      "overflow",
       {
         title: "CSS 布局",
         icon: "layout",

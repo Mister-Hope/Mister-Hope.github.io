@@ -23,7 +23,7 @@ category: 小程序
 
 ## 教程目录
 
-- [文件结构](guide/fileStructure.md)
+- [文件结构](guide/file-structure.md)
 
 - [运行环境](guide/env.md)
 
@@ -67,7 +67,7 @@ category: 小程序
 
   - [存储](guide/ability/storage.md)
 
-  - [文件系统](guide/ability/fileSystem.md)
+  - [文件系统](guide/ability/file-system.md)
 
   - [调试](debug.md)
 
@@ -93,15 +93,15 @@ category: 小程序
 
 - [小程序框架使用说明](framework/readme.md)
 
-- [tag 值参数表](framework/tagList.md)
+- [tag 值参数表](framework/tag-list.md)
 
 - [setPage 库使用说明](framework/setPage.md)
 
-- [界面简单开发学习指南](framework/simpleDebug.md)
+- [界面简单开发学习指南](framework/simple-debug.md)
 
-- [社团资料提交说明](framework/corporationDebug.md)
+- [社团资料提交说明](framework/corporation.md)
 
-- [分享相关](QRCode.md)
+- [分享相关](qr-code.md)
 
 ## 学习视频
 

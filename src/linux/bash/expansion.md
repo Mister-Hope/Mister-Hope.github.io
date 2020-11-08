@@ -688,7 +688,7 @@ $ shopt [optionname]
    abc.txt .config
    ```
 
-2. **nullglob 参数**
+1. **nullglob 参数**
 
    `nullglob` 参数可以让通配符不匹配任何文件名时，返回空字符。
 
@@ -711,7 +711,7 @@ $ shopt [optionname]
 
    上面例子中，由于没有 `b*` 匹配的文件名，所以 `rm b*` 扩展成了 `rm`，导致报错变成了”缺少操作数“。
 
-3. **failglob 参数**
+1. **failglob 参数**
 
    `failglob` 参数使得通配符不匹配任何文件名时，Bash 会直接报错，而不是让各个命令去处理。
 
@@ -723,7 +723,7 @@ $ shopt [optionname]
 
    上面例子中，打开 `failglob` 以后，由于 `b*` 不匹配任何文件名，Bash 直接报错了，不再让 `rm` 命令去处理。
 
-4. **extglob 参数**
+1. **extglob 参数**
 
    `extglob` 参数使得 Bash 支持 ksh 的一些扩展语法。它默认应该是打开的。
 
@@ -738,7 +738,7 @@ $ shopt [optionname]
    shopt -u extglob
    ```
 
-5. **nocaseglob 参数**
+1. **nocaseglob 参数**
 
    `nocaseglob` 参数可以让通配符扩展不区分大小写。
 
@@ -752,7 +752,7 @@ $ shopt [optionname]
 
    上面例子中，打开 `nocaseglob` 以后，`program*` 就不区分大小写了，可以匹配 `ProgramData` 等。
 
-6. **globstar 参数**
+1. **globstar 参数**
 
    `globstar` 参数可以使得 `**` 匹配零个或多个子目录。该参数默认是关闭的。
 

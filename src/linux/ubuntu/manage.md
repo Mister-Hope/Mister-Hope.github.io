@@ -22,7 +22,7 @@ category: Linux
   apt-get update
   ```
 
-- [其他命令][^order]
+- 其他命令[^order]
 
 [^order]: 其他命令
 
