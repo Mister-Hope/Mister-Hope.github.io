@@ -56,7 +56,7 @@ module.exports = {
             { text: "Vue 教程", link: "vue/", icon: "vue" },
             {
               text: "小程序教程",
-              link: "miniProgram/",
+              link: "mini-app/",
               icon: "mini-program",
             },
           ],
@@ -101,7 +101,7 @@ module.exports = {
         { text: "Vue", link: "/code/vue/", icon: "vue" },
         {
           text: "MiniProgram",
-          link: "/code/miniProgram/",
+          link: "/code/mini-app/",
           icon: "miniProgram",
         },
         { text: "Linux", link: "/en/code/linux/", icon: "linux" },

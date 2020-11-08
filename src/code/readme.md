@@ -18,7 +18,7 @@ breadcrumb: false
 
 - [Windows 相关](windows/readme.md)
 
-- [小程序教程](miniProgram/readme.md)
+- [小程序教程](mini-app/readme.md)
 
 - [代码学习](language/readme.md)
 

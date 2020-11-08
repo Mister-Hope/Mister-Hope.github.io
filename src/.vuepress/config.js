@@ -9,6 +9,7 @@ module.exports = config({
   head: [
     // 百度站点验证
     ["meta", { name: "baidu-site-verification", content: "nGf5yi0Gec" }],
+    ["meta", { name: "baidu-site-verification", content: "4H7tszevS8" }],
 
     [
       "link",
@@ -39,8 +40,8 @@ module.exports = config({
     ".vuepress/config/sideBar/language/python.js",
     ".vuepress/config/sideBar/language/typescript.js",
     ".vuepress/config/sideBar/linux.js",
-    ".vuepress/config/sideBar/miniProgram/guide.js",
-    ".vuepress/config/sideBar/miniProgram/index.js",
+    ".vuepress/config/sideBar/mini-app/guide.js",
+    ".vuepress/config/sideBar/mini-app/index.js",
     ".vuepress/config/sideBar/note.js",
     ".vuepress/config/sideBar/software.js",
     ".vuepress/config/sideBar/vue.js",

@@ -42,7 +42,7 @@ module.exports = {
 
     "/code/language/": require("./language"),
 
-    "/code/miniProgram/": require("./miniProgram"),
+    "/code/mini-app/": require("./mini-app"),
 
     "/code/basic/": require("./basic"),
 
@@ -54,7 +54,7 @@ module.exports = {
       "website/",
       "language/",
       "vue/",
-      "miniProgram/",
+      "mini-app/",
       "windows/",
       "backEnd/",
       "Android/",
