@@ -35,7 +35,7 @@ module.exports = {
           text: "语言教程",
           prefix: "/code/language/",
           items: [
-            { text: "JavaScript 教程", link: "js/", icon: "js" },
+            { text: "JavaScript 教程", link: "js/", icon: "javascript" },
             {
               text: "Typescript 教程",
               link: "typescript/",
@@ -57,7 +57,7 @@ module.exports = {
             {
               text: "小程序教程",
               link: "mini-app/",
-              icon: "mini-program",
+              icon: "mini-app",
             },
           ],
         },
@@ -102,7 +102,7 @@ module.exports = {
         {
           text: "MiniProgram",
           link: "/code/mini-app/",
-          icon: "miniProgram",
+          icon: "mini-app",
         },
         { text: "Linux", link: "/en/code/linux/", icon: "linux" },
         { text: "Windows", link: "/code/windows/", icon: "windows" },

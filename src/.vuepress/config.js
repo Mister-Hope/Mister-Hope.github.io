@@ -1,5 +1,5 @@
 const { config } = require("vuepress-theme-hope");
-const navBarConfig = require("./config/navBarConfig");
+const navBarConfig = require("./config/navbar");
 const sideBarConfig = require("./config/sideBar");
 
 module.exports = config({
@@ -20,6 +20,8 @@ module.exports = config({
       },
     ],
   ],
+
+  shouldPrefetch: (filename) => !filename.includes("page-"),
 
   dest: "dist",
 

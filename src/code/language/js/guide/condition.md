@@ -158,6 +158,7 @@ if (age >= 18) {
 
     ::: warning
     `else` 代码块总是与离自己最近的那个 `if` 语句配对。
+    :::
 
     ```js
     const m = 1;

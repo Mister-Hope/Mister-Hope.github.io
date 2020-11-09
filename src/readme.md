@@ -10,23 +10,23 @@ actionLink: /about/
 project:
   - name: vuepress-theme-hope
     type: link
-    desc: 轻量的 Vuepress 主题
-    link: https://vuepress-theme.mrhope.site/
+    desc: 一个功能强大的 Vuepress 主题✨
+    link: https://vuepress-theme.mrhope.site/zh/
 
   - name: in东师
     type: project
-    desc: 三十万字+的东师攻略，全方位的东师生活介绍，东师新生们的最佳入学指南
+    desc: 三十万字+的东师攻略，全方位的东师生活介绍，东师新生们的最佳入学指南❤
     link: https://github.com/Hope-Studio/inNENU-miniprogram
 
   - name: "@mr-hope/vuepress-plugin-comment"
     type: link
     desc: Vuepress 评论插件
-    link: https://vuepress-comment.mrhope.site/
+    link: https://vuepress-comment.mrhope.site/zh/
 
   - name: vuepress-plugin-md-enhance
     type: link
     desc: Vuepress Markdown 增强插件
-    link: https://vuepress-md-enhance.mrhope.site/
+    link: https://vuepress-md-enhance.mrhope.site/zh/
 
   # - name: in东师官网
   #   type: project

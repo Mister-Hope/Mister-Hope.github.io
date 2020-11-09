@@ -1,5 +1,5 @@
 ---
-title: Mr.Hope的随笔
+title: Mr.Hope 的随笔
 icon: note
 sticky: 10
 category: 随笔
