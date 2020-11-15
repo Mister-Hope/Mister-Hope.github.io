@@ -26,7 +26,7 @@ h1 {
 
 :::
 
-`writing-mode` 的三个值分别是：
+`writing-mode` 的三个值分别是:
 
 - `horizontal-tb`: 块流向从上至下。对应的文本方向是横向的。
 - `vertical-rl`: 块流向从右向左。对应的文本方向是纵向的。

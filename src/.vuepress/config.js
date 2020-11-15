@@ -32,25 +32,6 @@ module.exports = config({
     },
   },
 
-  extraWatchFiles: [
-    ".vuepress/config/navBarConfig.js",
-    ".vuepress/config/sideBar/basic.js",
-    ".vuepress/config/sideBar/index.js",
-    ".vuepress/config/sideBar/language/dart.js",
-    ".vuepress/config/sideBar/language/index.js",
-    ".vuepress/config/sideBar/language/javascript.js",
-    ".vuepress/config/sideBar/language/python.js",
-    ".vuepress/config/sideBar/language/typescript.js",
-    ".vuepress/config/sideBar/linux.js",
-    ".vuepress/config/sideBar/mini-app/guide.js",
-    ".vuepress/config/sideBar/mini-app/index.js",
-    ".vuepress/config/sideBar/note.js",
-    ".vuepress/config/sideBar/software.js",
-    ".vuepress/config/sideBar/vue.js",
-    ".vuepress/config/sideBar/website.js",
-    ".vuepress/config/navBarConfig.js",
-  ],
-
   themeConfig: {
     baseLang: "zh-CN",
     logo: "/logo.png",

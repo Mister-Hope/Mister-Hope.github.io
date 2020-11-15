@@ -32,13 +32,13 @@ tags:
 
 HTML 指的是超文本标记语言 (Hyper Text Markup Language)，描述了网页的骨架(具体结构)。
 
-- [HTML 快速上手](html/readme.md)
+- [HTML 教程](html/readme.md)
 
 ## CSS
 
 CSS 指层叠样式表 (Cascading Style Sheets)，声明了网页的样式(具体布局)。
 
-- [CSS 相关](css/readme.md)
+- [CSS 教程](css/readme.md)
 
 ## JavaScript
 
@@ -46,13 +46,13 @@ JavaScript 是一种编程语言，声明了网页的交互逻辑。
 
 JavaScript 是一种轻量级的编程语言，为可插入 HTML 页面的编程代码。所有现代的 HTML 页面都使用 JavaScript。
 
-- [JS 相关](js.md)
+- [JS 教程](js.md)
 
 ### TypeScript
 
 TypeScript 是 JavaScript 的一个超集，使得 JS 变成了一种强定义语言。TypeScript 由于其诸多优良特性，目前在前端的份额越来越大。
 
-- [TypeScript 介绍](../language/typescript/readme.md)
+- [TypeScript 教程](../language/typescript/readme.md)
 
 ## Node.js
 
@@ -60,7 +60,7 @@ TypeScript 是 JavaScript 的一个超集，使得 JS 变成了一种强定义�
 
 Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，拥有大量的模块。Node.js 主要以其丰富并及其容易导入的 Node.js package，以及其方便管理 npm (Node.js Package Manager)闻名。
 
-- [查看详情](../nodeJS/readme.md)
+- [Node.js 教程](../nodeJS/readme.md)
 
 ## 历史前端框架
 

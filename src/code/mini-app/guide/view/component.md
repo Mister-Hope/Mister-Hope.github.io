@@ -31,7 +31,7 @@ category: 小程序
 | Boolean      | 布尔值         | 组件写上该属性，不管是什么值都被当作 `true`；只有组件上没有该属性时，属性值才为 `false`。<br />如果属性值为变量，变量的值会被转换为 Boolean 类型 |
 | Number       | 数字           | 1, 2.5                                                                                                                                           |
 | String       | 字符串         | "string"                                                                                                                                         |
-| Array        | 数组           | \[ 1, "string" \]                                                                                                                                  |
+| Array        | 数组           | \[ 1, "string" \]                                                                                                                                |
 | Object       | 对象           | { key: value }                                                                                                                                   |
 | EventHandler | 事件处理函数名 | `"handlerName"` 是 `Page` 中定义的事件处理函数名                                                                                                 |
 | Any          | 任意属性       |

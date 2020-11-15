@@ -106,7 +106,7 @@ x > "11"; // true
 // 即 '2' > '11'
 
 x.valueOf = function () {
- return "1";
+  return "1";
 };
 x > "11"; // false
 // 等同于 [2].valueOf() > '11'

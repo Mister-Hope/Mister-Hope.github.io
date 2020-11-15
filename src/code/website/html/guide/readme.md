@@ -17,7 +17,7 @@ HTML 指的是超文本标记语言: **H**yper**T**ext **M**arkup **L**anguage�
 
 HTML 不是一门编程语言，而是一种用于定义内容结构的**标记语言** (markup language)。HTML 由一系列的元素(elements)组成，这些元素可以用来包围不同部分的内容，使其以某种方式呈现或者工作。**标记标签** (markup tag) 是 HTML 的基本语法。一对标签( tags)可以为一段文字或者一张图片添加超链接，将文字设置为斜体，改变字号，等等。
 
-::: tip 总结
+::: tip 特点
 
 - HTML 使用标记标签来**描述**网页。
 - HTML 文档包含了 **HTML 标签**及**文本**内容。
@@ -27,13 +27,11 @@ HTML 不是一门编程语言，而是一种用于定义内容结构的**标记�
 
 ### 例子
 
-例如，键入下面一行内容:
-
 ```
 Mr.Hope is handsome.
 ```
 
-可以将这行文字封装成一个段落(**p**aragraph)元素来使其在单独一行呈现:
+HTML 可以将这行文字封装成一个段落(**p**aragraph)元素来使其在单独一行呈现:
 
 ```html
 <p>Mr.Hope is handsome.</p>
@@ -135,7 +133,9 @@ An element is:
 <p>Mr.Hope is <strong>very</strong> handsome.</p>
 ```
 
-> Mr.Hope is **very** handsome.
+**输出**:
+
+Mr.Hope is **very** handsome.
 
 ::: tip 总结
 
@@ -198,10 +198,10 @@ HTML 文档的后缀名是 `.html`。
 
 ::: warning 新手误区
 文件名应该为 `xx.html`，不应该是 `html`。
+
 html 是一个没有后缀名称，文件名字叫做 html 的文件。
 
-- [查看详情](../../intro/file-extension.md)
-
+更多详情，请见 [基础 → 文件后缀名](../../../basic/file-extension.md)。
 :::
 
 ## HTML 结构
@@ -236,8 +236,7 @@ html 是一个没有后缀名称，文件名字叫做 html 的文件。
 
 `<meta charset="UTF-8" />` 元素设置文档使用 utf-8 字符集编码，utf-8 字符集包含了人类大部分的文字。基本上他能识别您放上去的所有文本内容。毫无疑问要使用它，并且它能在以后避免很多其他问题。所以建议任何 HTML 文件都包含此标签。
 
-- [更多 head 标签详情](head.md)
-
+更多详情，请见 [介绍 → head 标签](../intro/head.md)。
 :::
 
 `<body>` 标签包含了您访问页面时所有显示在页面上的内容，文本，图片，音频，游戏等等。

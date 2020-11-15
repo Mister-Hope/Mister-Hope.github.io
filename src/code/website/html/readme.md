@@ -22,11 +22,24 @@ HTML 指的是超文本标记语言 (Hyper Text Markup Language)，它不是一�
 
 ## HTML 教程
 
-- [Head 标签](head.md)
-- [基本标签](basic.md)
-- [链接](link.md)
-- [格式化文档](format.md)
-- [网站布局](layout.md)
+- [历史](intro/history.md)
+- [Head 标签](intro/head.md)
+- [基本标签](intro/basic.md)
+- [链接](intro/link.md)
+- [图片](intro/image.md)
+- [矢量图形](intro/svg.md)
+- [视频与音频](intro/media.md)
+- [表格](intro/table.md)
+- [嵌入](intro/embed.md)
+- [格式化文档](intro/format.md)
+- [网站布局](intro/layout.md)
+
+## 定义列表
+
+- [URI 统一资源标识符](definition/uri.md)
+- [URL 统一资源定位符](definition/url.md)
+- [SEO 搜索引擎优化](definition/seo.md)
+- [MIME Type 媒体类型](definition/mime.md)
 
 ## HTML 手册
 

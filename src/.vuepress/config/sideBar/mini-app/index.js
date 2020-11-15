@@ -19,14 +19,7 @@ module.exports = [
     icon: "frame",
     collapsable: false,
     prefix: "framework/",
-    children: [
-      "",
-      "simple-debug",
-      "tag-list",
-      "corporation",
-      "page",
-      "demo",
-    ],
+    children: ["", "simple-debug", "tag-list", "corporation", "page", "demo"],
   },
   "qr-code",
 ];
