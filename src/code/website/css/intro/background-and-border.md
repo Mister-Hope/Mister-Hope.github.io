@@ -208,7 +208,7 @@ CSS 允许你有多个背景图像。你需要在 `background-image` 设置多�
 
 其它 `background-*` 属性的值需要同样用逗号分隔的方式设置。
 
-::: tip 案例
+**案例**:
 
 ```css
 background-image: url(image1.png), url(image2.png), url(image3.png),
@@ -216,8 +216,6 @@ background-image: url(image1.png), url(image2.png), url(image3.png),
 background-repeat: no-repeat, repeat-x, repeat;
 background-position: 10px 20px, top right;
 ```
-
-:::
 
 不同属性的每个值，将与其他属性中相同位置的值匹配。例如，上面的 image1 的 `background-repeat` 值将是 `no-repeat`。
 
@@ -236,9 +234,7 @@ background-position: 10px 20px, top right;
 `background-attachment` 属性只有在有内容要滚动时才会有效果。
 
 ::: tip 案例
-
-- [案例地址](https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html)
-
+[案例地址](https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html)
 :::
 
 ### background 简写

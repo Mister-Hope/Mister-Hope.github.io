@@ -1,13 +1,13 @@
 ---
 title: 可替换元素
-icon: frame
+icon: replace
 time: 2019-09-06
 category: CSS
 ---
 
 ## 替换元素
 
-图像和视频被描述为替换元素。 这意味着CSS不能影响这些元素的内部布局，仅影响它们在页面上于其他元素中的位置。
+图像和视频被描述为替换元素。 这意味着 CSS 不能影响这些元素的内部布局，仅影响它们在页面上于其他元素中的位置。
 
 ::: info 可替换元素
 在 CSS 中，可替换元素(replaced element)的展现效果不是由 CSS 来控制的。这些元素是一种外部对象，它们外观的渲染，是独立于 CSS 的。
@@ -21,7 +21,7 @@ CSS 能对可替换元素产生的唯一影响在于，部分属性支持控制�
 
 ## 调整图像大小
 
-一个常用的技术是将一张图片的 `max-width` 设为100%。这将会允许图片尺寸上小于但不大于盒子。这个技术也会对其他替换元素(例如`<video>`，或者`<iframe>`)起作用。
+一个常用的技术是将一张图片的 `max-width` 设为 100%。这将会允许图片尺寸上小于但不大于盒子。这个技术也会对其他替换元素(例如`<video>`，或者`<iframe>`)起作用。
 
 为了把一张图像调整到能够完全盖住一个盒子的大小，你可以使用 `object-fit`属性。使用 `object-fit` 时，替换元素可以以多种方式被调整到合乎盒子的大小。
 
@@ -33,8 +33,10 @@ CSS 能对可替换元素产生的唯一影响在于，部分属性支持控制�
 
 ```html
 <div class="wrapper">
-  <div class="box"><img src="balloons.jpg" alt="balloons" class="cover"></div>
-  <div class="box"><img src="balloons.jpg" alt="balloons" class="contain"></div>
+  <div class="box"><img src="balloons.jpg" alt="balloons" class="cover" /></div>
+  <div class="box">
+    <img src="balloons.jpg" alt="balloons" class="contain" />
+  </div>
 </div>
 ```
 
@@ -58,16 +60,18 @@ img {
 }
 ```
 
+:::
+
 ## 布局中的替换元素
 
-替换元素使用各式CSS布局技巧时，他们的展现略微与其他元素不同。
+替换元素使用各式 CSS 布局技巧时，他们的展现略微与其他元素不同。
 
 ::: tip 案例
-在一个flex或者grid布局中，元素默认会把拉伸到充满整块区域。图像不会拉伸，而是会被对齐到网格区域或者弹性容器的起始处。
+在一个 flex 或者 grid 布局中，元素默认会把拉伸到充满整块区域。图像不会拉伸，而是会被对齐到网格区域或者弹性容器的起始处。
 
 ```html
 <div class="wrapper">
-  <img src="star.png" alt="star">
+  <img src="star.png" alt="star" />
   <div></div>
   <div></div>
   <div></div>
@@ -84,39 +88,39 @@ img {
 
 .wrapper > div {
   background-color: rebeccapurple;
-  border-radius: .5em;
+  border-radius: 0.5em;
 }
 ```
 
 :::
 
-## form元素
+## form 元素
 
 ### 表单元素的继承
 
-在一些浏览器中，表单元素默认不会继承字体样式，因此如果你想要确保你的表单填入区域使用body中或者一个父元素中定义的字体，你需要向你的CSS中加入这条规则。
+在一些浏览器中，表单元素默认不会继承字体样式，因此如果你想要确保你的表单填入区域使用 body 中或者一个父元素中定义的字体，你需要向你的 CSS 中加入这条规则。
 
 ```css
 button,
 input,
 select,
 textarea {
-  font-family : inherit;
-  font-size : 100%;
+  font-family: inherit;
+  font-size: 100%;
 }
 ```
 
 ### form 的 box-sizing
 
-form元素可能会针对不同元素使用不同的盒子约束规则。
+form 元素可能会针对不同元素使用不同的盒子约束规则。
 
-为了保证统一，将所有元素的内外边距均设为0是个好主意，然后在单独进行样式化控制的时候将这些加回来。
+为了保证统一，将所有元素的内外边距均设为 0 是个好主意，然后在单独进行样式化控制的时候将这些加回来。
 
 ```css
 button,
 input,
 select,
-textarea {  
+textarea {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -125,7 +129,7 @@ textarea {
 
 ### 其他有用的设置
 
-除了上面提到的规则以外，你也应该在 `<textarea>` 上设置 `overflow: auto` 以避免IE在不需要滚动条的时候显示滚动条:
+除了上面提到的规则以外，你也应该在 `<textarea>` 上设置 `overflow: auto` 以避免 IE 在不需要滚动条的时候显示滚动条:
 
 ```css
 textarea {

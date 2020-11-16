@@ -53,6 +53,8 @@ module.exports = {
           prefix: "/code/",
           items: [
             { text: "网页教程", link: "website/", icon: "network" },
+            { text: "HTML 教程", link: "website/html/", icon: "html" },
+            { text: "CSS 教程", link: "website/css/", icon: "css" },
             { text: "Vue 教程", link: "vue/", icon: "vue" },
             {
               text: "小程序教程",
