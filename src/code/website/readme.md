@@ -40,6 +40,12 @@ CSS 指层叠样式表 (Cascading Style Sheets)，声明了网页的样式(具�
 
 - [CSS 教程](css/readme.md)
 
+## Emmet
+
+Emmet 是一种快速输入 HTML 和 CSS 的语法。
+
+- [Emmet 用法介绍](emmet/readme.md)
+
 ## JavaScript
 
 JavaScript 是一种编程语言，声明了网页的交互逻辑。

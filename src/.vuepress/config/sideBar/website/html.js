@@ -32,5 +32,4 @@ module.exports = [
     prefix: "definition/",
     children: ["uri", "url", "seo", "mime"],
   },
-  "emmet",
 ];

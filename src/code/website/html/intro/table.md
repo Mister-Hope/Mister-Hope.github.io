@@ -20,7 +20,7 @@ HTML 表格应该用于表格数据 ，这正是 HTML 表格设计出来的用�
    屏幕阅读器, 被盲人所使用, 解析存在于 HTML 页面上的标签，然后为用户读出其中的内容。因为对于布局来说，表格不是一个正确的工具，使用的标记比使用 CSS 布局技术更复杂, 所以屏幕阅读器的输出会让他们的用户感到困惑。
 
 1. 表格会产生很多标签:
-  
+
    正如刚才提到的, 表格布局通常会比正确的布局技术涉及更复杂的标签结构，这会导致代码变得更难于编写、维护、调试.
 
 1. 表格不能自动响应:
@@ -43,7 +43,7 @@ HTML 表格应该用于表格数据 ，这正是 HTML 表格设计出来的用�
 
 ## 为列提供共同的样式
 
-HTML 有一种方法可以定义整列数据的样式信息：就是 `<col>` 和 `<colgroup>` 元素。
+HTML 有一种方法可以定义整列数据的样式信息: 就是 `<col>` 和 `<colgroup>` 元素。
 
 如果你想让一列中的每个数据的样式都一样，那么你就要为每个数据都添加一个样式，这样的做法是令人厌烦和低效的。你通常需要在列中的每个 `<td>` 或 `<th>` 上定义样式，或者使用一个复杂的选择器，比如 `:nth-child()`。为了舍弃这种做法，我们可以只定义一次，在 `<col>` 元素中。`<col>` 元素被规定包含在 `<colgroup>` 容器中，而 `<colgroup>` 就在 `<table>` 标签的下方。
 
@@ -74,7 +74,7 @@ HTML 有一种方法可以定义整列数据的样式信息：就是 `<col>` 和
 
 我们使用了两个 `<col>` 来定义“列的样式”，每一个 `<col>` 都会制定每列的样式，对于第一列，我们没有采取任何样式，但是我们仍然需要添加一个空的 `<col>` 元素，如果不这样做，那么我们的样式就会应用到第一列上，这和我们预想的不一样。
 
-如果你想把这种样式信息应用到每一列，我们可以只使用一个 `<col>` 元素，不过需要包含 `span` 属性，像这样：
+如果你想把这种样式信息应用到每一列，我们可以只使用一个 `<col>` 元素，不过需要包含 `span` 属性，像这样:
 
 ```html
 <colgroup>
@@ -89,12 +89,12 @@ HTML 有一种方法可以定义整列数据的样式信息：就是 `<col>` 和
 ```html
 <table>
   <colgroup>
-    <col span="2">
-    <col style="background-color:#97DB9A;">
-    <col style="width:42px;">
-    <col style="background-color:#97DB9A;">
-    <col style="background-color:#DCC48E; border:4px solid #C1437A;">
-    <col span="2" style="width:42px;">
+    <col span="2" />
+    <col style="background-color:#97DB9A;" />
+    <col style="width:42px;" />
+    <col style="background-color:#97DB9A;" />
+    <col style="background-color:#DCC48E; border:4px solid #C1437A;" />
+    <col span="2" style="width:42px;" />
   </colgroup>
   <tr>
     <td>&nbsp;</td>
@@ -235,7 +235,7 @@ scope 还有两个可选的值 `colgroup` 和 `rowgroup`。这些用于位于多
 如果要替代 scope 属性，可以使用 id 和 headers 属性来创造标题与单元格之间的联系。使用方法如下:
 
 - 为每个`<th>` 元素添加一个唯一的 id 。
-- 为每个 `<td>` 元素添加一个 `headers` 属性。每个单元格的 `headers` 属性需要包含它从属于的所有标题的id，之间用空格分隔开。
+- 为每个 `<td>` 元素添加一个 `headers` 属性。每个单元格的 `headers` 属性需要包含它从属于的所有标题的 id，之间用空格分隔开。
 
 这会给你的 HTML 表格中每个单元格的位置一个明确的定义。像一个电子表格一样，通过 headers 属性来定义属于哪些行或列。为了让它工作良好，表格同时需要列和行标题。
 
@@ -250,15 +250,14 @@ scope 还有两个可选的值 `colgroup` 和 `rowgroup`。这些用于位于多
   </tr>
 </thead>
 <tbody>
-<tr>
-  <th id="haircut">Haircut</th>
-  <td headers="location haircut">Hairdresser</td>
-  <td headers="date haircut">12/09</td>
-  <td headers="evaluation haircut">Great idea</td>
-  <td headers="cost haircut">30</td>
-</tr>
+  <tr>
+    <th id="haircut">Haircut</th>
+    <td headers="location haircut">Hairdresser</td>
+    <td headers="date haircut">12/09</td>
+    <td headers="evaluation haircut">Great idea</td>
+    <td headers="cost haircut">30</td>
+  </tr>
 
   ...
-
 </tbody>
 ```

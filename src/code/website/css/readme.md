@@ -40,14 +40,6 @@ CSS3 是最新的 CSS 标准，被拆分为"模块"。
 
 模块包括: 选择器、盒模型、背景和边框、文字特效、2D/3D 转换、动画、多列布局、用户界面。
 
-### 模块介绍
-
-- [CSS 选择器](selector.md)
-- [CSS 盒模型](box.md)
-- [背景与边框](background-and-border.md)
-- [文本方向](text-direction.md)
-- [溢出](overflow.md)
-
 ## 手册
 
 - CSS

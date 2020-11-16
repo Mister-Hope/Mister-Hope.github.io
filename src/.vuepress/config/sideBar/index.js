@@ -19,6 +19,12 @@ module.exports = {
       "notepad",
     ],
 
+    "/code/website/jquery/": require("./website/jquery"),
+
+    "/code/website/html/": require("./website/html"),
+
+    "/code/website/css/": require("./website/css"),
+
     "/code/website/": require("./website"),
 
     "/code/vue/": require("./vue"),

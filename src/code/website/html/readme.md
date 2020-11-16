@@ -66,9 +66,3 @@ HTML5 中的一些有趣的新特性:
 - [菜鸟教程](https://www.runoob.com/html/html5-intro.html)
 - [MDN 教程](https://developer.mozilla.org/zh-CN/docs/Web/HTML)
 - [W3School 教程](http://www.w3school.com.cn/html5/index.asp)
-
-## Emmet
-
-Emmet 是一种快速输入 HTML 元素的语法。
-
-- [Emmet 用法介绍](emmet.md)
