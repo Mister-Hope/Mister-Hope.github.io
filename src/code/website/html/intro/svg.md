@@ -25,6 +25,8 @@ category: HTML
 
 SVG 是用于描述矢量图像的 XML 语言。它基本上是像 HTML 一样的标记，只是你有许多不同的元素来定义要显示在图像中的形状，以及要应用于这些形状的效果。 SVG 用于标记图形，而不是内容。你可以使用一些元素来创建简单图形，如 `<circle>` 和 `<rect>`。更高级的 SVG 功能包括 `<feColorMatrix>`(使用变换矩阵转换颜色)`<animate>` (矢量图形的动画部分)和 `<mask>`(在图像顶部应用模板)。
 
+::: demo 一个简单的 SVG
+
 ```html
 <svg
   version="1.1"
@@ -37,6 +39,8 @@ SVG 是用于描述矢量图像的 XML 语言。它基本上是像 HTML 一样�
   <circle cx="150" cy="100" r="90" fill="blue" />
 </svg>
 ```
+
+:::
 
 从上面的例子可以看出，SVG 很容易人工编码。您可以在文本编辑器中手动编写简单的 SVG，但是对于复杂的图像，这就变得非常困难。
 
@@ -61,14 +65,18 @@ SVG 也确实有一些缺点:
 
 要通过 `<img>` 元素嵌入 SVG，你只需要按照预期的方式在 `src` 属性中引用它。你将需要一个 `height` 或 `width` 属性。
 
+::: demo 使用 img 插入 SVG
+
 ```html
 <img
-  src="equilateral.svg"
-  alt="triangle with all three sides equal"
+  src="https://vuepress-theme.mrhope.site/logo.svg"
+  alt="vuepress-theme-hope"
   height="87px"
   width="100px"
 />
 ```
+
+:::
 
 #### 优点
 
@@ -85,13 +93,18 @@ SVG 也确实有一些缺点:
 
 对于不支持 SVG (IE 8 及更低版本，Android 2.3 及更低版本) 的浏览器，您可以从 `src` 属性引用 PNG 或 JPG，并使用 `srcset` 属性来引用 SVG。 在这种情况下，支持的浏览器将加载 SVG，而较旧的浏览器将加载 PNG:
 
+::: demo 兼容上古浏览器
+
 ```html
 <img
-  src="equilateral.png"
-  alt="triangle with equal sides"
-  srcset="equilateral.svg"
+  src="https://vuepress-theme.mrhope.site/logo.png"
+  alt="vuepress-theme-hope"
+  srcset="https://vuepress-theme.mrhope.site/logo.svg"
+  width="100px"
 />
 ```
+
+:::
 
 您还可以使用 SVG 作为 CSS 背景图像，如下所示。 在下面的代码中，旧版浏览器会坚持他们理解的 PNG，而较新的浏览器将加载 SVG:
 
@@ -109,7 +122,7 @@ SVG 也确实有一些缺点:
 
 你可以直接将 SVG 代码插入 HTML 文档中，这称为内联 SVG。确保您的 SVG 代码在 `<svg></svg>` 标签中(不要在外面添加任何内容)。
 
-::: tip 案例
+::: demo 案例
 
 ```html
 <svg width="300" height="200">

@@ -200,7 +200,7 @@ Vue.component("todo-item", {
 ```html
 <ol>
   <!-- 创建一个 todo-item 组件的实例 -->
-  <todo-item></todo-item>
+  <todo-ite />
 </ol>
 ```
 
@@ -231,7 +231,7 @@ Vue.component("todo-item", {
       v-for="item in groceryList"
       v-bind:todo="item"
       v-bind:key="item.id"
-    ></todo-item>
+    />
   </ol>
 </div>
 ```
@@ -260,10 +260,10 @@ const app7 = new Vue({
 
 ```html
 <div id="app">
-  <app-nav></app-nav>
+  <app-nav />
   <app-view>
-    <app-sidebar></app-sidebar>
-    <app-content></app-content>
+    <app-sidebar />
+    <app-content />
   </app-view>
 </div>
 ```

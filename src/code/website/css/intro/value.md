@@ -54,7 +54,7 @@ category: CSS
 | vmin | 视窗较小尺寸的 1%                                                                             |
 | vmax | 视图大尺寸的 1%                                                                               |
 
-::: tip 案例
+::: demo 长度单位
 
 ```html
 <div class="wrapper">
@@ -93,27 +93,10 @@ em 和 rem 是您在从框到文本调整大小时最常遇到的两个相对长
 
 也就是一个是相对于父元素，一个是相对于整个文档的默认字号。
 
-::: tip 案例
+::: demo em 与 rem 演示
 
 ```html
 <ul class="em">
-  <li>一</li>
-  <li>二</li>
-  <li>
-    三
-    <ul>
-      <li>三-1</li>
-      <li>
-        三-2
-        <ul>
-          <li>三-2-1</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<ul class="rem">
   <li>一</li>
   <li>二</li>
   <li>
@@ -151,7 +134,7 @@ html {
 
 在许多情况下，百分比与长度的处理方法是一样的。百分比的问题在于，它们总是相对于其他值设置的。例如，如果将元素的字体大小设置为百分比，那么它将是元素父元素字体大小的百分比。如果使用百分比作为宽度值，那么它将是父值宽度的百分比。
 
-::: tip 案例
+::: demo 百分比与绝对长度
 
 ```html
 <div class="box px">200px 宽</div>
@@ -207,7 +190,7 @@ li {
 
 有些值接受数字，不添加任何单位。
 
-::: tip 案例
+::: demo 数字值
 
 ```html
 <div class="wrapper">
@@ -238,7 +221,7 @@ CSS 预设了一些关键词，比如 `black` `white` `red` 等。
 
 这种颜色值类型是十六进制代码。每个十六进制值由一个 `#` 和六个十六进制数字组成，每个十六进制数字都可以取 0 到 f(代表 15)之间的 16 个值中的一个。每对值表示一个通道。通道依次为: 红色、绿色和蓝色。每个通道可以指定 256 个可用值中的任意一个。
 
-::: tip 案例
+::: demo 十六进制颜色
 
 ```html
 <div class="wrapper">
@@ -268,7 +251,7 @@ CSS 预设了一些关键词，比如 `black` `white` `red` 等。
 
 RGB 值是一个函数 `RGB()`。它有三个参数，表示颜色的红色、绿色和蓝色通道值，与十六进制值的方法非常相似。RGB 的不同之处在于，每个通道不是由两个十六进制数字表示的，而是由一个介于 0 到 255 之间的十进制数字表示的。
 
-::: tip 案例
+::: demo RGB 颜色
 
 ```html
 <div class="wrapper">
@@ -296,7 +279,7 @@ RGB 值是一个函数 `RGB()`。它有三个参数，表示颜色的红色、�
 
 RGBA 的工作方式与 RGB 完全相同，但有第四个值表示颜色的 alpha 通道，它控制不透明度。如果将这个值设置为 0，它将使颜色完全透明，而设置为 1 将使颜色完全不透明。介于两者之间的值提供了不同级别的透明度。
 
-::: tip 案例
+::: demo RGBA 颜色
 
 ```html
 <div class="wrapper">
@@ -334,7 +317,7 @@ RGBA 的工作方式与 RGB 完全相同，但有第四个值表示颜色的 alp
 - 饱和度: 值为 0 - 100%，其中 0 为无颜色(它将显示为灰色阴影)，100%为全色饱和度
 - 亮度: 从 0 - 100%中获取一个值，其中 0 表示没有光(它将完全显示为黑色)，100%表示完全亮(它将完全显示为白色)
 
-::: tip 案例
+::: demo HSL 颜色
 
 ```html
 <div class="wrapper">
@@ -362,7 +345,7 @@ RGBA 的工作方式与 RGB 完全相同，但有第四个值表示颜色的 alp
 
 就像 RGB 和 RGBA，HSL 有 HSLA，它使您能够指定 alpha 通道值。
 
-::: tip 案例
+::: demo HSLA 颜色
 
 ```html
 <div class="wrapper">
@@ -392,16 +375,21 @@ RGBA 的工作方式与 RGB 完全相同，但有第四个值表示颜色的 alp
 
 `<image>` 数据类型用于图像为有效值的任何地方。它可以是一个通过 `url()` 函数指向的实际图像文件，也可以是一个渐变。
 
-::: tip
+::: demo 背景图片
 
 ```html
-<div class="box image"></div>
-<div class="box gradient"></div>
+<div class="box image" />
+<div class="box gradient" />
 ```
 
 ```css
+.box {
+  width: 400px;
+  height: 300px;
+}
+
 .image {
-  background-image: url(star.png);
+  background-image: url(https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png);
 }
 
 .gradient {
@@ -421,17 +409,17 @@ RGBA 的工作方式与 RGB 完全相同，但有第四个值表示颜色的 alp
 
 一个典型的位置值由两个值组成——第一个值水平地设置位置，第二个值垂直地设置位置。如果只指定一个轴的值，另一个轴将默认为 center。
 
-::: tip 案例
+::: demo 位置
 
 ```html
-<div class="box"></div>
+<div class="box" />
 ```
 
 ```css
 .box {
-  height: 300px;
   width: 400px;
-  background-image: url(star.png);
+  height: 300px;
+  background-image: url(https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png);
   background-repeat: no-repeat;
   background-position: right 40px;
 }
@@ -453,7 +441,7 @@ CSS 中的某些值接受字符串，字符串必须用引号包裹起来。
 
 行为更类似于传统编程语言的值是 `calc()` 函数。这个函数使您能够在 CSS 中进行简单的计算。如果您希望计算出在为项目编写 CSS 时无法定义的值，并且需要浏览器在运行时为您计算出这些值，那么它特别有用。
 
-::: tip
+::: demo calc() 计算
 
 ```html
 <div class="wrapper">

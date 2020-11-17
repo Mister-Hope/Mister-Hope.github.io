@@ -34,11 +34,11 @@ tags:
 
 使用整数值扩展缩写时，Emmet 会以 px 单位输出: `m10` → `margin: 10px;`。
 
-使用浮点值扩展缩写时，会以 em 单位输出: `m1.5→ margin: 1.5em;`。
+使用浮点值扩展缩写时，会以 em 单位输出: `m1.5` → `margin: 1.5em;`。
 
 你也可以在值后面紧跟任何字母字符，来显式提供单位名称: `m1.5ex` → `margin: 1.5ex;`，`m10foo` → `margin: 10foo;`。
 
-明确定义单位后，不再需要使用连字符来分隔值: `m10ex20em→ margin: 10ex 20em;`，`m10ex-5→ margin: 10ex -5px;`。
+明确定义单位后，不再需要使用连字符来分隔值: `m10ex20em` → `margin: 10ex 20em;`，`m10ex-5` → `margin: 10ex -5px;`。
 
 ## 值别名
 

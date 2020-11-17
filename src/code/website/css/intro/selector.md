@@ -13,8 +13,10 @@ CSS 选择器是 CSS 规则的第一部分。它是元素和其他部分组合�
 
 <!-- more -->
 
+::: demo 案例
+
 ```html
-<img src="/logo.png" alt="logo" style="max-width: 300px" />
+<img src="/logo.png" alt="logo" style="max-width: 150px" />
 
 <p class="paragraph">Mr.Hope is handsome!</p>
 <p id="par">Mr.Hope is very handsome!</p>
@@ -34,6 +36,8 @@ p {
 }
 ```
 
+:::
+
 在上文中，CSS 选择器选中了对应的 HTML 元素并为其应用样式规则。
 
 ## ID 选择器
@@ -43,8 +47,6 @@ ID 选择器可以为标有特定 ID 的 HTML 元素指定特定的样式。
 HTML 可以用 ID 属性来设置 ID 选择器，CSS 中 ID 选择器以 `#` 来定义。
 
 以下的样式规则应用于元素属性 `id="para1"`:
-
-实例:
 
 ```css
 #para1 {

@@ -11,8 +11,7 @@ category: CSS
 
 `background-color` 属性定义了 CSS 中任何元素的背景颜色。属性接受任何有效的颜色值。背景色扩展到元素的内容和内边距的下面。
 
-::: tip 案例
-为元素盒子添加背景颜色
+::: demo 为元素盒子添加背景颜色
 
 ```html
 <div class="box">
@@ -43,8 +42,7 @@ span {
 
 默认情况下，大图不会缩小以适应方框，因此我们只能看到它的一个小角，而小图则是平铺以填充方框。
 
-::: tip 案例
-两个方框一个有方框大的背景图像、另一个有星星的小图像。
+::: demo 两个方框一个有方框大的背景图像、另一个有星星的小图像。
 
 ```html
 <div class="wrapper">
@@ -54,6 +52,11 @@ span {
 ```
 
 ```css
+.box {
+  width: 400px;
+  height: 200px;
+}
+
 .a {
   background-image: url(https://mdn.github.io/css-examples/learn/backgrounds-borders/balloons.jpg);
 }
@@ -76,9 +79,7 @@ span {
 - `repeat-y` —垂直重复。
 - `repeat` — 在两个方向重复。
 
-::: tip 案例
-
-请自行更改并尝试
+::: demo 请自行更改并尝试
 
 ```html
 <div class="box" />
@@ -86,6 +87,8 @@ span {
 
 ```css
 .box {
+  width: 400px;
+  height: 200px;
   background-image: url(https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png);
   background-repeat: no-repeat;
 }
@@ -104,7 +107,7 @@ span {
 - `cover`: 浏览器将使图像足够大，使它完全覆盖了盒子区，同时仍然保持其高宽比。在这种情况下，有些图像可能会跳出盒子外
 - `contain`: 浏览器将使图像的大小适合盒子内。在这种情况下，如果图像的长宽比与盒子的长宽比不同，则可能在图像的任何一边或顶部和底部出现间隙。
 
-::: tip 案例
+::: demo 案例
 
 请自行更改并尝试:
 
@@ -117,6 +120,8 @@ span {
 
 ```css
 .box {
+  width: 400px;
+  height: 200px;
   background-image: url(https://mdn.github.io/css-examples/learn/backgrounds-borders/balloons.jpg);
   background-repeat: no-repeat;
   background-size: 100px 100px;
@@ -175,11 +180,20 @@ span {
 }
 ```
 
-::: tip 案例
-使用以下 HTML 动手操作体会这些值
+::: demo 动手操作体会这些值
 
 ```html
 <div class="box" />
+```
+
+```css
+.box {
+  width: 400px;
+  height: 200px;
+  background-image: url(https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png);
+  background-repeat: no-repeat;
+  background-position: top 20px right 10px;
+}
 ```
 
 :::

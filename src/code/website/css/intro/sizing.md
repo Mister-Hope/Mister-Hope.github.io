@@ -11,14 +11,14 @@ category: CSS
 
 一个空的 `<div>` 是没有尺寸的。如果你在你的 HTML 文件中添加一个空 `<div>` 并给予其边框，你会在页面上看到一条线。
 
-::: tip 案例
+::: demo 案例
 
 ```html
 <img
-  src="https://mdn.github.io/css-examples/learn/sizing/https://mdn.github.io/css-examples/learn/sizing/star.png"
+  src="https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png"
   alt="star"
 />
-<div class="box"></div>
+<div class="box" />
 ```
 
 ```css
@@ -37,19 +37,23 @@ img {
 
 当给元素指定尺寸时，我们将其称为**外部尺寸**。 我们可以给它一个具体的 `width` 和 `height` 值, 不论它的内容是什么，它将都是该尺寸。
 
-::: tip 案例
+::: demo 设置尺寸
 
 ```html
 <div class="wrapper">
-  <div class="box"></div>
+  <div class="box" />
   <div class="box">
     这两个盒子都设置了高度，但是这个盒子因为内容很多，无法装下，所以最终产生了溢出。Mr.Hope
-    很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅!
+    很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅!
   </div>
 </div>
 ```
 
 ```css
+.wrapper{
+  display: flex;
+}
+
 .box {
   border: 5px solid darkblue;
   height: 150px;
@@ -63,7 +67,7 @@ img {
 
 当使用百分数时，你需要清楚，它是什么东西的百分数。对于一个处于另外一个容器当中的盒子，如果你给予了子盒子一个百分数作为宽度，那么它指的是父容器宽度的百分数。
 
-::: tip 案例
+::: demo 使用百分数
 
 ```html
 <div class="box">我是百分比长度</div>
@@ -88,7 +92,7 @@ img {
 
 当你用百分数设定内外边距的时候，值是以**内联尺寸**进行计算的，也即对于左右书写的语言来说的宽度。在我们的例子里面，所有的内外边距是这一宽度的 10%，也就是说，你可以让盒子周围的内外边距大小相同。在你以这种方式使用百分数的时候，这是一个需要记住的事实。
 
-::: tip
+::: demo 边距
 
 ```html
 <div class="box">所有方向的 margin and padding 都是 10%</div>
@@ -111,19 +115,23 @@ img {
 
 如果你有一个包含了变化容量的内容的盒子，而且你总是想让它至少有个确定的高度，你应该给它设置一个 `min-height` 属性。盒子就会一直保持大于这个最小高度，但是如果有比这个盒子在最小高度状态下所能容纳的更多内容，那么盒子就会变大。这在避免溢出的同时并处理变化容量的内容的时候是很有用的。
 
-::: tip 案例
+::: demo 最大最小尺寸
 
 ```html
 <div class="wrapper">
-  <div class="box"></div>
+  <div class="box" />
   <div class="box">
     这两个盒子都设置了最小高度，但是这个盒子因为内容很多，无法装下，所以最终高度产生了扩大。Mr.Hope
-    很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅!
+    很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅!
   </div>
 </div>
 ```
 
 ```css
+.wrapper{
+  display: flex;
+}
+
 .box {
   border: 5px solid darkblue;
   min-height: 150px;
@@ -135,7 +143,7 @@ img {
 
 `max-width` 的常见用法为，在没有足够空间以原有宽度展示图像时，让图像缩小，同时确保它们不会比这一宽度大。这个技术是用来让图片可响应的，所以在更小的设备上浏览的时候，它们会合适地缩放。
 
-::: tip 案例
+::: demo 最大宽度与图像
 
 ```html
 <div class="wrapper">
@@ -164,15 +172,22 @@ img {
 ```
 
 ```css
+.wrapper{
+  display: flex;
+}
+
 .box {
   width: 200px;
 }
+
 .minibox {
   width: 50px;
 }
+
 .width {
   width: 100%;
 }
+
 .max {
   max-width: 100%;
 }

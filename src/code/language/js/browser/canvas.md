@@ -14,7 +14,7 @@ category: JavaScript
 一个 Canvas 定义了一个指定尺寸的矩形框，在这个范围内我们可以随意绘制:
 
 ```html
-<canvas id="test-canvas" width="300" height="200"></canvas>
+<canvas id="test-canvas" width="300" height="200" />
 ```
 
 由于浏览器对 HTML5 标准支持不一致，所以，通常在`<canvas>`内部添加一些说明性 HTML 代码，如果浏览器支持 Canvas，它将忽略`<canvas>`内部的 HTML，如果浏览器不支持 Canvas，它将显示`<canvas>`内部的 HTML:

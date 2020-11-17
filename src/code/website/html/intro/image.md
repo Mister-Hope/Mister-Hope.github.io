@@ -51,11 +51,11 @@ category: HTML
 
 `alt` 的值应该是对图片的文字描述，用于在图片无法显示或不能被看到的情况。
 
-::: tip 案例
+::: demo 案例
 
 ```html
 <img
-  src="images/dinosaur.jpg"
+  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
   alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"
 />
@@ -97,11 +97,11 @@ category: HTML
 
 你可以用宽度和高度属性来指定你的图片的高度和宽度。
 
-::: tip 案例
+::: demo 设置宽度和高度
 
 ```html
 <img
-  src="images/dinosaur.jpg"
+  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
   alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
   width="400"
   height="341"
@@ -126,15 +126,19 @@ category: HTML
 
 类似于超链接，你可以给图片增加 `title` 属性来提供需要更进一步的支持信息。
 
+::: demo 图片标题
+
 ```html
 <img
-  src="images/dinosaur.jpg"
+  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
   alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
   width="400"
   height="341"
   title="A T-Rex on display in the Manchester University Museum"
 />
 ```
+
+:::
 
 这会给我们一个鼠标悬停提示，看起来就像链接标题。
 
@@ -150,6 +154,8 @@ category: HTML
 
 HTML5 的 `<figure>` 和 `<figcaption>` 元素为图片提供一个语义容器，在标题和图片之间建立清晰的关联。
 
+::: demo HTML5 语义容器
+
 ```html
 <figure>
   <img
@@ -161,6 +167,8 @@ HTML5 的 `<figure>` 和 `<figcaption>` 元素为图片提供一个语义容器�
   <figcaption>曼彻斯特大学博物馆展出的一只霸王龙的化石</figcaption>
 </figure>
 ```
+
+:::
 
 这个 `<figcaption>` 元素 告诉浏览器和其他辅助的技术工具这段说明文字描述了 `<figure>` 元素的内容。
 

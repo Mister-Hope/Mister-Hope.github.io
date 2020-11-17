@@ -9,10 +9,11 @@ category: CSS
 
 CSS 中的书写模式是指文本的排列方向是横向还是纵向的。`writing-mode` 属性使我们从一种模式切换到另一种模式。为此，你不必使用一种竖向的语言——你还可以更改部分文字的方向以实现创新性的布局。
 
-::: tip 案例
-本案例使用 `writing-mode: vertical-rl` 对一个标题的显示进行设置，将标题文本变为竖向。
+可以使用 `writing-mode: vertical-rl` 对一个标题的显示进行设置，将标题文本变为竖向。
 
 竖向文本在平面设计中很常见，也可以为你的网页设计增添更加有趣的外观。
+
+::: demo 竖向标题文本
 
 ```html
 <h1>Play with writing modes</h1>
@@ -62,7 +63,7 @@ CSS 的映射属性用逻辑(logical)和相对变化(flow relative)代替了像�
 
 横向书写模式下，映射到 width 的属性被称作内联尺寸(inline-size)——内联维度的尺寸。而映射 height 的属性被称为块级尺寸(block-size)，这是块级维度的尺寸。下面的例子展示了替换掉 width 的 inline-size 是如何生效的。
 
-::: tip 案例
+::: demo 映射属性
 
 ```html
 <div class="wrapper">
@@ -80,6 +81,10 @@ CSS 的映射属性用逻辑(logical)和相对变化(flow relative)代替了像�
 ```
 
 ```css
+.wrapper{
+  display: flex;
+}
+
 .box {
   inline-size: 150px;
 }

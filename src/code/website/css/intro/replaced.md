@@ -29,13 +29,13 @@ CSS 能对可替换元素产生的唯一影响在于，部分属性支持控制�
 - `contain` 会缩放图片到足以放到盒子里面的大小。如果它和盒子的比例不同，会在某侧留白。
 - `fill` 可以让图像充满盒子，但是不会维持比例。
 
-::: tip 案例
+::: demo 调整图像大小
 
 ```html
 <div class="wrapper">
-  <div class="box"><img src="balloons.jpg" alt="balloons" class="cover" /></div>
+  <div class="box"><img src="https://mdn.github.io/css-examples/learn/backgrounds-borders/balloons.jpg" alt="balloons" class="cover" /></div>
   <div class="box">
-    <img src="balloons.jpg" alt="balloons" class="contain" />
+    <img src="https://mdn.github.io/css-examples/learn/backgrounds-borders/balloons.jpg" alt="balloons" class="contain" />
   </div>
 </div>
 ```
@@ -66,15 +66,15 @@ img {
 
 替换元素使用各式 CSS 布局技巧时，他们的展现略微与其他元素不同。
 
-::: tip 案例
+::: demo 布局中的替换元素
 在一个 flex 或者 grid 布局中，元素默认会把拉伸到充满整块区域。图像不会拉伸，而是会被对齐到网格区域或者弹性容器的起始处。
 
 ```html
 <div class="wrapper">
-  <img src="star.png" alt="star" />
-  <div></div>
-  <div></div>
-  <div></div>
+  <img src="https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png" alt="star" />
+  <div />
+  <div />
+  <div />
 </div>
 ```
 

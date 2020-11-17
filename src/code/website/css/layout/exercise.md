@@ -29,7 +29,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 
 ```html
 <div class="box">
-  <span class="item"></span>
+  <span class="item" />
 </div>
 ```
 
@@ -216,12 +216,12 @@ HTML 代码如下。
 ```html
 <div class="box">
   <div class="column">
-    <span class="item"></span>
-    <span class="item"></span>
+    <span class="item" />
+    <span class="item" />
   </div>
   <div class="column">
-    <span class="item"></span>
-    <span class="item"></span>
+    <span class="item" />
+    <span class="item" />
   </div>
 </div>
 ```
@@ -272,16 +272,16 @@ HTML 代码如下。
 ```html
 <div class="box">
   <div class="row">
-    <span class="item"></span>
-    <span class="item"></span>
-    <span class="item"></span>
+    <span class="item" />
+    <span class="item" />
+    <span class="item" />
   </div>
   <div class="row">
-    <span class="item"></span>
+    <span class="item" />
   </div>
   <div class="row">
-    <span class="item"></span>
-    <span class="item"></span>
+    <span class="item" />
+    <span class="item" />
   </div>
 </div>
 ```

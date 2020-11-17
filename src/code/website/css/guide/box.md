@@ -38,10 +38,15 @@ div {
 ## 元素的宽度和高度
 
 当您指定一个 CSS 元素的宽度和高度属性时，您只是设置内容区域(content box)的宽度和高度。`padding` 和 `border` 再加上设置的宽高一起决定整个盒子的大小。
-:::
+
+::: demo 元素的宽度与高度
+
+```html
+<div class="box" />
+```
 
 ```css
-div {
+div.box {
   width: 300px;
   border: 25px solid green;
   padding: 25px;
@@ -53,16 +58,26 @@ div {
 
 元素占据的空间为: 300px (宽) + 50px (左 + 右填充) + 50px (左 + 右边框) + 50px (左 + 右边距) = 450px
 
+:::
+
 试想一下，您只有 250px 的空间。让我们设置总宽度为 250px 的元素:
 
+::: demo 总宽度 250px 的元素
+
+```html
+<div class="box" />
+```
+
 ```css
-div {
+div.box {
   width: 220px;
   padding: 10px;
   border: 5px solid gray;
   margin: 0;
 }
 ```
+
+:::
 
 最终元素的总宽度计算公式是这样的:
 

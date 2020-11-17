@@ -19,19 +19,19 @@ URL 可以指向 HTML 文件、文本文件、图像、文本文档、视频和�
 
 通过将文本(或其他内容，见块级链接)转换为 `<a>` 元素内的链接来创建基本链接， 给它一个 `href` 属性(也称为目标)，它将包含您希望链接指向的网址。
 
+::: demo 链接 Demo
+
 ```html
 <p>我正在创建<a href="https://baidu.com">一个指向百度主页的链接</a>.</p>
 ```
 
-结果如下所示:
-
-我正在创建 [一个指向百度主页的链接](https://baidu.com).
+:::
 
 ## 使用 title 属性
 
 title 属性旨在包含关于链接的补充有用信息，例如页面包含什么样的信息或需要注意的事情。
 
-::: tip 案例
+::: demo Title 属性
 
 ```html
 <p>
@@ -143,19 +143,16 @@ URL 使用路径查找文件。路径指定文件系统中您感兴趣的文件�
 - 搜索引擎使用链接文本来索引目标文件，所以在链接文本中包含关键词是一个很好的主意，以有效地描述与之相关的信息。
 - 读者往往会浏览页面而不是阅读每一个字，他们的眼睛会被页面的特征所吸引，比如链接。他们会找到描述性的链接。
 
-::: tip 案例
-好的链接文本: [下载 Firefox](https://firefox.com/)
+::: demo 清晰的链接
 
 ```html
 <p>
+  好的链接文本:
   <a href="https://firefox.com/"> 下载Firefox </a>
 </p>
-```
 
-不好的链接文本: [点击这里](https://firefox.com/)下载 Firefox
-
-```html
 <p>
+  不好的链接文本:
   <a href="https://firefox.com/"> 点击这里 </a>
   下载Firefox
 </p>
@@ -183,7 +180,7 @@ URL 使用路径查找文件。路径指定文件系统中您感兴趣的文件�
 - 如果您是在低带宽连接，点击一个链接，然后就开始下载大文件。
 - 如果您没有安装 Flash 播放器，点击一个链接，然后突然被带到一个需要 Flash 的页面。
 
-::: tip 案例
+::: demo 为链接留下提示
 
 ```html
 <p>
@@ -209,20 +206,24 @@ URL 使用路径查找文件。路径指定文件系统中您感兴趣的文件�
 
 当您链接到要下载的资源而不是在浏览器中打开时，您可以使用 `download` 属性来提供一个默认的保存文件名 (此属性仅适用于同源 URL)。下面是一个下载链接到 Firefox 的 Windows 最新版本的示例:
 
+::: demo download 属性
+
 ```html
 <a
   href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
   download="firefox-latest-64bit-installer.exe"
 >
-  Download Latest Firefox for Windows (64-bit) (English, US)
+  下载最新的 Windows 版 Firefox (64-bit) (English, US)
 </a>
 ```
+
+:::
 
 ## 电子邮件链接
 
 当点击一个链接或按钮时，打开一个新的电子邮件发送信息而不是连接到一个资源或页面，这种情况是可能做到的。这样做是使用 `<a>` 元素和 `mailto:` URL 的方案。其最基本和最常用的使用形式为一个 `mailto:link`，链接简单说明收件人的电子邮件地址。
 
-::: tip 案例
+::: demo 电子邮箱链接
 
 ```html
 <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
@@ -238,7 +239,7 @@ URL 使用路径查找文件。路径指定文件系统中您感兴趣的文件�
 
 除了电子邮件地址，您还可以提供其他信息。事实上，任何标准的邮件头字段可以被添加到您提供的邮件 URL。其中最常用的是主题(subject)、抄送(cc)和主体(body) (这不是一个真正的头字段，但允许您为新邮件指定一个短内容消息)。每个字段及其值被指定为查询项。
 
-::: tip 案例
+::: demo 在链接中提供信息
 
 ```html
 <a
@@ -246,7 +247,5 @@ URL 使用路径查找文件。路径指定文件系统中您感兴趣的文件�
   >发送邮件</a
 >
 ```
-
-[发送邮件](mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email)
 
 :::
