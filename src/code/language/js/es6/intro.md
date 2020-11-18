@@ -69,7 +69,7 @@ ES6 从开始制定到最后发布，整整用了 15 年。
 
 2009 年 12 月，ECMAScript 5.0 版正式发布。Harmony 项目则一分为二，一些较为可行的设想定名为 JavaScript.next 继续开发，后来演变成 ECMAScript 6；一些不是很成熟的设想，则被视为 JavaScript.next.next，在更远的将来再考虑推出。TC39 委员会的总体考虑是，ES5 与 ES3 基本保持兼容，较大的语法修正和新功能加入，将由 JavaScript.next 完成。当时，JavaScript.next 指的是 ES6，第六版发布以后，就指 ES7。TC39 的判断是，ES5 会在 2013 年的年中成为 JavaScript 开发的主流标准，并在此后五年中一直保持这个位置。
 
-2011 年 6 月，ECMAscript 5.1 版发布，并且成为 ISO 国际标准(ISO/IEC 16262:2011)。
+2011 年 6 月，ECMAScript 5.1 版发布，并且成为 ISO 国际标准(ISO/IEC 16262:2011)。
 
 2013 年 3 月，ECMAScript 6 草案冻结，不再添加新功能。新的功能设想将被放到 ECMAScript 7。
 
@@ -81,7 +81,7 @@ ES6 从开始制定到最后发布，整整用了 15 年。
 
 各大浏览器的最新版本，对 ES6 的支持可以查看[kangax.github.io/es5-compat-table/es6/](https://kangax.github.io/es5-compat-table/es6/)。随着时间的推移，支持度已经越来越高了，超过 90%的 ES6 语法特性都实现了。
 
-Node 是 JavaScript 的服务器运行环境(runtime)。它对 ES6 的支持度更高。除了那些默认打开的功能，还有一些语法功能已经实现了，但是默认没有打开。使用下面的命令，可以查看 Node 已经实现的 ES6 特性。
+Node.js 是 JavaScript 的服务器运行环境(runtime)。它对 ES6 的支持度更高。除了那些默认打开的功能，还有一些语法功能已经实现了，但是默认没有打开。使用下面的命令，可以查看 Node.js 已经实现的 ES6 特性。
 
 ```bash
 node --v8-options | grep harmony
@@ -89,7 +89,7 @@ node --v8-options | grep harmony
 
 上面命令的输出结果，会因为版本的不同而有所不同。
 
-我写了一个工具 [ES-Checker](https://github.com/ruanyf/es-checker)，用来检查各种运行环境对 ES6 的支持情况。访问[ruanyf.github.io/es-checker](https://ruanyf.github.io/es-checker)，可以看到您的浏览器支持 ES6 的程度。运行下面的命令，可以查看您正在使用的 Node 环境对 ES6 的支持程度。
+我写了一个工具 [ES-Checker](https://github.com/ruanyf/es-checker)，用来检查各种运行环境对 ES6 的支持情况。访问[ruanyf.github.io/es-checker](https://ruanyf.github.io/es-checker)，可以看到您的浏览器支持 ES6 的程度。运行下面的命令，可以查看您正在使用的 Node.js 环境对 ES6 的支持程度。
 
 ```bash
 $ npm install -g es-checker
@@ -224,7 +224,7 @@ npm run build
 
 ### babel-node
 
-`babel-cli`工具自带一个`babel-node`命令，提供一个支持 ES6 的 REPL 环境。它支持 Node 的 REPL 环境的所有功能，而且可以直接运行 ES6 代码。
+`babel-cli`工具自带一个`babel-node`命令，提供一个支持 ES6 的 REPL 环境。它支持 Node.js 的 REPL 环境的所有功能，而且可以直接运行 ES6 代码。
 
 它不用单独安装，而是随`babel-cli`一起安装。然后，执行`babel-node`就进入 REPL 环境。
 
@@ -535,7 +535,7 @@ $traceurRuntime.ModuleStore.getAnonymousModule(function() {
 
 ### 命令行转换
 
-作为命令行工具使用时，Traceur 是一个 Node 的模块，首先需要用 npm 安装。
+作为命令行工具使用时，Traceur 是一个 Node.js 的模块，首先需要用 npm 安装。
 
 ```bash
 npm install -g traceur
@@ -567,9 +567,9 @@ traceur --script calc.es6.js --out calc.es5.js --experimental
 
 命令行下转换生成的文件，就可以直接放到浏览器中运行。
 
-### Node 环境的用法
+### Node.js 环境的用法
 
-Traceur 的 Node 用法如下(假定已安装`traceur`模块)。
+Traceur 的 Node.js 用法如下(假定已安装`traceur`模块)。
 
 ```js
 var traceur = require("traceur");

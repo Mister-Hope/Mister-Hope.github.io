@@ -9,7 +9,7 @@ copyrightText: 此部分博客采用 <a href="http://creativecommons.org/license
 
 ES2017 标准引入了 async 函数，使得异步操作变得更加方便。
 
-async 函数是什么? 一句话，它就是 Generator 函数的语法糖。
+Async 函数是什么? 一句话，它就是 Generator 函数的语法糖。
 
 <!-- more -->
 
@@ -130,7 +130,7 @@ async function asyncPrint(value, ms) {
 asyncPrint("hello world", 50);
 ```
 
-async 函数有多种使用形式。
+Async 函数有多种使用形式。
 
 ```js
 // 函数声明
@@ -481,7 +481,7 @@ console.log(await res.text());
 
 ## async 函数的实现原理
 
-async 函数的实现原理，就是将 Generator 函数和自动执行器，包装在一个函数里。
+Async 函数的实现原理，就是将 Generator 函数和自动执行器，包装在一个函数里。
 
 ```js
 async function fn(args) {
@@ -808,7 +808,7 @@ async function () {
 // b
 ```
 
-Node v10 支持异步遍历器，Stream 就部署了这个接口。下面是读取文件的传统写法与异步遍历器写法的差异。
+Node.js v10 支持异步遍历器，Stream 就部署了这个接口。下面是读取文件的传统写法与异步遍历器写法的差异。
 
 ```js
 // 传统写法

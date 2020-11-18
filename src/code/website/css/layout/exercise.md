@@ -60,6 +60,8 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 
 :::
 
+<!-- markdownlint-disable -->
+
 <style>
 .container {
   display: flex;
@@ -94,6 +96,8 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
   font-size: 14px;
 }
 </style>
+
+<!-- markdownlint-enable -->
 
 ### 单项目
 

@@ -2,13 +2,13 @@
 icon: info
 ---
 
-# About Website
+# About site
 
 ::: tip building
-This website is built with [Vuepress](https://v1.vuepress.vuejs.org/guide/).
+This site is built with [VuePress](https://v1.vuepress.vuejs.org/guide/).
 :::
 
-## Repo Link
+## Repository Link
 
 - [**Mr.Hope’s Personal Blog**](https://github.com/Mister-Hope/blog)
 
