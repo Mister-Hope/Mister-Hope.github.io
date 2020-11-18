@@ -4,7 +4,7 @@
 
 下面是`example.txt`文件的内容。
 
-```
+```text
 Lorem ipsum
 dolor sit amet,
 consetetur

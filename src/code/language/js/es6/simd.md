@@ -204,7 +204,7 @@ SIMD.Float64x2.sqrt(b);
 // Float64x2[2, 2.8284271247461903]
 ```
 
-### SIMD.%FloatType%.reciprocalApproximation()，SIMD.%type%.reciprocalSqrtApproximation()
+### SIMD.%FloatType%.reciprocalApproximation()
 
 `reciprocalApproximation`方法接受一个 SIMD 值作为参数，求出每个通道的倒数(`1 / x`)，作为一个新的 SIMD 值返回。
 
@@ -213,6 +213,8 @@ var a = SIMD.Float32x4(1, 2, 3, 4);
 SIMD.Float32x4.reciprocalApproximation(a);
 // Float32x4[1, 0.5, 0.3333333432674408, 0.25]
 ```
+
+### SIMD.%type%.reciprocalSqrtApproximation()
 
 `reciprocalSqrtApproximation`方法接受一个 SIMD 值作为参数，求出每个通道的平方根的倒数(`1 / (x^0.5)`)，作为一个新的 SIMD 值返回。
 

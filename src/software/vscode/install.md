@@ -51,11 +51,11 @@ VS Code 支持打开文件和文件夹。
 
 先运行 Automator，选择 **服务**:
 
-![automator-service](./assets/automator-service.png)
+![Automator Service](./assets/automator-service.png)
 
 然后，执行以下操作:
 
-![automator](./assets/automator.jpg)
+![Automator](./assets/automator.jpg)
 
 1. 在右侧面板选择 **服务** 收到选定的 **文件夹**，位于 “Finder.app”，该选项是为了从 Finder 中接收一个文件夹；
 
@@ -72,4 +72,4 @@ done
 
 保存为 **Open With VS Code** 后，打开 Finder，选中一个文件夹，点击右键， **服务**，就可以看到 **Open With VS Code** 菜单:
 
-![open-with-vscode](./assets/open-with-vscode.png)
+![Open with VSCode](./assets/open-with-vscode.png)

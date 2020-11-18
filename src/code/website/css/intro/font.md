@@ -292,7 +292,7 @@ Web 字体是一种 CSS 特性，允许您指定在访问时随您的网站一�
 
 首先，你需要尽早声明 `@font-face`块，它指定要下载的字体文件:
 
-```
+```css
 @font-face {
   font-family: "myFont";
   src: url("myFont.ttf");

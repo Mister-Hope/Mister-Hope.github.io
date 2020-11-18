@@ -41,10 +41,10 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 ![Flex 示意图](./assets/flex.png)
 
-- 主轴（main axis）是沿着 flex 元素放置的方向延伸的轴（比如页面上的横向的行、纵向的列）。该轴的开始和结束被称为 main start 和 main end。
-- 交叉轴（cross axis）是垂直于 flex 元素放置方向的轴。该轴的开始和结束被称为 cross start 和 cross end。
-- 设置了 `display: flex` 的父元素被称之为 flex 容器（flex container）。
-- 在 flex 容器中表现为柔性的盒子的元素被称之为 flex 项（flex item）
+- 主轴 (main axis) 是沿着 flex 元素放置的方向延伸的轴(比如页面上的横向的行、纵向的列)。该轴的开始和结束被称为 main start 和 main end。
+- 交叉轴 (cross axis) 是垂直于 flex 元素放置方向的轴。该轴的开始和结束被称为 cross start 和 cross end。
+- 设置了 `display: flex` 的父元素被称之为 flex 容器(flex container)。
+- 在 flex 容器中表现为柔性的盒子的元素被称之为 flex 项(flex item)
 - 单个项目占据的主轴空间叫做 main size，占据的交叉轴空间叫做 cross size。
 
 ::: tip

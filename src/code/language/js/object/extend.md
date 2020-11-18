@@ -39,13 +39,13 @@ function PrimaryStudent(props) {
 
 但是，调用了 `Student` 构造函数不等于继承了 `Student`，`PrimaryStudent` 创建的对象的原型是:
 
-```
+```text
 new PrimaryStudent() ----> PrimaryStudent.prototype ----> Object.prototype ----> null
 ```
 
 必须想办法把原型链修改为:
 
-```
+```text
 new PrimaryStudent() ----> PrimaryStudent.prototype ----> Student.prototype ----> Object.prototype ----> null
 ```
 

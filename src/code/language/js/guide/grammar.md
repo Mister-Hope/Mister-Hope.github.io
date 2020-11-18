@@ -128,7 +128,7 @@ JavaScript 提供两种注释的写法:
 
 由于历史遗留问题[^htmlcomment]，JavaScript 可以兼容 HTML 代码的注释。不过请不要使用此做法。
 
-[^htmlcomment]: **使用 HTML 代码的注释**
+[^htmlcomment]: 使用 HTML 代码的注释
 
     由于历史上 JavaScript 可以兼容 HTML 代码的注释，所以 `<!--` 和 `-->` 也被视为合法的单行注释。
 

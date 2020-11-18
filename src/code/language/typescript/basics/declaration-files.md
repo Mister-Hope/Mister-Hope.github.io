@@ -61,7 +61,7 @@ jQuery("#foo");
 
 一般来说，ts 会解析项目中所有的 `*.ts` 文件，当然也包含以 `.d.ts` 结尾的文件。所以当我们将 `jQuery.d.ts` 放到项目中时，其他所有 `*.ts` 文件就都可以获得 `jQuery` 的类型定义了。
 
-```
+```structure
 /path/to/project
 ├── src
 |  ├── index.ts
@@ -485,7 +485,7 @@ jQuery.ajax("/api/get_something");
 
 目录结构:
 
-```
+```structure
 /path/to/project
 ├── src
 | └── index.ts
@@ -1082,7 +1082,7 @@ export declare function bar(): string;
 此时有两种方案:
 
 1. 将声明文件和源码放在一起
-2. 将声明文件发布到 `@types` 下
+1. 将声明文件发布到 `@types` 下
 
 这两种方案中优先选择第一种方案。保持声明文件与源码在一起，使用时就不需要额外增加单独的声明文件库的依赖了，而且也能保证声明文件的版本与源码的版本保持一致。
 

@@ -28,7 +28,7 @@ for name in names:
 
 执行这段代码，会依次打印`names`的每一个元素:
 
-```
+```text
 Michael
 Bob
 Tracy

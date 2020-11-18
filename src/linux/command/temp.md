@@ -109,7 +109,7 @@ usermod -a -G groupA user
 
 命令的所有的选项，及其含义:
 
-```
+```text
 Options:
 
 -c, –comment COMMENT new value of the GECOS field

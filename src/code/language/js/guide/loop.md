@@ -46,7 +46,7 @@ while (条件) {
 
 这里是一个例子[^whiledemo]。
 
-[^whiledemo]: **while 循环案例**
+[^whiledemo]: while 循环案例
 
     比如我们要计算 100 以内所有奇数之和，可以用 `while` 循环实现:
 

@@ -40,7 +40,7 @@ Object object
 | fail     | function | 否   | 接口调用失败的回调函数                                                                                                                                                   |
 | complete | function | 否   | 接口调用结束的回调函数(调用成功、失败都会执行)                                                                                                                           |
 
-### navigateToObject.success 回调函数 <MyBadge text="初学无需掌握" type="grey" />
+### navigateToObject.success <MyBadge text="初学无需掌握" type="grey" />
 
 参数
 

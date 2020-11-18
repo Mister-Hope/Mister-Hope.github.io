@@ -40,7 +40,7 @@ def fact(n):
 
 如果我们计算`fact(5)`，可以根据函数定义看到计算过程如下:
 
-```
+```text
 ===> fact(5)
 ===> 5 *fact(4)
 ===> 5* (4 *fact(3))
@@ -87,7 +87,7 @@ def fact_iter(num, product):
 
 `fact(5)` 对应的 `fact_iter(5, 1)` 的调用如下:
 
-```
+```text
 ===> fact_iter(5, 1)
 ===> fact_iter(4, 5)
 ===> fact_iter(3, 20)

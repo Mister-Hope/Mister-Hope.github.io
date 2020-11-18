@@ -44,13 +44,14 @@ img {
   <div class="box" />
   <div class="box">
     这两个盒子都设置了高度，但是这个盒子因为内容很多，无法装下，所以最终产生了溢出。Mr.Hope
-    很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅!
+    很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅!
+    Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅!
   </div>
 </div>
 ```
 
 ```css
-.wrapper{
+.wrapper {
   display: flex;
 }
 
@@ -122,13 +123,14 @@ img {
   <div class="box" />
   <div class="box">
     这两个盒子都设置了最小高度，但是这个盒子因为内容很多，无法装下，所以最终高度产生了扩大。Mr.Hope
-    很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅!
+    很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅!
+    Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅!
   </div>
 </div>
 ```
 
 ```css
-.wrapper{
+.wrapper {
   display: flex;
 }
 
@@ -172,7 +174,7 @@ img {
 ```
 
 ```css
-.wrapper{
+.wrapper {
   display: flex;
 }
 

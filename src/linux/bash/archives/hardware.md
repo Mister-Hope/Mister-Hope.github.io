@@ -28,7 +28,7 @@ Swap: 1052248 104712 947536
 
 文件`/etc/fstab`配置系统启动时要挂载的设备。
 
-```
+```text
 LABEL=/12               /               ext3        defaults        1   1
 LABEL=/home             /home           ext3        defaults        1   2
 LABEL=/boot             /boot           ext3        defaults        1   2

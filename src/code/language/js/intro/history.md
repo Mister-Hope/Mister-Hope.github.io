@@ -13,7 +13,7 @@ tags:
 
 JavaScript 因为互联网而生，紧跟着浏览器的出现而问世。回顾它的历史，就要从浏览器的历史[^history]讲起。
 
-[^history]: **浏览器的历史**
+[^history]: 浏览器的历史
 
     1990 年底，欧洲核能研究组织(CERN)科学家 Tim Berners-Lee，在全世界最大的电脑网络——互联网的基础上，发明了万维网(World Wide Web)，从此可以在网上浏览网页文件。最早的网页只能在操作系统的终端里浏览，也就是说只能使用命令行操作，网页都是在字符窗口中显示，这当然非常不方便。
 
@@ -46,7 +46,7 @@ JavaScript 因为互联网而生，紧跟着浏览器的出现而问世。回顾
 
 两者是完全不同的两种语言，当时为了提高这门新语言的热度，在命名上碰瓷[^bump]了当时比较火热的 Java 语言，在写法上也做了很大的贴近。
 
-[^bump]: **卓越的碰瓷**
+[^bump]: 卓越的碰瓷
 
     这里专门说一下 JavaScript 和 Java 的关系。它们是两种不一样的语言，但是彼此存在联系。
 
@@ -72,7 +72,7 @@ JavaScript 因为互联网而生，紧跟着浏览器的出现而问世。回顾
 
 不过大多数时候，我们还是用 JavaScript 这个词。如果您遇到 ECMAScript 这个词，简单把它替换为 JavaScript 就行了。
 
-[^ecma]: **JavaScript 与 ECMAScript 的历史**
+[^ecma]: JavaScript 与 ECMAScript 的历史
 
     因为网景开发了 JavaScript，一年后在 1996 年 8 月，微软模仿 JavaScript 开发了一种相近的语言，取名为 JScript (JavaScript 是 Netscape 的注册商标，微软不能用)，首先内置于 IE 3.0。Netscape 公司面临丧失浏览器脚本语言的主导权的局面。
 
@@ -94,7 +94,7 @@ JavaScript 语言是在 10 天时间内设计出来的，虽然语言的设计�
 
 不过，JavaScript 的核心语法并没有多大变化。我们的教程会先讲 JavaScript 最核心的用法，然后，针对 ES6 讲解新增特性。
 
-[^version]: **版本历史**
+[^version]: 版本历史
 
     1997 年 7 月，ECMAScript 1.0 发布。
 
@@ -120,7 +120,7 @@ JavaScript 语言是在 10 天时间内设计出来的，虽然语言的设计�
 
 JavaScript 伴随着互联网的发展一起发展。互联网周边技术的快速发展，刺激和推动了 JavaScript 语言的发展[^develop]。
 
-[^develop]: **JavaScript 大事记**
+[^develop]: JavaScript 大事记
 
     1996 年，样式表标准 CSS 第一版发布。
 

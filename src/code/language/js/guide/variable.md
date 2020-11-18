@@ -24,11 +24,11 @@ tags:
 
 下面这些都是合法的标识符。
 
-```
-arg0
-_tmp
-$elem
-π
+```js
+arg0;
+_tmp;
+$elem;
+π;
 ```
 
 下面这些则是不合法的标识符。
@@ -53,7 +53,7 @@ var 临时变量 = 1;
 
 另外 JavaScript 有一些 保留字[^preserve]，不能用作标识符。
 
-[^preserve]: **JavaScript 的保留字:**
+[^preserve]: JavaScript 的保留字:
 
     arguments、break、case、catch、class、const、continue、debugger、default、delete、do、else、enum、eval、export、extends、false、finally、for、function、if、implements、import、in、instanceof、interface、let、new、null、package、private、protected、public、return、static、super、switch、this、throw、true、try、typeof、var、void、while、with、yield。
 
@@ -67,7 +67,7 @@ var a;
 
 但是由于其带来的不好效果[^lift]，在后来，JavaScript 更改了声明变量的方式，使用 `let` 与 `const`。
 
-[^lift]: **历史遗留问题-变量提升**
+[^lift]: 历史遗留问题-变量提升
 
     JavaScript 引擎的工作方式是，先解析代码，获取所有被声明的变量，然后再一行一行地运行。这造成的结果，就是所有的变量的声明语句，都会被提升到代码的头部，这就叫做变量提升(hoisting)。
 

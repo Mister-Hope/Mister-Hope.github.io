@@ -15,7 +15,7 @@ copyrightText: Copyright by 廖雪峰 Edited by Mr.Hope
 
 如果两个平行宇宙互不干扰，那对现在的您也没啥影响。不过，在某个时间点，两个平行宇宙合并了，结果，您既学会了 Git 又学会了 SVN!
 
-![learn-branches](./assets/learn-branches.png)
+![Learn branches](./assets/learn-branches.png)
 
 分支在实际中有什么用呢? 假设您准备开发一个新功能，但是需要两周才能完成，第一周您写了 50% 的代码，如果立刻提交，由于代码还没写完，不完整的代码库会导致别人不能干活了。如果等代码全部写完再一次提交，又存在丢失每天进度的巨大风险。
 
@@ -240,7 +240,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 我们可以直接查看 readme.txt 的内容:
 
-```
+```diff
 Git is a distributed version control system.
 Git is free software distributed under the GPL.
 Git has a mutable index called stage.
@@ -926,7 +926,7 @@ $ git log --graph --pretty=oneline --abbrev-commit
 ...
 ```
 
-原本分叉的提交现在变成一条直线了! 这种神奇的操作是怎么实现的? 其实原理非常简单。我们注意观察，发现 Git 把我们本地的提交“挪动”了位置，放到了 `f005ed4 (origin/master) set exit=1` 之后，这样，整个提交历史就成了一条直线。rebase 操作前后，最终的提交内容是一致的，但是，我们本地的 commit 修改内容已经变化了，它们的修改不再基于 `d1be385 init hello`，而是基于 `f005ed4 (origin/master) set exit=1`，但最后的提交 `7e61ed4` 内容是一致的。
+原本分叉的提交现在变成一条直线了! 这种神奇的操作是怎么实现的? 其实原理非常简单。我们注意观察，发现 Git 把我们本地的提交“挪动”了位置，放到了 `f005ed4 (origin/master) set exit=1` 之后，这样，整个提交历史就成了一条直线。`rebase` 操作前后，最终的提交内容是一致的，但是，我们本地的 commit 修改内容已经变化了，它们的修改不再基于 `d1be385 init hello`，而是基于 `f005ed4 (origin/master) set exit=1`，但最后的提交 `7e61ed4` 内容是一致的。
 
 这就是 `rebase` 操作的特点: 把分叉的提交历史“整理”成一条直线，看上去更直观。缺点是本地的分叉提交已经被修改过了。
 

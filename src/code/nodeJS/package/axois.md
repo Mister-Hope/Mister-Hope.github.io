@@ -157,7 +157,7 @@ axios({
 });
 ```
 
-### axios(url[, config])
+### axios(url\[, config\])
 
 ```js
 // Send a GET request (default method)

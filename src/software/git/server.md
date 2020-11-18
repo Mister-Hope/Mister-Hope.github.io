@@ -15,7 +15,7 @@ GitHub 就是一个免费托管代码的远程仓库。但是对于某些视源�
 
 搭建 Git 服务器需要准备一台运行 Linux 的机器，强烈推荐用 Ubuntu 或 Debian，这样，通过几条简单的 `apt` 命令就可以完成安装。
 
-- **Ubuntu 或 Debian**
+- **Ubuntu** 或 **Debian**
 
   假设您已经有 sudo 权限的用户账号，下面，正式开始安装。
 

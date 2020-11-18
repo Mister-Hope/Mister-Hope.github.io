@@ -547,18 +547,18 @@ uint8c[0]; // 0
 
 上面例子中，`uint8C`是一个`Uint8ClampedArray`视图，正向溢出时都返回 255，负向溢出都返回 0。
 
-### TypedArray.prototype.buffer
+### TypedArray buffer
 
-TypedArray 实例的`buffer`属性，返回整段内存区域对应的`ArrayBuffer`对象。该属性为只读属性。
+TypedArray 实例的 `buffer` 属性，返回整段内存区域对应的`ArrayBuffer`对象。该属性为只读属性。
 
 ```js
 const a = new Float32Array(64);
 const b = new Uint8Array(a.buffer);
 ```
 
-上面代码的`a`视图对象和`b`视图对象，对应同一个`ArrayBuffer`对象，即同一段内存。
+上面代码的 `a` 视图对象和 `b` 视图对象，对应同一个 `ArrayBuffer` 对象，即同一段内存。
 
-### TypedArray.prototype.byteLength，TypedArray.prototype.byteOffset
+### TypedArray byteLength 与 byteOffset
 
 `byteLength`属性返回 TypedArray 数组占据的内存长度，单位为字节。`byteOffset`属性返回 TypedArray 数组从底层`ArrayBuffer`对象的哪个字节开始。这两个属性都是只读属性。
 

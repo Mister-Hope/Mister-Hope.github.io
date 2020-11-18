@@ -23,7 +23,7 @@ copyrightText: Copyright by 廖雪峰 Edited by Mr.Hope
 
 假设您在 Windows 下进行 Python 开发，Windows 会自动在有图片的目录下生成隐藏的缩略图文件，如果有自定义目录，目录下就会有 `Desktop.ini` 文件，因此您需要忽略 Windows 自动生成的垃圾文件:
 
-```
+```gitignore
 Thumbs.db
 ehthumbs.db
 Desktop.ini
@@ -31,7 +31,7 @@ Desktop.ini
 
 然后，继续忽略 Python 编译产生的 `.pyc`、`.pyo`、`dist` 等文件或目录:
 
-```
+```gitignore
 _.py[cod]
 _.so
 _.egg
@@ -42,7 +42,7 @@ build
 
 加上您自己定义的文件，最终得到一个完整的 `.gitignore` 文件，内容如下:
 
-```
+```gitignore
 # Windows:
 
 Thumbs.db
@@ -110,7 +110,7 @@ Git 会告诉我们，`.gitignore` 的第 3 行规则忽略了该文件，于是
 
 一个具体的例子:
 
-```
+```gitignore
 # 忽略所有的 .a 文件
 *.a
 

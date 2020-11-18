@@ -12,7 +12,7 @@ Git Large File Storage (LFS) replaces large files such as audio samples, videos,
 
 ## Getting Started
 
-1. Download and install the Git command line extension. Once downloaded and installed, set up Git LFS and its respective hooks by running:
+1. Download and install the Git command-line extension. Once downloaded and installed, set up Git LFS and its respective hooks by running:
 
    ```sh
    git lfs install

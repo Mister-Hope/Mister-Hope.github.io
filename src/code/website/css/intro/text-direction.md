@@ -81,7 +81,7 @@ CSS 的映射属性用逻辑(logical)和相对变化(flow relative)代替了像�
 ```
 
 ```css
-.wrapper{
+.wrapper {
   display: flex;
 }
 
