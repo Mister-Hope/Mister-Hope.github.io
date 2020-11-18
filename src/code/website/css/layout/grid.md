@@ -9,21 +9,21 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 
 ## 概述
 
-网格布局 (Grid) 是最强大的 CSS 布局方案。
-
-它将网页划分成一个个网格，可以任意组合不同的网格，做出各种各样的布局。以前，只能通过复杂的 CSS 框架达到的效果，现在浏览器内置了。
+网格布局 (Grid) 是最强大的 CSS 布局方案。它将网页划分成一个个网格，可以任意组合不同的网格，做出各种各样的布局。
 
 ![布局案例](./assets/grid-example.png)
 
 上图这样的布局，就是 Grid 布局的拿手好戏。
 
+::: tip 与 flex 的区别
+
 Grid 布局与 Flex 布局有一定的相似性，都可以指定容器内部多个项目的位置。但是，它们也存在重大区别。
 
 Flex 布局是轴线布局，只能指定"项目"针对轴线的位置，可以看作是一维布局。Grid 布局则是将容器划分成"行"和"列"，产生单元格，然后指定"项目所在"的单元格，可以看作是二维布局。Grid 布局远比 Flex 布局强大。
 
-## 基本概念
+:::
 
-学习 Grid 布局之前，需要了解一些基本概念。
+## 基本概念
 
 ### 容器和项目
 
@@ -67,6 +67,10 @@ Flex 布局是轴线布局，只能指定"项目"针对轴线的位置，可以�
 
 上图是一个 $4 \times 4$ 的网格，共有 5 根水平网格线和 5 根垂直网格线。
 
+### 沟槽
+
+行与行、列与列之间的间隙，这个间隙一般被称为沟槽（gutter）。
+
 ## 容器属性
 
 Grid 布局的属性分成两类。一类定义在容器上面，称为容器属性；另一类定义在项目上面，称为项目属性。这部分先介绍容器属性。
@@ -107,13 +111,36 @@ div {
 
 容器指定了网格布局以后，接着就要划分行和列。`grid-template-columns` 属性定义每一列的列宽，`grid-template-rows` 属性定义每一行的行高。
 
+::: demo
+
+```html
+<div class="container">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+</div>
+```
+
 ```css
 .container {
   display: grid;
   grid-template-columns: 100px 100px 100px;
   grid-template-rows: 100px 100px 100px;
 }
+
+.container > div {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+}
 ```
+
+:::
 
 上面代码指定了一个三行三列的网格，列宽和行高都是 100px。
 
@@ -121,23 +148,69 @@ div {
 
 除了使用绝对单位，也可以使用百分比。
 
+::: demo
+
+```html
+<div class="container">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+</div>
+```
+
 ```css
 .container {
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
   grid-template-rows: 33.33% 33.33% 33.33%;
 }
+
+.container > div {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+}
 ```
+
+:::
 
 #### repeat()
 
-有时候，重复写同样的值非常麻烦，尤其网格很多时。这时，可以使用 `repeat()` 函数，简化重复的值。上面的代码用 `repeat()` 改写如下。
+有时候，重复写同样的值非常麻烦，尤其网格很多时。这时，可以使用 `repeat()` 函数，简化重复的值。
+
+::: demo repeat()
+
+上面的代码用 `repeat()` 改写如下。
+
+```html
+<div class="container">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+</div>
+```
 
 ```css
 .container {
   display: grid;
   grid-template-columns: repeat(3, 33.33%);
   grid-template-rows: repeat(3, 33.33%);
+}
+
+.container > div {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
 }
 ```
 

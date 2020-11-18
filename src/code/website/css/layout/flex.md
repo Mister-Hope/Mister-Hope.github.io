@@ -7,11 +7,11 @@ category: CSS
 copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可证)
 ---
 
-Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性。<MyBadge text="来源: 阮一峰的博客" />
+Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性。
 
 <!-- more -->
 
-## Flex 布局简介
+## 简介
 
 Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性。
 
@@ -31,17 +31,8 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 }
 ```
 
-Webkit 内核的浏览器，必须加上`-webkit`前缀。
-
-```css
-.box {
-  display: -webkit-flex; /* Safari */
-  display: flex;
-}
-```
-
 ::: warning
-注意，设为 Flex 布局以后，子元素的`float`、`clear`和`vertical-align`属性将失效。
+设为 Flex 布局以后，子元素的 `float`、`clear` 和 `vertical-align` 属性将失效。
 :::
 
 ## 基本概念
@@ -50,15 +41,17 @@ Webkit 内核的浏览器，必须加上`-webkit`前缀。
 
 ![Flex 示意图](./assets/flex.png)
 
+- 主轴（main axis）是沿着 flex 元素放置的方向延伸的轴（比如页面上的横向的行、纵向的列）。该轴的开始和结束被称为 main start 和 main end。
+- 交叉轴（cross axis）是垂直于 flex 元素放置方向的轴。该轴的开始和结束被称为 cross start 和 cross end。
+- 设置了 `display: flex` 的父元素被称之为 flex 容器（flex container）。
+- 在 flex 容器中表现为柔性的盒子的元素被称之为 flex 项（flex item）
+- 单个项目占据的主轴空间叫做 main size，占据的交叉轴空间叫做 cross size。
+
 ::: tip
 这张图很有用，可以多看看。
 
 在默认情况下，主轴水平，方向是从左到右；交叉轴垂直，方向是从上到下。
 :::
-
-容器默认存在两根轴: 水平的主轴 (main axis) 和垂直的交叉轴 (cross axis)。主轴的开始位置(与边框的交叉点)叫做 main start，结束位置叫做 main end；交叉轴的开始位置叫做 cross start，结束位置叫做 cross end。
-
-项目默认沿主轴排列。单个项目占据的主轴空间叫做 main size，占据的交叉轴空间叫做 cross size。
 
 ## 容器的属性
 
@@ -110,15 +103,114 @@ Webkit 内核的浏览器，必须加上`-webkit`前缀。
 
 1. `nowrap`(默认): 不换行。
 
-   ![nowrap](./assets/nowrap.png)
+   ::: demo nowrap
+
+   ```html
+   <div class="wrapper">
+     <div class="item1">1</div>
+     <div class="item2">2</div>
+     <div class="item3">3</div>
+     <div class="item4">4</div>
+     <div class="item5">5</div>
+     <div class="item6">6</div>
+     <div class="item7">7</div>
+     <div class="item8">8</div>
+     <div class="item9">9</div>
+     <div class="item10">10</div>
+     <div class="item11">11</div>
+     <div class="item12">12</div>
+   </div>
+   ```
+
+   ```css
+   .wrapper {
+     display: flex;
+     flex-wrap: no-wrap;
+   }
+
+   .wrapper > div {
+     width: 80px;
+     height: 80px;
+     background-color: rgb(207, 232, 220);
+     border: 2px solid rgb(79, 185, 227);
+   }
+   ```
+
+   :::
 
 1. `wrap`: 换行，第一行在上方。
 
-   ![wrap](./assets/wrap.jpg)
+   ::: demo wrap
+
+   ```html
+   <div class="wrapper">
+     <div class="item1">1</div>
+     <div class="item2">2</div>
+     <div class="item3">3</div>
+     <div class="item4">4</div>
+     <div class="item5">5</div>
+     <div class="item6">6</div>
+     <div class="item7">7</div>
+     <div class="item8">8</div>
+     <div class="item9">9</div>
+     <div class="item10">10</div>
+     <div class="item11">11</div>
+     <div class="item12">12</div>
+   </div>
+   ```
+
+   ```css
+   .wrapper {
+     display: flex;
+     flex-wrap: wrap;
+   }
+
+   .wrapper > div {
+     width: 80px;
+     height: 80px;
+     background-color: rgb(207, 232, 220);
+     border: 2px solid rgb(79, 185, 227);
+   }
+   ```
+
+   :::
 
 1. `wrap-reverse`: 换行，第一行在下方。
 
-   ![wrap-reverse](./assets/wrap-reverse.jpg)
+   ::: demo wrap-reverse
+
+   ```html
+   <div class="wrapper">
+     <div class="item1">1</div>
+     <div class="item2">2</div>
+     <div class="item3">3</div>
+     <div class="item4">4</div>
+     <div class="item5">5</div>
+     <div class="item6">6</div>
+     <div class="item7">7</div>
+     <div class="item8">8</div>
+     <div class="item9">9</div>
+     <div class="item10">10</div>
+     <div class="item11">11</div>
+     <div class="item12">12</div>
+   </div>
+   ```
+
+   ```css
+   .wrapper {
+     display: flex;
+     flex-wrap: wrap-reverse;
+   }
+
+   .wrapper > div {
+     width: 80px;
+     height: 80px;
+     background-color: rgb(207, 232, 220);
+     border: 2px solid rgb(79, 185, 227);
+   }
+   ```
+
+   :::
 
 ### flex-flow
 
@@ -140,7 +232,227 @@ Webkit 内核的浏览器，必须加上`-webkit`前缀。
 }
 ```
 
-![justify-content](./assets/justify-content.png)
+::: demo flex-start
+
+```html
+<div class="wrapper">
+  <div class="item1" />
+  <div class="item2" />
+  <div class="item3" />
+</div>
+```
+
+```css
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.wrapper > div {
+  height: 60px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+}
+
+.item1 {
+  width: 60px;
+}
+
+.item2 {
+  width: 120px;
+}
+
+.item3 {
+  width: 80px;
+}
+```
+
+:::
+
+::: demo flex-end
+
+```html
+<div class="wrapper">
+  <div class="item1" />
+  <div class="item2" />
+  <div class="item3" />
+</div>
+```
+
+```css
+.wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wrapper > div {
+  height: 60px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+}
+
+.item1 {
+  width: 60px;
+}
+
+.item2 {
+  width: 120px;
+}
+
+.item3 {
+  width: 80px;
+}
+```
+
+:::
+
+::: demo center
+
+```html
+<div class="wrapper">
+  <div class="item1" />
+  <div class="item2" />
+  <div class="item3" />
+</div>
+```
+
+```css
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper > div {
+  height: 60px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+}
+
+.item1 {
+  width: 60px;
+}
+
+.item2 {
+  width: 120px;
+}
+
+.item3 {
+  width: 80px;
+}
+```
+
+:::
+
+::: demo space-between
+
+```html
+<div class="wrapper">
+  <div class="item1" />
+  <div class="item2" />
+  <div class="item3" />
+</div>
+```
+
+```css
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper > div {
+  height: 60px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+}
+
+.item1 {
+  width: 60px;
+}
+
+.item2 {
+  width: 120px;
+}
+
+.item3 {
+  width: 80px;
+}
+```
+
+:::
+
+::: demo space-around
+
+```html
+<div class="wrapper">
+  <div class="item1" />
+  <div class="item2" />
+  <div class="item3" />
+</div>
+```
+
+```css
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.wrapper > div {
+  height: 60px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+}
+
+.item1 {
+  width: 60px;
+}
+
+.item2 {
+  width: 120px;
+}
+
+.item3 {
+  width: 80px;
+}
+```
+
+:::
+
+::: demo space-evenly
+
+```html
+<div class="wrapper">
+  <div class="item1" />
+  <div class="item2" />
+  <div class="item3" />
+</div>
+```
+
+```css
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.wrapper > div {
+  height: 60px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+}
+
+.item1 {
+  width: 60px;
+}
+
+.item2 {
+  width: 120px;
+}
+
+.item3 {
+  width: 80px;
+}
+```
+
+:::
 
 它可能取 5 个值，具体对齐方式与轴的方向有关。下面假设主轴为从左到右。
 
@@ -161,7 +473,211 @@ Webkit 内核的浏览器，必须加上`-webkit`前缀。
 }
 ```
 
-![align-items](./assets/align-items.png)
+::: demo flex-start
+
+```html
+<div class="wrapper">
+  <div class="item1" />
+  <div class="item2" />
+  <div class="item3" />
+  <div class="item4" />
+</div>
+```
+
+```css
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 160px;
+}
+
+.wrapper > div {
+  width: 60px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+}
+
+.item1 {
+  height: 60px;
+}
+
+.item2 {
+  height: 120px;
+}
+
+.item3 {
+  height: 80px;
+}
+
+.item4 {
+  height: 40px;
+}
+```
+
+:::
+
+::: demo flex-end
+
+```html
+<div class="wrapper">
+  <div class="item1" />
+  <div class="item2" />
+  <div class="item3" />
+  <div class="item4" />
+</div>
+```
+
+```css
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 160px;
+}
+
+.wrapper > div {
+  width: 60px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+}
+
+.item1 {
+  height: 60px;
+}
+
+.item2 {
+  height: 120px;
+}
+
+.item3 {
+  height: 80px;
+}
+
+.item4 {
+  height: 40px;
+}
+```
+
+:::
+
+::: demo center
+
+```html
+<div class="wrapper">
+  <div class="item1" />
+  <div class="item2" />
+  <div class="item3" />
+  <div class="item4" />
+</div>
+```
+
+```css
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 160px;
+}
+
+.wrapper > div {
+  width: 60px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+}
+
+.item1 {
+  height: 60px;
+}
+
+.item2 {
+  height: 120px;
+}
+
+.item3 {
+  height: 80px;
+}
+
+.item4 {
+  height: 40px;
+}
+```
+
+:::
+
+::: demo baseline
+
+```html
+<div class="wrapper">
+  <div class="item1">text</div>
+  <div class="item2">text</div>
+  <div class="item3">text</div>
+  <div class="item4">text</div>
+</div>
+```
+
+```css
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  height: 160px;
+}
+
+.wrapper > div {
+  width: 60px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+}
+
+.item1 {
+  height: 60px;
+}
+
+.item2 {
+  padding-top: 20px;
+  height: 100px;
+}
+
+.item3 {
+  padding-top: 40px;
+  height: 40px;
+}
+
+.item4 {
+  height: 40px;
+}
+```
+
+:::
+
+::: demo stretch
+
+```html
+<div class="wrapper">
+  <div class="item1" />
+  <div class="item2" />
+  <div class="item3" />
+  <div class="item4" />
+</div>
+```
+
+```css
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 160px;
+}
+
+.wrapper > div {
+  width: 60px;
+  background-color: rgb(207, 232, 220);
+  border: 2px solid rgb(79, 185, 227);
+}
+```
+
+:::
 
 它可能取 5 个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。
 

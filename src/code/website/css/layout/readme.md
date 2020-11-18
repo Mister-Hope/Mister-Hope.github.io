@@ -7,6 +7,10 @@ category: CSS
 
 ## 目录
 
+- [布局介绍](intro.md)
+
+- [正常流布局](flow.md)
+
 - [弹性布局](flex.md)
 
 - [实战练习](exercise.md)

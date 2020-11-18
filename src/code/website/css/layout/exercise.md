@@ -15,43 +15,119 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 
 下面我们将通过骰子，来很好的在实战中展示 Flex 布局的功能与美丽。
 
-![骰子](./assets/dice.png)
-
 骰子的一面，最多可以放置 9 个点。
 
 ![骰子轴线](./assets/dice-axis.png)
 
-下面，就来看看 Flex 如何实现，从 1 个点到 9 个点的布局。您可以到 [CodePen](http://codepen.io/LandonSchropp/pen/KpzzGo) 查看本部分的 Demo。
+下面，就来看看 Flex 如何实现，从 1 个点到 9 个点的布局。`div` 元素 (代表骰子的一个面) 是 Flex 容器，`span` 元素 (代表一个点) 是 Flex 项目。如果有多个项目，就要添加多个 `span` 元素，以此类推。
 
-::: info
+::: details 本项目通用样式
 
-如果不加说明，本节的 HTML 模板一律如下。
+```css
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
 
-```html
-<div class="box">
-  <span class="item" />
-</div>
+.box {
+  width: 90px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.item {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.grid-cell {
+  margin: 4px;
+  padding: 12px;
+  border-radius: 4px;
+  background-color: rgb(207, 232, 220);
+  color: #666;
+  font-size: 14px;
+}
 ```
 
 :::
 
-上面代码中，`div` 元素 (代表骰子的一个面) 是 Flex 容器，`span` 元素 (代表一个点) 是 Flex 项目。如果有多个项目，就要添加多个 `span` 元素，以此类推。
+<style>
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
+
+.box {
+  width: 90px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.item {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.grid-cell {
+  margin: 4px;
+  padding: 12px;
+  border-radius: 4px;
+  background-color: rgb(207, 232, 220);
+  color: #666;
+  font-size: 14px;
+}
+</style>
 
 ### 单项目
 
 首先，只有左上角 1 个点的情况。Flex 布局默认就是首行左对齐，所以一行代码就够了。
 
-![骰子点位1](./assets/dice-single1.png)
+::: demo 点位 1
+
+```html
+<div class="container">
+  <div class="box">
+    <span class="item" />
+  </div>
+</div>
+```
 
 ```css
 .box {
   display: flex;
 }
 ```
+
+:::
 
 设置项目的对齐方式，就能实现居中对齐和右对齐。
 
-![骰子点位2](./assets/dice-single2.png)
+::: demo 点位 2
+
+```html
+<div class="container">
+  <div class="box">
+    <span class="item" />
+  </div>
+</div>
+```
 
 ```css
 .box {
@@ -60,7 +136,17 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 }
 ```
 
-![骰子点位3](./assets/dice-single3.png)
+:::
+
+::: demo 点位 3
+
+```html
+<div class="container">
+  <div class="box">
+    <span class="item" />
+  </div>
+</div>
+```
 
 ```css
 .box {
@@ -68,10 +154,20 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
   justify-content: flex-end;
 }
 ```
+
+:::
 
 设置交叉轴对齐方式，可以垂直移动主轴。
 
-![骰子点位4](./assets/dice-single4.png)
+::: demo 点位 4
+
+```html
+<div class="container">
+  <div class="box">
+    <span class="item" />
+  </div>
+</div>
+```
 
 ```css
 .box {
@@ -80,7 +176,17 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 }
 ```
 
-![骰子点位5](./assets/dice-single5.png)
+:::
+
+::: demo 点位 5
+
+```html
+<div class="container">
+  <div class="box">
+    <span class="item" />
+  </div>
+</div>
+```
 
 ```css
 .box {
@@ -90,7 +196,17 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 }
 ```
 
-![骰子点位8](./assets/dice-single8.png)
+:::
+
+::: demo 点位 8
+
+```html
+<div class="container">
+  <div class="box">
+    <span class="item" />
+  </div>
+</div>
+```
 
 ```css
 .box {
@@ -100,7 +216,17 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 }
 ```
 
-![骰子点位9](./assets/dice-single9.png)
+:::
+
+::: demo 点位 9
+
+```html
+<div class="container">
+  <div class="box">
+    <span class="item" />
+  </div>
+</div>
+```
 
 ```css
 .box {
@@ -110,9 +236,20 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 }
 ```
 
+:::
+
 ### 双项目
 
-![骰子双点位13](./assets/dice-double13.png)
+::: demo 双点位 13
+
+```html
+<div class="container">
+  <div class="box">
+    <span class="item" />
+    <span class="item" />
+  </div>
+</div>
+```
 
 ```css
 .box {
@@ -121,7 +258,18 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 }
 ```
 
-![骰子双点位17](./assets/dice-double17.png)
+:::
+
+::: demo 双点位 17
+
+```html
+<div class="container">
+  <div class="box">
+    <span class="item" />
+    <span class="item" />
+  </div>
+</div>
+```
 
 ```css
 .box {
@@ -131,7 +279,18 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 }
 ```
 
-![骰子双点位28](./assets/dice-double28.png)
+:::
+
+::: demo 双点位 28
+
+```html
+<div class="container">
+  <div class="box">
+    <span class="item" />
+    <span class="item" />
+  </div>
+</div>
+```
 
 ```css
 .box {
@@ -142,7 +301,18 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 }
 ```
 
-![骰子双点位39](./assets/dice-double39.png)
+:::
+
+::: demo 双点位 39
+
+```html
+<div class="container">
+  <div class="box">
+    <span class="item" />
+    <span class="item" />
+  </div>
+</div>
+```
 
 ```css
 .box {
@@ -153,7 +323,18 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 }
 ```
 
-![骰子双点位15](./assets/dice-double15.png)
+:::
+
+::: demo 双点位 15
+
+```html
+<div class="container">
+  <div class="box">
+    <span class="item" />
+    <span class="item" />
+  </div>
+</div>
+```
 
 ```css
 .box {
@@ -165,7 +346,18 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 }
 ```
 
-![骰子双点位19](./assets/dice-double19.png)
+:::
+
+::: demo 双点位 19
+
+```html
+<div class="container">
+  <div class="box">
+    <span class="item" />
+    <span class="item" />
+  </div>
+</div>
+```
 
 ```css
 .box {
@@ -178,9 +370,21 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 }
 ```
 
+:::
+
 ### 三项目
 
-![骰子3](./assets/dice-3.png)
+::: demo 三点
+
+```html
+<div class="container">
+  <div class="box">
+    <span class="item" />
+    <span class="item" />
+    <span class="item" />
+  </div>
+</div>
+```
 
 ```css
 .box {
@@ -196,37 +400,26 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 }
 ```
 
+:::
+
 ### 四项目
 
-![骰子4点位](./assets/dice-four-1239.png)
-
-```css
-.box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-content: space-between;
-}
-```
-
-![骰子4](./assets/dice-4.png)
-
-HTML 代码如下。
+::: demo 四点
 
 ```html
-<div class="box">
-  <div class="column">
-    <span class="item" />
-    <span class="item" />
-  </div>
-  <div class="column">
-    <span class="item" />
-    <span class="item" />
+<div class="container">
+  <div class="box">
+    <div class="column">
+      <span class="item" />
+      <span class="item" />
+    </div>
+    <div class="column">
+      <span class="item" />
+      <span class="item" />
+    </div>
   </div>
 </div>
 ```
-
-CSS 代码如下。
 
 ```css
 .box {
@@ -242,51 +435,85 @@ CSS 代码如下。
 }
 ```
 
+:::
+
 ### 六项目
 
-![骰子6](./assets/dice-6-1.png)
-
-```css
-.box {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
-}
-```
-
-![骰子6](./assets/dice-6-2.png)
-
-```css
-.box {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: space-between;
-}
-```
-
-![骰子6点位](./assets/dice-six-12358.png)
-
-HTML 代码如下。
+::: demo 六点
 
 ```html
-<div class="box">
-  <div class="row">
+<div class="container">
+  <div class="box">
     <span class="item" />
     <span class="item" />
     <span class="item" />
-  </div>
-  <div class="row">
     <span class="item" />
-  </div>
-  <div class="row">
     <span class="item" />
     <span class="item" />
   </div>
 </div>
 ```
 
-CSS 代码如下。
+```css
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+```
+
+:::
+
+::: demo 六点 2
+
+```html
+<div class="container">
+  <div class="box">
+    <span class="item" />
+    <span class="item" />
+    <span class="item" />
+    <span class="item" />
+    <span class="item" />
+    <span class="item" />
+  </div>
+</div>
+```
+
+```css
+.box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+```
+
+:::
+
+你还可以使用高级选择器:
+
+::: demo 一个图案
+
+```html
+<div class="container">
+  <div class="box">
+    <div class="row">
+      <span class="item" />
+      <span class="item" />
+      <span class="item" />
+    </div>
+    <div class="row">
+      <span class="item" />
+    </div>
+    <div class="row">
+      <span class="item" />
+      <span class="item" />
+    </div>
+  </div>
+</div>
+```
 
 ```css
 .box {
@@ -308,16 +535,7 @@ CSS 代码如下。
 }
 ```
 
-### 九项目
-
-![骰子9点位](./assets/dice-nine.png)
-
-```css
-.box {
-  display: flex;
-  flex-wrap: wrap;
-}
-```
+:::
 
 ## 网格布局
 
@@ -325,71 +543,91 @@ CSS 代码如下。
 
 最简单的网格布局，就是平均分布。在容器里面平均分配空间，跟上面的骰子布局很像，但是需要设置项目的自动缩放。
 
-![grid1](./assets/grid1.png)
-
-HTML 代码如下。
+::: demo 网格布局
 
 ```html
-<div class="Grid">
-  <div class="Grid-cell">...</div>
-  <div class="Grid-cell">...</div>
-  <div class="Grid-cell">...</div>
+<div class="grid-wrapper">
+  <div class="grid-cell">1</div>
+</div>
+<div class="grid-wrapper">
+  <div class="grid-cell">1/2</div>
+  <div class="grid-cell">1/2</div>
+</div>
+<div class="grid-wrapper">
+  <div class="grid-cell">1/3</div>
+  <div class="grid-cell">1/3</div>
+  <div class="grid-cell">1/3</div>
+</div>
+<div class="grid-wrapper">
+  <div class="grid-cell">Mr.Hope 很帅!</div>
+  <div class="grid-cell">
+    Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅!
+    Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅!
+    Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅! Mr.Hope 很帅!
+  </div>
 </div>
 ```
 
 CSS 代码如下。
 
 ```css
-.Grid {
+.grid-wrapper {
   display: flex;
 }
 
-.Grid-cell {
+.grid-cell {
   flex: 1;
 }
 ```
+
+:::
 
 ### 百分比布局
 
 某个网格的宽度为固定的百分比，其余网格平均分配剩余的空间。
 
-![grid2](./assets/grid2.png)
-
-HTML 代码如下。
+::: demo 百分比布局
 
 ```html
-<div class="Grid">
-  <div class="Grid-cell u-1of4">...</div>
-  <div class="Grid-cell">...</div>
-  <div class="Grid-cell u-1of3">...</div>
+<div class="grid-wrapper">
+  <div class="grid-cell grid-cell-2">1/2</div>
+  <div class="grid-cell grid-cell-auto">auto</div>
+  <div class="grid-cell grid-cell-auto">auto</div>
+</div>
+<div class="grid-wrapper">
+  <div class="grid-cell grid-cell-auto">auto</div>
+  <div class="grid-cell grid-cell-auto">auto</div>
+  <div class="grid-cell grid-cell-3">1/3</div>
+</div>
+<div class="grid-wrapper">
+  <div class="grid-cell grid-cell-4">1/4</div>
+  <div class="grid-cell grid-cell-auto">auto</div>
+  <div class="grid-cell grid-cell-3">1/3</div>
 </div>
 ```
 
 ```css
-.Grid {
+.grid-wrapper {
   display: flex;
 }
 
-.Grid-cell {
+.grid-cell-auto {
   flex: 1;
 }
 
-.Grid-cell.u-full {
-  flex: 0 0 100%;
+.grid-cell-2 {
+  width: 50%;
+}
+.grid-cell-3 {
+  width: calc(100% / 3);
 }
 
-.Grid-cell.u-1of2 {
-  flex: 0 0 50%;
-}
-
-.Grid-cell.u-1of3 {
-  flex: 0 0 33.3333%;
-}
-
-.Grid-cell.u-1of4 {
-  flex: 0 0 25%;
+.grid-cell-4 {
+  width: 25%;
 }
 ```
+
+:::
 
 ## 圣杯布局
 
