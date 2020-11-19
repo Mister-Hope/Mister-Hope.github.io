@@ -1,7 +1,7 @@
 ---
 title: 弹性模型
 author: 阮一峰
-icon: layout
+icon: flex
 time: 2019-09-06
 category: CSS
 copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可证)

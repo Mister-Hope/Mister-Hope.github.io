@@ -38,6 +38,6 @@ module.exports = [
     icon: "layout",
     collapsable: false,
     prefix: "layout/",
-    children: ["", "intro", "flow", "float", "flex", "exercise", "grid"],
+    children: ["intro", "flow", "float", "flex", "exercise", "grid"],
   },
 ];

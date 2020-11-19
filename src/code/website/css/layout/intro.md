@@ -1,6 +1,6 @@
 ---
 title: 排版介绍
-icon: layout
+icon: info
 time: 2019-09-06
 category: CSS
 ---
@@ -72,9 +72,9 @@ Flexbox 是 CSS 弹性盒子布局模块(Flexible Box Layout Module)的缩写，
 
 ```html
 <div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
+  <div class="box">一</div>
+  <div class="box">二</div>
+  <div class="box">三</div>
 </div>
 ```
 
@@ -100,9 +100,9 @@ Flexbox 是 CSS 弹性盒子布局模块(Flexible Box Layout Module)的缩写，
 
 ```html
 <div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
+  <div class="box">一</div>
+  <div class="box">二</div>
+  <div class="box">三</div>
 </div>
 ```
 
@@ -137,12 +137,12 @@ Flexbox 用于设计横向或纵向的布局，而 Grid 布局则被设计用于
 
 ```html
 <div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
-  <div class="box4">Four</div>
-  <div class="box5">Five</div>
-  <div class="box6">Six</div>
+  <div class="box">一</div>
+  <div class="box">二</div>
+  <div class="box">三</div>
+  <div class="box">四</div>
+  <div class="box">五</div>
+  <div class="box">六</div>
 </div>
 ```
 
@@ -170,9 +170,9 @@ Flexbox 用于设计横向或纵向的布局，而 Grid 布局则被设计用于
 
 ```html
 <div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
+  <div class="box1">一</div>
+  <div class="box2">二</div>
+  <div class="box3">三</div>
 </div>
 ```
 
@@ -228,11 +228,11 @@ Flexbox 用于设计横向或纵向的布局，而 Grid 布局则被设计用于
 ::: demo 默认定位方式
 
 ```html
-<h1>Positioning</h1>
+<h1>定位</h1>
 
-<p>I am a basic block level element.</p>
-<p class="positioned">I am a basic block level element.</p>
-<p>I am a basic block level element.</p>
+<p>这是一个普通的块级元素</p>
+<p class="positioned">这是一个普通的块级元素</p>
+<p>这是一个普通的块级元素</p>
 ```
 
 ```css
@@ -271,11 +271,11 @@ p {
 ::: demo 相对定位
 
 ```html
-<h1>Relative positioning</h1>
+<h1>相对定位</h1>
 
-<p>I am a basic block level element.</p>
-<p class="positioned">This is my relatively positioned element.</p>
-<p>I am a basic block level element.</p>
+<p>这是一个普通的块级元素</p>
+<p class="positioned">这是一个相对定位块级元素</p>
+<p>这是一个普通的块级元素</p>
 ```
 
 ```css
@@ -315,11 +315,11 @@ p {
 ::: demo 绝对定位
 
 ```html
-<h1>Absolute positioning</h1>
+<h1>绝对定位</h1>
 
-<p>I am a basic block level element.</p>
-<p class="positioned">This is my absolutely positioned element.</p>
-<p>I am a basic block level element.</p>
+<p>这是一个普通的块级元素</p>
+<p class="positioned">这是一个绝对定位元素</p>
+<p>这是一个普通的块级元素</p>
 ```
 
 ```css
@@ -351,13 +351,14 @@ p {
 ::: demo 固定定位
 
 ```html
-<h1>Fixed positioning</h1>
+<h1>固定定位</h1>
 
-<div class="positioned">Fixed</div>
+<!-- 你会在本页顶部找到它 -->
+<div class="positioned">固定定位</div>
 
-<p>Paragraph 1.</p>
-<p>Paragraph 2.</p>
-<p>Paragraph 3.</p>
+<p>段落 1</p>
+<p>段落 2</p>
+<p>段落 3</p>
 ```
 
 ```css
@@ -384,14 +385,10 @@ p {
   dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
   ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
   laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
-  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
-  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
-  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
-  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
-  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+  tristique sit amet orci vel, viverra egestas ligula.
 </p>
 
-<div class="positioned">Sticky</div>
+<div class="positioned">粘性定位</div>
 
 <p>
   Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
@@ -440,9 +437,9 @@ p {
 ::: demo float 案例
 
 ```html
-<h1>Simple float example</h1>
+<h1>简单的 float 案例</h1>
 
-<div class="box">Float</div>
+<div class="box">浮动块</div>
 
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
@@ -451,9 +448,7 @@ p {
   laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
   tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
   neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
-  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
-  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
-  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+  volutpat.
 </p>
 ```
 

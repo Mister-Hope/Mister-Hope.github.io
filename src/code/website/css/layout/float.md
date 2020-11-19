@@ -1,6 +1,6 @@
 ---
 title: 浮动
-icon: layout
+icon: float
 time: 2019-09-06
 category: CSS
 ---
@@ -233,7 +233,7 @@ clear 可以取三个值:
 - `right`: 停止任何活动的右浮动
 - `both`: 停止任何活动的左右浮动
 
-::: demo 一个糟糕的浮动布局
+::: demo 改进后的浮动布局
 
 ```html
 <div class="container">
@@ -469,8 +469,8 @@ footer {
 .column,
 footer {
   padding: 1%;
-  border: 2px solid black;
-  background-color: red;
+  border: 2px solid rgb(255, 84, 104);
+  background: rgba(255, 84, 104, 0.3);
 }
 
 * {
