@@ -60,7 +60,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 
 :::
 
-<!-- markdownlint-disable -->
+<!-- markdownlint-disable no-inline-html -->
 
 <style>
 .dice-container {
@@ -97,7 +97,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 }
 </style>
 
-<!-- markdownlint-enable -->
+<!-- markdownlint-enable no-inline-html -->
 
 ### 单项目
 

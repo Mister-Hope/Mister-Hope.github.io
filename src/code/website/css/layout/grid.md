@@ -23,6 +23,98 @@ Flex 布局是轴线布局，只能指定"项目"针对轴线的位置，可以�
 
 :::
 
+::: details 本章通用样式
+
+```css
+.grid-demo > div{
+  color: black;
+  font-size: 40px;
+}
+
+.grid-demo > .item1 {
+  background-color:#ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color:#ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item7 {
+  background-color:#008b8b
+}
+
+
+```
+
+:::
+
+<!-- markdownlint-disable no-inline-html -->
+
+<style>
+.grid-demo > div{
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color:#ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color:#ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
+</style>
+
+<!-- markdownlint-enable no-inline-html -->
+
 ## 基本概念
 
 ### 容器和项目
@@ -79,29 +171,63 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 `display: grid` 指定一个容器采用网格布局。
 
+::: demo 网格布局
+
+```html
+<span style="font-size: 22px">Mr.Hope</span>
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+<span style="font-size: 22px">is handsome</span>
+```
+
 ```css
-div {
+.grid-demo {
   display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
 }
 ```
 
-![display: grid](./assets/display-grid.png)
-
-上图是 `display: grid` 的效果。
+:::
 
 默认情况下，容器元素都是块级元素，但也可以设成行内元素。
 
+::: demo 行内网格布局
+
+```html
+<span style="font-size: 22px">Mr.Hope</span>
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+<span style="font-size: 22px">is handsome</span>
+```
+
 ```css
-div {
+.grid-demo {
   display: inline-grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
 }
 ```
 
-上面代码指定 `div` 是一个行内元素，该元素内部采用网格布局。
-
-![display: inline-grid](./assets/display-inline-grid.png)
-
-上图是 `display: inline-grid` 的效果。
+:::
 
 ::: tip
 设为网格布局以后，容器子元素 (项目) 的 `float`、`display: inline-block`、`display: table-cell`、`vertical-align` 和 `column-*` 等设置都将失效。
@@ -111,32 +237,27 @@ div {
 
 容器指定了网格布局以后，接着就要划分行和列。`grid-template-columns` 属性定义每一列的列宽，`grid-template-rows` 属性定义每一行的行高。
 
-::: demo
+::: demo 划分行和列
 
 ```html
-<div class="container">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
-  <div>Six</div>
-  <div>Seven</div>
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
 </div>
 ```
 
 ```css
-.container {
+.grid-demo {
   display: grid;
   grid-template-columns: 100px 100px 100px;
   grid-template-rows: 100px 100px 100px;
-}
-
-.container > div {
-  border-radius: 5px;
-  padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
 }
 ```
 
@@ -144,37 +265,33 @@ div {
 
 上面代码指定了一个三行三列的网格，列宽和行高都是 100px。
 
-![Grid 网格](./assets/grid3.png)
-
 除了使用绝对单位，也可以使用百分比。
 
 ::: demo
 
 ```html
-<div class="container">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
-  <div>Six</div>
-  <div>Seven</div>
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
 </div>
 ```
 
 ```css
-.container {
+.grid-demo {
+  width: 300px;
+  height: 300px;
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
   grid-template-rows: 33.33% 33.33% 33.33%;
 }
 
-.container > div {
-  border-radius: 5px;
-  padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
-}
 ```
 
 :::
@@ -188,126 +305,263 @@ div {
 上面的代码用 `repeat()` 改写如下。
 
 ```html
-<div class="container">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
-  <div>Six</div>
-  <div>Seven</div>
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
 </div>
 ```
 
 ```css
-.container {
+.grid-demo {
+  width: 300px;
+  height: 300px;
   display: grid;
   grid-template-columns: repeat(3, 33.33%);
   grid-template-rows: repeat(3, 33.33%);
 }
-
-.container > div {
-  border-radius: 5px;
-  padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
-}
 ```
+
+:::
 
 `repeat()` 接受两个参数，第一个参数是重复的次数 (上例是 `3`) ，第二个参数是所要重复的值。
 
 `repeat()` 重复某种模式也是可以的。
 
+::: demo 重复模式
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
 ```css
-xxx {
+.grid-demo {
+  width: 300px;
+  height: 300px;
+  display: grid;
   grid-template-columns: repeat(2, 100px 20px 80px);
 }
 ```
 
-上面代码定义了 6 列，第一列和第四列的宽度为 `100px`，第二列和第五列为 `20px`，第三列和第六列为 `80px`。
+:::
 
-![最终效果](./assets/grid4.png)
+上面代码定义了 6 列，第一列和第四列的宽度为 `100px`，第二列和第五列为 `20px`，第三列和第六列为 `80px`。
 
 #### auto-fill 关键字
 
 有时，单元格的大小是固定的，但是容器的大小不确定。如果希望每一行 (或每一列) 容纳尽可能多的单元格，这时可以使用 `auto-fill` 关键字表示自动填充。
 
+::: demo 自动填充
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
 ```css
-.container {
+.grid-demo {
   display: grid;
   grid-template-columns: repeat(auto-fill, 100px);
 }
+
+.grid-demo > div {
+  height: 100px;
+}
 ```
 
-上面代码表示每列宽度 `100px`，然后自动填充，直到容器不能放置更多的列。
+:::
 
-![auto-fill](./assets/auto-fill.png)
+上面代码表示每列宽度 `100px`，然后自动填充，直到容器不能放置更多的列。
 
 #### fr 关键字
 
 为了方便表示比例关系，网格布局提供了 `fr` 关键字 (fraction 的缩写，意为"片段") 。如果两列的宽度分别为 `1fr` 和 `2fr`，就表示后者是前者的两倍。
 
+::: demo fr
+下面代码表示两个相同宽度的列。
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
 ```css
-.container {
+.grid-demo {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+.grid-demo > div {
+  height: 100px;
+}
 ```
 
-上面代码表示两个相同宽度的列。
-
-![fr](./assets/fr.png)
+:::
 
 `fr` 可以与绝对长度的单位结合使用，这时会非常方便。
 
+::: demo fr 的混用
+下面代码表示，第一列的宽度为 150 像素，第二列的宽度是第三列的一半。
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
 ```css
-.container {
+.grid-demo {
   display: grid;
   grid-template-columns: 150px 1fr 2fr;
 }
-```
 
-上面代码表示，第一列的宽度为 150 像素，第二列的宽度是第三列的一半。
-
-![fr2](./assets/fr2.png)
-
-### minmax()
-
-`minmax()` 函数产生一个长度范围，表示长度就在这个范围之中。它接受两个参数，分别为最小值和最大值。
-
-```css
-.container {
-  grid-template-columns: 1fr 1fr minmax(100px, 1fr);
+.grid-demo > div {
+  height: 100px;
 }
 ```
 
-上面代码中，`minmax(100px, 1fr)` 表示列宽不小于 `100px`，不大于 `1fr`。
+:::
+
+#### minmax()
+
+`minmax()` 函数产生一个长度范围，表示长度就在这个范围之中。它接受两个参数，分别为最小值和最大值。
+
+::: demo minmax()
+下面代码中，`minmax(100px, 1fr)` 表示列宽不小于 `100px`，不大于 `1fr`。
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
+```css
+.grid-demo {
+  display: grid;
+  grid-template-columns: 1fr 1fr minmax(100px, 1fr);
+}
+
+.grid-demo > div {
+  height: 100px;
+}
+```
+
+:::
 
 #### auto 关键字
 
 `auto` 关键字表示由浏览器自己决定长度。
 
+::: demo auto
+下面代码中，第二列的宽度，基本上等于该列单元格的最大宽度，除非单元格内容设置了 `min-width`，且这个值大于最大宽度。
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
 ```css
-.container {
+.grid-demo {
+  display: grid;
   grid-template-columns: 100px auto 100px;
+}
+
+.grid-demo > div {
+  height: 100px;
 }
 ```
 
-上面代码中，第二列的宽度，基本上等于该列单元格的最大宽度，除非单元格内容设置了 `min-width`，且这个值大于最大宽度。
+:::
 
 #### 网格线的名称
 
 `grid-template-columns` 属性和 `grid-template-rows` 属性里面，还可以使用方括号，指定每一根网格线的名字，方便以后的引用。
 
+::: demo 网格线的名称
+下面代码指定网格布局为 3 行 x 3 列，因此有 4 根垂直网格线和 4 根水平网格线。方括号里面依次是这八根线的名字。
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
 ```css
-.container {
+.grid-demo {
   display: grid;
   grid-template-columns: [c1] 100px [c2] 100px [c3] auto [c4];
   grid-template-rows: [r1] 100px [r2] 100px [r3] auto [r4];
 }
 ```
 
-上面代码指定网格布局为 3 行 x 3 列，因此有 4 根垂直网格线和 4 根水平网格线。方括号里面依次是这八根线的名字。
+:::
 
 网格布局允许同一根线有多个名字，比如 `[fifth-line row-5]`。
 
@@ -343,9 +597,35 @@ xxx {
 }
 ```
 
-上面代码中，`row-gap` 用于设置行间距，`column-gap` 用于设置列间距。
+::: demo 间距设置
 
-![grid-gap](./assets/grid-gap.png)
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
+```css
+.grid-demo {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+```
+
+:::
+
+上面代码中，`row-gap` 用于设置行间距，`column-gap` 用于设置列间距。
 
 `gap` 属性是 `column-gap` 和 `row-gap` 的合并简写形式，语法如下。
 
@@ -430,27 +710,98 @@ xxx {
 
 ### grid-auto-flow 属性
 
-划分网格以后，容器的子元素会按照顺序，自动放置在每一个网格。默认的放置顺序是"先行后列"，即先填满第一行，再开始放入第二行，即下图数字的顺序。
+划分网格以后，容器的子元素会按照顺序，自动放置在每一个网格。默认的放置顺序是"先行后列"，即先填满第一行，再开始放入第二行，即下方数字的顺序。
 
-![grid-auto-flow row](./assets/grid-auto-flow-row.png)
+::: demo 默认顺序“先行后列”
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
+```css
+.grid-demo {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+}
+```
+
+:::
 
 这个顺序由 `grid-auto-flow` 属性决定，默认值是 `row`，即"先行后列"。也可以将它设成 `column`，变成"先列后行"。
 
+::: demo grid-auto-flow: column
+设置了 `column` 以后，放置顺序就变成了下图。
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
 ```css
-.container {
+.grid-demo {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
   grid-auto-flow: column;
 }
 ```
 
-上面代码设置了 `column` 以后，放置顺序就变成了下图。
-
-![grid-auto-flow column](./assets/grid-auto-flow-column.png)
+:::
 
 `grid-auto-flow` 属性除了设置成 `row` 和 `column`，还可以设成 `row dense` 和 `column dense`。这两个值主要用于，某些项目指定位置以后，剩下的项目怎么自动放置。
 
 下面的例子让 1 号项目和 2 号项目各占据两个单元格，然后在默认的 `grid-auto-flow: row` 情况下，会产生下面这样的布局。
 
 ![grid-auto-flow 1](./assets/grid-auto-flow-1.png)
+
+::: demo grid-auto-flow: column
+设置了 `column` 以后，放置顺序就变成了下图。
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
+```css
+.grid-demo {
+  width: 300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill);
+  grid-template-rows: 100px 100px 100px;
+  grid-auto-flow: column;
+}
+```
+
+:::
 
 上图中，1 号项目后面的位置是空的，这是因为 3 号项目默认跟着 2 号项目，所以会排在 2 号项目后面。
 
