@@ -24,7 +24,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 ::: details 本项目通用样式
 
 ```css
-.container {
+.dice-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +32,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
   background-color: #000;
 }
 
-.box {
+.dice-container .box {
   width: 90px;
   height: 90px;
   padding: 8px;
@@ -40,7 +40,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
   background-color: #f8f8f8;
 }
 
-.item {
+.dice-container .item {
   width: 24px;
   height: 24px;
   margin: 3px;
@@ -63,7 +63,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 <!-- markdownlint-disable -->
 
 <style>
-.container {
+.dice-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,7 +71,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
   background-color: #000;
 }
 
-.box {
+.dice-container .box {
   width: 90px;
   height: 90px;
   padding: 8px;
@@ -79,7 +79,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
   background-color: #f8f8f8;
 }
 
-.item {
+.dice-container .item {
   width: 24px;
   height: 24px;
   margin: 3px;
@@ -106,7 +106,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 ::: demo 点位 1
 
 ```html
-<div class="container">
+<div class="dice-container">
   <div class="box">
     <span class="item" />
   </div>
@@ -126,7 +126,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 ::: demo 点位 2
 
 ```html
-<div class="container">
+<div class="dice-container">
   <div class="box">
     <span class="item" />
   </div>
@@ -145,7 +145,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 ::: demo 点位 3
 
 ```html
-<div class="container">
+<div class="dice-container">
   <div class="box">
     <span class="item" />
   </div>
@@ -166,7 +166,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 ::: demo 点位 4
 
 ```html
-<div class="container">
+<div class="dice-container">
   <div class="box">
     <span class="item" />
   </div>
@@ -185,7 +185,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 ::: demo 点位 5
 
 ```html
-<div class="container">
+<div class="dice-container">
   <div class="box">
     <span class="item" />
   </div>
@@ -205,7 +205,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 ::: demo 点位 8
 
 ```html
-<div class="container">
+<div class="dice-container">
   <div class="box">
     <span class="item" />
   </div>
@@ -225,7 +225,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 ::: demo 点位 9
 
 ```html
-<div class="container">
+<div class="dice-container">
   <div class="box">
     <span class="item" />
   </div>
@@ -247,7 +247,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 ::: demo 双点位 13
 
 ```html
-<div class="container">
+<div class="dice-container">
   <div class="box">
     <span class="item" />
     <span class="item" />
@@ -267,7 +267,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 ::: demo 双点位 17
 
 ```html
-<div class="container">
+<div class="dice-container">
   <div class="box">
     <span class="item" />
     <span class="item" />
@@ -288,7 +288,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 ::: demo 双点位 28
 
 ```html
-<div class="container">
+<div class="dice-container">
   <div class="box">
     <span class="item" />
     <span class="item" />
@@ -310,7 +310,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 ::: demo 双点位 39
 
 ```html
-<div class="container">
+<div class="dice-container">
   <div class="box">
     <span class="item" />
     <span class="item" />
@@ -332,7 +332,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 ::: demo 双点位 15
 
 ```html
-<div class="container">
+<div class="dice-container">
   <div class="box">
     <span class="item" />
     <span class="item" />
@@ -355,7 +355,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 ::: demo 双点位 19
 
 ```html
-<div class="container">
+<div class="dice-container">
   <div class="box">
     <span class="item" />
     <span class="item" />
@@ -381,7 +381,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 ::: demo 三点
 
 ```html
-<div class="container">
+<div class="dice-container">
   <div class="box">
     <span class="item" />
     <span class="item" />
@@ -411,7 +411,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 ::: demo 四点
 
 ```html
-<div class="container">
+<div class="dice-container">
   <div class="box">
     <div class="column">
       <span class="item" />
@@ -446,7 +446,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 ::: demo 六点
 
 ```html
-<div class="container">
+<div class="dice-container">
   <div class="box">
     <span class="item" />
     <span class="item" />
@@ -472,7 +472,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 ::: demo 六点 2
 
 ```html
-<div class="container">
+<div class="dice-container">
   <div class="box">
     <span class="item" />
     <span class="item" />
@@ -501,7 +501,7 @@ copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许
 ::: demo 一个图案
 
 ```html
-<div class="container">
+<div class="dice-container">
   <div class="box">
     <div class="row">
       <span class="item" />
@@ -635,7 +635,9 @@ CSS 代码如下。
 
 ## 圣杯布局
 
-圣杯布局 (Holy Grail Layout) 指的是一种最常见的网站布局。页面从上到下，分成三个部分: 头部 (header) ，躯干 (body) ，尾部 (footer) 。其中躯干又水平分成三栏，从左到右为: 导航、主栏、副栏。
+圣杯布局 (Holy Grail Layout) 指的是一种最常见的网站布局。
+
+页面从上到下，分成三个部分: 头部 (header) ，躯干 (body) ，尾部 (footer) 。其中躯干又水平分成三栏，从左到右为: 导航、主栏、副栏。
 
 ![圣杯布局](./assets/holy.png)
 
