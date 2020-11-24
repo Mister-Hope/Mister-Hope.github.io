@@ -1,5 +1,5 @@
 ---
-title: CSS Emment
+title: CSS Emmet
 icon: css
 time: 2019-09-03
 category: Emmet

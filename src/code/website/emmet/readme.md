@@ -17,11 +17,11 @@ Emmet 是一个快速创建 HTML 和 CSS 的方式，如果您想要成为一个
 
 ## HTML
 
-- [HTML Emment 语法](html.md)
+- [HTML Emmet 语法](html.md)
 
 ## CSS
 
-- [CSS Emment 语法](CSS.md)
+- [CSS Emmet 语法](CSS.md)
 
 ## 其他功能
 
