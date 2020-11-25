@@ -27,25 +27,27 @@ Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可�
 
 - [指南](guide/readme.md)
 
-  - [基础介绍](basic.md)
+  - [基础介绍](guide/basic.md)
 
-  - [个性化介绍](customization.md)
+  - [个性化介绍](guide/customization.md)
 
-  - [扩展介绍](extension.md)
+  - [扩展介绍](guide/extension.md)
 
-  - [文件介绍](file.md)
+  - [文件介绍](guide/file.md)
 
-  - [编辑技巧](edit.md)
+  - [编辑技巧](guide/edit.md)
 
-  - [智能补全](intellisense.md)
+  - [智能补全](guide/intellisense.md)
 
-  - [Git 支持](git.md)
+  - [Git 支持](guide/git.md)
 
-  - [调试介绍](debug.md)
+  - [调试介绍](guide/debug.md)
 
-  - [任务介绍](task.md)
+  - [任务介绍](guide/task.md)
 
-  - [命令行介绍](command.md)
+  - [命令行介绍](guide/command.md)
+
+- [VS Code 用户界面](ui.md)
 
 - [VS Code 快捷键](shortcut-key.md)
 

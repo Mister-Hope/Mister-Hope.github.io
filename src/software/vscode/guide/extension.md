@@ -68,7 +68,7 @@ VS Code 原生为英文，本插件为 VS Code 提供简体中文支持，会更
 
 在 VS Code 底部状态栏显示文件大小
 
-#### ProjectManager
+#### Project Manager
 
 快速打开特定项目或在多个项目之间切换
 
@@ -85,10 +85,6 @@ VS Code 原生为英文，本插件为 VS Code 提供简体中文支持，会更
 ::: tip
 VS Code 不包含 Git，请自行安装 Git 并添加到 path 以实现版本管理。
 :::
-
-#### Git History
-
-提供 Git 历史查看，对比等高级功能
 
 #### GitLens
 
@@ -108,10 +104,6 @@ VS Code 不包含 Git，请自行安装 Git 并添加到 path 以实现版本管
 
 ### 网页
 
-#### Ant Design Vue helper
-
-为 Antd Vue 提供代码补全及提示
-
 #### Color Info
 
 为 CSS 颜色详情显示更多信息
@@ -128,9 +120,9 @@ VS Code 不包含 Git，请自行安装 Git 并添加到 path 以实现版本管
 
 ES6 快速补全，提升代码编写利器
 
-#### IntelliSense for CSS class names in HTML
+#### language-stylus
 
-通过检索 link 的外部 CSS 提供自动补全 class，当使用 bootstrap 的时候超有用
+Stylus 格式化，高亮支持
 
 #### Live Server
 
@@ -257,10 +249,6 @@ LaTeX 插件，支持常见功能与编译
 提供 LaTeX 格式化
 
 ### 其他
-
-#### language-stylus
-
-Stylus 格式化，高亮支持
 
 #### YAML
 

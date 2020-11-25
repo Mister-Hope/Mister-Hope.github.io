@@ -18,8 +18,10 @@ tags:
   "editor.detectIndentation": false,
   "editor.fontFamily": "'Fira Code' ,Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.mouseWheelZoom": true,
+  "editor.rulers": [80],
   "editor.codeActionsOnSave": {
     // markdownlint 自动修复
     "source.fixAll.markdownlint": true
@@ -34,15 +36,19 @@ tags:
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
   // emmet 包含 wxml 视为 html
-  "explorer.confirmDelete": false,
   "emmet.includeLanguages": {
-    "wxml": "html" //为 wxml 开启 HTML emmet 支持
+    "wxml": "html" // 为 wxml 开启 HTML emmet 支持
+  },
+  "emmet.variables": {
+    "lang": "zh-CN",
+    "charset": "UTF-8"
   },
   // 文件相关
+  "explorer.confirmDelete": false,
   "files.associations": {
-    "*.cjson": "jsonc", //将 .cjson 设为 jsonc
-    "*.wxss": "css", //将 wxss 视为 css
-    "*.wxs": "javascript" //将 wxs 视为 JavaScript
+    "*.cjson": "jsonc", // 将 .cjson 设为 jsonc
+    "*.wxss": "css", // 将 wxss 视为 css
+    "*.wxs": "javascript" // 将 wxs 视为 JavaScript
   },
   "files.autoSave": "off",
   "files.eol": "\n",
@@ -57,6 +63,7 @@ tags:
   "window.closeWhenEmpty": true,
   "window.newWindowDimensions": "inherit",
   "window.zoomLevel": 0,
+  "breadcrumbs.enabled": true,
   // 工作台设置
   "workbench.colorTheme": "One Dark Pro",
   "workbench.commandPalette.preserveInput": true,
@@ -78,6 +85,7 @@ tags:
     "workflows": "Ci",
     "guide": "content",
     "en": "I18n",
+    "zh": "I18n",
     "types": "typescript"
   },
   // 提示设置
@@ -100,24 +108,38 @@ tags:
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": true,
   "merge-conflict.autoNavigateNextConflict.enabled": true,
   // npm 设置
+  "npm.enableRunFromFolder": true,
   "npm.packageManager": "yarn",
   "npm.scriptExplorerAction": "run",
+  "npm-intellisense.importQuotes": "\"",
   "npm-intellisense.packageSubfoldersIntellisense": true,
   "npm-intellisense.scanDevDependencies": true,
   "npm-intellisense.showBuildInLibs": true,
   "remote.SSH.remotePlatform": {
     "codeserver": "linux"
   },
-  // 文件格式化器设置
+  // 特定格式文件设置
+  "[dart]": {
+    "editor.formatOnType": true,
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": true,
+    "editor.suggestSelection": "recentlyUsed",
+    "editor.tabCompletion": "on",
+    "editor.wordBasedSuggestions": true
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "[typescript]": {
+  "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[javascript]": {
+  "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[yaml]": {
@@ -138,28 +160,38 @@ tags:
   "[typescriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-  // 远程连接
-  "remote.SSH.configFile": "Z:/config/local/vscode/host",
+  "[xml]": {
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
+  },
   // typescript配置
   "typescript.locale": "zh-CN",
-  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
   "typescript.format.semicolons": "insert",
-  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.preferences.quoteStyle": "double",
   "typescript.referencesCodeLens.enabled": true,
-  "typescript.preferences.quoteStyle": "single",
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.implicitProjectConfig.checkJs": true,
   "javascript.implicitProjectConfig.experimentalDecorators": true,
   "javascript.format.semicolons": "insert",
   "javascript.referencesCodeLens.enabled": true,
   "javascript.suggest.completeFunctionCalls": true,
-  "javascript.preferences.quoteStyle": "single",
+  "javascript.preferences.quoteStyle": "double",
   "javascript.updateImportsOnFileMove.enabled": "always",
   // php设置
   "php.validate.enable": true,
-  "php.validate.executablePath": "u:/PHP/php.exe",
   "php.validate.run": "onType",
   // c++设置
-  "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.default.cppStandard": "c++20",
+  "C_Cpp.clang_format_fallbackStyle": "Google",
+  // dart
+  "dart.debugExternalLibraries": false,
+  "dart.debugSdkLibraries": false,
+  // java
+  "java.semanticHighlighting.enabled": true,
+  "java.help.firstView": "gettingStarted",
+  // python
+  "python.languageServer": "Pylance",
   // css颜色提示配置
   "colorInfo.fields": ["hex", "rgb", "alpha", "css-color-name", "preview"],
   "colorInfo.languages": [
@@ -185,7 +217,6 @@ tags:
     }
   ],
   // eslint
-  "eslint.enable": true,
   "eslint.packageManager": "yarn",
   "eslint.validate": [
     "javascript",
@@ -206,7 +237,6 @@ tags:
   // markdown设置
   "markdown.extension.orderedList.marker": "one",
   "markdown.extension.print.imgToBase64": true,
-  "markdown.extension.toc.githubCompatibility": true,
   // markdownlint 设置
   "markdownlint.config": {
     "default": true,
@@ -225,28 +255,7 @@ tags:
     }
   },
   // vetur 设置
-  "vetur.format.defaultFormatterOptions": {
-    "js-beautify-html": {
-      "wrap_attributes": "auto"
-    },
-    "prettyhtml": {
-      "printWidth": 100,
-      "singleQuote": false,
-      "wrapAttributes": false,
-      "sortAttributes": false
-    },
-    "prettier": {
-      "printWidth": 80,
-      "singleQuote": false,
-      "tabWidth": 2,
-      "useTabs": false,
-      "semi": true,
-      "trailingComma": "es5",
-      "bracketSpacing": true,
-      "parser": "babel"
-    }
-  },
-  "vetur.format.defaultFormatter.html": "prettyhtml",
+  "vetur.format.defaultFormatter.html": "prettier",
   "vetur.format.defaultFormatter.js": "prettier",
   "vetur.format.defaultFormatter.ts": "prettier",
   "vetur.useWorkspaceDependencies": true,
@@ -260,24 +269,25 @@ tags:
   // 微信小程序
   "minapp-vscode.disableAutoConfig": true,
   "minapp-vscode.wxmlFormatter": "prettier", //指定格式化工具
-  "minapp-vscode.prettier": {
-    "parser": "html",
-    "useTabs": false,
-    "tabWidth": 2,
-    "printWidth": 80,
-    "singleQuote": false
-  },
   // liveshare 设置
   "liveshare.audio.joinCallBehavior": "accept",
-  // 设置同步
-  "sync.forceUpload": true,
-  "sync.gist": "98947a2f1cf80f21ee36eb8e3d03b9ce",
+  // 项目管理器
+  "projectManager.sortList": "Saved",
   // todoHightlight配置
   "todohighlight.keywords": ["WARNING: "],
+
   // leetcode
-  "leetcode.defaultLanguage": "javascript",
-  "leetcode.endpoint": "leetcode",
+  "leetcode.hint.commentDescription": false,
+  "leetcode.hint.commandShortcut": false,
   "leetcode.hint.configWebviewMarkdown": false,
+  "leetcode.hint.setDefaultLanguage": false,
+  "leetcode.enableStatusBar": false,
+  "leetcode.endpoint": "leetcode",
+  "leetcode.showDescription": "In Webview",
+
+  // prettier
+  "prettier.packageManager": "yarn",
+
   // ProjectManager
   "projectManager.any.ignoredFolders": [
     "dist",
@@ -286,13 +296,7 @@ tags:
     "typings",
     "test"
   ],
-  "projectManager.git.baseFolders": ["U:/", "Z:/"],
-  // dart
-  "dart.debugExternalLibraries": false,
-  "dart.debugSdkLibraries": false,
-  // java
-  "java.home": "C:\\Program Files\\Java\\jdk-14",
-  "java.help.firstView": "gettingStarted",
+
   // stylelint 设置
   "stylelint.packageManager": "yarn",
   "stylelint.validate": [
@@ -319,23 +323,7 @@ tags:
     "xsl",
     "wxss"
   ],
-  "vsonline.accountProvider": "Microsoft",
-  "diffEditor.renderSideBySide": true,
-  "java.semanticHighlighting.enabled": true,
-  "python.jediEnabled": false,
-  "python.pythonPath": "C:\\Users\\zhang\\AppData\\Local\\Programs\\Python\\Python38\\python.exe",
-  "codespaces.accountProvider": "Microsoft",
-  "[dart]": {
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "editor.rulers": [80],
-    "editor.selectionHighlight": false,
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "editor.suggestSelection": "first",
-    "editor.tabCompletion": "onlySnippets",
-    "editor.wordBasedSuggestions": false
-  },
-  "leetcode.workspaceFolder": "C:\\Users\\zhang\\.leetcode"
+  "codespaces.accountProvider": "Microsoft"
 }
 ```
 
