@@ -143,7 +143,7 @@ JavaScript 提供两种注释的写法:
 
     ```js
     function countdown(n) {
-      while (n-- > 0) console.log(n);
+      while (n--> 0) console.log(n);
     }
     countdown(3);
     // 2

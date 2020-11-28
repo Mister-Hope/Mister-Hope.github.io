@@ -114,7 +114,7 @@ isAdult(50); // true
     最后，是时候去掉那个愚蠢的括号了!
 
     ```js
-    const isAdult = (age) => age >= 18;
+    const isAdult = age => age >= 18;
     ```
 
     恭喜您，您已经得到了最简形式! :satisfied:
@@ -126,7 +126,7 @@ isAdult(50); // true
 - 买 10 本以下，不打折
 - 满 10 本，打九折
 - 满 20 本，打八折
-- ~~不给钱就打骨折~~:unamused:
+- ~~不给钱就打骨折:unamused:~~
 
 该函数返回您要让他付的钱。
 
