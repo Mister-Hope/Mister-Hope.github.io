@@ -1,190 +1,250 @@
-# PowerToy介绍
+![](https://pic1.zhimg.com/v2-04a3bf05a35e194d9c5c63aafede4a8a_1440w.jpg?source=172ae18b)
+#PowerToys 0.25
+标题图来源：By Source (WP:NFCC#4), Fair use, https://en.wikipedia.org/w/index.php?curid=62463816
+##写在前面
+感谢知乎大佬@旅客君提供的开源使用攻略(0.17版),感谢知乎大佬@量子位提供的图片和部分介绍。
+本文涉及两个版本内容，部分操作存在出入，尽请谅解。
+##一、前言
 
-Microsoft PowerToys是一组实用程序，供高级用户调整和简化Windows体验，以提高工作效率。受Windows 95时代PowerToys项目的启发，此重启为高级用户提供了从Windows 10 shell压缩更高效率并针对单个工作流进行自定义的方法。可以在这里找到Windows 95 PowerToys的概述。
+首先，你会问，什么是PowerToys？PowerToys是微软最初发布于Windows 95平台的系统增强工具，直至2002年比尔盖茨调整研发重心，提升系统安全性，PowerToys 这一项目在当时因为Bug 多，功能不稳定，测试不严格，在安全审查中未能幸免，被微软从Windows系统移除。直到2019年，微软宣布开源PowerToys实用工具。（以上摘自百度百科）
+##二、下载、安装与启动
 
-有关PowerToys的视频概述，包括安装步骤和可用实用程序的演练，请查看PowerToys：实用程序，用于自定义YouTube上的Tabs vs Spaces Windows 10集。
+###1）下载PowerToys
+下载并安装PowerToys十分简单，只要你的Win10系统版本在1803以上，同时系统中安装有.NET Core 3.1 Desktop Runtime
+第一种安装方法是通过PowerToys的Github主页,找到最新版本下的Assets,直接下载.exe安装文件。
+![](https://pic3.zhimg.com/80/v2-ac1005a1ed2a6b64ca3634e8c4518d2a_720w.jpg)
+地址如下：
+https://github.com/microsoft/PowerToys
 
-下载和发行说明|发生了什么为PowerToys贡献|已知的问题
-## 建造状态
-| 架构 | 大师             | 稳定         | 安装程序       |
-| ---- | ---------------- | ------------ |
-| x64  | 主安装状态的构建 | 构建稳定状态 | 安装程序的构建 |
 
+第二种方法是在WinGet中运行如下代码：
 
 
-## 当前的PowerToy实用程序
-### 颜色选择器
+	WinGet install powertoys
 
-拾色器是具有Win + Shift + C的简单快捷的系统级拾色器。拾色器允许从任何当前运行的应用程序中选择颜色，并自动将HEX或RGB值复制到剪贴板。该代码基于Martin Chrzan的拾色器。
+还可以通过软件包管理工具Chocolatey，运行代码安装：
 
 
-### 花式区
+	choco install powertoys
 
-FancyZones是一个窗口管理器，可轻松创建复杂的窗口布局并将窗口快速定位到这些布局中。
+更新PowerToys通过以下代码实现：
 
 
+	choco upgrade powertoys
 
+目前，PowerToys可以支持X64、X86、ARM架构。
 
-### 文件资源管理器加载项
+###2）安装PowerToys
 
-File Explorer附加组件将为File Explorer启用SVG图标渲染和预览窗格添加。
+虽然安装界面为英语（暂无中文选项），但是你可以结合我的详细步骤完成安装。
 
-预览窗格是文件资源管理器中的现有功能。要启用它，只需单击功能区中的“查看”选项卡，然后单击“预览窗格”。 PowerToys现在将允许预览两种类型的文件：Markdown（.md）和SVG（.svg）
+第一步，双击运行安装程序，得到界面如下，此时点击「Next」下一步。
 
-### 图像调整器
+![](https://pic4.zhimg.com/80/v2-20d86cf9b0598980bb70c9bf30ae9903_720w.jpg)
+第一步
 
-Image Resizer是Windows Shell扩展，用于快速调整图像大小。从文件资源管理器中单击鼠标右键，即可立即调整一个或多个图像的大小。此代码基于Brice Lambson的Image Resizer。
+第二步，继续点击「Next」接受相关许可协议后下一步。
 
+![](https://pic4.zhimg.com/80/v2-9b81cf8e778b88dc7436d396c38749ff_720w.jpg)
+第二步
 
+第三步，选择安装位置及相关附加选项，安装位置默认保持不变，也可根据自己需求适当调整。后面两项带复选框的选项翻译如下。
 
-### 键盘管理员
+![](https://pic1.zhimg.com/80/v2-0224860e58ff1a824b295f8bd92f51f8_720w.jpg)
+第三步
 
-键盘管理器允许您通过重新映射按键并创建自己的键盘快捷方式来自定义键盘，从而提高工作效率。此PowerToy需要Windows 10 1903（内部版本18362）或更高版本。
+第四步，此时点击「Install」即可开始安装。当出现用户账户控制时，点击「是」以许可安装。
 
+![](https://pic4.zhimg.com/80/v2-4e709c1b399950882720516fa9c51e0b_720w.jpg)
+第四步
 
+第五步，安装完成。可自由选择是否立即启动。若不想启动则取消勾选。
 
-### 电源重命名
+![](https://pic2.zhimg.com/80/v2-3b7f1310ff54a54859e2d130626bfa85_720w.jpg)
+第五步
 
-PowerRename是Windows Shell扩展，用于使用搜索和替换或正则表达式进行高级批量重命名。 PowerRename允许简单搜索和替换或更高级的正则表达式匹配。在搜索和替换输入字段中键入内容时，预览区域将显示项目将重命名为的内容。然后，PowerRename调用Windows资源管理器文件操作引擎以执行重命名。这样的好处是允许在PowerRename退出后撤消重命名操作。该代码基于Chris Davis的SmartRename。
-### PowerToys Run
+###3）启动PowerToys
 
-PowerToys Run是PowerToys中的一个新玩具，可以帮助您使用简单的Alt + Space即时搜索并启动您的应用，然后开始输入！它是开源的，用于其他插件的模块化。 Window Walker现在也在里面！此PowerToy需要Windows 10 1903（内部版本18362）或更高版本。
+如何打开这款小工具？如果你已勾选「为PowerToys创建桌面快捷方式」选项，那么你将在你的桌面上找到它。若没有，你也可以在开始菜单中找到它。
 
+![](https://pic3.zhimg.com/80/v2-3853196eb35680fdd66fce8390602706_720w.jpg)
+开始菜单截图
 
-### 捷径指南
+启动后系统界面不会有任何提示，但是你可以在右下角找到该小工具的图标。
+![](https://pic3.zhimg.com/80/v2-d6162266dc8eb86eefc977d615b6b6de_720w.jpg)
+右下角状态栏截图
 
-当用户按住Windows键一秒钟以上时，将显示Windows键快捷方式指南，并显示桌面当前状态的可用快捷键。
+双击该图标后，即可看到这个小工具的主要界面。
 
+![](https://pic2.zhimg.com/80/v2-a2213aa4ec08ec45c7bcf0df872203f1_720w.jpg)
+PowerToys软件界面
 
+##三、功能详细翻译或介绍
+###1）General Settings（通用设置）
 
-### 视频会议静音（实验性）
+打开即看到PowerToys的通用设置，以下该截图中对这个小工具主要的功能的详细说明都做了翻译。PowerToys能帮助你做些什么便一目了然，以下会对这些功能做进一步的详解。
+![](https://pic3.zhimg.com/80/v2-d7f6dcba665b089a54badd6a206b71e2_720w.jpg)
 
-视频会议静音是一种通过Win + N对麦克风和摄像头进行全局“静音”的快速简便的方法。只需将目标应用程序中的网络摄像机设置为PowerToys VideoConference摄像机即可。
+继续往下翻这个页面，看到的是一些简单的通用设置，不过我想大部分人应该都能看得懂，但是我仍然做了翻译，截图如下。
+![](https://pic4.zhimg.com/80/v2-66ffcad1f3dea0fe6007a790d49f1223_720w.jpg)
 
-注意：这仅包含在PowerToys安装程序的预发行实验版本中。此PowerToy需要Windows 10 1903（内部版本18362）或更高版本。
+我们可以看到左侧带有各个功能名称的选项栏，点击各个选项栏将进入该功能的具体设置。至此，通用设置部分结束。
+###2）Color Picker
+Color Picker是一个可以在Win10系统全场景下使用的颜色提取工具，通过按键Win+Shift+c启动。
 
+你可以用光标在当前桌面上任意色块提取颜色，系统会自动复制颜色的HEX或RGB值。
+![](https://pic2.zhimg.com/v2-80c0fd41f5b447dcc0338a640ae8eb21_b.jpg)
 
-## 安装并运行Microsoft PowerToys
-#### 要求
+有用户反映，目前Color Picker在以管理员身份运行时无法正常使用，开发人员正在解决这个问题。
+###3）FancyZones（多功能的区域）
 
-    Windows 10 1803（内部版本17134）或更高版本。
-    具有.NET Core 3.1桌面运行时。安装程序应处理此问题，但我们想直接让人们知道。
+GitHub官方说明文档：
+https://github.com/microsoft/PowerToys/wiki/FancyZones-Overview
 
-### 通过EXE的GitHub [推荐]
+功能简介：FancyZones是一个窗口管理器，它的设计目的是为了你的工作流程，很容易和快速地安排窗口到一个相对高效的布局，并快速恢复这些布局。FancyZones允许用户为桌面定义一组窗口位置，这些位置是窗口的拖动目标。当用户将一个窗口拖到一个区域中时，窗口将被重新调整大小并重新定位以填充该区域。应用界面相关翻译如下。
+![](https://pic4.zhimg.com/80/v2-e573c5361a6dcd61b6a75d89198168df_720w.jpg)
 
-从Microsoft PowerToys GitHub版本页面安装。单击Assets以显示发行版中可用的文件，然后单击PowerToysSetup-0.25.0-x64.exe下载PowerToys安装程序。
+![](https://pic1.zhimg.com/80/v2-33bb544bfd3042668301ef7e06f3ecc4_720w.jpg)
 
-这是我们的首选方法。
-### 通过WinGet（预览）
+![](https://pic3.zhimg.com/80/v2-ac3f30dc551e920e7fc5a43e9f3f1e96_720w.jpg)
+其中，当点击热键（默认为Win+`）后界面的翻译截图如下。
+![](https://pic1.zhimg.com/80/v2-3de664187e444da86b38d7118c81873c_720w.jpg)
 
-从WinGet下载PowerToys。要安装PowerToys，请从命令行/ PowerShell运行以下命令：
+![](https://pic3.zhimg.com/80/v2-3bc3cbcdd0ae995dc716036897ebe642_720w.jpg)
+###4）File Explorer（资源管理器）
 
-```WinGet install powertoys
-```
+GitHub官方说明文档：
+https://github.com/microsoft/PowerToys/blob/master/src/modules/previewpane/README.md
 
-### WinGet安装PowerToys
+功能简介：虽然名字叫做资源管理器，但是在PowerToys中所实现的功能仅仅只有实现svg文件(.svg)以及markdown文件(.md)在右侧窗格预览的功能。对于一般用户无实际作用，翻译截图如下。
+![](https://pic4.zhimg.com/80/v2-ab60bae5c5d555508aa5d981f3e82b03_720w.jpg)
 
-具有视频会议静音功能的实验性PowerToys实用程序
+###5）Image Resizer（图片缩放器）
 
-安装PowerToys的预发行实验版本以试用该版本。除了视频会议实用程序之外，它还包含0.23的所有改进。单击Assets以显示发行版中可用的文件，然后下载.exe安装程序。
+GitHub官方说明文档：
+https://github.com/microsoft/PowerToys/blob/master/src/modules/previewpane/README.md
+功能简介：图片缩放器是一个为多个图像调整大小的Windows Shell扩展插件。安装PowerToys之后，在文件资源管理器中右键单击一个或选定多个图像文件，然后从右键菜单中选择「调整图片大小」。 图片缩放器还允许您通过鼠标右键拖放选定的文件来调整图像的大小，这样你就可以把调整后的图片保存在另一个文件夹里。
+![](https://pic1.zhimg.com/v2-280a487100c0d04303637a36f30c8fa4_b.jpg)
+软件预设了大/中/小/手机等不同的常用模版，单击确定即可一键完成图片尺寸的批量调整。你也可以点击Settings进入设置，按自己需求的尺寸大小、是否转换格式等来配置自己的常用“模版”。
 
-注意：我们将于2020年11月的第一周推出0.26实验版。
- ### 其他安装方法
+对于经常有多张图片的大小需要处理，而对专业性要求不高的用户来说，这款工具能替代专门的图像处理器软件。
+PowerToys该功能的设置翻译截图如下。
+![](https://pic1.zhimg.com/80/v2-232568c05b0a63e5286d9ce43364dbd4_720w.jpg)
+在资源管理器的界面中，若将系统语言设置为中文，那么该界面的语言也应当显示为中文，故直接查看即可理解如何使用。
+![](https://pic2.zhimg.com/80/v2-d87022450222d3a1582eab04b088ad31_720w.jpg)
+同样的，图片缩放器还允许用户配置如下设置。
 
-有社区驱动的安装方法，例如Chocolatey和Scoop。如果这些是您首选的安装解决方案，则将提供安装说明。
- ### 已知的问题
+关于尺寸，用户可以添加新的预设大小。可以配置为填充，适合或拉伸。用于调整大小的单位也可以设置为厘米、英寸、百分比和像素。
 
-    ·PT升高时，颜色选择器有时不起作用-＃5348。我们目前正在为此进行修复。
+关于编码，用户可以更改回滚编码器(当不能保存为原始格式时使用的编码器)并修改PNG、JPEG和TIFF的设置。
 
-### 处理器支持
+关于文件，用户可以修改调整大小后的图像文件名的格式，也可以选择保留原来最后修改日期的调整后的图像。
+###6）Keyboard Manager
+Keyboard Manager是一款简单而又实用的键盘键位修改小工具。
+![](https://pic1.zhimg.com/80/v2-c93c9d945c8243a0fa0940b2c51c80f4_720w.jpg)
+它能帮你将键盘上的某个按键映射为另一个按键，甚至还能将一组快捷键映射为另一组。在一些特殊的情况下，它能帮你的大忙。
+![](https://pic4.zhimg.com/80/v2-36ad45f83951d5bd27752d406f0cec9b_720w.jpg)
+修改键盘键位如果没有软件的帮助，需要修改注册表才能完成，比较复杂而且不好管理。而且Keyboard Manager修改键位之后无需重启电脑即可立即生效，你只需让它保留在后台运行即可 (占用资源极小)。
 
-我们目前支持以下矩阵。
+###7）PowerRename（强大的文件重命名）
 
-| x64    | x86       | ARM       |
-| ------ | --------- |
-| 支持的 | 问题＃602 | 问题＃490 |
-## 发生了什么
-### 2020年10月更新
+GitHub官方说明文档：
+https://github.com/microsoft/PowerToys/wiki/PowerRename-Overview
 
-我们0.25发布周期的目标是专注于开发团队和最终用户的稳定性，可访问性，本地化和生活质量的改善。我们的第一个端到端本地化过程已经完成。我们知道这并不完美，但是现在我们提供17种语言。如果发现问题，请提交本地化错误。
+功能简介：您是否曾经需要修改大量文件的文件名，但又不想将所有文件重命名为相同的名称？想要对不同文件名的一部分进行简单的搜索/替换吗？想要对多个项执行正则表达式重命名？PowerRename就是一个用于使用搜索和替换或正则表达式进行更高级的批量重命名的Windows Shell扩展插件。
+![](https://pic2.zhimg.com/v2-bef77f2e17ed6798f0e2ec8c92de0a65_b.webp)
+首先先放上截图翻译。
+![](https://pic1.zhimg.com/80/v2-994f1312294d5c82990314fe5f02e240_720w.jpg)
+接下来是当选中一些文件后，右键打开PowerRename的界面翻译。
+![](https://pic1.zhimg.com/80/v2-910e4792b3ed85c9f32025254594c470_720w.jpg)
+下面对该界面的选项或设置做详细介绍。
 
-核心团队关注的功能和实用程序的优先路线图。
-#### 2020年10月以来的亮点
+####1. Search for（搜索）
 
-#### 一般
+要在项名称中匹配的文本或正则表达式。
 
-    首次通过本地化已完成。 17种不同的语言。我们知道会有一些粗糙的地方，请告知我们，以便我们进行纠正。
-    日志已添加到安装程序中
-    解决了大量的可访问性问题。
-    更少的安装通知
-    FxCop的工作几乎全部完成
-    整理了视频GIF捕获规范。这是我们未来工作的计划。
+####2. Replace with（替换为）
 
-#### 颜色选择器
+要替换与搜索文本匹配的项名称中的实例的文本。
 
-    其他颜色样式选择，例如CYMK和HSL
+####3. Use Regular Expressions（使用正则表达式）
 
-#### 花式区
+如果勾选此项，搜索字段将被解释为正则表达式。「替换为」字段还可以包含正则表达式变量(参见下面的示例)。如果没有选中，搜索字段将被用作替换字段中的文本。
 
-    修复了多个错误
-    更好的区域绘图改进
+####4. Case Sensitive（区分大小写）
 
-#### 键盘管理员
+如果勾选此项，搜索字段中指定的文本将仅在文本相同的情况下与项中的文本匹配。默认情况下，不区分大小写。
 
-    修复了终端输入映射失败
-    更好的应用兼容性
-    多个错误修复
-    能够直接禁用键/快捷方式
+####5. Match All Occurrences（全字匹配）
 
-#### PowerToys Run
+如果勾选此项，搜索字段中所有匹配的文本将被更改为「替换为」字段的文本。否则，将只替换项目中搜索文本的第一个实例（从左到右）。
 
-    扩展环境变量搜索，例如％windr％
-    多个崩溃错误修复
-    计算器插件的改进
-    直接能够覆盖主题
-    Windows将打开您想要的外壳
-    更好的动作键支持
-        =用于直接计算器
-        ？用于直接文件搜索
-        。直接申请
-        //直接网址
-        <用于运行进程
-        >用于外壳工艺
+####6. Exclude Files（排除文件）
 
-#### 开发文档
+文件将不被包括在本次重命名操作中。
 
-    添加了多个开发人员相关文档。
+####7. Exclude Folders（排除文件夹）
 
-我想直接致电@ p-storm，@ TobiasSekan，@ davidegiacometti，@ royvou，@ gordonwatts，@ Aaron-Junker，@ htcfreek和@ niels9001，以获取他们的持续社区支持，并直接帮助他们使PowerToys成为更好的软件。
-### 计划0.27-2020年11月
+文件夹将不被包括在重命名操作中。
 
-对于0.27，我们正在积极努力：
+####8. Exclude Subfolder Items（排除子文件夹项目）
 
-    稳定性
-    辅助功能
-    视频会议静音
-    OOBE工作
+文件夹中的项将不包括在重命名操作中。默认情况下，所有子文件夹项也将被重命名。
 
-### PowerToys路线图
+####9. Enumerate Items（枚举项目）
 
-核心团队关注的功能和实用程序的优先路线图。
-## 开发人员指南
+在操作中修改的文件名后追加一个数字后缀。例如：foo.jpg -> foo (1).jpg
 
-请阅读开发人员文档以获取详细的细分。
-## 贡献
+####10. Item Name Only（仅项目名称）
 
-该项目欢迎所有类型的捐助。帮助规范，设计，文档，查找错误是每个人都可以在编码功能/错误修复基础上提供帮助的方法。我们很高兴与高级用户社区合作构建一套工具，以帮助您充分利用Windows。
+该操作只修改文件名部分（而不修改文件扩展名）。例如：txt.txt -> NewName.txt
 
-我们要求您在开始要贡献的功能之前，请阅读我们的“贡献者指南”。我们将很高兴与您合作，找出最佳方法，在整个功能开发过程中提供指导和指导，并帮助避免任何浪费或重复的工作。
-### ⚠代码状态⚠
+####11. Item Extension Only（仅项目扩展名）
 
-PowerToys仍然是一个非常流畅的项目，团队正在积极地开发此存储库。我们将定期对代码进行重组/重构，以使其更易于理解，导航，构建，测试和做出贡献，因此请务必定期对代码布局进行重大更改。
-### 许可证信息
+该操作只修改文件扩展名部分（而不是文件名）。例如：txt.txt -> txt.NewExtension
 
-大多数捐款要求您同意“捐款者许可协议”（CLA），声明您有权并实际上授予我们使用您的捐款的权利。
-## 行为守则
+这个重命名功能，除了普通表面上的文件名替换，还可以通过使用正则表达式来完成更加高级的文件名替换（针对高级用户）。什么是正则表达式，百度百科如下解释：正则表达式，又称规则表达式。（英语：Regular Expression，在代码中常简写为regex、regexp或RE），计算机科学的一个概念。正则表达式通常被用来检索、替换那些符合某个模式(规则)的文本。这里列出了GitHub中所给出的例子。
+![](https://pic3.zhimg.com/80/v2-f15991a831fdec8fe47da9647734da1a_720w.jpg)
+需要注意的是，为能够完全使用这些表达式，务必勾选「全字匹配」选项！
 
-该项目采用了Microsoft开源行为准则。
-### 隐私声明
+以下是对这些表达式的一些具体举例。
+![](https://pic1.zhimg.com/80/v2-723e58d41156f65bea96a35d30b244ec_720w.jpg)
+###8）Shortcut Guide（快捷方式向导）
 
-该应用程序记录基本遥测。我们的遥测数据页面（即将推出）具有遥测的趋势。请阅读Microsoft隐私声明以获取更多信息。
+GitHub官方说明文档：
+https://github.com/microsoft/PowerToys/wiki/Shortcut-Guide-Overview
+功能简介：实际使用中，用户难以把大量热键组合一一背下来，而Windows Key Shortcut Guide工具则可以让你以最直观的方式，清晰地列出当前应用全部可以操作的快捷键以及对应的功能说明。
+Shortcut Guide相当于一个可以随时呼出的热键说明书
+
+先放上相关截图翻译。
+![](https://pic2.zhimg.com/80/v2-b92eeec2f7672c8412ffbf8e3ef9e2a5_720w.jpg)
+按住键盘上的Windows键大约1秒钟（默认设置为900毫秒），会出现一个显示和Windows快捷键相关的叠加层。其中包含：
+
+更改活动窗口位置的快捷方式。
+
+常见的Windows快捷方式
+
+任务栏快捷方式。
+
+按住Win键的界面如下。
+![](https://pic1.zhimg.com/80/v2-33cee2a08ca74f2fec026479cdc45b90_720w.jpg)
+使用方法也很简单，按住Windows键即可查看相关信息，并跟着这个叠加层上的信息操作即可。若不想使用，松开Windows键会自动消失。注意，若该叠加层的显示时间少于1秒，可能会呼出开始菜单。
+
+###9）PowerToys Run
+
+GitHub官方说明文档：
+https://github.com/microsoft/PowerToys#powertoys-run
+
+功能简介：PowerToys Run是一款快速启动器工具，类似于Mac系统自带的Spotlight以及Windows上的Listary、Wox、everything等工具。按下“Alt+空格”即可随时呼出输入框，输入名字后，它能快速找到对应的软件、搜索文件/文件夹，并回车迅速打开它们。
+![](https://pic2.zhimg.com/v2-7e6760d57085b2b77f6a3d49df37e65d_b.webp)
+搜索到的结果之后，可以回车打开，也可以按下“Ctrl+C“”复制文件或文件夹所在的路径，也能按下“Ctrl+Shift+E”打开文件所在的目录 。
+
+它也能快速搜索当前正在运行的软件，并切换到它们的窗口去。如果你经常打开大量软件，窗口太多太乱，那么现在你只需要呼出PowerToys Run，输入软件名称，比如“Chrome”，即可立即快速跳转到谷歌浏览器的窗口，而不必来来回回用鼠标切换。
+![](https://pic4.zhimg.com/v2-3b6aab127e71a0fcbd442e7374b32073_b.webp)
+另外，PowerToys Run支持插件扩展，目前自带功能也已经可以进行一些额外操作了，例如进行数字计算，输入“>”来执行命令、调用控制面板等等。
+![](https://pic3.zhimg.com/v2-2770e661640d458f969a21e9822f1e96_b.webp)
+
+
+
+##结语
+因为目前版本新于此介绍所涉及的版本，部分内容存在出入，尽请谅解。
