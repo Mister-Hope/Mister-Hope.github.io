@@ -11,6 +11,10 @@ tags:
 
 - [GitHub 介绍](intro.md)
 
+- [Pull Request](pr.md)
+
+- [语义化提交](semantic.md)
+
 ## 官方文档
 
 - [全部文档](https://docs.github.com/cn/free-pro-team@latest/github)

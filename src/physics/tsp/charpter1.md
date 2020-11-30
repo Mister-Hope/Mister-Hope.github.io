@@ -40,7 +40,7 @@ $$\tag*{等温压缩系数} \kappa_T = - \frac{1}{V}(\frac{\partial V}{\partial 
 
 满足关系
 
-$$ \alpha = \kappa _T \beta p$$
+$$ \alpha = \kappa \_T \beta p$$
 
 一个重要的推导:
 

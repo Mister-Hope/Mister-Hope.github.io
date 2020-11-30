@@ -26,17 +26,17 @@ Flex 布局是轴线布局，只能指定"项目"针对轴线的位置，可以�
 ::: details 本章通用样式
 
 ```css
-.grid-demo > div{
+.grid-demo > div {
   color: black;
   font-size: 40px;
 }
 
 .grid-demo > .item1 {
-  background-color:#ff69b4;
+  background-color: #ff69b4;
 }
 
 .grid-demo > .item2 {
-  background-color:#ffa500;
+  background-color: #ffa500;
 }
 
 .grid-demo > .item3 {
@@ -60,10 +60,8 @@ Flex 布局是轴线布局，只能指定"项目"针对轴线的位置，可以�
 }
 
 .grid-demo > .item7 {
-  background-color:#008b8b
+  background-color: #008b8b;
 }
-
-
 ```
 
 :::
@@ -291,7 +289,6 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
   grid-template-columns: 33.33% 33.33% 33.33%;
   grid-template-rows: 33.33% 33.33% 33.33%;
 }
-
 ```
 
 :::

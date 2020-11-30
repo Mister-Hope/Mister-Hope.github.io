@@ -22,6 +22,10 @@ category: 教程
 
 - [JSON 教程](json/readme.md)
 
+## Linter
+
+- [Linter 介绍](linter/readme.md)
+
 ::: tip
 C 、C++、Java、PHP 正在编写中
 :::

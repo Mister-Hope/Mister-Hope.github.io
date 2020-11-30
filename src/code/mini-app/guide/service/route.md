@@ -28,11 +28,11 @@ category: 小程序
 对于路由的触发方式以及页面生命周期函数如下:
 
 | 路由方式   | 触发时机                                                                        | 路由前页面           | 路由后页面     |
-| ---------- | ------------------------------------------------------------------------------- | -------------------- | -------------- |
+| ---------- | ------------------------------------------------------------------------------- | -------------------- | -------------- | ------------------ |
 | 初始化     | 小程序打开的第一个页面                                                          |                      | onLoad, onShow |
 | 打开新页面 | 调用 API `wx.navigateTo`<br />使用组件 `<navigator open-type="navigateTo"/>`    | onHide               | onLoad, onShow |
 | 页面重定向 | 调用 API `wx.redirectTo`<br />使用组件 `<navigator open-type="redirectTo"/>`    | onUnload             | onLoad, onShow |
-| 页面返回   | 调用 API `wx.navigateBack`<br />使用组件 `<navigator open-type="navigateBack">` | 用户按左上角返回按钮 | onUnload       | onShow |
+| 页面返回   | 调用 API `wx.navigateBack`<br />使用组件 `<navigator open-type="navigateBack">` | 用户按左上角返回按钮 | onUnload       | onShow             |
 | Tab 切换   | 调用 API `wx.switchTab`<br />使用组件 `<navigator open-type="switchTab"/>`      | 用户切换 Tab         |                | 各种情况请参考下表 |
 | 重启动     | 调用 API `wx.reLaunch`<br />使用组件 `<navigator open-type="reLaunch"/>`        | onUnload             | onLoad, onShow |
 

@@ -103,7 +103,7 @@ alert("请求已发送，请等待响应...");
 const request;
 
 if (window.XMLHttpRequest) request = new XMLHttpRequest();
-else request = new ActiveXObject('Microsoft.XMLHTTP');
+else request = new ActiveXObject("Microsoft.XMLHTTP");
 ```
 
 通过检测 `window` 对象是否有 `XMLHttpRequest` 属性来确定浏览器是否支持标准的 `XMLHttpRequest`。注意，不要根据浏览器的`navigator.userAgent` 来检测浏览器是否支持某个 JavaScript 特性，一是因为这个字符串本身可以伪造，二是通过 IE 版本判断 JavaScript 特性将非常复杂。
