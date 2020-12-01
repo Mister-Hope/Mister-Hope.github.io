@@ -1,9 +1,6 @@
 ---
-
 title: Githook
-
 icon: tool
-
 ---
 
 ## Git钩子简介
@@ -116,8 +113,15 @@ chmod+x pre-commit
 
 ### 提交工作流挂钩
 
-*一般有四个钩子*
-`pre-commit`   `prepare-commit-msg`   `commit-msg`   `post-commit`
+一般有四个钩子
+
+- `pre-commit`
+
+- `prepare-commit-msg`  
+  
+- `commit-msg`  
+
+- `post-commit`
 
 - pre-commit挂钩在键入提交信息前运行，被用来检查即将提交的快照，例如，检查是否有东西被遗漏，确认测试是否运行，以及检查代码。
 
