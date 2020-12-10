@@ -36,7 +36,7 @@ tags:
 
    ![Git 安装示意图5](./assets/install5.png)
 
-1. 选择最后一项，直接检查与提交换行。
+1. 选择最后一项，原样检出与提交。
 
    ![Git 安装示意图6](./assets/install6.png)
 
@@ -88,7 +88,7 @@ tags:
 
    - 这一步是生成你的身份识别信息，你可以放心的把公钥交给别人，留下自己的私钥。
 
-   - .ssh 目录是默认隐藏的。Win10 查看隐藏文件详见 [显示隐藏的文件](../../code/windows/hidden-file.md)
+   - `.ssh` 目录是默认隐藏的。Win10 查看隐藏文件详见 [显示隐藏的文件](../../code/windows/hidden-file.md)
 
    :::
 

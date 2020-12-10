@@ -18,9 +18,11 @@ copyrightText: Copyright by 廖雪峰 Edited by Mr.Hope
 创建一个仓库非常简单，首先，选择一个合适的地方，创建一个空目录:
 
 ```sh
-mkdir learngit
-cd learngit
-pwd /hope-studio/learngit
+# open shell (PowerShell on Windows) in a proper directory
+$ mkdir learngit
+$ cd learngit
+$ pwd
+/users/hope-studio/learngit
 ```
 
 `pwd` 命令用于显示当前目录。
@@ -28,7 +30,7 @@ pwd /hope-studio/learngit
 ::: tip
 
 - 使用 Windows 系统时，为了避免遇到各种莫名其妙的问题，请确保目录名(包括父目录)不包含中文。
-- 为了确保能够执行跨平台的命令，请在 Windows 上安装 power shell 并设置为 VS Code 的默认终端。
+- 为了确保能够执行跨平台的命令，请在 Windows 上安装 PowerShell 并设置为 VS Code 的默认终端。
 
 :::
 
@@ -36,7 +38,7 @@ pwd /hope-studio/learngit
 
 ```sh
 $ git init
-Initialized empty Git repository in /hope-studio/learngit/.git/
+Initialized empty Git repository in /users/hope-studio/learngit/.git/
 ```
 
 瞬间 Git 就把仓库建好了，而且告诉您是一个空的仓库(empty Git repository)，可以发现当前目录下多了一个.git 的目录，这个目录是 Git 来跟踪管理仓库的，如果这个目录里面的文件破坏了，Git 仓库也破坏了。

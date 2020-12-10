@@ -56,11 +56,13 @@ Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理�
 
 - [搭建 Git 服务器](server.md)
 
-## Git 书籍
+## 扩展阅读
 
-- [Git-cheatSheet](/file/git/gitCheatSheet.pdf)
+- [官方文档](https://git-scm.com/doc)
 
-- [Pro Git](/file/git/progit_v2.1.45.pdf)
+- [Git-cheatSheet](/file/git/gitCheatSheet.pdf) (PDF)
+
+- [Pro Git](/file/git/progit_v2.1.45.pdf) (PDF)
 
 ::: tip TODO
 完善分支合并部分，加入更多命令介绍。如 `cherry-pick`。

@@ -67,7 +67,10 @@ commit 目的的简短描述，最好小于 50 字符，一般不超过 65 个�
 不同语言环境都有很多种工具来帮助你创建一个 semantic commit 或者自动生成 changelog。
 
 ::: tip 案例
-Node.js 环境下可以使用 [`cz-conventional-changelog`](https://github.com/commitizen/cz-conventional-changelog) 提供 `git cz` 命令辅助创建 semantic commit。
+Node.js 环境下可以使用:
 
-Node.js 环境下可以使用 [`conventional-changelog-cli`](https://github.com/conventional-changelog/conventional-changelog) 来快速生成更新日志，如 [vuepress-theme-hope 的更改日志](https://github.com/Mister-Hope/vuepress-theme-hope/blob/master/CHANGELOG.md)
-::;
+- [`cz-conventional-changelog`](https://github.com/commitizen/cz-conventional-changelog) 提供 `git cz` 命令辅助创建 semantic commit。
+
+- [`conventional-changelog-cli`](https://github.com/conventional-changelog/conventional-changelog) 来快速生成更新日志，如 [vuepress-theme-hope 的更改日志](https://github.com/Mister-Hope/vuepress-theme-hope/blob/master/CHANGELOG.md)
+
+:::
