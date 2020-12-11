@@ -25,4 +25,4 @@ Emmet 是一个快速创建 HTML 和 CSS 的方式，如果您想要成为一个
 
 ## 其他功能
 
-Emmet 还提供了很多内置功能，在 VSCode 中，你可以按下 `F1` 并输入 `emmet` 来查看功能列表。详细的功能列表说明请见 [Emmet 文档](https://docs.emmet.io/actions/)
+Emmet 还提供了很多内置功能，在 VSCode 中，您可以按下 `F1` 并输入 `emmet` 来查看功能列表。详细的功能列表说明请见 [Emmet 文档](https://docs.emmet.io/actions/)

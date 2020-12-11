@@ -64,7 +64,7 @@ commit 目的的简短描述，最好小于 50 字符，一般不超过 65 个�
 
 ## Semantic commit 与 Changelog 生成
 
-不同语言环境都有很多种工具来帮助你创建一个 semantic commit 或者自动生成 changelog。
+不同语言环境都有很多种工具来帮助您创建一个 semantic commit 或者自动生成 changelog。
 
 ::: tip 案例
 Node.js 环境下可以使用:

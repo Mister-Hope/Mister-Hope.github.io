@@ -27,7 +27,7 @@ category: HTML
 
 ## 绝对 URL 和相对 URL
 
-你可能会在网络上遇到两个术语，绝对 URL 和相对 URL(或者称为，绝对链接和相对链接):
+您可能会在网络上遇到两个术语，绝对 URL 和相对 URL(或者称为，绝对链接和相对链接):
 
 ### 绝对 URL
 
@@ -45,4 +45,4 @@ category: HTML
 
 一个相对 URL 将指向不同的位置，这取决于它所在的文件所在的位置——例如，如果我们把 index.html 文件从 projects 目录移动到 Web 站点的根目录(最高级别，而不是任何目录中)，里面的 `pdfs/project-brief.pdf` 相对 URL 将会指向 `http://www.example.com/pdfs/project-brief.pdf`，而不是 `http://www.example.com/projects/pdfs/project-brief.pdf`
 
-当然，project-brief.pdf 文件和 pdfs 文件夹的位置不会因为您移动了 `index.html` 文件而突然发生变化——这将使您的链接指向错误的位置，因此如果单击它，它将无法工作。你得小心点!
+当然，project-brief.pdf 文件和 pdfs 文件夹的位置不会因为您移动了 `index.html` 文件而突然发生变化——这将使您的链接指向错误的位置，因此如果单击它，它将无法工作。您得小心点!

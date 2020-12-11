@@ -114,7 +114,7 @@ Git 会告诉我们，`.gitignore` 的第 3 行规则忽略了该文件，于是
 # 忽略所有的 .a 文件
 *.a
 
-# 但跟踪所有的 lib.a，即便你在前面忽略了 .a 文件
+# 但跟踪所有的 lib.a，即便您在前面忽略了 .a 文件
 !lib.a
 
 # 只忽略当前目录下的 TODO 文件，而不忽略 subdir/TODO
@@ -131,7 +131,7 @@ doc/**/*.pdf
 ```
 
 ::: tip
-GitHub 有一个十分详细的针对数十种项目及语言的 .gitignore 文件列表， 你可以在 [https://github.com/github/gitignore](https://github.com/github/gitignore) 找到它。
+GitHub 有一个十分详细的针对数十种项目及语言的 .gitignore 文件列表， 您可以在 [https://github.com/github/gitignore](https://github.com/github/gitignore) 找到它。
 :::
 
 ::: tip 多个 .gitignore

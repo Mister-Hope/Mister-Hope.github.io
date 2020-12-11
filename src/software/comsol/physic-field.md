@@ -20,7 +20,7 @@ tags:
 
 - 关于各个模块(物理场)，请观看 [COMSOL Multiphysics 18 分钟入门](http://cn.comsol.com/video/basics-comsol-multiphysics-18-minutes)
 
-- 关于 COMSOL 的案例库，你可以查看 [COMSOL 案例下载](https://cn.comsol.com/models)
+- 关于 COMSOL 的案例库，您可以查看 [COMSOL 案例下载](https://cn.comsol.com/models)
 
 ---
 

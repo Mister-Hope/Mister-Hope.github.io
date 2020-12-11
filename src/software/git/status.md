@@ -33,7 +33,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 `git status` 命令可以输出仓库当前的状态，上面的命令输出告诉我们，readme.txt 被修改过了，但还没有准备提交的修改。
 
 ::: tip 简介输出
-`git status` 命令的输出十分详细，但其用语有些繁琐。Git 有一个选项可以帮你缩短状态命令的输出，这样可以以简洁的方式查看更改。如果你使用 `git status -s` 命令或 `git status --short` 命令，你将得到一种格式更为紧凑的输出。
+`git status` 命令的输出十分详细，但其用语有些繁琐。Git 有一个选项可以帮您缩短状态命令的输出，这样可以以简洁的方式查看更改。如果您使用 `git status -s` 命令或 `git status --short` 命令，您将得到一种格式更为紧凑的输出。
 
 一个案例:
 

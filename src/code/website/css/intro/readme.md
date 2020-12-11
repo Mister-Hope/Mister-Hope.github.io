@@ -27,7 +27,7 @@ category: CSS
 
 ## 样式化详解
 
-这三个章节是非常好的样式化实战练习，你可以在 MDN 上查看它。
+这三个章节是非常好的样式化实战练习，您可以在 MDN 上查看它。
 
 - [样式化列表](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Styling_text/Styling_lists)
 - [样式化链接](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Styling_text/Styling_links)

@@ -672,7 +672,7 @@ To github.com:Hope-Studio/learngit.git
    f52c633..7a5e5dd  dev -> dev
 ```
 
-您的小伙伴已经向 `origin/dev` 分支推送了他的提交，想要获取他的工作，你可以执行 `git fetch origin dev`。
+您的小伙伴已经向 `origin/dev` 分支推送了他的提交，想要获取他的工作，您可以执行 `git fetch origin dev`。
 
 如果这时碰巧您也对同样的文件作了修改，并试图推送:
 
@@ -772,7 +772,7 @@ To github.com:Hope-Studio/learngit.git
 
 - 从远程拉取分支，使用 `git fetch`。
 
-- `git pull`，相当于 `git fetch` + `git merge`，如果你的修改并没有和远程的修改发生冲突，两者会自动合并到你的本地，你可以直接推送上去。如果有冲突，要先处理冲突。
+- `git pull`，相当于 `git fetch` + `git merge`，如果您的修改并没有和远程的修改发生冲突，两者会自动合并到您的本地，您可以直接推送上去。如果有冲突，要先处理冲突。
 
 ---
 

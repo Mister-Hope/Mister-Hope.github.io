@@ -9,9 +9,9 @@ category: CSS
 
 - 一个块级元素的内容宽度是其父元素的 100%，其高度与其内容高度一致。
 
-- 内联元素的 `width` `height` 与内容一致。你无法设置内联元素的 `width` `height`。
+- 内联元素的 `width` `height` 与内容一致。您无法设置内联元素的 `width` `height`。
 
-- 如果你想控制内联元素的尺寸，你需要为元素设置 `display: block;` 或 `display: inline-block`。`inline-block` 混合了 `inline` 和 `block` 的特性。
+- 如果您想控制内联元素的尺寸，您需要为元素设置 `display: block;` 或 `display: inline-block`。`inline-block` 混合了 `inline` 和 `block` 的特性。
 
 ### 摆放特性
 
