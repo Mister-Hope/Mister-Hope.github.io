@@ -1,10 +1,9 @@
 ---
+title: 第一章
 category: 物理
 tags:
   - 光学
 ---
-
-# 第一章
 
 ## $\text{\S 1.1}$
 
