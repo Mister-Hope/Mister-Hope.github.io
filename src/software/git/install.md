@@ -94,7 +94,7 @@ tags:
 
 ## Git 的初次配置
 
-1. 为 Git 全局配置用户名和密码。
+1. 为 Git 全局配置用户名和邮箱。
 
    ```bash
    git config --global user.name "Your Name"
