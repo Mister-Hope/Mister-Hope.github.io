@@ -28,20 +28,20 @@ clang-format [options] [<file> ...]
 - `--Werror`: 将格式化警告变为错误
 - `--Wno-error=unknown`: 未知的格式化选项仅产生警告。
 
-    这可以保持格式化启用，即使配置包含未知（较新）选项。
+  这可以保持格式化启用，即使配置包含未知（较新）选项。
 
 - `--assume-filename=<string>`: 覆盖用于确定语言的文件名。
 
-    通常在从stdin读取时，帮助 clang-fomat 获取文件名
+  通常在从 stdin 读取时，帮助 clang-fomat 获取文件名
 
 - `--dry-run` 或 `-n`: 如果设置，实际上不进行格式更改
 - `--dump-config`: 将配置选项转储到标准输出并退出, 可以与 `--style` 选项一起使用。
 
 - `--fallback-style=<string>`: 设置回退的默认格式，通常在 clang-format 找不到配置文件时使用。
 
-    设置 `--fallback-style=none` 可以在这种情况下跳过格式化
+  设置 `--fallback-style=none` 可以在这种情况下跳过格式化
 
-- `--ferror-limit=<uint>`:     设置 clang-format 输出的最大错误数，超过将停止输出。
+- `--ferror-limit=<uint>`: 设置 clang-format 输出的最大错误数，超过将停止输出。
 
   请仅与 `--dry-run` 或 `-n` 配合使用，`0` 意味着无限制
 
@@ -49,11 +49,11 @@ clang-format [options] [<file> ...]
 
 - `--length=<uint>`: 格式化指定长度范围
 
-    可以通过指定多个偏移和长度对来格式化几个范围。
+  可以通过指定多个偏移和长度对来格式化几个范围。
 
-    当仅指定一个偏移量而没有 `--length`，clang-format会一直格式化到文件的最后。
+  当仅指定一个偏移量而没有 `--length`，clang-format 会一直格式化到文件的最后。
 
-    只能与一个输入文件一起使用。
+  只能与一个输入文件一起使用。
 
 - `--lines=<string>`: 格式为 `<start line>:<end line>`
 
@@ -76,7 +76,7 @@ clang-format [options] [<file> ...]
 - `--style=<string>` 编码样式
 
   当前支持: `LLVM`, `Google`, `Chromium`, `Mozilla`, `Webkit`
-  
+
   使用 `--style=file` 从中文件加载样式配置
 
   使用 `--style="{key:value,...}"` 来设置特定的参数，
@@ -96,7 +96,7 @@ Mr.Hope 推荐使用 Google 预设，所以在个人与工作室的每个项目�
 
 ```json
 {
-  "C_Cpp.clang_format_fallbackStyle": "Google",
+  "C_Cpp.clang_format_fallbackStyle": "Google"
 }
 ```
 

@@ -2,8 +2,20 @@ module.exports = [
   "",
   "file-structure",
   "env",
-  "config/",
-  "frame",
+  {
+    title: "配置",
+    icon: "config",
+    collapsable: false,
+    prefix: "config/",
+    children: ["", "app-config", "page-config", "sitemap-config"],
+  },
+  {
+    title: "框架",
+    icon: "frame",
+    collapsable: false,
+    prefix: "frame/",
+    children: ["intro", "scene"],
+  },
   {
     title: "逻辑层",
     icon: "process",

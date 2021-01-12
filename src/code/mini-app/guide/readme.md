@@ -13,6 +13,18 @@ category: 小程序
 
 - [小程序配置](config/readme.md)
 
+  - [全局配置](config/app-config.md)
+
+  - [页面配置](config/page-config.md)
+
+  - [sitemap 配置](config/sitemap-config.md)
+
+- [小程序框架](frame/readme.md)
+
+  - [框架介绍](frame/intro.md)
+
+  - [场景值](frame/scene.md)
+
 - [逻辑层](service/readme.md)
 
   - [生命周期](service/lifetime.md)
