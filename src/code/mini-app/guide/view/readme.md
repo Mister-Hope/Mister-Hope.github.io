@@ -24,14 +24,10 @@ category: 小程序
 
 - [WXSS](wxss.md)
 
+- [WXS](wxs.md)
+
 - [事件](event.md)
 
 - [基础组件](component.md)
 
 - [动画](animation.md)
-
-- [WXS](wxs.md) <MyBadge type="grey" text="高级" />
-
-- [WXS 事件](wxs-event.md) <MyBadge type="grey" text="高级" />
-
-- [建议双向绑定](model.md) <MyBadge type="grey" text="高级" />

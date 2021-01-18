@@ -134,37 +134,21 @@ WXML 的冒泡事件列表:
 除上表之外的其他组件自定义事件如无特殊声明都是非冒泡事件，如 form 的 `submit` 事件，input 的 `input` 事件，scroll-view 的 `scroll` 事件。(详见各个组件)
 :::
 
-### 普通事件绑定 <MyBadge text="重要" type="error" />
+### 事件绑定和冒泡 <MyBadge text="重要" type="error" />
 
-事件绑定的写法类似于组件的属性，如:
+事件绑定的写法同组件的属性，以 `key`、`value` 的形式。
 
-```xml
-<view bindtap="handleTap">
-  Click here!
-</view>
-```
+- key: 以 `bind` 或 `catch` 开头，然后跟上事件的类型，如 `bindtap`、`catchtouchstart`。
 
-如果用户点击这个 view ，则页面的 `handleTap` 会被调用。
+  自基础库版本 1.5.0 起，在非原生组件中，`bind` 和 `catch` 后可以紧跟一个冒号，其含义不变，如 `bind:tap`、`catch:touchstart`。
 
-事件绑定函数可以是一个数据绑定，如:
+- value: 是一个字符串，需要在对应的 `Page` 中定义同名的函数。不然当触发事件的时候会报错。
 
-```xml
-<view bindtap="{{ handlerName }}">
-  Click here!
-</view>
-```
+  基础库版本 2.8.1 起，原生组件也支持 `bind` 后紧跟冒号的写法。
 
-此时，页面的 `this.data.handlerName` 必须是一个字符串，指定事件处理函数名；如果它是个空字符串，则这个绑定会失效（可以利用这个特性来暂时禁用一些事件）。
+`bind` 事件绑定不会阻止冒泡事件向上冒泡，`catch` 事件绑定可以阻止冒泡事件向上冒泡。
 
-::: info
-自基础库版本 1.5.0 起，在大多数组件和自定义组件中， `bind` 后可以紧跟一个冒号，其含义不变，如 `bind:tap` 。基础库版本 2.8.1 起，在所有组件中开始提供这个支持。
-:::
-
-### 绑定并阻止事件冒泡 <MyBadge text="重要" type="error" />
-
-除 `bind` 外，也可以用 `catch` 来绑定事件。与 `bind` 不同， `catch` 会阻止事件向上冒泡。
-
-例如在下边这个例子中，点击 inner view 会先后调用 `handleTap3` 和 `handleTap2` (因为 tap 事件会冒泡到 middle view，而 middle view 阻止了 tap 事件冒泡，不再向父节点传递)，点击 middle view 会触发 `handleTap2`，点击 outer view 会触发 `handleTap1`。
+如在下边这个例子中，点击 inner view 会先后调用 `handleTap3` 和 `handleTap2` (因为 tap 事件会冒泡到 middle view，而 middle view 阻止了 tap 事件冒泡，不再向父节点传递)，点击 middle view 会触发 `handleTap2`，点击 outer view 会触发 `handleTap1`。
 
 ```xml
 <view id="outer" bindtap="handleTap1">
@@ -172,26 +156,6 @@ WXML 的冒泡事件列表:
   <view id="middle" catchtap="handleTap2">
     middle view
     <view id="inner" bindtap="handleTap3">
-      inner view
-    </view>
-  </view>
-</view>
-```
-
-### 互斥事件绑定 <MyBadge text="初学无需掌握" type="warn" />
-
-自基础库版本 2.8.2 起，除 `bind` 和 `catch` 外，还可以使用 `mut-bind` 来绑定事件。一个 `mut-bind` 触发后，如果事件冒泡到其他节点上，其他节点上的 `mut-bind` 绑定函数不会被触发，但 `bind` 绑定函数和 `catch` 绑定函数依旧会被触发。
-
-换而言之，所有 `mut-bind` 是“互斥”的，只会有其中一个绑定函数被触发。同时，它完全不影响 `bind` 和 `catch` 的绑定效果。
-
-例如在下边这个例子中，点击 inner view 会先后调用 `handleTap3` 和 `handleTap2` ，点击 middle view 会调用 `handleTap2` 和 `handleTap1`。
-
-```xml
-<view id="outer" mut-bind:tap="handleTap1">
-  outer view
-  <view id="middle" bindtap="handleTap2">
-    middle view
-    <view id="inner" mut-bind:tap="handleTap3">
       inner view
     </view>
   </view>
@@ -241,10 +205,6 @@ BaseEvent 基础事件对象属性列表:
 | currentTarget | Object  | 当前组件的一些属性值集合       |
 | mark          | Object  | 事件标记数据                   | 2.7.1      |
 
-::: warning
-canvas 中的触摸事件不可冒泡，所以没有 `currentTarget`。
-:::
-
 #### CustomEvent
 
 自定义事件对象属性列表(继承 BaseEvent):
@@ -261,6 +221,10 @@ canvas 中的触摸事件不可冒泡，所以没有 `currentTarget`。
 | -------------- | ----- | -------------------------------------------- |
 | touches        | Array | 触摸事件，当前停留在屏幕中的触摸点信息的数组 |
 | changedTouches | Array | 触摸事件，当前变化的触摸点信息的数组         |
+
+#### 特殊事件
+
+canvas 中的触摸事件不可冒泡，所以没有 `currentTarget`。
 
 #### type
 
@@ -301,7 +265,7 @@ canvas 中的触摸事件不可冒泡，所以没有 `currentTarget`。
 - `data-element-type`: 最终会呈现为 `event.currentTarget.dataset.elementType`
 - `data-elementType`: 最终会呈现为 `event.currentTarget.dataset.elementtype`
 
-::: details 例子
+示例:
 
 ```xml
 <view data-alpha-beta="1" data-alphaBeta="2" bindtap="bindViewTap"> DataSet Test </view>
@@ -316,15 +280,11 @@ Page({
 });
 ```
 
-:::
-
 #### mark
 
 在基础库版本 2.7.1 以上，可以使用 mark 来识别具体触发事件的 `target` 节点。此外， mark 还可以用于承载一些自定义数据(类似于 `dataset` )。
 
 当事件触发时，事件冒泡路径上所有的 mark 会被合并，并返回给事件回调函数。(即使事件不是冒泡事件，也会 mark)
-
-::: details 例子
 
 [在开发者工具中预览效果](https://developers.weixin.qq.com/s/boDQoKmu7M7G)
 
@@ -345,21 +305,19 @@ Page({
 });
 ```
 
-:::
-
 `mark` 和 `dataset` 很相似，主要区别在于: `mark` 会包含从触发事件的节点到根节点上所有的 `mark`: 属性值；而 `dataset` 仅包含一个节点的 `data-` 属性值。
 
 细节注意事项:
 
-- 如果存在同名的 `mark` ，父节点的 `mark` 会被子节点覆盖。
-- 在自定义组件中接收事件时， `mark` 不包含自定义组件外的节点的 `mark` 。
-- 不同于 `dataset` ，节点的 `mark` 不会做连字符和大小写转换。
+- 如果存在同名的 mark ，父节点的 mark 会被子节点覆盖。
+- 在自定义组件中接收事件时， mark 不包含自定义组件外的节点的 mark 。
+- 不同于 dataset ，节点的 mark 不会做连字符和大小写转换。
 
 #### touches
 
 touches 是一个数组，每个元素为一个 Touch 对象(canvas 触摸事件中携带的 touches 是 CanvasTouch 数组)。表示当前停留在屏幕上的触摸点。
 
-#### Touch 对象
+Touch 对象
 
 | 属性             | 类型   | 说明                                                                   |
 | ---------------- | ------ | ---------------------------------------------------------------------- |
@@ -367,7 +325,7 @@ touches 是一个数组，每个元素为一个 Touch 对象(canvas 触摸事件
 | pageX, pageY     | Number | 距离文档左上角的距离，文档的左上角为原点 ，横向为 X 轴，纵向为 Y 轴    |
 | clientX, clientY | Number | 距离页面可显示区域(屏幕除去导航条)左上角距离，横向为 X 轴，纵向为 Y 轴 |
 
-#### CanvasTouch 对象
+CanvasTouch 对象
 
 | 属性       | 类型   | 说明                                                                       | 特殊说明 |
 | ---------- | ------ | -------------------------------------------------------------------------- | -------- |

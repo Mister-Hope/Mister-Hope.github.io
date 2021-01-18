@@ -604,9 +604,9 @@ let person = { name: "John", age: 20 };
 [10, 12, 26, 15].find(f, person); // 26
 ```
 
-上面的代码中，`find` 函数接收了第二个参数 `person` 对象，回调函数中的 `this` 对象指向 `person` 对象。
+上面的代码中，`find`函数接收了第二个参数`person`对象，回调函数中的`this`对象指向`person`对象。
 
-另外，这两个方法都可以发现 `NaN`，弥补了数组的 `indexOf` 方法的不足。
+另外，这两个方法都可以发现`NaN`，弥补了数组的`indexOf`方法的不足。
 
 ```js
 [NaN]
@@ -617,7 +617,7 @@ let person = { name: "John", age: 20 };
 // 0
 ```
 
-上面代码中，`indexOf` 方法无法识别数组的 `NaN` 成员，但是 `findIndex` 方法可以借助 `Object.is` 方法做到。
+上面代码中，`indexOf`方法无法识别数组的`NaN`成员，但是`findIndex`方法可以借助`Object.is`方法做到。
 
 ## 数组实例的 fill()
 

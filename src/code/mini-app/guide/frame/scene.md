@@ -1,6 +1,6 @@
 ---
 title: 场景值
-icon: env
+icon: info
 category: 小程序
 ---
 
@@ -14,7 +14,7 @@ category: 小程序
 
 ## 获取场景值
 
-开发者可以通过下列方式获取场景值:
+开发者可以通过下列方式获取场景值：
 
 - 对于小程序，可以在 App 的 `onLaunch` 和 `onShow`，或 `wx.getLaunchOptionsSync` 中获取上述场景值。
 - 对于小游戏，可以在 `wx.getLaunchOptionsSync` 和 `wx.onShow` 中获取上述场景值

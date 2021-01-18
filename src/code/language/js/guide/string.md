@@ -135,7 +135,7 @@ JavaScript 为字符串提供了一些常用方法，注意，调用这些方法
 
 - indexOf
 
-  `indexOf()` 会搜索指定字符串第一次出现的位置:
+  `indexOf()` 会搜索指定字符串出现的位置:
 
   ```js
   const s = "hello, world";

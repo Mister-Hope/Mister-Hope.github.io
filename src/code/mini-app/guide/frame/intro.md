@@ -1,6 +1,6 @@
 ---
 title: 框架
-icon: frame
+icon: info
 category: 小程序
 ---
 

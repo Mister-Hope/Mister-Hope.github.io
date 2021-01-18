@@ -146,7 +146,7 @@ let r, n, s;
 try {
   s = prompt("请输入一个数字");
   n = parseInt(s);
-  if (Number.isNaN(n)) {
+  if (isNaN(n)) {
     throw new Error("输入错误");
   }
   // 计算平方:

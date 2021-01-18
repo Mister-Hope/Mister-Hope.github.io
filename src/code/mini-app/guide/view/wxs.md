@@ -1,5 +1,5 @@
 ---
-title: WXS
+title: WXS <MyBadge type="grey" text="高级" />
 icon: script
 category: 小程序
 ---
