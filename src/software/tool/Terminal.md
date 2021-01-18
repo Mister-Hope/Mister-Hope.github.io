@@ -2,7 +2,7 @@
 title: Windows Terminal
 icon: tool
 ---
-
+ 
 ## 安装
 
 您可以 [直接下载 exe](https://github.com/microsoft/terminal/releases/tag/v1.4.3243.0) 进行安装，或从Microsoft官网 [进行安装](https://www.microsoft.com/zh-cn/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab)，同样您可以在Microsoft应用商店直接搜索下载。
@@ -19,7 +19,6 @@ icon: tool
 |          |
 
 :::
-
 
 ## 优点
 
@@ -47,7 +46,7 @@ Windows Terminal 安装完成后，您可以启动它，并开启命令行界面
 
 如图所示，可以使用快捷键Ctrl+Shift+*来打开对应的配置文件，可使用Ctrl+，打开 settings.json 文件，来进行个性化调整和默认设置更改等设置。
 
-##  配置文件
+## 配置文件
 
 配置文件代表着您可以在 Windows Terminal 中配置的不同的命令行环境。默认情况下，每个配置文件使用不同的命令行可执行程序，但是您可以根据自己的喜好，创建任意数量的使用同一可执行程序的配置文件。每个配置文件可以有自己的定制项以帮助您区分它们，并且可以为每个配置文件添加您特有的个性。
 
@@ -67,7 +66,7 @@ Windows Terminal 安装完成后，您可以启动它，并开启命令行界面
 
  ![配置文件](../assets/terminal配置文件.png)
 
- ## Settings.json 结构
+## Settings.json 结构
 
  Windows Terminal 中包含两个设置文件。一个是 defaults.json，可以通过按住 Alt 键并点击下拉菜单中的 Settings 按钮打开，这是一个不可更改的文件，其中包含 Windows Terminal 的所有默认设置。另一个是 settings.json，可以通过点击下拉菜单中的 Settings 按钮访问，您可以在其中应用所有的自定义设置。
 
@@ -93,7 +92,7 @@ settings.json 文件分为四个主要部分。第一部分是全局设置对象
 
 - 进入该网站[https://atomcorp.github.io/themes/]，选择一个你喜欢的主题复制主题代码，在settings.json 文件中更改
 - 进入该网站[https://terminalsplash.com/]，选择一个你喜欢的主题复制主题代码，在settings.json 文件中更改
--  自行在 settings.json 文件中修改
+- 自行在 settings.json 文件中修改
 
 ### 背景设置
 
