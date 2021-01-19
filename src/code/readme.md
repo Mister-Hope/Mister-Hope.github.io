@@ -1,12 +1,13 @@
 ---
+title: 代码相关
 icon: code
 sticky: 20
 breadcrumb: false
 ---
 
-# 代码相关
-
 此处是 Mr.Hope 存放的一些代码笔记。
+
+<!-- more -->
 
 ## 目录
 

@@ -5,6 +5,8 @@ sticky: 10
 category: 随笔
 ---
 
+这里是 Mr.Hope 的一些随笔，后续被整理进博客中。
+
 ## 四季
 
 ::: tip 介绍

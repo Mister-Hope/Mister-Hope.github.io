@@ -1,11 +1,12 @@
 ---
 title: clang-format
+time: 2020-10-21
 icon: linter
 ---
 
-## 介绍
-
 clang-format 是一种代码格式化工具，可用于格式化(排版) C / C++ / Java / JavaScript / Objective-C / Protobuf / C# 的代码。它支持多种预设代码风格与自定义风格 (通过编写 `.clang-format` 文件)。
+
+<!-- more -->
 
 ## 自定义格式化
 

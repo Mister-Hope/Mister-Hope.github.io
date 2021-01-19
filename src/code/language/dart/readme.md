@@ -1,15 +1,17 @@
 ---
+title: Dart 教程
 icon: dart
+time: 2020-05-30
 category: dart
 ---
-
-# Dart 教程
 
 ::: tip
 
 正在完善中...
 
 :::
+
+<!-- more -->
 
 ## dart 快速入门
 
