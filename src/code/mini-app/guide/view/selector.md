@@ -5,7 +5,9 @@ category: 小程序
 ---
 
 ::: tip
+
 此部分在初步学习小程序的时候直接略过即可。
+
 :::
 
 ## WXML 节点信息
@@ -14,7 +16,7 @@ category: 小程序
 
 最常见的用法是使用这个接口来查询某个节点的当前位置，以及界面的滚动位置。
 
-::: details 示例代码
+::: details 代码示例
 
 ```js
 const query = wx.createSelectorQuery();
@@ -29,10 +31,13 @@ query.exec();
 ```
 
 上述示例中， `#the-id` 是一个节点选择器，与 CSS 的选择器相近但略有区别，请参见 [SelectorQuery.select](https://developers.weixin.qq.com/miniprogram/dev/api/wxml/SelectorQuery.select.html) 的相关说明。
+
 :::
 
 ::: tip
+
 在自定义组件或包含自定义组件的页面中，推荐使用 `this.createSelectorQuery` 来代替 `wx.createSelectorQuery` ，这样可以确保在正确的范围内选择节点。
+
 :::
 
 ## WXML 节点布局相交状态
@@ -47,7 +52,7 @@ query.exec();
 - 相交比例: 相交区域占参照区域的比例。
 - 阈值: 相交比例如果达到阈值，则会触发监听器的回调函数。阈值可以有多个。
 
-::: details 示例代码
+::: details 代码示例
 
 以下示例代码可以在目标节点(用选择器 `.target-class` 指定)每次进入或离开页面显示区域时，触发回调函数。
 
@@ -95,9 +100,13 @@ Page({
 :::
 
 ::: warning
+
 与页面显示区域的相交区域并不准确代表用户可见的区域，因为参与计算的区域是“布局区域”，布局区域可能会在绘制时被其他节点裁剪隐藏(如遇祖先节点中 overflow 样式为 `hidden` 的节点)或遮盖(如遇 `fixed` 定位的节点)。
+
 :::
 
 ::: tip
+
 在自定义组件或包含自定义组件的页面中，推荐使用 `this.createIntersectionObserver` 来代替 `wx.createIntersectionObserver` ，这样可以确保在正确的范围内选择节点。
+
 :::

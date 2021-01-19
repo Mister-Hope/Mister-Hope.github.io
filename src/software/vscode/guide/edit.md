@@ -48,7 +48,9 @@ tags:
 键盘快捷键: `Shift + Alt + ↑` 或 `Shift + Alt + ↓`
 
 ::: info
+
 由于按键冲突，在 Linux 上，向上 / 向下复制行没有默认的快捷键，您可以自行通过 `editor.action.copyLinesUpAction` 和 `editor.action.copyLinesDownAction` 设置自己的首选键盘快捷键。
+
 :::
 
 ## 上下移动行号

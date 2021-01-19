@@ -5,7 +5,9 @@ category: 小程序
 ---
 
 ::: tip
+
 此部分在初步学习小程序的时候直接略过即可。
+
 :::
 
 ## 界面动画的常见方式
@@ -90,7 +92,8 @@ keyframes 中对象的结构
 | translateY      | Number        |        | 否                                | Y 方向位移，即 CSS transform translateY |
 | translateZ      | Number        |        | 否                                | Z 方向位移，即 CSS transform translateZ |
 
-::: details 示例代码
+::: details 代码示例
+
 [在开发者工具中预览效果](https://developers.weixin.qq.com/s/P73kJ7mi7UcA)
 
 ```js
@@ -169,7 +172,8 @@ this.animate(selector, keyframes, duration, ScrollTimeline);
 | endScrollOffset   | Number |          | 是   | 指定停止驱动动画进度的滚动偏移量，单位 px                                                       |
 | timeRange         | Number |          | 是   | 起始和结束的滚动范围映射的时间长度，该时间可用于与关键帧动画里的时间 (duration) 相匹配，单位 ms |
 
-::: details 示例代码
+::: details 代码示例
+
 [在开发者工具中预览效果](https://developers.weixin.qq.com/s/994o8jmY7FcQ)
 
 ```js
@@ -225,6 +229,8 @@ this.animate(
   }
 );
 ```
+
+:::
 
 ## 高级的动画方式 <MyBadge text="初学者无需掌握" type="warning" />
 

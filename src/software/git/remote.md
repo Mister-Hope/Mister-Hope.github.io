@@ -147,7 +147,9 @@ Receiving objects: 100% (3/3), done.
 ```
 
 ::: tip
+
 如果您使用 clone 命令克隆了一个仓库，命令会自动将其添加为远程仓库并默认以 “origin” 为简写。
+
 :::
 
 注意把 Git 库的地址换成您自己的，然后进入 `gitskills` 目录看看，已经有 README.md 文件了:

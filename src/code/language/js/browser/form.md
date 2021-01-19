@@ -89,7 +89,9 @@ HTML5 新增了大量标准控件，常用的包括 `date`、`datetime`、`datet
 ```
 
 ::: tip
+
 不支持 HTML5 的浏览器无法识别新的控件，会把它们当做 `type="text"` 来显示。支持 HTML5 的浏览器将获得格式化的字符串。例如，`type="date"` 类型的 input 的 `value` 将保证是一个有效的 `YYYY-MM-DD` 格式的日期，或者空字符串。
+
 :::
 
 ## 提交表单
@@ -185,5 +187,7 @@ HTML5 新增了大量标准控件，常用的包括 `date`、`datetime`、`datet
 ```
 
 ::: tip
+
 `id` 为 `md5-password` 的 `<input>` 标记了 `name="password"`，而用户输入的 `id` 为 `input-password` 的 `<input>` 没有 `name` 属性。没有 `name` 属性的 `<input>` 的数据不会被提交。
+
 :::

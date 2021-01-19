@@ -203,7 +203,9 @@ Mr.Hope 已为 inNENU Website 开发了一些常规组件。本文介绍了这�
 | timeList |  是  | TimeListItem[] | Markdown 转 HTML 内容 |
 
 ::: warning
+
 ※ 必须将该组件直接放置在 `div.container` 中! 否则会造成显示错乱。
+
 :::
 
 - **TimeListItem**:

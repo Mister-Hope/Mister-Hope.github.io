@@ -7,7 +7,9 @@ category: 小程序
 注册小程序。接受一个 Object 参数，其指定小程序的生命周期回调等。 <MyBadge text="重要" type="error" />
 
 ::: warning
+
 App() 必须在 app.js 中调用，必须调用且只能调用一次。不然会出现无法预期的后果。
+
 :::
 
 <!-- more -->

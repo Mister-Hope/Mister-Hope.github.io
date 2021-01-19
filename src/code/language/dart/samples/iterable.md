@@ -74,7 +74,9 @@ void main() {
 ```
 
 ::: tip
+
 在后台，`for-in` 循环使用迭代器。但是，您很少看到直接使用 `Iterator` API 的情况，因为 `for-in` 它更易于阅读和理解，并且不易出错。
+
 :::
 
 ::: tip 关键词
@@ -102,7 +104,9 @@ void main() {
 ```
 
 ::: warning
+
 因为访问 `Iterable` 的最后一个元素需要逐步浏览所有其他元素， 所以 `last` 可能很慢。使用 `first` 或 `last` 在一个空 `Iterable` 会产生 `StateError`。
+
 :::
 
 ### 使用 `firstWhere()`
@@ -159,7 +163,9 @@ main() {
 在示例中，`firstWhereWithOrElse()` 使用可选的 named 参数 `orElse` 调用了 `firstWhere()`。当找不到元素时，该参数提供了替代方法。在这种情况下，由于没有元素满足提供的条件，因此返回了文本 `'None!'`。
 
 ::: warning
+
 如果没有元素满足测试谓词，并且 `orElse` 未提供参数，则 `firstWhere()` 抛出 `StateError`。
+
 :::
 
 ::: tip 快速回顾
@@ -181,7 +187,9 @@ main() {
 `singleWhere()` 工作方式与 `firstWhere()` 相似，但是在这种情况下，它只期望 Iterable 的一个元素满足谓词。如果 Iterable 满足谓词条件的元素超过一个或全部不满足，则该方法将引发 `StateError` 异常。
 
 ::: warning
+
 `singleWhere()` 依次执行直到 Iterable 的最后一个元素，如果 Iterable 数量为无限或包含大量元素，可能会导致问题。
+
 :::
 
 ## 条件检查
@@ -280,7 +288,9 @@ for (var number in evenNumbers) {
 在示例的后面，`where()` 再次用于查找所有大于 1000 的数字。由于没有数字，结果为空 Iterable。
 
 ::: tip
+
 如果没有元素满足 `where()` 中的谓词 ，则该方法返回 null Iterable。不同于 `singleWhere()` 或 `firstWhere()`， `where()` 不会引发 StateError 异常。
+
 :::
 
 ### 使用 takeWhile
@@ -329,7 +339,9 @@ Iterable<String> output = numbers.map((number) => number.toString());
 ```
 
 ::: tip
+
 `map()` 返回一个惰性的 Iterable，这意味着仅在迭代元素时才调用提供的函数。
+
 :::
 
 ::: tip 快速回顾

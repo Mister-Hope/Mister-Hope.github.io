@@ -22,7 +22,9 @@ category: HTML
 ```
 
 ::: info
+
 更多详情请见 [维基百科](https://zh.wikipedia.org/wiki/%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E5%AE%9A%E4%BD%8D%E7%AC%A6)
+
 :::
 
 ## 绝对 URL 和相对 URL
@@ -34,7 +36,9 @@ category: HTML
 指向由其在 Web 上的绝对位置定义的位置，包括 protocol(协议) 和 domain name(域名)。
 
 ::: tip 例子
+
 如果 index.html 页面上传到 projects 这一个目录。并且 projects 目录位于 web 服务站点的根目录，web 站点的域名为 `http://www.example.com`，那么这个页面就可以通过 `http://www.example.com/projects/index.html` 访问(或者通过 `http://www.example.com/projects/` 来访问，因为在没有指定特定的 URL 的情况下，大多数 web 服务会默认访问加载 `index.html` 这类页面)
+
 :::
 
 不管绝对 URL 在哪里使用，它总是指向确定的相同位置。

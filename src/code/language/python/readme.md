@@ -11,7 +11,9 @@ category: Python
 <!-- more -->
 
 ::: warning 注意
+
 本教程基于 Python3, Python2 已经过时停止维护多年，请不要使用学习。
+
 :::
 
 ## Python 简介

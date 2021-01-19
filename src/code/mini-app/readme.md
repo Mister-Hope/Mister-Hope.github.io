@@ -6,7 +6,9 @@ category: 小程序
 ---
 
 ::: tip
+
 在开发小程序之前。应当掌握 [HTML](../website/html/readme.md)、[CSS](../website/css/readme.md)、[JavaScript 基础](../language/js/guide/readme.md) 以及 [ES6](../language/js/es6/readme.md)。
+
 :::
 
 <!-- more -->
@@ -18,7 +20,9 @@ category: 小程序
 对于 QQ 小程序，其文件结构为 `QML`、`qss`、`js` 和 `json`。
 
 ::: tip
+
 QQ 小程序本质还是换汤不换药的，且 QQ 开发者工具兼容 `wxml` 与 `wss`)
+
 :::
 
 小程序开发与网页开发极其相似。所以必须有适当的网页开发基础。零基础的人可能很难直接上手小程序开发。

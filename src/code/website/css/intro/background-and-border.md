@@ -135,7 +135,9 @@ span {
 `background-position` 属性允许您选择背景图像显示在其应用到的盒子中的位置。它使用的坐标系中，框的左上角是 (0,0)，框沿着水平(x)和垂直(y)轴定位。
 
 ::: info
+
 默认的背景位置值是 (0,0)。
+
 :::
 
 最常见的背景位置值有两个单独的值: 一个水平值后面跟着一个垂直值。
@@ -199,7 +201,9 @@ span {
 :::
 
 ::: info
+
 `background-position` 是 `background-position-x` 和 `background-position-y` 的简写，它们允许您分别设置不同的坐标轴的值。
+
 :::
 
 ### 渐变背景
@@ -207,7 +211,9 @@ span {
 当渐变用于背景时，也可以使用像图像一样的 `background-image`属性设置。
 
 ::: info
+
 渐变色的案例可以从 [Web Gradients](https://webgradients.com/) 寻找，此处不再举例
+
 :::
 
 ### 多个背景图像
@@ -217,7 +223,9 @@ CSS 允许您有多个背景图像。您需要在 `background-image` 设置多�
 当您这样做时，您可能会以背景图像互相重叠而告终。背景将与最后列出的背景图像层在堆栈的底部，背景图像在代码列表中最先出现的在顶端。
 
 ::: tip
+
 渐变可以与常规的背景图像很好地混合在一起。
+
 :::
 
 其它 `background-*` 属性的值需要同样用逗号分隔的方式设置。
@@ -248,7 +256,9 @@ background-position: 10px 20px, top right;
 `background-attachment` 属性只有在有内容要滚动时才会有效果。
 
 ::: tip 案例
+
 [案例地址](https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html)
+
 :::
 
 ### background 简写
@@ -278,7 +288,9 @@ CSS `background` 属性是许多普通背景属性的简写，它允许您一次
 全部规则请见 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background)
 
 ::: warning
+
 Mr.Hope 极其不建议使用这个简写，因为它比较复杂，很容易导致预期之外的结果。
+
 :::
 
 ### 背景的可访问性考虑
@@ -286,7 +298,9 @@ Mr.Hope 极其不建议使用这个简写，因为它比较复杂，很容易导
 当您把文字放在背景图片或颜色上面时，需要保持足够的对比度让文字清晰易读。如果指定了一个图像，并且文本将被放置在该图像的顶部，您还应该指定一个 `background-color` ，以便在图像未加载时文本也足够清晰。
 
 ::: warning
+
 屏幕阅读器不能解析背景图像，因此背景图片应该只是纯粹的装饰；任何重要的内容都应该是 HTML 页面的一部分，而不是包含在背景中。
+
 :::
 
 ## 边框

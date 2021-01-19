@@ -18,6 +18,7 @@ tags:
 1. 可以注册一个 COMSOL 账号，积极参与并收听 COMSOL 官网上的免费 Workshop，每次参加都会附赠 15 天的免费试用许可证。
 
    ::: tip 试用许可证
+
    COMSOL 试用许可证与 COMSOL 全产品许可证的唯一区别是无法使用 COMSOL Compiler，即不能使用该许可证将 COMSOL 模型编译为各平台可用的应用程序。
 
    COMSOL workshop 的频率很高，平均不到十天就有一期，在 [这里](http://cn.comsol.com/events) 查看并注册。

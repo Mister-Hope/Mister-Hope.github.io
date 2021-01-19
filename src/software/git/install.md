@@ -89,7 +89,9 @@ tags:
 ![Git Bash](./assets/shell.png)
 
 ::: tip
+
 如果您对 VSCode 和 PowerShell 还不熟悉，您可以在接下来的学习与操作中使用 Git Bash。
+
 :::
 
 ## Git 的初次配置
@@ -133,7 +135,9 @@ tags:
    :::
 
    ::: info RSA
+
    RSA 是一种不对称加密，公钥的加密只能通过私钥解开，反之私钥的加密只能由公钥解开。也就是说当您给别人自己的公钥的时候，他们也无法冒充您。
+
    :::
 
 1. 打开 [GitHub](https://github.com) 并选择 "Sign in" 注册自己的账号。

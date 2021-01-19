@@ -37,7 +37,9 @@ category: 小程序
 :::
 
 ::: warning
+
 在模板中引用到的自定义组件及其对应的节点名需要在 json 文件中显式定义，否则会被当作一个无意义的节点。除此以外，节点名也可以被声明为抽象节点。
+
 :::
 
 ## 模板数据绑定
@@ -198,6 +200,7 @@ Component({
 ```
 
 :::: tip 历史方式
+
 小程序基础库版本 2.2.3 以上支持 `addGlobalClass` 选项，即在 Component 的 `options` 中设置 `addGlobalClass: true`。 这个选项等价于设置 `styleIsolation: apply-shared` ，但设置了 `styleIsolation` 选项后这个选项会失效。
 
 ::: details 代码示例
@@ -273,6 +276,8 @@ Component({
   font-size: 1.5em;
 }
 ```
+
+:::
 
 ## 引用页面或父组件的样式 <MyBadge type="grey" text="高级" />
 

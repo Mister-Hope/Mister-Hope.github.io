@@ -23,7 +23,9 @@ category: 小程序
 ![Condition](https://res.wx.qq.com/wxdoc/dist/assets/img/customcompile.e2f5a7ad.png)
 
 ::: tip
+
 编译条件跟项目相关，写在 `package.config.json` 中。每个项目可以保存自己相关的编译条件
+
 :::
 
 ## 编译异常信息
@@ -76,7 +78,9 @@ Sources panel 用于显示当前项目的脚本文件，同浏览器开发不同
 ![source](https://res.wx.qq.com/wxdoc/dist/assets/img/source.052d621d.png)
 
 ::: tip
+
 当代码运行到断点的时候，整个小程序都停止了，所以模拟器会出现白屏或者无法操作的情况
+
 :::
 
 ### AppData panel
@@ -100,7 +104,9 @@ Network Panel 用于观察和显示 request 和 socket 的请求情况
 ![network](https://res.wx.qq.com/wxdoc/dist/assets/img/network.cc726875.png)
 
 ::: tip
+
 uploadFile 和 downloadFile 暂时不支持在 Network Panel 中查看
+
 :::
 
 ### Console panel

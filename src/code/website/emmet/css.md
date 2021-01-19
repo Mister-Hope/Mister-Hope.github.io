@@ -27,7 +27,9 @@ tags:
 :::
 
 ::: warning
+
 请只有在必要(不添加会产生歧义)的情况下添加 `-` 分隔符，否则 Emmet 可能会错误的理解它。
+
 :::
 
 ## 值的单位
@@ -91,5 +93,7 @@ margin: 10em !important;
 正如上方演示，您可以利用 `+` 同时输出多个 CSS 属性。
 
 ::: info Snippets
+
 完整的 CSS snippets 请见 [Emmet Repo](https://github.com/emmetio/emmet/blob/master/snippets/css.json)
+
 :::

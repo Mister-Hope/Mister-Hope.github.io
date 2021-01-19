@@ -20,7 +20,9 @@ category: 小程序
 - 提供 [模块化能力](module.md)，每个页面有独立的作用域。
 
 ::: warning
+
 小程序框架的逻辑层并非运行在浏览器中，因此 JavaScript 在 web 中一些能力都无法使用，如 `window`，`document` 等。
+
 :::
 
 ## 文档

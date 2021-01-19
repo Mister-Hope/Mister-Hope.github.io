@@ -126,7 +126,9 @@ a:active {
 ## 盒模型
 
 ::: tip
+
 您可能需要先查看 [盒模型](box.md) 以理解此部分
+
 :::
 
 ![盒模型示意图](https://www.runoob.com/wp-content/uploads/2013/08/VlwVi.png)
@@ -169,7 +171,9 @@ div {
 ```
 
 ::: tip
+
 `padding` 与 `margin` 在格式上完全相同。
+
 :::
 
 ## 背景色

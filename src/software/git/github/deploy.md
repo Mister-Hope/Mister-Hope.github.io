@@ -12,7 +12,9 @@ tags:
 <!-- more -->
 
 ::: tip
+
 由于 Centos 仍然是用 GitV1，本教程使用 Ubuntu 18.04 进行教学。
+
 :::
 
 ## 添加账户

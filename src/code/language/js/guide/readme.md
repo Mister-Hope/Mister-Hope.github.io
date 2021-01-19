@@ -6,7 +6,9 @@ category: JavaScript
 ---
 
 ::: tip
+
 本部分将带您尽快进入 JavaScript 的世界。
+
 :::
 
 <!-- more -->

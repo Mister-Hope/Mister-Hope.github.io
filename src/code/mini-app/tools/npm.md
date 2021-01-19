@@ -45,7 +45,9 @@ const packageOther = require("packageName/other");
 ```
 
 ::: tip
+
 此处使用 npm 包时如果只引入包名，则默认寻找包名下的 `index.js` 文件或者 `index` 组件。
+
 :::
 
 ## 发布 npm 包
@@ -166,5 +168,7 @@ const packageOther = require("packageName/other");
 ```
 
 ::: tip
+
 打包生成的代码在同级目录下会生成 source map 文件，方便进行逆向调试。
+
 :::

@@ -22,6 +22,7 @@ category: 小程序
 ```
 
 如果页面添加了上述声明，则在屏幕旋转时，这个页面将随之旋转，显示区域尺寸也会随着屏幕旋转而变化。
+
 :::
 
 从小程序基础库版本 2.5.0 开始， `pageOrientation` 还可以被设置为 `landscape` ，表示固定为横屏显示。
@@ -40,8 +41,12 @@ category: 小程序
 
 如果小程序添加了上述声明，则在屏幕旋转时，小程序将随之旋转，显示区域尺寸也会随着屏幕旋转而变化。
 
+:::
+
 ::: warning
+
 在 iPad 上不能单独配置某个页面是否支持屏幕旋转。
+
 :::
 
 ## Media Query
@@ -102,5 +107,7 @@ Component({
   },
 });
 ```
+
+:::
 
 此外，还可以使用 [`wx.onWindowResize`](https://developers.weixin.qq.com/miniprogram/dev/api/ui/window/wx.onWindowResize.html) 来监听(但这不是推荐的方式)。

@@ -8,7 +8,9 @@ icon: tool
 您可以 [直接下载 exe](https://github.com/microsoft/PowerToys/releases) 进行安装。
 
 ::: info 系统要求
+
 Win10 版本 > 1803，已安装 .NET Core 3.1 Desktop Runtime
+
 :::
 
 或者使用 WinGet:
@@ -47,7 +49,9 @@ FancyZones 实现了更高效地利用屏幕的面积，管理切换大量窗口
 当首次启动时，FancyZones 会要求您为当前显示器选择一个默认的布局。
 
 ::: tip
+
 请注意 FancyZones 布局是基于显示器的，所以如果您有多个显示器，您需要分别设置它们。
+
 :::
 
 ![布局选择](./assets/layout-picker.png)
@@ -71,7 +75,9 @@ Preview Panel(预览窗格) 是一个轻量快速 Win10 的文件资源管理器
 ![Markdown 预览](./assets/markdown-preview.png)
 
 ::: tip
+
 这两个文件的预览对开发者是十分有用的。
+
 :::
 
 ## 图片尺寸调整
@@ -97,7 +103,9 @@ Keyboard Manager 是一款简单而又实用的键盘键位修改小工具。
 它的主要作用能帮您将键盘上的某个按键映射为另一个按键，甚至还能将一组快捷键映射为另一组。在一些特殊的情况下，它能帮您的大忙。
 
 ::: tip
+
 Keyboard Manager 修改键位之后无需重启电脑即可立即生效。
+
 :::
 
 ## PowerRename

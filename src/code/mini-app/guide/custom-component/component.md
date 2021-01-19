@@ -121,7 +121,9 @@ Component({
 | observer      | Function | 否       | 属性值变化时的回调函数   |          |
 
 ::: warning
+
 新版本基础库中不推荐使用 `observer` 字段，而是使用 Component 构造器的 `observers` 字段代替，它更加强大且性能更好。
+
 :::
 
 ::: details 代码示例
@@ -150,6 +152,8 @@ Component({
 });
 ```
 
+:::
+
 属性的类型可以为 `String` `Number` `Boolean` `Object` `Array` 其一，也可以为 `null` 表示不限制类型。
 
 ::: tip
@@ -169,7 +173,9 @@ this.data.max === 5; // true
 :::
 
 ::: info
+
 在 `properties` 定义段中，属性名采用驼峰写法(propertyName)；在 wxml 中，指定属性值时则对应使用连字符写法(component-tag-name property-name="attr value")，应用于数据绑定时采用驼峰写法(attr="")。
+
 :::
 
 ### Bug & Tips

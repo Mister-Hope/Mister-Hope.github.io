@@ -59,13 +59,17 @@ category: CSS
 如果仅仅需要在 y 轴方向上滚动，可以使用 `overflow-y` 属性，设置 `overflow-y: scroll` 来仅在 y 轴方向滚动。您也可以用 `overflow-x`，以在 x 轴方向上滚动。
 
 ::: warning
+
 请注意，`overflow-x` 不是处理长单词的好办法! 如果您真的需要在小盒子里面和长英文词打交道，使用 `word-break` 或者 `overflow-wrap` 属性。
+
 :::
 
 和 `scroll` 一样，在无论内容是否会溢出，页面上都会显示一个滚动条。
 
 ::: tip
+
 您可以用 `overflow` 属性指定 x 轴和 y 轴方向的滚动，同时使用两个值进行传递。如果指定了两个关键字，第一个对 `overflow-x` 生效而第二个对 `overflow-y` 生效。否则，`overflow-x` 和 `overflow-y` 将会被设置成同样的值。例如，`overflow: scroll hidden` 会把 `overflow-x` 设置成 `scroll`，而 `overflow-y` 则为 `hidden`。
+
 :::
 
 如果您想让滚动条只在必要时才显示，那么使用 `overflow: auto`。此时由浏览器决定是否显示滚动条。浏览器一般仅仅会在有足以引起溢出的内容的时候这么做。

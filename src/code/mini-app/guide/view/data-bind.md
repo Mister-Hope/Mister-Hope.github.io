@@ -65,7 +65,9 @@ Page({
 ```
 
 ::: danger
+
 不要直接写 `checked="false"`，其计算结果是一个字符串，转成 `boolean` 类型后代表真值。
+
 :::
 
 ## 运算

@@ -84,7 +84,9 @@ div {
 当您指定一个 CSS 元素的宽度和高度属性时，您只是设置内容区域(content box)的宽度和高度。`padding` 和 `border` 再加上设置的宽高一起决定整个盒子的大小。
 
 ::: warning
+
 margin 不计入实际大小，但它会影响盒子在页面所占空间，但是影响的是盒子外部空间。盒子的范围到边框为止 —— 不会延伸到 margin。
+
 :::
 
 ::: demo 元素的宽度与高度
@@ -167,7 +169,9 @@ html {
 浏览器开发者工具 可以使您更容易地理解 box 模型。您可以看到元素的大小以及它的外边距、内边距和边框。这是一个很好的检查元素大小的方式，可以便捷的判断您的盒子大小是否符合预期。
 
 ::: info
+
 更多盒模型相关内容可见 [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/box_model)
+
 :::
 
 ## 控制盒模型
@@ -213,7 +217,9 @@ html {
 :::
 
 ::: info 外边距重叠
+
 有许多规则规定了什么时候外边距会折叠，什么时候不会折叠。相关更多信息，请参阅 [外边距重叠](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)。初学时您需要首先记住外边距会折叠，如果您用外边距创建空间而没有得到您想要的效果，请参阅上方链接寻找原因。
+
 :::
 
 ### 边框

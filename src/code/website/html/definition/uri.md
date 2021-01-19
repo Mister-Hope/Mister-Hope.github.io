@@ -18,7 +18,9 @@ category: HTML
 **统一资源名称**(英语: Uniform Resource Name，缩写: URN)是统一资源标识(URI)的历史名字，它使用 `urn:` 作为 URI scheme。
 
 ::: info
+
 更多详情请见 [维基百科](https://zh.wikipedia.org/wiki/%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E5%90%8D)
+
 :::
 
 ### URL
@@ -26,7 +28,9 @@ category: HTML
 **统一资源定位符**(英语: Uniform Resource Locator，缩写: URL；或称统一资源定位器、定位地址、URL 地址，俗称网页地址或简称网址)是因特网上标准的资源的地址(Address)，如同在网络上的门牌。
 
 ::: info
+
 更多详情请见 [URL](url.md)
+
 :::
 
 ### 关系
@@ -37,7 +41,9 @@ URL(定位符)和 URN(名称)方案属于 URI 的子类，URI 可以为 URL 或 
 URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(URN)如同一个人的名称，而统一资源定位符(URL)代表一个人的住址。换言之，URN 定义某事物的身份，而 URL 提供查找该事物的方法。
 
 ::: tip 例子
+
 用于标识唯一书目的 ISBN 系统是一个典型的 URN 使用范例。例如，ISBN `0-486-27557-4` 无二义性地标识出莎士比亚的戏剧《罗密欧与朱丽叶》的某一特定版本。为获得该资源并阅读该书，人们需要它的位置，也就是一个 URL 地址。在类 Unix 操作系统中，一个典型的 URL 地址可能是一个文件目录，例如 `file:///home/username/RomeoAndJuliet.pdf`。该 URL 标识出存储于本地硬盘中的电子书文件。因此，URL 和 URN 有着互补的作用。
+
 :::
 
 ### 技术观点

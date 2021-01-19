@@ -16,7 +16,9 @@ GitHub 是一个代码社区，这意味着鼓励大家互相提交与贡献代�
 ![Fork 仓库](./assets/fork.png)
 
 ::: info
+
 相关介绍，请见 [GitHub 简介 → fork](intro.md#fork)
+
 :::
 
 这样，贡献者在自己的账号上获得一个和原仓库完全相同的副本。

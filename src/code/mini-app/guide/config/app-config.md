@@ -128,7 +128,9 @@ category: 小程序
 | selectedIconPath | string | 否   | 选中时的图片路径，icon 大小限制为 40kb，建议尺寸为 81px \* 81px，不支持网络图片。 |
 
 ::: warning
+
 当 postion 为 top 时，不显示 icon。
+
 :::
 
 ## 其他配置
@@ -178,7 +180,9 @@ category: 小程序
 ```
 
 ::: tip
+
 在此处申明了后台运行的接口，开发版和体验版上可以直接生效，正式版还需通过审核。
+
 :::
 
 ### plugins
@@ -198,7 +202,9 @@ category: 小程序
 在 iPad 上运行的小程序可以设置支持屏幕旋转。
 
 ::: tip
+
 设置此项后在 Windows 版微信也会默认横向打开小程序。
+
 :::
 
 ### navigateToMiniProgramAppIdList
@@ -343,7 +349,9 @@ PermissionObject 结构
 当配置了这一项时，小程序仅注入当前页面需要的自定义组件和页面代码，在页面中必然不会用到的自定义组件不会被加载和初始化。
 
 ::: warning
+
 添加这项配置后，未使用到的代码文件将不被执行。
+
 :::
 
 ### singlePage

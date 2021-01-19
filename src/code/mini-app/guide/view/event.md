@@ -131,7 +131,9 @@ WXML 的冒泡事件列表:
 | touchforcechange   | 在支持 3D Touch 的 iPhone 设备，重按时会触发                                              | 1.9.90   |
 
 ::: tip
+
 除上表之外的其他组件自定义事件如无特殊声明都是非冒泡事件，如 form 的 `submit` 事件，input 的 `input` 事件，scroll-view 的 `scroll` 事件。(详见各个组件)
+
 :::
 
 ### 普通事件绑定 <MyBadge text="重要" type="error" />
@@ -157,7 +159,9 @@ WXML 的冒泡事件列表:
 此时，页面的 `this.data.handlerName` 必须是一个字符串，指定事件处理函数名；如果它是个空字符串，则这个绑定会失效(可以利用这个特性来暂时禁用一些事件)。
 
 ::: info
+
 自基础库版本 1.5.0 起，在大多数组件和自定义组件中， `bind` 后可以紧跟一个冒号，其含义不变，如 `bind:tap` 。基础库版本 2.8.1 起，在所有组件中开始提供这个支持。
+
 :::
 
 ### 绑定并阻止事件冒泡 <MyBadge text="重要" type="error" />
@@ -242,7 +246,9 @@ BaseEvent 基础事件对象属性列表:
 | mark          | Object  | 事件标记数据                   | 2.7.1      |
 
 ::: warning
+
 canvas 中的触摸事件不可冒泡，所以没有 `currentTarget`。
+
 :::
 
 #### CustomEvent
@@ -289,7 +295,9 @@ canvas 中的触摸事件不可冒泡，所以没有 `currentTarget`。
 | dataset | Object | 当前组件上由 `data-` 开头的自定义属性组成的集合 |
 
 ::: tip
+
 `target` 和 `currentTarget` 可以参考上例中，点击 inner view `时，handleTap3` 收到的事件对象 `target` 和 `currentTarget` 都是 `inner，而` `handleTap2` 收到的事件对象 `target` 就是 `inner`，`currentTarget` 就是 `middle`。
+
 :::
 
 #### dataset

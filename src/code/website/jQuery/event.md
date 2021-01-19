@@ -6,7 +6,9 @@ category: jQuery
 ---
 
 ::: tip 章节过时
+
 由于目前各浏览器 API 已经基本统一，无需使用 jQuery 绑定事件了。
+
 :::
 
 <!-- more -->

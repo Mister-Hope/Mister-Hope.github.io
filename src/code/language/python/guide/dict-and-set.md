@@ -78,7 +78,9 @@ False
 ```
 
 ::: warning
+
 返回 `None` 的时候 Python 的交互环境不显示结果。
+
 :::
 
 要删除一个 key，用 `pop(key)` 方法，对应的 value 也会从 dict 中删除:

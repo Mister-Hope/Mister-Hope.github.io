@@ -13,7 +13,9 @@ tags:
 1. 在编辑器中输入元素名称之后按下 tab 即可自动补全生成 HTML 标签，即使不是标准的 HTML 标签。
 
 ::: tip 创建文档
+
 输入: `!` 或者 `html:5` 将创建 HTML 基本结构。
+
 :::
 
 ## 结构操作
@@ -22,7 +24,8 @@ tags:
 
 使用 `>` 生成子元素
 
-::: tip 案例
+::: details 案例
+
 `div>ul>li`:
 
 ```html
@@ -39,7 +42,8 @@ tags:
 
 使用 `+` 生成兄弟元素
 
-::: tip 案例
+::: details 案例
+
 `div+p+bq`:
 
 ```html
@@ -54,7 +58,8 @@ tags:
 
 使用 `^` 上移一级
 
-::: tip 案例
+::: details 案例
+
 `div+div>p>span+em^bq`:
 
 ```html
@@ -71,7 +76,8 @@ tags:
 
 使用 `*` 生成多个相同元素。
 
-::: tip 案例
+::: details 案例
+
 `div>ul>li*5`:
 
 ```html
@@ -92,7 +98,8 @@ tags:
 
 使用 `()` 将元素分组
 
-::: tip 案例
+::: details 案例
+
 `+` 后面的元素与括号中的第一个元素属于兄弟关系
 
 `div>(header>ul>li*2)+footer>p`:
@@ -119,7 +126,8 @@ tags:
 
 元素与 `id` 属性值之间用 `#` 分隔，与 `class` 属性值之间用 `.` 分隔
 
-::: tip 案例
+::: details 案例
+
 `div#header+div.page+div#footer.class1.class2.class3`:
 
 ```html
@@ -144,7 +152,8 @@ tags:
 
 - 您可以使用单引号或双引号来引用属性值。如果值不包含空格，则无需引用它们。如: `td[title=hello colspan=3]`
 
-::: tip 案例
+::: details 案例
+
 `td[title="Hello world!" colspan=3]`:
 
 ```html
@@ -157,7 +166,8 @@ tags:
 
 用 `$` 符号实现 `1` 到 `n` 的自动编号 (`*` 实现多个元素)
 
-::: tip 案例
+::: details 案例
+
 `li.item$*3`:
 
 ```html
@@ -170,7 +180,8 @@ tags:
 
 可在 `$` 后添加 `@n` 修改编号的起始值为 `n`。
 
-::: tip 案例
+::: details 案例
+
 `li.item$@3*3`:
 
 ```html
@@ -183,7 +194,8 @@ tags:
 
 可在 “`$`” 后添加 “`@-`” 修改编号的方向。
 
-::: tip 案例
+::: details 案例
+
 `li.item$@-3*3`:
 
 ```html
@@ -196,7 +208,7 @@ tags:
 
 您可以连续使用多个 `$` 以零填充数字。
 
-::: tip 案例
+::: details 案例
 
 `ul>li.item$$$*5`:
 
@@ -216,7 +228,8 @@ tags:
 
 使用 `{}` 添加文本内容
 
-::: tip 案例
+::: details 案例
+
 `a[href=me.html]{click me}`:
 
 ```html
@@ -254,7 +267,7 @@ tags:
 
 扩展缩写词时，Emmet 会尝试在其内部扩展缩写词的地方获取上下文进行推断。如果成功捕获了上下文，Emmet 将使用其名称来解析隐式名称。
 
-::: tip 案例
+::: details 案例
 
 | Emmet 缩写                  | Emmet 实际输出                  |
 | --------------------------- | ------------------------------- |
@@ -269,7 +282,8 @@ tags:
 
 `lorem` 是一个示例词的生成器，您可以很方便的生成一些预设文字查看效果。它会自动根据标签调整文字数量，并在重复时轮换输出。
 
-::: tip 案例
+::: details 案例
+
 `p*4>lorem`:
 
 ```html
@@ -346,4 +360,5 @@ tags:
 ```
 
 完整的 HTML snippets 请见 [Emmet Repo](https://github.com/emmetio/emmet/blob/master/snippets/html.json)
+
 :::

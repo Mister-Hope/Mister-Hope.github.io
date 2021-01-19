@@ -37,7 +37,9 @@ category: 小程序
 ```
 
 ::: tip
+
 QuickStart 项目通过该配置定义了两个页面，分别位于 `pages/index/index` 和 `pages/logs/logs`。写在 `pages` 字段的第一个页面就是这个小程序的首页(打开小程序看到的第一个页面)。
+
 :::
 
 于是微信客户端就把首页的代码装载进来，染出这个首页。

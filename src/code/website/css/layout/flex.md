@@ -32,7 +32,9 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 ```
 
 ::: warning
+
 设为 Flex 布局以后，子元素的 `float`、`clear` 和 `vertical-align` 属性将失效。
+
 :::
 
 ## 基本概念
@@ -84,7 +86,9 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 - `column-reverse`: 主轴为垂直方向，起点在下沿。
 
 ::: warning
+
 请注意，在任何情况下，交叉轴的均为主轴顺时针旋转 90°
+
 :::
 
 ### flex-wrap
@@ -761,7 +765,9 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 如果所有项目的 `flex-shrink` 属性都为 `1`，当空间不足时，都将等比例缩小。如果一个项目的 `flex-shrink` 属性为 `0`，其他项目都为 `1`，则空间不足时，前者不缩小。
 
 ::: tip
+
 负值对该属性无效。
+
 :::
 
 ### flex-basis

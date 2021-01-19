@@ -113,7 +113,9 @@ else request = new ActiveXObject("Microsoft.XMLHTTP");
 `XMLHttpRequest` 对象的 `open()` 方法有 3 个参数，第一个参数指定是 GET 还是 POST，第二个参数指定 URL 地址，第三个参数指定是否使用异步，默认是 `true`，所以不用写。
 
 ::: danger
+
 千万不要把第三个参数指定为 `false`，否则浏览器将停止响应，直到 Ajax 请求完成。如果这个请求耗时 10 秒，那么 10 秒内您会发现浏览器处于“假死”状态。
+
 :::
 
 最后调用 `send()` 方法才真正发送请求。GET 请求不需要参数，POST 请求需要把 body 部分以字符串或者 `FormData` 对象传进去。

@@ -56,11 +56,15 @@ HTML 可以用 ID 属性来设置 ID 选择器，CSS 中 ID 选择器以 `#` 来
 ```
 
 ::: tip
+
 ID 的全称是 Identify，是身份标识的意思。ID 的实际作用是为这个 HTML 标签绑定一个页面内唯一的标识符。因此，每一个 HTML 页面出现的 ID 应该仅被使用一次，以 ID 来代指这个元素。
+
 :::
 
 ::: warning
+
 ID 属性不要以数字开头，数字开头的 ID 在 `Mozilla/Firefox` 浏览器中不起作用。
+
 :::
 
 ## Class 选择器
@@ -136,7 +140,9 @@ p::first-line {
 其他的常见伪元素还有 `::before` `::after` `::fist-letter` `::last-child` 等。
 
 ::: info
+
 关于全部的伪类与伪元素选择器，请见 [菜鸟教程](https://www.runoob.com/cssref/css-selectors.html) 或 [MDN 伪类](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-classes) [MDN 伪元素](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Pseudo-elements)。
+
 :::
 
 ## 通用选择器
@@ -191,5 +197,7 @@ li,
 :::
 
 ::: info
+
 更多高级选择器，请见 [菜鸟教程](https://www.runoob.com/cssref/css-selectors.html) 或 [MDN 参考表](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Selectors#%E9%80%89%E6%8B%A9%E5%99%A8%E5%8F%82%E8%80%83%E8%A1%A8)
+
 :::

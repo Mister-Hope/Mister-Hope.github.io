@@ -130,7 +130,9 @@ Flex 布局是轴线布局，只能指定"项目"针对轴线的位置，可以�
 上面代码中，最外层的 `<div>` 元素就是容器，内层的三个 `<div>` 元素就是项目。
 
 ::: warning
+
 项目只能是容器的顶层子元素，不包含项目的子元素，比如上面代码的 `<p>` 元素就不是项目。Grid 布局只对项目生效。
+
 :::
 
 ### 行和列
@@ -228,7 +230,9 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 :::
 
 ::: tip
+
 设为网格布局以后，容器子元素 (项目) 的 `float`、`display: inline-block`、`display: table-cell`、`vertical-align` 和 `column-*` 等设置都将失效。
+
 :::
 
 ### grid-template-columns 和 grid-template-rows 属性
@@ -975,7 +979,9 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 `grid` 属性是 `grid-template-rows`、`grid-template-columns`、`grid-template-areas`、`grid-auto-rows`、`grid-auto-columns`、`grid-auto-flow` 这六个属性的合并简写形式。
 
 ::: tip
+
 从易读易写的角度考虑，还是建议不要合并属性，所以这里就不详细介绍这两个属性了。
+
 :::
 
 ## 项目属性

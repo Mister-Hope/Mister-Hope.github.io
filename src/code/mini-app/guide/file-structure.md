@@ -108,7 +108,9 @@ app.json 是当前小程序的全局配置，包括了小程序的所有页面�
 其他配置项细节可以参考文档 [开发者工具的配置](https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html)。
 
 ::: info
+
 更多 JSON 相关教程，请查看 [JSON 教程](../../language/json/readme.md)
+
 :::
 
 ## WXML 模板 <MyBadge text="重要" type="error" />

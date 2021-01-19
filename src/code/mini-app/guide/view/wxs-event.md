@@ -5,7 +5,9 @@ category: 小程序
 ---
 
 ::: tip
+
 此部分在初步学习小程序的时候直接略过即可。
+
 :::
 
 ## 背景
@@ -72,7 +74,9 @@ WXML 定义事件:
 上面的 `change:prop`(属性前面带 `change:` 前缀)是在 prop 属性被设置的时候触发 WXS 函数，值必须用 `{{}}` 括起来。类似 `Component` 定义的 `properties` 里面的 `observer` 属性，在 `setData({propValue: newValue})` 调用之后会触发。
 
 ::: warning
+
 WXS 函数必须用 `{{}}` 括起来。当 `prop` 的值被设置 WXS 函数就会触发，而不只是值发生改变，所以在页面初始化的时候会调用一次 WxsPropObserver 的函数。
+
 :::
 
 WXS 文件 test.wxs 里面定义并导出事件处理函数和属性改变触发的函数:

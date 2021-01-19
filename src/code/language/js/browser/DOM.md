@@ -54,7 +54,9 @@ const ps = q1.querySelectorAll("div.highlighted > p");
 ```
 
 ::: warning
+
 低版本的 IE < 8 不支持 `querySelector` 和 `querySelectorAll`。IE8 仅有限支持。
+
 :::
 
 严格地讲，我们这里的 DOM 节点是指 `Element`，但是 DOM 节点实际上是 `Node`，在 HTML 中，`Node` 包括 `Element`、`Comment`、`CDATA_SECTION` 等很多种，以及根节点 `Document` 类型，但是，绝大多数时候我们只关心 `Element`，也就是实际控制页面结构的 `Node`，其他类型的 `Node` 忽略即可。根节点 Document 已经自动绑定为全局变量 `document`。
@@ -93,7 +95,9 @@ p.innerText = '<script>alert("Hi")</script>';
 两者的区别在于读取属性时，`innerText` 不返回隐藏元素的文本，而 `textContent` 返回所有文本。
 
 ::: warning
+
 IE < 9 不支持 `textContent`。
+
 :::
 
 修改 CSS 也是经常需要的操作。DOM 节点的 style 属性对应所有的 CSS，可以直接获取或设置。因为 CSS 允许 `font-size` 这样的名称，但它并非 JavaScript 有效的属性名，所以需要在 JavaScript 中改写为驼峰式命名 `fontSize`:
@@ -251,7 +255,9 @@ removed === self; // true
 ```
 
 ::: warning
+
 删除后的节点虽然不在文档树中了，但其实它还在内存中，可以随时再次被添加到别的位置。
+
 :::
 
 当您遍历一个父节点的子节点并进行删除操作时，要注意，`children` 属性是一个只读属性，并且它在子节点变化时会实时更新。

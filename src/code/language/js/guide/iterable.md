@@ -56,7 +56,9 @@ for (let x in a) {
 ```
 
 ::: tip
+
 `for ... in` 循环将把 name 包括在内，但 Array 的 `length` 属性却不包括在内。
+
 :::
 
 `for ... of` 循环则完全修复了这些问题，它只循环集合本身的元素:
@@ -87,7 +89,9 @@ a.forEach(function (element, index, array) {
 ```
 
 ::: warning
+
 `forEach()` 方法是 ES5.1 标准引入的，您需要测试浏览器是否支持 (IE says No)。
+
 :::
 
 Set 与 Array 类似，但 Set 没有索引，因此回调函数的前两个参数都是元素本身:
