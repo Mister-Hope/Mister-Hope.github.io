@@ -13,10 +13,10 @@ category: CSS
 
 `float` 属性有四个可能的值:
 
+- `inherit`: 继承父元素的浮动属性。
 - `left`: 将元素浮动到左侧。
 - `right`: 将元素浮动到右侧。
 - `none`: 默认值, 不浮动。
-- `inherit`: 继承父元素的浮动属性。
 
 ::: demo float 案例
 

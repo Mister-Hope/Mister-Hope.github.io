@@ -72,7 +72,7 @@ App({
 
 ## onPageNotFound(Object object)
 
-> 基础库 1.9.90 开始支持，低版本需做兼容处理。
+> 基础库 1.9.90 开始支持
 
 小程序要打开的页面不存在时触发。也可以使用 [`wx.onPageNotFound`](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.onPageNotFound.html) 绑定监听。注意事项请参考 [`wx.onPageNotFound`](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.onPageNotFound.html)。
 
@@ -92,19 +92,19 @@ App({
 
 ## onUnhandledRejection(Object object)
 
-> 基础库 2.10.0 开始支持，低版本需做兼容处理。
+> 基础库 2.10.0 开始支持
 
 小程序有未处理的 Promise 拒绝时触发。也可以使用 [`wx.onUnhandledRejection`](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.onUnhandledRejection.html) 绑定监听。注意事项请参考 [`wx.onUnhandledRejection`](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.onUnhandledRejection.html)。
 
-参数：与 [`wx.onUnhandledRejection`](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.onUnhandledRejection.html) 一致
+参数: 与 [`wx.onUnhandledRejection`](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.onUnhandledRejection.html) 一致
 
 ## onThemeChange(Object object)
 
-> 基础库 2.11.0 开始支持，低版本需做兼容处理。
+> 基础库 2.11.0 开始支持
 
 系统切换主题时触发。也可以使用 [`wx.onThemeChange`](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.onThemeChange.html) 绑定监听。
 
-参数：与 [`wx.onThemeChange`](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.onThemeChange.html) 一致
+参数: 与 [`wx.onThemeChange`](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.onThemeChange.html) 一致
 
 ## AppObject getApp(Object object)
 
@@ -114,8 +114,8 @@ App({
 
 Object object
 | 属性 | 类型 | 默认值 | 必填 | 说明 | 最低版本 |
-| ------------ | ------- | ------ | ---- | --------------------------------------------------------------------------------------------------------- | -------- |
-| allowDefault | boolean | false | 否 | 在 App 未定义时返回默认实现。当 App 被调用时，默认实现中定义的属性会被覆盖合并到 App 中。一般用于独立分包 | 2.2.4 |
+| ------------ | ------- | ------ | ---- | ------------------------------------------------------------------------------------------------------------- | -------- |
+| allowDefault | boolean | false | 否 | 在 `App` 未定义时返回默认实现。当 `App` 被调用时，默认实现中定义的属性会被覆盖合并到 App 中。一般用于独立分包 | 2.2.4 |
 
 示例代码:
 

@@ -90,7 +90,7 @@ arr; // arr 变为 [1, 2, 3, undefined, undefined, 'x']
 
 ### indexOf
 
-与 String 类似，Arra。也可以通过 `indexOf()` 来搜索一个指定的元素的位置:
+与 String 类似，Arra。也可以通过 `indexOf()` 来搜索一个指定的元素第一次出现的位置:
 
 ```js
 const arr = [10, 20, "30", "xyz"];
