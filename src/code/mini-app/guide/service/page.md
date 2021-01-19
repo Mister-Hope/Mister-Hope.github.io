@@ -306,8 +306,6 @@ Page({
 
 #### onTabItemTap(Object object)
 
-> 基础库 1.9.0 开始支持
-
 点击 tab 时触发
 
 Object 参数说明:

@@ -183,8 +183,6 @@ wx.switchTab({
 
 ## wx.reLaunch(Object object)
 
-> 基础库 1.1.0 开始支持
-
 关闭所有页面，打开到应用内的某个页面
 
 ### reLaunch 参数

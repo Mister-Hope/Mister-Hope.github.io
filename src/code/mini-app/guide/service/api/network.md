@@ -68,8 +68,6 @@ Object res
 
 RequestTask
 
-> 基础库 1.4.0 开始支持
-
 请求任务对象
 
 ### data 参数说明
@@ -135,8 +133,6 @@ Object res
 
 DownloadTask
 
-> 基础库 1.4.0 开始支持
-
 一个可以监听下载进度变化事件和取消下载的对象
 
 示例代码
@@ -187,8 +183,6 @@ Object res
 ### uploadFile 返回值
 
 UploadTask
-
-> 基础库 1.4.0 开始支持
 
 一个可以监听上传进度进度变化的事件和取消上传的对象
 

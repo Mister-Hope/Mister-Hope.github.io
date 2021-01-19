@@ -72,8 +72,6 @@ App({
 
 ## onPageNotFound(Object object)
 
-> 基础库 1.9.90 开始支持
-
 小程序要打开的页面不存在时触发。也可以使用 [`wx.onPageNotFound`](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.onPageNotFound.html) 绑定监听。注意事项请参考 [`wx.onPageNotFound`](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.onPageNotFound.html)。
 
 参数: 与 [`wx.onPageNotFound`](https://developers.weixin.qq.com/miniprogram/dev/api/base/app/app-event/wx.onPageNotFound.html) 一致
