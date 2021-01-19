@@ -8,15 +8,15 @@ category: 小程序
 
 各平台脚本执行环境以及用于渲染非原生组件的环境是各不相同的:
 
-- 在 iOS 上，小程序逻辑层的 javascript 代码运行在 JavaScriptCore 中，视图层是由 WKWebView 来渲染的，环境有 iOS 12、iOS 13 等；
+- 在 iOS 上，小程序逻辑层的 JavaScript 代码运行在 JavaScriptCore 中，视图层是由 WKWebView 来渲染的，环境有 iOS 12、iOS 13 等；
 
-- 在 Android 上，小程序逻辑层的 javascript 代码运行在 V8 中，视图层是由自研 XWeb 引擎基于 Mobile Chrome 内核来渲染的；
+- 在 Android 上，小程序逻辑层的 JavaScript 代码运行在 V8 中，视图层是由自研 XWeb 引擎基于 Mobile Chrome 内核来渲染的；
 
-- 在 开发工具上，小程序逻辑层的 javascript 代码是运行在 NW.js 中，视图层是由 Chromium Webview 来渲染的。
+- 在 开发工具上，小程序逻辑层的 JavaScript 代码是运行在 NW.js 中，视图层是由 Chromium Webview 来渲染的。
 
-- 在 PC 上，小程序逻辑层 javascript 和视图层 javascript 都是用 Chrome 内核
+- 在 PC 上，小程序逻辑层 JavaScript 和视图层 JavaScript 都是用 Chrome 内核
 
-- 在 Mac 上，小程序逻辑层的 javascript 代码运行在 JavaScriptCore 中，视图层是由 WKWebView 来渲染的，与 iOS 一致
+- 在 Mac 上，小程序逻辑层的 JavaScript 代码运行在 JavaScriptCore 中，视图层是由 WKWebView 来渲染的，与 iOS 一致
 
 ## 平台差异
 

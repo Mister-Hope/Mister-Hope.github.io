@@ -34,7 +34,7 @@ tags:
 
    ![设置默认编辑器](./assets/install5.png)
 
-1. 选择 Git 使用的默认分支名，Github 已经将默认分支名称改为 main。
+1. 选择 Git 使用的默认分支名，GitHub 已经将默认分支名称改为 main。
 
    ![设置默认分支名称](./assets/install6.png)
 
@@ -138,12 +138,12 @@ tags:
 
 1. 打开 [GitHub](https://github.com) 并选择 "Sign in" 注册自己的账号。
 
-   ![Github 界面简介](./assets/github.png)
+   ![GitHub 界面简介](./assets/github.png)
 
    登陆 GitHub 后，点击右上角头像，进入设置。
 
    进入 "安全设置" 下的 "SSH 公钥" 界面。
 
-   ![Github 界面简介](./assets/githubSSH.png)
+   ![GitHub 界面简介](./assets/githubSSH.png)
 
    在标题中填写公钥的备注名称，把 id_rsa.pub 文件的内容粘贴到底下的输入框中，设置一个标识此电脑的备注。

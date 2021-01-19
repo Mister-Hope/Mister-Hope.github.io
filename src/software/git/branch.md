@@ -627,7 +627,7 @@ git push origin dev
 
 多人协作时，大家都会往 `master` 和 `dev` 分支上推送各自的修改。
 
-现在，模拟一个您的小伙伴，可以在另一台电脑 (注意要把 SSH Key 添加到 Github) 或者同一台电脑的另一个目录下克隆:
+现在，模拟一个您的小伙伴，可以在另一台电脑 (注意要把 SSH Key 添加到 GitHub) 或者同一台电脑的另一个目录下克隆:
 
 ```sh
 $ git clone git@github.com:Hope-Studio/learngit.git

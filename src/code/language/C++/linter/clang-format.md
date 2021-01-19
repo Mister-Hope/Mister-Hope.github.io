@@ -20,14 +20,14 @@
 
    ![如图](./assets/sample1.png "sample1")
 
-2. 在设置搜索栏输入 `format`,勾选
+1. 在设置搜索栏输入 `format`,勾选
 
-   1. **_Format On Paste_**
-   2. **_Format On Save_**
-   3. **_Format On Type_**
+   - Format On Paste
+   - Format On Save
+   - Format On Type
 
    ![如图](./assets/sample2.png "sample2")
 
-3. 在设置搜索栏输入 `clang`, 在第一栏输入 `Google`
+1. 在设置搜索栏输入 `clang`, 在第一栏输入 `Google`
 
    ![如图](./assets/sample3.png "sample3")

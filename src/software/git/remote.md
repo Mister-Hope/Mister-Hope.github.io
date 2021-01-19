@@ -29,7 +29,7 @@ Git 是分布式版本控制系统，同一个 Git 仓库，可以分布到不�
 
   如果一切顺利的话，可以在用户主目录里找到.ssh 目录，里面有 id_rsa 和 id_rsa.pub 两个文件，这两个就是 SSH Key 的秘钥对，id_rsa 是私钥，不能泄露出去，id_rsa.pub 是公钥，可以放心地告诉任何人。
 
-- 第 2 步: 登陆 Github，点击右上角头像，进入设置。
+- 第 2 步: 登陆 GitHub，点击右上角头像，进入设置。
 
   进入安全设置下的 SSH 公钥界面。
 
@@ -37,7 +37,7 @@ Git 是分布式版本控制系统，同一个 Git 仓库，可以分布到不�
 
 为什么 GitHub 需要 SSH Key 呢? 因为 GitHub 需要识别出您推送的提交确实是您推送的，而不是别人冒充的，而 Git 支持 SSH 协议，所以，GitHub 只要知道了您的公钥，就可以确认只有您自己才能推送。
 
-当然，GitHub 允许您添加多个 Key。假定您有若干电脑，您一会儿在公司提交，一会儿在家里提交，只要把每台电脑的 Key 都添加到 Github，就可以在每台电脑上往 GitHub 推送了。
+当然，GitHub 允许您添加多个 Key。假定您有若干电脑，您一会儿在公司提交，一会儿在家里提交，只要把每台电脑的 Key 都添加到 GitHub，就可以在每台电脑上往 GitHub 推送了。
 
 最后友情提示，在 GitHub 上免费托管的 Git 仓库，任何人都可以看到喔(但只有您自己才能改)。所以，不要把敏感信息放进去。
 
@@ -49,7 +49,7 @@ Git 是分布式版本控制系统，同一个 Git 仓库，可以分布到不�
 
 现在的情景是，您已经在本地创建了一个 Git 仓库后，又想在 GitHub 创建一个 Git 仓库，并且让这两个仓库进行远程同步，这样，GitHub 上的仓库既可以作为备份，又可以让其他人通过该仓库来协作，真是一举多得。
 
-首先，登陆 Github，然后，在右上角找到 “+” 按钮，点击 "New Repository"。
+首先，登陆 GitHub，然后，在右上角找到 “+” 按钮，点击 "New Repository"。
 
 在项目填入 learngit，其他保持默认设置，点击“创建”按钮，就成功地创建了一个新的 Git 仓库:
 
@@ -92,7 +92,7 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 git push origin master
 ```
 
-把本地 `master` 分支的最新修改推送至 Github，现在，您就拥有了真正的分布式版本库!
+把本地 `master` 分支的最新修改推送至 GitHub，现在，您就拥有了真正的分布式版本库!
 
 ## SSH 警告
 
@@ -109,7 +109,7 @@ Are you sure you want to continue connecting (yes/no)?
 Git 会输出一个警告，告诉您已经把 GitHub 的 Key 添加到本机的一个信任列表里了:
 
 ```md
-Warning: Permanently added 'Github.com' (RSA) to the list of known hosts.
+Warning: Permanently added 'github.com' (RSA) to the list of known hosts.
 ```
 
 这个警告只会出现一次，后面的操作就不会有任何警告了。
@@ -132,7 +132,7 @@ Warning: Permanently added 'Github.com' (RSA) to the list of known hosts.
 
 现在，假设我们从零开发，那么最好的方式是先创建远程库，然后，从远程库克隆。
 
-首先，登陆 Github，创建一个新的仓库，名字叫 `gitskills`:
+首先，登陆 GitHub，创建一个新的仓库，名字叫 `gitskills`:
 
 我们勾选使用 “readme 初始化项目”，这样 GitHub 会自动为我们创建一个 README.md 文件。创建完毕后，可以看到 README.md 文件。
 

@@ -126,7 +126,7 @@ PowerRename 是一个实用的右键菜单“批量重命名工具”，可以�
 
 PowerToys Run 是一款快速启动器工具，按下 `Alt + Space` 即可随时呼出输入框。
 
-### 功能
+### PowerToys Run 功能
 
 - 搜索
 

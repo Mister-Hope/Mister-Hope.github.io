@@ -32,7 +32,9 @@ icon: semantic
 
 ### type
 
-commit 的类型。规范中规定了如下类型:
+commit 的类型。
+
+规范中规定了如下类型:
 
 - `feat`: feature, 新增功能
 - `fix` : bug fix, 修复 bug

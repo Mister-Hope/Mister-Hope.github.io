@@ -1,6 +1,6 @@
 # axois
 
-> Github 地址: [https://github.com/axios/axios](https://github.com/axios/axios)
+> GitHub 地址: [https://github.com/axios/axios](https://github.com/axios/axios)
 
 axois 是一个基于 Promise 的 HTTP 客户端，用于浏览器和 node.js
 

@@ -1,5 +1,5 @@
 ---
-title: Github 简介
+title: GitHub 简介
 icon: info
 time: 2019-11-20
 category: Git
@@ -15,7 +15,7 @@ tags:
 
 ### repository
 
-仓库，简称 **Repo**。一个仓库即是一个项目。仓库是 GitHub 上的主要内容。每当您新建一个项目并想要在 Github。
+仓库，简称 **Repo**。一个仓库即是一个项目。仓库是 GitHub 上的主要内容。每当您新建一个项目并想要在 GitHub。
 
 ### Star
 
