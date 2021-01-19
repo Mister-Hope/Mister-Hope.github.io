@@ -1,6 +1,6 @@
 ---
 title: 简易双向绑定
-icon: app
+icon: async
 category: 小程序
 ---
 
@@ -8,7 +8,7 @@ category: 小程序
 
 ## 语法
 
-在 WXML 中，普通的属性的绑定是单向的。例如：
+在 WXML 中，普通的属性的绑定是单向的。例如:
 
 ```xml
 <input value="{{value}}" />
@@ -16,7 +16,7 @@ category: 小程序
 
 如果使用 `this.setData({ value: 'leaf' })` 来更新 value ，`this.data.value` 和输入框的中显示的值都会被更新为 `leaf` ；但如果用户修改了输入框里的值，却不会同时改变 `this.data.value` 。
 
-如果需要在用户输入的同时改变 `this.data.value` ，需要借助简易双向绑定机制。此时，可以在对应项目之前加入`model:` 前缀：
+如果需要在用户输入的同时改变 `this.data.value` ，需要借助简易双向绑定机制。此时，可以在对应项目之前加入`model:` 前缀:
 
 ```xml
 <input model:value="{{value}}" />
@@ -28,7 +28,7 @@ category: 小程序
 
 ## 限制
 
-用于双向绑定的表达式有如下限制：
+用于双向绑定的表达式有如下限制:
 
 1. 只能是一个单一字段的绑定，如
 
@@ -53,7 +53,7 @@ category: 小程序
 
 双向绑定同样可以使用在自定义组件上。
 
-如下的自定义组件：
+如下的自定义组件:
 
 ```js
 // custom-component.js
@@ -69,7 +69,7 @@ Component({
 <input model:value="{{myValue}}" />
 ```
 
-这个自定义组件将自身的 `myValue` 属性双向绑定到了组件内输入框的 `value` 属性上。这样，如果页面这样使用这个组件：
+这个自定义组件将自身的 `myValue` 属性双向绑定到了组件内输入框的 `value` 属性上。这样，如果页面这样使用这个组件:
 
 ```xml
 <custom-component model:my-value="{{pageValue}}" />
@@ -79,7 +79,7 @@ Component({
 
 ### 触发双向绑定更新
 
-自定义组件还可以自己触发双向绑定更新，做法就是：使用 `setData` 设置自身的属性。例如：
+自定义组件还可以自己触发双向绑定更新，做法就是: 使用 `setData` 设置自身的属性。例如:
 
 ```js
 // custom-component.js
@@ -98,7 +98,7 @@ Component({
 });
 ```
 
-如果页面这样使用这个组件：
+如果页面这样使用这个组件:
 
 ```xml
 <custom-component model:my-value="{{pageValue}}" />

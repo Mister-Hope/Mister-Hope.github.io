@@ -28,7 +28,7 @@ clang-format [options] [<file> ...]
 - `--Werror`: 将格式化警告变为错误
 - `--Wno-error=unknown`: 未知的格式化选项仅产生警告。
 
-  这可以保持格式化启用，即使配置包含未知（较新）选项。
+  这可以保持格式化启用，即使配置包含未知 (较新) 选项。
 
 - `--assume-filename=<string>`: 覆盖用于确定语言的文件名。
 

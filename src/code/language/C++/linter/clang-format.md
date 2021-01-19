@@ -2,9 +2,9 @@
 
 ## clang-format 介绍
 
-### clang-format 是一种代码格式化工具，可用于格式化（排版）多种不同语言的代码
+### clang-format 是一种代码格式化工具，可用于格式化(排版)多种不同语言的代码
 
-平时团队进行合作的时候需要注意代码的格式，虽然很难统一每个人的编码风格，但是通过工具能够很好的管理代码格式。这里介绍下 clang-format，它是基于 clang 的一个命令行工具，能够自动化格式: C、C++、Object-C 代码，支持多种代码风格: Google、Chromium、LLVM、Mozilla、WebKit；也支持自定义风格（通过编写.clang-format 文件）。
+平时团队进行合作的时候需要注意代码的格式，虽然很难统一每个人的编码风格，但是通过工具能够很好的管理代码格式。这里介绍下 clang-format，它是基于 clang 的一个命令行工具，能够自动化格式: C、C++、Object-C 代码，支持多种代码风格: Google、Chromium、LLVM、Mozilla、WebKit；也支持自定义风格 (通过编写 `.clang-format` 文件)。
 
 ### .clang-format 自定义格式化
 

@@ -1,6 +1,6 @@
 ---
 title: WXS 事件
-icon: script
+icon: activity
 category: 小程序
 ---
 
@@ -12,15 +12,15 @@ category: 小程序
 
 有频繁用户交互的效果在小程序上表现是比较卡顿的，例如页面有 2 个元素 A 和 B，用户在 A 上做 `touchmove` 手势，要求 B 也跟随移动，[movable-view](https://developers.weixin.qq.com/miniprogram/dev/component/movable-view.html) 就是一个典型的例子。一次 `touchmove` 事件的响应过程为:
 
-1. touchmove 事件从视图层（Webview）抛到逻辑层（App Service）
+1. touchmove 事件从视图层(Webview)抛到逻辑层(App Service)
 
-1. 逻辑层（App Service）处理 touchmove 事件，再通过 setData 来改变 B 的位置
+1. 逻辑层(App Service)处理 touchmove 事件，再通过 setData 来改变 B 的位置
 
 一次 touchmove 的响应需要经过 2 次的逻辑层和渲染层的通信以及一次渲染，通信的耗时比较大。此外 `setData` 渲染也会阻塞其它脚本执行，导致了整个用户交互的动画过程会有延迟。
 
 ## 实现方案
 
-本方案基本的思路是减少通信的次数，让事件在视图层（Webview）响应。小程序的框架分为视图层（Webview）和逻辑层（App Service），这样分层的目的是管控，开发者的代码只能运行在逻辑层（App Service），而这个思路就必须要让开发者的代码运行在视图层（Webview），如下图所示的流程:
+本方案基本的思路是减少通信的次数，让事件在视图层(Webview)响应。小程序的框架分为视图层(Webview)和逻辑层(App Service)，这样分层的目的是管控，开发者的代码只能运行在逻辑层(App Service)，而这个思路就必须要让开发者的代码运行在视图层(Webview)，如下图所示的流程:
 
 ![流程演示](./assets/interative-model.png)
 
@@ -54,7 +54,7 @@ var wxsFunction = function (event, ownerInstance) {
 | setStyle                       | Object/string                  | 设置组件样式，支持 rpx。设置的样式优先级比组件 wxml 里面定义的样式高。不能设置最顶层页面的样式。   |
 | addClass/removeClass/ hasClass | string                         | 设置组件的 class。设置的 class 优先级比组件 wxml 里面定义的 class 高。不能设置最顶层页面的 class。 |
 | getDataset                     | 无                             | 返回当前组件/页面的 dataset 对象                                                                   |
-| callMethod                     | (funcName:string, args:object) | 调用当前组件/页面在逻辑层（App Service）定义的函数。funcName 表示函数名称，args 表示函数的参数。   |
+| callMethod                     | (funcName:string, args:object) | 调用当前组件/页面在逻辑层(App Service)定义的函数。funcName 表示函数名称，args 表示函数的参数。     |
 | requestAnimationFrame          | Function                       | 和原生 requestAnimationFrame 一样。用于设置动画。                                                  |
 | getState                       | 无                             | 返回一个 object 对象，当有局部变量需要存储起来后续使用的时候用这个方法。                           |
 | triggerEvent                   | (eventName, detail)            | 和组件的 triggerEvent 一致。                                                                       |
@@ -69,7 +69,7 @@ WXML 定义事件:
 <view change:prop="{{test.propObserver}}" prop="{{propValue}}" bindtouchmove="{{test.touchmove}}" class="movable" />
 ```
 
-上面的 `change:prop`（属性前面带 `change:` 前缀）是在 prop 属性被设置的时候触发 WXS 函数，值必须用 `{{}}` 括起来。类似 `Component` 定义的 `properties` 里面的 `observer` 属性，在 `setData({propValue: newValue})` 调用之后会触发。
+上面的 `change:prop`(属性前面带 `change:` 前缀)是在 prop 属性被设置的时候触发 WXS 函数，值必须用 `{{}}` 括起来。类似 `Component` 定义的 `properties` 里面的 `observer` 属性，在 `setData({propValue: newValue})` 调用之后会触发。
 
 ::: warning
 WXS 函数必须用 `{{}}` 括起来。当 `prop` 的值被设置 WXS 函数就会触发，而不只是值发生改变，所以在页面初始化的时候会调用一次 WxsPropObserver 的函数。

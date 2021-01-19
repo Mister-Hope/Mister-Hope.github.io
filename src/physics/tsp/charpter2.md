@@ -17,7 +17,6 @@ $$
   F =& U - TS\\
   G =& U - TS + pV
 \end{aligned}
-
 $$
 
 微分形式:

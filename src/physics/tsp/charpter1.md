@@ -84,7 +84,7 @@ $(\cfrac{\partial H}{\partial p})_T=0$
 
 $(\cfrac{\partial T}{\partial V})_U=0$,称为焦耳系数
 
-对于理想气体来说，满足多方过程 $pV^\gamma = 常量$，同时有 $TV^{\gamma -1}$, $\cfrac{p^{\gamma -1}}{T^\gamma}$ 也为常量。
+对于理想气体来说，满足多方过程 $pV^\gamma = \text{常量}$，同时有 $TV^{\gamma -1}$, $\cfrac{p^{\gamma -1}}{T^\gamma}$ 也为常量。
 
 ## 熵
 
