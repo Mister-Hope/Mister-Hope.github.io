@@ -41,7 +41,7 @@ var wxsFunction = function (event, ownerInstance) {
 };
 ```
 
-其中入参 `event` 是小程序事件对象基础上多了 `event.instance` 来表示触发事件的组件的 `ComponentDescriptor` `实例。ownerInstance` 表示的是触发事件的组件所在的组件的 `ComponentDescriptor` `实例，如果触发事件的组件是在页面内的，ownerInstance` 表示的是页面实例。
+其中入参 `event` 是小程序事件对象基础上多了 `event.instance` 来表示触发事件的组件的 `ComponentDescriptor` 实例。`ownerInstance` 表示的是触发事件的组件所在的组件的 `ComponentDescriptor` 实例，如果触发事件的组件是在页面内的，`ownerInstance` 表示的是页面实例。
 
 ## ComponentDescriptor
 

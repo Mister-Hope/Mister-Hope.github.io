@@ -4,6 +4,10 @@ icon: select
 category: 小程序
 ---
 
+::: tip
+此部分在初步学习小程序的时候直接略过即可。
+:::
+
 ## WXML 节点信息
 
 [节点信息查询 API](https://developers.weixin.qq.com/miniprogram/dev/api/wxml/wx.createSelectorQuery.html) 可以用于获取节点属性、样式、在界面上的位置等信息。

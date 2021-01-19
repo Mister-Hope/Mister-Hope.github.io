@@ -6,7 +6,7 @@ category: 小程序
 ---
 
 ::: tip
-在开发小程序之前。应当掌握[HTML](../website/html/readme.md)、[CSS](../website/css/readme.md)、[js 基础](../language/js/guide/readme.md)以及 [ES6](../language/js/es6/readme.md)。
+在开发小程序之前。应当掌握 [HTML](../website/html/readme.md)、[CSS](../website/css/readme.md)、[JavaScript 基础](../language/js/guide/readme.md) 以及 [ES6](../language/js/es6/readme.md)。
 :::
 
 <!-- more -->
@@ -30,6 +30,24 @@ QQ 小程序本质还是换汤不换药的，且 QQ 开发者工具兼容 `wxml`
 - [运行环境](guide/env.md)
 
 - [小程序配置](guide/config/readme.md)
+
+  - [全局配置](guide/config/app-config.md)
+
+  - [页面配置](guide/config/page-config.md)
+
+  - [sitemap 配置](guide/config/sitemap-config.md)
+
+- [小程序框架](guide/frame/readme.md)
+
+  - [框架介绍](guide/frame/intro.md)
+
+  - [场景值](guide/frame/scene.md) <MyBadge type="grey" text="高级" />
+
+  - [运行环境](guide/frame/env.md) <MyBadge type="grey" text="高级" />
+
+  - [运行机制](guide/frame/mechanism.md) <MyBadge type="grey" text="高级" />
+
+  - [更新机制](guide/frame/update.md) <MyBadge type="grey" text="高级" />
 
 - [逻辑层](guide/service/readme.md)
 
@@ -61,7 +79,19 @@ QQ 小程序本质还是换汤不换药的，且 QQ 开发者工具兼容 `wxml`
 
   - [基础组件](guide/view/component.md)
 
-  - [动画](guide/view/animation.md)
+  - [动画](guide/view/animation.md) <MyBadge type="grey" text="高级" />
+
+  - [WXS](guide/view/wxs.md) <MyBadge type="grey" text="高级" />
+
+  - [WXS 事件](guide/view/wxs-event.md) <MyBadge type="grey" text="高级" />
+
+  - [建议双向绑定](guide/view/model.md) <MyBadge type="grey" text="高级" />
+
+  - [获取界面上的节点信息](guide/view/selector.md) <MyBadge type="grey" text="高级" />
+
+  - [相应显示区域变化](guide/view/selector.md) <MyBadge type="grey" text="高级" />
+
+  - [初始渲染缓存](guide/view/rendering-cache.md) <MyBadge type="grey" text="高级" />
 
 - [小程序能力](guide/ability/readme.md)
 
@@ -71,17 +101,17 @@ QQ 小程序本质还是换汤不换药的，且 QQ 开发者工具兼容 `wxml`
 
   - [文件系统](guide/ability/file-system.md)
 
-  - [调试](debug.md)
+  - [调试](guide/ability/debug.md)
 
-- [开发者工具教程](tools/readme.md)
+## 开发者工具
 
-  - [工具页面简介](tools/interface.md)
+- [工具界面简介](tools/interface.md)
 
-  - [调试](tools/debug.md)
+- [调试](tools/debug.md)
 
-  - [npm](tools/npm.md)
+- [npm](tools/npm.md)
 
-  - [体验评分](tools/audit.md)
+- [体验评分](tools/audit.md)
 
 ## 官方教程
 

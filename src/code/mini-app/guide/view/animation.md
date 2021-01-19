@@ -4,6 +4,10 @@ icon: animation
 category: 小程序
 ---
 
+::: tip
+此部分在初步学习小程序的时候直接略过即可。
+:::
+
 ## 界面动画的常见方式
 
 在小程序中，通常可以使用 [CSS 渐变](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) 和 [CSS 动画](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations) 来创建简易的界面动画。(这也是 Mr.Hope 主要使用的动画方式)
