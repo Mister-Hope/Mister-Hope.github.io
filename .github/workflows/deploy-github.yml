@@ -3,7 +3,7 @@ name: Deploy blog
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy-gh-pages:
