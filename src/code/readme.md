@@ -40,7 +40,9 @@ breadcrumb: false
 - [MDN](https://developer.mozilla.org/zh-CN/)
 
   ::: info
+
   MDN 的中文文档翻译很差，大多都是机翻，十分建议直接阅读英文文档。
+
   :::
 
 ### 杂牌网站

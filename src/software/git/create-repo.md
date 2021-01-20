@@ -58,6 +58,7 @@ Initialized empty Git repository in /users/hope-studio/learngit/.git/
 首先这里再明确一下，所有的版本控制系统，其实只能跟踪文本文件的改动，比如 TXT 文件，网页，所有的程序代码等等，Git 也不例外。版本控制系统可以告诉您每次的改动，比如在第 5 行加了一个单词“Linux”，在第 8 行删了一个单词“Windows”。而图片、视频这些二进制文件，虽然也能由版本控制系统管理，但没法跟踪文件的变化，只能把二进制文件每次改动串起来，也就是只知道图片从 100KB 改成了 120KB，但到底改了啥，版本控制系统不知道，也没法知道。(Microsoft 的 Word 格式是二进制格式，所以很不幸) 所以要使用版本控制系统，就要以纯文本方式编写文件。
 
 ::: tip
+
 因为文本是有编码的，比如中文有常用的 GBK 编码，日文有 Shift_JIS 编码，如果没有历史遗留问题，强烈建议使用标准的 UTF-8 编码，所有语言使用同一种编码，既没有冲突，又被所有平台所支持。
 
 - 具体详情请见 [文件编码](../../code/basic/encoding.md)
@@ -65,6 +66,7 @@ Initialized empty Git repository in /users/hope-studio/learngit/.git/
 :::
 
 ::: warning
+
 千万不要使用 Windows 自带的记事本编辑任何文本文件。
 
 - 具体详情请见 [记事本遗留问题](../../code/windows/notepad.md)

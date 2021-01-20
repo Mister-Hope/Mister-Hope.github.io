@@ -88,7 +88,9 @@ const packageOther = require("packageName/other");
    ```
 
    ::: tip
+
    对于一些纯 js 实现的 Node.js 内置库(如 path 模块)，可以通过额外安装其他开发者实现的 npm 包来支持。
+
    :::
 
 1. 使用 `require` 依赖的时候下列几种方式也是不允许的:

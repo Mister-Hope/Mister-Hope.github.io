@@ -289,11 +289,13 @@ Page({
 监听用户下拉刷新事件。
 
 ::: tip
+
 需要在 app.json 的 window 选项中或页面配置中开启 `enablePullDownRefresh。`
 
 可以通过 [`wx.startPullDownRefresh`](https://developers.weixin.qq.com/miniprogram/dev/api/ui/pull-down-refresh/wx.startPullDownRefresh.html) 触发下拉刷新，调用后触发下拉刷新动画，效果与用户手动下拉刷新一致。
 
 当处理完数据刷新后，[`wx.stopPullDownRefresh`](https://developers.weixin.qq.com/miniprogram/dev/api/ui/pull-down-refresh/wx.stopPullDownRefresh.html) 可以停止当前页面的下拉刷新。
+
 :::
 
 #### onReachBottom()
@@ -301,9 +303,11 @@ Page({
 监听用户上拉触底事件。
 
 ::: tip
+
 可以在 app.json 的 window 选项中或页面配置中设置触发距离 `onReachBottomDistance`。
 
 在触发距离内滑动期间，本事件只会被触发一次。
+
 :::
 
 #### onResize(Object object)

@@ -10,9 +10,11 @@ tags:
 ## VS Code 界面
 
 ::: tip
+
 在完成 VSCode 安装并首次打开 VSCode 的时候，右下角会提示安装简体中文扩展，请点击安装。
 
 如果忘记点击或没有弹窗，请到侧边栏扩展搜索找到 "Chinese (Simplified) Language Pack for Visual Studio Code" 扩展进行安装，即可将 VSCode 改为中文页面。
+
 :::
 
 ![VSCode UI 页面](./assets/layout.png)

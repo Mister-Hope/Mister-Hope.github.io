@@ -28,9 +28,11 @@ category: 小程序
 | animationend       | CSS 动画结束                                   |
 
 ::: warning
+
 这几个事件都不是冒泡事件，需要绑定在真正发生了动画的节点上才会生效。
 
 Mr.Hope 强烈建议优先使用 **CSS 动画**。只有 **CSS 动画** 无法满足要求时，才应该考虑 `wx.createAnimation`。
+
 :::
 
 ## 关键帧动画

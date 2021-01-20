@@ -228,7 +228,8 @@ Component({
 
 :::
 
-::::
+:
+:::
 
 ## 外部样式类 <MyBadge type="grey" text="高级" />
 

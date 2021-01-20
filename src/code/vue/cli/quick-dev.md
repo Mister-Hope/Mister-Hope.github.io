@@ -43,6 +43,7 @@ vue serve
 ```
 
 ::: tip
+
 `vue serve` 使用了和 `vue create` 创建的项目相同的默认设置 (webpack、Babel、PostCSS 和 ESLint)。它会在当前目录自动推导入口文件——入口可以是 `main.js`、`index.js`、`App.vue` 或 `app.vue` 中的一个。您也可以显式地指定入口文件:
 
 ```bash

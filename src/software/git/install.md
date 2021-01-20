@@ -39,7 +39,9 @@ tags:
    ![设置默认分支名称](./assets/install6.png)
 
    :::info
+
    在 2020 年的黑人运动中，部分黑人认为 master 这个词是对它们的冒犯。
+
    :::
 
 1. 选择第二项，这将允许您在第三方工具中使用 Git，同时不会覆盖默认的 Windows 命令。
@@ -51,7 +53,9 @@ tags:
    ![Git SSL](./assets/install8.png)
 
    :::tip
+
    如果自己公司有 CA，或者在开发中需要 Git 承认某些自签 CA，则需要选择第二项。
+
    :::
 
 1. 务必选择最后一项 “原样检出与提交”
@@ -63,7 +67,9 @@ tags:
    ![Git 终端](./assets/install10.png)
 
    ::: tip
+
    如果您对 VSCode 和 PowerShell 还不熟悉，建议选择 MinTTY，以方便您接下来在学习中对 Git Bash 的临时使用。
+
    :::
 
 1. 选择 `git pull` 的默认行为，保持默认不要改动
@@ -113,7 +119,9 @@ tags:
    ```
 
    ::: info
+
    由于 Git 是一个多人协作的版本控制系统，首先您应当设置您的身份。
+
    :::
 
 1. 创建 SSH Key。打开 Shell (Windows 下打开 cmd)，创建 SSH Key:

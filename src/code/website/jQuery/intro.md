@@ -21,9 +21,11 @@ jQuery 能帮我们干这些事情:
 ## jQuery 版本
 
 ::: tip
+
 jQuery 的 `1.x` 版本 兼容 ie678，`2.x` 为了精简代码体积移除了 ie678 的兼容。`3.x` 只兼容最新的一批浏览器，是官方还在更新维护的把呢不能
 
 由于已经 2020 年了，直接选用 jQuery`3.x`版本即可。
+
 :::
 
 从 jQuery 官网可以下载最新版本。jQuery 只是一个 jquery-xxx.js 文件，但您会看到有 compressed(已压缩)和 uncompressed(未压缩)两种版本，使用时完全一样，但如果您想深入研究 jQuery 源码，那就用 uncompressed 版本。

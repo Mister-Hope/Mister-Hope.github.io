@@ -55,7 +55,8 @@ M  lib/simplegit.rb
 
 :::
 
-::::
+:
+:::
 
 Git 现在只告诉我们 readme.txt 被修改了，我们用 `git diff` 这个命令能看看具体修改了什么内容:
 

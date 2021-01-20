@@ -223,9 +223,11 @@ Sensor panel 有两大功能:
 在远程调试的调试器里，开发者可以在 Console 面板里对代码进行调试，在 Sources 面板里查看小程序的源代码并进行断点单步调试，在 Storage 面板里查看小程序的 Storage 使用情况等。
 
 ::: tip
+
 要在 Console 里对小程序进行调试，需要将调试的上下文切换到 VM Context 1，如图所示。
 
 ![context](https://res.wx.qq.com/wxdoc/dist/assets/img/context.182d265d.jpg)
+
 :::
 
 在 Sources 面板查看源代码时，开发者所有的文件路径都是以 `weapp://` 开头的。

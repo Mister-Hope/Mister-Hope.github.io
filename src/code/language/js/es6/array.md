@@ -76,7 +76,7 @@ f.apply(null, args);
 // ES6 的写法
 const f = (x, y, z) => {
   // ...
-}
+};
 let args = [0, 1, 2];
 f(...args);
 ```
@@ -284,9 +284,9 @@ new Date(...[2015, 1, 1]);
 
    ```js
    let arrayLike = {
-     "0": "a",
-     "1": "b",
-     "2": "c",
+     0: "a",
+     1: "b",
+     2: "c",
      length: 3,
    };
 
@@ -339,9 +339,9 @@ new Date(...[2015, 1, 1]);
 
 ```js
 let arrayLike = {
-  "0": "a",
-  "1": "b",
-  "2": "c",
+  0: "a",
+  1: "b",
+  2: "c",
   length: 3,
 };
 
@@ -363,7 +363,7 @@ Array.from(ps).filter((p) => p.textContent.length > 100);
 const foo = () => {
   let args = Array.from(arguments);
   // ...
-}
+};
 ```
 
 上面代码中，`querySelectorAll` 方法返回的是一个类似数组的对象，可以将这个对象转为真正的数组，再使用 `filter` 方法。
@@ -817,28 +817,28 @@ ES5 对空位的处理，已经很不一致了，大多数情况下会忽略空�
 
 ```js
 // forEach 方法
-[,'a'].forEach((x,i) => console.log(i)); // 1
+[, "a"].forEach((x, i) => console.log(i)); // 1
 
 // filter 方法
-['a',,'b'].filter(x => true); // ['a','b']
+["a", , "b"].filter((x) => true); // ['a','b']
 
 // every 方法
-[,'a'].every(x => x==='a'); // true
+[, "a"].every((x) => x === "a"); // true
 
 // reduce 方法
-[1,,2].reduce((x,y) => x+y); // 3
+[1, , 2].reduce((x, y) => x + y); // 3
 
 // some 方法
-[,'a'].some(x => x !== 'a'); // false
+[, "a"].some((x) => x !== "a"); // false
 
 // map 方法
-[,'a'].map(x => 1); // [,1]
+[, "a"].map((x) => 1); // [,1]
 
 // join 方法
-[,'a',undefined,null].join('#'); // "#a##"
+[, "a", undefined, null].join("#"); // "#a##"
 
 // toString 方法
-[,'a',undefined,null].toString(); // ",a,,"
+[, "a", undefined, null].toString(); // ",a,,"
 ```
 
 ES6 则是明确将空位转为 `undefined`。
@@ -884,19 +884,19 @@ for (let i of arr) {
 
 ```js
 // entries()
-[...[,'a'].entries()]; // [[0,undefined], [1,"a"]]
+[...[, "a"].entries()]; // [[0,undefined], [1,"a"]]
 
 // keys()
-[...[,'a'].keys()]; // [0,1]
+[...[, "a"].keys()]; // [0,1]
 
 // values()
-[...[,'a'].values()]; // [undefined,"a"]
+[...[, "a"].values()]; // [undefined,"a"]
 
 // find()
-[,'a'].find(x => true); // undefined
+[, "a"].find((x) => true); // undefined
 
 // findIndex()
-[,'a'].findIndex(x => true); // 0
+[, "a"].findIndex((x) => true); // 0
 ```
 
 由于空位的处理规则非常不统一，所以建议避免出现空位。

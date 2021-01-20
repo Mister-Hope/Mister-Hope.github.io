@@ -125,6 +125,7 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 3: invalid 
 申明了 UTF-8 编码并不意味着您的 `.py` 文件就是 UTF-8 编码的，必须并且要确保文本编辑器正在使用 "UTF-8 without BOM" 编码。
 
 ::: info
+
 旧版 Windows 记事本的 UTF-8 是 UTF-8 with BOM。
 
 - 具体详情请见 [记事本的遗留问题](../../../windows/notepad.md)

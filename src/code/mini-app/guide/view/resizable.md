@@ -13,6 +13,7 @@ category: 小程序
 从小程序基础库版本 2.4.0 开始，小程序在手机上支持屏幕旋转。使小程序中的页面支持屏幕旋转的方法是: 在 app.json 的 window 段中设置 `"pageOrientation": "auto"` ，或在页面 json 文件中配置 `"pageOrientation": "auto"`。
 
 ::: details 代码示例
+
 以下是在单个页面 json 文件中启用屏幕旋转的示例。
 
 ```json

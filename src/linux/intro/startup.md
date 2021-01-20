@@ -17,6 +17,7 @@ Linux 系统的启动过程并不是大家想象中的那么复杂，其过程�
 - 用户登录系统。
 
 ::: tip
+
 init 程序的类型:
 
 - SysV: init, CentOS 5 之前, 配置文件: /etc/inittab。

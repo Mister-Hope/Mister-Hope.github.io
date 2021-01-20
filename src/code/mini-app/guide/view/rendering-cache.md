@@ -74,12 +74,15 @@ category: 小程序
 添加这个配置项之后，在手机中预览小程序首页，然后杀死小程序再次进入，就会通过初始渲染缓存来渲染首页。
 
 ::: warning
+
 这种情况下，初始渲染缓存记录的是页面 data 应用在页面 WXML 上的结果，不包含任何 setData 的结果。
 
 换而言之，这种做法只包含页面 data 的渲染结果，即页面的纯静态成分。
+
 :::
 
 ::: details 例子
+
 例如，如果想要在页面中展示出“正在加载”几个字，这几个字受到 loading 数据字段控制:
 
 ```xml
@@ -147,6 +150,8 @@ Page({
 从原理上说，在动态生成初始渲染缓存的方式下，页面会在后台使用动态数据重新渲染一次，因而开销相对较大。因而要尽量避免频繁调用 `this.setInitialRenderingCache`，如果在一个页面内多次调用，仅最后一次调用生效。
 
 ::: warning
+
 `this.setInitialRenderingCache` 调用时机不能早于 Page 的 `onReady` 或 Component 的 `ready` 生命周期，否则可能对性能有负面影响。
 如果想禁用初始渲染缓存，调用 `this.setInitialRenderingCache(null)`。
+
 :::

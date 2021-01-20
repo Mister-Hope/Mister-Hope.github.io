@@ -124,4 +124,5 @@ body {
 ```
 
 ::: info
+
 更多详情，请见 [CSS → 媒体查询](../intro/media.md)

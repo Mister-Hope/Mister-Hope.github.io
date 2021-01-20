@@ -76,7 +76,9 @@ CSS3 是最新的 CSS 标准，被拆分为"模块"。
   > 注: 官网说的，不是我说的 :joy:
 
   ::: tip
+
   SCSS 是 Sass3 版本当中引入的新语法特性,完全兼容 CSS3 的同时继承了 Sass 强大的动态功能。
+
   :::
 
   - [中文文档](https://sass.bootcss.com/)

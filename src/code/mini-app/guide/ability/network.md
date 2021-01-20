@@ -36,7 +36,9 @@ category: 小程序
 1. 网络请求的 referer header 不可设置。其格式固定为 `https://servicewechat.com/{appid}/{version}/page-frame.html`，其中 `{appid}` 为小程序的 appid，`{version}` 为小程序的版本号，版本号为 `0` 表示为开发版、体验版以及审核版本，版本号为 `devtools` 表示为开发者工具，其余为正式版本。
 
    ::: tip
+
    因为小程序必定带上特定 Header，在后端的 API 处理上就可以判断 Header，检测到只有是自己小程序时才允许调用接口，否则直接拒绝访问。
+
    :::
 
 1. wx.request、wx.uploadFile、wx.downloadFile 的最大并发限制是 10 个；
