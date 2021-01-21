@@ -28,7 +28,7 @@ Page({
 });
 ```
 
-- [查看详情](databind.md)
+- [查看详情](data-bind.md)
 
 ## 条件渲染
 
@@ -50,7 +50,7 @@ Page({
 });
 ```
 
-- [查看详情](conditionRender.md)
+- [查看详情](condition-render.md)
 
 ## 列表渲染
 
@@ -70,7 +70,7 @@ Page({
 });
 ```
 
-- [查看详情](listRender.md)
+- [查看详情](list-render.md)
 
 ## 模板
 

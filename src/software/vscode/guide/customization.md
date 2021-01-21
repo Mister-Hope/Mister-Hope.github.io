@@ -9,8 +9,8 @@ tags:
 
 您可以做很多事情来个性化 VS Code。
 
-- 改变你的主题
-- 改变你的文件图标
+- 改变您的主题
+- 改变您的文件图标
 - 更改键盘快捷键
 - 调整设置
 - 安装扩展
@@ -24,9 +24,11 @@ tags:
 此外，您可以安装和更改文件图标主题。
 
 ::: tip
+
 Mr.Hope 个人推荐 `One Dark Pro` 主题和 `Material Icon Theme` 文件图标主题。
 
-你需要从扩展应用应用商店中安装它们。
+您需要从扩展应用应用商店中安装它们。
+
 :::
 
 ## 自定义键盘快捷键
@@ -37,9 +39,9 @@ Mr.Hope 个人推荐 `One Dark Pro` 主题和 `Material Icon Theme` 文件图标
 
 有关更多信息，请参见 [快捷键键绑定](../shortcut-key.md#快捷键编辑器)。
 
-## 调整你的设置
+## 调整您的设置
 
-默认情况下，VS Code 显示 **设置** 编辑器，你还可以通过使用 **打开设置(JSON)** 命令打开 `settings.json`。
+默认情况下，VS Code 显示 **设置** 编辑器，您还可以通过使用 **打开设置(JSON)** 命令打开 `settings.json`。
 
 键盘快捷键: `Ctrl + ,`
 
@@ -72,9 +74,11 @@ Mr.Hope 个人推荐 `One Dark Pro` 主题和 `Material Icon Theme` 文件图标
   ```
 
   ::: tip
+
   这需要安装支持字体连字的字体。FiraCode 是 VS Code 团队中流行的字体。
 
   Mr.Hope 也强力推荐安装并使用这一字体 (字体详见云文档共享文件)
+
   :::
 
 - 自动保存
@@ -150,5 +154,7 @@ Mr.Hope 个人推荐 `One Dark Pro` 主题和 `Material Icon Theme` 文件图标
 ```
 
 ::: tip
+
 您还可以使用 **配置语言特定的设置** 命令来创建特定于语言的设置。
+
 :::

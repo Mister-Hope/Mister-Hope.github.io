@@ -76,7 +76,9 @@ TypeError: 'int' object is not callable
 当然实际代码绝对不能这么写，这里是为了说明函数名也是变量。要恢复 `abs` 函数，请重启 Python 交互环境。
 
 ::: tip
+
 由于 abs 函数实际上是定义在 `import builtins` 模块中的，所以要让修改 `abs` 变量的指向在其它模块也生效，要用 `import builtins; builtins.abs = 10`。
+
 :::
 
 ## 传入函数

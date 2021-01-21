@@ -1,10 +1,10 @@
 ---
-title: Page <MyBadge text="重要" type="error" />
+title: Page
 icon: page
 category: 小程序
 ---
 
-注册小程序中的一个页面。接受一个 Object 类型参数，其指定页面的初始数据、生命周期回调、事件处理函数等。
+注册小程序中的一个页面。接受一个 Object 类型参数，其指定页面的初始数据、生命周期回调、事件处理函数等。 <MyBadge text="重要" type="error" />
 
 <!-- more -->
 
@@ -23,6 +23,8 @@ Object object
 | onHide            | function | 生命周期回调—监听页面隐藏         |
 | onUnload          | function | 生命周期回调—监听页面卸载         |
 | onShareAppMessage | function | 用户点击右上角转发                |
+| onShareTimeline   | function | 用户点击右上角转发到朋友圈        |
+| onAddToFavorites  | function | 用户点击右上角收藏                |
 
 以下是较少用到的参数:
 
@@ -35,10 +37,10 @@ Object object
 | onTabItemTap      | function | 当前是 tab 页时，点击 tab 时触发                                                 |
 | 其他              | any      | 开发者可以添加任意的函数或数据到 Object 参数中，在页面的函数中用 `this` 可以访问 |
 
-示例代码
+示例代码:
 
 ```js
-//index.js
+// index.js
 Page({
   data: {
     text: "This is page data.",
@@ -144,7 +146,9 @@ Page({
 页面初次渲染完成时触发。一个页面只会调用一次，代表页面已经准备妥当，可以和视图层进行交互。
 
 ::: warning
+
 对界面内容进行设置的 API 如 `wx.setNavigationBarTitle`，请在 `onReady` 之后进行。详见[生命周期](lifetime.md)
+
 :::
 
 #### onHide()
@@ -168,15 +172,55 @@ Page({
 | scrollTop | Number | 页面在垂直方向已滚动的距离(单位 px) |
 
 ::: warning
+
 请只在需要的时候才在 page 中定义此方法，不要定义空方法。以减少不必要的事件派发对渲染层-逻辑层通信的影响。注意: 请避免在 onPageScroll 中过于频繁的执行 setData 等引起逻辑层-渲染层通信的操作。尤其是每次传输大量数据，会影响通信耗时。
+
 :::
+
+#### onAddToFavorites(Object object)
+
+> 本接口为 Beta 版本，安卓 7.0.15 版本起支持，暂只在安卓平台支持
+
+监听用户点击右上角菜单“收藏”按钮的行为，并自定义收藏内容。
+
+参数 Object object:
+
+| 参数       | 类型   | 说明                                                         |
+| ---------- | ------ | ------------------------------------------------------------ |
+| webviewUrl | String | 页面中包含 `<web-view>` 组件时，返回当前 `<web-view>` 的 url |
+
+此事件处理函数需要 return 一个 Object，用于自定义收藏内容:
+
+| 字段     | 说明                             | 默认值             |
+| -------- | -------------------------------- | ------------------ |
+| title    | 自定义标题                       | 页面标题或账号名称 |
+| imageUrl | 自定义图片，显示图片长宽比为 1:1 | 页面截图           |
+| query    | 自定义 query 字段                | 当前页面的 query   |
+
+示例代码:
+
+```js
+Page({
+  onAddToFavorites(res) {
+    // webview 页面返回 webviewUrl
+    console.log("WebviewUrl: ", res.webviewUrl);
+    return {
+      title: "自定义标题",
+      imageUrl: "http://demo.png",
+      query: "name=xxx&age=xxx",
+    };
+  },
+});
+```
 
 #### onShareAppMessage(Object object)
 
 监听用户点击页面内转发按钮(`<button>` 组件 `open-type="share"`)或右上角菜单“转发”按钮的行为，并自定义转发内容。
 
 ::: warning
+
 只有定义了此事件处理函数，右上角菜单才会显示“转发”按钮
+
 :::
 
 参数 Object object:
@@ -197,7 +241,7 @@ Page({
 | path     | 转发路径                                                                                                          | 当前页面 `path` ，必须是以 `/` 开头的完整路径 |
 | imageUrl | 自定义图片路径，可以是本地文件路径、代码包文件路径或者网络图片路径。<br />支持 PNG 及 JPG。显示图片长宽比是 5:4。 | 使用默认截图                                  | 1.5.0    |
 
-示例代码
+示例代码:
 
 [在开发者工具中预览效果](https://developers.weixin.qq.com/s/mffqUKmr6fZU)
 
@@ -216,16 +260,42 @@ Page({
 });
 ```
 
+#### onShareTimeline()
+
+> 基础库 2.11.3 开始支持
+>
+> 本接口为 Beta 版本，暂只在 Android 平台支持，详见分享到朋友圈 (Beta)
+
+监听右上角菜单“分享到朋友圈”按钮的行为，并自定义分享内容。
+
+::: warning
+
+只有定义了此事件处理函数，右上角菜单才会显示“分享到朋友圈”按钮。
+
+:::
+
+##### 自定义转发内容
+
+事件处理函数返回一个 Object，用于自定义分享内容，不支持自定义页面路径，返回内容如下:
+
+| 字段     | 说明                                                                                | 默认值                 | 最低版本 |
+| -------- | ----------------------------------------------------------------------------------- | ---------------------- | -------- |
+| title    | 自定义标题，即朋友圈列表页上显示的标题                                              | 当前小程序名称         |
+| query    | 自定义页面路径中携带的参数，如 path?a=1&b=2 的 “?” 后面部分                         | 当前页面路径携带的参数 |
+| imageUrl | 自定义图片路径，可以是本地文件或者网络图片。支持 PNG 及 JPG，显示图片长宽比是 1:1。 | 默认使用小程序 Logo    |
+
 #### onPullDownRefresh()
 
 监听用户下拉刷新事件。
 
 ::: tip
-需要在 app.json 的 window 选项中或页面配置中开启 enablePullDownRefresh。
 
-可以通过 wx.startPullDownRefresh 触发下拉刷新，调用后触发下拉刷新动画，效果与用户手动下拉刷新一致。
+需要在 app.json 的 window 选项中或页面配置中开启 `enablePullDownRefresh。`
 
-当处理完数据刷新后，wx.stopPullDownRefresh 可以停止当前页面的下拉刷新。
+可以通过 [`wx.startPullDownRefresh`](https://developers.weixin.qq.com/miniprogram/dev/api/ui/pull-down-refresh/wx.startPullDownRefresh.html) 触发下拉刷新，调用后触发下拉刷新动画，效果与用户手动下拉刷新一致。
+
+当处理完数据刷新后，[`wx.stopPullDownRefresh`](https://developers.weixin.qq.com/miniprogram/dev/api/ui/pull-down-refresh/wx.stopPullDownRefresh.html) 可以停止当前页面的下拉刷新。
+
 :::
 
 #### onReachBottom()
@@ -233,20 +303,20 @@ Page({
 监听用户上拉触底事件。
 
 ::: tip
-可以在 app.json 的 window 选项中或页面配置中设置触发距离 onReachBottomDistance。
+
+可以在 app.json 的 window 选项中或页面配置中设置触发距离 `onReachBottomDistance`。
 
 在触发距离内滑动期间，本事件只会被触发一次。
+
 :::
 
 #### onResize(Object object)
 
-> 基础库 2.4.0 开始支持，低版本需做兼容处理。
+> 基础库 2.4.0 开始支持
 
 小程序屏幕旋转时触发。
 
 #### onTabItemTap(Object object)
-
-> 基础库 1.9.0 开始支持，低版本需做兼容处理。
 
 点击 tab 时触发
 

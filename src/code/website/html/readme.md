@@ -12,7 +12,9 @@ HTML 指的是超文本标记语言 (Hyper Text Markup Language)，它不是一�
 <!-- more -->
 
 ::: tip
+
 在网页的前端开发中，它描绘了了视图层的具体结构。
+
 :::
 
 ## 初学者教程

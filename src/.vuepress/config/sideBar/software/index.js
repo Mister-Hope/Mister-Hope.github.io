@@ -21,7 +21,7 @@ module.exports = [
     icon: "Github",
     collapsable: false,
     prefix: "git/github/",
-    children: ["", "intro", "actions", "deploy"],
+    children: ["", "intro", "pr", "semantic", "actions", "deploy"],
   },
   {
     title: "COMSOL",
@@ -29,6 +29,13 @@ module.exports = [
     collapsable: false,
     prefix: "comsol/",
     children: require("./comsol"),
+  },
+  {
+    title: "工具软件",
+    icon: "tool",
+    collapsable: false,
+    prefix: "tool/",
+    children: ["", "power-toys"],
   },
   "Apache",
   "nginx",

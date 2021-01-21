@@ -80,5 +80,5 @@ project:
     type: article
     link: /note/
 
-footer: '<a href="http://beian.miit.gov.cn/" target="_blank">备案号: 辽ICP备18007023-4号</a> | <a href="/about/site/">关于网站</a>'
+footer: '<a href="http://beian.miit.gov.cn/" target="_blank">备案号: 辽ICP备18007023号</a> | <a href="/about/site/">关于网站</a>'
 ---

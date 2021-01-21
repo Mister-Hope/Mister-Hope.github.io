@@ -8,6 +8,7 @@ tags:
 # Autumn Recollection
 
 ::: center
+
 I believe，
 
 there is always someone,
@@ -31,4 +32,5 @@ and then they gradually know that:
 Holding on does not mean Victory,
 
 and Oblivion does not mean Apathy.
+
 :::

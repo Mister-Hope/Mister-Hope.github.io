@@ -116,5 +116,7 @@ listen = 127.0.0.1:9000
 ```
 
 ::: tip
+
 如果报了 permission limitted 的错误，说明 php 没法访问 html 文件夹，修改配置的 html 文件夹权限即可。
+
 :::

@@ -14,7 +14,9 @@ category: Python
 打开“命令提示符”，就进入到命令行模式，它的提示符类似 `C:\>`:
 
 ::: info
+
 如何打开，请见 [打开命令行](../../../windows/cmd.md)
+
 :::
 
 ## Python 交互模式
@@ -38,7 +40,9 @@ category: Python
 现在，我们就把上次的 `'hello, world'` 程序用文本编辑器写出来，保存下来。
 
 ::: info 文本编辑器
+
 关于文本编辑器，请使用 [VS Code](../../../../software/vscode/readme.md)
+
 :::
 
 安装好文本编辑器后，输入以下代码:

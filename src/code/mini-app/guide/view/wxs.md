@@ -1,11 +1,13 @@
 ---
-title: WXS <MyBadge type="grey" text="高级" />
+title: WXS
 icon: script
 category: 小程序
 ---
 
 ::: tip
+
 此部分在初步学习小程序的时候直接略过即可。
+
 :::
 
 WXS (WeiXin Script) 是小程序的一套脚本语言，结合 WXML，可以构建出页面的结构。

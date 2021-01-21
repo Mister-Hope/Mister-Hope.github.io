@@ -103,7 +103,7 @@ alert("请求已发送，请等待响应...");
 const request;
 
 if (window.XMLHttpRequest) request = new XMLHttpRequest();
-else request = new ActiveXObject('Microsoft.XMLHTTP');
+else request = new ActiveXObject("Microsoft.XMLHTTP");
 ```
 
 通过检测 `window` 对象是否有 `XMLHttpRequest` 属性来确定浏览器是否支持标准的 `XMLHttpRequest`。注意，不要根据浏览器的`navigator.userAgent` 来检测浏览器是否支持某个 JavaScript 特性，一是因为这个字符串本身可以伪造，二是通过 IE 版本判断 JavaScript 特性将非常复杂。
@@ -113,7 +113,9 @@ else request = new ActiveXObject('Microsoft.XMLHTTP');
 `XMLHttpRequest` 对象的 `open()` 方法有 3 个参数，第一个参数指定是 GET 还是 POST，第二个参数指定 URL 地址，第三个参数指定是否使用异步，默认是 `true`，所以不用写。
 
 ::: danger
+
 千万不要把第三个参数指定为 `false`，否则浏览器将停止响应，直到 Ajax 请求完成。如果这个请求耗时 10 秒，那么 10 秒内您会发现浏览器处于“假死”状态。
+
 :::
 
 最后调用 `send()` 方法才真正发送请求。GET 请求不需要参数，POST 请求需要把 body 部分以字符串或者 `FormData` 对象传进去。

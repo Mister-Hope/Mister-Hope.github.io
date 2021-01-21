@@ -1,6 +1,6 @@
 ---
 title: 数据类型
-icon: apps
+icon: type
 time: 2019-09-15
 category: JavaScript
 tags:

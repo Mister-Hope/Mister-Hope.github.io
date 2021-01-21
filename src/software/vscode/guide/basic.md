@@ -67,11 +67,13 @@ tags:
 ![快速打开](./assets/quick-open.png)
 
 ::: tip
+
 键入 `?` 查看命令建议。
 
 ![命令建议](./assets/suggestions.png)
 
 键入命令，例如 `edt` 和 `term` 后跟一个空格，将显示下拉列表。
+
 :::
 
 ## 最近打开的文件之间的浏览

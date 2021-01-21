@@ -1,12 +1,13 @@
 ---
+title: 代码相关
 icon: code
 sticky: 20
 breadcrumb: false
 ---
 
-# 代码相关
-
 此处是 Mr.Hope 存放的一些代码笔记。
+
+<!-- more -->
 
 ## 目录
 
@@ -39,7 +40,9 @@ breadcrumb: false
 - [MDN](https://developer.mozilla.org/zh-CN/)
 
   ::: info
+
   MDN 的中文文档翻译很差，大多都是机翻，十分建议直接阅读英文文档。
+
   :::
 
 ### 杂牌网站

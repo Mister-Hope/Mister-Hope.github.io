@@ -1,5 +1,5 @@
 ---
-title: Github 简介
+title: GitHub 简介
 icon: info
 time: 2019-11-20
 category: Git
@@ -15,7 +15,7 @@ tags:
 
 ### repository
 
-仓库，简称 **Repo**。一个仓库即是一个项目。仓库是 GitHub 上的主要内容。每当您新建一个项目并想要在 Github。
+仓库，简称 **Repo**。一个仓库即是一个项目。仓库是 GitHub 上的主要内容。每当您新建一个项目并想要在 GitHub。
 
 ### Star
 
@@ -30,7 +30,9 @@ tags:
 议题。这是一个类似讨论区的地方。如果您在使用该项目的过程中遇到了问题，可以在相应项目的 Issue 板块按照项目的要求提出 Issue。在 Issue 中可以汇报一个 bug，或者是提出一个 Feature Request (功能请求)。项目的拥有者会针对您汇报的情况对您做出回复。同时，项目拥有者还可以为此 issue 增加 label (标签)，以帮助项目成员或是项目的其他使用者更好的理解您提出 issue。也可以将您的 issue assign (分派) 给特定的项目成员解决。
 
 ::: tip
+
 为了 GitHub 的友好交流环境，请在汇报 bug 时永远带上 bug 的一个简易的复现流程，可以直接建立一个简单的 bug repository 并把链接放置在您提出的 issue 中。
+
 :::
 
 ### pull request

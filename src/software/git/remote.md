@@ -29,7 +29,7 @@ Git 是分布式版本控制系统，同一个 Git 仓库，可以分布到不�
 
   如果一切顺利的话，可以在用户主目录里找到.ssh 目录，里面有 id_rsa 和 id_rsa.pub 两个文件，这两个就是 SSH Key 的秘钥对，id_rsa 是私钥，不能泄露出去，id_rsa.pub 是公钥，可以放心地告诉任何人。
 
-- 第 2 步: 登陆 Github，点击右上角头像，进入设置。
+- 第 2 步: 登陆 GitHub，点击右上角头像，进入设置。
 
   进入安全设置下的 SSH 公钥界面。
 
@@ -37,7 +37,7 @@ Git 是分布式版本控制系统，同一个 Git 仓库，可以分布到不�
 
 为什么 GitHub 需要 SSH Key 呢? 因为 GitHub 需要识别出您推送的提交确实是您推送的，而不是别人冒充的，而 Git 支持 SSH 协议，所以，GitHub 只要知道了您的公钥，就可以确认只有您自己才能推送。
 
-当然，GitHub 允许您添加多个 Key。假定您有若干电脑，您一会儿在公司提交，一会儿在家里提交，只要把每台电脑的 Key 都添加到 Github，就可以在每台电脑上往 GitHub 推送了。
+当然，GitHub 允许您添加多个 Key。假定您有若干电脑，您一会儿在公司提交，一会儿在家里提交，只要把每台电脑的 Key 都添加到 GitHub，就可以在每台电脑上往 GitHub 推送了。
 
 最后友情提示，在 GitHub 上免费托管的 Git 仓库，任何人都可以看到喔(但只有您自己才能改)。所以，不要把敏感信息放进去。
 
@@ -49,7 +49,7 @@ Git 是分布式版本控制系统，同一个 Git 仓库，可以分布到不�
 
 现在的情景是，您已经在本地创建了一个 Git 仓库后，又想在 GitHub 创建一个 Git 仓库，并且让这两个仓库进行远程同步，这样，GitHub 上的仓库既可以作为备份，又可以让其他人通过该仓库来协作，真是一举多得。
 
-首先，登陆 Github，然后，在右上角找到 “+” 按钮，点击 "New Repository"。
+首先，登陆 GitHub，然后，在右上角找到 “+” 按钮，点击 "New Repository"。
 
 在项目填入 learngit，其他保持默认设置，点击“创建”按钮，就成功地创建了一个新的 Git 仓库:
 
@@ -92,7 +92,7 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 git push origin master
 ```
 
-把本地 `master` 分支的最新修改推送至 Github，现在，您就拥有了真正的分布式版本库!
+把本地 `master` 分支的最新修改推送至 GitHub，现在，您就拥有了真正的分布式版本库!
 
 ## SSH 警告
 
@@ -109,7 +109,7 @@ Are you sure you want to continue connecting (yes/no)?
 Git 会输出一个警告，告诉您已经把 GitHub 的 Key 添加到本机的一个信任列表里了:
 
 ```md
-Warning: Permanently added 'Github.com' (RSA) to the list of known hosts.
+Warning: Permanently added 'github.com' (RSA) to the list of known hosts.
 ```
 
 这个警告只会出现一次，后面的操作就不会有任何警告了。
@@ -132,7 +132,7 @@ Warning: Permanently added 'Github.com' (RSA) to the list of known hosts.
 
 现在，假设我们从零开发，那么最好的方式是先创建远程库，然后，从远程库克隆。
 
-首先，登陆 Github，创建一个新的仓库，名字叫 `gitskills`:
+首先，登陆 GitHub，创建一个新的仓库，名字叫 `gitskills`:
 
 我们勾选使用 “readme 初始化项目”，这样 GitHub 会自动为我们创建一个 README.md 文件。创建完毕后，可以看到 README.md 文件。
 
@@ -147,7 +147,9 @@ Receiving objects: 100% (3/3), done.
 ```
 
 ::: tip
-如果你使用 clone 命令克隆了一个仓库，命令会自动将其添加为远程仓库并默认以 “origin” 为简写。
+
+如果您使用 clone 命令克隆了一个仓库，命令会自动将其添加为远程仓库并默认以 “origin” 为简写。
+
 :::
 
 注意把 Git 库的地址换成您自己的，然后进入 `gitskills` 目录看看，已经有 README.md 文件了:
@@ -178,21 +180,21 @@ Git 支持多种协议，包括 https，但通过 ssh 支持的原生 git 协议
 git fetch <remote>
 ```
 
-这个命令会访问远程仓库，从中拉取所有你还没有的数据。执行完成后，你将会拥有那个远程仓库中所有分支的引用，可以随时合并或查看。
+这个命令会访问远程仓库，从中拉取所有您还没有的数据。执行完成后，您将会拥有那个远程仓库中所有分支的引用，可以随时合并或查看。
 
-`git fetch origin` 会抓取克隆(或上一次抓取)后新推送的所有工作。必须注意 `git fetch` 命令只会将数据下载到你的本地仓库——它并不会自动合并或修改你当前的工作。当准备好时你必须手动将其合并入你的工作。
+`git fetch origin` 会抓取克隆(或上一次抓取)后新推送的所有工作。必须注意 `git fetch` 命令只会将数据下载到您的本地仓库——它并不会自动合并或修改您当前的工作。当准备好时您必须手动将其合并入您的工作。
 
 ## 推送到远程仓库
 
-当你想分享你的项目时，必须将其推送到上游。这个命令很简单: `git push <remote> <branch>`。当你
-想要将 master 分支推送到 origin 服务器时(再次说明，克隆时通常会自动帮你设置好那两个名字)， 那么
-运行这个命令就可以将你所做的备份到服务器:
+当您想分享您的项目时，必须将其推送到上游。这个命令很简单: `git push <remote> <branch>`。当您
+想要将 master 分支推送到 origin 服务器时(再次说明，克隆时通常会自动帮您设置好那两个名字)， 那么
+运行这个命令就可以将您所做的备份到服务器:
 
 ```sh
 git push origin master
 ```
 
-只有当你有所克隆服务器的写入权限，并且之前没有人推送过时，这条命令才能生效。当你和其他人在同一时间克隆，他们先推送到上游然后你再推送到上游，你的推送就会毫无疑问地被拒绝。你必须先抓取他们的工作并将其合并进你的工作后才能推送。
+只有当您有所克隆服务器的写入权限，并且之前没有人推送过时，这条命令才能生效。当您和其他人在同一时间克隆，他们先推送到上游然后您再推送到上游，您的推送就会毫无疑问地被拒绝。您必须先抓取他们的工作并将其合并进您的工作后才能推送。
 
 ## 查看某个远程仓库
 
@@ -214,11 +216,11 @@ Local ref configured for 'git push':
 master pushes to master (up to date)
 ```
 
-它同样会列出远程仓库的 URL 与跟踪分支的信息。这些信息非常有用，它告诉你正处于 master 分支，并且如果运行 `git pull`，就会抓取所有的远程引用，然后将远程 master 分支合并到本地 master 分支。它也会列出拉取到的所有远程引用。
+它同样会列出远程仓库的 URL 与跟踪分支的信息。这些信息非常有用，它告诉您正处于 master 分支，并且如果运行 `git pull`，就会抓取所有的远程引用，然后将远程 master 分支合并到本地 master 分支。它也会列出拉取到的所有远程引用。
 
 ## 远程仓库的重命名与移除
 
-你可以运行 `git remote rename` 来修改一个远程仓库的简写名。例如，想要将 pb 重命名为 paul，可以用 `git remote rename` 这样做:
+您可以运行 `git remote rename` 来修改一个远程仓库的简写名。例如，想要将 pb 重命名为 paul，可以用 `git remote rename` 这样做:
 
 ```sh
 $ git remote rename pb paul
@@ -227,9 +229,9 @@ origin
 paul
 ```
 
-值得注意的是这同样也会修改你所有远程跟踪的分支名字。那些过去引用 `pb/master` 的现在会引用 `paul/master`。
+值得注意的是这同样也会修改您所有远程跟踪的分支名字。那些过去引用 `pb/master` 的现在会引用 `paul/master`。
 
-如果因为一些原因想要移除一个远程仓库——你已经从服务器上搬走了或不再想使用某一个特定的镜像了，又或者某一个贡献者不再贡献了——可以使用 `git remote remove` 或 `git remote rm`:
+如果因为一些原因想要移除一个远程仓库——您已经从服务器上搬走了或不再想使用某一个特定的镜像了，又或者某一个贡献者不再贡献了——可以使用 `git remote remove` 或 `git remote rm`:
 
 ```sh
 $ git remote remove paul
@@ -237,4 +239,4 @@ $ git remote
 origin
 ```
 
-一旦你使用这种方式删除了一个远程仓库，那么所有和这个远程仓库相关的远程跟踪分支以及配置信息也会一起被删除。
+一旦您使用这种方式删除了一个远程仓库，那么所有和这个远程仓库相关的远程跟踪分支以及配置信息也会一起被删除。

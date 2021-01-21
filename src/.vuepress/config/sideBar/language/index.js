@@ -6,4 +6,5 @@ module.exports = [
   "python/",
   "json/",
   "yaml/",
+  "linter/",
 ];

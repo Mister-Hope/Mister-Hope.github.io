@@ -95,7 +95,7 @@ r; // [1, 5, 9, 15]
 
 ```js
 const arr = ["A", "", "B", null, undefined, "C", "  "];
-const r = arr.filter((s) => s && s.trim()); // 注意: IE9以下的版本没有trim()方法
+const r = arr.filter((s) => s && s.trim());
 
 r; // ['A', 'B', 'C']
 ```

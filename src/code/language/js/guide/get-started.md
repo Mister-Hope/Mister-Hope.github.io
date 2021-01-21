@@ -8,7 +8,9 @@ tags:
 ---
 
 ::: tip
+
 因为 JavaScript 是一门编程语言，不再是 HTML 和 CSS 这种看得见摸得着的东西，所以我们从如何引入、运行并调试开始讲起。
+
 :::
 
 <!-- more -->
@@ -58,7 +60,9 @@ JavaScript 代码可以直接嵌在网页的任何地方。
 由 `<script>...</script>` 包含的代码就是 JavaScript 代码，它将直接被浏览器执行。
 
 ::: tip
+
 和 CSS 类似，我们管这种引入方式叫做 “内联脚本”。
+
 :::
 
 第二种方法是把 JavaScript 代码放到一个单独的 `js` 文件，然后在 HTML 中通过 `<script src="..."></script>` 引入这个文件:
@@ -77,6 +81,7 @@ JavaScript 代码可以直接嵌在网页的任何地方。
 这样， `/static/js/abc.js` 就会被浏览器执行。
 
 ::: tip
+
 和 CSS 类似，我们称这种引入方式为外部引入。
 
 外部引入有多种好处:
@@ -84,9 +89,11 @@ JavaScript 代码可以直接嵌在网页的任何地方。
 - 把 JavaScript 代码放入一个单独的 js 文件中更利于维护代码，并且多个页面可以各自引用同一份 js 文件。
 - 可以在同一个页面中引入多个.js 文件，还可以在页面中多次编写 `<script> js代码... </script>` ，浏览器按照顺序依次执行。
 - 如果网页是静态的，希望尽快向用户呈现，可以将 JavaScript 代码放在文件的最后。
+
   :::
 
 ::: warning
+
 因为 `<script>` 标签默认的 `type` 就是 JavaScript，所以下方的写法是没有必要的。
 
 ```html
@@ -108,7 +115,9 @@ JavaScript 代码可以直接嵌在网页的任何地方。
 要让浏览器运行 JavaScript，必须先有一个 HTML 页面，在 HTML 页面中引入 JavaScript，然后，让浏览器加载该 HTML 页面，就可以执行 JavaScript 代码。
 
 ::: warning
+
 直接在硬盘上创建好 HTML 和 JavaScript 文件，然后用浏览器打开的方式运行部分 JavaScript 代码没有问题，但由于浏览器的安全限制，以 `file://` 开头的地址无法执行如联网等 JavaScript 代码，
+
 :::
 
 ### 架设本地服务器
@@ -120,7 +129,9 @@ JavaScript 代码可以直接嵌在网页的任何地方。
 Node.js 是一个著名的基于 JavaScript 的后端工具，可以很方便快捷的执行并调试 JavaScript。
 
 ::: tip
+
 关于 Node.js 的详细教程，请查看[这里](../../../nodeJS/readme.md)
+
 :::
 
 ## JavaScript 的调试

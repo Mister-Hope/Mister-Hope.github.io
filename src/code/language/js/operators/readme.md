@@ -6,7 +6,9 @@ category: JavaScript
 ---
 
 ::: tip
+
 二进制位运算符章节使用较少，无需阅读。
+
 :::
 
 ## 目录

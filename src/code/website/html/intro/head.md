@@ -46,11 +46,15 @@ HTML 头部是包含在 `<head>` 元素里面的内容。不像 `<body>` 元素�
 这个元素简单的指定了文档的字符编码 —— 在这个文档中被允许使用的字符集。
 
 ::: info
+
 字符集的详情，请见 [基础知识 → 字符集](../../../basic/encoding.md)
+
 :::
 
 ::: warning
+
 如果您指定了错误的编码，则整个网页都会乱码。
+
 :::
 
 ### 添加作者和描述
@@ -76,7 +80,9 @@ HTML 头部是包含在 `<head>` 元素里面的内容。不像 `<body>` 元素�
 指定包含关于页面内容的关键字的页面内容的描述是很有用的，因为它可能或让您的页面在搜索引擎的相关的搜索出现得更多 (这些行为术语上被称为 Search Engine Optimization，简称 SEO.)
 
 ::: info
+
 关于 SEO 详情，请见 [定义 → SEO](../definition/seo.md)
+
 :::
 
 ### 自定义图标
@@ -95,7 +101,9 @@ HTML 头部是包含在 `<head>` 元素里面的内容。不像 `<body>` 元素�
    ```
 
 ::: info
+
 更多元数据详情，请见 [MDN Meta 标签](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta))
+
 :::
 
 ## 为文档设定主语言

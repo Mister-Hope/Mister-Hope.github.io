@@ -104,14 +104,14 @@ function Person(name) {
   return {
     name: name,
     getAge: getAge,
-    setAge: setAge
+    setAge: setAge,
   };
 }
 
-const p1 = Person('张三');
+const p1 = Person("张三");
 
 p1.setAge(25);
-p1.getAge() // 25
+p1.getAge(); // 25
 ```
 
 上面代码中，函数`Person`的内部变量`_age`，通过闭包`getAge`和`setAge`，变成了返回对象`p1`的私有变量。

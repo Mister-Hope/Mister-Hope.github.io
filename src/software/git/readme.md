@@ -11,9 +11,11 @@ copyrightText: Copyright by 廖雪峰 Edited by Mr.Hope
 Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。在开发中分布式文件管理系统，可以便于多人协作开发。
 
 ::: info 交互式学习
-如果你觉得本文太枯燥，这里有一个 [交互式的分支演示与学习网站](http://learngitbranching.js.org/)。你可以在这里领略 Git 的魅力。
 
-但 Mr.Hope 仍建议你操作完再系统的学习并阅读一下以下内容。
+如果您觉得本文太枯燥，这里有一个 [交互式的分支演示与学习网站](http://learngitbranching.js.org/)。您可以在这里领略 Git 的魅力。
+
+但 Mr.Hope 仍建议您操作完再系统的学习并阅读以下内容。
+
 :::
 
 <!-- more -->
@@ -56,12 +58,16 @@ Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理�
 
 - [搭建 Git 服务器](server.md)
 
-## Git 书籍
+## 扩展阅读
 
-- [Git-cheatSheet](/file/git/gitCheatSheet.pdf)
+- [官方文档](https://git-scm.com/doc)
 
-- [Pro Git](/file/git/progit_v2.1.45.pdf)
+- [Git-cheatSheet](/file/git/gitCheatSheet.pdf) (PDF)
+
+- [Pro Git](/file/git/progit_v2.1.45.pdf) (PDF)
 
 ::: tip TODO
+
 完善分支合并部分，加入更多命令介绍。如 `cherry-pick`。
+
 :::

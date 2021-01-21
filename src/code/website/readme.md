@@ -17,15 +17,19 @@ tags:
 <!-- more -->
 
 ::: tip
+
 一个大型的网站，很少是直接使用原生代码写的。
 
 最新的网站大多数都是用三大框架([**Angular**](#Angular)、[**React**](#React)、[**Vue**](#Vue))搭建，并引入 npm 上的 UI 库编写而成。
 
 稍微老的网站会使用其他框架作为辅助，比如[**Bootstrap**](#Bootstrap4)、[**jQuery**](#jQuery)等。
+
 :::
 
 ::: info 网页标准指定
+
 互联网网页标准由 W3C 组织制定，它的全称是万维网联盟组织。
+
 :::
 
 ## HTML

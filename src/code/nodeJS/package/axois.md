@@ -1,6 +1,6 @@
 # axois
 
-> Github 地址: [https://github.com/axios/axios](https://github.com/axios/axios)
+> GitHub 地址: [https://github.com/axios/axios](https://github.com/axios/axios)
 
 axois 是一个基于 Promise 的 HTTP 客户端，用于浏览器和 node.js
 
@@ -32,6 +32,7 @@ yarn add axios
 ## 使用
 
 ::: info CommonJS 用法
+
 为了在将 CommonJS 导入与``require()` 一起使用时获得 TypeScript 类型(用于智能感知/自动完成)，请使用以下方法:
 
 ```js
@@ -91,7 +92,9 @@ async function getUser() {
 ```
 
 ::: warning
+
 `async` / `await` is part of ECMAScript 2017 and is not supported in Internet Explorer and older browsers, so use with caution.
+
 :::
 
 进行 POST 请求:
@@ -178,7 +181,9 @@ axios("/user/12345");
 - `axios.patch(url[, data[, config]])`
 
 ::: warning
+
 When using the alias methods `url`, `method`, and `data` properties don't need to be specified in config.
+
 :::
 
 ### 并发
@@ -590,7 +595,9 @@ cancel();
 ```
 
 ::: tip
+
 您可以使用相同的取消令牌取消多个请求。
+
 :::
 
 ## Using application/x-www-form-urlencoded format
@@ -622,7 +629,9 @@ axios.post("http://something.com/", querystring.stringify({ foo: "bar" }));
 您也可以使用 [`qs`](https://github.com/ljharb/qs) 库.
 
 ::: warning
+
 如果需要对嵌套对象进行字符串化处理，则最好使用 qs 库，因为 `querystring` 方法在该用例中存在已知问题(<https://github.com/nodejs/node-v0.x-archive/issues/1665).>
+
 :::
 
 #### 表格数据

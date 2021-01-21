@@ -30,5 +30,7 @@ category: JavaScript
 在编写 JavaScript 的时候，就要充分考虑到浏览器的差异，尽量让同一份 JavaScript 代码能运行在不同的浏览器中。
 
 ::: tip
+
 为了让对新版本语法支持不好的浏览器也能够运行最新的代码，所以诞生了两大著名 Node.js package —— core-js 和 babel。两者都负责将最新的写法转换到浏览器可以支持的旧语法或提供相应的 pollyfill。
+
 :::

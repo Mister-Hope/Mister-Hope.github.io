@@ -49,7 +49,7 @@ ES6 的第一个版本，就这样在 2015 年 6 月发布了，正式名称就�
 - Stage 3 - Candidate(候选人阶段)
 - Stage 4 - Finished(定案阶段)
 
-一个提案只要能进入 Stage 2，就差不多肯定会包括在以后的正式标准里面。ECMAScript 当前的所有提案，可以在 TC39 的官方网站[Github.com/tc39/ecma262](https://github.com/tc39/ecma262)查看。
+一个提案只要能进入 Stage 2，就差不多肯定会包括在以后的正式标准里面。ECMAScript 当前的所有提案，可以在 TC39 的官方网站[github.com/tc39/ecma262](https://github.com/tc39/ecma262)查看。
 
 本书的写作目标之一，是跟踪 ECMAScript 语言的最新进展，介绍 5.1 版本以后所有的新语法。对于那些明确或很有希望，将要列入标准的新语法，都将予以介绍。
 

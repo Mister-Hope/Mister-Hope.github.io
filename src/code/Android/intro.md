@@ -1,12 +1,11 @@
 ---
+title: 基本特性
 icon: info
 time: 2020-04-07
 category: Android
 tags:
   - 介绍
 ---
-
-# 基本特性
 
 ## 应用提供多个入口点
 

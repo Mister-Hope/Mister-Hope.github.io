@@ -16,6 +16,7 @@ category: Linux
 - vi
 
 ::: tip
+
 使用 vi 命令后，默认进入浏览模式。
 
 按 `i` 进入 insert 模式， 按 `ESC` 退出。
@@ -33,6 +34,7 @@ category: Linux
 1. 搜索后，我们打开别的文件，发现也被高亮了，怎么关闭高亮?
 
 命令模式下，输入`:nohlsearch` 也可以`:set nohlsearch`；当然，可以简写，`noh` 或者 `set noh`。
+
 :::
 
 ### 重命名文件
@@ -44,7 +46,9 @@ category: Linux
 - mv
 
 ::: tip
+
 该命令也可用于重命名
+
 :::
 
 ### 文件浏览
@@ -188,6 +192,7 @@ userdel abc
 ```
 
 ::: tip
+
 使用 userdel abc 命令删除该用户时，并不能删除该用户的所有信息，只是删除了/etc/passwd、/etc/shadow、/etc/group/、/etc/gshadow 四个文件里的该账户和组的信息。默认情况下创建一个用户账号，会创建一个家目录和一个用户邮箱(在/var/spool/mail 目录以用户名命名)
 
 所以建议使用 `userdel -r abc` 删除用户。

@@ -6,7 +6,9 @@ category: 小程序
 ---
 
 ::: tip
-在开发小程序之前。应当掌握[HTML 基本元素](../website/html/intro.md)、[布局方式](../website/css/layout.md)、[CSS](../website/css/intro.md)、[js 基础](../language/js/accidence/readme.md)以及 [ES6](../language/js/es6/readme.md)。
+
+在开发小程序之前。应当掌握 [HTML](../website/html/readme.md)、[CSS](../website/css/readme.md)、[JavaScript 基础](../language/js/guide/readme.md) 以及 [ES6](../language/js/es6/readme.md)。
+
 :::
 
 <!-- more -->
@@ -15,11 +17,15 @@ category: 小程序
 
 在微信小程序中主要有四种文件结构: `wxml`、`wxss`、`js` 和 `json`。其中 `wxml` 对应带有 vue.js 特征的 html5，`wxss` 对应 css3，`js` 对应 ES6 标准的的 javaScript。
 
+对于 QQ 小程序，其文件结构为 `QML`、`qss`、`js` 和 `json`。
+
 ::: tip
-对于 QQ 小程序，其文件结构为 `QML`、`qss`、`js` 和 `json`。(本质还是换汤不换药的，且 QQ 开发者工具兼容 `wxml` 与 `wss`)
+
+QQ 小程序本质还是换汤不换药的，且 QQ 开发者工具兼容 `wxml` 与 `wss`)
+
 :::
 
-从上可以看出，小程序开发与网页开发极其相似。所以一个适当的网页开发基础是必须的。零基础的人可能很难直接上手小程序开发。
+小程序开发与网页开发极其相似。所以必须有适当的网页开发基础。零基础的人可能很难直接上手小程序开发。
 
 ## 教程目录
 
@@ -28,6 +34,24 @@ category: 小程序
 - [运行环境](guide/env.md)
 
 - [小程序配置](guide/config/readme.md)
+
+  - [全局配置](guide/config/app-config.md)
+
+  - [页面配置](guide/config/page-config.md)
+
+  - [sitemap 配置](guide/config/sitemap-config.md)
+
+- [小程序框架](guide/frame/readme.md)
+
+  - [框架介绍](guide/frame/intro.md)
+
+  - [场景值](guide/frame/scene.md) <MyBadge type="grey" text="高级" />
+
+  - [运行环境](guide/frame/env.md) <MyBadge type="grey" text="高级" />
+
+  - [运行机制](guide/frame/mechanism.md) <MyBadge type="grey" text="高级" />
+
+  - [更新机制](guide/frame/update.md) <MyBadge type="grey" text="高级" />
 
 - [逻辑层](guide/service/readme.md)
 
@@ -59,7 +83,19 @@ category: 小程序
 
   - [基础组件](guide/view/component.md)
 
-  - [动画](guide/view/animation.md)
+  - [动画](guide/view/animation.md) <MyBadge type="grey" text="高级" />
+
+  - [WXS](guide/view/wxs.md) <MyBadge type="grey" text="高级" />
+
+  - [WXS 事件](guide/view/wxs-event.md) <MyBadge type="grey" text="高级" />
+
+  - [建议双向绑定](guide/view/model.md) <MyBadge type="grey" text="高级" />
+
+  - [获取界面上的节点信息](guide/view/selector.md) <MyBadge type="grey" text="高级" />
+
+  - [相应显示区域变化](guide/view/selector.md) <MyBadge type="grey" text="高级" />
+
+  - [初始渲染缓存](guide/view/rendering-cache.md) <MyBadge type="grey" text="高级" />
 
 - [小程序能力](guide/ability/readme.md)
 
@@ -69,17 +105,17 @@ category: 小程序
 
   - [文件系统](guide/ability/file-system.md)
 
-  - [调试](debug.md)
+  - [调试](guide/ability/debug.md)
 
-- [开发者工具教程](tools/readme.md)
+## 开发者工具
 
-  - [工具页面简介](tools/interface.md)
+- [工具界面简介](tools/interface.md)
 
-  - [调试](tools/debug.md)
+- [调试](tools/debug.md)
 
-  - [npm](tools/npm.md)
+- [npm](tools/npm.md)
 
-  - [体验评分](tools/audit.md)
+- [体验评分](tools/audit.md)
 
 ## 官方教程
 
@@ -87,7 +123,7 @@ category: 小程序
 
 ## 案例
 
-- [GitHub repository](https://github.com/Mister-Hope/wxminiappdemo)
+- [GitHub repository](https://github.com/Hope-Studio/wxminiappdemo)
 
 ## Mr.Hope 框架说明
 
@@ -119,6 +155,8 @@ category: 小程序
 
 - [QQ 小程序](https://q.qq.com/wiki/)
 - [微信小程序](https://developers.weixin.qq.com/miniprogram/dev/framework/)
+- [微信小程序社区](https://developers.weixin.qq.com/community/develop/question)
+  - [官方公告](https://developers.weixin.qq.com/community/develop/list/2?id=)
 
 ### QQ 开发者工具
 

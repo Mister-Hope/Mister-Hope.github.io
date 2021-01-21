@@ -14,7 +14,9 @@ tags:
 ## 常用的快捷键
 
 ::: tip
+
 以下这些快捷键建议大家熟练掌握，能够很大程度提高开发效率。
+
 :::
 
 ### 鼠标操作
@@ -128,7 +130,9 @@ tags:
 `Ctrl + K Ctrl + /`: 折叠以块注释标记开头的所有区域；
 
 ::: info 官方文档
+
 [Windows 下 VSCode 快捷键指南](./assets/vscodeKeyboardShortcutsWindows.pdf) (英文)
+
 :::
 
 ### Windows 快捷键
@@ -146,7 +150,9 @@ tags:
 `Ctrl + Y`: 恢复；
 
 ::: info
+
 更多请见 [Windows 快捷键介绍](../../code/windows/shortcut-key.md)
+
 :::
 
 ---

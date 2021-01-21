@@ -22,12 +22,32 @@ category: 小程序
 
 - [WXML](wxml.md)
 
-- [WXSS](wxss.md)
+  - [数据绑定](data-bind.md)
 
-- [WXS](wxs.md)
+  - [条件渲染](condition-render.md)
+
+  - [列表渲染](list-render.md)
+
+  - [模板](template.md)
+
+- [WXSS](wxss.md)
 
 - [事件](event.md)
 
 - [基础组件](component.md)
 
-- [动画](animation.md)
+## 高级
+
+- [动画](animation.md) <MyBadge type="grey" text="高级" />
+
+- [WXS](wxs.md) <MyBadge type="grey" text="高级" />
+
+- [WXS 事件](wxs-event.md) <MyBadge type="grey" text="高级" />
+
+- [建议双向绑定](model.md) <MyBadge type="grey" text="高级" />
+
+- [获取界面上的节点信息](selector.md) <MyBadge type="grey" text="高级" />
+
+- [相应显示区域变化](selector.md) <MyBadge type="grey" text="高级" />
+
+- [初始渲染缓存](rendering-cache.md) <MyBadge type="grey" text="高级" />

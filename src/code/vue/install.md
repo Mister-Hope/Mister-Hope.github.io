@@ -18,7 +18,9 @@ tags:
 1. 使用 VS Code 打开项目文件夹。
 
    ::: tip
+
    请打开 VS Code 选择菜单栏中的 “文件-打开文件夹”，或在文件夹上 “右键——使用 VS Code 打开” 或在文件夹内部空白处 “右键——使用 VS Code 打开”。
+
    :::
 
 1. 打开终端(快捷键 `Ctrl +` \` )。(反引号为 \` )
@@ -48,9 +50,11 @@ tags:
 1. 使用 `npm install` 命令安装模块。
 
 ::: tip
+
 npm 模块介绍
 
 此处待补充。
+
 :::
 
 ## 开发工具安装
@@ -59,6 +63,8 @@ Vue 官方提供的浏览器插件 VueTools 可以更好的帮助开发。
 
 使用 VPN 用 Chrome 打开[安装网址](https://chrome.google.com/webstore/detail/nhdogjmejiglipccpnnnanhbledajbpd)，安装 VueTools 开发工具
 
-:::tip
+::: tip
+
 VPN 可以使用赛风 3 或 Betternet。
+
 :::

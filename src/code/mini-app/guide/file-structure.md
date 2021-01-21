@@ -35,9 +35,11 @@ category: 小程序
 | wxss | 否   | 页面样式表 |
 
 ::: warning
+
 为了方便开发者减少配置项，描述页面的四个文件必须具有相同的路径与文件名。
 
 这样开发者工具会自动将它们视作一个小程序页面的不同代码部分。
+
 :::
 
 ### 允许上传的文件 <MyBadge text="不重要" type="grey" />
@@ -108,7 +110,9 @@ app.json 是当前小程序的全局配置，包括了小程序的所有页面�
 其他配置项细节可以参考文档 [开发者工具的配置](https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html)。
 
 ::: info
+
 更多 JSON 相关教程，请查看 [JSON 教程](../../language/json/readme.md)
+
 :::
 
 ## WXML 模板 <MyBadge text="重要" type="error" />
@@ -165,7 +169,9 @@ this.setData({ msg: "Hello World" });
 ```
 
 ::: v-pre
+
 通过 `{{ }}` 的语法把一个变量绑定到界面上，我们称为数据绑定。仅仅通过数据绑定还不够完整的描述状态和界面的关系，还需要 `if` / `else`, `for` 等控制能力，在小程序里边，这些控制能力都用 `wx:` 开头的属性来表达。
+
 :::
 
 ## WXSS 样式 <MyBadge text="重要" type="error" />
@@ -175,9 +181,11 @@ WXSS 具有 CSS 大部分的特性，也做了一些扩充和修改。
 - 新增了尺寸单位。WXSS 在底层支持新的尺寸单位 rpx ，规定屏幕宽 750 rpx。
 
   ::: tip
+
   由于换算采用的浮点数运算，所以运算结果会和预期结果有一点点偏差。
 
   所以 Mr.Hope 并不建议使用 rpx 单位。
+
   :::
 
 - 提供了全局的样式和局部样式。

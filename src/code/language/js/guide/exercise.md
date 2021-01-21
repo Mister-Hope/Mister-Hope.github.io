@@ -56,13 +56,19 @@ isAdult(50); // true
 
     突然，您想起了文档上有这么一句话:flushed::
 
+
     :::center
+
     JavaScript 引擎遇到`return`语句，就直接返回`return`后面的那个表达式的值，
 
     后面即使还有语句，也不会得到执行。
+
     :::
+
     :::right
+
     [文档地址](../function/declare.md#return)
+
     :::
 
     于是乎，您去掉了 `else`:open_mouth:
@@ -81,8 +87,11 @@ isAdult(50); // true
     const functionName = (arg1, arg2, ...) => value;
     ```
 
+
     :::right
+
     的写法。决定投个懒:smirk:
+
     :::
 
     ```js

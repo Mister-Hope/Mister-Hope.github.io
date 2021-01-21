@@ -83,7 +83,9 @@ VS Code 原生为英文，本插件为 VS Code 提供简体中文支持，会更
 ### 版本管理与多人协作
 
 ::: tip
+
 VS Code 不包含 Git，请自行安装 Git 并添加到 path 以实现版本管理。
+
 :::
 
 #### GitLens
