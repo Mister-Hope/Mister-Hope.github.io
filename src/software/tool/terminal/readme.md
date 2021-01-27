@@ -40,10 +40,11 @@ Windows Terminal 是一个面向命令行工具和 shell(如命令提示符、Po
 
 - 开源
 
-## 官方文档
-
-- [官方文档](https://aka.ms/terminal-documentation)
-
 ## 教程
 
 - [快速上手](get-started.md)
+- [自定义设置](settings.md)
+
+## 官方文档
+
+- [官方文档](https://aka.ms/terminal-documentation)
