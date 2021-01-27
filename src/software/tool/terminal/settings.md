@@ -12,7 +12,7 @@ time: 2021-01-27
 
 ::: tip 默认设置
 
-你可以通过按住 Alt 键并点击下拉菜单中的 Settings 按钮打开 defaults.json。该文件由 Terminal 自动生成，展示了 Windows Terminal 所有默认设置及其值。更改此文件是无效的。
+您可以通过按住 Alt 键并点击下拉菜单中的 Settings 按钮打开 defaults.json。该文件由 Terminal 自动生成，展示了 Windows Terminal 所有默认设置及其值。更改此文件是无效的。
 
 :::
 
@@ -53,11 +53,11 @@ settings.json 文件分为四个主要部分:
 
 ::: tip
 
-- 你可以在 `defaults` 中设置 `fontFace` 控制终端的字体。
+- 您可以在 `defaults` 中设置 `fontFace` 控制终端的字体。
 
-- 你可以在 Powershell 配置文件中添加 `commandline` 为 `<PowerShell 地址> -nologo` 来去除 powershell 启动时的 logo 显示。(默认地址为: `C:/Program Files/PowerShell/7/pwsh.exe`)
+- 您可以在 Powershell 配置文件中添加 `commandline` 为 `<PowerShell 地址> -nologo` 来去除 powershell 启动时的 logo 显示。(默认地址为: `C:/Program Files/PowerShell/7/pwsh.exe`)
 
-- 你可以通过设置 `backgroundImage` 自定义背景图片，通过 `backgroundImageOpacity` 自定义背景透明度，通过 `useAcrylic` 开启或关闭毛玻璃效果。
+- 您可以通过设置 `backgroundImage` 自定义背景图片，通过 `backgroundImageOpacity` 自定义背景透明度，通过 `useAcrylic` 开启或关闭毛玻璃效果。
 
 :::
 
@@ -65,11 +65,11 @@ settings.json 文件分为四个主要部分:
 
 Windows Terminal 会自动为 PowerShell 和 WSL 分发版创建配置文件。
 
-你也可以手动添加新的配置文件: 只需生成一个新的 `guid`，提供一个 `name`，并为 `commandline` 属性提供可执行程序。
+您也可以手动添加新的配置文件: 只需生成一个新的 `guid`，提供一个 `name`，并为 `commandline` 属性提供可执行程序。
 
 ::: info WSL
 
-你可以通过 [Microsoft 应用商店](https://www.microsoft.com/zh-cn/p/ubuntu-2004-lts/9n6svws3rx71#activetab=pivot:overviewtab) 安装 Ubuntu。之后便可以在 terminal 上运行 Ubuntu WSL 环境。
+您可以通过 [Microsoft 应用商店](https://www.microsoft.com/zh-cn/p/ubuntu-2004-lts/9n6svws3rx71#activetab=pivot:overviewtab) 安装 Ubuntu。之后便可以在 terminal 上运行 Ubuntu WSL 环境。
 
 :::
 
@@ -81,7 +81,7 @@ Windows Terminal 会自动为 PowerShell 和 WSL 分发版创建配置文件。
 
 ## 配色方案
 
-你可以在 `schemes` 数组中配置自定义配色方案。它们是使用以下格式写入的:
+您可以在 `schemes` 数组中配置自定义配色方案。它们是使用以下格式写入的:
 
 ```json
 {
