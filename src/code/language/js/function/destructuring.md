@@ -1,12 +1,13 @@
 ---
+title: 解构赋值
 icon: structure
 time: 2019-10-03
 category: JavaScript
 ---
 
-# 解构赋值
-
 从 ES6 开始，JavaScript 引入了解构赋值，可以同时对一组变量进行赋值。
+
+<!-- more -->
 
 什么是解构赋值? 我们先看看传统的做法，如何把一个数组的元素分别赋值给几个变量:
 

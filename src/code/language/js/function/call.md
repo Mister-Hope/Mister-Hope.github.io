@@ -1,10 +1,9 @@
 ---
+title: 函数的调用
 icon: call
 time: 2019-10-02
 category: JavaScript
 ---
-
-# 函数的调用
 
 调用函数时，要使用圆括号运算符。圆括号之中，可以加入函数的参数。
 
