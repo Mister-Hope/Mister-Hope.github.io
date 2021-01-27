@@ -294,7 +294,7 @@ font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
 
 Web 字体是一种 CSS 特性，允许您指定在访问时随您的网站一起下载的字体文件，这意味着任何支持 Web 字体的浏览器都可以使用您指定的字体。
 
-首先，您需要尽早声明 `@font-face`块，它指定要下载的字体文件:
+首先，您需要尽早声明 `@font-face` 块，它指定要下载的字体文件:
 
 ```css
 @font-face {

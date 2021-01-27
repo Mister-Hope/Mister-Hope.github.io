@@ -81,7 +81,7 @@ xiaohong -→ Student.prototype ----> Object.prototype ----> null
 xiaojun  ↗
 ```
 
-用`new Student()` 创建的对象还从原型上获得了一个 `constructor` 属性，它指向函数 `Student` 本身:
+用 `new Student()` 创建的对象还从原型上获得了一个 `constructor` 属性，它指向函数 `Student` 本身:
 
 ```js
 xiaoming.constructor === Student.prototype.constructor; // true

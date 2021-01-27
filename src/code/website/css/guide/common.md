@@ -20,7 +20,7 @@ tags:
 | 斜体样式 | font-style      | `normal` (默认) /`italic`                                                   |
 | 字体粗细 | font-weight     | 描述值 `light` / `normal` / `bold`，数字 100 - 900 (400 为 normal)          |
 | 字体大小 | font-size       | 像素如 `14px`，磅如 `8pt`，字体大小如 `1em`、`0.5rem`                       |
-| 行高     | line-height     | 像素如 `14px`，数字如`2`(代表 2 倍字高)                                     |
+| 行高     | line-height     | 像素如 `14px`，数字如 `2`(代表 2 倍字高)                                    |
 | 字体间距 | letter-spacing  | 像素如 `14px`，百分比如 `10%`，磅如 `8pt`，字体大小如 `1em`、`0.5rem`       |
 | 字体装饰 | text-decoration | `none` (默认) / `underline`/`overline`/`line-through` / `blink` / `inherit` |
 

@@ -712,7 +712,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 区域的命名会影响到网格线。每个区域的起始网格线，会自动命名为 `区域名-start`，终止网格线自动命名为 `区域名-end`。
 
-比如，区域名为 `header`，则起始位置的水平网格线和垂直网格线叫做 `header-start`，终止位置的水平网格线和垂直网格线叫做`header-end`。
+比如，区域名为 `header`，则起始位置的水平网格线和垂直网格线叫做 `header-start`，终止位置的水平网格线和垂直网格线叫做 `header-end`。
 
 :::
 
@@ -901,7 +901,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 ### justify-content 属性，align-content 属性 和 place-content 属性
 
-`justify-content`属性是整个内容区域在容器里面的水平位置 (左中右) ，`align-content` 属性是整个内容区域的垂直位置 (上中下) 。
+`justify-content` 属性是整个内容区域在容器里面的水平位置 (左中右) ，`align-content` 属性是整个内容区域的垂直位置 (上中下) 。
 
 ```css
 .container {
@@ -1069,7 +1069,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 ### grid-column 属性 和 grid-row 属性
 
-- `grid-column` 属性是 `grid-column-start` 和 `grid-column-end`的合并简写形式
+- `grid-column` 属性是 `grid-column-start` 和 `grid-column-end` 的合并简写形式
 - `grid-row` 属性是 `grid-row-start` 属性和 `grid-row-end` 的合并简写形式。
 
 ```css

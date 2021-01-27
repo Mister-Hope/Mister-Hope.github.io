@@ -1,8 +1,8 @@
 # nl
 
-`nl`命令用于显示行号。
+`nl` 命令用于显示行号。
 
-下面是`example.txt`文件的内容。
+下面是 `example.txt` 文件的内容。
 
 ```bash
 Lorem ipsum
@@ -26,7 +26,7 @@ ipsum dolor sit
 amet.
 ```
 
-`nl`命令让上面这段文本显示行号。
+`nl` 命令让上面这段文本显示行号。
 
 ```bash
 $ nl -s". " example.txt
@@ -51,4 +51,4 @@ $ nl -s". " example.txt
     19. amet.
 ```
 
-`-s`参数表示行号的后缀。
+`-s` 参数表示行号的后缀。

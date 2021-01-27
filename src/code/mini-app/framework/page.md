@@ -31,9 +31,9 @@ import $page from "path/to/page";
 
 - 性质: 同步函数
 
-- 描述: 预处理`page`数据写入全局数据
+- 描述: 预处理 `page` 数据写入全局数据
 
-- 用法: 在页面`onNavigate`时调用，
+- 用法: 在页面 `onNavigate` 时调用，
 
   | 参数      | 描述                               |
   | --------- | ---------------------------------- |
@@ -71,7 +71,7 @@ import $page from "path/to/page";
   | page                     | 页面数据         |
   | preload \[default:true\] | 是否预加载子页面 |
 
-  `object`参数:
+  `object` 参数:
 
   | 参数                     | 描述               |
   | ------------------------ | ------------------ |
@@ -95,7 +95,7 @@ import $page from "path/to/page";
 
 - 描述: 设置在线界面数据
 
-- 用法: 在页面`onLoad`时调用
+- 用法: 在页面 `onLoad` 时调用
 
 - 性质: 同步函数
 
@@ -121,7 +121,7 @@ import $page from "path/to/page";
 
 - 描述: 弹出通知
 
-- 用法: 在页面`onLoad`时调用
+- 用法: 在页面 `onLoad` 时调用
 
 - 性质: 同步函数
 
@@ -145,7 +145,7 @@ import $page from "path/to/page";
 
 - 描述: 设置胶囊与背景颜色
 
-- 用法: 在页面`onShow`时调用
+- 用法: 在页面 `onShow` 时调用
 
 - 性质: 同步函数
 
@@ -175,15 +175,15 @@ import $page from "path/to/page";
 
 - 描述: 导航栏动态改变
 
-- 用法: 在页面`onPageScroll`时调用
+- 用法: 在页面 `onPageScroll` 时调用
 
 - 性质: 同步函数
 
-  | 参数     | 描述                           |
-  | -------- | ------------------------------ |
-  | option   | 组件参数                       |
-  | ctx      | 页面指针                       |
-  | headName | 导航栏配置对象在`data`中的名称 |
+  | 参数     | 描述                             |
+  | -------- | -------------------------------- |
+  | option   | 组件参数                         |
+  | ctx      | 页面指针                         |
+  | headName | 导航栏配置对象在 `data` 中的名称 |
 
 **案例:**
 

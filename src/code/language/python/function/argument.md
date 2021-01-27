@@ -186,7 +186,7 @@ def add_end(L=[]):
 ['END', 'END', 'END']
 ```
 
-很多初学者很疑惑，默认参数是`[]`，但是函数似乎每次都“记住了”上次添加了'END'后的 list。
+很多初学者很疑惑，默认参数是 `[]`，但是函数似乎每次都“记住了”上次添加了'END'后的 list。
 
 原因解释如下:
 
@@ -333,7 +333,7 @@ name: Jack age: 24 other: {'city': 'Beijing', 'job': 'Engineer'}
 name: Jack age: 24 other: {'city': 'Beijing', 'job': 'Engineer'}
 ```
 
-`**extra` 表示把 `extra` 这个 dict 的所有 key-value 用关键字参数传入到函数的`**kw` 参数，`kw` 将获得一个 dict，注意 `kw` 获得的 dict 是 `extra` 的一份拷贝，对 `kw` 的改动不会影响到函数外的 `extra`。
+`**extra` 表示把 `extra` 这个 dict 的所有 key-value 用关键字参数传入到函数的 `**kw` 参数，`kw` 将获得一个 dict，注意 `kw` 获得的 dict 是 `extra` 的一份拷贝，对 `kw` 的改动不会影响到函数外的 `extra`。
 
 ## 命名关键字参数
 

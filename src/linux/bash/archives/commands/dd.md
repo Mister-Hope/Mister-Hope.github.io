@@ -1,6 +1,6 @@
 # dd
 
-`dd`命令用于复制磁盘或文件系统。
+`dd` 命令用于复制磁盘或文件系统。
 
 ## 复制磁盘
 
@@ -8,21 +8,21 @@
 dd if=/dev/sda of=/dev/sdb
 ```
 
-上面命令表示将`/dev/sda`磁盘复制到`/dev/sdb`设备。参数`if`表示来源地，`of`表示目的地。
+上面命令表示将`/dev/sda` 磁盘复制到`/dev/sdb` 设备。参数 `if` 表示来源地，`of` 表示目的地。
 
-除了复制，`dd`还允许将磁盘做成一个镜像文件。
+除了复制，`dd` 还允许将磁盘做成一个镜像文件。
 
 ```bash
 dd if=/dev/sda of=/home/username/sdadisk.img
 ```
 
-`dd`还可以复制单个分区。
+`dd` 还可以复制单个分区。
 
 ```bash
 dd if=/dev/sda2 of=/home/username/partition2.img bs=4096
 ```
 
-上面命令中，参数`bs`表示单次拷贝的字节数(bytes)。
+上面命令中，参数 `bs` 表示单次拷贝的字节数(bytes)。
 
 要将镜像文件复原，也很简单。
 
@@ -32,7 +32,7 @@ dd if=sdadisk.img of=/dev/sdb
 
 ## 清除数据
 
-`dd`也可以用于清除磁盘数据。
+`dd` 也可以用于清除磁盘数据。
 
 ```bash
 # 磁盘数据写满 0

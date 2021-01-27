@@ -72,7 +72,7 @@ jQuery 能够绑定的事件主要包括:
 - `focus`: 当 DOM 获得焦点时触发；
 - `blur`: 当 DOM 失去焦点时触发；
 - `change`: 当 `<input>`、`<select>` 或 `<textarea>` 的内容改变时触发；
-- `submit`: 当`<form>`提交时触发；
+- `submit`: 当 `<form>` 提交时触发；
 - `ready`: 当页面被载入并且 DOM 树完成初始化后触发。
 
 其中，`ready` 仅作用于 document 对象。由于 ready 事件在 DOM 完成初始化后触发，且只触发一次，所以非常适合用来写其他的初始化代码。假设我们想给一个 `<form>` 表单绑定 submit 事件，下面的代码没有预期的效果:
@@ -232,7 +232,7 @@ input.change(); // 触发change事件
 
 ## 浏览器安全限制
 
-在浏览器中，有些 JavaScript 代码只有在用户触发下才能执行，例如，`window.open()`函数:
+在浏览器中，有些 JavaScript 代码只有在用户触发下才能执行，例如，`window.open()` 函数:
 
 ```js
 // 无法弹出新窗口，将被浏览器屏蔽:

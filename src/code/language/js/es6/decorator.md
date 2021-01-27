@@ -24,7 +24,7 @@ function testable(target) {
 MyTestableClass.isTestable; // true
 ```
 
-上面代码中，`@testable`就是一个修饰器。它修改了`MyTestableClass`这个类的行为，为它加上了静态属性`isTestable`。`testable`函数的参数`target`是`MyTestableClass`类本身。
+上面代码中，`@testable` 就是一个修饰器。它修改了 `MyTestableClass` 这个类的行为，为它加上了静态属性 `isTestable`。`testable` 函数的参数 `target` 是 `MyTestableClass` 类本身。
 
 基本上，修饰器的行为就是下面这样。
 
@@ -46,7 +46,7 @@ function testable(target) {
 }
 ```
 
-上面代码中，`testable`函数的参数`target`，就是会被修饰的类。
+上面代码中，`testable` 函数的参数 `target`，就是会被修饰的类。
 
 如果觉得一个参数不够用，可以在修饰器外面再封装一层函数。
 
@@ -66,11 +66,11 @@ class MyClass {}
 MyClass.isTestable; // false
 ```
 
-上面代码中，修饰器`testable`可以接受参数，这就等于可以修改修饰器的行为。
+上面代码中，修饰器 `testable` 可以接受参数，这就等于可以修改修饰器的行为。
 
 注意，修饰器对类的行为的改变，是代码编译时发生的，而不是在运行时。这意味着，修饰器能在编译阶段运行代码。也就是说，修饰器本质就是编译时执行的函数。
 
-前面的例子是为类添加一个静态属性，如果想添加实例属性，可以通过目标类的`prototype`对象操作。
+前面的例子是为类添加一个静态属性，如果想添加实例属性，可以通过目标类的 `prototype` 对象操作。
 
 ```js
 function testable(target) {
@@ -84,7 +84,7 @@ let obj = new MyTestableClass();
 obj.isTestable; // true
 ```
 
-上面代码中，修饰器函数`testable`是在目标类的`prototype`对象上添加属性，因此就可以在实例上调用。
+上面代码中，修饰器函数 `testable` 是在目标类的 `prototype` 对象上添加属性，因此就可以在实例上调用。
 
 下面是另外一个例子。
 
@@ -112,7 +112,7 @@ let obj = new MyClass();
 obj.foo(); // 'foo'
 ```
 
-上面代码通过修饰器`mixins`，把`Foo`对象的方法添加到了`MyClass`的实例上面。可以用`Object.assign()`模拟这个功能。
+上面代码通过修饰器 `mixins`，把 `Foo` 对象的方法添加到了 `MyClass` 的实例上面。可以用 `Object.assign()` 模拟这个功能。
 
 ```js
 const Foo = {
@@ -159,9 +159,9 @@ class Person {
 }
 ```
 
-上面代码中，修饰器`readonly`用来修饰“类”的`name`方法。
+上面代码中，修饰器 `readonly` 用来修饰“类”的 `name` 方法。
 
-修饰器函数`readonly`一共可以接受三个参数。
+修饰器函数 `readonly` 一共可以接受三个参数。
 
 ```js
 function readonly(target, name, descriptor) {
@@ -181,11 +181,11 @@ readonly(Person.prototype, "name", descriptor);
 Object.defineProperty(Person.prototype, "name", descriptor);
 ```
 
-修饰器第一个参数是类的原型对象，上例是`Person.prototype`，修饰器的本意是要“修饰”类的实例，但是这个时候实例还没生成，所以只能去修饰原型(这不同于类的修饰，那种情况时`target`参数指的是类本身)；第二个参数是所要修饰的属性名，第三个参数是该属性的描述对象。
+修饰器第一个参数是类的原型对象，上例是 `Person.prototype`，修饰器的本意是要“修饰”类的实例，但是这个时候实例还没生成，所以只能去修饰原型(这不同于类的修饰，那种情况时 `target` 参数指的是类本身)；第二个参数是所要修饰的属性名，第三个参数是该属性的描述对象。
 
 另外，上面代码说明，修饰器(readonly)会修改属性的描述对象(descriptor)，然后被修改的描述对象再用来定义属性。
 
-下面是另一个例子，修改属性描述对象的`enumerable`属性，使得该属性不可遍历。
+下面是另一个例子，修改属性描述对象的 `enumerable` 属性，使得该属性不可遍历。
 
 ```js
 class Person {
@@ -201,7 +201,7 @@ function nonenumerable(target, name, descriptor) {
 }
 ```
 
-下面的`@log`修饰器，可以起到输出日志的作用。
+下面的 `@log` 修饰器，可以起到输出日志的作用。
 
 ```js
 class Math {
@@ -228,7 +228,7 @@ const math = new Math();
 math.add(2, 4);
 ```
 
-上面代码中，`@log`修饰器的作用就是在执行原始的操作之前，执行一次`console.log`，从而达到输出日志的目的。
+上面代码中，`@log` 修饰器的作用就是在执行原始的操作之前，执行一次 `console.log`，从而达到输出日志的目的。
 
 修饰器有注释的作用。
 
@@ -243,7 +243,7 @@ class Person {
 }
 ```
 
-从上面代码中，我们一眼就能看出，`Person`类是可测试的，而`name`方法是只读和不可枚举的。
+从上面代码中，我们一眼就能看出，`Person` 类是可测试的，而 `name` 方法是只读和不可枚举的。
 
 下面是使用 Decorator 写法的[组件](https://github.com/ionic-team/stencil)，看上去一目了然。
 
@@ -286,7 +286,7 @@ class Example {
 // executed 1
 ```
 
-上面代码中，外层修饰器`@dec(1)`先进入，但是内层修饰器`@dec(2)`先执行。
+上面代码中，外层修饰器 `@dec(1)` 先进入，但是内层修饰器 `@dec(2)` 先执行。
 
 除了注释，修饰器还能用来类型检查。所以，对于类来说，这项功能相当有用。从长期来看，它将是 JavaScript 代码静态分析的重要工具。
 
@@ -306,7 +306,7 @@ function foo() {
 }
 ```
 
-上面的代码，意图是执行后`counter`等于 1，但是实际上结果是`counter`等于 0。因为函数提升，使得实际执行的代码是下面这样。
+上面的代码，意图是执行后 `counter` 等于 1，但是实际上结果是 `counter` 等于 0。因为函数提升，使得实际执行的代码是下面这样。
 
 ```js
 @add
@@ -372,7 +372,7 @@ const wrapped = loggingDecorator(doSomething);
 
 1. @autobind
 
-   `autobind`修饰器使得方法中的`this`对象，绑定原始对象。
+   `autobind` 修饰器使得方法中的 `this` 对象，绑定原始对象。
 
    ```js
    import { autobind } from "core-decorators";
@@ -393,7 +393,7 @@ const wrapped = loggingDecorator(doSomething);
 
 1. @readonly
 
-   `readonly`修饰器使得属性或方法不可写。
+   `readonly` 修饰器使得属性或方法不可写。
 
    ```js
    import { readonly } from "core-decorators";
@@ -410,7 +410,7 @@ const wrapped = loggingDecorator(doSomething);
 
 1. @override
 
-   `override`修饰器检查子类的方法，是否正确覆盖了父类的同名方法，如果不正确会报错。
+   `override` 修饰器检查子类的方法，是否正确覆盖了父类的同名方法，如果不正确会报错。
 
    ```js
    import { override } from "core-decorators";
@@ -438,7 +438,7 @@ const wrapped = loggingDecorator(doSomething);
 
 1. @deprecate (别名@deprecated)
 
-   `deprecate`或`deprecated`修饰器在控制台显示一条警告，表示该方法将废除。
+   `deprecate` 或 `deprecated` 修饰器在控制台显示一条警告，表示该方法将废除。
 
    ```js
    import { deprecate } from "core-decorators";
@@ -521,7 +521,7 @@ export default function publish(topic, channel) {
 }
 ```
 
-上面代码定义了一个名为`publish`的修饰器，它通过改写`descriptor.value`，使得原方法被调用时，会自动发出一个事件。它使用的事件“发布/订阅”库是[Postal.js](https://github.com/postaljs/postal.js)。
+上面代码定义了一个名为 `publish` 的修饰器，它通过改写 `descriptor.value`，使得原方法被调用时，会自动发出一个事件。它使用的事件“发布/订阅”库是[Postal.js](https://github.com/postaljs/postal.js)。
 
 它的用法如下。
 
@@ -580,9 +580,9 @@ let obj = new MyClass();
 obj.foo(); // 'foo'
 ```
 
-上面代码之中，对象`Foo`有一个`foo`方法，通过`Object.assign`方法，可以将`foo`方法“混入”`MyClass`类，导致`MyClass`的实例`obj`对象都具有`foo`方法。这就是“混入”模式的一个简单实现。
+上面代码之中，对象 `Foo` 有一个 `foo` 方法，通过 `Object.assign` 方法，可以将 `foo` 方法“混入”`MyClass` 类，导致 `MyClass` 的实例 `obj` 对象都具有 `foo` 方法。这就是“混入”模式的一个简单实现。
 
-下面，我们部署一个通用脚本`mixins.js`，将 Mixin 写成一个修饰器。
+下面，我们部署一个通用脚本 `mixins.js`，将 Mixin 写成一个修饰器。
 
 ```js
 export function mixins(...list) {
@@ -610,9 +610,9 @@ let obj = new MyClass();
 obj.foo(); // "foo"
 ```
 
-通过`mixins`这个修饰器，实现了在`MyClass`类上面“混入”`Foo`对象的`foo`方法。
+通过 `mixins` 这个修饰器，实现了在 `MyClass` 类上面“混入”`Foo` 对象的 `foo` 方法。
 
-不过，上面的方法会改写`MyClass`类的`prototype`对象，如果不喜欢这一点，也可以通过类的继承实现 Mixin。
+不过，上面的方法会改写 `MyClass` 类的 `prototype` 对象，如果不喜欢这一点，也可以通过类的继承实现 Mixin。
 
 ```js
 class MyClass extends MyBaseClass {
@@ -620,7 +620,7 @@ class MyClass extends MyBaseClass {
 }
 ```
 
-上面代码中，`MyClass`继承了`MyBaseClass`。如果我们想在`MyClass`里面“混入”一个`foo`方法，一个办法是在`MyClass`和`MyBaseClass`之间插入一个混入类，这个类具有`foo`方法，并且继承了`MyBaseClass`的所有方法，然后`MyClass`再继承这个类。
+上面代码中，`MyClass` 继承了 `MyBaseClass`。如果我们想在 `MyClass` 里面“混入”一个 `foo` 方法，一个办法是在 `MyClass` 和 `MyBaseClass` 之间插入一个混入类，这个类具有 `foo` 方法，并且继承了 `MyBaseClass` 的所有方法，然后 `MyClass` 再继承这个类。
 
 ```js
 let MyMixin = (superclass) =>
@@ -631,9 +631,9 @@ let MyMixin = (superclass) =>
   };
 ```
 
-上面代码中，`MyMixin`是一个混入类生成器，接受`superclass`作为参数，然后返回一个继承`superclass`的子类，该子类包含一个`foo`方法。
+上面代码中，`MyMixin` 是一个混入类生成器，接受 `superclass` 作为参数，然后返回一个继承 `superclass` 的子类，该子类包含一个 `foo` 方法。
 
-接着，目标类再去继承这个混入类，就达到了“混入”`foo`方法的目的。
+接着，目标类再去继承这个混入类，就达到了“混入”`foo` 方法的目的。
 
 ```js
 class MyClass extends MyMixin(MyBaseClass) {
@@ -652,7 +652,7 @@ class MyClass extends Mixin1(Mixin2(MyBaseClass)) {
 }
 ```
 
-这种写法的一个好处，是可以调用`super`，因此可以避免在“混入”过程中覆盖父类的同名方法。
+这种写法的一个好处，是可以调用 `super`，因此可以避免在“混入”过程中覆盖父类的同名方法。
 
 ```js
 let Mixin1 = (superclass) =>
@@ -685,7 +685,7 @@ class C extends Mixin1(Mixin2(S)) {
 }
 ```
 
-上面代码中，每一次`混入`发生时，都调用了父类的`super.foo`方法，导致父类的同名方法没有被覆盖，行为被保留了下来。
+上面代码中，每一次`混入`发生时，都调用了父类的 `super.foo` 方法，导致父类的同名方法没有被覆盖，行为被保留了下来。
 
 ```js
 new C().foo();
@@ -699,7 +699,7 @@ new C().foo();
 
 Trait 也是一种修饰器，效果与 Mixin 类似，但是提供更多功能，比如防止同名方法的冲突、排除混入某些方法、为混入的方法起别名等等。
 
-下面采用[traits-decorator](https://github.com/CocktailJS/traits-decorator)这个第三方模块作为例子。这个模块提供的`traits`修饰器，不仅可以接受对象，还可以接受 ES6 类作为参数。
+下面采用[traits-decorator](https://github.com/CocktailJS/traits-decorator)这个第三方模块作为例子。这个模块提供的 `traits` 修饰器，不仅可以接受对象，还可以接受 ES6 类作为参数。
 
 ```js
 import { traits } from "traits-decorator";
@@ -724,7 +724,7 @@ obj.foo(); // foo
 obj.bar(); // bar
 ```
 
-上面代码中，通过`traits`修饰器，在`MyClass`类上面“混入”了`TFoo`类的`foo`方法和`TBar`对象的`bar`方法。
+上面代码中，通过 `traits` 修饰器，在 `MyClass` 类上面“混入”了 `TFoo` 类的 `foo` 方法和 `TBar` 对象的 `bar` 方法。
 
 Trait 不允许“混入”同名方法。
 
@@ -754,9 +754,9 @@ class MyClass {}
 // Error: Method named: foo is defined twice.
 ```
 
-上面代码中，`TFoo`和`TBar`都有`foo`方法，结果`traits`修饰器报错。
+上面代码中，`TFoo` 和 `TBar` 都有 `foo` 方法，结果 `traits` 修饰器报错。
 
-一种解决方法是排除`TBar`的`foo`方法。
+一种解决方法是排除 `TBar` 的 `foo` 方法。
 
 ```js
 import { traits, excludes } from "traits-decorator";
@@ -784,9 +784,9 @@ obj.foo(); // foo
 obj.bar(); // bar
 ```
 
-上面代码使用绑定运算符(::)在`TBar`上排除`foo`方法，混入时就不会报错了。
+上面代码使用绑定运算符(::)在 `TBar` 上排除 `foo` 方法，混入时就不会报错了。
 
-另一种方法是为`TBar`的`foo`方法起一个别名。
+另一种方法是为 `TBar` 的 `foo` 方法起一个别名。
 
 ```js
 import { traits, alias } from "traits-decorator";
@@ -815,18 +815,18 @@ obj.aliasFoo(); // foo
 obj.bar(); // bar
 ```
 
-上面代码为`TBar`的`foo`方法起了别名`aliasFoo`，于是`MyClass`也可以混入`TBar`的`foo`方法了。
+上面代码为 `TBar` 的 `foo` 方法起了别名 `aliasFoo`，于是 `MyClass` 也可以混入 `TBar` 的 `foo` 方法了。
 
-`alias`和`excludes`方法，可以结合起来使用。
+`alias` 和 `excludes` 方法，可以结合起来使用。
 
 ```js
 @traits(TExample::excludes("foo", "bar")::alias({ baz: "exampleBaz" }))
 class MyClass {}
 ```
 
-上面代码排除`了TExample`的`foo`方法和`bar`方法，为`baz`方法起了别名`exampleBaz`。
+上面代码排除`了TExample` 的 `foo` 方法和 `bar` 方法，为 `baz` 方法起了别名 `exampleBaz`。
 
-`as`方法则为上面的代码提供了另一种写法。
+`as` 方法则为上面的代码提供了另一种写法。
 
 ```js
 @traits(
@@ -839,13 +839,13 @@ class MyClass {}
 
 目前，Babel 转码器已经支持 Decorator。
 
-首先，安装`babel-core`和`babel-plugin-transform-decorators`。由于后者包括在`babel-preset-stage-0`之中，所以改为安装`babel-preset-stage-0`亦可。
+首先，安装 `babel-core` 和 `babel-plugin-transform-decorators`。由于后者包括在 `babel-preset-stage-0` 之中，所以改为安装 `babel-preset-stage-0` 亦可。
 
 ```sh
 npm install babel-core babel-plugin-transform-decorators
 ```
 
-然后，设置配置文件`.babelrc`。
+然后，设置配置文件 `.babelrc`。
 
 ```js
 {

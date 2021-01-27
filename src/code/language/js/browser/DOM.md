@@ -282,6 +282,6 @@ parent.removeChild(parent.children[0]);
 parent.removeChild(parent.children[1]); // <-- 浏览器报错
 ```
 
-浏览器报错: `parent.children[1]` 不是一个有效的节点。原因就在于，当 `<p>First</p>` 节点被删除后，`parent.children` 的节点数量已经从`2` 变为了 `1`，索引 `[1]` 已经不存在了。
+浏览器报错: `parent.children[1]` 不是一个有效的节点。原因就在于，当 `<p>First</p>` 节点被删除后，`parent.children` 的节点数量已经从 `2` 变为了 `1`，索引 `[1]` 已经不存在了。
 
 因此，删除多个节点时，要注意 `children` 属性时刻都在变化。

@@ -77,7 +77,7 @@ xiaoming.age(); // 25, 正常结果
 getAge(); // NaN
 ```
 
-单独调用函数`getAge()`怎么返回了 `NaN`? 请注意，我们已经进入到了 JavaScript 的一个大坑里。
+单独调用函数 `getAge()` 怎么返回了 `NaN`? 请注意，我们已经进入到了 JavaScript 的一个大坑里。
 
 JavaScript 的函数内部如果调用了 `this`，那么这个 `this` 到底指向谁?
 

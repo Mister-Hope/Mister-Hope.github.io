@@ -186,7 +186,7 @@ $("#test-highlight p:last-child span").highlight({
 
 - 给 `$.fn` 绑定函数，实现插件的代码逻辑；
 - 插件函数最后要 `return this` ;以支持链式调用；
-- 插件函数要有默认值，绑定在 `$.fn.<pluginName>.defaults`上；
+- 插件函数要有默认值，绑定在 `$.fn.<pluginName>.defaults` 上；
 - 用户在调用时可传入设定值以便覆盖默认值。
 
 ## 针对特定元素的扩展

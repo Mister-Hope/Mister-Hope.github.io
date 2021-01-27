@@ -82,7 +82,7 @@ const div = $("#abc");
 
 `[]`
 
-总之 jQuery 的选择器不会返回 `undefined` 或者 `null`，这样的好处是您不必在下一行判断`if (div === undefined)`。
+总之 jQuery 的选择器不会返回 `undefined` 或者 `null`，这样的好处是您不必在下一行判断 `if (div === undefined)`。
 
 jQuery 对象和 DOM 对象之间可以互相转化:
 
@@ -99,8 +99,8 @@ const another = $(divDom); // 重新把DOM包装为jQuery对象
 按 tag 查找只需要写上 tag 名称就可以了:
 
 ```js
-const ps = $("p"); // 返回所有<p>节点
-ps.length; // 数一数页面有多少个<p>节点
+const ps = $("p"); // 返回所有 <p> 节点
+ps.length; // 数一数页面有多少个 <p> 节点
 ```
 
 ### 按 class 查找
@@ -108,7 +108,7 @@ ps.length; // 数一数页面有多少个<p>节点
 按 class 查找注意在 class 名称前加一个 `.`:
 
 ```js
-const a = $(".red"); // 所有节点包含`class="red"`都将返回
+const a = $(".red"); // 所有节点包含 `class="red"` 都将返回
 // 例如:
 // <div class="red">...</div>
 // <p class="green red">...</p>
@@ -128,9 +128,9 @@ const a = $(".red.green"); // 注意没有空格!
 一个 DOM 节点除了 id 和 class 外还可以有很多属性，很多时候按属性查找会非常方便，比如在一个表单中按属性来查找:
 
 ```js
-const email = $("[name=email]"); // 找出<??? name="email">
-const passwordInput = $("[type=password]"); // 找出<??? type="password">
-const a = $('[items="A B"]'); // 找出<??? items="A B">
+const email = $("[name=email]"); // 找出 `<??? name="email">`
+const passwordInput = $("[type=password]"); // 找出 `<??? type="password">`
+const a = $('[items="A B"]'); // 找出 `<??? items="A B">`
 ```
 
 当属性的值包含空格等特殊字符时，需要用双引号括起来。
@@ -140,14 +140,14 @@ const a = $('[items="A B"]'); // 找出<??? items="A B">
 ```js
 const icons = $("[name^=icon]"); // 找出所有name属性值以icon开头的DOM
 // 例如: name="icon-1", name="icon-2"
-const names = $("[name$=with]"); // 找出所有name属性值以with结尾的DOM
+const names = $("[name$=with]"); // 找出所有 name 属性值以 with 结尾的 DOM
 // 例如: name="startswith", name="endswith"
 ```
 
 这个方法尤其适合通过 class 属性查找，且不受 class 包含多个名称的影响:
 
 ```js
-const icons = $('[class^="icon-"]'); // 找出所有class包含至少一个以`icon-`开头的DOM
+const icons = $('[class^="icon-"]'); // 找出所有 class 包含至少一个以 `icon-` 开头的DOM
 // 例如: class="icon-clock", class="abc icon-home"
 ```
 
@@ -156,13 +156,13 @@ const icons = $('[class^="icon-"]'); // 找出所有class包含至少一个以`i
 组合查找就是把上述简单选择器组合起来使用。如果我们查找 `$('[name=email]')`，很可能把表单外的 `<div name="email">` 也找出来，但我们只希望查找 `<input>`，就可以这么写:
 
 ```js
-const emailInput = $("input[name=email]"); // 不会找出<div name="email">
+const emailInput = $("input[name=email]"); // 不会找出 <div name="email">
 ```
 
 同样的，根据 tag 和 class 来组合查找也很常见:
 
 ```js
-const tr = $("tr.red"); // 找出<tr class="red ...">...</tr>
+const tr = $("tr.red"); // 找出 <tr class="red ...">...</tr>
 ```
 
 ## 多项选择器
@@ -170,8 +170,8 @@ const tr = $("tr.red"); // 找出<tr class="red ...">...</tr>
 多项选择器就是把多个选择器用，组合起来一块选:
 
 ```js
-$("p,div"); // 把<p>和<div>都选出来
-$("p.red,p.green"); // 把<p class="red">和<p class="green">都选出来
+$("p,div"); // 把 <p> 和 <div> 选出来
+$("p.red,p.green"); // 把 <p class="red"> 和 <p class="green"> 都选出来
 ```
 
 要注意的是，选出来的元素是按照它们在 HTML 中出现的顺序排列的，而且不会有重复元素。例如，`<p class="red green">` 不会被上面的 `$('p.red,p.green')` 选择两次。
@@ -204,9 +204,9 @@ $("ul.lang li.lang-javascript"); // [<li class="lang-javascript">JavaScript</li>
 $("div.testing li.lang-javascript"); // [<li class="lang-javascript">JavaScript</li>]
 ```
 
-因为`<div>`和`<ul>`都是`<li>`的祖先节点，所以上面两种方式都可以选出相应的`<li>`节点。
+因为 `<div>` 和 `<ul>` 都是 `<li>` 的祖先节点，所以上面两种方式都可以选出相应的 `<li>` 节点。
 
-要选择所有的`<li>`节点，用:
+要选择所有的 `<li>` 节点，用:
 
 ```js
 $("ul.lang li");
@@ -225,16 +225,16 @@ $("form[name=upload] input");
 多层选择也是允许的:
 
 ```js
-$("form.test p input"); // 在form表单选择被<p>包含的<input>
+$("form.test p input"); // 在 form 表单选择被 <p> 包含的 <input>
 ```
 
 ## 子选择器(Child Selector)
 
-子选择器 `$('parent>child')` 类似层级选择器，但是限定了层级关系必须是父子关系，就是`<child>`节点必须是`<parent>`节点的直属子节点。还是以上面的例子:
+子选择器 `$('parent>child')` 类似层级选择器，但是限定了层级关系必须是父子关系，就是 `<child>` 节点必须是 `<parent>` 节点的直属子节点。还是以上面的例子:
 
 ```js
-$("ul.lang>li.lang-javascript"); // 可以选出[<li class="lang-javascript">JavaScript</li>]
-$("div.testing>li.lang-javascript"); // [], 无法选出，因为<div>和<li>不构成父子关系
+$("ul.lang>li.lang-javascript"); // 可以选出 [<li class="lang-javascript">JavaScript</li>]
+$("div.testing>li.lang-javascript"); // [], 无法选出，因为 <div> 和 <li> 不构成父子关系
 ```
 
 ## 过滤器(Filter)
@@ -263,19 +263,19 @@ $("ul.lang li:nth-child(odd)"); // 选出序号为奇数的元素
 
 - `:radio`: 可以选择单选框，和 `input[type=radio]` 一样；
 
-- `:focus`: 可以选择当前输入焦点的元素，例如把光标放到一个`<input>`上，用`$('input:focus')`就可以选出；
+- `:focus`: 可以选择当前输入焦点的元素，例如把光标放到一个 `<input>` 上，用`$('input:focus')` 就可以选出；
 
 - `:checked`: 选择当前勾上的单选框和复选框，用这个选择器可以立刻获得用户选择的项目，如`$('input[type=radio]:checked')`；
 
-- `:enabled`: 可以选择可以正常输入的`<input>`、`<select>`等，也就是没有灰掉的输入；
+- `:enabled`: 可以选择可以正常输入的 `<input>`、`<select>` 等，也就是没有灰掉的输入；
 
-- `:disabled`: 和`:enabled`正好相反，选择那些不能输入的。
+- `:disabled`: 和 `:enabled` 正好相反，选择那些不能输入的。
 
 此外，jQuery 还有很多有用的选择器，例如，选出可见的或隐藏的元素:
 
 ```js
-$("div:visible"); // 所有可见的div
-$("div:hidden"); // 所有隐藏的div
+$("div:visible"); // 所有可见的 div
+$("div:hidden"); // 所有隐藏的 div
 ```
 
 ## 查找和过滤
@@ -308,18 +308,18 @@ Haskell
 用 `find()` 查找:
 
 ```js
-const ul = $("ul.lang"); // 获得<ul>
-const dy = ul.find(".dy"); // 获得JavaScript, Python, Scheme
-const swf = ul.find("#swift"); // 获得Swift
-const hsk = ul.find("[name=haskell]"); // 获得Haskell
+const ul = $("ul.lang"); // 获得 <ul>
+const dy = ul.find(".dy"); // 获得 JavaScript, Python, Scheme
+const swf = ul.find("#swift"); // 获得 Swift
+const hsk = ul.find("[name=haskell]"); // 获得 Haskell
 ```
 
 如果要从当前节点开始向上查找，使用 `parent()` 方法:
 
 ```js
-const swf = $("#swift"); // 获得Swift
-const parent = swf.parent(); // 获得Swift的上层节点<ul>
-const a = swf.parent(".red"); // 获得Swift的上层节点<ul>，同时传入过滤条件。如果ul不符合条件，返回空jQuery对象
+const swf = $("#swift"); // 获得 Swift
+const parent = swf.parent(); // 获得 Swift 的上层节点 <ul>
+const a = swf.parent(".red"); // 获得 Swift 的上层节点 <ul>，同时传入过滤条件。如果 ul 不符合条件，返回空 jQuery 对象
 ```
 
 对于位于同一层级的节点，可以通过 `next()` 和 `prev()` 方法，例如:
@@ -330,10 +330,10 @@ const a = swf.parent(".red"); // 获得Swift的上层节点<ul>，同时传入�
 const swift = $("#swift");
 
 swift.next(); // Scheme
-swift.next("[name=haskell]"); // 空的jQuery对象，因为Swift的下一个元素Scheme不符合条件[name=haskell]
+swift.next("[name=haskell]"); // 空的 jQuery 对象，因为 Swift 的下一个元素 Scheme 不符合条件 [name=haskell]
 
 swift.prev(); // Python
-swift.prev(".dy"); // Python，因为Python同时符合过滤器条件.dy
+swift.prev(".dy"); // Python，因为 Python 同时符合过滤器条件 .dy
 ```
 
 ### 过滤
@@ -343,8 +343,8 @@ swift.prev(".dy"); // Python，因为Python同时符合过滤器条件.dy
 `filter()` 方法可以过滤掉不符合选择器条件的节点:
 
 ```js
-const langs = $("ul.lang li"); // 拿到JavaScript, Python, Swift, Scheme和Haskell
-const a = langs.filter(".dy"); // 拿到JavaScript, Python, Scheme
+const langs = $("ul.lang li"); // 拿到 JavaScript, Python, Swift, Scheme 和 Haskell
+const a = langs.filter(".dy"); // 拿到 JavaScript, Python, Scheme
 ```
 
 或者传入一个函数，要特别注意函数内部的 `this` 被绑定为 DOM 对象，不是 jQuery 对象:
@@ -352,26 +352,26 @@ const a = langs.filter(".dy"); // 拿到JavaScript, Python, Scheme
 ```js
 const langs = $("ul.lang li"); // 拿到JavaScript, Python, Swift, Scheme和Haskell
 langs.filter(function () {
-  return this.innerHTML.indexOf("S") === 0; // 返回S开头的节点
-}); // 拿到Swift, Scheme
+  return this.innerHTML.indexOf("S") === 0; // 返回 S 开头的节点
+}); // 拿到 Swift, Scheme
 ```
 
 `map()` 方法把一个 jQuery 对象包含的若干 DOM 节点转化为其他对象:
 
 ```js
-const langs = $("ul.lang li"); // 拿到JavaScript, Python, Swift, Scheme和Haskell
+const langs = $("ul.lang li"); // 拿到 JavaScript, Python, Swift, Scheme 和 Haskell
 const arr = langs
   .map(function () {
     return this.innerHTML;
   })
-  .get(); // 用get()拿到包含string的Array: ['JavaScript', 'Python', 'Swift', 'Scheme', 'Haskell']
+  .get(); // 用 get() 拿到包含 string 的 Array: ['JavaScript', 'Python', 'Swift', 'Scheme', 'Haskell']
 ```
 
 此外，一个 jQuery 对象如果包含了不止一个 DOM 节点，`first()`、`last()` 和 `slice()` 方法可以返回一个新的 jQuery 对象，把不需要的 DOM 节点去掉:
 
 ```js
-const langs = $("ul.lang li"); // 拿到JavaScript, Python, Swift, Scheme和Haskell
-const js = langs.first(); // JavaScript，相当于$('ul.lang li:first-child')
-const haskell = langs.last(); // Haskell, 相当于$('ul.lang li:last-child')
-const sub = langs.slice(2, 4); // Swift, Scheme, 参数和数组的slice()方法一致
+const langs = $("ul.lang li"); // 拿到 JavaScript, Python, Swift, Scheme 和 Haskell
+const js = langs.first(); // JavaScript，相当于 $('ul.lang li:first-child')
+const haskell = langs.last(); // Haskell, 相当于 $('ul.lang li:last-child')
+const sub = langs.slice(2, 4); // Swift, Scheme, 参数和数组的 slice() 方法一致
 ```

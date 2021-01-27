@@ -31,7 +31,7 @@ def lazy_sum(*args):
     return sum
 ```
 
-当我们调用 `lazy_sum()`时，返回的并不是求和结果，而是求和函数:
+当我们调用 `lazy_sum()` 时，返回的并不是求和结果，而是求和函数:
 
 ```py
 >>> f = lazy_sum(1, 3, 5, 7, 9)

@@ -122,7 +122,7 @@ CSS 的映射属性用逻辑(logical)和相对变化(flow relative)代替了像�
 
 ### 逻辑值
 
-物理值(如`top`、`right`、`bottom` 和 `left` )。这些值同样拥有逻辑值映射(`block-start`、`inline-end`、`block-end` 和 `inline-start` )。
+物理值(如 `top`、`right`、`bottom` 和 `left` )。这些值同样拥有逻辑值映射(`block-start`、`inline-end`、`block-end` 和 `inline-start` )。
 
 ### 是否使用逻辑属性
 

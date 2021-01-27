@@ -85,7 +85,7 @@ server {
 
 这已经是服务器的工作配置，可以在标准端口 `80` 上侦听，并且可以在本地计算机上的 `http://localhost/` 上访问。响应以 `/images/` 开头的 URI 请求，服务器将从 `/data/images` 目录中发送文件。例如，为响应 `http://localhost/images/example.png` 请求，nginx 将发送文件 `/data/images/example.png`。如果该文件不存在，nginx 将发送一个注明 404 错误的响应。URI 不以 `/images/` 开头的请求将被映射到 `/data/www` 目录。例如，nginx 会响应 `http://localhost/some/example.html` 请求发送 `/data/www/some/example.html` 文件。
 
-要应用新配置，请启动 nginx(如果尚未启动)，或通过执行以下命令向 nginx 的主进程发送 `reload`信号:
+要应用新配置，请启动 nginx (如果尚未启动)，或通过执行以下命令向 nginx 的主进程发送 `reload` 信号:
 
 ```bash
 nginx -s reload

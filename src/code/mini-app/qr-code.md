@@ -21,13 +21,13 @@ next: ../../../software/
 GET https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET
 ```
 
-更多详情可以见文档。`AppSecret`由于权限很大不在此文档中直接放置。
+更多详情可以见文档。`AppSecret` 由于权限很大不在此文档中直接放置。
 
 ### 无限制二维码生成
 
 - [文档地址](https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/qr-code/wxacode.getUnlimited.html)
 
-在获取`access_token`之后就可以获取小程序二维码了。
+在获取 `access_token` 之后就可以获取小程序二维码了。
 
 ```md
 POST https://api.weixin.qq.com/wxa/getwxacodeunlimit?access_token=ACCESS_TOKEN

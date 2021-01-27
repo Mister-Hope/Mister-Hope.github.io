@@ -136,7 +136,7 @@ false || true || false; // 这个||语句计算结果为true
 
 ### 非运算符 `!`
 
-`!` 运算是非运算，它是一个单目运算符，把 `true` 变成`false`，`false` 变成 `true`:
+`!` 运算是非运算，它是一个单目运算符，把 `true` 变成 `false`，`false` 变成 `true`:
 
 ::: tip
 

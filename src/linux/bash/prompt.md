@@ -20,7 +20,7 @@ copyrightText: 本教程采用<a href="https://creativecommons.org/licenses/by-s
 echo $PS1
 ```
 
-Bash 允许用户自定义命令提示符，只要改写这个变量即可。改写后 的`PS1`，可以放在用户的 Bash 配置文件 `.bashrc` 里面，以后新建 Bash 对话时，新的提示符就会生效。要在当前窗口看到修改后的提示符，可以执行下面的命令。
+Bash 允许用户自定义命令提示符，只要改写这个变量即可。改写后 的 `PS1`，可以放在用户的 Bash 配置文件 `.bashrc` 里面，以后新建 Bash 对话时，新的提示符就会生效。要在当前窗口看到修改后的提示符，可以执行下面的命令。
 
 ```bash
 source ~/.bashrc
@@ -145,7 +145,7 @@ $ echo "hello
 echo "hello world"
 ```
 
-使用`-x`参数执行这个脚本。
+使用 `-x` 参数执行这个脚本。
 
 ```bash
 $ bash -x test.sh

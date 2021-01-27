@@ -59,7 +59,7 @@ isAdult(50); // true
 
     :::center
 
-    JavaScript 引擎遇到`return`语句，就直接返回`return`后面的那个表达式的值，
+    JavaScript 引擎遇到 `return` 语句，就直接返回 `return` 后面的那个表达式的值，
 
     后面即使还有语句，也不会得到执行。
 

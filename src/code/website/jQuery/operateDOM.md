@@ -63,7 +63,7 @@ $("#test-ul li").text("JS"); // 是不是两个节点都变成了JS?
 所以 jQuery 对象的另一个好处是我们可以执行一个操作，作用在对应的一组 DOM 节点上。即使选择器没有返回任何 DOM 节点，调用 jQuery 对象的方法仍然不会报错:
 
 ```js
-// 如果不存在id为not-exist的节点:
+// 如果不存在 id 为 not-exist 的节点:
 $("#not-exist").text("Hello"); // 代码不报错，没有节点被设置为'Hello'
 ```
 
@@ -74,7 +74,7 @@ $("#not-exist").text("Hello"); // 代码不报错，没有节点被设置为'Hel
 jQuery 对象有“批量操作”的特点，这用于修改 CSS 实在是太方便了。考虑下面的 HTML 结构:
 
 ```html
-<!-- HTML结构 -->
+<!-- HTML 结构 -->
 <ul id="test-css">
   <li class="lang dy"><span>JavaScript</span></li>
   <li class="lang"><span>Java</span></li>
@@ -128,7 +128,7 @@ div.removeClass("highlight"); // 删除highlight这个class
 
 要隐藏一个 DOM，我们可以设置 CSS 的 `display` 属性为 `none`，利用 `css()` 方法就可以实现。不过，要显示这个 DOM 就需要恢复原有的 `display` 属性，这就得先记下来原有的 `display` 属性到底是 `block` 还是 `inline` 还是别的值。
 
-考虑到显示和隐藏 DOM 元素使用非常普遍，jQuery 直接提供`show()`和`hide()`方法，我们不用关心它是如何修改 display 属性的，总之它能正常工作:
+考虑到显示和隐藏 DOM 元素使用非常普遍，jQuery 直接提供 `show()` 和 `hide()` 方法，我们不用关心它是如何修改 display 属性的，总之它能正常工作:
 
 ```js
 const a = $("a[target=_blank]");
@@ -147,16 +147,16 @@ a.show(); // 显示
 $(window).width(); // 800
 $(window).height(); // 600
 
-// HTML文档大小:
+// HTML 文档大小:
 $(document).width(); // 800
 $(document).height(); // 3500
 
-// 某个div的大小:
+// 某个 div 的大小:
 const div = $("#test-div");
 div.width(); // 600
 div.height(); // 300
-div.width(400); // 设置CSS属性 width: 400px，是否生效要看CSS是否有效
-div.height("200px"); // 设置CSS属性 height: 200px，是否生效要看CSS是否有效
+div.width(400); // 设置 CSS 属性 width: 400px，是否生效要看 CSS 是否有效
+div.height("200px"); // 设置 CSS 属性 height: 200px，是否生效要看 CSS 是否有效
 ```
 
 `attr()` 和 `removeAttr()` 方法用于操作 DOM 节点的属性:
@@ -166,8 +166,8 @@ div.height("200px"); // 设置CSS属性 height: 200px，是否生效要看CSS是
 const div = $("#test-div");
 div.attr("data"); // undefined, 属性不存在
 div.attr("name"); // 'Test'
-div.attr("name", "Hello"); // div的name属性变为'Hello'
-div.removeAttr("name"); // 删除name属性
+div.attr("name", "Hello"); // div 的 name 属性变为 'Hello'
+div.removeAttr("name"); // 删除 name 属性
 div.attr("name"); // undefined
 ```
 
@@ -219,13 +219,13 @@ const input = $("#test-input"),
   textarea = $("#test-textarea");
 
 input.val(); // 'test'
-input.val("abc@example.com"); // 文本框的内容已变为abc@example.com
+input.val("abc@example.com"); // 文本框的内容已变为 abc@example.com
 
 select.val(); // 'BJ'
-select.val("SH"); // 选择框已变为Shanghai
+select.val("SH"); // 选择框已变为 Shanghai
 
 textarea.val(); // 'Hello'
-textarea.val("Hi"); // 文本区域已更新为'Hi'
+textarea.val("Hi"); // 文本区域已更新为 'Hi'
 ```
 
 可见，一个 `val()` 就统一了各种输入框的取值和赋值的问题。

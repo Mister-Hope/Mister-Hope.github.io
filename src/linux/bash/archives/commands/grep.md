@@ -1,6 +1,6 @@
 # grep
 
-`grep`命令用于文件内容的搜索，返回所有匹配的行。
+`grep` 命令用于文件内容的搜索，返回所有匹配的行。
 
 ```bash
 grep pattern filename
@@ -15,7 +15,7 @@ _kadmin_changepw:*:219:-2:Kerberos Change Password Service:/var/empty:/usr/bin/f
 _krb_kadmin:*:231:-2:Open Directory Kerberos Admin Service:/var/empty:/usr/bin/false
 ```
 
-一般情况下，应该使用`grep -R`，递归地找出当前目录下符合`someVar`的文件。
+一般情况下，应该使用 `grep -R`，递归地找出当前目录下符合 `someVar` 的文件。
 
 ```bash
 grep -FR 'someVar' .
@@ -27,7 +27,7 @@ grep -FR 'someVar' .
 grep -iR 'somevar' .
 ```
 
-也可以用`grep -l`光打印出符合条件的文件名而非文件内容选段。
+也可以用 `grep -l` 光打印出符合条件的文件名而非文件内容选段。
 
 ```bash
 grep -lR 'somevar' .
@@ -51,15 +51,15 @@ grep -R 'someVar' . | grep -vF '.svn'
 
 ## 参数
 
-`-i`参数表示忽略大小写。
+`-i` 参数表示忽略大小写。
 
-`-r`表示搜索某个目录下面的所有文件。
+`-r` 表示搜索某个目录下面的所有文件。
 
 ```bash
 grep -r admin /etc/
 ```
 
-`-v`过滤包含某个词的行，即`grep`的逆操作。
+`-v` 过滤包含某个词的行，即 `grep` 的逆操作。
 
 ```bash
 # 显示所有包含 vim，但不包含 grep 的行

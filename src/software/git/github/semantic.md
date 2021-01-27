@@ -28,7 +28,7 @@ icon: semantic
 
 ### header
 
-第一行被称为 `header`，它必须只有一行，包括三个字段: `<type>`(必需)、`<scope>`(可选)和`<subject>`(必需)
+第一行被称为 `header`，它必须只有一行，包括三个字段: `<type>`(必需)、`<scope>`(可选)和 `<subject>`(必需)
 
 ### type
 
@@ -38,7 +38,7 @@ commit 的类型。
 
 - `feat`: feature, 新增功能
 - `fix` : bug fix, 修复 bug
-- `docs`: documentation, 仅仅修改了文档，如`readme.md`
+- `docs`: documentation, 仅仅修改了文档，如 `readme.md`
 - `style`: styke, 仅仅是对格式进行修改，如逗号、缩进、空格等，不改变代码逻辑
 - `refactor`: refactor, 代码重构，一般更改了源文件或测试文件，但没有新增功能或修复 bug
 - `perf`: preformance, 优化相关，如提升性能、用户体验等

@@ -1,8 +1,8 @@
 # sort
 
-`sort`命令用于文本文件的排序。
+`sort` 命令用于文本文件的排序。
 
-下面是`example.txt`文件的内容。
+下面是 `example.txt` 文件的内容。
 
 ```bash
 f
@@ -14,7 +14,7 @@ e
 d
 ```
 
-执行`sort`命令对其进行排序。
+执行 `sort` 命令对其进行排序。
 
 ```bash
 $ sort example.txt
@@ -29,7 +29,7 @@ g
 
 ## 参数
 
-`-R`参数表示随机排序。
+`-R` 参数表示随机排序。
 
 ```bash
 sort -R example.txt

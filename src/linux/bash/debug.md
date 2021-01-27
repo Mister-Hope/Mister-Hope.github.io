@@ -167,7 +167,7 @@ func2: FUNCNAME1 is func1
 func2: FUNCNAME2 is main
 ```
 
-上面例子中，执行 `func1` 时，变量 `FUNCNAME` 的 0 号成员是 `func1`，1 号成员是调用 `func1` 的主脚本 `main`。执行 `func2` 时，变量`FUNCNAME` 的 0 号成员是 `func2`，1 号成员是调用 `func2` 的 `func1`。
+上面例子中，执行 `func1` 时，变量 `FUNCNAME` 的 0 号成员是 `func1`，1 号成员是调用 `func1` 的主脚本 `main`。执行 `func2` 时，变量 `FUNCNAME` 的 0 号成员是 `func2`，1 号成员是调用 `func2` 的 `func1`。
 
 ### BASH_SOURCE
 
@@ -220,7 +220,7 @@ func2: BASH_SOURCE1 is lib1.sh
 func2: BASH_SOURCE2 is ./main.sh
 ```
 
-上面例子中，执行函数 `func1` 时，变量 `BASH_SOURCE` 的 0 号成员是 `func1` 所在的脚本 `lib1.sh`，1 号成员是主脚本 `main.sh`；执行函数`func2`时，变量 `BASH_SOURCE` 的 0 号成员是 `func2` 所在的脚本 `lib2.sh`，1 号成员是调用 `func2` 的脚本 `lib1.sh`。
+上面例子中，执行函数 `func1` 时，变量 `BASH_SOURCE` 的 0 号成员是 `func1` 所在的脚本 `lib1.sh`，1 号成员是主脚本 `main.sh`；执行函数 `func2` 时，变量 `BASH_SOURCE` 的 0 号成员是 `func2` 所在的脚本 `lib2.sh`，1 号成员是调用 `func2` 的脚本 `lib1.sh`。
 
 ### BASH_LINENO
 

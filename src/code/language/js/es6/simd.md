@@ -27,7 +27,7 @@ c[3] = a[3] + b[3];
 c; // Array[6, 8, 10, 12]
 ```
 
-上面代码中，数组`a`和`b`的对应成员相加，结果放入数组`c`。它的运算模式是依次处理每个数组成员，一共有四个数组成员，所以需要运算 4 次。
+上面代码中，数组 `a` 和 `b` 的对应成员相加，结果放入数组 `c`。它的运算模式是依次处理每个数组成员，一共有四个数组成员，所以需要运算 4 次。
 
 如果采用 SIMD 模式，只要运算一次就够了。
 
@@ -37,7 +37,7 @@ var b = SIMD.Float32x4(5, 6, 7, 8);
 var c = SIMD.Float32x4.add(a, b); // Float32x4[6, 8, 10, 12]
 ```
 
-上面代码之中，数组`a`和`b`的四个成员的各自相加，只用一条指令就完成了。因此，速度比上一种写法提高了 4 倍。
+上面代码之中，数组 `a` 和 `b` 的四个成员的各自相加，只用一条指令就完成了。因此，速度比上一种写法提高了 4 倍。
 
 一次 SIMD 运算，可以处理多个数据，这些数据被称为“通道”(lane)。上面代码中，一次运算了四个数据，因此就是四个通道。
 
@@ -48,7 +48,7 @@ SIMD 通常用于矢量运算。
         = 〈v1+w1, …, vn+wn〉
 ```
 
-上面代码中，`v`和`w`是两个多元矢量。它们的加运算，在 SIMD 下是一个指令、而不是 n 个指令完成的，这就大大提高了效率。这对于 3D 动画、图像处理、信号处理、数值处理、加密等运算是非常重要的。比如，Canvas 的`getImageData()`会将图像文件读成一个二进制数组，SIMD 就很适合对于这种数组的处理。
+上面代码中，`v` 和 `w` 是两个多元矢量。它们的加运算，在 SIMD 下是一个指令、而不是 n 个指令完成的，这就大大提高了效率。这对于 3D 动画、图像处理、信号处理、数值处理、加密等运算是非常重要的。比如，Canvas 的 `getImageData()` 会将图像文件读成一个二进制数组，SIMD 就很适合对于这种数组的处理。
 
 总的来说，SIMD 是数据并行处理(parallelism)的一种手段，可以加速一些运算密集型操作的速度。将来与 WebAssembly 结合以后，可以让 JavaScript 达到二进制代码的运行速度。
 
@@ -69,14 +69,14 @@ SIMD 提供 12 种数据类型，总长度都是 128 个二进制位。
 - Bool8x16: 十六个 8 位布尔值
 - Bool64x2: 两个 64 位布尔值
 
-每种数据类型被`x`符号分隔成两部分，后面的部分表示通道数，前面的部分表示每个通道的宽度和类型。比如，`Float32x4`就表示这个值有 4 个通道，每个通道是一个 32 位浮点数。
+每种数据类型被 `x` 符号分隔成两部分，后面的部分表示通道数，前面的部分表示每个通道的宽度和类型。比如，`Float32x4` 就表示这个值有 4 个通道，每个通道是一个 32 位浮点数。
 
 每个通道之中，可以放置四种数据。
 
 - 浮点数(float，比如 1.0)
 - 带符号的整数(Int，比如-1)
 - 无符号的整数(Uint，比如 1)
-- 布尔值(Bool，包含`true`和`false`两种值)
+- 布尔值(Bool，包含 `true` 和 `false` 两种值)
 
 每种 SIMD 的数据类型都是一个函数方法，可以传入参数，生成对应的值。
 
@@ -84,9 +84,9 @@ SIMD 提供 12 种数据类型，总长度都是 128 个二进制位。
 var a = SIMD.Float32x4(1.0, 2.0, 3.0, 4.0);
 ```
 
-上面代码中，变量`a`就是一个 128 位、包含四个 32 位浮点数(即四个通道)的值。
+上面代码中，变量 `a` 就是一个 128 位、包含四个 32 位浮点数(即四个通道)的值。
 
-注意，这些数据类型方法都不是构造函数，前面不能加`new`，否则会报错。
+注意，这些数据类型方法都不是构造函数，前面不能加 `new`，否则会报错。
 
 ```js
 var v = new SIMD.Float32x4(0, 1, 2, 3);
@@ -99,7 +99,7 @@ var v = new SIMD.Float32x4(0, 1, 2, 3);
 
 ### SIMD.%type%.abs()，SIMD.%type%.neg()
 
-`abs`方法接受一个 SIMD 值作为参数，将它的每个通道都转成绝对值，作为一个新的 SIMD 值返回。
+`abs` 方法接受一个 SIMD 值作为参数，将它的每个通道都转成绝对值，作为一个新的 SIMD 值返回。
 
 ```js
 var a = SIMD.Float32x4(-1, -2, 0, NaN);
@@ -107,7 +107,7 @@ SIMD.Float32x4.abs(a);
 // Float32x4[1, 2, 0, NaN]
 ```
 
-`neg`方法接受一个 SIMD 值作为参数，将它的每个通道都转成负值，作为一个新的 SIMD 值返回。
+`neg` 方法接受一个 SIMD 值作为参数，将它的每个通道都转成负值，作为一个新的 SIMD 值返回。
 
 ```js
 var a = SIMD.Float32x4(-1, -2, 3, 0);
@@ -121,7 +121,7 @@ SIMD.Float64x2.neg(b);
 
 ### SIMD.%type%.add()，SIMD.%type%.addSaturate()
 
-`add`方法接受两个 SIMD 值作为参数，将它们的每个通道相加，作为一个新的 SIMD 值返回。
+`add` 方法接受两个 SIMD 值作为参数，将它们的每个通道相加，作为一个新的 SIMD 值返回。
 
 ```js
 var a = SIMD.Float32x4(1.0, 2.0, 3.0, 4.0);
@@ -129,9 +129,9 @@ var b = SIMD.Float32x4(5.0, 10.0, 15.0, 20.0);
 var c = SIMD.Float32x4.add(a, b);
 ```
 
-上面代码中，经过加法运算，新的 SIMD 值为`(6.0, 12.0, 18.0. 24.0)`。
+上面代码中，经过加法运算，新的 SIMD 值为 `(6.0, 12.0, 18.0. 24.0)`。
 
-`addSaturate`方法跟`add`方法的作用相同，都是两个通道相加，但是溢出的处理不一致。对于`add`方法，如果两个值相加发生溢出，溢出的二进制位会被丢弃; `addSaturate`方法则是返回该数据类型的最大值。
+`addSaturate` 方法跟 `add` 方法的作用相同，都是两个通道相加，但是溢出的处理不一致。对于 `add` 方法，如果两个值相加发生溢出，溢出的二进制位会被丢弃; `addSaturate` 方法则是返回该数据类型的最大值。
 
 ```js
 var a = SIMD.Uint16x8(65533, 65534, 65535, 65535, 1, 1, 1, 1);
@@ -145,13 +145,13 @@ SIMD.Int16x8.addSaturate(c, d);
 // Int16x8[32766, 32767, 32767, 32767, 2, 2, 2, 2]
 ```
 
-上面代码中，`Uint16`的最大值是 65535，`Int16`的最大值是 32767。一旦发生溢出，就返回这两个值。
+上面代码中，`Uint16` 的最大值是 65535，`Int16` 的最大值是 32767。一旦发生溢出，就返回这两个值。
 
-注意，`Uint32x4`和`Int32x4`这两种数据类型没有`addSaturate`方法。
+注意，`Uint32x4` 和 `Int32x4` 这两种数据类型没有 `addSaturate` 方法。
 
 ### SIMD.%type%.sub()，SIMD.%type%.subSaturate()
 
-`sub`方法接受两个 SIMD 值作为参数，将它们的每个通道相减，作为一个新的 SIMD 值返回。
+`sub` 方法接受两个 SIMD 值作为参数，将它们的每个通道相减，作为一个新的 SIMD 值返回。
 
 ```js
 var a = SIMD.Float32x4(-1, -2, 3, 4);
@@ -160,7 +160,7 @@ SIMD.Float32x4.sub(a, b);
 // Float32x4[-4, -5, 0, 1]
 ```
 
-`subSaturate`方法跟`sub`方法的作用相同，都是两个通道相减，但是溢出的处理不一致。对于`sub`方法，如果两个值相减发生溢出，溢出的二进制位会被丢弃; `subSaturate`方法则是返回该数据类型的最小值。
+`subSaturate` 方法跟 `sub` 方法的作用相同，都是两个通道相减，但是溢出的处理不一致。对于 `sub` 方法，如果两个值相减发生溢出，溢出的二进制位会被丢弃; `subSaturate` 方法则是返回该数据类型的最小值。
 
 ```js
 var a = SIMD.Uint16x8(5, 1, 1, 1, 1, 1, 1, 1);
@@ -174,11 +174,11 @@ SIMD.Int16x8.subSaturate(c, d);
 // Int16x8[-32768, 0, 0, 0, 0, 0, 0, 0, 0]
 ```
 
-上面代码中，`Uint16`的最小值是`0`，`Int16`的最小值是`-32678`。一旦运算发生溢出，就返回最小值。
+上面代码中，`Uint16` 的最小值是 `0`，`Int16` 的最小值是 `-32678`。一旦运算发生溢出，就返回最小值。
 
 ### SIMD.%type%.mul()，SIMD.%type%.div()，SIMD.%type%.sqrt()
 
-`mul`方法接受两个 SIMD 值作为参数，将它们的每个通道相乘，作为一个新的 SIMD 值返回。
+`mul` 方法接受两个 SIMD 值作为参数，将它们的每个通道相乘，作为一个新的 SIMD 值返回。
 
 ```js
 var a = SIMD.Float32x4(-1, -2, 3, 4);
@@ -187,7 +187,7 @@ SIMD.Float32x4.mul(a, b);
 // Float32x4[-3, -6, 9, 12]
 ```
 
-`div`方法接受两个 SIMD 值作为参数，将它们的每个通道相除，作为一个新的 SIMD 值返回。
+`div` 方法接受两个 SIMD 值作为参数，将它们的每个通道相除，作为一个新的 SIMD 值返回。
 
 ```js
 var a = SIMD.Float32x4(2, 2, 2, 2);
@@ -196,7 +196,7 @@ SIMD.Float32x4.div(a, b);
 // Float32x4[0.5, 0.5, 0.5, 0.5]
 ```
 
-`sqrt`方法接受一个 SIMD 值作为参数，求出每个通道的平方根，作为一个新的 SIMD 值返回。
+`sqrt` 方法接受一个 SIMD 值作为参数，求出每个通道的平方根，作为一个新的 SIMD 值返回。
 
 ```js
 var b = SIMD.Float64x2(4, 8);
@@ -206,7 +206,7 @@ SIMD.Float64x2.sqrt(b);
 
 ### SIMD.%FloatType%.reciprocalApproximation()
 
-`reciprocalApproximation`方法接受一个 SIMD 值作为参数，求出每个通道的倒数(`1 / x`)，作为一个新的 SIMD 值返回。
+`reciprocalApproximation` 方法接受一个 SIMD 值作为参数，求出每个通道的倒数(`1 / x`)，作为一个新的 SIMD 值返回。
 
 ```js
 var a = SIMD.Float32x4(1, 2, 3, 4);
@@ -216,7 +216,7 @@ SIMD.Float32x4.reciprocalApproximation(a);
 
 ### SIMD.%type%.reciprocalSqrtApproximation()
 
-`reciprocalSqrtApproximation`方法接受一个 SIMD 值作为参数，求出每个通道的平方根的倒数(`1 / (x^0.5)`)，作为一个新的 SIMD 值返回。
+`reciprocalSqrtApproximation` 方法接受一个 SIMD 值作为参数，求出每个通道的平方根的倒数(`1 / (x^0.5)`)，作为一个新的 SIMD 值返回。
 
 ```js
 var a = SIMD.Float32x4(1, 2, 3, 4);
@@ -228,7 +228,7 @@ SIMD.Float32x4.reciprocalSqrtApproximation(a);
 
 ### SIMD.%IntegerType%.shiftLeftByScalar()
 
-`shiftLeftByScalar`方法接受一个 SIMD 值作为参数，然后将每个通道的值左移指定的位数，作为一个新的 SIMD 值返回。
+`shiftLeftByScalar` 方法接受一个 SIMD 值作为参数，然后将每个通道的值左移指定的位数，作为一个新的 SIMD 值返回。
 
 ```js
 var a = SIMD.Int32x4(1, 2, 4, 8);
@@ -248,7 +248,7 @@ var jx4 = SIMD.Int32x4.shiftLeftByScalar(ix4, 32);
 
 ### SIMD.%IntegerType%.shiftRightByScalar()
 
-`shiftRightByScalar`方法接受一个 SIMD 值作为参数，然后将每个通道的值右移指定的位数，返回一个新的 SIMD 值。
+`shiftRightByScalar` 方法接受一个 SIMD 值作为参数，然后将每个通道的值右移指定的位数，返回一个新的 SIMD 值。
 
 ```js
 var a = SIMD.Int32x4(1, 2, 4, -8);
@@ -256,7 +256,7 @@ SIMD.Int32x4.shiftRightByScalar(a, 1);
 // Int32x4[0, 1, 2, -4]
 ```
 
-如果原来通道的值是带符号的值，则符号位保持不变，不受右移影响。如果是不带符号位的值，则右移后头部会补`0`。
+如果原来通道的值是带符号的值，则符号位保持不变，不受右移影响。如果是不带符号位的值，则右移后头部会补 `0`。
 
 ```js
 var a = SIMD.Uint32x4(1, 2, 4, -8);
@@ -264,7 +264,7 @@ SIMD.Uint32x4.shiftRightByScalar(a, 1);
 // Uint32x4[0, 1, 2, 2147483644]
 ```
 
-上面代码中，`-8`右移一位变成了`2147483644`，是因为对于 32 位无符号整数来说，`-8`的二进制形式是`11111111111111111111111111111000`，右移一位就变成了`01111111111111111111111111111100`，相当于`2147483644`。
+上面代码中，`-8` 右移一位变成了 `2147483644`，是因为对于 32 位无符号整数来说，`-8` 的二进制形式是 `11111111111111111111111111111000`，右移一位就变成了 `01111111111111111111111111111100`，相当于 `2147483644`。
 
 注意，只有整数的数据类型才有这个方法。
 
@@ -272,7 +272,7 @@ SIMD.Uint32x4.shiftRightByScalar(a, 1);
 
 ### SIMD.%type%.check()
 
-`check`方法用于检查一个值是否为当前类型的 SIMD 值。如果是的，就返回这个值，否则就报错。
+`check` 方法用于检查一个值是否为当前类型的 SIMD 值。如果是的，就返回这个值，否则就报错。
 
 ```js
 var a = SIMD.Float32x4(1, 2, 3, 9);
@@ -287,14 +287,14 @@ SIMD.Int32x4.check("hello world"); // 报错
 
 ### SIMD.%type%.extractLane()，SIMD.%type%.replaceLane()
 
-`extractLane`方法用于返回给定通道的值。它接受两个参数，分别是 SIMD 值和通道编号。
+`extractLane` 方法用于返回给定通道的值。它接受两个参数，分别是 SIMD 值和通道编号。
 
 ```js
 var t = SIMD.Float32x4(1, 2, 3, 4);
 SIMD.Float32x4.extractLane(t, 2); // 3
 ```
 
-`replaceLane`方法用于替换指定通道的值，并返回一个新的 SIMD 值。它接受三个参数，分别是原来的 SIMD 值、通道编号和新的通道值。
+`replaceLane` 方法用于替换指定通道的值，并返回一个新的 SIMD 值。它接受三个参数，分别是原来的 SIMD 值、通道编号和新的通道值。
 
 ```js
 var t = SIMD.Float32x4(1, 2, 3, 4);
@@ -304,7 +304,7 @@ SIMD.Float32x4.replaceLane(t, 2, 42);
 
 ### SIMD.%type%.load()
 
-`load`方法用于从二进制数组读入数据，生成一个新的 SIMD 值。
+`load` 方法用于从二进制数组读入数据，生成一个新的 SIMD 值。
 
 ```js
 var a = new Int32Array([1, 2, 3, 4, 5, 6, 7, 8]);
@@ -316,9 +316,9 @@ SIMD.Int32x4.load(a, 2);
 // Int32x4[3, 4, 5, 6]
 ```
 
-`load`方法接受两个参数: 一个二进制数组和开始读取的位置(从 0 开始)。如果位置不合法(比如`-1`或者超出二进制数组的大小)，就会抛出一个错误。
+`load` 方法接受两个参数: 一个二进制数组和开始读取的位置(从 0 开始)。如果位置不合法(比如 `-1` 或者超出二进制数组的大小)，就会抛出一个错误。
 
-这个方法还有三个变种`load1()`、`load2()`、`load3()`，表示从指定位置开始，只加载一个通道、二个通道、三个通道的值。
+这个方法还有三个变种 `load1()`、`load2()`、`load3()`，表示从指定位置开始，只加载一个通道、二个通道、三个通道的值。
 
 ```js
 // 格式
@@ -339,7 +339,7 @@ SIMD.Int32x4.load3(a, 0);
 
 ### SIMD.%type%.store()
 
-`store`方法用于将一个 SIMD 值，写入一个二进制数组。它接受三个参数，分别是二进制数组、开始写入的数组位置、SIMD 值。它返回写入值以后的二进制数组。
+`store` 方法用于将一个 SIMD 值，写入一个二进制数组。它接受三个参数，分别是二进制数组、开始写入的数组位置、SIMD 值。它返回写入值以后的二进制数组。
 
 ```js
 var t1 = new Int32Array(8);
@@ -353,9 +353,9 @@ SIMD.Int32x4.store(t2, 2, v2);
 // Int32Array[0, 0, 1, 2, 3, 4, 0, 0]
 ```
 
-上面代码中，`t1`是一个二进制数组，`v1`是一个 SIMD 值，只有四个通道。所以写入`t1`以后，只有前四个位置有值，后四个位置都是 0。而`t2`是从 2 号位置开始写入，所以前两个位置和后两个位置都是 0。
+上面代码中，`t1` 是一个二进制数组，`v1` 是一个 SIMD 值，只有四个通道。所以写入 `t1` 以后，只有前四个位置有值，后四个位置都是 0。而 `t2` 是从 2 号位置开始写入，所以前两个位置和后两个位置都是 0。
 
-这个方法还有三个变种`store1()`、`store2()`和`store3()`，表示只写入一个通道、二个通道和三个通道的值。
+这个方法还有三个变种 `store1()`、`store2()` 和 `store3()`，表示只写入一个通道、二个通道和三个通道的值。
 
 ```js
 var tarray = new Int32Array(8);
@@ -366,7 +366,7 @@ SIMD.Int32x4.store1(tarray, 0, value);
 
 ### SIMD.%type%.splat()
 
-`splat`方法返回一个新的 SIMD 值，该值的所有通道都会设成同一个预先给定的值。
+`splat` 方法返回一个新的 SIMD 值，该值的所有通道都会设成同一个预先给定的值。
 
 ```js
 SIMD.Float32x4.splat(3);
@@ -375,11 +375,11 @@ SIMD.Float64x2.splat(3);
 // Float64x2[3, 3]
 ```
 
-如果省略参数，所有整数型的 SIMD 值都会设定`0`，浮点型的 SIMD 值都会设成`NaN`。
+如果省略参数，所有整数型的 SIMD 值都会设定 `0`，浮点型的 SIMD 值都会设成 `NaN`。
 
 ### SIMD.%type%.swizzle()
 
-`swizzle`方法返回一个新的 SIMD 值，重新排列原有的 SIMD 值的通道顺序。
+`swizzle` 方法返回一个新的 SIMD 值，重新排列原有的 SIMD 值的通道顺序。
 
 ```js
 var t = SIMD.Float32x4(1, 2, 3, 4);
@@ -387,7 +387,7 @@ SIMD.Float32x4.swizzle(t, 1, 2, 0, 3);
 // Float32x4[2,3,1,4]
 ```
 
-上面代码中，`swizzle`方法的第一个参数是原有的 SIMD 值，后面的参数对应将要返回的 SIMD 值的四个通道。它的意思是新的 SIMD 的四个通道，依次是原来 SIMD 值的 1 号通道、2 号通道、0 号通道、3 号通道。由于 SIMD 值最多可以有 16 个通道，所以`swizzle`方法除了第一个参数以外，最多还可以接受 16 个参数。
+上面代码中，`swizzle` 方法的第一个参数是原有的 SIMD 值，后面的参数对应将要返回的 SIMD 值的四个通道。它的意思是新的 SIMD 的四个通道，依次是原来 SIMD 值的 1 号通道、2 号通道、0 号通道、3 号通道。由于 SIMD 值最多可以有 16 个通道，所以 `swizzle` 方法除了第一个参数以外，最多还可以接受 16 个参数。
 
 下面是另一个例子。
 
@@ -407,7 +407,7 @@ var d = SIMD.Float32x4.swizzle(a, 3, 2, 1, 0);
 
 ### SIMD.%type%.shuffle()
 
-`shuffle`方法从两个 SIMD 值之中取出指定通道，返回一个新的 SIMD 值。
+`shuffle` 方法从两个 SIMD 值之中取出指定通道，返回一个新的 SIMD 值。
 
 ```js
 var a = SIMD.Float32x4(1, 2, 3, 4);
@@ -417,13 +417,13 @@ SIMD.Float32x4.shuffle(a, b, 1, 5, 7, 2);
 // Float32x4[2, 6, 8, 3]
 ```
 
-上面代码中，`a`和`b`一共有 8 个通道，依次编号为 0 到 7。`shuffle`根据编号，取出相应的通道，返回一个新的 SIMD 值。
+上面代码中，`a` 和 `b` 一共有 8 个通道，依次编号为 0 到 7。`shuffle` 根据编号，取出相应的通道，返回一个新的 SIMD 值。
 
 ## 静态方法: 比较运算
 
 ### SIMD.%type%.equal()，SIMD.%type%.notEqual()
 
-`equal`方法用来比较两个 SIMD 值`a`和`b`的每一个通道，根据两者是否精确相等(`a === b`)，得到一个布尔值。最后，所有通道的比较结果，组成一个新的 SIMD 值，作为掩码返回。`notEqual`方法则是比较两个通道是否不相等(`a !== b`)。
+`equal` 方法用来比较两个 SIMD 值 `a` 和 `b` 的每一个通道，根据两者是否精确相等(`a === b`)，得到一个布尔值。最后，所有通道的比较结果，组成一个新的 SIMD 值，作为掩码返回。`notEqual` 方法则是比较两个通道是否不相等(`a !== b`)。
 
 ```js
 var a = SIMD.Float32x4(1, 2, 3, 9);
@@ -438,7 +438,7 @@ SIMD.Float32x4.notEqual(a, b);
 
 ### SIMD.%type%.greaterThan()，SIMD.%type%.greaterThanOrEqual()
 
-`greatThan`方法用来比较两个 SIMD 值`a`和`b`的每一个通道，如果在该通道中，`a`较大就得到`true`，否则得到`false`。最后，所有通道的比较结果，组成一个新的 SIMD 值，作为掩码返回。`greaterThanOrEqual`则是比较`a`是否大于等于`b`。
+`greatThan` 方法用来比较两个 SIMD 值 `a` 和 `b` 的每一个通道，如果在该通道中，`a` 较大就得到 `true`，否则得到 `false`。最后，所有通道的比较结果，组成一个新的 SIMD 值，作为掩码返回。`greaterThanOrEqual` 则是比较 `a` 是否大于等于 `b`。
 
 ```js
 var a = SIMD.Float32x4(1, 6, 3, 11);
@@ -453,7 +453,7 @@ SIMD.Float32x4.greaterThanOrEqual(a, b);
 
 ### SIMD.%type%.lessThan()，SIMD.%type%.lessThanOrEqual()
 
-`lessThan`方法用来比较两个 SIMD 值`a`和`b`的每一个通道，如果在该通道中，`a`较小就得到`true`，否则得到`false`。最后，所有通道的比较结果，会组成一个新的 SIMD 值，作为掩码返回。`lessThanOrEqual`方法则是比较`a`是否等于`b`。
+`lessThan` 方法用来比较两个 SIMD 值 `a` 和 `b` 的每一个通道，如果在该通道中，`a` 较小就得到 `true`，否则得到 `false`。最后，所有通道的比较结果，会组成一个新的 SIMD 值，作为掩码返回。`lessThanOrEqual` 方法则是比较 `a` 是否等于 `b`。
 
 ```js
 var a = SIMD.Float32x4(1, 2, 3, 11);
@@ -468,7 +468,7 @@ SIMD.Float32x4.lessThanOrEqual(a, b);
 
 ### SIMD.%type%.select()
 
-`select`方法通过掩码生成一个新的 SIMD 值。它接受三个参数，分别是掩码和两个 SIMD 值。
+`select` 方法通过掩码生成一个新的 SIMD 值。它接受三个参数，分别是掩码和两个 SIMD 值。
 
 ```js
 var a = SIMD.Float32x4(1, 2, 3, 4);
@@ -480,7 +480,7 @@ SIMD.Float32x4.select(mask, a, b);
 // Float32x4[1, 6, 7, 4]
 ```
 
-上面代码中，`select`方法接受掩码和两个 SIMD 值作为参数。当某个通道对应的掩码为`true`时，会选择第一个 SIMD 值的对应通道，否则选择第二个 SIMD 值的对应通道。
+上面代码中，`select` 方法接受掩码和两个 SIMD 值作为参数。当某个通道对应的掩码为 `true` 时，会选择第一个 SIMD 值的对应通道，否则选择第二个 SIMD 值的对应通道。
 
 这个方法通常与比较运算符结合使用。
 
@@ -495,11 +495,11 @@ var result = SIMD.Float32x4.select(mask, a, b);
 // Float32x4[0, 6, 3, 4]
 ```
 
-上面代码中，先通过`lessThan`方法生成一个掩码，然后通过`select`方法生成一个由每个通道的较小值组成的新的 SIMD 值。
+上面代码中，先通过 `lessThan` 方法生成一个掩码，然后通过 `select` 方法生成一个由每个通道的较小值组成的新的 SIMD 值。
 
 ### SIMD.%BooleanType%.allTrue()，SIMD.%BooleanType%.anyTrue()
 
-`allTrue`方法接受一个 SIMD 值作为参数，然后返回一个布尔值，表示该 SIMD 值的所有通道是否都为`true`。
+`allTrue` 方法接受一个 SIMD 值作为参数，然后返回一个布尔值，表示该 SIMD 值的所有通道是否都为 `true`。
 
 ```js
 var a = SIMD.Bool32x4(true, true, true, true);
@@ -509,7 +509,7 @@ SIMD.Bool32x4.allTrue(a); // true
 SIMD.Bool32x4.allTrue(b); // false
 ```
 
-`anyTrue`方法则是只要有一个通道为`true`，就返回`true`，否则返回`false`。
+`anyTrue` 方法则是只要有一个通道为 `true`，就返回 `true`，否则返回 `false`。
 
 ```js
 var a = SIMD.Bool32x4(false, false, false, false);
@@ -533,7 +533,7 @@ var b2 = SIMD.Int32x4.anyTrue(ix4); // true
 
 ### SIMD.%type%.min()，SIMD.%type%.minNum()
 
-`min`方法接受两个 SIMD 值作为参数，将两者的对应通道的较小值，组成一个新的 SIMD 值返回。
+`min` 方法接受两个 SIMD 值作为参数，将两者的对应通道的较小值，组成一个新的 SIMD 值返回。
 
 ```js
 var a = SIMD.Float32x4(-1, -2, 3, 5.2);
@@ -542,7 +542,7 @@ SIMD.Float32x4.min(a, b);
 // Float32x4[-1, -4, 3, 5.2]
 ```
 
-如果有一个通道的值是`NaN`，则会优先返回`NaN`。
+如果有一个通道的值是 `NaN`，则会优先返回 `NaN`。
 
 ```js
 var c = SIMD.Float64x2(NaN, Infinity);
@@ -551,7 +551,7 @@ SIMD.Float64x2.min(c, d);
 // Float64x2[NaN, 42]
 ```
 
-`minNum`方法与`min`的作用一模一样，唯一的区别是如果有一个通道的值是`NaN`，则会优先返回另一个通道的值。
+`minNum` 方法与 `min` 的作用一模一样，唯一的区别是如果有一个通道的值是 `NaN`，则会优先返回另一个通道的值。
 
 ```js
 var ax4 = SIMD.Float32x4(1.0, 2.0, NaN, NaN);
@@ -564,7 +564,7 @@ var dx4 = SIMD.Float32x4.minNum(ax4, bx4);
 
 ### SIMD.%type%.max()，SIMD.%type%.maxNum()
 
-`max`方法接受两个 SIMD 值作为参数，将两者的对应通道的较大值，组成一个新的 SIMD 值返回。
+`max` 方法接受两个 SIMD 值作为参数，将两者的对应通道的较大值，组成一个新的 SIMD 值返回。
 
 ```js
 var a = SIMD.Float32x4(-1, -2, 3, 5.2);
@@ -573,7 +573,7 @@ SIMD.Float32x4.max(a, b);
 // Float32x4[0, -2, 6, 5.5]
 ```
 
-如果有一个通道的值是`NaN`，则会优先返回`NaN`。
+如果有一个通道的值是 `NaN`，则会优先返回 `NaN`。
 
 ```js
 var c = SIMD.Float64x2(NaN, Infinity);
@@ -582,7 +582,7 @@ SIMD.Float64x2.max(c, d);
 // Float64x2[NaN, Infinity]
 ```
 
-`maxNum`方法与`max`的作用一模一样，唯一的区别是如果有一个通道的值是`NaN`，则会优先返回另一个通道的值。
+`maxNum` 方法与 `max` 的作用一模一样，唯一的区别是如果有一个通道的值是 `NaN`，则会优先返回另一个通道的值。
 
 ```js
 var c = SIMD.Float64x2(NaN, Infinity);
@@ -595,7 +595,7 @@ SIMD.Float64x2.maxNum(c, d);
 
 ### SIMD.%type%.and()，SIMD.%type%.or()，SIMD.%type%.xor()，SIMD.%type%.not()
 
-`and`方法接受两个 SIMD 值作为参数，返回两者对应的通道进行二进制`AND`运算(`&`)后得到的新的 SIMD 值。
+`and` 方法接受两个 SIMD 值作为参数，返回两者对应的通道进行二进制 `AND` 运算(`&`)后得到的新的 SIMD 值。
 
 ```js
 var a = SIMD.Int32x4(1, 2, 4, 8);
@@ -604,9 +604,9 @@ SIMD.Int32x4.and(a, b);
 // Int32x4[1, 0, 4, 0]
 ```
 
-上面代码中，以通道`0`为例，`1`的二进制形式是`0001`，`5`的二进制形式是`01001`，所以进行`AND`运算以后，得到`0001`。
+上面代码中，以通道 `0` 为例，`1` 的二进制形式是 `0001`，`5` 的二进制形式是 `01001`，所以进行 `AND` 运算以后，得到 `0001`。
 
-`or`方法接受两个 SIMD 值作为参数，返回两者对应的通道进行二进制`OR`运算(`|`)后得到的新的 SIMD 值。
+`or` 方法接受两个 SIMD 值作为参数，返回两者对应的通道进行二进制 `OR` 运算(`|`)后得到的新的 SIMD 值。
 
 ```js
 var a = SIMD.Int32x4(1, 2, 4, 8);
@@ -615,7 +615,7 @@ SIMD.Int32x4.or(a, b);
 // Int32x4[5, 7, 5, 13]
 ```
 
-`xor`方法接受两个 SIMD 值作为参数，返回两者对应的通道进行二进制”异或“运算(`^`)后得到的新的 SIMD 值。
+`xor` 方法接受两个 SIMD 值作为参数，返回两者对应的通道进行二进制”异或“运算(`^`)后得到的新的 SIMD 值。
 
 ```js
 var a = SIMD.Int32x4(1, 2, 4, 8);
@@ -624,7 +624,7 @@ SIMD.Int32x4.xor(a, b);
 // Int32x4[4, 7, 1, 13]
 ```
 
-`not`方法接受一个 SIMD 值作为参数，返回每个通道进行二进制”否“运算(`~`)后得到的新的 SIMD 值。
+`not` 方法接受一个 SIMD 值作为参数，返回每个通道进行二进制”否“运算(`~`)后得到的新的 SIMD 值。
 
 ```js
 var a = SIMD.Int32x4(1, 2, 4, 8);
@@ -632,7 +632,7 @@ SIMD.Int32x4.not(a);
 // Int32x4[-2, -3, -5, -9]
 ```
 
-上面代码中，`1`的否运算之所以得到`-2`，是因为在计算机内部，负数采用”2 的补码“这种形式进行表示。也就是说，整数`n`的负数形式`-n`，是对每一个二进制位取反以后，再加上 1。因此，直接取反就相当于负数形式再减去 1，比如`1`的负数形式是`-1`，再减去 1，就得到了`-2`。
+上面代码中，`1` 的否运算之所以得到 `-2`，是因为在计算机内部，负数采用”2 的补码“这种形式进行表示。也就是说，整数 `n` 的负数形式 `-n`，是对每一个二进制位取反以后，再加上 1。因此，直接取反就相当于负数形式再减去 1，比如 `1` 的负数形式是 `-1`，再减去 1，就得到了 `-2`。
 
 ## 静态方法: 数据类型转换
 
@@ -650,7 +650,7 @@ SIMD 提供以下方法，用来将一种数据类型转为另一种数据类型
 - `SIMD.%type%.fromUint16x8Bits()`
 - `SIMD.%type%.fromUint8x16Bits()`
 
-带有`Bits`后缀的方法，会原封不动地将二进制位拷贝到新的数据类型；不带后缀的方法，则会进行数据类型转换。
+带有 `Bits` 后缀的方法，会原封不动地将二进制位拷贝到新的数据类型；不带后缀的方法，则会进行数据类型转换。
 
 ```js
 var t = SIMD.Float32x4(1.0, 2.0, 3.0, 4.0);
@@ -661,9 +661,9 @@ SIMD.Int32x4.fromFloat32x4Bits(t);
 // Int32x4[1065353216, 1073741824, 1077936128, 1082130432]
 ```
 
-上面代码中，`fromFloat32x4`是将浮点数转为整数，然后存入新的数据类型；`fromFloat32x4Bits`则是将二进制位原封不动地拷贝进入新的数据类型，然后进行解读。
+上面代码中，`fromFloat32x4` 是将浮点数转为整数，然后存入新的数据类型；`fromFloat32x4Bits` 则是将二进制位原封不动地拷贝进入新的数据类型，然后进行解读。
 
-`Bits`后缀的方法，还可以用于通道数目不对等的拷贝。
+`Bits` 后缀的方法，还可以用于通道数目不对等的拷贝。
 
 ```js
 var t = SIMD.Float32x4(1.0, 2.0, 3.0, 4.0);
@@ -671,7 +671,7 @@ SIMD.Int16x8.fromFloat32x4Bits(t);
 // Int16x8[0, 16256, 0, 16384, 0, 16448, 0, 16512]
 ```
 
-上面代码中，原始 SIMD 值`t`是 4 通道的，而目标值是 8 通道的。
+上面代码中，原始 SIMD 值 `t` 是 4 通道的，而目标值是 8 通道的。
 
 如果数据转换时，原通道的数据大小，超过了目标通道的最大宽度，就会报错。
 
@@ -679,7 +679,7 @@ SIMD.Int16x8.fromFloat32x4Bits(t);
 
 ### SIMD.%type%.prototype.toString()
 
-`toString`方法返回一个 SIMD 值的字符串形式。
+`toString` 方法返回一个 SIMD 值的字符串形式。
 
 ```js
 var a = SIMD.Float32x4(11, 22, 33, 44);
@@ -688,7 +688,7 @@ a.toString(); // "SIMD.Float32x4(11, 22, 33, 44)"
 
 ## 实例: 求平均值
 
-正常模式下，计算`n`个值的平均值，需要运算`n`次。
+正常模式下，计算 `n` 个值的平均值，需要运算 `n` 次。
 
 ```js
 function average(list) {
@@ -701,7 +701,7 @@ function average(list) {
 }
 ```
 
-使用 SIMD，可以将计算次数减少到`n`次的四分之一。
+使用 SIMD，可以将计算次数减少到 `n` 次的四分之一。
 
 ```js
 function average(list) {
@@ -719,4 +719,4 @@ function average(list) {
 }
 ```
 
-上面代码先是每隔四位，将所有的值读入一个 SIMD，然后立刻累加。然后，得到累加值四个通道的总和，再除以`n`就可以了。
+上面代码先是每隔四位，将所有的值读入一个 SIMD，然后立刻累加。然后，得到累加值四个通道的总和，再除以 `n` 就可以了。

@@ -208,7 +208,7 @@ span {
 
 ### 渐变背景
 
-当渐变用于背景时，也可以使用像图像一样的 `background-image`属性设置。
+当渐变用于背景时，也可以使用像图像一样的 `background-image` 属性设置。
 
 ::: info
 

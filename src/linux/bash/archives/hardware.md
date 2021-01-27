@@ -2,7 +2,7 @@
 
 ## df
 
-`df`命令查看硬盘信息。
+`df` 命令查看硬盘信息。
 
 ```bash
 $ df
@@ -14,7 +14,7 @@ Filesystem 1K-blocks Used Available Use% Mounted on
 
 ## free
 
-`free`命令查看内存占用情况。
+`free` 命令查看内存占用情况。
 
 ```bash
 $ free
@@ -26,7 +26,7 @@ Swap: 1052248 104712 947536
 
 ## 硬盘
 
-文件`/etc/fstab`配置系统启动时要挂载的设备。
+文件`/etc/fstab` 配置系统启动时要挂载的设备。
 
 ```text
 LABEL=/12               /               ext3        defaults        1   1
@@ -45,7 +45,7 @@ LABEL=/boot             /boot           ext3        defaults        1   2
 
 ## mount
 
-`mount`不带参数时，显示当前挂载的文件系统。
+`mount` 不带参数时，显示当前挂载的文件系统。
 
 ```bash
 $ mount
@@ -58,7 +58,7 @@ devpts on /dev/pts type devpts (rw,gid=5,mode=620)
 
 这个列表的格式是: 设备 on 挂载点 type 文件系统类型(可选的)。
 
-`mount`带参数时，用于将设备文件挂载到挂载点，`-t`参数用来指定文件系统类型。
+`mount` 带参数时，用于将设备文件挂载到挂载点，`-t` 参数用来指定文件系统类型。
 
 ```bash
 $ mount -t iso9660 /dev/hdc /mnt/cdrom
@@ -69,7 +69,7 @@ $ mount -t iso9660 -o loop image.iso /mnt/iso_image
 
 ## umount
 
-`umount`命令用来卸载设备。
+`umount` 命令用来卸载设备。
 
 ```bash
 umount [设备名]
@@ -79,7 +79,7 @@ umount /dev/hdc
 
 ## fdisk
 
-`fdisk`命令用于格式化磁盘。
+`fdisk` 命令用于格式化磁盘。
 
 ```bash
 sudo umount /dev/sdb1
@@ -88,7 +88,7 @@ sudo fdisk /dev/sdb
 
 ## mkfs
 
-`mkfs`命令用于在一个设备上新建文件系统。
+`mkfs` 命令用于在一个设备上新建文件系统。
 
 ```bash
 sudo mkfs -t ext3 /dev/sdb1
@@ -97,7 +97,7 @@ sudo mkfs -t vfat /dev/sdb1
 
 ## fsck
 
-`fsck`命令用于检查(修复)文件系统。
+`fsck` 命令用于检查(修复)文件系统。
 
 ```bash
 sudo fsck /dev/sdb1
@@ -105,7 +105,7 @@ sudo fsck /dev/sdb1
 
 ## dd
 
-`dd`命令用于将大型数据块，从一个磁盘复制到另一个磁盘。
+`dd` 命令用于将大型数据块，从一个磁盘复制到另一个磁盘。
 
 ```bash
 $ dd if=input_file of=output_file [bs=block_size [count=blocks]]
@@ -122,7 +122,7 @@ $ dd if=/dev/cdrom of=ubuntu.iso
 
 ## dmidecode
 
-`dmidecode`命令用于输出 BIOS 信息。
+`dmidecode` 命令用于输出 BIOS 信息。
 
 ```bash
 sudo dmidecode
@@ -188,7 +188,7 @@ $ sudo dmidecode –t 0
 $ sudo dmidecode -t 4
 ```
 
-`dmidecode`也支持关键词查看，关键词与类别的对应关系如下。
+`dmidecode` 也支持关键词查看，关键词与类别的对应关系如下。
 
 - bios 0, 13
 - system 1, 12, 15, 23, 32
@@ -208,7 +208,7 @@ sudo dmidecode -t system
 
 ## lspci
 
-`lspci`命令列出本机的所有 PCI 设备。
+`lspci` 命令列出本机的所有 PCI 设备。
 
 ```bash
 lspci
@@ -234,7 +234,7 @@ lspci -vmm
 
 ## lsusb
 
-`lsusb`命令用于操作 USB 端口。
+`lsusb` 命令用于操作 USB 端口。
 
 下面命令列出本机所有 USB 端口。
 

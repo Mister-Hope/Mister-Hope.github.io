@@ -33,7 +33,7 @@ ECMAScript 2015(简称 ES2015)这个词，也是经常可以看到的。它与 E
 
 标准委员会最终决定，标准在每年的 6 月份正式发布一次，作为当年的正式版本。接下来的时间，就在这个版本的基础上做改动，直到下一年的 6 月份，草案就自然变成了新一年的版本。这样一来，就不需要以前的版本号了，只要用年份标记就可以了。
 
-ES6 的第一个版本，就这样在 2015 年 6 月发布了，正式名称就是《ECMAScript 2015 标准》(简称 ES2015)。2016 年 6 月，小幅修订的《ECMAScript 2016 标准》(简称 ES2016)如期发布，这个版本可以看作是 ES6.1 版，因为两者的差异非常小(只新增了数组实例的`includes`方法和指数运算符)，基本上是同一个标准。根据计划，2017 年 6 月发布 ES2017 标准。
+ES6 的第一个版本，就这样在 2015 年 6 月发布了，正式名称就是《ECMAScript 2015 标准》(简称 ES2015)。2016 年 6 月，小幅修订的《ECMAScript 2016 标准》(简称 ES2016)如期发布，这个版本可以看作是 ES6.1 版，因为两者的差异非常小(只新增了数组实例的 `includes` 方法和指数运算符)，基本上是同一个标准。根据计划，2017 年 6 月发布 ES2017 标准。
 
 因此，ES6 既是一个历史名词，也是一个泛指，含义是 5.1 版以后的 JavaScript 的下一代标准，涵盖了 ES2015、ES2016、ES2017 等等，而 ES2015 则是正式名称，特指该年发布的正式版本的语言标准。本书中提到 ES6 的地方，一般是指 ES2015 标准，但有时也是泛指“下一代 JavaScript 语言”。
 
@@ -117,9 +117,9 @@ input.map(function (item) {
 
 上面的原始代码用了箭头函数，Babel 将其转为普通函数，就能在不支持箭头函数的 JavaScript 环境执行了。
 
-### 配置文件`.babelrc`
+### 配置文件 `.babelrc`
 
-Babel 的配置文件是`.babelrc`，存放在项目的根目录下。使用 Babel 的第一步，就是配置这个文件。
+Babel 的配置文件是 `.babelrc`，存放在项目的根目录下。使用 Babel 的第一步，就是配置这个文件。
 
 该文件用来设置转码规则和插件，基本格式如下。
 
@@ -130,7 +130,7 @@ Babel 的配置文件是`.babelrc`，存放在项目的根目录下。使用 Bab
 }
 ```
 
-`presets`字段设定转码规则，官方提供以下的规则集，您可以根据需要安装。
+`presets` 字段设定转码规则，官方提供以下的规则集，您可以根据需要安装。
 
 ```bash
 # 最新转码规则
@@ -146,7 +146,7 @@ $ npm install --save-dev babel-preset-stage-2
 $ npm install --save-dev babel-preset-stage-3
 ```
 
-然后，将这些规则加入`.babelrc`。
+然后，将这些规则加入 `.babelrc`。
 
 ```js
   {
@@ -159,11 +159,11 @@ $ npm install --save-dev babel-preset-stage-3
   }
 ```
 
-注意，以下所有 Babel 工具和模块的使用，都必须先写好`.babelrc`。
+注意，以下所有 Babel 工具和模块的使用，都必须先写好 `.babelrc`。
 
-### 命令行转码`babel-cli`
+### 命令行转码 `babel-cli`
 
-Babel 提供`babel-cli`工具，用于命令行转码。
+Babel 提供 `babel-cli` 工具，用于命令行转码。
 
 它的安装命令如下。
 
@@ -195,14 +195,14 @@ $ babel src -d lib -s
 
 上面代码是在全局环境下，进行 Babel 转码。这意味着，如果项目要运行，全局环境必须有 Babel，也就是说项目产生了对环境的依赖。另一方面，这样做也无法支持不同项目使用不同版本的 Babel。
 
-一个解决办法是将`babel-cli`安装在项目之中。
+一个解决办法是将 `babel-cli` 安装在项目之中。
 
 ```bash
 # 安装
 $ npm install --save-dev babel-cli
 ```
 
-然后，改写`package.json`。
+然后，改写 `package.json`。
 
 ```js
 {
@@ -224,9 +224,9 @@ npm run build
 
 ### babel-node
 
-`babel-cli`工具自带一个`babel-node`命令，提供一个支持 ES6 的 REPL 环境。它支持 Node.js 的 REPL 环境的所有功能，而且可以直接运行 ES6 代码。
+`babel-cli` 工具自带一个 `babel-node` 命令，提供一个支持 ES6 的 REPL 环境。它支持 Node.js 的 REPL 环境的所有功能，而且可以直接运行 ES6 代码。
 
-它不用单独安装，而是随`babel-cli`一起安装。然后，执行`babel-node`就进入 REPL 环境。
+它不用单独安装，而是随 `babel-cli` 一起安装。然后，执行 `babel-node` 就进入 REPL 环境。
 
 ```bash
 $ babel-node
@@ -234,20 +234,20 @@ $ babel-node
 2
 ```
 
-`babel-node`命令可以直接运行 ES6 脚本。将上面的代码放入脚本文件`es6.js`，然后直接运行。
+`babel-node` 命令可以直接运行 ES6 脚本。将上面的代码放入脚本文件 `es6.js`，然后直接运行。
 
 ```bash
 $ babel-node es6.js
 2
 ```
 
-`babel-node`也可以安装在项目中。
+`babel-node` 也可以安装在项目中。
 
 ```bash
 npm install --save-dev babel-cli
 ```
 
-然后，改写`package.json`。
+然后，改写 `package.json`。
 
 ```js
 {
@@ -257,30 +257,30 @@ npm install --save-dev babel-cli
 }
 ```
 
-上面代码中，使用`babel-node`替代`node`，这样`script.js`本身就不用做任何转码处理。
+上面代码中，使用 `babel-node` 替代 `node`，这样 `script.js` 本身就不用做任何转码处理。
 
 ### babel-register
 
-`babel-register`模块改写`require`命令，为它加上一个钩子。此后，每当使用`require`加载`.js`、`.jsx`、`.es`和`.es6`后缀名的文件，就会先用 Babel 进行转码。
+`babel-register` 模块改写 `require` 命令，为它加上一个钩子。此后，每当使用 `require` 加载 `.js`、`.jsx`、`.es` 和 `.es6` 后缀名的文件，就会先用 Babel 进行转码。
 
 ```bash
 npm install --save-dev babel-register
 ```
 
-使用时，必须首先加载`babel-register`。
+使用时，必须首先加载 `babel-register`。
 
 ```bash
 require("babel-register");
 require("./index.js");
 ```
 
-然后，就不需要手动对`index.js`转码了。
+然后，就不需要手动对 `index.js` 转码了。
 
-需要注意的是，`babel-register`只会对`require`命令加载的文件转码，而不会对当前文件转码。另外，由于它是实时转码，所以只适合在开发环境使用。
+需要注意的是，`babel-register` 只会对 `require` 命令加载的文件转码，而不会对当前文件转码。另外，由于它是实时转码，所以只适合在开发环境使用。
 
 ### babel-core
 
-如果某些代码需要调用 Babel 的 API 进行转码，就要使用`babel-core`模块。
+如果某些代码需要调用 Babel 的 API 进行转码，就要使用 `babel-core` 模块。
 
 安装命令如下。
 
@@ -288,7 +288,7 @@ require("./index.js");
 npm install babel-core --save
 ```
 
-然后，在项目中就可以调用`babel-core`。
+然后，在项目中就可以调用 `babel-core`。
 
 ```js
 var babel = require("babel-core");
@@ -311,7 +311,7 @@ babel.transformFromAst(ast, code, options);
 // => { code, map, ast }
 ```
 
-配置对象`options`，可以参看官方文档[https://babeljs.io/docs/usage/options/](https://babeljs.io/docs/usage/options/)。
+配置对象 `options`，可以参看官方文档[https://babeljs.io/docs/usage/options/](https://babeljs.io/docs/usage/options/)。
 
 下面是一个例子。
 
@@ -323,13 +323,13 @@ var es5Code = require("babel-core").transform(es6Code, {
 // '"use strict";\n\nvar x = function x(n) {\n  return n + 1;\n};'
 ```
 
-上面代码中，`transform`方法的第一个参数是一个字符串，表示需要被转换的 ES6 代码，第二个参数是转换的配置对象。
+上面代码中，`transform` 方法的第一个参数是一个字符串，表示需要被转换的 ES6 代码，第二个参数是转换的配置对象。
 
 ### babel-polyfill
 
-Babel 默认只转换新的 JavaScript 句法(syntax)，而不转换新的 API，比如`Iterator`、`Generator`、`Set`、`Map`、`Proxy`、`Reflect`、`Symbol`、`Promise`等全局对象，以及一些定义在全局对象上的方法(比如`Object.assign`)都不会转码。
+Babel 默认只转换新的 JavaScript 句法(syntax)，而不转换新的 API，比如 `Iterator`、`Generator`、`Set`、`Map`、`Proxy`、`Reflect`、`Symbol`、`Promise` 等全局对象，以及一些定义在全局对象上的方法(比如 `Object.assign`)都不会转码。
 
-举例来说，ES6 在`Array`对象上新增了`Array.from`方法。Babel 就不会转码这个方法。如果想让这个方法运行，必须使用`babel-polyfill`，为当前环境提供一个垫片。
+举例来说，ES6 在 `Array` 对象上新增了 `Array.from` 方法。Babel 就不会转码这个方法。如果想让这个方法运行，必须使用 `babel-polyfill`，为当前环境提供一个垫片。
 
 安装命令如下。
 
@@ -345,7 +345,7 @@ import "babel-polyfill";
 require("babel-polyfill");
 ```
 
-Babel 默认不转码的 API 非常多，详细清单可以查看`babel-plugin-transform-runtime`模块的[definitions.js](https://github.com/babel/babel/blob/master/packages/babel-plugin-transform-runtime/src/definitions.js)文件。
+Babel 默认不转码的 API 非常多，详细清单可以查看 `babel-plugin-transform-runtime` 模块的[definitions.js](https://github.com/babel/babel/blob/master/packages/babel-plugin-transform-runtime/src/definitions.js)文件。
 
 ### 浏览器环境
 
@@ -360,7 +360,7 @@ Babel 也可以用于浏览器环境。但是，从 Babel 6.0 开始，不再直
 
 注意，网页实时将 ES6 代码转为 ES5，对性能会有影响。生产环境需要加载已经转码完成的脚本。
 
-下面是如何将代码打包成浏览器可以使用的脚本，以`Babel`配合`Browserify`为例。首先，安装`babelify`模块。
+下面是如何将代码打包成浏览器可以使用的脚本，以 `Babel` 配合 `Browserify` 为例。首先，安装 `babelify` 模块。
 
 ```bash
 npm install --save-dev babelify babel-preset-latest
@@ -373,9 +373,9 @@ browserify script.js -o bundle.js \
   -t [ babelify --presets [ latest ] ]
 ```
 
-上面代码将 ES6 脚本`script.js`，转为`bundle.js`，浏览器直接加载后者就可以了。
+上面代码将 ES6 脚本 `script.js`，转为 `bundle.js`，浏览器直接加载后者就可以了。
 
-在`package.json`设置下面的代码，就不用每次命令行都输入参数了。
+在 `package.json` 设置下面的代码，就不用每次命令行都输入参数了。
 
 ```js
 {
@@ -399,7 +399,7 @@ ESLint 用于静态检查代码的语法和风格，安装命令如下。
 npm install --save-dev eslint babel-eslint
 ```
 
-然后，在项目根目录下，新建一个配置文件`.eslintrc`，在其中加入`parser`字段。
+然后，在项目根目录下，新建一个配置文件 `.eslintrc`，在其中加入 `parser` 字段。
 
 ```js
 {
@@ -410,7 +410,7 @@ npm install --save-dev eslint babel-eslint
 }
 ```
 
-再在`package.json`之中，加入相应的`scripts`脚本。
+再在 `package.json` 之中，加入相应的 `scripts` 脚本。
 
 ```js
   {
@@ -425,7 +425,7 @@ npm install --save-dev eslint babel-eslint
   }
 ```
 
-Mocha 则是一个测试框架，如果需要执行使用 ES6 语法的测试脚本，可以修改`package.json`的`scripts.test`。
+Mocha 则是一个测试框架，如果需要执行使用 ES6 语法的测试脚本，可以修改 `package.json` 的 `scripts.test`。
 
 ```js
 "scripts": {
@@ -433,7 +433,7 @@ Mocha 则是一个测试框架，如果需要执行使用 ES6 语法的测试脚
 }
 ```
 
-上面命令中，`--compilers`参数指定脚本的转码器，规定后缀名为`js`的文件，都需要使用`babel-core/register`先转码。
+上面命令中，`--compilers` 参数指定脚本的转码器，规定后缀名为 `js` 的文件，都需要使用 `babel-core/register` 先转码。
 
 ## Traceur 转码器
 
@@ -452,9 +452,9 @@ Traceur 允许将 ES6 代码直接插入网页。首先，必须在网页头部�
 </script>
 ```
 
-上面代码中，一共有 4 个`script`标签。第一个是加载 Traceur 的库文件，第二个和第三个是将这个库文件用于浏览器环境，第四个则是加载用户脚本，这个脚本里面可以使用 ES6 代码。
+上面代码中，一共有 4 个 `script` 标签。第一个是加载 Traceur 的库文件，第二个和第三个是将这个库文件用于浏览器环境，第四个则是加载用户脚本，这个脚本里面可以使用 ES6 代码。
 
-注意，第四个`script`标签的`type`属性的值是`module`，而不是`text/javascript`。这是 Traceur 编译器识别 ES6 代码的标志，编译器会自动将所有`type=module`的代码编译为 ES5，然后再交给浏览器执行。
+注意，第四个 `script` 标签的 `type` 属性的值是 `module`，而不是 `text/javascript`。这是 Traceur 编译器识别 ES6 代码的标志，编译器会自动将所有 `type=module` 的代码编译为 ES5，然后再交给浏览器执行。
 
 除了引用外部 ES6 脚本，也可以直接在网页中放置 ES6 代码。
 
@@ -474,7 +474,7 @@ Traceur 允许将 ES6 代码直接插入网页。首先，必须在网页头部�
 </script>
 ```
 
-正常情况下，上面代码会在控制台打印出`9`。
+正常情况下，上面代码会在控制台打印出 `9`。
 
 如果想对 Traceur 的行为有精确控制，可以采用下面参数配置的写法。
 
@@ -502,7 +502,7 @@ Traceur 允许将 ES6 代码直接插入网页。首先，必须在网页头部�
 </script>
 ```
 
-上面代码中，首先生成 Traceur 的全局对象`window.System`，然后`System.import`方法可以用来加载 ES6。加载的时候，需要传入一个配置对象`metadata`，该对象的`traceurOptions`属性可以配置支持 ES6 功能。如果设为`experimental: true`，就表示除了 ES6 以外，还支持一些实验性的新功能。
+上面代码中，首先生成 Traceur 的全局对象 `window.System`，然后 `System.import` 方法可以用来加载 ES6。加载的时候，需要传入一个配置对象 `metadata`，该对象的 `traceurOptions` 属性可以配置支持 ES6 功能。如果设为 `experimental: true`，就表示除了 ES6 以外，还支持一些实验性的新功能。
 
 ### ES5 在线转换
 
@@ -543,7 +543,7 @@ npm install -g traceur
 
 安装成功后，就可以在命令行下使用 Traceur 了。
 
-Traceur 直接运行 ES6 脚本文件，会在标准输出显示运行结果，以前面的`calc.js`为例。
+Traceur 直接运行 ES6 脚本文件，会在标准输出显示运行结果，以前面的 `calc.js` 为例。
 
 ```bash
 $ traceur calc.js
@@ -557,9 +557,9 @@ Calc constructor
 traceur --script calc.es6.js --out calc.es5.js
 ```
 
-上面代码的`--script`选项表示指定输入文件，`--out`选项表示指定输出文件。
+上面代码的 `--script` 选项表示指定输入文件，`--out` 选项表示指定输出文件。
 
-为了防止有些特性编译不成功，最好加上`--experimental`选项。
+为了防止有些特性编译不成功，最好加上 `--experimental` 选项。
 
 ```bash
 traceur --script calc.es6.js --out calc.es5.js --experimental
@@ -569,7 +569,7 @@ traceur --script calc.es6.js --out calc.es5.js --experimental
 
 ### Node.js 环境的用法
 
-Traceur 的 Node.js 用法如下(假定已安装`traceur`模块)。
+Traceur 的 Node.js 用法如下(假定已安装 `traceur` 模块)。
 
 ```js
 var traceur = require("traceur");

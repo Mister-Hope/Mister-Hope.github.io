@@ -51,7 +51,7 @@ const ajax = ajaxGet("https://...");
 ajax.ifSuccess(success).ifFail(fail);
 ```
 
-这种链式写法的好处在于，先统一执行 Ajax 逻辑，不关心如何处理结果，然后，根据结果是成功还是失败，在将来的某个时候调用`success`函数或`fail`函数。
+这种链式写法的好处在于，先统一执行 Ajax 逻辑，不关心如何处理结果，然后，根据结果是成功还是失败，在将来的某个时候调用 `success` 函数或 `fail` 函数。
 
 古人云: “君子一诺千金”，这种“承诺将来会执行”的对象在 JavaScript 中称为 `Promise` 对象。
 
@@ -205,7 +205,7 @@ p.then(multiply)
   });
 ```
 
-`setTimeout`可以看成一个模拟网络等异步执行的函数。现在，我们把上一节的 Ajax 异步执行函数转换为`Promise`对象，看看用`Promise`如何简化异步处理:
+`setTimeout` 可以看成一个模拟网络等异步执行的函数。现在，我们把上一节的 Ajax 异步执行函数转换为 `Promise` 对象，看看用 `Promise` 如何简化异步处理:
 
 ```js
 "use strict";
@@ -239,7 +239,7 @@ p.then(function (text) {
 });
 ```
 
-除了串行执行若干异步任务外，`Promise`还可以并行执行异步任务。
+除了串行执行若干异步任务外，`Promise` 还可以并行执行异步任务。
 
 试想一个页面聊天系统，我们需要从两个不同的 URL 分别获得用户的个人信息和好友列表，这两个任务是可以并行执行的，用 `Promise.all()` 实现如下:
 

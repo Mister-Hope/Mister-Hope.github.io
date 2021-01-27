@@ -21,7 +21,7 @@ Session 有两种类型: 登录 Session 和非登录 Session，也可以叫做 l
 登录 Session 一般进行整个系统环境的初始化，启动的初始化脚本依次如下。
 
 - `/etc/profile`: 所有用户的全局配置脚本。
-- `/etc/profile.d`目录里面所有 `.sh` 文件
+- `/etc/profile.d` 目录里面所有 `.sh` 文件
 - `~/.bash_profile`: 用户的个人配置脚本。如果该脚本存在，则执行完就不再往下执行。
 - `~/.bash_login`: 如果 `~/.bash_profile` 没找到，则尝试执行这个脚本(C shell 的初始化脚本)。如果该脚本存在，则执行完就不再往下执行。
 - `~/.profile`: 如果`~/.bash_profile` 和 `~/.bash_login` 都没找到，则尝试读取这个脚本(Bourne shell 和 Korn shell 的初始化脚本)。

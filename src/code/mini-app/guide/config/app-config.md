@@ -78,19 +78,19 @@ category: 小程序
 
 用于设置小程序的状态栏、导航条、标题、窗口背景色。
 
-| 属性                         | 类型     | 默认值   | 描述                                                         | 最低版本                         |
-| ---------------------------- | -------- | -------- | ------------------------------------------------------------ | -------------------------------- |
-| navigationBarBackgroundColor | HexColor | #000000  | 导航栏背景颜色，如 #000000                                   |                                  |
-| navigationBarTextStyle       | string   | white    | 导航栏标题颜色，仅支持 black / white                         |                                  |
-| navigationBarTitleText       | string   |          | 导航栏标题文字内容                                           |
-| navigationStyle              | string   | default  | 导航栏样式，仅支持`default` 默认样式 `custom` 自定义导航航栏 | 微信客户端 6.6.0                 |
-| backgroundColor              | HexColor | #ffffff  | 窗口的背景色                                                 |                                  |
-| backgroundTextStyle          | string   | dark     | 下拉 loading 的样式，仅支持 dark / light                     |                                  |
-| backgroundColorTop           | string   | #ffffff  | 顶部窗口的背景色，仅 iOS 支持                                | 微信客户端 6.5.16                |
-| backgroundColorBottom        | string   | #ffffff  | 底部窗口的背景色，仅 iOS 支持                                | 微信客户端 6.5.16                |
-| enablePullDownRefresh        | boolean  | false    | 是否开启全局的下拉刷新。                                     |                                  |
-| onReachBottomDistance        | number   | 50       | 页面上拉触底事件触发时距页面底部距离，单位为 px。            |
-| pageOrientation              | string   | portrait | 屏幕旋转设置，支持 auto / portrait / landscape               | 2.4.0 (auto) / 2.5.0 (landscape) |
+| 属性                         | 类型     | 默认值   | 描述                                                          | 最低版本                         |
+| ---------------------------- | -------- | -------- | ------------------------------------------------------------- | -------------------------------- |
+| navigationBarBackgroundColor | HexColor | #000000  | 导航栏背景颜色，如 #000000                                    |                                  |
+| navigationBarTextStyle       | string   | white    | 导航栏标题颜色，仅支持 black / white                          |                                  |
+| navigationBarTitleText       | string   |          | 导航栏标题文字内容                                            |
+| navigationStyle              | string   | default  | 导航栏样式，仅支持 `default` 默认样式 `custom` 自定义导航航栏 | 微信客户端 6.6.0                 |
+| backgroundColor              | HexColor | #ffffff  | 窗口的背景色                                                  |                                  |
+| backgroundTextStyle          | string   | dark     | 下拉 loading 的样式，仅支持 dark / light                      |                                  |
+| backgroundColorTop           | string   | #ffffff  | 顶部窗口的背景色，仅 iOS 支持                                 | 微信客户端 6.5.16                |
+| backgroundColorBottom        | string   | #ffffff  | 底部窗口的背景色，仅 iOS 支持                                 | 微信客户端 6.5.16                |
+| enablePullDownRefresh        | boolean  | false    | 是否开启全局的下拉刷新。                                      |                                  |
+| onReachBottomDistance        | number   | 50       | 页面上拉触底事件触发时距页面底部距离，单位为 px。             |
+| pageOrientation              | string   | portrait | 屏幕旋转设置，支持 auto / portrait / landscape                | 2.4.0 (auto) / 2.5.0 (landscape) |
 
 ```json
 {

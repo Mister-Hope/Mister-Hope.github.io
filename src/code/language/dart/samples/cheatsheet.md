@@ -87,7 +87,7 @@ final aSetOfInts = <int>{};
 final aMapOfIntToDouble = <int, double>{};
 ```
 
-当您想使用子类型的内容初始化列表但仍然希望列表为 `List<BaseType>`时，指定类型很方便:
+当您想使用子类型的内容初始化列表但仍然希望列表为 `List<BaseType>` 时，指定类型很方便:
 
 ```dart
 final aListOfBaseType = <BaseType>[SubType(), SubType()];
@@ -97,7 +97,7 @@ final aListOfBaseType = <BaseType>[SubType(), SubType()];
 
 您可能已经在 Dart 代码中看到了该符号 `=>`。此箭头语法是一种定义函数的方法，该函数将在其右侧执行表达式并返回其值。
 
-例如，考虑这个对`List`类的 `any()`方法的调用:
+例如，考虑这个对 `List` 类的 `any()` 方法的调用:
 
 ```dart
 bool hasEmpty = aListOfStrings.any((s) {
@@ -127,7 +127,7 @@ myObject.someMethod()
 myObject..someMethod()
 ```
 
-尽管它仍然调用 `myObject` 上的 `someMethod()` ，但表达式的结果不是返回值，而是对 `myObject`的引用。使用级联，可以将原本需要单独语句的操作链接在一起。例如，考虑以下代码:
+尽管它仍然调用 `myObject` 上的 `someMethod()` ，但表达式的结果不是返回值，而是对 `myObject` 的引用。使用级联，可以将原本需要单独语句的操作链接在一起。例如，考虑以下代码:
 
 ```dart
 var button = querySelector('#confirm');

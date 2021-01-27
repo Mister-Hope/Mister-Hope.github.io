@@ -34,7 +34,7 @@ var image = {
 };
 ```
 
-[阅读有关 Dart 中变量的更多信息](https://dart.dev/guides/language/language-tour#variables)，包括默认值，`final`和 `const` 关键字以及静态类型。
+[阅读有关 Dart 中变量的更多信息](https://dart.dev/guides/language/language-tour#variables)，包括默认值，`final` 和 `const` 关键字以及静态类型。
 
 ## 控制语句
 
@@ -290,7 +290,7 @@ Stream<String> report(Spacecraft craft, Iterable<String> objects) async* {
 }
 ```
 
-[阅读更多](https://dart.dev/guides/language/language-tour#asynchrony-support) 关于异步支持，包括`async`功能`Future`，`Stream`和异步循环(await for)。
+[阅读更多](https://dart.dev/guides/language/language-tour#asynchrony-support) 关于异步支持，包括 `async` 功能 `Future`，`Stream` 和异步循环(await for)。
 
 ## 异常
 
@@ -302,7 +302,7 @@ if (astronauts == 0) {
 }
 ```
 
-要捕获异常，请使用`try`带有`on`或`catch`(或两者)的语句:
+要捕获异常，请使用 `try` 带有 `on` 或 `catch`(或两者)的语句:
 
 ```dart
 try {
@@ -317,9 +317,9 @@ try {
 }
 ```
 
-注意上面的代码是异步的； `try`适用于同步代码和`async`函数中的代码。
+注意上面的代码是异步的； `try` 适用于同步代码和 `async` 函数中的代码。
 
-阅读有关异常的更多信息，包括堆栈跟踪`rethrow`，和错误与异常之间的区别。
+阅读有关异常的更多信息，包括堆栈跟踪 `rethrow`，和错误与异常之间的区别。
 
 ## 其他话题
 

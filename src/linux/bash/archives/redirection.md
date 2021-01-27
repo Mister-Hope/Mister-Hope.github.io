@@ -28,7 +28,7 @@
 - `n>&digit-`: Moves the file descriptor digit to file descriptor  n, or the standard output (file descriptor 1) if n is not specified.
 - `n<&digit-`: Moves the file descriptor digit to file descriptor  n, or the standard input (file descriptor 0) if n is not specified. digit is closed after being duplicated to n.
 
-`>`用来将标准输出重定向到指定文件。
+`>` 用来将标准输出重定向到指定文件。
 
 ```bash
 ls -l /usr/bin > ls-output.txt
@@ -36,19 +36,19 @@ ls -l /usr/bin > ls-output.txt
 
 如果重定向后的指定文件已经存在，就会被覆盖，不会有任何提示。
 
-如果命令没有任何输出，那么重定向之后，得到的是一个长度为`0`的文件。因此，`>`具有创建新文件或改写现存文件、将其改为长度`0`的作用。
+如果命令没有任何输出，那么重定向之后，得到的是一个长度为 `0` 的文件。因此，`>` 具有创建新文件或改写现存文件、将其改为长度 `0` 的作用。
 
 ```bash
 > ls-output.txt
 ```
 
-`>>`用来将标准输出重定向追加到指定文件。
+`>>` 用来将标准输出重定向追加到指定文件。
 
 ```bash
 ls -l /usr/bin >> ls-output.txt
 ```
 
-`2>`用来将标准错误重定向到指定文件。
+`2>` 用来将标准错误重定向到指定文件。
 
 ```bash
 ls -l /bin/usr 2> ls-error.txt
@@ -71,19 +71,19 @@ $ ls -l /bin/usr &>> ls-output.txt
 ls -l /bin/usr 2> /dev/null
 ```
 
-`|`用于将一个命令的标准输出，重定向到另一个命令的标准输入。
+`|` 用于将一个命令的标准输出，重定向到另一个命令的标准输入。
 
 ```bash
 ls -l /usr/bin | less
 ```
 
-不要将`>`与`|`混淆。
+不要将`>` 与 `|` 混淆。
 
 ```bash
 ls > less
 ```
 
-上面命令会在当前目录，生成一个名为`less`的文本文件。
+上面命令会在当前目录，生成一个名为 `less` 的文本文件。
 
 下面是标准错误重定向的一个例子。
 
@@ -98,7 +98,7 @@ read -p "Enter a single item > "
 
 ## tee
 
-`tee`命令用于同时将标准输出重定向到文件，以及另一个命令的标准输入。
+`tee` 命令用于同时将标准输出重定向到文件，以及另一个命令的标准输入。
 
 ```bash
 ls /usr/bin | tee ls.txt | grep zip
@@ -106,7 +106,7 @@ ls /usr/bin | tee ls.txt | grep zip
 
 ## 命令替换
 
-命令替换(command substitution)指的是将一个命令的输出，替换进入另一个命令。`$(command)`表示命令替换，另一种写法是使用反引号。
+命令替换(command substitution)指的是将一个命令的输出，替换进入另一个命令。`$(command)` 表示命令替换，另一种写法是使用反引号。
 
 ```bash
 $ echo $(ls)
@@ -120,7 +120,7 @@ $ ls -l `which cp`
 
 ## basename
 
-`basename`命令清除 一个路径名的开头部分，只留下一个文件的基本名称。
+`basename` 命令清除 一个路径名的开头部分，只留下一个文件的基本名称。
 
 ```bash
 #!/bin/bash

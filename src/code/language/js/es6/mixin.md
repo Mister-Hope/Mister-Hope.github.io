@@ -27,7 +27,7 @@ Enumerable_first.call(list); // explicit delegation
 list.first(); // "foo"
 ```
 
-上面代码中，`list`是一个数组，本身并没有`first`方法。通过`call`方法，可以把`Enumerable_first`里面的方法，绑定到`list`，从而`list`就具有`first`方法。这就叫做“代理”(delegation)，`list`对象代理了`Enumerable_first`的`first`方法。
+上面代码中，`list` 是一个数组，本身并没有 `first` 方法。通过 `call` 方法，可以把 `Enumerable_first` 里面的方法，绑定到 `list`，从而 `list` 就具有 `first` 方法。这就叫做“代理”(delegation)，`list` 对象代理了 `Enumerable_first` 的 `first` 方法。
 
 ## 含义
 
@@ -37,7 +37,7 @@ Mixin 这个名字来自于冰淇淋，在基本口味的冰淇淋上面混入�
 
 Mixin 就是一个正常的类，不仅定义了接口，还定义了接口的实现。
 
-子类通过在`this`对象上面绑定方法，达到多重继承的目的。
+子类通过在 `this` 对象上面绑定方法，达到多重继承的目的。
 
 很多库提供了 Mixin 功能。下面以 Lodash 为例。
 
@@ -51,9 +51,9 @@ _.mixin(obj, { vowels: vowels });
 obj.vowels(); // true
 ```
 
-上面代码通过 Lodash 库的`_.mixin`方法，让`obj`对象继承了`vowels`方法。
+上面代码通过 Lodash 库的 `_.mixin` 方法，让 `obj` 对象继承了 `vowels` 方法。
 
-Underscore 的类似方法是`_.extend`。
+Underscore 的类似方法是 `_.extend`。
 
 ```js
 var Person = function (fName, lName) {
@@ -78,9 +78,9 @@ sam.rename("Samwise", "Gamgee");
 sam.fullName(); // "Samwise Gamgee"
 ```
 
-上面代码通过`_.extend`方法，在`sam`对象上面(准确说是它的原型对象`Person.prototype`上面)，混入了`NameMixin`类。
+上面代码通过 `_.extend` 方法，在 `sam` 对象上面(准确说是它的原型对象 `Person.prototype` 上面)，混入了 `NameMixin` 类。
 
-`extend`方法的实现非常简单。
+`extend` 方法的实现非常简单。
 
 ```js
 function extend(destination, source) {
@@ -93,11 +93,11 @@ function extend(destination, source) {
 }
 ```
 
-上面代码将`source`对象的所有方法，添加到`destination`对象。
+上面代码将 `source` 对象的所有方法，添加到 `destination` 对象。
 
 ## Trait
 
 Trait 是另外一种多重继承的解决方案。它与 Mixin 很相似，但是有一些细微的差别。
 
-- Mixin 可以包含状态(state)，Trait 不包含，即 Trait 里面的方法都是互不相干，可以线性包含的。比如，`Trait1`包含方法`A`和`B`，`Trait2`继承了`Trait1`，同时还包含一个自己的方法`C`，实际上就等同于直接包含方法`A`、`B`、`C`。
+- Mixin 可以包含状态(state)，Trait 不包含，即 Trait 里面的方法都是互不相干，可以线性包含的。比如，`Trait1` 包含方法 `A` 和 `B`，`Trait2` 继承了 `Trait1`，同时还包含一个自己的方法 `C`，实际上就等同于直接包含方法 `A`、`B`、`C`。
 - 对于同名方法的碰撞，Mixin 包含了解决规则，Trait 则是报错。

@@ -22,7 +22,7 @@ category: 小程序
 
 如果使用 `this.setData({ value: 'leaf' })` 来更新 value ，`this.data.value` 和输入框的中显示的值都会被更新为 `leaf` ；但如果用户修改了输入框里的值，却不会同时改变 `this.data.value` 。
 
-如果需要在用户输入的同时改变 `this.data.value` ，需要借助简易双向绑定机制。此时，可以在对应项目之前加入`model:` 前缀:
+如果需要在用户输入的同时改变 `this.data.value` ，需要借助简易双向绑定机制。此时，可以在对应项目之前加入 `model:` 前缀:
 
 ```xml
 <input model:value="{{value}}" />

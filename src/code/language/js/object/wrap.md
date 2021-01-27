@@ -69,7 +69,7 @@ typeof s; // 'string'
 
 - 函数内部判断某个变量是否存在用 `typeof myVar === 'undefined'`。
 
-- `null` 和 `undefined` 没有 `toString()` 方法，`number` 对象调用 `toString()` 报 `SyntaxError`。虽然`null` 还伪装成了 `object` 类型。
+- `null` 和 `undefined` 没有 `toString()` 方法，`number` 对象调用 `toString()` 报 `SyntaxError`。虽然 `null` 还伪装成了 `object` 类型。
 
   ```js
   123.toString(); // SyntaxError

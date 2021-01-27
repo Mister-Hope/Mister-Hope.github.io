@@ -50,7 +50,7 @@ console.log(`platform = ${navigator.platform}`);
 console.log(`userAgent = ${navigator.userAgent}`);
 ```
 
-请注意，`navigator` 的信息可以很容易地被用户修改，所以 JavaScript 读取的值不一定是正确的。很多初学者为了针对不同浏览器编写不同的代码，喜欢用`if`判断浏览器版本，例如:
+请注意，`navigator` 的信息可以很容易地被用户修改，所以 JavaScript 读取的值不一定是正确的。很多初学者为了针对不同浏览器编写不同的代码，喜欢用 `if` 判断浏览器版本，例如:
 
 ```js
 let width;

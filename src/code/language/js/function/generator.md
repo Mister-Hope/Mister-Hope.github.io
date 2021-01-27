@@ -99,11 +99,11 @@ f.next(); // {value: 3, done: false}
 f.next(); // {value: undefined, done: true}
 ```
 
-`next()` 方法会执行 `generator` 的代码，然后，每次遇到 `yield x;` 就返回一个对象 `{value: x, done: true/false}`，然后“暂停”。返回的`value` 就是 `yield` 的返回值，`done` 表示这个 `generator` 是否已经执行结束了。如果 `done` 为 `true`，则 `value` 就是 `return` 的返回值。
+`next()` 方法会执行 `generator` 的代码，然后，每次遇到 `yield x;` 就返回一个对象 `{value: x, done: true/false}`，然后“暂停”。返回的 `value` 就是 `yield` 的返回值，`done` 表示这个 `generator` 是否已经执行结束了。如果 `done` 为 `true`，则 `value` 就是 `return` 的返回值。
 
 当执行到 `done` 为 `true` 时，这个 generator 对象就已经全部执行完毕，不要再继续调用 `next()` 了。
 
-第二个方法是直接用`for ... of`循环迭代 generator 对象，这种方式不需要我们自己判断 `done`:
+第二个方法是直接用 `for ... of` 循环迭代 generator 对象，这种方式不需要我们自己判断 `done`:
 
 ```js
 "use strict";

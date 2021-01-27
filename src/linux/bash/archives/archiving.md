@@ -2,14 +2,14 @@
 
 ## gzip
 
-gzip 程序用来压缩文件，原文件的压缩版(添加`gz`后缀名)会替代原文件。gunzip 程序用来还原压缩版本。
+gzip 程序用来压缩文件，原文件的压缩版(添加 `gz` 后缀名)会替代原文件。gunzip 程序用来还原压缩版本。
 
 ```bash
 gzip foo.txt
 gunzip foo.txt.gz
 ```
 
-`gzip`的参数如下。
+`gzip` 的参数如下。
 
 - -c 把输出写入到标准输出，并且保留原始文件。也有可能用--stdout 和--to-stdout 选项来指定。
 - -d 解压缩。正如 gunzip 命令一样。也可以用--decompress 或者--uncompress 选项来指定.
@@ -28,7 +28,7 @@ gunzip foo.txt.gz
 $ gunzip -c foo.txt | less
 ```
 
-`zcat`程序等同于带有-c 选项的 gunzip 命令。它可以像`cat`命令那样，用来查看`gzip`压缩文件。
+`zcat` 程序等同于带有-c 选项的 gunzip 命令。它可以像 `cat` 命令那样，用来查看 `gzip` 压缩文件。
 
 ```bash
 zcat foo.txt.gz | less
@@ -36,18 +36,18 @@ zcat foo.txt.gz | less
 
 ## bzip2
 
-`bzip2`程序与`gzip`程序相似，但是使用了不同的压缩算法，舍弃了压缩速度，实现了更高的压缩级别。在大多数情况下，它的工作模式等同于`gzip`。由`bzip2`压缩的文件，用扩展名`.bz2`表示。
+`bzip2` 程序与 `gzip` 程序相似，但是使用了不同的压缩算法，舍弃了压缩速度，实现了更高的压缩级别。在大多数情况下，它的工作模式等同于 `gzip`。由 `bzip2` 压缩的文件，用扩展名 `.bz2` 表示。
 
 ```bash
 bzip2 foo.txt
 bunzip2 foo.txt.bz2
 ```
 
-gzip 程序的所有选项(除了`-r`)，bzip2 程序同样也支持。同样有 bunzip2 和 bzcat 程序来解压缩文件。bzip2 文件也带有 bzip2recover 程序，其会 试图恢复受损的 .bz2 文件。
+gzip 程序的所有选项(除了 `-r`)，bzip2 程序同样也支持。同样有 bunzip2 和 bzcat 程序来解压缩文件。bzip2 文件也带有 bzip2recover 程序，其会 试图恢复受损的 .bz2 文件。
 
 ## zip
 
-`zip`程序既是压缩工具，也是一个打包工具，读取和写入.zip 文件。
+`zip` 程序既是压缩工具，也是一个打包工具，读取和写入.zip 文件。
 
 ```bash
 zip options zipfile file...
@@ -60,15 +60,15 @@ zip options zipfile file...
 $ zip -r playground.zip playground
 ```
 
-`zip`与`tar`命令有一个相反之处。如果压缩文件已存在，其将被更新而不是被替代。这意味着会保留此文件包，但是会添加新文件，同时替换匹配的文件。
+`zip` 与 `tar` 命令有一个相反之处。如果压缩文件已存在，其将被更新而不是被替代。这意味着会保留此文件包，但是会添加新文件，同时替换匹配的文件。
 
-解压使用`unzip`命令。
+解压使用 `unzip` 命令。
 
 ```bash
 unzip ../playground.zip
 ```
 
-`unzip`命令的参数如下。
+`unzip` 命令的参数如下。
 
 - `-l` 列出文件包中的内容而不解压
 - `-v` 显示冗余信息
@@ -80,9 +80,9 @@ unzip -p ls-etc.zip | less
 
 ## tar
 
-`tar`是 tape archive 的简称，原来是一款制作磁带备份的工具，现在主要用于打包。一个 tar 包可以由一组独立的文件，一个或者多个目录，或者两者混合体组成。
+`tar` 是 tape archive 的简称，原来是一款制作磁带备份的工具，现在主要用于打包。一个 tar 包可以由一组独立的文件，一个或者多个目录，或者两者混合体组成。
 
-`tar`程序的语法如下。
+`tar` 程序的语法如下。
 
 ```bash
 tar mode[options] pathname...
@@ -130,17 +130,17 @@ $ tar tvfW archive.tar
 $ tar xf ../playground2.tar --wildcards 'home/me/playground/\*.txt'
 ```
 
-注意，`tar`命令还原的时候，总是还原为相对路径。如果归档的时候，保存的是绝对路径，那么还原的时候，这个绝对路径会整个变成相对路径。
+注意，`tar` 命令还原的时候，总是还原为相对路径。如果归档的时候，保存的是绝对路径，那么还原的时候，这个绝对路径会整个变成相对路径。
 
-`find`命令可以与`tar`命令配合使用。
+`find` 命令可以与 `tar` 命令配合使用。
 
 ```bash
 find playground -name 'file.txt' -exec tar rf playground.tar '{}' '+'
 ```
 
-上面的命令先用`find`程序找到所有名为`file.txt`的文件，然后使用追加模式(`r`)的`tar`命令，把匹配的文件添加到归档文件`playground.tar`里面。
+上面的命令先用 `find` 程序找到所有名为 `file.txt` 的文件，然后使用追加模式(`r`)的 `tar` 命令，把匹配的文件添加到归档文件 `playground.tar` 里面。
 
-这种`tar`和`find`的配合使用，可以创建逐渐增加的目录树或者整个系统的备份。通过`find`命令匹配新于某个时间戳的文件，我们就能够创建一个归档文件，其只包含新于上一个 tar 包的文件。
+这种 `tar` 和 `find` 的配合使用，可以创建逐渐增加的目录树或者整个系统的备份。通过 `find` 命令匹配新于某个时间戳的文件，我们就能够创建一个归档文件，其只包含新于上一个 tar 包的文件。
 
 tar 支持压缩功能。
 
@@ -181,7 +181,7 @@ $ tar rvf archive.tar.bz2 xyz.txt
 
 ## rsync
 
-`rsync`命令用于在多个目录之间、或者本地与远程目录之间同步。字母`r`表示`remote`。
+`rsync` 命令用于在多个目录之间、或者本地与远程目录之间同步。字母 `r` 表示 `remote`。
 
 ```bash
 rsync options source destination
@@ -190,12 +190,12 @@ rsync options source destination
 source 和 destination 是下列选项之一:
 
 - 一个本地文件或目录
-- 一个远端文件或目录，以`[user@]host:path`的形式存在
-- 一个远端 rsync 服务器，由`rsync://[user@]host[:port]/path`指定
+- 一个远端文件或目录，以 `[user@]host:path` 的形式存在
+- 一个远端 rsync 服务器，由 `rsync://[user@]host[:port]/path` 指定
 
 注意 source 和 destination 两者之一必须是本地文件。rsync 不支持远端到远端的复制。
 
-`rsync`命令的参数如下。
+`rsync` 命令的参数如下。
 
 - `-a` 递归和保护文件属性
 - `-v` 冗余输出

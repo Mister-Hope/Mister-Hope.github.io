@@ -33,7 +33,7 @@ category: Linux
 
 1. 搜索后，我们打开别的文件，发现也被高亮了，怎么关闭高亮?
 
-命令模式下，输入`:nohlsearch` 也可以`:set nohlsearch`；当然，可以简写，`noh` 或者 `set noh`。
+命令模式下，输入 `:nohlsearch` 也可以 `:set nohlsearch`；当然，可以简写，`noh` 或者 `set noh`。
 
 :::
 

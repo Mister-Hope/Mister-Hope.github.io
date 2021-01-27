@@ -25,7 +25,7 @@ category: JavaScript
 </canvas>
 ```
 
-在使用 Canvas 前，用`canvas.getContext`  来测试浏览器是否支持 Canvas:
+在使用 Canvas 前，用 `canvas.getContext` 来测试浏览器是否支持 Canvas:
 
 ```html
 <!-- HTML代码 -->

@@ -9,7 +9,7 @@ tags:
 
 1. `process.cwd()` 方法返回 Node.js 进程当前工作的目录
 
-   例: 我在`F:\自己的文件\自己在网上学习的知识点\node学习\node-API\process` 这个文件加下面创建了一个 test.js 在该 js 文件中写下下面的代码，然后右键 `run test.js`
+   例: 我在 `F:\自己的文件\自己在网上学习的知识点\node学习\node-API\process` 这个文件加下面创建了一个 test.js 在该 js 文件中写下下面的代码，然后右键 `run test.js`
 
    ```js
    const cwd = process.cwd();

@@ -76,7 +76,7 @@ StopIteration
 81
 ```
 
-所以，我们创建了一个 generator 后，基本上永远不会调用 `next()`，而是通过 for 循环来迭代它，并且不需要关心 `StopIteration`的错误。
+所以，我们创建了一个 generator 后，基本上永远不会调用 `next()`，而是通过 for 循环来迭代它，并且不需要关心 `StopIteration` 的错误。
 
 Generator 非常强大。如果推算的算法比较复杂，用类似列表生成式的 for 循环无法实现的时候，还可以用函数来实现。
 

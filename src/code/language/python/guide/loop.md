@@ -26,7 +26,7 @@ for name in names:
     print(name)
 ```
 
-执行这段代码，会依次打印`names`的每一个元素:
+执行这段代码，会依次打印 `names` 的每一个元素:
 
 ```text
 Michael

@@ -297,7 +297,7 @@ for (var number in evenNumbers) {
 
 方法 `takeWhile()` 和 `skipWhile()` 还可以帮助您从 Iterable 中过滤元素。
 
-这个例子展示了`takeWhile()` 和 `skipWhile()` 是如何拆分包含数字的 Iterable。
+这个例子展示了 `takeWhile()` 和 `skipWhile()` 是如何拆分包含数字的 Iterable。
 
 ```dart
 main() {

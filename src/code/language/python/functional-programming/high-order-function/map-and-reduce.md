@@ -5,7 +5,7 @@ time: 2020-05-31
 category: Python
 ---
 
-Python 内建了 `map()`和 `reduce()` 函数。
+Python 内建了 `map()` 和 `reduce()` 函数。
 
 如果您读过 Google 的那篇大名鼎鼎的论文 [“MapReduce: Simplified Data Processing on Large Clusters”](http://research.google.com/archive/mapreduce.html)，您就能大概明白 map / reduce 的概念。
 
@@ -87,7 +87,7 @@ reduce(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)
 
 当然求和运算可以直接用 Python 内建函数 `sum()`，没必要动用 `reduce`。
 
-但是如果要把序列 `[1, 3, 5, 7, 9]`变换成整数 13579，`reduce` 就可以派上用场:
+但是如果要把序列 `[1, 3, 5, 7, 9]` 变换成整数 13579，`reduce` 就可以派上用场:
 
 ```py
 >>> from functools import reduce

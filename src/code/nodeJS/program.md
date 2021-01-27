@@ -35,18 +35,18 @@ tags:
 console.log("Hello, world.");
 ```
 
-第一行总是写上`'use strict'`;是因为我们总是以严格模式运行 JavaScript 代码，避免各种潜在陷阱。
+第一行总是写上 `'use strict';` 是因为我们总是以严格模式运行 JavaScript 代码，避免各种潜在陷阱。
 
-然后，选择一个目录，例如`C:\Workspace`，把文件保存为`hello.js`，就可以打开命令行窗口，把当前目录切换到 hello.js 所在目录，然后输入以下命令运行这个程序了:
+然后，选择一个目录，例如 `C:\Workspace`，把文件保存为 `hello.js`，就可以打开命令行窗口，把当前目录切换到 hello.js 所在目录，然后输入以下命令运行这个程序了:
 
 ```bash
 C:\Workspace>node hello.js
 Hello, world.
 ```
 
-也可以保存为别的名字，比如`first.js`，但是必须要以`.js`结尾。此外，文件名只能是英文字母、数字和下划线的组合。
+也可以保存为别的名字，比如 `first.js`，但是必须要以 `.js` 结尾。此外，文件名只能是英文字母、数字和下划线的组合。
 
-如果当前目录下没有`hello.js`这个文件，运行`node hello.js`就会报错:
+如果当前目录下没有 `hello.js` 这个文件，运行 `node hello.js` 就会报错:
 
 ```sh
 C:\Workspace>node hello.js
@@ -61,19 +61,19 @@ Error: Cannot find module 'C:\Workspace\hello.js'
     at node.js
 ```
 
-报错的意思就是，没有找到`hello.js`这个文件，因为文件不存在。这个时候，就要检查一下当前目录下是否有这个文件了。
+报错的意思就是，没有找到 `hello.js` 这个文件，因为文件不存在。这个时候，就要检查一下当前目录下是否有这个文件了。
 
 ## 命令行模式和 Node.js 交互模式
 
 请注意区分命令行模式和 Node.js 交互模式。
 
-看到类似`C:\>`是在 Windows 提供的命令行模式:
+看到类似 `C:\>` 是在 Windows 提供的命令行模式:
 
 ![run-node-hello](./assets/run-node-hello.png)
 
-在命令行模式下，可以执行 Node.js 进入 Node.js 交互式环境，也可以执行 Node.js `hello.js`运行一个`.js`文件。
+在命令行模式下，可以执行 Node.js 进入 Node.js 交互式环境，也可以执行 Node.js `hello.js` 运行一个 `.js` 文件。
 
-看到`>`是在 Node.js 交互式环境下:
+看到`>` 是在 Node.js 交互式环境下:
 
 ![node-interactive-env](./assets/node-interactive-env.png)
 
@@ -90,7 +90,7 @@ Error: Cannot find module 'C:\Workspace\hello.js'
 
 直接可以看到结果 600。
 
-但是，写一个`calc.js`的文件，内容如下:
+但是，写一个 `calc.js` 的文件，内容如下:
 
 ```js
 100 + 200 + 300;
@@ -104,7 +104,7 @@ C:\Workspace>node calc.js
 
 发现什么输出都没有。
 
-这是正常的。想要输出结果，必须自己用`console.log()`打印出来。把`calc.js`改造一下:
+这是正常的。想要输出结果，必须自己用 `console.log()` 打印出来。把 `calc.js` 改造一下:
 
 ```js
 console.log(100 + 200 + 300);
@@ -125,16 +125,16 @@ C:\Workspace>node calc.js
 node --use_strict calc.js
 ```
 
-后续代码，如无特殊说明，我们都会直接给 Node.js 传递`--use_strict`参数来开启严格模式。
+后续代码，如无特殊说明，我们都会直接给 Node.js 传递 `--use_strict` 参数来开启严格模式。
 
 ## 小结
 
-用文本编辑器写 JavaScript 程序，然后保存为后缀为`.js`的文件，就可以用 Node.js 直接运行这个程序了。
+用文本编辑器写 JavaScript 程序，然后保存为后缀为 `.js` 的文件，就可以用 Node.js 直接运行这个程序了。
 
-Node.js 的交互模式和直接运行`.js`文件有什么区别呢?
+Node.js 的交互模式和直接运行 `.js` 文件有什么区别呢?
 
 直接输入 Node.js 进入交互模式，相当于启动了 Node.js 解释器，但是等待您一行一行地输入源代码，每输入一行就执行一行。
 
-直接运行`node hello.js`文件相当于启动了 Node.js 解释器，然后一次性把`hello.js`文件的源代码给执行了，您是没有机会以交互的方式输入源代码的。
+直接运行 `node hello.js` 文件相当于启动了 Node.js 解释器，然后一次性把 `hello.js` 文件的源代码给执行了，您是没有机会以交互的方式输入源代码的。
 
 在编写 JavaScript 代码的时候，完全可以一边在文本编辑器里写代码，一边开一个 Node.js 交互式命令窗口，在写代码的过程中，把部分代码粘到命令行去验证，事半功倍! 前提是得有个 27 寸的超大显示器!

@@ -39,4 +39,4 @@ code --disable-extensions .
 
 ## .vscode 文件夹
 
-基于工作区的`.vscode` 文件夹位于根目录下。例如任务运行对应的 `tasks.json` 配置文件和调试器对应的 `launch.json` 文件。
+基于工作区的 `.vscode` 文件夹位于根目录下。例如任务运行对应的 `tasks.json` 配置文件和调试器对应的 `launch.json` 文件。

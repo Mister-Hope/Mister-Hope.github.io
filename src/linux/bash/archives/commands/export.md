@@ -1,6 +1,6 @@
 # export
 
-`export`命令用于向子 Shell 输出变量。
+`export` 命令用于向子 Shell 输出变量。
 
 ```bash
 export hotellogs="/workspace/hotel-api/storage/logs"
@@ -13,9 +13,9 @@ bash
 cd hotellogs
 ```
 
-上面命令的执行结果会进入`hotellogs`变量指向的目录。
+上面命令的执行结果会进入 `hotellogs` 变量指向的目录。
 
-`export`命令还可以显示所有环境变量。
+`export` 命令还可以显示所有环境变量。
 
 ```bash
 $ export
@@ -26,7 +26,7 @@ LC_CTYPE=en_US.UTF-8
 LESS=-R
 ```
 
-如果想查看单个变量，使用`echo $VARIABLE_NAME`。
+如果想查看单个变量，使用 `echo $VARIABLE_NAME`。
 
 ```bash
 $ echo $SHELL

@@ -106,7 +106,7 @@ if (window.XMLHttpRequest) request = new XMLHttpRequest();
 else request = new ActiveXObject("Microsoft.XMLHTTP");
 ```
 
-通过检测 `window` 对象是否有 `XMLHttpRequest` 属性来确定浏览器是否支持标准的 `XMLHttpRequest`。注意，不要根据浏览器的`navigator.userAgent` 来检测浏览器是否支持某个 JavaScript 特性，一是因为这个字符串本身可以伪造，二是通过 IE 版本判断 JavaScript 特性将非常复杂。
+通过检测 `window` 对象是否有 `XMLHttpRequest` 属性来确定浏览器是否支持标准的 `XMLHttpRequest`。注意，不要根据浏览器的 `navigator.userAgent` 来检测浏览器是否支持某个 JavaScript 特性，一是因为这个字符串本身可以伪造，二是通过 IE 版本判断 JavaScript 特性将非常复杂。
 
 当创建了 `XMLHttpRequest` 对象后，要先设置 `onreadystatechange` 的回调函数。在回调函数中，通常我们只需通过 `readyState === 4` 判断请求是否完成，如果已完成，再根据 `status === 200` 判断是否是一个成功的响应。
 
@@ -205,7 +205,7 @@ CORS 全称 `Cross-Origin Resource Sharing`，是 HTML5 规范定义的如何跨
 
 假设本域是 `my.com`，外域是 `sina.com`，只要响应头 `Access-Control-Allow-Origin` 为 `https://my.com`，或者是 `*`，本次请求就可以成功。
 
-可见，跨域能否成功，取决于对方服务器是否愿意给您设置一个正确的`Access-Control-Allow-Origin`，决定权始终在对方手中。
+可见，跨域能否成功，取决于对方服务器是否愿意给您设置一个正确的 `Access-Control-Allow-Origin`，决定权始终在对方手中。
 
 上面这种跨域请求，称之为“简单请求”。简单请求包括 `GET`、`HEAD` 和 `POST` ( POST 的 `Content-Type` 类型
 仅限 `application/x-www-form-urlencoded、multipart/form-data和text/plain`)，并且不能出现任何自定义头(例如，X-Custom: 12345)，通常能满足 90% 的需求。

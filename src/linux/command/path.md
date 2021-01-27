@@ -107,7 +107,7 @@ alias ls='ls --color=auto'
 
 从执行结果中可以看到，`/bin` 目录已经包含在 PATH 环境变量中，因此在使用类似 `rm`、`rmdir`、`ls` 等命令时，即便直接使用其命令名，Linux 也可以找到该命令。
 
-为了印证以上观点，下面举个反例，如果我们将 `ls` 命令移动到 `/root` 目录下，由于 PATH 环境变量中没有包含此目录，所有当直接使用 `ls` 命令名执行时，Linux 将无法找到此命令的可执行文件，并提示`No such file or directory`，示例命令如下:
+为了印证以上观点，下面举个反例，如果我们将 `ls` 命令移动到 `/root` 目录下，由于 PATH 环境变量中没有包含此目录，所有当直接使用 `ls` 命令名执行时，Linux 将无法找到此命令的可执行文件，并提示 `No such file or directory`，示例命令如下:
 
 ```shell-session
 [root@localhost ~]# mv /bin/ls /root

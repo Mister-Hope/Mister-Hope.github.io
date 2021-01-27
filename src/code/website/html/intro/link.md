@@ -82,7 +82,7 @@ URL 使用路径查找文件。路径指定文件系统中您感兴趣的文件�
 
 此目录结构的根目录称为 `creation-hyperlinks`。当在网站上工作时， 您会有一个包含整个网站的目录。在根目录，我们有一个 `index.html` 和一个 `contacts.html` 文件。在真实的网站上，`index.html` 将会成为我们的主页或登录页面。
 
-我们的根目录还有两个目录—— `pdfs` 和 `projects`，它们分别包含一个 PDF (project-brief.pdf) 文件和一个 `index.html` 文件。请注意您可以有两个`index.html`文件，前提是他们在不同的目录下，许多网站就是如此。第二个`index.html`或许是项目相关信息的主登录界面。
+我们的根目录还有两个目录—— `pdfs` 和 `projects`，它们分别包含一个 PDF (project-brief.pdf) 文件和一个 `index.html` 文件。请注意您可以有两个 `index.html` 文件，前提是他们在不同的目录下，许多网站就是如此。第二个 `index.html` 或许是项目相关信息的主登录界面。
 
 - 指向当前目录:
 

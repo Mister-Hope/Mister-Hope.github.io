@@ -1,8 +1,8 @@
 # egrep
 
-`egrep`命令用于显示匹配正则模式的行，与`grep -E`命令等价。
+`egrep` 命令用于显示匹配正则模式的行，与 `grep -E` 命令等价。
 
-下面是`example.txt`文件的内容。
+下面是 `example.txt` 文件的内容。
 
 ```text
 Lorem ipsum
@@ -26,7 +26,7 @@ ipsum dolor sit
 amet.
 ```
 
-`egrep`命令显示包括`Lorem`或`dolor`的行。
+`egrep` 命令显示包括 `Lorem` 或 `dolor` 的行。
 
 ```bash
 $ egrep '(Lorem|dolor)' example.txt
