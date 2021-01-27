@@ -42,9 +42,10 @@ module.exports = [
       {
         title: "Terminal",
         icon: "shell",
+        path: "terminal/",
         collapsable: false,
         prefix: "terminal/",
-        children: ["", "get-started", "settings"],
+        children: ["get-started", "settings"],
       },
     ],
   },

@@ -1,12 +1,12 @@
 ---
 title: Windows PowerShell
 author: 沈启民
-icon: tool
+icon: shell
 ---
 
-## 简介
-
 Powershell (Windows Powershell)是 Microsoft 为 Windows 设计的新的命令行程序，这个 Windows 内置的命令行 shell 包括交互式提示和脚本环境，它们可以独立使用也可以交互使用。
+
+<!-- more -->
 
 我们平时所见的大多数的脚本(bat,perl,bash,sh)，接受(输入)和返回(输出)的都是文本。Powershell 是在 .Net 公共语言运行时(CLR-Common Language Runtime)和.Net Framework 的基础上构建的，所以 Powershell 可以接受和返回.Net 对象。也就是说，Powershell 是面向对象的脚本语言。
 
