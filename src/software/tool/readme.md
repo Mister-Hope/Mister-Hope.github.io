@@ -12,3 +12,7 @@ icon: tool
 - [typora](https://www.typora.io/): 一个页面很漂亮的 Markdown 编辑器
 
 - [Potplayer](https://potplayer.daum.net/?lang=zh_CN): 心目中最 NB 的视频播放器，没有之一
+
+- [Terminal](Terminal.md): Windows 终端
+
+- [PowerShell](powershell.md): Windows 的命令行外壳程序和脚本环境
