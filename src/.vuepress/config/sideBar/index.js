@@ -1,10 +1,16 @@
 module.exports = {
   zh: {
+    "/software/vscode/": require("./software/vscode"),
+
+    "/software/git/": require("./software/git"),
+
+    "/software/comsol/": require("./software/comsol"),
+
+    "/software/": require("./software"),
+
     "/physics/": require("./physics"),
 
     "/note/": require("./note"),
-
-    "/software/": require("./software"),
 
     "/linux/": require("./linux"),
 
@@ -29,7 +35,7 @@ module.exports = {
 
     "/code/vue/": require("./vue"),
 
-    "/code/nodeJS/": [
+    "/code/node-js/": [
       "",
       "intro",
       "install",
@@ -61,9 +67,10 @@ module.exports = {
       "language/",
       "vue/",
       "mini-app/",
+      "node-js",
       "windows/",
-      "backEnd/",
       "Android/",
+      "backEnd/",
       "Angular/",
       "react/",
     ],

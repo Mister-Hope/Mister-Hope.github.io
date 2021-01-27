@@ -130,7 +130,7 @@ Node.js 是一个著名的基于 JavaScript 的后端工具，可以很方便快
 
 ::: tip
 
-关于 Node.js 的详细教程，请查看[这里](../../../nodeJS/readme.md)
+关于 Node.js 的详细教程，请查看[这里](../../../node-js/readme.md)
 
 :::
 

@@ -35,7 +35,7 @@ tags:
 
 请先安装 Node.js 并将 npm 与 Node.js 添加至 path。
 
-- [安装 Node.js](../nodeJS/install.md)
+- [安装 Node.js](../node-js/install.md)
 
 - [添加到 path](../windows/addPath.md)
 

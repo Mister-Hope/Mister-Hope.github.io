@@ -3,6 +3,7 @@ title: 基础介绍
 icon: basic
 time: 2019-12-26
 category: 基础
+sticky: true
 ---
 
 这些是一些最为基础的内容，是后来补充进博客中的，供访客查阅。

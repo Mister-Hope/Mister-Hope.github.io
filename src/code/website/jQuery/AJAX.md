@@ -7,7 +7,7 @@ category: jQuery
 
 ::: tip 章节过时
 
-目前，一套代码已经可以在多个浏览器上运行良好了，所以 jQuery 的意义并不大。在 Node.js 中，我们使用 [axios](../../nodeJS/package/axois.md) 来进行请求。
+目前，一套代码已经可以在多个浏览器上运行良好了，所以 jQuery 的意义并不大。在 Node.js 中，我们使用 [axios](../../node-js/package/axois.md) 来进行请求。
 
 :::
 

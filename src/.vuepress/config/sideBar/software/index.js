@@ -1,35 +1,11 @@
 module.exports = [
   "",
   "editor",
-  {
-    title: "VS Code",
-    icon: "vscode",
-    collapsable: false,
-    prefix: "vscode/",
-    children: require("./vscode"),
-  },
-  "Chrome",
-  {
-    title: "Git",
-    icon: "git",
-    collapsable: false,
-    prefix: "git/",
-    children: require("./git"),
-  },
-  {
-    title: "Github",
-    icon: "Github",
-    collapsable: false,
-    prefix: "git/github/",
-    children: ["", "intro", "pr", "semantic", "actions", "deploy"],
-  },
-  {
-    title: "COMSOL",
-    icon: "app",
-    collapsable: false,
-    prefix: "comsol/",
-    children: require("./comsol"),
-  },
+  "vscode/",
+  "chrome",
+  "git/",
+  "git/github/",
+  "comsol/",
   {
     title: "工具软件",
     icon: "tool",
@@ -49,6 +25,6 @@ module.exports = [
       },
     ],
   },
-  "Apache",
+  "apache",
   "nginx",
 ];

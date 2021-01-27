@@ -23,7 +23,7 @@ module.exports = {
             { text: "轻言细语", link: "poem/", icon: "like" },
           ],
         },
-        { text: "Node.js", link: "nodeJS/", icon: "nodeJS" },
+        { text: "Node.js", link: "node-js/", icon: "nodeJS" },
       ],
     },
     {

@@ -5,6 +5,7 @@ time: 2019-09-05
 category: CSS
 tags:
   - 介绍
+sticky: true
 ---
 
 CSS 指层叠样式表 (**C**ascading **S**tyle **S**heets)，它负责描述网页元素的具体样式。

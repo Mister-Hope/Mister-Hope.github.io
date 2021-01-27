@@ -15,7 +15,7 @@ project:
   - name: in东师
     type: project
     desc: 三十万字+的东师攻略，全方位的东师生活介绍，东师新生们的最佳入学指南❤
-    link: https://github.com/Hope-Studio/inNENU-miniprogram
+    link: https://github.com/Hope-Studio/inNENU-miniapp
     cover: https://mp.innenu.com/img/inNENU.png
 
   - name: "@mr-hope/vuepress-plugin-comment"
@@ -28,6 +28,12 @@ project:
     type: link
     desc: Vuepress Markdown 增强插件
     link: https://vuepress-md-enhance.mrhope.site/zh/
+    cover: https://vuepress-theme.mrhope.site/logo.png
+
+  - name: "@mr-hope/vuepress-plugin-feed"
+    type: link
+    desc: Vuepress Feed 插件
+    link: https://vuepress-feed.mrhope.site/zh/
     cover: https://vuepress-theme.mrhope.site/logo.png
 
   - name: ftp-hope
@@ -76,9 +82,17 @@ project:
     type: book
     link: /code/website/
 
+  - name: 设计教程
+    type: article
+    link: /design/
+
   - name: 随笔
     type: article
     link: /note/
+
+  - name: 物理笔记
+    type: article
+    link: /physics/
 
 footer: '<a href="http://beian.miit.gov.cn/" target="_blank">备案号: 辽ICP备18007023号</a> | <a href="/about/site/">关于网站</a>'
 ---

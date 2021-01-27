@@ -137,5 +137,5 @@ module.exports = [
       "14",
     ],
   },
-  "nodeJS/",
+  "node-js/",
 ];

@@ -3,7 +3,8 @@ title: JavaScript 教程
 icon: javascript
 time: 2019-09-12
 category: JavaScript
-copyrightText: 此部分博客采用 <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh">知识共享 署名-相同方式共享 3.0协议</a>
+copyrightText: 此部分博客采用 <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh">知识共享 署名-相同方式共享 3.0 协议</a>
+sticky: true
 ---
 
 > 部分内容参考/来自廖雪峰、阮一峰书籍与博客
@@ -48,7 +49,7 @@ copyrightText: 此部分博客采用 <a href="https://creativecommons.org/licens
 
 - [错误处理](error/readme.md)
 
-- [node.js](../../nodeJS/readme.md)
+- [node.js](../../node-js/readme.md)
 
 ## 在线教程
 

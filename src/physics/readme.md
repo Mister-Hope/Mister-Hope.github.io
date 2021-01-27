@@ -1,6 +1,7 @@
 ---
 title: 物理笔记
 category: 物理
+sticky: true
 ---
 
 ## 目录
