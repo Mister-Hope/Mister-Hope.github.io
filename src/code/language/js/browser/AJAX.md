@@ -24,15 +24,15 @@ Ajax 不是 JavaScript 的规范，它只是一个哥们“发明”的缩写: A
 ```js
 "use strict";
 
-function success(text) {
-  const textarea = document.getElementById("test-response-text");
+const success = (text) => {
+  const textarea = document.querySelector("#test-response-text");
   textarea.value = text;
-}
+};
 
-function fail(code) {
-  const textarea = document.getElementById("test-response-text");
+const fail = (code) => {
+  const textarea = document.querySelector("#test-response-text");
   textarea.value = `Error code: ${code}`;
-}
+};
 
 const request = new XMLHttpRequest(); // 新建XMLHttpRequest对象
 
@@ -63,15 +63,15 @@ alert("请求已发送，请等待响应...");
 ```js
 "use strict";
 
-function success(text) {
-  const textarea = document.getElementById("test-ie-response-text");
+const success = (text) => {
+  const textarea = document.querySelector("#test-ie-response-text");
   textarea.value = text;
-}
+};
 
-function fail(code) {
-  const textarea = document.getElementById("test-ie-response-text");
+const fail = (code) => {
+  const textarea = document.querySelector("#test-ie-response-text");
   textarea.value = `Error code: ${code}`;
-}
+};
 
 const request = new ActiveXObject("Microsoft.XMLHTTP"); // 新建Microsoft.XMLHTTP对象
 
@@ -167,24 +167,24 @@ refreshPrice({"0000001":{"code": "0000001", ... });
 因此我们需要首先在页面中准备好回调函数:
 
 ```js
-function refreshPrice(data) {
-  const p = document.getElementById("test-jsonp");
+const refreshPrice = (data) => {
+  const p = document.querySelector("#test-jsonp");
 
   p.innerHTML = `当前价格: ${data["0000001"].name}: ${data["0000001"].price}；${data["1399001"].name}: ${data["1399001"].price}`;
-}
+};
 ```
 
 最后用 `getPrice()` 函数触发:
 
 ```js
-function getPrice() {
+const getPrice = () => {
   const js = document.createElement("script");
   const head = document.getElementsByTagName("head")[0];
 
   js.src =
     "https://api.money.126.net/data/feed/0000001,1399001?callback=refreshPrice";
   head.appendChild(js);
-}
+};
 ```
 
 就完成了跨域加载数据。

@@ -20,7 +20,7 @@ category: JavaScript
 通常，上传的文件都由后台服务器处理，JavaScript 可以在提交表单时对文件扩展名做检查，以便防止用户上传无效格式的文件:
 
 ```js
-const f = document.getElementById("test-file-upload");
+const f = document.querySelector("#test-file-upload");
 const filename = f.value; // 'C:\fakepath\test.png'
 
 if (
@@ -47,9 +47,9 @@ HTML5 的 File API 提供了 `File` 和 `FileReader` 两个主要对象，可以
 下面的例子演示了如何读取用户选取的图片文件，并在一个 `<div>` 中预览图像:
 
 ```js
-const fileInput = document.getElementById("test-image-file");
-const info = document.getElementById("test-file-info");
-const preview = document.getElementById("test-image-preview");
+const fileInput = document.querySelector("#test-image-file");
+const info = document.querySelector("#test-file-info");
+const preview = document.querySelector("#test-image-preview");
 
 // 监听change事件:
 fileInput.addEventListener("change", () => {

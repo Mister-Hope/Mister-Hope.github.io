@@ -34,7 +34,7 @@ HTML 表单的输入控件主要有以下几种:
 ```
 
 ```js
-const input = document.getElementById("email");
+const input = document.querySelector("#email");
 
 input.value; // '用户输入的值'
 ```
@@ -49,8 +49,8 @@ input.value; // '用户输入的值'
 ````
 
 ```js
-const mon = document.getElementById("monday");
-const tue = document.getElementById("tuesday");
+const mon = document.querySelector("#monday");
+const tue = document.querySelector("#tuesday");
 mon.value; // '1'
 tue.value; // '2'
 mon.checked; // true 或者 false
@@ -66,7 +66,7 @@ tue.checked; // true 或者 false
 ```
 
 ```js
-const input = document.getElementById("email");
+const input = document.querySelector("#email");
 input.value = "test@example.com"; // 文本框的内容已更新
 ```
 
@@ -109,7 +109,7 @@ HTML5 新增了大量标准控件，常用的包括 `date`、`datetime`、`datet
 
 <script>
   function doSubmitForm() {
-    const form = document.getElementById("test-form");
+    const form = document.querySelector("#test-form");
     // 可以在此修改form的input...
     // 提交form:
     form.submit();
@@ -128,7 +128,7 @@ HTML5 新增了大量标准控件，常用的包括 `date`、`datetime`、`datet
 
 <script>
   function checkForm() {
-    const form = document.getElementById("test-form");
+    const form = document.querySelector("#test-form");
     // 可以在此修改 form 的 input...
     // 继续下一步:
     return true;
@@ -152,7 +152,7 @@ HTML5 新增了大量标准控件，常用的包括 `date`、`datetime`、`datet
 
 <script>
   function checkForm() {
-    const pwd = document.getElementById("password");
+    const pwd = document.querySelector("#password");
     // 把用户输入的明文变为MD5:
     pwd.value = toMD5(pwd.value);
     // 继续下一步:
@@ -176,8 +176,8 @@ HTML5 新增了大量标准控件，常用的包括 `date`、`datetime`、`datet
 
 <script>
   function checkForm() {
-    const input_pwd = document.getElementById("input-password");
-    const md5_pwd = document.getElementById("md5-password");
+    const input_pwd = document.querySelector("#input-password");
+    const md5_pwd = document.querySelector("#md5-password");
     // 把用户输入的明文变为MD5:
     md5_pwd.value = toMD5(input_pwd.value);
     // 继续下一步:

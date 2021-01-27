@@ -562,7 +562,7 @@ const b = new Uint8Array(a.buffer);
 
 ### TypedArray byteLength 与 byteOffset
 
-`byteLength`属性返回 TypedArray 数组占据的内存长度，单位为字节。`byteOffset`属性返回 TypedArray 数组从底层`ArrayBuffer`对象的哪个字节开始。这两个属性都是只读属性。
+`byteLength` 属性返回 TypedArray 数组占据的内存长度，单位为字节。`byteOffset` 属性返回 TypedArray 数组从底层 `ArrayBuffer` 对象的哪个字节开始。这两个属性都是只读属性。
 
 ```js
 const b = new ArrayBuffer(8);
@@ -582,7 +582,7 @@ v3.byteOffset; // 2
 
 ### TypedArray.prototype.length
 
-`length`属性表示 TypedArray 数组含有多少个成员。注意将`byteLength`属性和`length`属性区分，前者是字节长度，后者是成员长度。
+`length` 属性表示 TypedArray 数组含有多少个成员。注意将 `byteLength` 属性和 `length` 属性区分，前者是字节长度，后者是成员长度。
 
 ```js
 const a = new Int16Array(8);
@@ -593,7 +593,7 @@ a.byteLength; // 16
 
 ### TypedArray.prototype.set()
 
-TypedArray 数组的`set`方法用于复制数组(普通数组或 TypedArray 数组)，也就是将一段内容完全复制到另一段内存。
+TypedArray 数组的 `set` 方法用于复制数组(普通数组或 TypedArray 数组)，也就是将一段内容完全复制到另一段内存。
 
 ```js
 const a = new Uint8Array(8);
@@ -602,9 +602,9 @@ const b = new Uint8Array(8);
 b.set(a);
 ```
 
-上面代码复制`a`数组的内容到`b`数组，它是整段内存的复制，比一个个拷贝成员的那种复制快得多。
+上面代码复制 `a` 数组的内容到 `b` 数组，它是整段内存的复制，比一个个拷贝成员的那种复制快得多。
 
-`set`方法还可以接受第二个参数，表示从`b`对象的哪一个成员开始复制`a`对象。
+`set` 方法还可以接受第二个参数，表示从 `b` 对象的哪一个成员开始复制 `a` 对象。
 
 ```js
 const a = new Uint16Array(8);
@@ -613,11 +613,11 @@ const b = new Uint16Array(10);
 b.set(a, 2);
 ```
 
-上面代码的`b`数组比`a`数组多两个成员，所以从`b[2]`开始复制。
+上面代码的 `b` 数组比 `a` 数组多两个成员，所以从 `b[2]` 开始复制。
 
 ### TypedArray.prototype.subarray()
 
-`subarray`方法是对于 TypedArray 数组的一部分，再建立一个新的视图。
+`subarray` 方法是对于 TypedArray 数组的一部分，再建立一个新的视图。
 
 ```js
 const a = new Uint16Array(8);
@@ -627,11 +627,11 @@ a.byteLength; // 16
 b.byteLength; // 2
 ```
 
-`subarray`方法的第一个参数是起始的成员序号，第二个参数是结束的成员序号(不含该成员)，如果省略则包含剩余的全部成员。所以，上面代码的`a.subarray(2,3)`，意味着 b 只包含`a[2]`一个成员，字节长度为 2。
+`subarray` 方法的第一个参数是起始的成员序号，第二个参数是结束的成员序号(不含该成员)，如果省略则包含剩余的全部成员。所以，上面代码的 `a.subarray(2,3)`，意味着 b 只包含 `a[2]` 一个成员，字节长度为 2。
 
 ### TypedArray.prototype.slice()
 
-TypeArray 实例的`slice`方法，可以返回一个指定位置的新的 TypedArray 实例。
+TypeArray 实例的 `slice` 方法，可以返回一个指定位置的新的 TypedArray 实例。
 
 ```js
 let ui8 = Uint8Array.of(0, 1, 2);
@@ -639,13 +639,13 @@ ui8.slice(-1);
 // Uint8Array [ 2 ]
 ```
 
-上面代码中，`ui8`是 8 位无符号整数数组视图的一个实例。它的`slice`方法可以从当前视图之中，返回一个新的视图实例。
+上面代码中，`ui8` 是 8 位无符号整数数组视图的一个实例。它的 `slice` 方法可以从当前视图之中，返回一个新的视图实例。
 
-`slice`方法的参数，表示原数组的具体位置，开始生成新数组。负值表示逆向的位置，即-1 为倒数第一个位置，-2 表示倒数第二个位置，以此类推。
+`slice` 方法的参数，表示原数组的具体位置，开始生成新数组。负值表示逆向的位置，即 `-1` 为倒数第一个位置，`-2` 表示倒数第二个位置，以此类推。
 
 ### TypedArray.of()
 
-TypedArray 数组的所有构造函数，都有一个静态方法`of`，用于将参数转为一个 TypedArray 实例。
+TypedArray 数组的所有构造函数，都有一个静态方法 `of`，用于将参数转为一个 TypedArray 实例。
 
 ```js
 Float32Array.of(0.151, -8, 3.7);
@@ -670,7 +670,7 @@ tarr[2] = 3;
 
 ### TypedArray.from()
 
-静态方法`from`接受一个可遍历的数据结构(比如数组)作为参数，返回一个基于这个结构的 TypedArray 实例。
+静态方法 `from` 接受一个可遍历的数据结构(比如数组)作为参数，返回一个基于这个结构的 TypedArray 实例。
 
 ```js
 Uint16Array.from([0, 1, 2]);
@@ -684,7 +684,7 @@ const ui16 = Uint16Array.from(Uint8Array.of(0, 1, 2));
 ui16 instanceof Uint16Array; // true
 ```
 
-`from`方法还可以接受一个函数，作为第二个参数，用来对每个元素进行遍历，功能类似`map`方法。
+`from` 方法还可以接受一个函数，作为第二个参数，用来对每个元素进行遍历，功能类似 `map` 方法。
 
 ```js
 Int8Array.of(127, 126, 125).map((x) => 2 * x);
@@ -694,7 +694,7 @@ Int16Array.from(Int8Array.of(127, 126, 125), (x) => 2 * x);
 // Int16Array [ 254, 252, 250 ]
 ```
 
-上面的例子中，`from`方法没有发生溢出，这说明遍历不是针对原来的 8 位整数数组。也就是说，`from`会将第一个参数指定的 TypedArray 数组，拷贝到另一段内存之中，处理之后再将结果转成指定的数组格式。
+上面的例子中，`from` 方法没有发生溢出，这说明遍历不是针对原来的 8 位整数数组。也就是说，`from` 会将第一个参数指定的 TypedArray 数组，拷贝到另一段内存之中，处理之后再将结果转成指定的数组格式。
 
 ## 复合视图
 
@@ -708,7 +708,7 @@ const usernameView = new Uint8Array(buffer, 4, 16);
 const amountDueView = new Float32Array(buffer, 20, 1);
 ```
 
-上面代码将一个 24 字节长度的`ArrayBuffer`对象，分成三个部分:
+上面代码将一个 24 字节长度的 `ArrayBuffer` 对象，分成三个部分:
 
 - 字节 0 到字节 3: 1 个 32 位无符号整数
 - 字节 4 到字节 19: 16 个 8 位整数
@@ -726,11 +726,11 @@ struct someStruct {
 
 ## DataView 视图
 
-如果一段数据包括多种类型(比如服务器传来的 HTTP 数据)，这时除了建立`ArrayBuffer`对象的复合视图以外，还可以通过`DataView`视图进行操作。
+如果一段数据包括多种类型(比如服务器传来的 HTTP 数据)，这时除了建立 `ArrayBuffer` 对象的复合视图以外，还可以通过 `DataView` 视图进行操作。
 
-`DataView`视图提供更多操作选项，而且支持设定字节序。本来，在设计目的上，`ArrayBuffer`对象的各种 TypedArray 视图，是用来向网卡、声卡之类的本机设备传送数据，所以使用本机的字节序就可以了；而`DataView`视图的设计目的，是用来处理网络设备传来的数据，所以大端字节序或小端字节序是可以自行设定的。
+`DataView` 视图提供更多操作选项，而且支持设定字节序。本来，在设计目的上，`ArrayBuffer` 对象的各种 TypedArray 视图，是用来向网卡、声卡之类的本机设备传送数据，所以使用本机的字节序就可以了；而 `DataView` 视图的设计目的，是用来处理网络设备传来的数据，所以大端字节序或小端字节序是可以自行设定的。
 
-`DataView`视图本身也是构造函数，接受一个`ArrayBuffer`对象作为参数，生成视图。
+`DataView` 视图本身也是构造函数，接受一个 `ArrayBuffer` 对象作为参数，生成视图。
 
 ```js
 DataView(ArrayBuffer buffer [, 字节起始位置 [, 长度]]);
@@ -743,13 +743,13 @@ const buffer = new ArrayBuffer(24);
 const dv = new DataView(buffer);
 ```
 
-`DataView`实例有以下属性，含义与 TypedArray 实例的同名方法相同。
+`DataView` 实例有以下属性，含义与 TypedArray 实例的同名方法相同。
 
 - `DataView.prototype.buffer`: 返回对应的 ArrayBuffer 对象
 - `DataView.prototype.byteLength`: 返回占据的内存字节长度
 - `DataView.prototype.byteOffset`: 返回当前视图从对应的 ArrayBuffer 对象的哪个字节开始
 
-`DataView`实例提供 8 个方法读取内存。
+`DataView` 实例提供 8 个方法读取内存。
 
 - **`getInt8`**: 读取 1 个字节，返回一个 8 位整数。
 - **`getUint8`**: 读取 1 个字节，返回一个无符号的 8 位整数。
@@ -760,25 +760,25 @@ const dv = new DataView(buffer);
 - **`getFloat32`**: 读取 4 个字节，返回一个 32 位浮点数。
 - **`getFloat64`**: 读取 8 个字节，返回一个 64 位浮点数。
 
-这一系列`get`方法的参数都是一个字节序号(不能是负数，否则会报错)，表示从哪个字节开始读取。
+这一系列 `get` 方法的参数都是一个字节序号(不能是负数，否则会报错)，表示从哪个字节开始读取。
 
 ```js
 const buffer = new ArrayBuffer(24);
 const dv = new DataView(buffer);
 
-// 从第1个字节读取一个8位无符号整数
+// 从第 1 个字节读取一个 8 位无符号整数
 const v1 = dv.getUint8(0);
 
-// 从第2个字节读取一个16位无符号整数
+// 从第 2 个字节读取一个 16 位无符号整数
 const v2 = dv.getUint16(1);
 
-// 从第4个字节读取一个16位无符号整数
+// 从第 4 个字节读取一个 16 位无符号整数
 const v3 = dv.getUint16(3);
 ```
 
-上面代码读取了`ArrayBuffer`对象的前 5 个字节，其中有一个 8 位整数和两个十六位整数。
+上面代码读取了 `ArrayBuffer` 对象的前 5 个字节，其中有一个 8 位整数和两个十六位整数。
 
-如果一次读取两个或两个以上字节，就必须明确数据的存储方式，到底是小端字节序还是大端字节序。默认情况下，`DataView`的`get`方法使用大端字节序解读数据，如果需要使用小端字节序解读，必须在`get`方法的第二个参数指定`true`。
+如果一次读取两个或两个以上字节，就必须明确数据的存储方式，到底是小端字节序还是大端字节序。默认情况下，`DataView` 的 `get` 方法使用大端字节序解读数据，如果需要使用小端字节序解读，必须在 `get` 方法的第二个参数指定 `true`。
 
 ```js
 // 小端字节序
@@ -802,16 +802,16 @@ DataView 视图提供 8 个方法写入内存。
 - **`setFloat32`**: 写入 4 个字节的 32 位浮点数。
 - **`setFloat64`**: 写入 8 个字节的 64 位浮点数。
 
-这一系列`set`方法，接受两个参数，第一个参数是字节序号，表示从哪个字节开始写入，第二个参数为写入的数据。对于那些写入两个或两个以上字节的方法，需要指定第三个参数，`false`或者`undefined`表示使用大端字节序写入，`true`表示使用小端字节序写入。
+这一系列 `set` 方法，接受两个参数，第一个参数是字节序号，表示从哪个字节开始写入，第二个参数为写入的数据。对于那些写入两个或两个以上字节的方法，需要指定第三个参数，`false` 或者 `undefined` 表示使用大端字节序写入，`true` 表示使用小端字节序写入。
 
 ```js
-// 在第1个字节，以大端字节序写入值为25的32位整数
+// 在第 1 个字节，以大端字节序写入值为 25 的 32 位整数
 dv.setInt32(0, 25, false);
 
-// 在第5个字节，以大端字节序写入值为25的32位整数
+// 在第 5 个字节，以大端字节序写入值为 25 的 32 位整数
 dv.setInt32(4, 25);
 
-// 在第9个字节，以小端字节序写入值为2.5的32位浮点数
+// 在第 9 个字节，以小端字节序写入值为 2.5 的 32 位浮点数
 dv.setFloat32(8, 2.5, true);
 ```
 
@@ -825,15 +825,15 @@ const littleEndian = (() => {
 })();
 ```
 
-如果返回`true`，就是小端字节序；如果返回`false`，就是大端字节序。
+如果返回 `true`，就是小端字节序；如果返回 `false`，就是大端字节序。
 
 ## 二进制数组的应用
 
-大量的 Web API 用到了`ArrayBuffer`对象和它的视图对象。
+大量的 Web API 用到了 `ArrayBuffer` 对象和它的视图对象。
 
 ### Ajax
 
-传统上，服务器通过 Ajax 操作只能返回文本数据，即`responseType`属性默认为`text`。`XMLHttpRequest`第二版`XHR2`允许服务器返回二进制数据，这时分成两种情况。如果明确知道返回的二进制数据类型，可以把返回类型(`responseType`)设为`arraybuffer`；如果不知道，就设为`blob`。
+传统上，服务器通过 Ajax 操作只能返回文本数据，即 `responseType` 属性默认为 `text`。`XMLHttpRequest` 第二版 `XHR2` 允许服务器返回二进制数据，这时分成两种情况。如果明确知道返回的二进制数据类型，可以把返回类型( `responseType` )设为 `arraybuffer`；如果不知道，就设为 `blob`。
 
 ```js
 let xhr = new XMLHttpRequest();

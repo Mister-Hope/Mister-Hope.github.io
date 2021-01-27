@@ -113,7 +113,7 @@ new Promise(test)
 "use strict";
 
 // 清除log:
-const logging = document.getElementById("test-promise-log");
+const logging = document.querySelector("#test-promise-log");
 
 while (logging.children.length > 1)
   logging.removeChild(logging.children[logging.children.length - 1]);
@@ -164,7 +164,7 @@ job1.then(job2).then(job3).catch(handleError);
 ```js
 "use strict";
 
-let logging = document.getElementById("test-promise2-log");
+let logging = document.querySelector("#test-promise2-log");
 while (logging.children.length > 1) {
   logging.removeChild(logging.children[logging.children.length - 1]);
 }
@@ -228,7 +228,7 @@ function ajax(method, url, data) {
   });
 }
 
-let log = document.getElementById("test-promise-ajax-result");
+let log = document.querySelector("#test-promise-ajax-result");
 let p = ajax("GET", "/api/categories");
 p.then(function (text) {
   // 如果AJAX成功，获得响应内容

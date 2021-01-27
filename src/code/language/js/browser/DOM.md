@@ -19,31 +19,9 @@ category: JavaScript
 
 <!-- more -->
 
-在操作一个 DOM 节点前，我们需要通过各种方式先拿到这个 DOM 节点。最常用的方法是 `document.getElementById()` 和 `document.getElementsByTagName()`，以及 CSS 选择器 `document.getElementsByClassName()`。
+在操作一个 DOM 节点前，我们需要通过各种方式先拿到这个 DOM 节点。最常用的方法是使用 `querySelector()` 和 `querySelectorAll()`。
 
-由于 ID 在 HTML 文档中是唯一的，所以 `document.getElementById()` 可以直接定位唯一的一个 DOM 节点。`document.getElementsByTagName()` 和 `document.getElementsByClassName()` 总是返回一组 DOM 节点。要精确地选择 DOM，可以先定位父节点，再从父节点开始选择，以缩小范围。
-
-例如:
-
-```js
-// 返回ID为'test'的节点:
-const test = document.getElementById("test");
-
-// 先定位ID为'test-table'的节点，再返回其内部所有tr节点:
-const trs = document.getElementById("test-table").getElementsByTagName("tr");
-
-// 先定位ID为'test-div'的节点，再返回其内部所有class包含red的节点:
-const reds = document.getElementById("test-div").getElementsByClassName("red");
-
-// 获取节点test下的所有直属子节点:
-const cs = test.children;
-
-// 获取节点test下第一个、最后一个子节点:
-const first = test.firstElementChild;
-const last = test.lastElementChild;
-```
-
-第二种方法是使用 `querySelector()` 和 `querySelectorAll()`，需要了解 `selector` 语法，然后使用条件来获取节点，更加方便:
+使用这个 API 需要了解 CSS selector 语法，然后使用条件来获取节点，十分方便:
 
 ```js
 // 通过 querySelector 获取 ID 为 q1 的节点:
@@ -56,6 +34,30 @@ const ps = q1.querySelectorAll("div.highlighted > p");
 ::: warning
 
 低版本的 IE < 8 不支持 `querySelector` 和 `querySelectorAll`。IE8 仅有限支持。
+
+在历史上，使用的方法是 `document.getElementById()` 和 `document.getElementsByTagName()`，以及 CSS 选择器 `document.getElementsByClassName()`。
+
+由于 ID 在 HTML 文档中是唯一的，所以 `document.getElementById()` 可以直接定位唯一的一个 DOM 节点。`document.getElementsByTagName()` 和 `document.getElementsByClassName()` 总是返回一组 DOM 节点。要精确地选择 DOM，可以先定位父节点，再从父节点开始选择，以缩小范围。
+
+例如:
+
+```js
+// 返回ID为 'test' 的节点:
+const test = document.getElementById("test");
+
+// 先定位ID为'test-table'的节点，再返回其内部所有tr节点:
+const trs = document.getElementById("test-table").getElementsByTagName("tr");
+
+// 先定位ID为'test-div'的节点，再返回其内部所有class包含red的节点:
+const reds = document.getElementById("test-div").getElementsByClassName("red");
+
+// 获取节点 test 下的所有直属子节点:
+const cs = test.children;
+
+// 获取节点 test 下第一个、最后一个子节点:
+const first = test.firstElementChild;
+const last = test.lastElementChild;
+```
 
 :::
 
@@ -71,7 +73,7 @@ const ps = q1.querySelectorAll("div.highlighted > p");
 
 ```js
 // 获取<p id="p-id">...</p>
-const p = document.getElementById("p-id");
+const p = document.querySelector("#p-id");
 // 设置文本为abc:
 p.innerHTML = "ABC"; // <p id="p-id">ABC</p>
 // 设置HTML:
@@ -85,7 +87,7 @@ p.innerHTML = 'ABC <span style="color:red">RED</span> XYZ';
 
 ```js
 // 获取<p id="p-id">...</p>
-const p = document.getElementById("p-id");
+const p = document.querySelector("#p-id");
 // 设置文本:
 p.innerText = '<script>alert("Hi")</script>';
 // HTML被自动编码，无法设置一个<script>节点:
@@ -104,7 +106,7 @@ IE < 9 不支持 `textContent`。
 
 ```js
 // 获取<p id="p-id">...</p>
-const p = document.getElementById("p-id");
+const p = document.querySelector("#p-id");
 // 设置CSS:
 p.style.color = "#ff0000";
 p.style.fontSize = "20px";
@@ -134,8 +136,8 @@ p.style.paddingTop = "2em";
 把 `<p id="js">JavaScript</p>` 添加到 `<div id="list">` 的最后一项:
 
 ```js
-const js = document.getElementById("js");
-const list = document.getElementById("list");
+const js = document.querySelector("#js");
+const list = document.querySelector("#list");
 
 list.appendChild(js);
 ```
@@ -157,7 +159,7 @@ list.appendChild(js);
 更多的时候我们会从零创建一个新的节点，然后插入到指定位置:
 
 ```js
-const list = document.getElementById("list");
+const list = document.querySelector("#list");
 const haskell = document.createElement("p");
 
 haskell.id = "haskell";
@@ -207,8 +209,8 @@ document.getElementsByTagName("head")[0].appendChild(d);
 可以这么写:
 
 ```js
-const list = document.getElementById("list");
-const ref = document.getElementById("python");
+const list = document.querySelector("#list");
+const ref = document.querySelector("#python");
 const haskell = document.createElement("p");
 
 haskell.id = "haskell";
@@ -232,7 +234,7 @@ list.insertBefore(haskell, ref);
 
 ```js
 let c;
-const list = document.getElementById("list");
+const list = document.querySelector("#list");
 
 for (let i = 0; i < list.children.length; i++) c = list.children[i]; // 拿到第i个子节点
 ```
@@ -245,7 +247,7 @@ for (let i = 0; i < list.children.length; i++) c = list.children[i]; // 拿到�
 
 ```js
 // 拿到待删除节点:
-const self = document.getElementById("to-be-removed");
+const self = document.querySelector("#to-be-removed");
 // 拿到父节点:
 const parent = self.parentElement;
 // 删除:
@@ -274,7 +276,7 @@ removed === self; // true
 当我们用如下代码删除子节点时:
 
 ```js
-const parent = document.getElementById("parent");
+const parent = document.querySelector("#parent");
 
 parent.removeChild(parent.children[0]);
 parent.removeChild(parent.children[1]); // <-- 浏览器报错

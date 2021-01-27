@@ -11,13 +11,13 @@ category: JavaScript
 
 - [浏览器对象](browser-object.md)
 
-- [操作 DOM](DOM.md)
+- [操作 DOM](dom.md)
 
 - [操作表单](form.md)
 
 - [操作文件](file.md)
 
-- [Ajax](AJAX.md)
+- [Ajax](ajax.md)
 
 - [Promise](promise.md)
 

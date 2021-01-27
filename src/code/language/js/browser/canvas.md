@@ -5,7 +5,7 @@ time: 2019-10-19
 category: JavaScript
 ---
 
-`Canvas`是 HTML5 新增的组件，它就像一块幕布，可以用 JavaScript 在上面绘制各种图表、动画等。
+`Canvas` 是 HTML5 新增的组件，它就像一块幕布，可以用 JavaScript 在上面绘制各种图表、动画等。
 
 <!-- more -->
 
@@ -17,7 +17,7 @@ category: JavaScript
 <canvas id="test-canvas" width="300" height="200" />
 ```
 
-由于浏览器对 HTML5 标准支持不一致，所以，通常在`<canvas>`内部添加一些说明性 HTML 代码，如果浏览器支持 Canvas，它将忽略`<canvas>`内部的 HTML，如果浏览器不支持 Canvas，它将显示`<canvas>`内部的 HTML:
+由于浏览器对 HTML5 标准支持不一致，所以，通常在 `<canvas>` 内部添加一些说明性 HTML 代码，如果浏览器支持 Canvas，它将忽略 `<canvas>` 内部的 HTML，如果浏览器不支持 Canvas，它将显示 `<canvas>` 内部的 HTML:
 
 ```html
 <canvas id="test-stock" width="300" height="200">
@@ -25,7 +25,7 @@ category: JavaScript
 </canvas>
 ```
 
-在使用 Canvas 前，用`canvas.getContext`来测试浏览器是否支持 Canvas:
+在使用 Canvas 前，用`canvas.getContext`  来测试浏览器是否支持 Canvas:
 
 ```html
 <!-- HTML代码 -->
@@ -37,7 +37,7 @@ category: JavaScript
 ```js
 "use strict";
 
-let canvas = document.getElementById("test-canvas");
+let canvas = document.querySelector("#test-canvas");
 if (canvas.getContext) {
   console.log("您的浏览器支持Canvas!");
 } else {
@@ -45,7 +45,7 @@ if (canvas.getContext) {
 }
 ```
 
-`getContext('2d')`方法让我们拿到一个 CanvasRenderingContext2D 对象，所有的绘图操作都需要通过这个对象完成。
+`getContext('2d')` 方法让我们拿到一个 `CanvasRenderingContext2D` 对象，所有的绘图操作都需要通过这个对象完成。
 
 ```js
 let ctx = canvas.getContext("2d");
@@ -67,12 +67,12 @@ gl = canvas.getContext("webgl");
 
 Canvas 的坐标以左上角为原点，水平向右为 X 轴，垂直向下为 Y 轴，以像素为单位，所以每个点都是非负整数。
 
-`CanvasRenderingContext2D`对象有若干方法来绘制图形:
+`CanvasRenderingContext2D` 对象有若干方法来绘制图形:
 
 ```js
 "use strict";
 
-let canvas = document.getElementById("test-shape-canvas"),
+let canvas = document.querySelector("#test-shape-canvas"),
   ctx = canvas.getContext("2d");
 
 ctx.clearRect(0, 0, 200, 200); // 擦除(0,0)位置大小为200x200的矩形，擦除的意思是把该区域变为透明
@@ -98,7 +98,7 @@ ctx.stroke(path);
 ```js
 "use strict";
 
-let canvas = document.getElementById("test-text-canvas"),
+let canvas = document.querySelector("#test-text-canvas"),
   ctx = canvas.getContext("2d");
 
 ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -119,4 +119,4 @@ Canvas 除了能绘制基本的形状和文本，还可以实现动画、缩放�
 
 - 可以创建多个重叠的 Canvas 绘制不同的层，而不是在一个 Canvas 中绘制非常复杂的图；
 
-- 背景图片如果不变可以直接用`<img>`标签并放到最底层。
+- 背景图片如果不变可以直接用 `<img>` 标签并放到最底层。
