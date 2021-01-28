@@ -1,5 +1,4 @@
 ---
-title: 定义
 title: 数组
 icon: array
 time: 2019-09-25
