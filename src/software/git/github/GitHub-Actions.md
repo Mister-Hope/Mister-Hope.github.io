@@ -39,16 +39,19 @@ name: GitHub Actions Demo
 `on`字段指定触发 `workflow` 的时机，通常是某些事件。
 ```yml
 on: push
-```
->上面代码指定，push事件触发 workflow。
 
-on字段也可以是事件的数组。
+#上面代码指定，push事件触发 workflow。
+```
+
+`on`字段也可以是事件的数组。
 ```yml
 on: [push, pull_request]
-```
->上面代码指定，push事件或pull_request事件都可以触发 workflow。
 
-完整的事件列表，请查看官方文档。除了代码库事件，GitHub Actions 也支持外部事件触发，或者定时运行。
+#上面代码指定，push事件或pull_request事件都可以触发 workflow。
+```
+
+完整的事件列表，请查看官方文档。
+除了代码库事件，GitHub Actions 也支持外部事件触发，或者定时运行。
 
 3. on.<push|pull_request>.<tags|branches>
 
@@ -58,12 +61,13 @@ on:
   push:
     branches:    
       - master
+
+#上面代码指定，只有master分支发生push事件时，才会触发 workflow。
 ```
->上面代码指定，只有master分支发生push事件时，才会触发 workflow。
 
 4. jobs.<job_id>.name
 
-workflow文件的主体是`jobs`字段，表示要执行的一项或多项任务。
+`workflow`文件的主体是`jobs`字段，表示要执行的一项或多项任务。
 
 `jobs`字段里面，需要写出每一项任务的`job_id`，具体名称自定义。
 `job_id`里面的`name`字段是任务的说明(可填可不填)。
@@ -73,12 +77,13 @@ jobs:
     name: My first job
   my_second_job:
     name: My second job
+
+#>上面代码的jobs字段包含两项任务，job_id分别是my_first_job和my_second_job。
 ```
->上面代码的`jobs`字段包含两项任务，`job_id`分别是`my_first_job`和`my_second_job`。
 
 5. jobs.<job_id>.needs
 
-needs字段指定当前任务的依赖关系，即运行顺序。
+`needs`字段指定当前任务的依赖关系，即运行顺序。
 ```yml
 jobs:
   job1:
@@ -86,11 +91,11 @@ jobs:
     needs: job1
   job3:
     needs: [job1, job2]
-```
->上面代码中，`job1`必须先于`job2`完成，而`job3`等待`job1`和`job2`的完成才能运行。
->因此，这个 `workflow` 的运行顺序依次为：`job1`、`job2`、`job3`。
 
-1. jobs.<job_id>.runs-on
+#上面代码中，`job1`必须先于`job2`完成，而`job3`等待`job1`和`job2`的完成才能运行。因此，这个 `workflow` 的运行顺序依次为：`job1`、`job2`、`job3`。
+```
+
+6. jobs.<job_id>.runs-on
 
 `runs-on`字段指定运行所需要的虚拟机环境。
 它是**必填字段**。目前可用的虚拟机如下。
@@ -99,17 +104,19 @@ jobs:
 `windows-latest`，`windows-2019`或`windows-2016`
 `macOS-latest`或`macOS-10.14`
 
->下面代码指定虚拟机环境为ubuntu-18.04。
+
 ```yml
 runs-on: ubuntu-18.04
+
+#上面代码指定虚拟机环境为ubuntu-18.04。
 ```
 7. jobs.<job_id>.steps
 
 `steps`字段指定每个 `Job` 的运行步骤，可以包含一个或多个步骤。每个步骤都可以指定以下三个字段。
 
->jobs.<job_id>.steps.name：步骤名称。
->jobs.<job_id>.steps.run：该步骤运行的命令或者 action。
->jobs.<job_id>.steps.env：该步骤所需的环境变量。
++ `jobs.<job_id>.steps.name`：步骤名称。
++ `jobs.<job_id>.steps.run`：该步骤运行的命令或者 action。
++ `jobs.<job_id>.steps.env`：该步骤所需的环境变量。
 
 
 下面是一个完整的 workflow 文件的范例。
@@ -131,6 +138,5 @@ jobs:
       run: |
         echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
 
-上面代码中，`steps`字段只包括一个步骤。
-该步骤先注入四个环境变量，然后执行一条 `Bash` 命令。
+#上面代码中，`steps`字段只包括一个步骤。该步骤先注入四个环境变量，然后执行一条 `Bash` 命令。
 ```
