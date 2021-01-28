@@ -50,8 +50,8 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: dist
+          BRANCH: gh-pages    #要部署的分支
+          FOLDER: dist  #要部署的文件夹
 ```
 
 ##自动部署服务器
@@ -75,50 +75,19 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master #如果你使用 action/checkout@v2 须将 persist credentials设置为 false，部署才能正常工作。
 
-    # 第二步：构建和部署
-    - name: Build 
-      uses: actions/setup-node@master
-    - run: npm install # 安装第三方包
-    - run: npm run build # 打包
-    - run: tar -zcvf release.tgz .nuxt static nuxt.config.js package.json package-lock.json pm2.config.json
-      # 把.nuxt、nuxt.config.js等文件，打包压缩为release.tgz
+    # 第二步： 配置环境
+    - name: Configuration environment
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan mrhope.site >> ~/.ssh/known_hosts
+          git config --global user.name 'Github用户名'
+          git config --global user.email 'Github注册邮箱'
 
-    # 第三步：发布 Release
-    - name: Create Release # 创建Release，可以在仓库看到一个个版本
-      id: create_release
-      uses: actions/create-release@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.TOKEN }} # GitHub添加的Token
-      with:
-        tag_name: ${{ github.ref }} # (tag)标签名称
-        release_name: Release ${{ github.ref }}
-        draft: false # 是否是草稿
-        prerelease: false # 是否是预发布
-
-    # 第四步：上传构建结果到 Release（把打包的tgz上传到Release）
-    - name: Upload Release Asset
-      id: upload-release-asset
-      uses: actions/upload-release-asset@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }} # 上传地址，通过创建Release获取到的
-        asset_path: ./release.tgz # 要上传文件
-        asset_name: release.tgz # 上传后的文件名
-        asset_content_type: application/x-tgz
-
-    # 第五步：部署到服务器
-    - name: Deploy
-      uses: appleboy/ssh-action@master # 使用ssh链接服务器
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
-        script: | # 执行命令（运行到服务器）cd：要确保服务器有这个目录； wget：下载上一步的release到服务器； tar：解压； 安装依赖；启动服务
-          cd /root/realworld-nuxtjs
-          wget https://github.com/YuYun95/realworld-nuxtjs/releases/latest/download/release.tgz -O release.tgz
-          tar zxvf release.tgz
-          npm install --production
-          pm2 reload pm2.config.json
+    # 第三步： 部署 
+      - name: Deploy
+        run: |
+          git push -f git@xxx.xxx:/www/wwwroot/xxx gh-pages
+          ssh git@xxx.xxx "cd /www/wwwroot/xxx && git reset --hard HEAD"
 ```
