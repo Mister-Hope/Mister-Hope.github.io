@@ -1,14 +1,15 @@
 ---
+title: generator
 icon: generator
 time: 2019-10-07
 category: JavaScript
 ---
 
-# generator
-
 `generator` (生成器)是 ES6 标准引入的新的数据类型。一个 `generator` 看上去像一个函数，但可以返回多次。
 
 ES6 定义 `generator` 标准的哥们借鉴了 Python 的 generator 的概念和语法，如果您对 Python 的 generator 很熟悉，那么 ES6 的 generator 就是小菜一碟了。
+
+<!-- more -->
 
 我们先复习函数的概念。一个函数是一段完整的代码，调用一个函数就是传入参数，然后返回结果:
 

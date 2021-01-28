@@ -1,12 +1,13 @@
 ---
+title: map & reduce
 icon: map
 time: 2019-10-05
 category: JavaScript
 ---
 
-# map & reduce
-
 如果您读过 Google 的那篇大名鼎鼎的论文 [“MapReduce: Simplified Data Processing on Large Clusters”](https://research.google.com/archive/mapreduce.html)(要翻墙)，您就能大概明白 map/reduce 的概念。
+
+<!-- more -->
 
 ## map
 

@@ -35,6 +35,8 @@ category: JavaScript
 
 - [对象简介](object.md)
 
+- [函数简介](function.md)
+
 ## 练习
 
 - [练手](exercise.md)

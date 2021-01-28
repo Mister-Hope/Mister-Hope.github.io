@@ -25,6 +25,7 @@ module.exports = [
       "array",
       "object",
       "exercise",
+      "function",
       "map-and-set",
       "iterable",
     ],

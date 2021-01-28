@@ -1,9 +1,8 @@
 ---
+title: 函数的属性和方法
 icon: list
 category: JavaScript
 ---
-
-# 函数的属性和方法
 
 ## name 属性
 

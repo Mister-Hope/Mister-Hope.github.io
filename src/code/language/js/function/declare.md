@@ -1,12 +1,13 @@
 ---
+title: 函数的声明
 icon: notice
 time: 2019-10-01
 category: JavaScript
 ---
 
-# 函数的声明
-
 JavaScript 有三种声明函数的方法。
+
+<!-- more -->
 
 ## function 命令
 
@@ -137,14 +138,14 @@ function f() {}
 
 ```js
 f();
-let f = function () {};
+var f = function () {};
 // TypeError: undefined is not a function
 ```
 
 上面的代码等同于下面的形式。
 
 ```js
-let f;
+var f;
 
 f();
 f = function () {};

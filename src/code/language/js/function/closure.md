@@ -1,10 +1,9 @@
 ---
+title: 闭包
 icon: lock
 time: 2019-10-07
 category: JavaScript
 ---
-
-# 闭包
 
 ## 函数作为返回值
 

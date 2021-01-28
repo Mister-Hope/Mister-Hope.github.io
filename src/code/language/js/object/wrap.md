@@ -1,12 +1,11 @@
 ---
+title: 包装对象
 icon: wrap
 time: 2019-10-11
 category: JavaScript
 ---
 
-# 包装对象
-
-除了这些类型外，JavaScript 还提供了包装对象，熟悉 Java 就会了解 `int` 和 `Integer` 的关系。
+除了类型外，JavaScript 还提供了包装对象，熟悉 Java 就会了解 `int` 和 `Integer` 的关系。
 
 `number`、`boolean` 和 `string` 都有包装对象。没错，在 JavaScript 中，字符串也区分 `string` 类型和它的包装类型。包装对象用 `new` 创建:
 
@@ -15,6 +14,8 @@ const n = new Number(123); // 123,生成了新的包装类型
 const b = new Boolean(true); // true,生成了新的包装类型
 const s = new String("str"); // 'str',生成了新的包装类型
 ```
+
+<!-- more -->
 
 虽然包装对象看上去和原来的值一模一样，显示出来也是一模一样，但他们的类型已经变为 `object` 了! 所以，包装对象和原始值用 `===` 比较会返回 `false`:
 
