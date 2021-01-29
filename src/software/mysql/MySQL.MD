@@ -17,21 +17,21 @@ MySQL 是一个关系型数据库管理系统
 在这个下载界面会有几个版本的选择,
 
 1. MySQL Community Server 社区版本，开源免费，但不提供官方技术支持。
-2. MySQL Enterprise Edition 企业版本，需付费，可以试用30天。
-3. MySQL Cluster 集群版，开源免费。可将几个 MySQL Server 封装成一个 Server。
-4. MySQL Cluster CGE 高级集群版，需付费。
-5. MySQL Workbench ( GUITOOL )一款专为 MySQL 设计的 ER/数据库建模工具。它是著名的数据库设计工具 DBDesigner4 的继任者。   MySQL Workbench 又分为两个版本，分别是社区版( MySQL Workbench OSS )、商用版( MySQL WorkbenchSE )。
+1. MySQL Enterprise Edition 企业版本，需付费，可以试用30天。
+1. MySQL Cluster 集群版，开源免费。可将几个 MySQL Server 封装成一个 Server。
+1. MySQL Cluster CGE 高级集群版，需付费。
+1. MySQL Workbench ( GUITOOL )一款专为 MySQL 设计的 ER/数据库建模工具。它是著名的数据库设计工具 DBDesigner4 的继任者。   MySQL Workbench 又分为两个版本，分别是社区版( MySQL Workbench OSS )、商用版( MySQL WorkbenchSE )。
 
 MySQL Community Server 是开源免费的，这也是我们通常用的 MySQL 的版本。
 
 1. 下载后得到`.zip`压缩包.
 
-2. 解压到自己想要安装到的目录
+1. 解压到自己想要安装到的目录
 
-3. 添加环境变量：我的电脑 → 属性 → 高级 → 环境变量
+1. 添加环境变量：我的电脑 → 属性 → 高级 → 环境变量
     选择 PATH,在其后面添加: mysql 安装文件下面的 bin 文件夹
 
-4. 新建 mysql 配置文件
+1. 新建 mysql 配置文件
 
     在 mysql 文件夹中新建 `my.ini` 文件,编辑 `my.ini` 文件,注意替换路径位置
 
@@ -43,37 +43,37 @@ MySQL Community Server 是开源免费的，这也是我们通常用的 MySQL �
     skip-grant-tables
     ```
     
-5. 启动管理员模式下的 CMD，输入`cd /d bin目录路径`将路径切换至 mysql 下的 bin 目录，然后输入`mysqld –install` (安装 mysql )
+1. 启动管理员模式下的 CMD，输入`cd /d bin目录路径`将路径切换至 mysql 下的 bin 目录，然后输入`mysqld –install` (安装 mysql )
 
-6. 再输入`mysqld --initialize-insecure --user=mysql` 初始化数据文件
+1. 再输入`mysqld --initialize-insecure --user=mysql` 初始化数据文件
    
-7. 然后输入`net start mysql`再次启动 mysql,然后用命令 `mysql –u root –p`进入mysql管理界面（密码可为空）
+1. 然后输入`net start mysql`再次启动 mysql,然后用命令 `mysql –u root –p`进入mysql管理界面（密码可为空）
 
-8. 进入界面后更改 root 密码
+1. 进入界面后更改 root 密码
 `update mysql.user set authentication_string=password('123456') where user='root' and Host = 'localhost';`
-9. 刷新权限
+1. 刷新权限
 `flush privileges;`
 
     ![flush privileges](./assets/flush privileges.png)
 
-10. 修改 `my.ini` 文件删除最后一句 `skip-grant-tables`
+1. 修改 `my.ini` 文件删除最后一句 `skip-grant-tables`
 
-```
-[mysqld]
-basedir=D:\work\mysql-5.7.19\
-datadir=D:\work\mysql-5.7.19\data\
-port=3306
-#skip-grant-tables
-```
+    ```
+    [mysqld]
+    basedir=D:\work\mysql-5.7.19\
+    datadir=D:\work\mysql-5.7.19\data\
+    port=3306
+    #skip-grant-tables
+    ```
 
-11. 重启 mysql 即可正常使用
+1. 重启 mysql 即可正常使用
 
-```SQL
-net stop mysql
-net start mysql
-```
+    ```SQL
+    net stop mysql
+    net start mysql
+    ```
 
-12. 连接上测试出现以下结果就安装好了
+1. 连接上测试出现以下结果就安装好了
     ![result](./assets/result.png)
 
 ## 连接数据库  
@@ -83,7 +83,7 @@ net start mysql
     - 在 DOS 命令行窗口进入 安装目录`\mysql\bin`
     - 可设置环境变量，设置了环境变量，可以在任意目录打开！
 
-2. 输入连接数据库语句: 
+1. 输入连接数据库语句: 
    `mysql -h 服务器主机地址 -u 用户名 -p 用户密码`
 
     **-p后面不能加空格,否则会被当做密码的内容,导致登录失败 !**
@@ -126,7 +126,7 @@ exit; 退出 Mysql
    CREATE DATABASE name;
    ```
 
-2. 显示数据库
+1. 显示数据库
     
     ```sql
     show databases;
@@ -135,14 +135,14 @@ exit; 退出 Mysql
     **注意：为了不再显示的时候乱码，要修改数据库默认编码。以下以 `GBK` 编码页面为例进行说明：
 
     1. 修改 MYSQL 的配置文件： `my.ini` 里面修改 `default-character-set=gbk`
-    2. 代码运行时修改,
+    1. 代码运行时修改,
         
         1. Java 代码：`jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=gbk`
-        2. PHP 代码：`header("Content-Type:text/html;charset=gb2312");`
-        3. C 语言代码：`int mysql_set_character_set( MYSQL * mysql, char * csname)；`
+        1. PHP 代码：`header("Content-Type:text/html;charset=gb2312");`
+        1. C 语言代码：`int mysql_set_character_set( MYSQL * mysql, char * csname)；`
             该函数用于为当前连接设置默认的字符集。字符串 `csname` 指定了1个有效的字符集名称。连接校对成为字符集的默认校对。该函数的工作方式与 `SET NAMES` 语句类似，但它还能设置 mysql → charset 的值，从而影响了由 `mysql_real_escape_string()` 设置的字符集。
 
-3. 删除数据库 
+1. 删除数据库 
     
     ```sql
     drop database name;
@@ -160,7 +160,7 @@ exit; 退出 Mysql
    drop database if exists name;
    ```
 
-4. 选择数据库
+1. 选择数据库
     
     ```sql
     use name;
@@ -180,7 +180,7 @@ exit; 退出 Mysql
     
     use 数据库后，使用 `show databases` 就能查询所有数据库，如果想跳到其他数据库，用 use 其他数据库名字就可以了。
 
-5. 当前选择的数据库
+1. 当前选择的数据库
 
     ```sql
     select database();
@@ -190,102 +190,102 @@ exit; 退出 Mysql
 
     1. 显示 MYSQL 的版本
     
-    ```sql
-    mysql> select version(); 
-    +-----------------------+ 
-    | version()             | 
-    +-----------------------+ 
-    | 6.0.4-alpha-community | 
-    +-----------------------+ 
-    1 row in set (0.02 sec) 
-    ```
+        ```sql
+        mysql> select version(); 
+        +-----------------------+ 
+        | version()             | 
+        +-----------------------+ 
+        | 6.0.4-alpha-community | 
+        +-----------------------+ 
+        1 row in set (0.02 sec) 
+        ```
     
-    2. 显示当前时间
+    1. 显示当前时间
     
-    ```sql
-    mysql> select now(); 
-    +---------------------+ 
-    | now()               | 
-    +---------------------+ 
-    | 2009-09-15 22:35:32 | 
-    +---------------------+ 
-    1 row in set (0.04 sec) 
-    ```
+        ```sql
+        mysql> select now(); 
+        +---------------------+ 
+        | now()               | 
+        +---------------------+ 
+        | 2009-09-15 22:35:32 | 
+        +---------------------+ 
+        1 row in set (0.04 sec) 
+        ```
     
-    3. 显示年月日
+    1. 显示年月日
     
-    ```sql
-    SELECT DAYOFMONTH(CURRENT_DATE); 
-    +--------------------------+ 
-    | DAYOFMONTH(CURRENT_DATE) | 
-    +--------------------------+ 
-    |                       15 | 
-    +--------------------------+ 
-    1 row in set (0.01 sec) 
-    ```
+        ```sql
+        SELECT DAYOFMONTH(CURRENT_DATE); 
+        +--------------------------+ 
+        | DAYOFMONTH(CURRENT_DATE) | 
+        +--------------------------+ 
+        |                       15 | 
+        +--------------------------+ 
+        1 row in set (0.01 sec) 
+        ```
+        
+        ```sql
+        SELECT MONTH(CURRENT_DATE); 
+        +---------------------+ 
+        | MONTH(CURRENT_DATE) | 
+        +---------------------+ 
+        |                   9 | 
+        +---------------------+ 
+        1 row in set (0.00 sec) 
+        ```
+        
+        ```sql
+        SELECT YEAR(CURRENT_DATE); 
+        +--------------------+ 
+        | YEAR(CURRENT_DATE) | 
+        +--------------------+ 
+        |               2009 | 
+        +--------------------+ 
+        1 row in set (0.00 sec) 
+        ```
+        
+    1. 显示字符串
+        
+        ```sql
+        mysql> SELECT "welecome to my blog!"; 
+        +----------------------+ 
+        | welecome to my blog! | 
+        +----------------------+ 
+        | welecome to my blog! | 
+        +----------------------+ 
+        1 row in set (0.00 sec) 
+        ```
     
-    ```sql
-    SELECT MONTH(CURRENT_DATE); 
-    +---------------------+ 
-    | MONTH(CURRENT_DATE) | 
-    +---------------------+ 
-    |                   9 | 
-    +---------------------+ 
-    1 row in set (0.00 sec) 
-    ```
+    1. 当计算器用
     
-    ```sql
-    SELECT YEAR(CURRENT_DATE); 
-    +--------------------+ 
-    | YEAR(CURRENT_DATE) | 
-    +--------------------+ 
-    |               2009 | 
-    +--------------------+ 
-    1 row in set (0.00 sec) 
-    ```
+        ```sql
+        select ((4 * 4) / 10 ) + 25; 
+        +----------------------+ 
+        | ((4 * 4) / 10 ) + 25 | 
+        +----------------------+ 
+        |                26.60 | 
+        +----------------------+ 
+        1 row in set (0.00 sec) 
+        ```
     
-    4. 显示字符串
+    1. 串接字符串
     
-    ```sql
-    mysql> SELECT "welecome to my blog!"; 
-    +----------------------+ 
-    | welecome to my blog! | 
-    +----------------------+ 
-    | welecome to my blog! | 
-    +----------------------+ 
-    1 row in set (0.00 sec) 
-    ```
-    
-    5. 当计算器用
-    
-    ```sql
-    select ((4 * 4) / 10 ) + 25; 
-    +----------------------+ 
-    | ((4 * 4) / 10 ) + 25 | 
-    +----------------------+ 
-    |                26.60 | 
-    +----------------------+ 
-    1 row in set (0.00 sec) 
-    ```
-    
-    6. 串接字符串
-    
-    ```sql
-    select CONCAT(f_name, " ", l_name) 
-    AS Name 
-    from employee_data 
-    where title = 'Marketing Executive'; 
-    +---------------+ 
-    | Name          | 
-    +---------------+ 
-    | Monica Sehgal | 
-    | Hal Simlai    | 
-    | Joseph Irvine | 
-    +---------------+ 
-    3 rows in set (0.00 sec) 
-    ```
-    
-    注意：这里用到`CONCAT()`函数，用来把字符串串接起来。另外，用 `AS` 给结果列 'CONCAT(f_name, " ", l_name)' 起了个假名。
+        ```sql
+        select CONCAT(f_name, " ", l_name) 
+        AS Name 
+        from employee_data 
+        where title = 'Marketing Executive'; 
+        +---------------+ 
+        | Name          | 
+        +---------------+ 
+        | Monica Sehgal | 
+        | Hal Simlai    | 
+        | Joseph Irvine | 
+        +---------------+ 
+        3 rows in set (0.00 sec) 
+        ```
+        
+        注意：这里用到`CONCAT()`函数，用来把字符串串接起来。另外，用 `AS` 给结果列 'CONCAT(f_name, " ", l_name)' 起了个假名。
 
 
 
@@ -311,7 +311,7 @@ exit; 退出 Mysql
         -> sex int(4) not null default '0');
     ```
 
-2. 删除数据表
+1. 删除数据表
     
     ```sql
     drop table <表名>
@@ -323,7 +323,7 @@ exit; 退出 Mysql
 
     + 对于不存在的表，使用`IF EXISTS`用于防止错误发生。当使用`IF EXISTS`时，对于每个不存在的表，会生成一个`NOTE`。
 
-3. 向表中插入数据
+1. 向表中插入数据
 
     ```sql
     insert into <表名> [( <字段名1>[,..<字段名n > ])] values ( 值1 )[, ( 值n )]
@@ -339,29 +339,29 @@ exit; 退出 Mysql
     
     注意：`insert into` 每次只能向表中插入一条记录。
 
-4. 查询数据表中的数据
+1. 查询数据表中的数据
     
     ```sql
     select <字段1，字段2，...> from < 表名 > where < 表达式 >
     ```
     
     1. 查询所有行
-    例如：查看表 MyClass 中所有数据
-    
-    ```sql
-    mysql> select * from MyClass;
-    ```
-    
-    2. 查询前几行数据
-    例如：查看表 MyClass 中前2行数据
-    
-    ```sql
-    mysql> select * from MyClass order by id limit 0,2;
-    ```
+        例如：查看表 MyClass 中所有数据
+        
+        ```sql
+        mysql> select * from MyClass;
+        ```
+        
+    1. 查询前几行数据
+        例如：查看表 MyClass 中前2行数据
+        
+        ```sql
+        mysql> select * from MyClass order by id limit 0,2;
+        ```
     
     select 一般配合 where 使用，以查询更精确更复杂的数据
 
-5. 删除数据表中的数据
+1. 删除数据表中的数据
     
     ```sql
     delete from 表名 where 表达式
@@ -397,7 +397,7 @@ exit; 退出 Mysql
     1 row in set (0.00 sec)
     ```
 
-6. 修改数据表中的数据
+1. 修改数据表中的数据
     
     ```sql
     update 表名 set 字段=新值,… where 条件
@@ -429,7 +429,7 @@ exit; 退出 Mysql
     - `SET`子句指示要修改哪些列和要给予哪些值。
     - `WHERE`子句指定应更新哪些行。如果没有`WHERE`子句，则更新所有的行。
     
-7. 增加数据
+1. 增加数据
     
     1. 增加字段
         
@@ -443,67 +443,67 @@ exit; 退出 Mysql
         mysql> alter table MyClass add age int(4) default '0'
         ```
     
-    2. 修改原字段名称及类型：
+    1. 修改原字段名称及类型：
     
-    ```sql
-    ALTER TABLE table_name CHANGE old_field_name new_field_name field_type;
-    ```
+        ```sql
+        ALTER TABLE table_name CHANGE old_field_name new_field_name field_type;
+        ```
 
-    3. 删除字段：
+    1. 删除字段：
+        
+        ```sql
+        MySQL ALTER TABLE table_name DROP field_name;
+        ```
+        
+    1. 加索引
     
-    ```sql
-    MySQL ALTER TABLE table_name DROP field_name;
-    ```
-    
-    4. 加索引
-    
-    ```sql
-    alter table 表名 add index 索引名 (字段名1[，字段名2 …]);
-    ```
-    
-    例子：
-    
-    ```sql 
-    mysql> alter table employee add index emp_name (name);
-    ```
+        ```sql
+        alter table 表名 add index 索引名 (字段名1[，字段名2 …]);
+        ```
+        
+        例子：
+        
+        ```sql 
+        mysql> alter table employee add index emp_name (name);
+        ```
 
-    5. 加主关键字的索引
+    1. 加主关键字的索引
     
-    ```sql
-    alter table 表名 add primary key (字段名);
-    ```
+        ```sql
+        alter table 表名 add primary key (字段名);
+        ```
+        
+        例子：
+        
+        ```sql 
+        mysql> alter table employee add primary key(id);
+        ```
     
-    例子：
+    1. 加唯一限制条件的索引
     
-    ```sql 
-    mysql> alter table employee add primary key(id);
-    ```
+        ```sql
+        alter table 表名 add unique 索引名 (字段名);
+        ```
+        
+        例子：
+        
+        ```sql 
+        mysql> alter table employee add unique emp_name2(cardnumber);
+        ```
+        
+    1. 删除某个索引
     
-    6. 加唯一限制条件的索引
-    
-    ```sql
-    alter table 表名 add unique 索引名 (字段名);
-    ```
-    
-    例子：
-    
-    ```sql 
-    mysql> alter table employee add unique emp_name2(cardnumber);
-    ```
-    
-    7. 删除某个索引
-    
-    ```sql
-    alter table 表名 drop index 索引名;
-    ```
-    
-    例子：
-    
-    ```sql 
-    mysql>alter table employee drop index emp_name;
-    ```
+        ```sql
+        alter table 表名 drop index 索引名;
+        ```
+        
+        例子：
+        
+        ```sql 
+        mysql>alter table employee drop index emp_name;
+        ```
 
-8. 修改表名
+1. 修改表名
     
     ```sql
     rename table 原表名 to 新表名;
