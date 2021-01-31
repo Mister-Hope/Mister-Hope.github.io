@@ -77,7 +77,7 @@ GitHub Actions 的配置文件叫做 `workflow` 文件，存放在代码仓库�
    `job_id`里面的`name`字段是任务的说明(可填可不填)。
 
    ```yml
-   # 上面代码的jobs字段包含两项任务，job_id分别是my_first_job和my_second_job。
+   # 上面代码的 jobs 字段包含两项任务，job_id 分别是 my_first_job 和 my_second_job。
    jobs:
      my_first_job:
        name: My first job
@@ -90,7 +90,7 @@ GitHub Actions 的配置文件叫做 `workflow` 文件，存放在代码仓库�
    `needs`字段指定当前任务的依赖关系，即运行顺序。
 
    ```yml
-   # 这个 `workflow` 的运行顺序依次为：`job1`、`job2`、`job3`。
+   # 这个 workflow 的运行顺序依次为：job1、job2、job3。
    jobs:
      job1:
      job2:
