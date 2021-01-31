@@ -2,16 +2,16 @@
 
 ## 生成配置 GitHub Actions Token
 
-- 生成 Token ：<https://github.com/settings/tokens>
+- 生成 Token：<https://github.com/settings/tokens>
 
 - 或者可以点击，头像 → Settings → Developer settings → Personal access tokens → Generate new Token
 
 - Token 名称填写 Token， Select scopes 勾选 repo，然后滚动到网页最下面点击提交按钮。生成了 Token，复制保存(该 Token 只显示一次，忘记了就再生成)
 
 - 配置到项目的 Secrets 中：进入项目 → Settings → Secrets → New secret
-    
-    - Name ：建议和刚才生成 Token 保持一致
-    - Value ：为刚才生成的 Token
+
+  - Name：建议和刚才生成 Token 保持一致
+  - Value：为刚才生成的 Token
 
 - 除了配置 Token，还要配置服务器的 HOST、 USERNAME、 PASSWORD、 PORT，这些配置在 GitHub 把项目部署到服务器的时候使用到
 
@@ -39,11 +39,11 @@ jobs:
       uses: actions/checkout@master # 如果你使用 action/checkout@v2 须将 persist credentials 设置为 false，部署才能正常工作。
 
     # 第二步:安装依赖
-    - name: Install dependencies  
+    - name: Install dependencies
       run: npm install
 
     # 第三步，打包代码
-    - name: Build                 
+    - name: Build
       run: npm run build --if-present
 
     # 第四步，部署
@@ -69,7 +69,7 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest # 运行环境
-    
+
     steps: # 步骤
 
     # 第一步：下载源码（ CI/CD 拉取代码到自己的本地）
@@ -86,7 +86,7 @@ jobs:
           git config --global user.name 'Github用户名'
           git config --global user.email 'Github注册邮箱'
 
-    # 第三步： 部署 
+    # 第三步： 部署
       - name: Deploy
         run: |
           git push -f git@xxx.xxx:/www/wwwroot/xxx gh-pages
