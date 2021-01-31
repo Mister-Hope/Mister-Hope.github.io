@@ -24,7 +24,7 @@ MySQL 是一个关系型数据库管理系统
 
 1. MySQL Cluster CGE 高级集群版，需付费。
 
-1. MySQL Workbench ( GUITOOL ) 一款专为 MySQL 设计的 ER/数据库建模工具。它是著名的数据库设计工具 DBDesigner4 的继任者。 MySQL Workbench 又分为两个版本，分别是社区版 ( MySQL Workbench OSS )、商用版 ( MySQL WorkbenchSE )。
+1. MySQL Workbench (GUITOOL) 一款专为 MySQL 设计的 ER/数据库建模工具。它是著名的数据库设计工具 DBDesigner4 的继任者。 MySQL Workbench 又分为两个版本，分别是社区版 (MySQL Workbench OSS)、商用版 (MySQL WorkbenchSE)。
 
 MySQL Community Server 是开源免费的，这也是我们通常用的 MySQL 的版本。
 
@@ -48,7 +48,7 @@ MySQL Community Server 是开源免费的，这也是我们通常用的 MySQL �
     skip-grant-tables
     ```
 
-1.  启动管理员模式下的 CMD，输入`cd /d bin目录路径`将路径切换至 mysql 下的 bin 目录，然后输入`mysqld –install` (安装 mysql )
+1.  启动管理员模式下的 CMD，输入`cd /d bin目录路径`将路径切换至 mysql 下的 bin 目录，然后输入`mysqld –install` (安装 mysql)
 
 1.  再输入`mysqld --initialize-insecure --user=mysql` 初始化数据文件
 1.  然后输入`net start mysql`再次启动 mysql,然后用命令 `mysql –u root –p`进入 mysql 管理界面（密码可为空）
