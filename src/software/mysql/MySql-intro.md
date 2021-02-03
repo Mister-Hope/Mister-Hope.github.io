@@ -28,13 +28,13 @@ MySQL 是一个关系型数据库管理系统
 
 MySQL Community Server 是开源免费的，这也是我们通常用的 MySQL 的版本。
 
-1.  下载后得到`.zip`压缩包.
+1.  下载后得到 `.zip` 压缩包.
 
 1.  解压到自己想要安装到的目录
 
 1.  添加环境变量：我的电脑 → 属性 → 高级 → 环境变量
 
-    选择 PATH,在其后面添加: mysql 安装文件下面的 bin 文件夹
+    选择 `PATH`,在其后面添加: mysql 安装文件下面的 bin 文件夹
 
 1.  新建 mysql 配置文件
 
@@ -48,10 +48,10 @@ MySQL Community Server 是开源免费的，这也是我们通常用的 MySQL �
     skip-grant-tables
     ```
 
-1.  启动管理员模式下的 CMD，输入`cd /d bin目录路径`将路径切换至 mysql 下的 bin 目录，然后输入`mysqld –install` (安装 mysql)
+1.  启动管理员模式下的 CMD，输入 `cd /d bin目录路径` 将路径切换至 mysql 下的 bin 目录，然后输入 `mysqld –install` (安装 mysql)
 
-1.  再输入`mysqld --initialize-insecure --user=mysql` 初始化数据文件
-1.  然后输入`net start mysql`再次启动 mysql,然后用命令 `mysql –u root –p`进入 mysql 管理界面（密码可为空）
+1.  再输入 `mysqld --initialize-insecure --user=mysql` 初始化数据文件
+1.  然后输入 `net start mysql` 再次启动 mysql,然后用命令 `mysql –u root –p` 进入 mysql 管理界面（密码可为空）
 
 1.  进入界面后更改 root 密码
     `update mysql.user set authentication_string=password('123456') where user='root' and Host = 'localhost';`
@@ -85,7 +85,7 @@ MySQL Community Server 是开源免费的，这也是我们通常用的 MySQL �
 
 1. 打开 MySQL 命令窗口
 
-   - 在 DOS 命令行窗口进入 安装目录`\mysql\bin`
+   - 在 DOS 命令行窗口进入 安装目录 `\mysql\bin`
    - 可设置环境变量，设置了环境变量，可以在任意目录打开！
 
 1. 输入连接数据库语句:
@@ -137,9 +137,9 @@ exit; 退出 Mysql
    show databases;
    ```
 
-   \*\*注意：为了不再显示的时候乱码，要修改数据库默认编码。以下以 `GBK` 编码页面为例进行说明：
+   注意：为了不再显示的时候乱码，要修改数据库默认编码。以下以 `GBK` 编码页面为例进行说明：
 
-   1. 修改 MYSQL 的配置文件： `my.ini` 里面修改 `default-character-set=gbk`
+   1. 修改 MYSQL 的配置文件：`my.ini` 里面修改 `default-character-set=gbk`
 
    1. 代码运行时修改,
 
@@ -148,7 +148,7 @@ exit; 退出 Mysql
       1. PHP 代码：`header("Content-Type:text/html;charset=gb2312");`
 
       1. C 语言代码：`int mysql_set_character_set( MYSQL * mysql, char * csname)；`
-         该函数用于为当前连接设置默认的字符集。字符串 `csname` 指定了 1 个有效的字符集名称。连接校对成为字符集的默认校对。该函数的工作方式与 `SET NAMES` 语句类似，但它还能设置 mysql → charset 的值，从而影响了由 `mysql_real_escape_string()` 设置的字符集。
+         该函数用于为当前连接设置默认的字符集。字符串 `csname` 指定了 1 个有效的字符集名称。连接校对成为字符集的默认校对。该函数的工作方式与 `SET NAMES` 语句类似，但它还能设置 `mysql → charset` 的值，从而影响了由 `mysql_real_escape_string()` 设置的字符集。
 
 1. 删除数据库
 
@@ -174,9 +174,9 @@ exit; 退出 Mysql
    use name;
    ```
 
-   use 语句可以通过 MySQL 把 name 数据库作为默认（当前）数据库使用，用于后续语句。该数据库保持为默认数据库，直到语段的结尾，或者直到发布一个不同的 USE 语句
+   `use` 语句可以通过 MySQL 把 name 数据库作为默认 (当前) 数据库使用，用于后续语句。该数据库保持为默认数据库，直到语段的结尾，或者直到发布一个不同的 USE 语句
 
-   使用 use 语句为一个特定的当前的数据库做标记，不会阻碍您访问其它数据库中的表。下面的例子可以从 db1 数据库访问作者表，并从 db2 数据库访问编辑表
+   使用 `use` 语句为一个特定的当前的数据库做标记，不会阻碍您访问其它数据库中的表。下面的例子可以从 db1 数据库访问作者表，并从 db2 数据库访问编辑表
 
    ```sql
    mysql> USE db1;
@@ -184,9 +184,9 @@ exit; 退出 Mysql
        ->        WHERE author.editor_id = db2.editor.editor_id;
    ```
 
-   USE 语句被设立出来，用于与 Sybase 相兼容。
+   `USE` 语句被设立出来，用于与 `Sybase` 相兼容。
 
-   use 数据库后，使用 `show databases` 就能查询所有数据库，如果想跳到其他数据库，用 use 其他数据库名字就可以了。
+   `use` 数据库后，使用 `show databases` 就能查询所有数据库，如果想跳到其他数据库，用 `use` 其他数据库名字就可以了。
 
 1. 当前选择的数据库
 
@@ -293,7 +293,7 @@ exit; 退出 Mysql
       3 rows in set (0.00 sec)
       ```
 
-      注意：这里用到`CONCAT()`函数，用来把字符串串接起来。另外，用 `AS` 给结果列 'CONCAT(f_name, " ", l_name)' 起了个假名。
+      注意：这里用到 `CONCAT()` 函数，用来把字符串串接起来。另外，用 `AS` 给结果列 `CONCAT(f_name, " ", l_name)` 起了个假名。
 
 #### 操作数据表
 
@@ -323,11 +323,11 @@ exit; 退出 Mysql
    drop table <表名>
    ```
 
-   - `DROP TABLE`用于取消一个或多个表。您必须有每个表的`DROP`权限。所有的表数据和表定义会被取消，所以使用本语句要小心！
+   - `DROP TABLE` 用于取消一个或多个表。您必须有每个表的 `DROP` 权限。所有的表数据和表定义会被取消，所以使用本语句要小心！
 
-   - 注意：对于一个带分区的表，`DROP TABLE`会永久性地取消表定义，取消各分区，并取消储存在这些分区中的所有数据。`DROP TABLE`还会取消与被取消的表有关联的分区定义（.par）文件。
+   - 注意：对于一个带分区的表，`DROP TABLE` 会永久性地取消表定义，取消各分区，并取消储存在这些分区中的所有数据。`DROP TABLE` 还会取消与被取消的表有关联的分区定义 `.par` 文件。
 
-   - 对于不存在的表，使用`IF EXISTS`用于防止错误发生。当使用`IF EXISTS`时，对于每个不存在的表，会生成一个`NOTE`。
+   - 对于不存在的表，使用 `IF EXISTS` 用于防止错误发生。当使用 `IF EXISTS` 时，对于每个不存在的表，会生成一个 `NOTE`。
 
 1. 向表中插入数据
 
@@ -433,9 +433,9 @@ exit; 退出 Mysql
    1 row in set (0.00 sec)
    ```
 
-   - `UPDATE`语法可以用新值更新原有表行中的各列。
-   - `SET`子句指示要修改哪些列和要给予哪些值。
-   - `WHERE`子句指定应更新哪些行。如果没有`WHERE`子句，则更新所有的行。
+   - `UPDATE` 语法可以用新值更新原有表行中的各列。
+   - `SET` 子句指示要修改哪些列和要给予哪些值。
+   - `WHERE` 子句指定应更新哪些行。如果没有 `WHERE` 子句，则更新所有的行。
 
 1. 增加数据
 

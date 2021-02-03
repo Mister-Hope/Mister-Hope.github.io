@@ -20,19 +20,19 @@ GitHub Actions 有一些自己的术语。
 
 1. **step (步骤)：** 每个 job 由多个 step 构成，一步步完成。
 
-1. **action (动作)：** 每个 step 可以依次执行一个或多个命令( action )。
+1. **action (动作)：** 每个 step 可以依次执行一个或多个命令 (action)。
 
 ## workflow 文件
 
-GitHub Actions 的配置文件叫做 `workflow` 文件，存放在代码仓库的`.github/workflows`目录。
+GitHub Actions 的配置文件叫做 `workflow` 文件，存放在代码仓库的 `.github/workflows` 目录。
 
-`workflow` 文件采用 `YAML` 格式，文件名可以任意取，但是后缀名统一为`.yml`，比如`foo.yml`。一个库可以有多个 `workflow` 文件。GitHub 只要发现`.github/workflows`目录里面有`.yml`文件，就会自动运行该文件。
+`workflow` 文件采用 `YAML` 格式，文件名可以任意取，但是后缀名统一为`.yml`，比如`foo.yml`。一个库可以有多个 `workflow` 文件。GitHub 只要发现 `.github/workflows` 目录里面有 `.yml` 文件，就会自动运行该文件。
 
 `workflow` 文件的配置字段非常多，详见官方文档。下面是一些基本字段。
 
 1. name
 
-   `name`字段是 `workflow` 的名称。如果省略该字段，默认为当前 `workflow` 的文件名。
+   `name` 字段是 `workflow` 的名称。如果省略该字段，默认为当前 `workflow` 的文件名。
 
    ```yml
    name: GitHub Actions Demo
@@ -40,14 +40,14 @@ GitHub Actions 的配置文件叫做 `workflow` 文件，存放在代码仓库�
 
 1. on
 
-   `on`字段指定触发 `workflow` 的时机，通常是某些事件。
+   `on` 字段指定触发 `workflow` 的时机，通常是某些事件。
 
    ```yml
    # 指定 push 事件触发 workflow。
    on: push
    ```
 
-   `on`字段也可以是事件的数组。
+   `on` 字段也可以是事件的数组。
 
    ```yml
    # 指定 push 事件或 pull_request 事件都可以触发 workflow。
@@ -71,19 +71,20 @@ GitHub Actions 的配置文件叫做 `workflow` 文件，存放在代码仓库�
 
 1. jobs.<job_id>.name
 
-   `workflow`文件的主体是`jobs`字段，表示要执行的一项或多项任务。
+   `workflow` 文件的主体是 `jobs` 字段，表示要执行的一项或多项任务。
 
-   `jobs`字段里面，需要写出每一项任务的`job_id`，具体名称自定义。
-   `job_id`里面的`name`字段是任务的说明(可填可不填)。
+   `jobs` 字段里面，需要写出每一项任务的 `job_id`，具体名称自定义。
+   `job_id` 里面的 `name` 字段是任务的说明(可填可不填)。
 
    ```yml
-   # 上面代码的 jobs 字段包含两项任务，job_id 分别是 my_first_job 和 my_second_job。
    jobs:
      my_first_job:
        name: My first job
      my_second_job:
        name: My second job
    ```
+
+   上面代码的 `jobs` 字段包含两项任务，`job_id` 分别是 `my_first_job` 和 `my_second_job`。
 
 1. jobs.<job_id>.needs
 
@@ -101,27 +102,29 @@ GitHub Actions 的配置文件叫做 `workflow` 文件，存放在代码仓库�
 
 1. jobs.<job_id>.runs-on
 
-   `runs-on`字段指定运行所需要的虚拟机环境。
+   `runs-on` 字段指定运行所需要的虚拟机环境。
    它是**必填字段**。目前可用的虚拟机如下。
 
-   `ubuntu-latest`，`ubuntu-18.04`或`ubuntu-16.04`
-   `windows-latest`，`windows-2019`或`windows-2016`
-   `macOS-latest`或`macOS-10.14`
+   `ubuntu-latest`，`ubuntu-18.04` 或 `ubuntu-16.04`
+
+   `windows-latest`，`windows-2019` 或 `windows-2016`
+
+   `macOS-latest` 或 `macOS-10.14`
 
    ```yml
-   # 上面代码指定虚拟机环境为ubuntu-18.04。
+   # 代码指定虚拟机环境为 ubuntu-18.04。
    runs-on: ubuntu-18.04
    ```
 
 1. jobs.<job_id>.steps
 
-   `steps`字段指定每个 `Job` 的运行步骤，可以包含一个或多个步骤。每个步骤都可以指定以下三个字段。
+   `steps` 字段指定每个 `Job` 的运行步骤，可以包含一个或多个步骤。每个步骤都可以指定以下三个字段。
 
    - `jobs.<job_id>.steps.name`：步骤名称。
    - `jobs.<job_id>.steps.run`：该步骤运行的命令或者 action。
    - `jobs.<job_id>.steps.env`：该步骤所需的环境变量。
 
-   下面是一个完整的 workflow 文件的范例。
+   下面是一个完整的 `workflow` 文件的范例。
 
    ```yml
    name: Greeting from Mona
