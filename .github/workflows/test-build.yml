@@ -14,7 +14,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           persist-credentials: false
-          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
           submodules: true
 
       - uses: actions/cache@v2
@@ -39,7 +38,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           persist-credentials: false
-          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
           submodules: true
 
       - uses: actions/cache@v2
