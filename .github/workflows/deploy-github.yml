@@ -16,7 +16,7 @@ jobs:
           submodules: true
           fetch-depth: 0
 
-      - uses: actions/cache@v2
+      - uses: actions/cache@v2.1.4
         id: node-modules
         with:
           path: node_modules/
@@ -71,7 +71,7 @@ jobs:
           persist-credentials: false
           submodules: true
 
-      - uses: actions/cache@v2
+      - uses: actions/cache@v2.1.4
         id: node-modules
         with:
           path: node_modules/
