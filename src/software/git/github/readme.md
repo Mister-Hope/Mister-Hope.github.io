@@ -1,10 +1,10 @@
 ---
-title: Github
+title: GitHub
 icon: github
 time: 2019-11-20
 category: Git
 tags:
-  - Github
+  - GitHub
 ---
 
 ## 快速上手
@@ -15,7 +15,7 @@ tags:
 
 - [语义化提交](semantic.md)
 
-- [利用 Gitee 加速 Github 克隆](speedup.md)
+- [利用 Gitee 加速 GitHub 克隆](speedup.md)
 
 ## 官方文档
 

@@ -22,7 +22,7 @@ module.exports = [
     ],
   },
   {
-    title: "Github",
+    title: "GitHub",
     icon: "Github",
     collapsable: false,
     prefix: "github/",

@@ -19,7 +19,7 @@ tags:
 
 ## 服务器
 
-为了能供自动部署到服务器，我们需要让服务器的网站目录成为一个 Git 仓库，这样我们可以在 Github Actions 中，通过向服务器对应 Github 仓库推送网站内容，使服务器网站获得自动更新。下面是服务器侧的部署配置
+为了能供自动部署到服务器，我们需要让服务器的网站目录成为一个 Git 仓库，这样我们可以在 GitHub Actions 中，通过向服务器对应 GitHub 仓库推送网站内容，使服务器网站获得自动更新。下面是服务器侧的部署配置
 
 ### 添加账户
 
@@ -80,15 +80,15 @@ git config receive.denyCurrentBranch ignore
 
 ## GitHub Actions
 
-在 Github 一侧，我们需要通过 Github Action，在新代码推送时自动构建网站，并部署到 Github 的 gh-pages 分支。之后，Github Action 将该分支的变动推送服务器的对应仓库，完成网站的自动部署。
+在 GitHub 一侧，我们需要通过 GitHub Action，在新代码推送时自动构建网站，并部署到 GitHub 的 gh-pages 分支。之后，GitHub Action 将该分支的变动推送服务器的对应仓库，完成网站的自动部署。
 
 之后只需要使用 GitHub Action 通过 Git 推送到 `git@<domain>:<部署目录> gh-pages` 即可。
 
-### Github pages 部署
+### GitHub pages 部署
 
 ```yml
 # 自动部署的名称
-name: Github pages deploy
+name: GitHub pages deploy
 
 # 自动部署的条件
 on:

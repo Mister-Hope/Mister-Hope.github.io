@@ -6,7 +6,7 @@ time: 2021-01-27
 
 ## 安装
 
-您可以通过 [Microsoft Store](https://aka.ms/terminal) 进行安装，同样您可以访问 [Github release](https://github.com/microsoft/terminal/releases/) 下载任意版本可执行文件。
+您可以通过 [Microsoft Store](https://aka.ms/terminal) 进行安装，同样您可以访问 [GitHub release](https://github.com/microsoft/terminal/releases/) 下载任意版本可执行文件。
 
 ::: warning
 

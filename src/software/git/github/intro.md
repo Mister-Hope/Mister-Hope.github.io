@@ -4,7 +4,7 @@ icon: info
 time: 2019-11-20
 category: Git
 tags:
-  - Github
+  - GitHub
 ---
 
 ## ~~Gayhub~~ GitHub 是世界上最大的 ~~同性交友~~ 代码托管网站
