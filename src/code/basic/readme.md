@@ -24,6 +24,8 @@ sticky: true
 
 - [开发简介](debug.md)
 
+- [持续集成](ci.md)
+
 - [许可介绍](license.md)
 
 - [开源与免费](open-source-and-free.md)

@@ -7,6 +7,7 @@ module.exports = [
   "path",
   "glob",
   "debug",
+  "ci",
   "license",
   "open-source-and-free.md",
 ];
