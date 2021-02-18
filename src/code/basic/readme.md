@@ -20,6 +20,8 @@ sticky: true
 
 - [路径](path.md)
 
+- [Glob 模式介绍](glob.md)
+
 - [开发简介](debug.md)
 
 - [许可介绍](license.md)

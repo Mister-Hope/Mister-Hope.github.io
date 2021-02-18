@@ -13,11 +13,15 @@ tags:
 
 ::: tip
 
-由于 Centos 仍然是用 GitV1，本教程使用 Ubuntu 18.04 进行教学。
+由于 Centos 仍然是用 GitV1，本教程使用 Ubuntu 20.04 进行教学。
 
 :::
 
-## 添加账户
+## 服务器
+
+为了能供自动部署到服务器，我们需要让服务器的网站目录成为一个 Git 仓库，这样我们可以在 Github Actions 中，通过向服务器对应 Github 仓库推送网站内容，使服务器网站获得自动更新。下面是服务器侧的部署配置
+
+### 添加账户
 
 为了安全，首先需要使用命令创建 Git 用户，为了安全请务必设置密码。
 
@@ -33,7 +37,7 @@ usermod -a -G <目录所在组> git
 
 然后将部署目录的权限设置为 `775`，即允许同组访问。这样 git 就有权限访问部署目录。
 
-## 添加权限
+### 添加权限
 
 创建 `~/.ssh/` 文件夹，生成 `authorized_keys` 文件，并设置其权限为 `600`。
 
@@ -45,9 +49,9 @@ touch ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
 ```
 
-之后将需要赋予权限的用户公钥依次粘贴至该文件。
+之后将需要赋予权限的用户公钥依次粘贴至该文件，这样相关用户即可以使用对应私钥，向服务器相关仓库推送代码。
 
-## 创建仓库
+### 创建仓库
 
 回到 `/home/git/`，创建所需的文件夹:
 
@@ -70,10 +74,62 @@ git init --separate-git-dir=. <部署位置>
 git config receive.denyCurrentBranch ignore
 ```
 
-这是由于 Git 默认拒绝外部对当前的推送操作，因为这可能会覆盖或变更工作区文件。
+这是由于 Git 默认拒绝外部对当前分支的推送操作，因为这可能会覆盖或变更工作区文件。
 
-## GitHub Actions 构建
+设置完毕后，Git 会允许外部对当前工作区分支进行推送操作。
 
-在正常的工作流程中，完成页面的构建，并将其推送到 gh-pages 上。
+## GitHub Actions
 
-之后只需要使用 GitHub Action 推送到 `git@<ip>:<部署目录> gh-pages` 即可。
+在 Github 一侧，我们需要通过 Github Action，在新代码推送时自动构建网站，并部署到 Github 的 gh-pages 分支。之后，Github Action 将该分支的变动推送服务器的对应仓库，完成网站的自动部署。
+
+之后只需要使用 GitHub Action 通过 Git 推送到 `git@<domain>:<部署目录> gh-pages` 即可。
+
+### Github pages 部署
+
+```yml
+# 自动部署的名称
+name: Github pages deploy
+
+# 自动部署的条件
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-production:
+    # 运行环境
+    runs-on: ubuntu-latest
+
+    # 步骤
+    steps:
+      # 第一步：下载源码
+      # action 配置详见 https://github.com/actions/checkout
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          # 如果本项目包含了子模块 (git submodules)，需要将此项设置为 true
+          # submodules: true
+
+          # 这是获取历史 commit 的深度，默认为 1，即只拉取最后一个 commit，这样可以加快拉取速度
+          # 如果项目使用 VuePress，为了正确通过 Git 历史提交记录生成页面的最后更新时间，需要设置为 0 以拉取完整的 git 历史提交
+          # fetch-depth: 0
+
+          # 如果本项目涉及到了非公共内容，如子模块包含私有仓库，需要设置 ssh key 或 token 以保证拥有拉取相应仓库的权限。你可以将 ssh-key 设置为 github 绑定公钥对应的私钥，可以新建一个具有相关仓库访问权限的 github token
+
+      # 第二步:安装依赖
+      - name: Install dependencies
+        run: npm install
+
+      # 第三步，打包代码
+      - name: Build
+        run: npm run build --if-present
+
+      # 第四步，部署
+      - name: Deploy
+          uses: JamesIves/github-pages-deploy-action@releases/v3
+          with:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            BRANCH: gh-pages    # 要部署的分支
+            FOLDER: dist  # 要部署的文件夹
+```

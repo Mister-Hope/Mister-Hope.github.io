@@ -85,30 +85,30 @@ Windows Terminal 会自动为 PowerShell 和 WSL 分发版创建配置文件。
 
 ```json
 {
-  "name" : "Campbell",
+  "name": "Campbell",
 
   "cursorColor": "#FFFFFF",
   "selectionBackground": "#FFFFFF",
 
-  "background" : "#0C0C0C",
-  "foreground" : "#CCCCCC",
+  "background": "#0C0C0C",
+  "foreground": "#CCCCCC",
 
-  "black" : "#0C0C0C",
-  "blue" : "#0037DA",
-  "cyan" : "#3A96DD",
-  "green" : "#13A10E",
-  "purple" : "#881798",
-  "red" : "#C50F1F",
-  "white" : "#CCCCCC",
-  "yellow" : "#C19C00",
-  "brightBlack" : "#767676",
-  "brightBlue" : "#3B78FF",
-  "brightCyan" : "#61D6D6",
-  "brightGreen" : "#16C60C",
-  "brightPurple" : "#B4009E",
-  "brightRed" : "#E74856",
-  "brightWhite" : "#F2F2F2",
-  "brightYellow" : "#F9F1A5"
+  "black": "#0C0C0C",
+  "blue": "#0037DA",
+  "cyan": "#3A96DD",
+  "green": "#13A10E",
+  "purple": "#881798",
+  "red": "#C50F1F",
+  "white": "#CCCCCC",
+  "yellow": "#C19C00",
+  "brightBlack": "#767676",
+  "brightBlue": "#3B78FF",
+  "brightCyan": "#61D6D6",
+  "brightGreen": "#16C60C",
+  "brightPurple": "#B4009E",
+  "brightRed": "#E74856",
+  "brightWhite": "#F2F2F2",
+  "brightYellow": "#F9F1A5"
 }
 ```
 
@@ -134,7 +134,7 @@ Windows Terminal 在 defaults.json 文件中包含了一些配色方案。如果
 
 ## 自定义操作
 
-您可以在Windows终端中创建自定义操作，以控制与终端的交互方式。这些操作将自动添加到命令面板。
+您可以在 Windows 终端中创建自定义操作，以控制与终端的交互方式。这些操作将自动添加到命令面板。
 
 关于详细的配置项，请见 [自定义操作设置](https://aka.ms/terminal-keybindings)。
 
@@ -159,7 +159,10 @@ Windows Terminal 在 defaults.json 文件中包含了一些配色方案。如果
 - 有参数命令
 
   ```json
-  { "command": { "action": "commandName", "argument": "value" }, "keys": "modifiers+key" }
+  {
+    "command": { "action": "commandName", "argument": "value" },
+    "keys": "modifiers+key"
+  }
   ```
 
   ::: details 例子

@@ -1,5 +1,5 @@
 ---
-title: Github Pages
+title: Github Actions
 icon: window
 time: 2019-09-18
 category: Github

@@ -87,7 +87,7 @@ wt [options] [command ; ]
   ::: details 例子
 
   打开 Ubuntu 20.04:
-  
+
   ```bash
   wt -p "Ubuntu-20.04"
   ```
@@ -108,7 +108,7 @@ wt [options] [command ; ]
 
 ## 命令面板
 
-通过命令面板，可以查看可以在Windows Terminal中运行的操作。
+通过命令面板，可以查看可以在 Windows Terminal 中运行的操作。
 
 您可以通过键入 `Ctrl + Shift + P` 来调用命令面板。您可以将 `commandPalette` 命令添加到设置文件中的 `actions` 中进行自定义。
 
@@ -117,9 +117,26 @@ wt [options] [command ; ]
 您可以通过在配置中添加 `icon` 为您的命令添加图标。图标可以是图像的路径，[Segoe MDL2 Assets](https://docs.microsoft.com/en-us/windows/uwp/design/style/segoe-ui-symbol-font) 中的符号或任何字符，包括表情符号。
 
 ```json
-{ "icon": "C:\\Images\\my-icon.png", "name": "New tab", "command": "newTab", "keys": "ctrl+shift+t" },
-{ "icon": "\uE756", "name": "New tab", "command": "newTab", "keys": "ctrl+shift+t" },
-{ "icon": "⚡", "name": "New tab", "command": "newTab", "keys": "ctrl+shift+t" }
+[
+  {
+    "icon": "C:\\Images\\my-icon.png",
+    "name": "New tab",
+    "command": "newTab",
+    "keys": "ctrl+shift+t"
+  },
+  {
+    "icon": "\uE756",
+    "name": "New tab",
+    "command": "newTab",
+    "keys": "ctrl+shift+t"
+  },
+  {
+    "icon": "⚡",
+    "name": "New tab",
+    "command": "newTab",
+    "keys": "ctrl+shift+t"
+  }
+]
 ```
 
 ### 嵌套命令
@@ -128,12 +145,12 @@ wt [options] [command ; ]
 
 ```json
 {
-    "name": "Change font size...",
-    "commands": [
-        { "command": { "action": "adjustFontSize", "delta": 1 } },
-        { "command": { "action": "adjustFontSize", "delta": -1 } },
-        { "command": "resetFontSize" },
-    ]
+  "name": "Change font size...",
+  "commands": [
+    { "command": { "action": "adjustFontSize", "delta": 1 } },
+    { "command": { "action": "adjustFontSize", "delta": -1 } },
+    { "command": "resetFontSize" }
+  ]
 }
 ```
 

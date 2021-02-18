@@ -5,6 +5,7 @@ module.exports = [
   "file-extension",
   "encoding",
   "path",
+  "glob",
   "debug",
   "license",
   "open-source-and-free.md",

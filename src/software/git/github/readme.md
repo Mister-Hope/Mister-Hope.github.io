@@ -15,6 +15,8 @@ tags:
 
 - [语义化提交](semantic.md)
 
+- [利用 Gitee 加速 Github 克隆](speedup.md)
+
 ## 官方文档
 
 - [全部文档](https://docs.github.com/cn/free-pro-team@latest/github)

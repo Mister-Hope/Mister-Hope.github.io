@@ -26,6 +26,6 @@ module.exports = [
     icon: "Github",
     collapsable: false,
     prefix: "github/",
-    children: ["", "intro", "pr", "semantic", "actions", "deploy"],
+    children: ["", "intro", "pr", "semantic", "speedup", "actions", "deploy"],
   },
 ];
