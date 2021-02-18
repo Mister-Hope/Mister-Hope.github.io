@@ -17,7 +17,7 @@ sticky: true
 
 - [Java 教程](https://www.liaoxuefeng.com/wiki/1252599548343744)(廖雪峰的博客)
 
-- [Markdown 教程](https://vuepress-theme.mrhope.site/basic/markdown/)
+- [Markdown 教程](https://vuepress-theme-hope.github.io/basic/markdown/)
 
 - [YAML 教程](yaml/readme.md)
 

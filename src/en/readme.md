@@ -13,7 +13,7 @@ action:
 features:
   - title: vuepress-theme-hope
     details: A vuepress theme with tons of features✨
-    link: https://vuepress-theme.mrhope.site/
+    link: https://vuepress-theme-hope.github.io/
 
   - title: in NENU
     details: 300,000 words + NENU guide, a comprehensive introduction to NENU life, the best admission guide for NENU freshmen❤

@@ -55,7 +55,7 @@ Vue.js 是世界上主流的渐近式 JavaScript 框架。其生态比较繁荣�
 
 ### 其他 Vue 生态
 
-- [VuePress](https://vuepress-theme.mrhope.site/basic/vuepress/): 静态站点生成器；
+- [VuePress](https://vuepress-theme-hope.github.io/basic/vuepress/): 静态站点生成器；
 - [Ant Design Vue](https://vue.ant.design/docs/vue/introduce-cn/): 阿里的一套 UI 组件库；
 - [BootstrapVue](https://bootstrap-vue.js.org/)
 
