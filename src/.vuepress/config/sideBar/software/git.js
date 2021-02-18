@@ -26,6 +26,30 @@ module.exports = [
     icon: "Github",
     collapsable: false,
     prefix: "github/",
-    children: ["", "intro", "pr", "semantic", "speedup", "actions", "deploy"],
+    children: [
+      "",
+      "intro",
+      "pr",
+      "semantic",
+      "speedup",
+      "token",
+      {
+        title: "Github Actions",
+        icon: "actions",
+        collapsable: false,
+        prefix: "actions/",
+        children: [
+          "",
+          "intro",
+          "config",
+          {
+            title: "常见 Actions",
+            icon: "actions",
+            children: ["checkout"],
+          },
+        ],
+      },
+      "deploy",
+    ],
   },
 ];

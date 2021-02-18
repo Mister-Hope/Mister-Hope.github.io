@@ -105,7 +105,7 @@ tags:
 
 当前选择的源代码: `Ctrl + K Ctrl + F`
 
-整个文档格式: `Shift + Alt + F`
+整个文档: `Shift + Alt + F`
 
 ## 代码折叠
 

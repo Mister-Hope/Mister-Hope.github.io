@@ -1,0 +1,23 @@
+---
+title: GitHub Actions
+icon: actions
+time: 2021-02-18
+---
+
+## 目录
+
+- [GitHub Actions 介绍](intro.md)
+
+- [Workflow 配置](config.md)
+
+## 常用 GitHub Action
+
+- [checkout](checkout.md)
+
+## 官方文档
+
+- [文档地址](https://docs.github.com/cn/actions)
+
+- [Workflow 触发事件](https://help.github.com/en/actions/reference/events-that-trigger-workflows)
+
+- [Workflow 配置](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions)

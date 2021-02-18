@@ -84,8 +84,6 @@ git config receive.denyCurrentBranch ignore
 
 之后只需要使用 GitHub Action 通过 Git 推送到 `git@<domain>:<部署目录> gh-pages` 即可。
 
-### GitHub pages 部署
-
 ```yml
 # 自动部署的名称
 name: GitHub pages deploy
@@ -97,15 +95,16 @@ on:
       - master
 
 jobs:
-  build-production:
+  # 构建网站并部署到 Github Pages
+  deploy-gh-pages:
     # 运行环境
     runs-on: ubuntu-latest
 
     # 步骤
     steps:
       # 第一步：下载源码
-      # action 配置详见 https://github.com/actions/checkout
       - name: Checkout
+        # action 配置详见 https://github.com/actions/checkout
         uses: actions/checkout@v2
         with:
           # 如果本项目包含了子模块 (git submodules)，需要将此项设置为 true
@@ -117,19 +116,72 @@ jobs:
 
           # 如果本项目涉及到了非公共内容，如子模块包含私有仓库，需要设置 ssh key 或 token 以保证拥有拉取相应仓库的权限。你可以将 ssh-key 设置为 github 绑定公钥对应的私钥，可以新建一个具有相关仓库访问权限的 github token
 
-      # 第二步:安装依赖
-      - name: Install dependencies
-        run: npm install
+      # 缓存 node_modules 以避免重复安装
+      - uses: actions/cache@v2.1.4
+        id: node-modules
+        with:
+          # 需要缓存的路径
+          path: node_modules/
+          # 缓存的 key
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
+          # 恢复 key
+          restore-keys: |
+            ${{ runner.os }}-node-modules-
 
-      # 第三步，打包代码
+      # 安装依赖
+      - name: Install Deps
+        # 只有没有命中缓存才会执行
+        if: steps.node-modules.outputs.cache-hit != 'true'
+        # 严格按照 yarn.lock 安装依赖
+        run: yarn install --frozen-lockfile
+
+      # 构建项目
       - name: Build
-        run: npm run build --if-present
+        # 项目的构建命令
+        run: yarn run build
 
       # 第四步，部署
       - name: Deploy
-          uses: JamesIves/github-pages-deploy-action@releases/v3
-          with:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            BRANCH: gh-pages    # 要部署的分支
-            FOLDER: dist  # 要部署的文件夹
+        # action 配置详见 https://github.com/JamesIves/github-pages-deploy-action
+        uses: JamesIves/github-pages-deploy-action@4.0.0
+        with:
+          # 部署到的分支
+          branch: gh-pages
+          # 需要部署的文件夹
+          folder: dist
+
+  # 部署到服务器
+  deploy-server:
+    runs-on: ubuntu-latest
+    # 确保在部署到 GitHub Pages 之后执行
+    needs: deploy-gh-pages
+    steps:
+      # 检出网站代码
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          # 检出 gh-pages 分支
+          ref: gh-pages
+          # 获取全部的历史提交
+          fetch-depth: 0
+
+      # 配置环境
+      - name: Configuration environment
+        # 写入私钥、配置 Git 用户名，写入服务器地址
+        # 你需要自行将服务器的私钥写入 secrets 的 SSH_PRIVATE_KEY
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan <your domain> >> ~/.ssh/known_hosts
+          git config --global user.name 'Your Name'
+          git config --global user.email 'You email'
+
+      # 部署到服务器
+      - name: Deploy
+        # 使用 Git 将网站代码强制推送到远程的网站目录，并使用 SSH 连接服务器进入网站目录手动切换到最新提交
+        run: |
+          git push -f git@<your domain>:<deploy dir> gh-pages
+          ssh git@<your domain> "cd <deploy dir> && git reset --hard HEAD"
+
 ```
