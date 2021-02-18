@@ -69,7 +69,7 @@ module.exports = {
       "language/",
       "vue/",
       "mini-app/",
-      "node-js",
+      "node-js/",
       "github/",
       "windows/",
       "Android/",
