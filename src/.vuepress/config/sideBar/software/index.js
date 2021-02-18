@@ -4,7 +4,6 @@ module.exports = [
   "vscode/",
   "chrome",
   "git/",
-  "git/github/",
   "comsol/",
   {
     title: "工具软件",

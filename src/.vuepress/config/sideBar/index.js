@@ -44,6 +44,8 @@ module.exports = {
       "module",
     ],
 
+    "/code/mini-app/": require("./mini-app"),
+
     "/code/language/python/": require("./language/python"),
 
     "/code/language/typescript/": require("./language/typescript"),
@@ -54,7 +56,7 @@ module.exports = {
 
     "/code/language/": require("./language"),
 
-    "/code/mini-app/": require("./mini-app"),
+    "/code/github/": require("./github"),
 
     "/code/basic/": require("./basic"),
 
@@ -68,6 +70,7 @@ module.exports = {
       "vue/",
       "mini-app/",
       "node-js",
+      "github/",
       "windows/",
       "Android/",
       "backEnd/",

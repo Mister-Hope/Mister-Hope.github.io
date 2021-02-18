@@ -268,7 +268,7 @@ bookPrice(6，30); // 144
     };
     ```
 
-    您突然响起了 Mr.Hope 说过的单行代码挑战，结合[三元运算符](../if.md#三元运算符)，您又一次压缩了代码:
+    您突然响起了 Mr.Hope 说过的单行代码挑战，结合[三元运算符](./condition.md#三元运算符)，您又一次压缩了代码:
 
     ```js
     const bookPrice = (price, ammount) =>
