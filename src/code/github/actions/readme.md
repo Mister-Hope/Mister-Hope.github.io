@@ -13,6 +13,8 @@ time: 2021-02-18
 ## 常用 GitHub Action
 
 - [checkout](checkout.md)
+- [cache](cache.md)
+- [Github Pages 部署](gh-pages-deploy.md)
 
 ## 官方文档
 

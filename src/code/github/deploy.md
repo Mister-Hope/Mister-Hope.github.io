@@ -110,11 +110,17 @@ jobs:
           # 如果本项目包含了子模块 (git submodules)，需要将此项设置为 true
           # submodules: true
 
-          # 这是获取历史 commit 的深度，默认为 1，即只拉取最后一个 commit，这样可以加快拉取速度
-          # 如果项目使用 VuePress，为了正确通过 Git 历史提交记录生成页面的最后更新时间，需要设置为 0 以拉取完整的 git 历史提交
+          # 这是获取历史 commit 的深度，默认为 1，即只拉取最后一个 commit
+          # 这样可以加快拉取速度
+          #
+          # 如果项目使用 VuePress，为了正确通过 Git 历史提交记录生成页面的最后更新时间
+          # 需要设置为 0 以拉取完整的 git 历史提交
           # fetch-depth: 0
 
-          # 如果本项目涉及到了非公共内容，如子模块包含私有仓库，需要设置 ssh key 或 token 以保证拥有拉取相应仓库的权限。你可以将 ssh-key 设置为 github 绑定公钥对应的私钥，可以新建一个具有相关仓库访问权限的 github token
+          # 如果子模块包含私有仓库，需要设置 ssh key 或 token 以保证拥有拉取相应仓库的权限
+          # 你可以将 ssh-key 设置为 github 绑定公钥对应的私钥
+          # 也可以新建一个具有相关仓库访问权限的 github token
+          # token:
 
       # 缓存 node_modules 以避免重复安装
       - uses: actions/cache@v2.1.4
@@ -179,7 +185,8 @@ jobs:
 
       # 部署到服务器
       - name: Deploy
-        # 使用 Git 将网站代码强制推送到远程的网站目录，并使用 SSH 连接服务器进入网站目录手动切换到最新提交
+        # 使用 Git 将网站代码强制推送到远程的网站目录
+        # 并使用 SSH 连接服务器进入网站目录手动切换到最新提交
         run: |
           git push -f git@<your domain>:<deploy dir> gh-pages
           ssh git@<your domain> "cd <deploy dir> && git reset --hard HEAD"

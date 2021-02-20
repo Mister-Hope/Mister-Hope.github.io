@@ -17,7 +17,7 @@ module.exports = [
       {
         title: "常见 Actions",
         icon: "actions",
-        children: ["checkout"],
+        children: ["checkout", "cache", "gh-pages-deploy"],
       },
     ],
   },
