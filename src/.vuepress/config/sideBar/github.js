@@ -3,6 +3,7 @@ module.exports = [
   "intro",
   "pr",
   "semantic",
+  "pages",
   "speedup",
   "token",
   {

@@ -1,5 +1,6 @@
 ---
 title: github-pages-deploy
+time: 2021-02-20
 ---
 
 github-pages-deploy-action 用于自动将网站内容部署到 GitHub Pages。

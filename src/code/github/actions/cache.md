@@ -1,6 +1,6 @@
 ---
 title: cache
-time: 2021-02-18
+time: 2021-02-20
 ---
 
 这个 Action 允许您缓存依赖项和构建输出内容以缩短 Workflow 执行时间。

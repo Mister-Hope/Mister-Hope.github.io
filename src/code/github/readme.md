@@ -15,6 +15,8 @@ tags:
 
 - [语义化提交](semantic.md)
 
+- [Github Pages](pages.md)
+
 - [利用 Gitee 加速 GitHub 克隆](speedup.md)
 
 ## 官方文档
