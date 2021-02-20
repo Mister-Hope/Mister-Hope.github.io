@@ -145,9 +145,9 @@ exit; 退出 Mysql
    1. 修改 MYSQL 的配置文件: `my.ini` 里面修改 `default-character-set=gbk`
    1. 代码运行时修改:
 
-      1. Java 代码:  `jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=gbk`
-      1. PHP 代码:  `header("Content-Type:text/html;charset=gb2312");`
-      1. C 语言代码:  `int mysql_set_character_set( MYSQL * mysql, char * csname)；`
+      1. Java 代码: `jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=gbk`
+      1. PHP 代码: `header("Content-Type:text/html;charset=gb2312");`
+      1. C 语言代码: `int mysql_set_character_set( MYSQL * mysql, char * csname)；`
          该函数用于为当前连接设置默认的字符集。字符串 `csname` 指定了 1 个有效的字符集名称。连接校对成为字符集的默认校对。该函数的工作方式与 `SET NAMES` 语句类似，但它还能设置 mysql → charset 的值，从而影响了由 `mysql_real_escape_string()` 设置的字符集。
 
 1. 删除数据库

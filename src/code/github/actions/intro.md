@@ -14,7 +14,7 @@ time: 2021-02-18
 
 - GitHub 允许开发者把每个操作写成独立的脚本文件，存放到代码仓库，使得其他开发者可以引用。
 
-- 如果你需要某个 action，不必自己写复杂的脚本，直接引用他人写好的 action 即可，整个持续集成过程，就变成了一个 actions 的组合。这就是 GitHub Actions 最特别的地方。
+- 如果您需要某个 action，不必自己写复杂的脚本，直接引用他人写好的 action 即可，整个持续集成过程，就变成了一个 actions 的组合。这就是 GitHub Actions 最特别的地方。
 
 - GitHub 做了一个官方市场，可以搜索到他人提交的 actions。另外， [awesome actions](https://github.com/sdras/awesome-actions) 仓库收集了很多有用的 actions。
 

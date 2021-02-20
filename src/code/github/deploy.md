@@ -118,7 +118,7 @@ jobs:
           # fetch-depth: 0
 
           # 如果子模块包含私有仓库，需要设置 ssh key 或 token 以保证拥有拉取相应仓库的权限
-          # 你可以将 ssh-key 设置为 github 绑定公钥对应的私钥
+          # 您可以将 ssh-key 设置为 github 绑定公钥对应的私钥
           # 也可以新建一个具有相关仓库访问权限的 github token
           # token:
 
@@ -174,7 +174,7 @@ jobs:
       # 配置环境
       - name: Configuration environment
         # 写入私钥、配置 Git 用户名，写入服务器地址
-        # 你需要自行将服务器的私钥写入 secrets 的 SSH_PRIVATE_KEY
+        # 您需要自行将服务器的私钥写入 secrets 的 SSH_PRIVATE_KEY
         run: |
           mkdir -p ~/.ssh/
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
@@ -190,5 +190,4 @@ jobs:
         run: |
           git push -f git@<your domain>:<deploy dir> gh-pages
           ssh git@<your domain> "cd <deploy dir> && git reset --hard HEAD"
-
 ```

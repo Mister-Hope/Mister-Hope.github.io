@@ -3,7 +3,7 @@ title: cache
 time: 2021-02-18
 ---
 
-这个 Action 允许你缓存依赖项和构建输出内容以缩短 Workflow 执行时间。
+这个 Action 允许您缓存依赖项和构建输出内容以缩短 Workflow 执行时间。
 
 日常最多使用的就是缓存依赖项，在每个工作流程中，将安装后的依赖通过安装后生成的依赖版本文件的哈希值进行缓存。
 
@@ -52,7 +52,7 @@ Yarn:
 - uses: actions/cache@v2
   # 使用此 id 获得 `cache-hit`
   # (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-  id: yarn-cache 
+  id: yarn-cache
   with:
     path: node_modules/
     key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
@@ -71,25 +71,25 @@ Yarn:
 例如，使用 `hashFiles` 功能可让您在依存关系更改时创建新的缓存。
 
 ```yml
-  - uses: actions/cache@v2
-    id: yarn-cache 
-    with:
-      path: | 
-        node_modules/
-      key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+- uses: actions/cache@v2
+  id: yarn-cache
+  with:
+    path: |
+      node_modules/
+    key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 ```
 
 利用 cache-hit 输出，当对应键命中特定缓存后，可以跳过后续步骤 (例如，安装或构建) 。
 
 ```yml
-  - name: Install Dependencies
-    if: steps.yarn-cache.outputs.cache-hit != 'true'
-    run: yarn install
+- name: Install Dependencies
+  if: steps.yarn-cache.outputs.cache-hit != 'true'
+  run: yarn install
 ```
 
 ## 缓存限制
 
-一个存储库最多可以有5GB的缓存。达到5GB限制后，将根据上次访问缓存的时间驱逐较早的缓存。过去未访问的缓存也将被自动删除。
+一个存储库最多可以有 5GB 的缓存。达到 5GB 限制后，将根据上次访问缓存的时间驱逐较早的缓存。过去未访问的缓存也将被自动删除。
 
 ## 地址
 
