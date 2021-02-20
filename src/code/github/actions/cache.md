@@ -79,7 +79,7 @@ Yarn:
       key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 ```
 
-利用 cache-hit 输出，当对应键命中特定缓存后，可以跳过后续步骤（例如，安装或构建）。
+利用 cache-hit 输出，当对应键命中特定缓存后，可以跳过后续步骤 (例如，安装或构建) 。
 
 ```yml
   - name: Install Dependencies
@@ -90,3 +90,7 @@ Yarn:
 ## 缓存限制
 
 一个存储库最多可以有5GB的缓存。达到5GB限制后，将根据上次访问缓存的时间驱逐较早的缓存。过去未访问的缓存也将被自动删除。
+
+## 地址
+
+地址: <https://github.com/actions/cache>

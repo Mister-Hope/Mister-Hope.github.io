@@ -14,7 +14,7 @@ time: 2021-02-18
 
 - [checkout](checkout.md)
 - [cache](cache.md)
-- [Github Pages 部署](gh-pages-deploy.md)
+- [GitHub Pages 部署](gh-pages-deploy.md)
 
 ## 官方文档
 

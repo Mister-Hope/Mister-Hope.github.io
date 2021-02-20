@@ -95,14 +95,14 @@ on:
       - master
 
 jobs:
-  # 构建网站并部署到 Github Pages
+  # 构建网站并部署到 GitHub Pages
   deploy-gh-pages:
     # 运行环境
     runs-on: ubuntu-latest
 
     # 步骤
     steps:
-      # 第一步：下载源码
+      # 第一步: 下载源码
       - name: Checkout
         # action 配置详见 https://github.com/actions/checkout
         uses: actions/checkout@v2

@@ -2,7 +2,7 @@
 title: github-pages-deploy
 ---
 
-github-pages-deploy-action 用于自动将网站内容部署到 Github Pages。
+github-pages-deploy-action 用于自动将网站内容部署到 GitHub Pages。
 
 你可以使用这个 Action 将代码推送到您想要的任何分支中，包括gh-pages和docs, 甚至可以处理跨存储库部署。
 
@@ -28,7 +28,7 @@ github-pages-deploy-action 用于自动将网站内容部署到 Github Pages。
 
 此选项默认为可访问存储库的 Token。
 
-如果您需要更多权限（例如，部署到另一个存储库），可以通过此选项设置个人访问令牌（PAT）。
+如果您需要更多权限 (例如，部署到另一个存储库) ，可以通过此选项设置个人访问令牌 (PAT) 。
 
 本选项的值应该存储在 secrets 中。
 
@@ -44,7 +44,7 @@ github-pages-deploy-action 用于自动将网站内容部署到 Github Pages。
 
 ### repository-name
 
-允许您指定其他存储库路径，只要您有权将其推送。格式应为：`用户名/存储库名称`。您需要设置 token未PAT，此配置选项才能正常运行。
+允许您指定其他存储库路径，只要您有权将其推送。格式应为: `用户名/存储库名称`。您需要设置 token未PAT，此配置选项才能正常运行。
 
 ### target-folder
 
@@ -93,3 +93,7 @@ github-pages-deploy-action 用于自动将网站内容部署到 Github Pages。
     # 需要部署的文件夹
     folder: dist
 ```
+
+## 地址
+
+地址: <https://github.com/JamesIves/github-pages-deploy-action>

@@ -27,7 +27,7 @@ author: 李欣桐
    MySQL 的设置可以在运行时通过 `SET GLOBAL` 命令来更改，但是这种更改只会临时生效，到下次启动时数据库又会从配置文件中读取。
 
    MySQL 8.0 新增了 `SET PERSIST` 命令，
-   例如：`SET PERSIST max_connections = 500;`
+   例如: `SET PERSIST max_connections = 500;`
    MySQL 会将该命令的配置保存到数据目录下的 `mysqld-auto.cnf` 文件中，下次启动时会读取该文件，用其中的配置来覆盖缺省的配置文件。
 
 1. UTF-8 编码
@@ -69,7 +69,7 @@ author: 李欣桐
 
    新增 `innodb_dedicated_server`，让 `InnoDB` 根据服务器上检测到的内存量自动配置 `innodb_buffer_pool_size`, `innodb_log_file_size，innodb_flush_method`。
 
-   `innodb_dedicated_server`：自动配置缓冲池大小
+   `innodb_dedicated_server`: 自动配置缓冲池大小
 
 1. 直方图
 
@@ -99,7 +99,7 @@ author: 李欣桐
 
 MySQL 8 会使用更多内存。
 
-对运行相同轻量级工作负载的 MySQL 8 和 MySQL 5.7（实际上它们是 Percona Server 版本）的 1GB VM 进行基本测试。
+对运行相同轻量级工作负载的 MySQL 8 和 MySQL 5.7 (实际上它们是 Percona Server 版本) 的 1GB VM 进行基本测试。
 
 MySQL 8 使用了大约 200MB 的 `swap` 分区，并且使用更少的系统缓存，被分配更多内存。
 

@@ -42,16 +42,6 @@ sticky: 10
 
 ## 手机 APP
 
-### W3CSchool
-
-W3CSchool 网站出品的 APP，可以在手机上查看网站所整理的各语言的教程。
-
-::: tip P.S.
-
-会员没什么用别买。
-
-:::
-
 ### soloLearn
 
 一个代码在线学习社区，只有英文版。由于代码语义贴近英文原生逻辑，十分建议在编辑代码时 “think in English”。

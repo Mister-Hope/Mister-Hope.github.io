@@ -80,7 +80,7 @@ jobs:
 `needs` 字段指定当前任务的依赖关系，即运行顺序。
 
 ```yml
-# 这个 workflow 的运行顺序依次为：job1、job2、job3。
+# 这个 workflow 的运行顺序依次为: job1、job2、job3。
 jobs:
   job1:
   job2:
@@ -109,9 +109,9 @@ runs-on: ubuntu-18.04
 
 `steps` 字段指定每个 `Job` 的运行步骤，可以包含一个或多个步骤。每个步骤都可以指定以下三个字段。
 
-- `jobs.<job_id>.steps.name`：步骤名称。
-- `jobs.<job_id>.steps.run`：该步骤运行的命令或者 action。
-- `jobs.<job_id>.steps.env`：该步骤所需的环境变量。
+- `jobs.<job_id>.steps.name`: 步骤名称。
+- `jobs.<job_id>.steps.run`: 该步骤运行的命令或者 action。
+- `jobs.<job_id>.steps.env`: 该步骤所需的环境变量。
 
 下面是一个完整的 `workflow` 文件的范例。
 
