@@ -1,7 +1,8 @@
 ---
 title: 软件教程
 icon: software
-sticky: 10
+star: 9
+sticky: 9
 ---
 
 ## 代码编辑器

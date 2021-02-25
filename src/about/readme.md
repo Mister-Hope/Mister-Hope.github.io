@@ -4,7 +4,7 @@ title: Mr.Hope 介绍
 icon: people
 tags:
   - 个人介绍
-sticky: true
+star: true
 ---
 
 @slidestart

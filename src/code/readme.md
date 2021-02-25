@@ -1,6 +1,7 @@
 ---
 title: 代码相关
 icon: code
+star: true
 sticky: 20
 breadcrumb: false
 ---

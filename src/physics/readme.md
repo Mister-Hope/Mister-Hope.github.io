@@ -1,7 +1,8 @@
 ---
 title: 物理笔记
 category: 物理
-sticky: true
+star: 4
+sticky: 4
 ---
 
 ## 目录

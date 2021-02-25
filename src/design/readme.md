@@ -3,7 +3,8 @@ title: UI 设计
 icon: skin
 time: 2019-11-24
 category: 设计
-sticky: true
+star: true
+sticky: 8
 ---
 
 本文列出了一些 UI 设计相关的资源。

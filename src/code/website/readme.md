@@ -6,7 +6,7 @@ category: 前端
 tags:
   - 网页
   - 介绍
-sticky: true
+star: true
 ---
 
 网页需要三件套: **HTML**、**CSS** 和 **JavaScript**。

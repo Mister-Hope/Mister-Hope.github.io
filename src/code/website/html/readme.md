@@ -5,7 +5,7 @@ time: 2019-09-01
 category: HTML
 tags:
   - 介绍
-sticky: true
+star: true
 ---
 
 HTML 指的是超文本标记语言 (Hyper Text Markup Language)，它不是一种编程语言，而是一种标记语言 (markup language)，它使用标记标签来描述网页。

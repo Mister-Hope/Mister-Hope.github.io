@@ -2,7 +2,7 @@
 title: 代码学习教程
 icon: read
 category: 教程
-sticky: true
+star: true
 ---
 
 - [如何学习一门语言](learning.md)
