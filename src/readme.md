@@ -21,19 +21,19 @@ project:
   - name: "@mr-hope/vuepress-plugin-comment"
     type: link
     desc: Vuepress 评论插件
-    link: https://vuepress-comment.mrhope.site/zh/
+    link: https://vuepress-theme-hope.github.io/comment/zh/
     cover: https://vuepress-theme-hope.github.io/logo.png
 
   - name: vuepress-plugin-md-enhance
     type: link
     desc: Vuepress Markdown 增强插件
-    link: https://vuepress-md-enhance.mrhope.site/zh/
+    link: https://vuepress-theme-hope.github.io/md-enhance/zh/
     cover: https://vuepress-theme-hope.github.io/logo.png
 
   - name: "@mr-hope/vuepress-plugin-feed"
     type: link
     desc: Vuepress Feed 插件
-    link: https://vuepress-feed.mrhope.site/zh/
+    link: https://vuepress-theme-hope.github.io/feed/zh/
     cover: https://vuepress-theme-hope.github.io/logo.png
 
   - name: ftp-hope
