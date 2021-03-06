@@ -15,7 +15,7 @@ sticky: 9
 
 - [Git 教程](git/readme.md)
 
-- [GitHub 介绍](git/github/readme.md)
+- [GitHub 介绍](../code/github/readme.md)
 
 ## 浏览器
 
