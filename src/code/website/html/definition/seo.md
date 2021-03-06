@@ -19,6 +19,8 @@ category: HTML
 
   - [全部的 Schema 列表](https://schema.org/docs/full.html)
 
+- [开放内容协议 OGP](https://ogp.me/) (**O**pen **G**raph **Pr**otocal)
+
 - [Google 搜索指南](https://developers.google.com/search/docs/)
 
   - [快速上手](https://developers.google.com/search/docs/guides/get-started)
