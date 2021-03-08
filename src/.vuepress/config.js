@@ -86,7 +86,7 @@ module.exports = config({
       indexName: "mrhope",
     },
 
-    lastUpdate: {
+    git: {
       timezone: "Asia/Shanghai",
     },
 
