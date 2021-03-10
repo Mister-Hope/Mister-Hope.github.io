@@ -1,6 +1,6 @@
 ---
 title: 命令行
-icon: cmd
+icon: shell
 category: VS Code
 tags:
   - VS Code

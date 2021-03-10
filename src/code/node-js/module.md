@@ -1,6 +1,6 @@
 ---
 title: 模块
-icon: basic
+icon: module
 category: Node.js
 tags:
   - Node.js

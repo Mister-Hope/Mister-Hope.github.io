@@ -1,6 +1,6 @@
 ---
 title: 基本语法
-icon: grammar
+icon: quote
 time: 2019-09-14
 category: JavaScript
 tags:

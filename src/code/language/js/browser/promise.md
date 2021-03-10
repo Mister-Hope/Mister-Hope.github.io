@@ -1,6 +1,6 @@
 ---
 title: Promise
-icon: promise
+icon: any
 time: 2019-10-18
 category: JavaScript
 ---

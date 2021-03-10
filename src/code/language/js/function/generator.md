@@ -1,6 +1,6 @@
 ---
 title: generator
-icon: generator
+icon: cycle
 time: 2019-10-07
 category: JavaScript
 ---

@@ -1,6 +1,6 @@
 ---
 title: 函数作用域
-icon: scope
+icon: locate
 time: 2019-10-02
 category: JavaScript
 ---

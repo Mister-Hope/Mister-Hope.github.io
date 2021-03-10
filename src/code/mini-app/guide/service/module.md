@@ -1,6 +1,6 @@
 ---
 title: 模块化
-icon: basic
+icon: module
 category: 小程序
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 文本框设计
-icon: text-field
+icon: input
 time: 2020-09-26
 category: 设计
 tags:

@@ -1,6 +1,6 @@
 ---
 title: Bash 的基本语法
-icon: grammar
+icon: quote
 author: 阮一峰
 category: Linux
 tags:

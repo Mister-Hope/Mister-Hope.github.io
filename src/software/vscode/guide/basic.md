@@ -1,6 +1,6 @@
 ---
 title: 基础内容介绍
-icon: basic
+icon: module
 category: VS Code
 tags:
   - VS Code

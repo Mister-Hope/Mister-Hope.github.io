@@ -1,6 +1,6 @@
 ---
 title: 迭代
-icon: iterable
+icon: refresh
 time: 2020-05-28
 category: Python
 ---

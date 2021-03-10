@@ -1,6 +1,6 @@
 ---
 title: 基本格式
-icon: program
+icon: shell
 time: 2019-11-18
 category: Linux
 ---

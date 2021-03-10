@@ -1,5 +1,5 @@
 ---
-icon: reference
+icon: quote
 author: 阮一峰
 time: 2019-10-25
 category: JavaScript

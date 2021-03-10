@@ -1,6 +1,6 @@
 ---
 title: Linux 命令格式
-icon: program
+icon: shell
 time: 2019-11-18
 category: Linux
 ---

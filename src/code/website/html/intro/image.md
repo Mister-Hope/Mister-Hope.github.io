@@ -1,6 +1,6 @@
 ---
 title: 图片
-icon: pic
+icon: image
 time: 2019-09-02
 category: HTML
 ---

@@ -1,6 +1,6 @@
 ---
 title: 扩展阅读
-icon: reference
+icon: quote
 category: TypeScript
 ---
 

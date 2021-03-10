@@ -1,6 +1,6 @@
 ---
 title: 基础
-icon: basic
+icon: module
 category: TypeScript
 ---
 

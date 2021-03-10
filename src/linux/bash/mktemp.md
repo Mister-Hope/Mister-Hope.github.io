@@ -1,6 +1,6 @@
 ---
 title: mktemp 命令，trap 命令
-icon: cmd
+icon: shell
 author: 阮一峰
 category: Linux
 tags:

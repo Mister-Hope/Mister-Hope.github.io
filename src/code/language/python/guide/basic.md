@@ -1,6 +1,6 @@
 ---
 title: Python 基础
-icon: basic
+icon: module
 time: 2020-05-21
 category: Python
 ---

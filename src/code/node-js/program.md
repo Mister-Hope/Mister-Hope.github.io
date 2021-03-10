@@ -1,6 +1,6 @@
 ---
 title: 第一个 Node 程序
-icon: program
+icon: shell
 category: Node.js
 tags:
   - Node.js

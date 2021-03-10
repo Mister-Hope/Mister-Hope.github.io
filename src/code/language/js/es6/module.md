@@ -1,6 +1,6 @@
 ---
 title: Module 的语法
-icon: basic
+icon: module
 author: 阮一峰
 time: 2019-10-23
 category: JavaScript

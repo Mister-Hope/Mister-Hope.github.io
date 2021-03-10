@@ -1,6 +1,6 @@
 ---
 title: Generator
-icon: generator
+icon: cycle
 author: 阮一峰
 time: 2019-10-23
 category: JavaScript
