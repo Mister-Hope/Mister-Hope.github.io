@@ -70,6 +70,6 @@ VS Code 扩展允许第三方添加对以下内容的支持:
 
 ::: tip
 
-一些非常有用的扩展请见 [VS Code 推荐扩展](extension.md#推荐扩展)
+一些非常有用的扩展请见 [VS Code 推荐扩展](./guide/extension.md#推荐扩展)
 
 :::

@@ -1,6 +1,6 @@
 ---
 title: 基础组件
-icon: extension
+icon: plugin
 category: 小程序
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: 扩展
-icon: extension
+icon: plugin
 time: 2019-11-05
 category: jQuery
 ---

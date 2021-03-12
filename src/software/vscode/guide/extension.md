@@ -1,6 +1,6 @@
 ---
 title: 扩展
-icon: extension
+icon: plugin
 category: VS Code
 tags:
   - VS Code
