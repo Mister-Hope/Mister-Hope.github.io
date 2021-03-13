@@ -95,16 +95,16 @@ Vue.js 是世界上主流的渐近式 JavaScript 框架。其生态比较繁荣�
 
   - [尤雨溪演讲视频](https://www.yuque.com/vueconf/2019/gwn1z0)
 
-- [尤雨溪演讲 PPT](/file/vue/VueConf2019SH_Evan.pdf)
+- [尤雨溪演讲 PPT](https://mrhope.site/file/vue/VueConf2019SH_Evan.pdf)
 
-- [VuePress 介绍](/file/vue/intro-to-vuepres-1.x.pdf)
+- [VuePress 介绍](https://mrhope.site/file/vue/intro-to-vuepres-1.x.pdf)
 
-- [Vue 单元测试](/file/vue/Vue单元测试.pdf)
+- [Vue 单元测试](https://mrhope.site/file/vue/Vue单元测试.pdf)
 
-- [使用 Vue 实现 0 代码交互](/file/vue/使用Vue实现0代码交互-winter.pdf)
+- [使用 Vue 实现 0 代码交互](https://mrhope.site/file/vue/使用Vue实现0代码交互-winter.pdf)
 
-- [Echart 与 Vue](/file/vue/Vue%20开发%20ECharts%20踩坑指南.pdf)
+- [Echart 与 Vue](https://mrhope.site/file/vue/Vue%20开发%20ECharts%20踩坑指南.pdf)
 
-- [Vue Loader](/file/vue/Vue%20Beyond%20Vue%20Loader.pdf)
+- [Vue Loader](https://mrhope.site/file/vue/Vue%20Beyond%20Vue%20Loader.pdf)
 
-- [基于 Vue 的多端框架](/file/vue/Mars框架分享-vueconf.pdf)
+- [基于 Vue 的多端框架](https://mrhope.site/file/vue/Mars框架分享-vueconf.pdf)

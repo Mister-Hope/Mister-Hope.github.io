@@ -39,11 +39,11 @@ category: 小程序
 
 - **img**组件图片链接填写
 
-  请在 `src` 中填入 `https://v3.mp.innenu.com/img/分类名/图片文件名.后缀名`。
+  请在 `src` 中填入 `https://mp.innenu.com/img/分类名/图片文件名.后缀名`。
 
 - **doc**组件文档路径填写
 
-  请在 `url` 中填入 `https://v3.mp.innenu.com/file/文件名.文件类型`
+  请在 `url` 中填入 `https://mp.innenu.com/file/文件名.文件类型`
 
 - **audio**音频路径填写
 
@@ -51,4 +51,4 @@ category: 小程序
 
 - **swiper**组件图片链接填写
 
-  请在 `url` 的每个 element 依次填入 `https://v3.mp.innenu.com/img/分类名/图片文件名.后缀名`。
+  请在 `url` 的每个 element 依次填入 `https://mp.innenu.com/img/分类名/图片文件名.后缀名`。

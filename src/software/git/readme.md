@@ -62,9 +62,9 @@ Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理�
 
 - [官方文档](https://git-scm.com/doc)
 
-- [Git-cheatSheet](/file/git/gitCheatSheet.pdf) (PDF)
+- [Git-cheatSheet](https://mrhope.site/file/git/gitCheatSheet.pdf) (PDF)
 
-- [Pro Git](/file/git/progit_v2.1.45.pdf) (PDF)
+- [Pro Git](https://mrhope.site/file/git/progit_v2.1.45.pdf) (PDF)
 
 ::: tip TODO
 

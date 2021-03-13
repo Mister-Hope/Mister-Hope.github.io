@@ -179,7 +179,7 @@ tags:
 
 此处有一套现成的栅格素材，包含 16、24、28、32、36、48 等六个尺寸。
 
-- [工具栅格下载](/file/design/tool-grid.ai)
+- [工具栅格下载](https://mrhope.site/file/design/tool-grid.ai)
 
 :::
 
