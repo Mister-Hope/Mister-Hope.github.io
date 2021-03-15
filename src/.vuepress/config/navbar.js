@@ -1,6 +1,6 @@
 module.exports = {
   zh: [
-    { text: "主页", link: "/", icon: "home" },
+    { text: "主页", icon: "home", link: "/" },
     {
       text: "随笔",
       icon: "note",
@@ -34,6 +34,7 @@ module.exports = {
         {
           text: "语言教程",
           prefix: "/code/language/",
+          link: "/code/language/",
           items: [
             { text: "JavaScript 教程", link: "js/", icon: "javascript" },
             {
@@ -51,6 +52,7 @@ module.exports = {
         {
           text: "前端开发",
           prefix: "/code/",
+          link: "/code/",
           items: [
             { text: "网页教程", link: "website/", icon: "network" },
             { text: "HTML 教程", link: "website/html/", icon: "html" },
@@ -78,9 +80,10 @@ module.exports = {
       icon: "software",
       prefix: "/software/",
       items: [
-        { text: "软件教程", link: "", icon: "software" },
         {
-          text: "",
+          text: "软件教程",
+          icon: "software",
+          link: "",
           items: [
             { text: "VS Code", link: "vscode/", icon: "vscode" },
             { text: "Git", link: "git/", icon: "git" },
