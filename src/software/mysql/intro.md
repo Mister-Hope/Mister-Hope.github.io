@@ -194,7 +194,7 @@ exit; 退出 Mysql
    select database();
    ```
 
-   MySQL 中 `SELECT` 命令类似于其他编程语言里的 `print` 或者 `write`，你可以用它来显示一个字符串、数字、数学表达式的结果等等,
+   MySQL 中 `SELECT` 命令类似于其他编程语言里的 `print` 或者 `write`，您可以用它来显示一个字符串、数字、数学表达式的结果等等,
 
    1. 显示 MYSQL 的版本
 
@@ -516,7 +516,7 @@ exit; 退出 Mysql
    rename table 原表名 to 新表名;
    ```
 
-   - 当你执行 `RENAME` 时，你不能有任何锁定的表或活动的事务。你同样也必须有对原初表的 `ALTER` 和 `DROP` 权限，以及对新表的 `CREATE` 和 `INSERT` 权限。
+   - 当您执行 `RENAME` 时，您不能有任何锁定的表或活动的事务。您同样也必须有对原初表的 `ALTER` 和 `DROP` 权限，以及对新表的 `CREATE` 和 `INSERT` 权限。
 
    - 如果在多表更名中，MySQL 遭遇到任何错误，它将对所有被更名的表进行倒退更名，将每件事物退回到最初状态。
 

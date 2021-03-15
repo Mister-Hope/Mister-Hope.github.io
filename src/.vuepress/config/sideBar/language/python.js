@@ -57,6 +57,10 @@ module.exports = [
         prefix: "high-order-function/",
         children: ["intro", "map-and-reduce", "filter", "sorted"],
       },
+      "return-function",
+      "anonymous-function",
+      "decorator",
+      "parital-function",
     ],
   },
 ];

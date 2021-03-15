@@ -11,9 +11,9 @@ tags:
 
 ## 在 Mac 上安装 Python
 
-如果您正在使用 Mac，系统是 OS X>=10.9，那么系统自带的 Python 版本是 2.7。要安装最新的 Python 3.8，有两个方法:
+如果您正在使用 Mac，系统是 OS X>=10.9，那么系统自带的 Python 版本是 2.7。要安装最新的 Python 3.9，有两个方法:
 
-方法一:从 Python 官网下载 Python 3.8 的安装程序，下载后双击运行并安装；
+方法一:从 Python 官网下载 Python 3.9 的安装程序，下载后双击运行并安装；
 
 方法二:如果安装了 Homebrew，直接通过命令 brew install python3 安装即可。
 
@@ -23,11 +23,11 @@ tags:
 
 ## 在 Windows 上安装 Python
 
-首先，从 Python 的官方网站下载 Python 3.8 对应的 64 位安装程序，然后，运行下载的 exe 安装包。
+首先，从 Python 的官方网站下载 Python 3.9 对应的 64 位安装程序，然后，运行下载的 exe 安装包。
 
 > 这年头应该没人用 32 位的系统了吧 :smirk:
 
-特别要注意勾上 `Add Python 3.8 to PATH`，然后点 “Install Now” 即可完成安装。
+特别要注意勾上 `Add Python 3.9 to PATH`，然后点 “Install Now” 即可完成安装。
 
 ## 运行 Python
 
@@ -47,9 +47,9 @@ tags:
 'python' is not recognized as an internal or external command, operable program or batch file.
 ```
 
-这是因为 Windows 会根据一个 Path 的环境变量设定的路径去查找 python.exe，如果没找到，就会报错。如果在安装时漏掉了勾选 "Add Python 3.8 to PATH"，那就要手动把 python.exe 所在的路径添加到 Path 中。
+这是因为 Windows 会根据一个 Path 的环境变量设定的路径去查找 python.exe，如果没找到，就会报错。如果在安装时漏掉了勾选 "Add Python 3.9 to PATH"，那就要手动把 python.exe 所在的路径添加到 Path 中。
 
-如果您不知道怎么修改环境变量，建议把 Python 安装程序重新运行一遍，务必记得勾上 "Add Python 3.8 to PATH"。
+如果您不知道怎么修改环境变量，建议把 Python 安装程序重新运行一遍，务必记得勾上 "Add Python 3.9 to PATH"。
 
 ::: warning 注意
 

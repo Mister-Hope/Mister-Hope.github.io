@@ -25,8 +25,6 @@ Python 对函数式编程提供部分支持。由于 Python 允许使用变量�
 
 ## 目录
 
-- [高阶函数](high-order-function/readme.md)
-
 - [高阶函数介绍](high-order-function/intro.md)
 
 - [map / reduce](high-order-function/map-and-reduce.md)
@@ -34,3 +32,11 @@ Python 对函数式编程提供部分支持。由于 Python 允许使用变量�
 - [filter](high-order-function/filter.md)
 
 - [sorted](high-order-function/sorted.md)
+
+- [返回函数](return-function.md)
+
+- [匿名函数](anonymous-function.md)
+
+- [装饰器](decorator.md)
+
+- [偏函数](parital-function.md)
