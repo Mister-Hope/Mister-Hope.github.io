@@ -1,8 +1,13 @@
 ---
+title: Software
 icon: software
 ---
 
-# Software
+::: info
+
+Most of the software guide only contains **Chinese** version.
+
+:::
 
 ## Http Server
 

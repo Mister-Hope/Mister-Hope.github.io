@@ -30,18 +30,14 @@ module.exports = {
       text: "代码笔记",
       icon: "code",
       items: [
-        {
-          text: "前端开发",
-          icon: "code",
-          link: "/code/",
-        },
+        { text: "代码笔记", icon: "code", link: "/code/" },
         {
           text: "产品设计",
-          items: [{ text: "设计教程", link: "/design/", icon: "skin" }],
+          items: [{ text: "设计教程", icon: "skin", link: "/design/" }],
         },
         {
           text: "后端运维",
-          items: [{ text: "Linux 教程", link: "/linux/", icon: "linux" }],
+          items: [{ text: "Linux 教程", icon: "linux", link: "/linux/" }],
         },
       ],
     },
@@ -55,9 +51,9 @@ module.exports = {
           icon: "software",
           link: "",
           items: [
-            { text: "VS Code", link: "vscode/", icon: "vscode" },
-            { text: "Git", link: "git/", icon: "git" },
-            { text: "COMSOL", link: "comsol/", icon: "app" },
+            { text: "VS Code", icon: "vscode", link: "vscode/" },
+            { text: "Git", icon: "git", link: "git/" },
+            { text: "COMSOL", icon: "app", link: "comsol/" },
           ],
         },
       ],
@@ -69,20 +65,7 @@ module.exports = {
     {
       text: "Code Note",
       icon: "code",
-      items: [
-        { text: "Code Note", link: "/en/code/", icon: "code" },
-        { text: "Website", link: "/code/website/", icon: "html" },
-        { text: "Code Learning", link: "/code/language/", icon: "code" },
-        { text: "Vue", link: "/code/vue/", icon: "vue" },
-        {
-          text: "MiniProgram",
-          link: "/code/mini-app/",
-          icon: "mini-app",
-        },
-        { text: "Linux", link: "/en/code/linux/", icon: "linux" },
-        { text: "Windows", link: "/code/windows/", icon: "windows" },
-        { text: "BackEnd", link: "/code/backEnd/", icon: "back-stage" },
-      ],
+      items: [{ text: "Code Note", icon: "code", link: "/en/code/" }],
     },
     {
       text: "Software",

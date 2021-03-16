@@ -1,9 +1,10 @@
 ---
+title: Code Note
 icon: code
 ---
 
-# Code Note
+::: info
 
-Code notes only contains Chinese version.
+Code notes only contains **Chinese** version.
 
-Please switch your language to chinese.
+:::
