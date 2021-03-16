@@ -1,10 +1,10 @@
 ---
 title: 自动部署
 icon: network
-category: Git
+category: GitHub
 tags:
   - Git
-  - 软件
+  - deploy
 ---
 
 本文介绍如何利用 Git 和 GitHub Action，自动部署代码到服务器。

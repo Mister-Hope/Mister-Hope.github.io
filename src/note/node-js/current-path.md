@@ -2,7 +2,7 @@
 icon: nodeJS
 time: 2019-9-10
 tags:
-  - node.js
+  - Node.js
 ---
 
 # `__dirname`、`__filename` 和 `process.cwd()` 三者的区别

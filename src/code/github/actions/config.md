@@ -2,6 +2,10 @@
 title: Action 配置
 icon: config
 time: 2021-02-18
+category: GitHub
+tags:
+  - action
+  - workflow
 ---
 
 GitHub Actions 的配置文件叫做 `workflow` 文件，存放在代码仓库的 `.github/workflows` 目录。

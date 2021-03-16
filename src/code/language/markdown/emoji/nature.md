@@ -3,8 +3,8 @@ title: 自然
 icon: emoji
 category: Markdown
 tags:
-  - markdown
-  - emoji
+  - Markdown
+  - Emoji
 ---
 
 - :sunny: `:sunny:`

@@ -4,7 +4,7 @@ icon: type
 time: 2020-09-13
 category: 设计
 tags:
-  - icon
+  - Icon
 ---
 
 设计图标可以划分成三种大类:

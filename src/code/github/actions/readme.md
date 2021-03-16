@@ -2,6 +2,10 @@
 title: GitHub Actions
 icon: actions
 time: 2021-02-18
+category: GitHub
+tags:
+  - action
+  - workflow
 ---
 
 ## 目录
@@ -13,7 +17,9 @@ time: 2021-02-18
 ## 常用 GitHub Action
 
 - [checkout](checkout.md)
+
 - [cache](cache.md)
+
 - [GitHub Pages 部署](gh-pages-deploy.md)
 
 ## 官方文档

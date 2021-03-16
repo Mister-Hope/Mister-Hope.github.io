@@ -1,6 +1,7 @@
 ---
 title: 语义化提交
 icon: semantic
+category: GitHub
 ---
 
 ## Semantic

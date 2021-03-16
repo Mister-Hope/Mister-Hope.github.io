@@ -1,9 +1,8 @@
 ---
 title: 路径
-icon: nodeJS
+icon: navigation
 time: 2019-9-20
-tags:
-  - node.js
+category: 基础
 ---
 
 无论是我们想直接访问一个文件，还是在一个文件中希望访问另一个文件，都涉及到一个获取文件的操作。而无论是在 Windows 中还是在 Linux 中，文件的具体位置都用文档的路径标注。

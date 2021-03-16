@@ -2,9 +2,9 @@
 title: GitHub 简介
 icon: info
 time: 2019-11-20
-category: Git
+category: GitHub
 tags:
-  - GitHub
+  - 介绍
 ---
 
 ## ~~Gayhub~~ GitHub 是世界上最大的 ~~同性交友~~ 代码托管网站

@@ -1,9 +1,9 @@
 ---
 title: 代码编辑器
 icon: editor
-category: 编辑器
+category: 软件
 tags:
-  - 软件
+  - 编辑器
 ---
 
 - [VS Code](vscode/readme.md)

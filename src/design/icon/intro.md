@@ -4,7 +4,7 @@ icon: info
 time: 2020-09-13
 category: 设计
 tags:
-  - icon
+  - Icon
 ---
 
 ## 图标的基本认识

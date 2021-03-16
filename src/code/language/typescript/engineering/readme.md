@@ -2,6 +2,7 @@
 title: 工程
 icon: engine
 category: TypeScript
+timeline: false
 ---
 
 掌握了 TypeScript 的语法就像学会了砌墙的工艺。

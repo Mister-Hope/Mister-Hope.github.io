@@ -1,6 +1,7 @@
 ---
 title: YAML 教程
 icon: yaml
+time: 2020-07-26
 category: YAML
 ---
 

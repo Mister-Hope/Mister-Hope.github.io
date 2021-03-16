@@ -4,7 +4,7 @@ icon: guide
 time: 2020-09-13
 category: 设计
 tags:
-  - icon
+  - Icon
 ---
 
 ## 图标的可用性

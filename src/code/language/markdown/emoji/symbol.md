@@ -3,8 +3,8 @@ title: 符号
 icon: emoji
 category: Markdown
 tags:
-  - markdown
-  - emoji
+  - Markdown
+  - Emoji
 ---
 
 - :one: `:one:`

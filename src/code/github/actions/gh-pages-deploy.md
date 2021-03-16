@@ -1,11 +1,18 @@
 ---
 title: github-pages-deploy
 time: 2021-02-20
+category: GitHub
+tags:
+  - action
+  - deploy
+  - workflow
 ---
 
 github-pages-deploy-action 用于自动将网站内容部署到 GitHub Pages。
 
 您可以使用这个 Action 将代码推送到您想要的任何分支中，包括 gh-pages 和 docs, 甚至可以处理跨存储库部署。
+
+<!-- more -->
 
 ## 重要配置
 

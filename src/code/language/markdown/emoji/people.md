@@ -3,8 +3,8 @@ title: 人物
 icon: emoji
 category: Markdown
 tags:
-  - markdown
-  - emoji
+  - Markdown
+  - Emoji
 ---
 
 - :smile: `:smile:`

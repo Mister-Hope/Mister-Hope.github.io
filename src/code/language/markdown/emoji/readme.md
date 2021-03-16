@@ -3,8 +3,8 @@ title: Emoji 列表
 icon: emoji
 category: Markdown
 tags:
-  - markdown
-  - emoji
+  - Markdown
+  - Emoji
 ---
 
 ## 人物

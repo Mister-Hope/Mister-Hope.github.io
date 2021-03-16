@@ -4,7 +4,7 @@ icon: notice
 time: 2020-09-15
 category: 设计
 tags:
-  - icon
+  - Icon
 ---
 
 规范是图标设计的重点。

@@ -3,6 +3,7 @@ title: Glob
 icon: regexp
 author: 陈慧玲
 time: 2021-02-18
+category: 基础
 ---
 
 本文介绍 Glob 匹配。

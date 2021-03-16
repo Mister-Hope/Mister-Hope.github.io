@@ -3,8 +3,8 @@ title: 对象
 icon: emoji
 category: Markdown
 tags:
-  - markdown
-  - emoji
+  - Markdown
+  - Emoji
 ---
 
 - :bamboo: `:bamboo:`

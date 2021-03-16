@@ -1,6 +1,7 @@
 ---
 title: GitHub Token
 icon: token
+category: GitHub
 ---
 
 Personal Access Token (PAT)，又称个人访问令牌，是一种代替密码进行 GitHub 身份认证的方式。

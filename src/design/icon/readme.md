@@ -4,7 +4,7 @@ icon: discover
 time: 2020-09-13
 category: 设计
 tags:
-  - icon
+  - Icon
 ---
 
 本文介绍了 UI 设计中图标的相关介绍与技巧。

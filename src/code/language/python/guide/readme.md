@@ -3,6 +3,7 @@ title: 快速上手
 icon: creative
 time: 2020-05-19
 category: Python
+timeline: false
 ---
 
 本章节介绍 Python 的基础语法，帮助您尽快了解 Python 的基础内容

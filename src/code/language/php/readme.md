@@ -1,9 +1,8 @@
 ---
+title: PHP 语言教程
 icon: php
 category: PHP
 ---
-
-# php 语言教程
 
 ::: tip
 

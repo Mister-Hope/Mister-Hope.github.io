@@ -1,6 +1,10 @@
 ---
 title: cache
 time: 2021-02-20
+category: GitHub
+tags:
+  - action
+  - workflow
 ---
 
 这个 Action 允许您缓存依赖项和构建输出内容以缩短 Workflow 执行时间。
@@ -15,6 +19,8 @@ time: 2021-02-20
 ](https://docs.github.com/cn/actions/guides/caching-dependencies-to-speed-up-workflows)
 
 :::
+
+<!-- more -->
 
 ## 配置项
 

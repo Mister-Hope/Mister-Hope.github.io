@@ -1,9 +1,15 @@
 ---
 title: checkout
 time: 2021-02-18
+category: GitHub
+tags:
+  - action
+  - workflow
 ---
 
 该操作将检出您的存储库 `$GITHUB_WORKSPACE`，使您的工作流可以访问它。
+
+<!-- more -->
 
 默认情况下，对于触发工作流的 ref / SHA，为了速度仅提取一次提交。如需获取所有分支和标签的所有历史记录，需要设置设置 `fetch-depth: 0`。
 

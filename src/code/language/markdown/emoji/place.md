@@ -3,8 +3,8 @@ title: 地点
 icon: emoji
 category: Markdown
 tags:
-  - markdown
-  - emoji
+  - Markdown
+  - Emoji
 ---
 
 - :house: `:house:`
