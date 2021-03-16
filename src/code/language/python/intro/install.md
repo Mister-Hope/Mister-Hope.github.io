@@ -1,5 +1,5 @@
 ---
-title: Python 安装
+title: 安装 Python
 icon: install
 time: 2020-05-18
 category: Python
@@ -35,7 +35,7 @@ tags:
 
 情况一:
 
-![示意图](./assets/cmd.png)
+![示意图](../assets/cmd.png)
 
 看到上面的画面，就说明 Python 安装成功!
 

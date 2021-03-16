@@ -1,11 +1,11 @@
 ---
-title: Python 快速入门
+title: 快速上手
 icon: creative
 time: 2020-05-19
 category: Python
 ---
 
-这些文档能够让您快速掌握 Python 的基础用法。
+本章节介绍 Python 的基础语法，帮助您尽快了解 Python 的基础内容
 
 <!-- more -->
 

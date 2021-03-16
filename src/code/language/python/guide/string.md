@@ -149,7 +149,7 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 3: invalid 
 
 没错，`%` 运算符就是用来格式化字符串的。在字符串内部，`%s` 表示用字符串替换，`%d` 表示用整数替换，有几个 `%?` 占位符，后面就跟几个变量或者值，顺序要对应好。如果只有一个 `%?`，括号可以省略。
 
-常见的占位符有:
+::: info 常见的占位符有
 
 | 占位符 | 替换内容     |
 | ------ | ------------ |
@@ -157,6 +157,8 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 3: invalid 
 | `%f`   | 浮点数       |
 | `%s`   | 字符串       |
 | `%x`   | 十六进制整数 |
+
+:::
 
 其中，格式化整数和浮点数还可以指定是否补 0 和整数与小数的位数:
 

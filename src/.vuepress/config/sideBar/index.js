@@ -50,6 +50,8 @@ module.exports = {
 
     "/code/language/typescript/": require("./language/typescript"),
 
+    "/code/language/markdown/": require("./language/markdown"),
+
     "/code/language/js/": require("./language/javascript"),
 
     "/code/language/dart/": require("./language/dart"),
@@ -64,18 +66,43 @@ module.exports = {
 
     "/code/": [
       "",
-      "basic/",
-      "website/",
-      "language/",
-      "vue/",
-      "mini-app/",
-      "node-js/",
-      "github/",
-      "windows/",
+      {
+        title: "基础介绍",
+        icon: "module",
+        collapsable: false,
+        children: ["basic/", "windows/", "github/"],
+      },
+      {
+        title: "前端开发",
+        icon: "code",
+        collapsable: false,
+        children: [
+          "website/",
+          "node-js/",
+          "vue/",
+          "Angular/",
+          "react/",
+          "mini-app/",
+        ],
+      },
+      {
+        title: "语言",
+        icon: "language",
+        prefix: "language/",
+        link: "language/",
+        collapsable: false,
+        children: [
+          "learning",
+          "js/",
+          "typescript/",
+          "python/",
+          "json/",
+          "yaml/",
+          "linter/",
+        ],
+      },
       "Android/",
       "backEnd/",
-      "Angular/",
-      "react/",
     ],
 
     "/about/": ["", "site"],

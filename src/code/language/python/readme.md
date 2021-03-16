@@ -18,11 +18,11 @@ category: Python
 
 ## Python 简介
 
-- [Python 介绍](intro.md)
+- [Python 介绍](intro/intro.md)
 
-- [Python 安装](install.md)
+- [Python 安装](intro/install.md)
 
-- [Python 解释器](interpreter.md)
+- [Python 解释器](intro/interpreter.md)
 
 ## Python 快速入门
 
@@ -65,6 +65,24 @@ category: Python
 - [生成器](advance/generator.md)
 
 - [迭代器](advance/iterator.md)
+
+## 函数式编程
+
+- [高阶函数介绍](functional-programming/high-order-function/intro.md)
+
+- [map / reduce](functional-programming/high-order-function/map-and-reduce.md)
+
+- [filter](functional-programming/high-order-function/filter.md)
+
+- [sorted](functional-programming/high-order-function/sorted.md)
+
+- [返回函数](functional-programming/return-function.md)
+
+- [匿名函数](functional-programming/anonymous-function.md)
+
+- [装饰器](functional-programming/decorator.md)
+
+- [偏函数](functional-programming/parital-function.md)
 
 ## 相关工具
 

@@ -6,7 +6,7 @@ heroImage: /logo.png
 heroText: 𝓜𝓻. 𝓗𝓸𝓹𝓮
 tagline: Where there is light, there is hope
 action:
-  - text: About Me ℹ
+  - text: Personal Intro
     type: primary
     link: /en/about/
 
@@ -21,11 +21,11 @@ features:
 
   - title: "@mr-hope/vuepress-plugin-comment"
     details: Comment plugin for Vuepress
-    link: https://vuepress-comment.mrhope.site/
+    link: https://vuepress-theme-hope.github.io/comment/
 
   - title: vuepress-plugin-md-enhance
     details: Vuepress Markdown Enhance plugin
-    link: https://vuepress-md-enhance.mrhope.site/
+    link: https://vuepress-theme-hope.github.io/md-enhance/
 
   - title: ftp-hope
     details: A Node.js FTP client with promise support

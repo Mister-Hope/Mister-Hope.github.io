@@ -30,40 +30,10 @@ module.exports = {
       text: "代码笔记",
       icon: "code",
       items: [
-        { text: "代码笔记", link: "/code/", icon: "code" },
-        {
-          text: "语言教程",
-          prefix: "/code/language/",
-          link: "/code/language/",
-          items: [
-            { text: "JavaScript 教程", link: "js/", icon: "javascript" },
-            {
-              text: "Typescript 教程",
-              link: "typescript/",
-              icon: "typescript",
-            },
-            {
-              text: "Python 教程",
-              link: "python/",
-              icon: "python",
-            },
-          ],
-        },
         {
           text: "前端开发",
-          prefix: "/code/",
+          icon: "code",
           link: "/code/",
-          items: [
-            { text: "网页教程", link: "website/", icon: "network" },
-            { text: "HTML 教程", link: "website/html/", icon: "html" },
-            { text: "CSS 教程", link: "website/css/", icon: "css" },
-            { text: "Vue 教程", link: "vue/", icon: "vue" },
-            {
-              text: "小程序教程",
-              link: "mini-app/",
-              icon: "mini-app",
-            },
-          ],
         },
         {
           text: "产品设计",

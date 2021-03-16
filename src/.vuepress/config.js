@@ -3,7 +3,7 @@ const navBarConfig = require("./config/navbar");
 const sideBarConfig = require("./config/sideBar");
 
 module.exports = config({
-  title: "我是 Mr.Hope",
+  title: "Mr.Hope",
   description: "Where there is light, there is hope.",
 
   head: [
@@ -35,9 +35,14 @@ module.exports = config({
   themeConfig: {
     baseLang: "zh-CN",
     logo: "/logo.png",
+    author: "Mr.Hope",
+
+    repo: "https://github.com/Mister-Hope/Mister-Hope.github.io",
+    repoDisplay: false,
+    docsDir: "src",
+
     nav: navBarConfig.zh,
     sidebar: sideBarConfig.zh,
-    author: "Mr.Hope",
 
     locales: {
       /** 英文设置 */
@@ -86,6 +91,8 @@ module.exports = config({
       indexName: "mrhope",
     },
 
+    algoliaType: "full",
+
     git: {
       timezone: "Asia/Shanghai",
     },
@@ -93,6 +100,7 @@ module.exports = config({
     pwa: {
       favicon: "/favicon.ico",
       themeColor: "#5c92d1",
+      cacheHTML: false,
       apple: {
         icon: "/assets/icon/apple-icon-152.png",
         statusBarColor: "black",
@@ -101,125 +109,6 @@ module.exports = config({
         image: "/assets/icon/ms-icon-144.png",
         color: "#ffffff",
       },
-      manifest: {
-        name: "Mr.Hope 的个人博客",
-        short_name: "Mr.Hope Blog",
-        description: "Mr.Hope 的个人博客",
-        theme_color: "#5c92d1",
-        icons: [
-          {
-            src: "/assets/icon/chrome-192.png",
-            sizes: "192x192",
-            type: "image/png",
-          },
-          {
-            src: "/assets/icon/chrome-512.png",
-            sizes: "512x512",
-            type: "image/png",
-          },
-          {
-            src: "/assets/icon/chrome-mask-192.png",
-            sizes: "192x192",
-            purpose: "maskable",
-            type: "image/png",
-          },
-          {
-            src: "/assets/icon/chrome-mask-512.png",
-            sizes: "512x512",
-            purpose: "maskable",
-            type: "image/png",
-          },
-        ],
-        shortcuts: [
-          {
-            name: "分类",
-            short_name: "分类",
-            icons: [
-              {
-                src: "/assets/icon/category-maskable.png",
-                sizes: "192x192",
-                purpose: "maskable",
-                type: "image/png",
-              },
-              {
-                src: "/assets/icon/category-monochrome.png",
-                sizes: "192x192",
-                purpose: "monochrome",
-                type: "image/png",
-              },
-            ],
-            url: "/category/",
-            description: "文章分类分组",
-          },
-          {
-            name: "标签",
-            short_name: "标签",
-            icons: [
-              {
-                src: "/assets/icon/tag-maskable.png",
-                sizes: "192x192",
-                purpose: "maskable",
-                type: "image/png",
-              },
-              {
-                src: "/assets/icon/tag-monochrome.png",
-                sizes: "192x192",
-                purpose: "monochrome",
-                type: "image/png",
-              },
-            ],
-            url: "/tag/",
-            description: "文章标签分组",
-          },
-          {
-            name: "时间线",
-            short_name: "时间线",
-            icons: [
-              {
-                src: "/assets/icon/timeline-maskable.png",
-                sizes: "192x192",
-                purpose: "maskable",
-                type: "image/png",
-              },
-              {
-                src: "/assets/icon/timeline-monochrome.png",
-                sizes: "192x192",
-                purpose: "monochrome",
-                type: "image/png",
-              },
-            ],
-            url: "/timeline/",
-            description: "时间线文章列表",
-          },
-          {
-            name: "个人介绍",
-            short_name: "个人介绍",
-            icons: [
-              {
-                src: "/assets/icon/about-maskable.png",
-                sizes: "192x192",
-                purpose: "maskable",
-                type: "image/png",
-              },
-              {
-                src: "/assets/icon/about-monochrome.png",
-                sizes: "192x192",
-                purpose: "monochrome",
-                type: "image/png",
-              },
-            ],
-            url: "/about/",
-            description: "个人介绍",
-          },
-        ],
-      },
-      cacheHTML: false,
-      maxSize: 2048,
     },
-
-    repo: "https://github.com/Mister-Hope/blog",
-    repoDisplay: false,
-    repoLabel: "Github",
-    docsDir: "src",
   },
 });

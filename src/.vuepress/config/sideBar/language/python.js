@@ -1,8 +1,13 @@
 module.exports = [
   "",
-  "intro",
-  "install",
-  "interpreter",
+  {
+    title: "介绍",
+    icon: "info",
+    path: "intro/",
+    collapsable: false,
+    prefix: "intro/",
+    children: ["intro", "install", "interpreter"],
+  },
   {
     title: "基础教程",
     icon: "creative",
