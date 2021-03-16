@@ -140,7 +140,7 @@ Page({
 
 一个更完整的示例: [在开发者工具中预览效果](https://developers.weixin.qq.com/s/ELP5uTmN7E8l)
 
-::: tips
+::: tip
 
 - 如果超过 `expireTimeStamp` ，保存的数据将被丢弃，且冷启动时不遵循 `restartStrategy` 的配置，而是直接从首页冷启动。
 - `expireTimeStamp` 有可能被自动提前，如微信客户端需要清理数据的时候。

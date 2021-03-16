@@ -54,8 +54,14 @@ Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，
 
 - `yarn config set registry <registry>`: 更改源
 
-  ::: tips
+  ::: tip
 
-  在国内，建议换成 [淘宝源](https://registry.npm.taobao.org)
+  在国内，建议换成淘宝源 <https://registry.npm.taobao.org>
+
+  即执行
+
+  ```sh
+  yarn config set registry https://registry.npm.taobao.org
+  ```
 
   :::
