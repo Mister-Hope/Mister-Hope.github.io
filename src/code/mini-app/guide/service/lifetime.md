@@ -1,5 +1,5 @@
 ---
-title: 生命周期 <MyBadge text="不需要立即掌握" />
+title: 生命周期 <Badge text="不需要立即掌握" />
 icon: state
 category: 小程序
 ---

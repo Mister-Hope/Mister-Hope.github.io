@@ -38,16 +38,16 @@ category: 小程序
 
 ## 高级
 
-- [动画](animation.md) <MyBadge type="grey" text="高级" />
+- [动画](animation.md) <Badge type="grey" text="高级" />
 
-- [WXS](wxs.md) <MyBadge type="grey" text="高级" />
+- [WXS](wxs.md) <Badge type="grey" text="高级" />
 
-- [WXS 事件](wxs-event.md) <MyBadge type="grey" text="高级" />
+- [WXS 事件](wxs-event.md) <Badge type="grey" text="高级" />
 
-- [建议双向绑定](model.md) <MyBadge type="grey" text="高级" />
+- [建议双向绑定](model.md) <Badge type="grey" text="高级" />
 
-- [获取界面上的节点信息](selector.md) <MyBadge type="grey" text="高级" />
+- [获取界面上的节点信息](selector.md) <Badge type="grey" text="高级" />
 
-- [相应显示区域变化](selector.md) <MyBadge type="grey" text="高级" />
+- [相应显示区域变化](selector.md) <Badge type="grey" text="高级" />
 
-- [初始渲染缓存](rendering-cache.md) <MyBadge type="grey" text="高级" />
+- [初始渲染缓存](rendering-cache.md) <Badge type="grey" text="高级" />

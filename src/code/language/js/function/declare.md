@@ -32,7 +32,7 @@ function abs(x) {
 
 由于 JavaScript 的函数也是一个对象，上述定义的 `abs()` 函数实际上是一个函数对象，而函数名 `abs` 可以视为指向该函数的变量。这叫做函数的声明(Function Declaration)。
 
-## 函数表达式 <MyBadge text="推荐" type="tip" />
+## 函数表达式 <Badge text="推荐" type="tip" />
 
 除了用 `function` 命令声明函数，还可以采用变量赋值的写法。
 
@@ -68,7 +68,7 @@ const f = function f() {};
 
 需要注意的是，函数的表达式需要在语句的结尾加上分号，表示语句结束。而函数的声明在结尾的大括号后面不用加分号。总的来说，这两种声明函数的方式，差别很细微，可以近似认为是等价的。
 
-## Function 构造函数 <MyBadge text="不推荐" type="grey" />
+## Function 构造函数 <Badge text="不推荐" type="grey" />
 
 第三种声明函数的方式是 `Function` 构造函数。
 
@@ -297,7 +297,7 @@ f(1); // 1
 由于 JavaScript 函数允许接收任意个参数，于是我们就不得不用 arguments[^arguments] 来获取所有参数:
 
 [^arguments]:
-    **arguments** <MyBadge text="不推荐使用" type="warning" /> <MyBadge text="使用 rest 替代" type="tip" />
+    **arguments** <Badge text="不推荐使用" type="warning" /> <Badge text="使用 rest 替代" type="tip" />
 
     - arguments 的定义
 

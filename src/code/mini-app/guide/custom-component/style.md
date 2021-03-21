@@ -230,7 +230,7 @@ Component({
 
 ::::
 
-## 外部样式类 <MyBadge type="grey" text="高级" />
+## 外部样式类 <Badge type="grey" text="高级" />
 
 有时，组件希望接受外部传入的样式类。此时可以在 Component 中用 `externalClasses` 定义段定义若干个外部样式类。
 
@@ -279,7 +279,7 @@ Component({
 
 :::
 
-## 引用页面或父组件的样式 <MyBadge type="grey" text="高级" />
+## 引用页面或父组件的样式 <Badge type="grey" text="高级" />
 
 > 基础库 2.9.2 开始支持
 
@@ -321,7 +321,7 @@ Component({
 
 :::
 
-## 虚拟化组件节点 <MyBadge type="grey" text="高级" />
+## 虚拟化组件节点 <Badge type="grey" text="高级" />
 
 > 基础库 2.11.2 开始支持
 

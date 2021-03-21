@@ -46,18 +46,7 @@ module.exports = [
     icon: "markdown",
     prefix: "markdown/",
     collapsable: false,
-    children: [
-      "",
-      "demo",
-      {
-        title: "Emoji",
-        icon: "emoji",
-        path: "emoji/",
-        prefix: "emoji/",
-        collapsable: false,
-        children: ["people", "nature", "object", "place", "symbol"],
-      },
-    ],
+    children: ["", "intro", "block", "inline", "extend", "emoji/"],
   },
   "linter/",
 ];

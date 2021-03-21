@@ -1,5 +1,5 @@
 ---
-title: API <MyBadge text="重要" type="error" />
+title: API <Badge text="重要" type="error" />
 icon: api
 category: 小程序
 ---

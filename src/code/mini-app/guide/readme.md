@@ -23,13 +23,13 @@ category: 小程序
 
   - [框架介绍](frame/intro.md)
 
-  - [场景值](frame/scene.md) <MyBadge type="grey" text="高级" />
+  - [场景值](frame/scene.md) <Badge type="grey" text="高级" />
 
-  - [运行环境](frame/env.md) <MyBadge type="grey" text="高级" />
+  - [运行环境](frame/env.md) <Badge type="grey" text="高级" />
 
-  - [运行机制](frame/mechanism.md) <MyBadge type="grey" text="高级" />
+  - [运行机制](frame/mechanism.md) <Badge type="grey" text="高级" />
 
-  - [更新机制](frame/update.md) <MyBadge type="grey" text="高级" />
+  - [更新机制](frame/update.md) <Badge type="grey" text="高级" />
 
 - [逻辑层](service/readme.md)
 
@@ -69,19 +69,19 @@ category: 小程序
 
   - [基础组件](view/component.md)
 
-  - [动画](view/animation.md) <MyBadge type="grey" text="高级" />
+  - [动画](view/animation.md) <Badge type="grey" text="高级" />
 
-  - [WXS](view/wxs.md) <MyBadge type="grey" text="高级" />
+  - [WXS](view/wxs.md) <Badge type="grey" text="高级" />
 
-  - [WXS 事件](view/wxs-event.md) <MyBadge type="grey" text="高级" />
+  - [WXS 事件](view/wxs-event.md) <Badge type="grey" text="高级" />
 
-  - [建议双向绑定](view/model.md) <MyBadge type="grey" text="高级" />
+  - [建议双向绑定](view/model.md) <Badge type="grey" text="高级" />
 
-  - [获取界面上的节点信息](view/selector.md) <MyBadge type="grey" text="高级" />
+  - [获取界面上的节点信息](view/selector.md) <Badge type="grey" text="高级" />
 
-  - [相应显示区域变化](view/selector.md) <MyBadge type="grey" text="高级" />
+  - [相应显示区域变化](view/selector.md) <Badge type="grey" text="高级" />
 
-  - [初始渲染缓存](view/rendering-cache.md) <MyBadge type="grey" text="高级" />
+  - [初始渲染缓存](view/rendering-cache.md) <Badge type="grey" text="高级" />
 
 - [小程序能力](ability/readme.md)
 

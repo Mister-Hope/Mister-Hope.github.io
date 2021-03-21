@@ -36,18 +36,10 @@ CSS 能对可替换元素产生的唯一影响在于，部分属性支持控制�
 ```html
 <div class="wrapper">
   <div class="box">
-    <img
-      src="/assets/img/balloons.jpg"
-      alt="balloons"
-      class="cover"
-    />
+    <img src="/assets/img/balloons.jpg" alt="balloons" class="cover" />
   </div>
   <div class="box">
-    <img
-      src="/assets/img/balloons.jpg"
-      alt="balloons"
-      class="contain"
-    />
+    <img src="/assets/img/balloons.jpg" alt="balloons" class="contain" />
   </div>
 </div>
 ```
@@ -84,10 +76,7 @@ img {
 
 ```html
 <div class="wrapper">
-  <img
-    src="/assets/img/star.png"
-    alt="star"
-  />
+  <img src="/assets/img/star.png" alt="star" />
   <div />
   <div />
   <div />

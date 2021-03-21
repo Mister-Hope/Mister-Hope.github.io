@@ -46,13 +46,13 @@ QQ 小程序本质还是换汤不换药的，且 QQ 开发者工具兼容 `wxml`
 
   - [框架介绍](guide/frame/intro.md)
 
-  - [场景值](guide/frame/scene.md) <MyBadge type="grey" text="高级" />
+  - [场景值](guide/frame/scene.md) <Badge type="grey" text="高级" />
 
-  - [运行环境](guide/frame/env.md) <MyBadge type="grey" text="高级" />
+  - [运行环境](guide/frame/env.md) <Badge type="grey" text="高级" />
 
-  - [运行机制](guide/frame/mechanism.md) <MyBadge type="grey" text="高级" />
+  - [运行机制](guide/frame/mechanism.md) <Badge type="grey" text="高级" />
 
-  - [更新机制](guide/frame/update.md) <MyBadge type="grey" text="高级" />
+  - [更新机制](guide/frame/update.md) <Badge type="grey" text="高级" />
 
 - [逻辑层](guide/service/readme.md)
 
@@ -84,19 +84,19 @@ QQ 小程序本质还是换汤不换药的，且 QQ 开发者工具兼容 `wxml`
 
   - [基础组件](guide/view/component.md)
 
-  - [动画](guide/view/animation.md) <MyBadge type="grey" text="高级" />
+  - [动画](guide/view/animation.md) <Badge type="grey" text="高级" />
 
-  - [WXS](guide/view/wxs.md) <MyBadge type="grey" text="高级" />
+  - [WXS](guide/view/wxs.md) <Badge type="grey" text="高级" />
 
-  - [WXS 事件](guide/view/wxs-event.md) <MyBadge type="grey" text="高级" />
+  - [WXS 事件](guide/view/wxs-event.md) <Badge type="grey" text="高级" />
 
-  - [建议双向绑定](guide/view/model.md) <MyBadge type="grey" text="高级" />
+  - [建议双向绑定](guide/view/model.md) <Badge type="grey" text="高级" />
 
-  - [获取界面上的节点信息](guide/view/selector.md) <MyBadge type="grey" text="高级" />
+  - [获取界面上的节点信息](guide/view/selector.md) <Badge type="grey" text="高级" />
 
-  - [相应显示区域变化](guide/view/selector.md) <MyBadge type="grey" text="高级" />
+  - [相应显示区域变化](guide/view/selector.md) <Badge type="grey" text="高级" />
 
-  - [初始渲染缓存](guide/view/rendering-cache.md) <MyBadge type="grey" text="高级" />
+  - [初始渲染缓存](guide/view/rendering-cache.md) <Badge type="grey" text="高级" />
 
 - [小程序能力](guide/ability/readme.md)
 

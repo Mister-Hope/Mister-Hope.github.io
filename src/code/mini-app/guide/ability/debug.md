@@ -4,7 +4,7 @@ icon: debug
 category: 小程序
 ---
 
-## vConsole <MyBadge text="重要" type="error" />
+## vConsole <Badge text="重要" type="error" />
 
 在真机上，如果想要查看 `console` API 输出的日志内容和额外的调试信息，需要在点击屏幕右上角的按钮打开的菜单里选择「打开调试」。此时小程序/小游戏会退出，重新打开后会右下角会出现一个 `vConsole` 按钮。点击 `vConsole` 按钮可以打开日志面板。
 

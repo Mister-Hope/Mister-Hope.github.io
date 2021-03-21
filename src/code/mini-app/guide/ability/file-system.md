@@ -75,7 +75,7 @@ wx.chooseImage({
 });
 ```
 
-### 本地缓存文件 <MyBadge text="无需使用" type="grey" />
+### 本地缓存文件 <Badge text="无需使用" type="grey" />
 
 本地缓存文件只能通过调用特定接口产生，不能直接写入内容。本地缓存文件产生后，重启之后仍可用。本地缓存文件只能通过 `FileSystemManager.saveFile()` 接口将本地临时文件保存获得。
 
@@ -94,7 +94,7 @@ fs.saveFile({
 
 :::
 
-### 本地用户文件 <MyBadge text="重要" type="error" />
+### 本地用户文件 <Badge text="重要" type="error" />
 
 > 从 1.7.0 版本开始新增
 

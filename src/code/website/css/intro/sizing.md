@@ -14,10 +14,7 @@ category: CSS
 ::: demo 案例
 
 ```html
-<img
-  src="/assets/img/star.png"
-  alt="star"
-/>
+<img src="/assets/img/star.png" alt="star" />
 <div class="box" />
 ```
 
@@ -150,25 +147,13 @@ img {
 ```html
 <div class="wrapper">
   <div class="box">
-    <img
-      src="/assets/img/star.png"
-      alt="star"
-      class="width"
-    />
+    <img src="/assets/img/star.png" alt="star" class="width" />
   </div>
   <div class="box">
-    <img
-      src="/assets/img/star.png"
-      alt="star"
-      class="max"
-    />
+    <img src="/assets/img/star.png" alt="star" class="max" />
   </div>
   <div class="minibox">
-    <img
-      src="/assets/img/star.png"
-      alt="star"
-      class="max"
-    />
+    <img src="/assets/img/star.png" alt="star" class="max" />
   </div>
 </div>
 ```

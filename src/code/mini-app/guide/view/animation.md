@@ -234,7 +234,7 @@ this.animate(
 
 :::
 
-## 高级的动画方式 <MyBadge text="初学者无需掌握" type="warning" />
+## 高级的动画方式 <Badge text="初学者无需掌握" type="warning" />
 
 在一些复杂场景下，上述的动画方法可能并不适用。所以这个时候就需要一些高级的动画方式。
 

@@ -4,7 +4,7 @@ icon: config
 category: 小程序
 ---
 
-## 注册小程序 <MyBadge text="重要" type="error" />
+## 注册小程序 <Badge text="重要" type="error" />
 
 每个小程序都需要在 `app.js` 中调用 `App` 方法注册小程序示例，绑定生命周期回调函数、错误监听和页面不存在监听函数等。
 
@@ -43,7 +43,7 @@ console.log(appInstance.globalData); // I am global data
 
 对于小程序中的每个页面，都需要在页面对应的 js 文件中进行注册，指定页面的初始数据、生命周期回调、事件处理函数等。
 
-### 使用 Page 构造器注册页面 <MyBadge text="重要" type="error" />
+### 使用 Page 构造器注册页面 <Badge text="重要" type="error" />
 
 简单的页面可以使用 `Page()` 进行构造。
 
@@ -111,7 +111,7 @@ Page({
 
 详细的参数含义和使用请参考 [Page 参考文档](page.md)。
 
-### 使用 Component 构造器构造页面 <MyBadge text="初学无需了解" type="grey" />
+### 使用 Component 构造器构造页面 <Badge text="初学无需了解" type="grey" />
 
 `Page` 构造器适用于简单的页面。但对于复杂的页面， `Page` 构造器可能并不好用。
 

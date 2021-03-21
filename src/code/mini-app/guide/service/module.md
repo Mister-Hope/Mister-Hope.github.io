@@ -4,7 +4,7 @@ icon: module
 category: 小程序
 ---
 
-此部分是高效复用小程序代码的方式。<MyBadge text="重要" type="error" />
+此部分是高效复用小程序代码的方式。<Badge text="重要" type="error" />
 
 模块化的思路是将一些公共的代码抽离成为一个单独的 js 文件，作为一个模块。
 
@@ -48,7 +48,7 @@ Page({
 });
 ```
 
-## 文件作用域 <MyBadge text="务必理解" type="error" />
+## 文件作用域 <Badge text="务必理解" type="error" />
 
 ::: warning
 

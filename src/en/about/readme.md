@@ -6,7 +6,6 @@ tags:
   - Personal Intro
 ---
 
-
 @slidestart
 
 - Gender: male

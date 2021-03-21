@@ -8,7 +8,7 @@ category: 小程序
 
 <!-- more -->
 
-## 页面栈 <MyBadge text="重要" type="error" />
+## 页面栈 <Badge text="重要" type="error" />
 
 框架以栈的形式维护了当前的所有页面。当发生路由切换的时候，页面栈的表现如下:
 
@@ -23,7 +23,7 @@ category: 小程序
 
 开发者可以使用 `getCurrentPages()` 函数获取当前页面栈。
 
-## 路由方式 <MyBadge text="重要" type="error" />
+## 路由方式 <Badge text="重要" type="error" />
 
 对于路由的触发方式以及页面生命周期函数如下:
 

@@ -4,7 +4,7 @@ icon: tree
 category: 小程序
 ---
 
-## 文件组成 <MyBadge text="重要" type="error" />
+## 文件组成 <Badge text="重要" type="error" />
 
 小程序的代码由四种文件组成:
 
@@ -13,7 +13,7 @@ category: 小程序
 - `.wxss` 后缀的 WXSS 样式文件，为样式部分，相当于 CSS
 - `.js` 后缀的 JS 脚本逻辑文件，为脚本部分，处理小程序逻辑与行为
 
-## 目录结构 <MyBadge text="重要" type="error" />
+## 目录结构 <Badge text="重要" type="error" />
 
 小程序包含一个描述整体程序的 app 和多个描述各自页面的 page。
 
@@ -42,7 +42,7 @@ category: 小程序
 
 :::
 
-### 允许上传的文件 <MyBadge text="不重要" type="grey" />
+### 允许上传的文件 <Badge text="不重要" type="grey" />
 
 见页脚[^allowfiles]
 
@@ -71,7 +71,7 @@ JSON 是一种数据格式，**在小程序中，JSON 负责描述小程序的�
 
 我们可以看到在项目的根目录有一个 `app.json` 和 `project.config.json`，此外在 `pages/logs` 目录下还有一个 `logs.json`。下面是它们的用途说明。
 
-### 小程序配置 app.json <MyBadge text="重要" type="error" />
+### 小程序配置 app.json <Badge text="重要" type="error" />
 
 app.json 是当前小程序的全局配置，包括了小程序的所有页面路径、界面表现、网络超时时间、底部 tab 等。QuickStart 项目里边的 app.json 配置内容如下:
 
@@ -93,7 +93,7 @@ app.json 是当前小程序的全局配置，包括了小程序的所有页面�
 
 其他配置项可以参考文档 [全局配置](config/app-config.md)。
 
-### 页面配置 page.json <MyBadge text="简单了解" />
+### 页面配置 page.json <Badge text="简单了解" />
 
 这里的 `page.json` 其实用来表示小程序页面相关的配置。
 
@@ -101,7 +101,7 @@ app.json 是当前小程序的全局配置，包括了小程序的所有页面�
 
 配置项可以参考文档 [页面配置](config/page-config.md)。
 
-### 工具配置 project.config.json <MyBadge text="不重要" type="grey" />
+### 工具配置 project.config.json <Badge text="不重要" type="grey" />
 
 通常大家在使用一个工具的时候，都会针对各自喜好做一些个性化配置，例如界面颜色、编译配置等等，当您换了另外一台电脑重新安装工具的时候，您还要重新配置。
 
@@ -115,7 +115,7 @@ app.json 是当前小程序的全局配置，包括了小程序的所有页面�
 
 :::
 
-## WXML 模板 <MyBadge text="重要" type="error" />
+## WXML 模板 <Badge text="重要" type="error" />
 
 在小程序中 WXML 充当的就是类似 HTML 的角色。打开 `pages/index/index.wxml`，您会看到以下的内容:
 
@@ -152,7 +152,7 @@ app.json 是当前小程序的全局配置，包括了小程序的所有页面�
 
 更详细的文档可以参考 [WXML](view/wxml.md) 。
 
-## 动态绑定 <MyBadge text="重要" type="error" />
+## 动态绑定 <Badge text="重要" type="error" />
 
 动态绑定负责把 JS 的变量映射绑定到 WXML 上，也就是说负责把逻辑层的变量显示在视图层的具体位置。
 
@@ -174,7 +174,7 @@ this.setData({ msg: "Hello World" });
 
 :::
 
-## WXSS 样式 <MyBadge text="重要" type="error" />
+## WXSS 样式 <Badge text="重要" type="error" />
 
 WXSS 具有 CSS 大部分的特性，也做了一些扩充和修改。
 
@@ -196,7 +196,7 @@ WXSS 具有 CSS 大部分的特性，也做了一些扩充和修改。
 
 更详细的文档可以参考 [WXSS](view/wxss.md)。
 
-## JS 逻辑交互 <MyBadge text="重要" type="error" />
+## JS 逻辑交互 <Badge text="重要" type="error" />
 
 小程序仅仅只有界面展示是不够的，还需要和用户做交互: 响应用户的点击、获取用户的位置等等。小程序通过 JS 脚本文件来处理用户的操作。
 

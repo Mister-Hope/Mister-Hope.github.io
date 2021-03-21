@@ -53,7 +53,7 @@ module.exports = config({
     },
 
     blog: {
-      intro: "/about/index.html",
+      intro: "/about/",
       sidebarDisplay: "mobile",
       links: {
         QQ: "http://wpa.qq.com/msgrd?v=3&uin=1178522294&site=qq&menu=yes",

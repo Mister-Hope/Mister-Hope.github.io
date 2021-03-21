@@ -11,4 +11,4 @@ category: 小程序
 
 - [组件模板和样式](style.md)
 
-- [Behavior](behavior.md) <MyBadge type="grey" text="高级" />
+- [Behavior](behavior.md) <Badge type="grey" text="高级" />

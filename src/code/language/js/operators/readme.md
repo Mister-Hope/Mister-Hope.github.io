@@ -19,6 +19,6 @@ category: JavaScript
 
 - [布尔运算符](boolean.md)
 
-- [二进制位运算符](bit.md) <MyBadge text="不重要" type="grey" />
+- [二进制位运算符](bit.md) <Badge text="不重要" type="grey" />
 
 - [其他运算符，运算顺序](priority.md)

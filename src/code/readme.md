@@ -74,8 +74,8 @@ breadcrumb: false
 
 ### 杂牌网站
 
-- [菜鸟教程](https://www.runoob.com/) <MyBadge text="内容比较新" />
+- [菜鸟教程](https://www.runoob.com/) <Badge text="内容比较新" />
 
-- [w3cschool](https://www.w3cschool.cn) <MyBadge text="内容最新" /> <MyBadge text="有手机APP" /> <MyBadge text="广告信息多" type="warn" />
+- [w3cschool](https://www.w3cschool.cn) <Badge text="内容最新" /> <Badge text="有手机APP" /> <Badge text="广告信息多" type="warn" />
 
-- [w3school](http://www.w3school.com.cn/) <MyBadge text="内容比较旧" type="warn" />
+- [w3school](http://www.w3school.com.cn/) <Badge text="内容比较旧" type="warn" />

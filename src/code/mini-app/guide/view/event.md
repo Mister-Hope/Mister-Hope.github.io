@@ -72,7 +72,7 @@ Page({
 }
 ```
 
-## 使用 WXS 函数响应事件 <MyBadge type="warning" text="高级" />
+## 使用 WXS 函数响应事件 <Badge type="warning" text="高级" />
 
 高级用法，详见脚注[^wxs-event]。
 
@@ -108,7 +108,7 @@ Page({
 
 ## 事件详解
 
-### 事件分类 <MyBadge text="重要" type="error" />
+### 事件分类 <Badge text="重要" type="error" />
 
 事件分为冒泡事件和非冒泡事件:
 
@@ -138,7 +138,7 @@ WXML 的冒泡事件列表:
 
 :::
 
-### 普通事件绑定 <MyBadge text="重要" type="error" />
+### 普通事件绑定 <Badge text="重要" type="error" />
 
 事件绑定的写法类似于组件的属性，如:
 
@@ -166,7 +166,7 @@ WXML 的冒泡事件列表:
 
 :::
 
-### 绑定并阻止事件冒泡 <MyBadge text="重要" type="error" />
+### 绑定并阻止事件冒泡 <Badge text="重要" type="error" />
 
 除 `bind` 外，也可以用 `catch` 来绑定事件。与 `bind` 不同， `catch` 会阻止事件向上冒泡。
 
@@ -184,7 +184,7 @@ WXML 的冒泡事件列表:
 </view>
 ```
 
-### 互斥事件绑定 <MyBadge text="初学无需掌握" type="warn" />
+### 互斥事件绑定 <Badge text="初学无需掌握" type="warn" />
 
 自基础库版本 2.8.2 起，除 `bind` 和 `catch` 外，还可以使用 `mut-bind` 来绑定事件。一个 `mut-bind` 触发后，如果事件冒泡到其他节点上，其他节点上的 `mut-bind` 绑定函数不会被触发，但 `bind` 绑定函数和 `catch` 绑定函数依旧会被触发。
 
@@ -204,7 +204,7 @@ WXML 的冒泡事件列表:
 </view>
 ```
 
-### 事件的捕获阶段 <MyBadge text="初学无需掌握" type="warn" />
+### 事件的捕获阶段 <Badge text="初学无需掌握" type="warn" />
 
 这是一个很重要的内容，但不适合初学者直接学习，建议先了解其他内容。具体内容见脚注[^capture]。
 
@@ -233,7 +233,7 @@ WXML 的冒泡事件列表:
     </view>
     ```
 
-### 事件对象 <MyBadge text="了解" /> <MyBadge text="文档" />
+### 事件对象 <Badge text="了解" /> <Badge text="文档" />
 
 如无特殊说明，当组件触发事件时，逻辑层绑定该事件的处理函数会收到一个事件对象。
 

@@ -4,7 +4,7 @@ icon: page
 category: 小程序
 ---
 
-注册小程序中的一个页面。接受一个 Object 类型参数，其指定页面的初始数据、生命周期回调、事件处理函数等。 <MyBadge text="重要" type="error" />
+注册小程序中的一个页面。接受一个 Object 类型参数，其指定页面的初始数据、生命周期回调、事件处理函数等。 <Badge text="重要" type="error" />
 
 <!-- more -->
 

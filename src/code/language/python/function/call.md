@@ -7,7 +7,7 @@ category: Python
 
 Python 内置了很多有用的函数，我们可以直接调用。
 
-要调用一个函数，需要知道函数的名称和参数，比如求绝对值的函数 `abs`，只有一个参数。可以直接从Python 的官方网站 [查看文档](http://docs.python.org/3/library/functions.html#abs):
+要调用一个函数，需要知道函数的名称和参数，比如求绝对值的函数 `abs`，只有一个参数。可以直接从 Python 的官方网站 [查看文档](http://docs.python.org/3/library/functions.html#abs):
 
 <!-- more -->
 
