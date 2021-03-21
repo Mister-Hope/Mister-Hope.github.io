@@ -37,14 +37,14 @@ CSS 能对可替换元素产生的唯一影响在于，部分属性支持控制�
 <div class="wrapper">
   <div class="box">
     <img
-      src="https://mdn.github.io/css-examples/learn/backgrounds-borders/balloons.jpg"
+      src="/assets/img/balloons.jpg"
       alt="balloons"
       class="cover"
     />
   </div>
   <div class="box">
     <img
-      src="https://mdn.github.io/css-examples/learn/backgrounds-borders/balloons.jpg"
+      src="/assets/img/balloons.jpg"
       alt="balloons"
       class="contain"
     />
@@ -85,7 +85,7 @@ img {
 ```html
 <div class="wrapper">
   <img
-    src="https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png"
+    src="/assets/img/star.png"
     alt="star"
   />
   <div />

@@ -15,7 +15,7 @@ category: CSS
 
 ```html
 <img
-  src="https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png"
+  src="/assets/img/star.png"
   alt="star"
 />
 <div class="box" />
@@ -151,21 +151,21 @@ img {
 <div class="wrapper">
   <div class="box">
     <img
-      src="https://mdn.github.io/css-examples/learn/sizing/star.png"
+      src="/assets/img/star.png"
       alt="star"
       class="width"
     />
   </div>
   <div class="box">
     <img
-      src="https://mdn.github.io/css-examples/learn/sizing/star.png"
+      src="/assets/img/star.png"
       alt="star"
       class="max"
     />
   </div>
   <div class="minibox">
     <img
-      src="https://mdn.github.io/css-examples/learn/sizing/star.png"
+      src="/assets/img/star.png"
       alt="star"
       class="max"
     />

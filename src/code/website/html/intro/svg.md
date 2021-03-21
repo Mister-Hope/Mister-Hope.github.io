@@ -71,7 +71,7 @@ SVG 也确实有一些缺点:
 
 ```html
 <img
-  src="https://vuepress-theme-hope.github.io/logo.svg"
+  src="/assets/img/vuepress-hope-logo.svg"
   alt="vuepress-theme-hope"
   height="87px"
   width="100px"
@@ -99,9 +99,9 @@ SVG 也确实有一些缺点:
 
 ```html
 <img
-  src="https://vuepress-theme-hope.github.io/logo.png"
+  src="/assets/img/vuepress-hope-logo.png"
   alt="vuepress-theme-hope"
-  srcset="https://vuepress-theme-hope.github.io/logo.svg"
+  srcset="/assets/img/vuepress-hope-logo.svg"
   width="100px"
 />
 ```

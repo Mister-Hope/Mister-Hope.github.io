@@ -395,7 +395,7 @@ RGBA 的工作方式与 RGB 完全相同，但有第四个值表示颜色的 alp
 }
 
 .image {
-  background-image: url(https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png);
+  background-image: url(/assets/img/star.png);
 }
 
 .gradient {
@@ -425,7 +425,7 @@ RGBA 的工作方式与 RGB 完全相同，但有第四个值表示颜色的 alp
 .box {
   width: 400px;
   height: 300px;
-  background-image: url(https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png);
+  background-image: url(/assets/img/star.png);
   background-repeat: no-repeat;
   background-position: right 40px;
 }

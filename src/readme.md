@@ -10,7 +10,7 @@ project:
     type: link
     desc: 一个功能强大的 Vuepress 主题✨
     link: https://vuepress-theme-hope.github.io/zh/
-    cover: https://vuepress-theme-hope.github.io/logo.png
+    cover: /assets/img/vuepress-hope-logo.svg
 
   - name: in东师
     type: project
@@ -22,19 +22,19 @@ project:
     type: link
     desc: Vuepress 评论插件
     link: https://vuepress-theme-hope.github.io/comment/zh/
-    cover: https://vuepress-theme-hope.github.io/logo.png
+    cover: /assets/img/vuepress-hope-logo.svg
 
   - name: vuepress-plugin-md-enhance
     type: link
     desc: Vuepress Markdown 增强插件
     link: https://vuepress-theme-hope.github.io/md-enhance/zh/
-    cover: https://vuepress-theme-hope.github.io/logo.png
+    cover: /assets/img/vuepress-hope-logo.svg
 
   - name: "@mr-hope/vuepress-plugin-feed"
     type: link
     desc: Vuepress Feed 插件
     link: https://vuepress-theme-hope.github.io/feed/zh/
-    cover: https://vuepress-theme-hope.github.io/logo.png
+    cover: /assets/img/vuepress-hope-logo.svg
 
   - name: ftp-hope
     type: project
