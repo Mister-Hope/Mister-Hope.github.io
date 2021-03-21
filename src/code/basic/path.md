@@ -15,7 +15,7 @@ category: 基础
 
 物理路径的英文全称是: Physical path，它就是指硬盘上文件的路径，比如下面的文件位置表示方法:
 
-```md
+```text
 d:\wwwroot\html\a.html
 d:\wwwroot\html\photo\b.html
 d:\wwwroot\html\photo\c.html

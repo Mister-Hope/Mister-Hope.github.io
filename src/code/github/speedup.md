@@ -31,7 +31,7 @@ Gitee 账户可以很方便的通过 GitHub 账户 + 绑定手机号注册。
 
 ### 远程库地址修改
 
-在克隆完毕后，本地的 origin 远程库会默认为 Gitee 的仓库，此时我们需要使用 `git remote rename origin gitee` 命令，将码云的远程仓库重命名为 `gitee`，并使用 `git remote add origin <github url>` 命令重新添加 github 的远程仓库为 origin。
+在克隆完毕后，本地的 origin 远程库会默认为 Gitee 的仓库，此时我们需要使用 `git remote rename origin gitee` 命令，将码云的远程仓库重命名为 `gitee`，并使用 `git remote add origin <github url>` 命令重新添加 GitHub 的远程仓库为 origin。
 
 这样我们稍后在做出本地提交后，即可直接推送到 GitHub 仓库。
 

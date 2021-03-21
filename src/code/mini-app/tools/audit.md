@@ -16,7 +16,7 @@ category: 小程序
 
 ![audits_start](https://res.wx.qq.com/wxdoc/dist/assets/img/audits_start.8773023b.png)
 
-1. 点击 “停止" 则结束检测，在当前面板显示相应的检测报告，开发者可根据报告中的建议对相应功能进行优化。
+1. 点击 "停止" 则结束检测，在当前面板显示相应的检测报告，开发者可根据报告中的建议对相应功能进行优化。
 1. 如需再次运行体验评分，可点击报告上方的“清空体验评分”恢复初始状态。请注意，目前系统不提供报告存储服务，一旦清空体验评分，将无法再查看本次评分结果。
 
 ![audits_clear](https://res.wx.qq.com/wxdoc/dist/assets/img/audits_clear.5fb85a1d.png)

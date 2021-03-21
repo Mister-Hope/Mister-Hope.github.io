@@ -262,7 +262,7 @@ module.exports = {
 npm install --save-dev eslint-plugin-react
 ```
 
-#### package.json 中的 scripts.eslint 添加 `.tsx` 后缀
+#### package.json 中的 `scripts.eslint` 添加 `.tsx` 后缀
 
 ```json
 {
@@ -291,7 +291,7 @@ npm install --save-dev eslint-plugin-react
 
 ## Troubleshootings
 
-### Cannot find module 'typescript-eslint-parser'
+### Cannot find module typescript-eslint-parser
 
 您运行的是全局的 eslint，需要改为运行 `./node_modules/.bin/eslint`。
 

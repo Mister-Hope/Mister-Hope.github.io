@@ -18,7 +18,7 @@ breadcrumb: false
 
 - [Windows 基础](windows/readme.md)
 
-- [Github 介绍](windows/readme.md)
+- [GitHub 介绍](windows/readme.md)
 
 ### 前端开发
 

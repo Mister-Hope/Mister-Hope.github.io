@@ -129,7 +129,7 @@ category: 小程序
 
 ::: warning
 
-当 postion 为 top 时，不显示 icon。
+当 position 为 top 时，不显示 icon。
 
 :::
 

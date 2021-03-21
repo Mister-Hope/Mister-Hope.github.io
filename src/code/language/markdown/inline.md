@@ -260,12 +260,12 @@ These two \_, \_ and \*, \* will be treated as normal characters.
 **输入**:
 
 ```md
-A varibale like last_updated_time won't be _transformed_ like last*updated*time.
+A varibale like last_updated_time won’t be _transformed_ like last*updated*time.
 ```
 
 **输出**:
 
-A varibale like last_updated_time won't be _transformed_ like last*updated*time.
+A varibale like last_updated_time won’t be _transformed_ like last*updated*time.
 
 :::
 

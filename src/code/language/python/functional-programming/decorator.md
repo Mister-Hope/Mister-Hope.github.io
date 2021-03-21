@@ -144,7 +144,7 @@ return func(*args,**kw)
 
 decorator 可以增强函数的功能，定义起来虽然有点复杂，但使用起来非常灵活和方便。
 
-请编写一个 decorator，能在函数调用的前后打印出'begin call'和'end call'的日志。
+请编写一个 decorator，能在函数调用的前后打印出 `'begin call'` 和 `'end call'` 的日志。
 
 再思考一下能否写出一个 `@log` 的 decorator，使它既支持:
 

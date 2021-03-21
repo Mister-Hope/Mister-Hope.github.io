@@ -35,6 +35,6 @@ jQuery 是一款能够方便快捷的操作 DOM，并兼容所有主流浏览器
 
 - [动画](animation.md)
 
-- [AJAX](AJAX.md)
+- [Ajax](AJAX.md)
 
 - [扩展](extend.md)

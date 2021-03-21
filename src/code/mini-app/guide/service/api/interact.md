@@ -45,16 +45,16 @@ category: 小程序
 
 Object object
 
-| 属性     | 类型     | 默认值    | 必填 | 说明                                           |
-| -------- | -------- | --------- | ---- | ---------------------------------------------- |
-| title    | string   |           | 是   | 提示的内容                                     |
-| icon     | string   | 'success' | 否   | 图标                                           |
-| image    | string   |           | 否   | 自定义图标的本地路径，image 的优先级高于 icon  |
-| duration | number   | 1500      | 否   | 提示的延迟时间                                 |
-| mask     | boolean  | false     | 否   | 是否显示透明蒙层，防止触摸穿透                 |
-| success  | function |           | 否   | 接口调用成功的回调函数                         |
-| fail     | function |           | 否   | 接口调用失败的回调函数                         |
-| complete | function |           | 否   | 接口调用结束的回调函数(调用成功、失败都会执行) |
+| 属性     | 类型     | 默认值      | 必填 | 说明                                           |
+| -------- | -------- | ----------- | ---- | ---------------------------------------------- |
+| title    | string   |             | 是   | 提示的内容                                     |
+| icon     | string   | `'success'` | 否   | 图标                                           |
+| image    | string   |             | 否   | 自定义图标的本地路径，image 的优先级高于 icon  |
+| duration | number   | `1500`      | 否   | 提示的延迟时间                                 |
+| mask     | boolean  | `false`     | 否   | 是否显示透明蒙层，防止触摸穿透                 |
+| success  | function |             | 否   | 接口调用成功的回调函数                         |
+| fail     | function |             | 否   | 接口调用失败的回调函数                         |
+| complete | function |             | 否   | 接口调用结束的回调函数(调用成功、失败都会执行) |
 
 object.icon 的合法值
 
@@ -114,10 +114,11 @@ object.success 回调函数
 参数
 
 Object res
-| 属性 | 类型 | 说明 | 最低版本 |
+
+| 属性    | 类型    | 说明                                                                                  | 最低版本 |
 | ------- | ------- | ------------------------------------------------------------------------------------- | -------- |
-| confirm | boolean | 为 true 时，表示用户点击了确定按钮 | |
-| cancel | boolean | 为 true 时，表示用户点击了取消(用于 Android 系统区分点击蒙层关闭还是点击取消按钮关闭) | 1.1.0 |
+| confirm | boolean | 为 true 时，表示用户点击了确定按钮                                                    |          |
+| cancel  | boolean | 为 true 时，表示用户点击了取消(用于 Android 系统区分点击蒙层关闭还是点击取消按钮关闭) | 1.1.0    |
 
 示例代码
 
@@ -181,13 +182,13 @@ Object object
 ### showActionSheet 参数
 
 Object object
-| 属性 | 类型 | 默认值 | 必填 | 说明 |
+| 属性      | 类型             | 默认值  | 必填 | 说明                                           |
 | --------- | ---------------- | ------- | ---- | ---------------------------------------------- |
-| itemList | `Array.<string>` | | 是 | 按钮的文字数组，数组长度最大为 6 |
-| itemColor | string | #000000 | 否 | 按钮的文字颜色 |
-| success | function | | 否 | 接口调用成功的回调函数 |
-| fail | function | | 否 | 接口调用失败的回调函数 |
-| complete | function | | 否 | 接口调用结束的回调函数(调用成功、失败都会执行) |
+| itemList  | `Array.<string>` |         | 是   | 按钮的文字数组，数组长度最大为 6               |
+| itemColor | string           | #000000 | 否   | 按钮的文字颜色                                 |
+| success   | function         |         | 否   | 接口调用成功的回调函数                         |
+| fail      | function         |         | 否   | 接口调用失败的回调函数                         |
+| complete  | function         |         | 否   | 接口调用结束的回调函数(调用成功、失败都会执行) |
 
 object.success 回调函数
 

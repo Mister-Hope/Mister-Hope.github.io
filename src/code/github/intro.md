@@ -15,7 +15,7 @@ tags:
 
 ### repository
 
-仓库，简称 **Repo**。一个仓库即是一个项目。仓库是 GitHub 上的主要内容。每当您新建一个项目并想要在 GitHub。
+仓库。一个仓库即是一个项目。仓库是 GitHub 上的主要内容。每当您新建一个项目并想要在 GitHub。
 
 ### Star
 

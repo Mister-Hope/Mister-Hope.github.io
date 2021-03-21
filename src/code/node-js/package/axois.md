@@ -180,9 +180,9 @@ axios("/user/12345");
 - `axios.put(url[, data[, config]])`
 - `axios.patch(url[, data[, config]])`
 
-::: warning
+::: tip
 
-When using the alias methods `url`, `method`, and `data` properties don't need to be specified in config.
+当使用别名时，`url`, `method` 和 `data` 属性不需要再配置中指定。
 
 :::
 
@@ -630,7 +630,7 @@ axios.post("http://something.com/", querystring.stringify({ foo: "bar" }));
 
 ::: warning
 
-如果需要对嵌套对象进行字符串化处理，则最好使用 qs 库，因为 `querystring` 方法在该用例中存在已知问题(<https://github.com/nodejs/node-v0.x-archive/issues/1665).>
+如果需要对嵌套对象进行字符串化处理，则最好使用 qs 库，因为 `querystring` 方法在该用例中存在已知问题(<https://github.com/nodejs/node-v0.x-archive/issues/1665>)
 
 :::
 

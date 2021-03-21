@@ -154,7 +154,7 @@ Markdown 使用 email 形式的块引言。
 
 ```md
 > 1. This is the first list item.
-> 2. This is the second list item.
+> 1. This is the second list item.
 >
 > Here’s some example code:
 > 
@@ -166,7 +166,7 @@ Markdown 使用 email 形式的块引言。
 **输出**:
 
 > 1. This is the first list item.
-> 2. This is the second list item.
+> 1. This is the second list item.
 >
 > Here’s some example code:
 >
@@ -444,7 +444,7 @@ Markdown 最佳实践要求你在每一个列表间始终(或始终不)添加空
 ```md
 - This is a list item with two paragraphs.
 
-  This is the second paragraph in the list item. You're
+  This is the second paragraph in the list item. You’re
   only required to indent the first line. Lorem ipsum dolor
   sit amet, consectetuer adipiscing elit.
 
@@ -605,7 +605,7 @@ const a = 1;
 
 ### 转义与嵌套
 
-如果你希望在一个代码块中放置另一个 markdown 代码块格式，你可以增加 `` ` `` 的数量来进行嵌套
+如果你希望在一个代码块中放置另一个 Markdown 代码块格式，你可以增加 `` ` `` 的数量来进行嵌套
 
 `````md{1,5}
 ````md
@@ -650,6 +650,3 @@ const a = 1;
 
 ---------------------------------------
 ```
-
-[1]: http://docutils.sourceforge.net/mirror/setext.html
-[2]: http://www.aaronsw.com/2002/atx/

@@ -214,7 +214,7 @@ HTML 文档的后缀名是 `.html`。
 
 文件名应该为 `xx.html`，不应该是 `html`。
 
-html 是一个没有后缀名称，文件名字叫做 html 的文件。
+`html` 是一个没有后缀名称，文件名字叫做 `html` 的文件。
 
 更多详情，请见 [基础 → 文件后缀名](../../../basic/file-extension.md)。
 
