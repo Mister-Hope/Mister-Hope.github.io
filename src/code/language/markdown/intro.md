@@ -1,6 +1,6 @@
 ---
 title: Markdown 介绍
-icon: intro
+icon: info
 category: Markdown
 tags:
   - Markdown

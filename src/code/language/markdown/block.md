@@ -504,7 +504,56 @@ Markdown 最佳实践要求你在每一个列表间始终(或始终不)添加空
 
 和代码相关的写作或是标签语言原始码通常会有已经排版好的代码块，通常这些块我们并不希望它以一般段落文件的方式去排版，而是照原来的样子显示，Markdown 会用 `<pre>` 和 `<code>` 标签来把代码块包起来。
 
-你可以很简单的使用 ` ```代码名称 ` 与 ` ``` ` 创建代码块。比如:
+Markdown 最初标准只规定了一种缩进格式的代码块[^indent-code-block]。
+
+[^indent-code-block]: 缩进格式的代码块
+
+    在 Markdown 中，可以通过简单地缩进 4 个空白或是 1 个 tab 来建立代码块。比如:
+
+    ```md
+    This is a normal paragraph:
+
+        This is a code block.
+    ```
+
+    Markdown 会转换成:
+
+    ```html
+    <p>This is a normal paragraph:</p>
+
+    <pre>
+      <code>This is a code block.</code>
+    </pre>
+    ```
+
+    这里的缩进 (4 个空白或是 1 个 tab) ，都会被移除，例如:
+
+    ```md
+    Here is an example of AppleScript:
+
+        tell application "Foo"
+        beep
+        end tell
+    ```
+
+    会被转换为:
+
+    ```html
+    <p>Here is an example of AppleScript:</p>
+
+    <pre><code>tell application "Foo"
+    beep
+    end tell
+    </code></pre>
+    ```
+
+    一个代码块会一直持续到没有缩进的那一行 (或是文件结尾)。
+
+由于缩进式的代码块格式不够鲜明，且无法在此模式下设置代码块的语言并对代码块进行高亮，围栏式的代码扩展几乎被所有 Markdown 实现所支持。
+
+Markdown 最佳实践也同样推荐使用围栏式的代码块，尽管它并不在最初的标准中。
+
+你可以很简单的使用 ` ```代码名称 ` 与 ` ``` ` 创建围栏式代码块。比如:
 
 ````md
 ```js
@@ -553,53 +602,6 @@ const a = 1;
 :::
 
 代码块中，一般的 Markdown 语法不会被转换，像是星号便只是星号，这表示你可以很容易地以 Markdown 语法撰写 Markdown 语法相关的文件。
-
-Markdown 还支持一种缩进格式的代码块[^indent-code-block]。
-
-[^indent-code-block]: 缩进格式的代码块
-
-    在 Markdown 中，也可以简单地缩进 4 个空白或是 1 个 tab 来建立代码块。比如:
-
-    ```md
-    This is a normal paragraph:
-
-        This is a code block.
-    ```
-
-    Markdown 会转换成:
-
-    ```html
-    <p>This is a normal paragraph:</p>
-
-    <pre>
-      <code>This is a code block.</code>
-    </pre>
-    ```
-
-    这里的缩进 (4 个空白或是 1 个 tab) ，都会被移除，例如:
-
-    ```md
-    Here is an example of AppleScript:
-
-        tell application "Foo"
-        beep
-        end tell
-    ```
-
-    会被转换为:
-
-    ```html
-    <p>Here is an example of AppleScript:</p>
-
-    <pre><code>tell application "Foo"
-    beep
-    end tell
-    </code></pre>
-    ```
-
-    一个代码块会一直持续到没有缩进的那一行 (或是文件结尾) 。
-
-    请注意我们**强烈不推荐**使用这种语法，它的格式表现并不足够鲜明，不符合 Markdown 最佳实践。
 
 ### 转义与嵌套
 
