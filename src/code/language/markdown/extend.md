@@ -74,7 +74,7 @@ Markdown 支持在下面这些符号前面加上反斜线来帮助插入普通�
 
 ## 常见扩展
 
-有几种轻量级标记语言是 Markdown 的超集。它们包含 Gruber 的基本语法，并通过添加其他元素 (例如表，代码块，语法突出显示，URL 自动链接和脚注) 在此基础上构建。许多最受欢迎的 Markdown 应用程序使用以下轻量级标记语言之一：
+有几种轻量级标记语言是 Markdown 的超集。它们包含 Gruber 的基本语法，并通过添加其他元素 (例如表，代码块，语法突出显示，URL 自动链接和脚注) 在此基础上构建。许多最受欢迎的 Markdown 应用程序使用以下轻量级标记语言之一:
 
 - [CommonMark](https://commonmark.org/)
 - [GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/)

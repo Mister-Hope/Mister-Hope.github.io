@@ -17,7 +17,7 @@ category: Android
 
 您应将各类资源放入项目 `res/` 目录的特定子目录中。例如，以下是一个简单项目的文件层次结构:
 
-```structure
+```
 MyProject/
   src/
     MyActivity.java

@@ -121,7 +121,7 @@ const packageOther = require("packageName/other");
 
 1. 寻找 npm 包的过程和 npm 的实现类似，从依赖 npm 包的文件所在目录开始逐层往外找，直到找到可用的 npm 包或是小程序根目录为止。下面简单介绍下构建打包前后的目录情况，构建之前的结构:
 
-```structure
+```
 |--node_modules
 |    |--testComp // 小程序 npm 包
 |    |    |--package.json
@@ -148,7 +148,7 @@ const packageOther = require("packageName/other");
 
 构建之后的结构:
 
-```structure
+```
 |--node_modules
 |--miniprogram_npm
 |    |--testComp // 小程序 npm 包
