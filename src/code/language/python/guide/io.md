@@ -1,6 +1,7 @@
 ---
 title: 输入和输出
 icon: IO
+author: 廖雪峰
 time: 2020-05-20
 category: Python
 ---

@@ -1,5 +1,6 @@
 ---
 title: Python 语言教程
+author: 廖雪峰
 icon: python
 time: 2020-05-18
 category: Python

@@ -1,6 +1,7 @@
 ---
 title: 快速上手
 icon: creative
+author: 廖雪峰
 time: 2020-05-19
 category: Python
 timeline: false

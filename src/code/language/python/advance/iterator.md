@@ -1,6 +1,7 @@
 ---
 title: 迭代器
 icon: refresh
+author: 廖雪峰
 time: 2020-05-29
 category: Python
 ---

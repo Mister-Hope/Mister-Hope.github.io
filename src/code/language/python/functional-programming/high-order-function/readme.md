@@ -1,6 +1,7 @@
 ---
 title: 高阶函数
 icon: function
+author: 廖雪峰
 time: 2020-05-31
 category: Python
 timeline: false

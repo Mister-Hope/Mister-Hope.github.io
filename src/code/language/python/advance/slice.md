@@ -1,6 +1,7 @@
 ---
 title: 切片
 icon: stack
+author: 廖雪峰
 time: 2020-05-28
 category: Python
 ---

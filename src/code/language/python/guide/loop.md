@@ -1,6 +1,7 @@
 ---
 title: 循环
 icon: loop
+author: 廖雪峰
 time: 2020-05-24
 category: Python
 ---

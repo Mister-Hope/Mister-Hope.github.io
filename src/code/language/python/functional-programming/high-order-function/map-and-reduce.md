@@ -1,6 +1,7 @@
 ---
 title: map / reduce
 icon: map
+author: 廖雪峰
 time: 2020-05-31
 category: Python
 ---

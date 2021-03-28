@@ -1,6 +1,7 @@
 ---
 title: 定义函数
 icon: define
+author: 廖雪峰
 time: 2020-05-26
 category: Python
 ---

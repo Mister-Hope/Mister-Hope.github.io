@@ -1,6 +1,7 @@
 ---
 title: 匿名函数
 icon: anonymous
+author: 廖雪峰
 time: 2021-03-15
 category: Python
 ---

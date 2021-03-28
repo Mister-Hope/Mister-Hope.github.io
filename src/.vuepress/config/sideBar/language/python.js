@@ -68,4 +68,28 @@ module.exports = [
       "parital-function",
     ],
   },
+  {
+    title: "模块",
+    icon: "module",
+    path: "module/",
+    collapsable: false,
+    prefix: "module/",
+    children: ["intro", "usage", "install"],
+  },
+  {
+    title: "面向对象编程",
+    icon: "object",
+    path: "oop/",
+    collapsable: false,
+    prefix: "oop/",
+    children: [
+      "intro",
+      "instance",
+      "extend",
+      "property",
+      "info",
+      "customize",
+      "special",
+    ],
+  },
 ];

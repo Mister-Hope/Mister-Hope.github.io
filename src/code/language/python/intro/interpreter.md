@@ -1,6 +1,7 @@
 ---
 title: Python 解释器
 icon: back-stage
+author: 廖雪峰
 time: 2020-05-19
 category: Python
 ---

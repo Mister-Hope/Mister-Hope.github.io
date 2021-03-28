@@ -1,6 +1,7 @@
 ---
 title: 安装 Python
 icon: install
+author: 廖雪峰
 time: 2020-05-18
 category: Python
 tags:
