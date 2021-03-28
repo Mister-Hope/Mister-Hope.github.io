@@ -103,7 +103,7 @@ Page({
 而不能通过 `setData` 将 `loading` 置为 `true`:
 
 ```js
-// 错误的做法！不要这么做！
+// 错误的做法! 不要这么做!
 Page({
   data: {},
   onLoad() {
