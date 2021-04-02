@@ -465,7 +465,7 @@ Markdown 最佳实践要求你在每一个列表间始终(或始终不)添加空
 
 - This is a list item with two paragraphs.
 
-  This is the second paragraph in the list item. You're
+  This is the second paragraph in the list item. You’re
   only required to indent the first line. Lorem ipsum dolor
   sit amet, consectetuer adipiscing elit.
 

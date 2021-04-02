@@ -52,7 +52,7 @@ Unicode 标准也在不断发展，但最常用的是用两个字节表示一个
 
 用编辑器编辑的时候，从文件读取的 UTF-8 字符被转换为 Unicode 字符到内存里，编辑完成后，保存的时候再把 Unicode 转换为 UTF-8 保存到文件:
 
-@flowstart
+```flow
 st=>subroutine: Unicode 编码
 save=>operation: 保存: 转换至 UTF-8
 load=>operation: 读取: 转换至 Unicode
@@ -60,7 +60,7 @@ file=>subroutine: 文件 UTF-8 编码
 st2=>subroutine: Unicode 编码
 
 st->save->file->load->st2
-@flowend
+```
 
 浏览网页的时候，服务器会把动态生成的 Unicode 内容转换为 UTF-8 再传输到浏览器:
 

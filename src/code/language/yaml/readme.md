@@ -32,7 +32,7 @@ YAML 支持的数据结构有三种。
 
 ## 如何打开或编辑 yaml
 
-推荐使用 vscode，具体详见[vscode 简单介绍](../../../software/vscode/simple.md)。
+推荐使用 VS Code，具体详见[VS Code 简单介绍](../../../software/vscode/simple.md)。
 
 ## 数据结构介绍
 

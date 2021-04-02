@@ -31,7 +31,7 @@ tags:
 
   ::: tip
 
-  当您安装 VSCode 并第一次打开的时候，VSCode 会自动检测当前系统语言并在右下角推荐您安装对应语言的扩展，点击按钮即可自动安装。
+  当您安装 VS Code 并第一次打开的时候，VS Code 会自动检测当前系统语言并在右下角推荐您安装对应语言的扩展，点击按钮即可自动安装。
 
   :::
 
@@ -74,4 +74,4 @@ done
 
 保存为 **Open With VS Code** 后，打开 Finder，选中一个文件夹，点击右键， **服务**，就可以看到 **Open With VS Code** 菜单:
 
-![Open with VSCode](./assets/open-with-vscode.png)
+![Open with VS Code](./assets/open-with-vscode.png)

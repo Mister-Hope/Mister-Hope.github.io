@@ -68,7 +68,7 @@ tags:
 
    ::: tip
 
-   如果您对 VSCode 和 PowerShell 还不熟悉，建议选择 MinTTY，以方便您接下来在学习中对 Git Bash 的临时使用。
+   如果您对 VS Code 和 PowerShell 还不熟悉，建议选择 MinTTY，以方便您接下来在学习中对 Git Bash 的临时使用。
 
    :::
 
@@ -96,7 +96,7 @@ tags:
 
 ::: tip
 
-如果您对 VSCode 和 PowerShell 还不熟悉，您可以在接下来的学习与操作中使用 Git Bash。
+如果您对 VS Code 和 PowerShell 还不熟悉，您可以在接下来的学习与操作中使用 Git Bash。
 
 :::
 

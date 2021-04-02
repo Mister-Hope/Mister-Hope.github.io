@@ -14,7 +14,7 @@ category: 小程序
 
 ## 开发工具
 
-开发工具使用 vscode，具体详见[vscode 说明](../../vscode/readme.md)或[vscode 简单说明](../../vscode/simple.md)
+开发工具使用 VS Code，具体详见[VS Code 说明](../../vscode/readme.md)或[VS Code 简单说明](../../vscode/simple.md)
 
 ## 开发说明
 

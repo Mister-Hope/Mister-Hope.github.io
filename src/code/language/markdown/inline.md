@@ -240,7 +240,7 @@ __double underscores__
 **输入**:
 
 ```md
-These two _, _ and _, _ will be treated as normal characters.
+These two _, _ and *, * will be treated as normal characters.
 ```
 
 **输出**:
@@ -303,7 +303,7 @@ un*frigging*believable
 
 ::: tip 反引号
 
-反引号在键盘的左上角， ESC 键的下方
+反引号在键盘的左上角，ESC 键的下方
 
 :::
 

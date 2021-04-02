@@ -112,6 +112,8 @@ Markdown 支持在下面这些符号前面加上反斜线来帮助插入普通�
 |       b       | 表格中包含的 \| 需要转义 | aaaa           |
 |       c       |                     aaaa | a              |
 
+:::
+
 ### Emoji
 
 Emoji 是 GFM 标准支持的格式，需要通过 `:emoji名称:` 来使用 emoji。

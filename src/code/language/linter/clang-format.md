@@ -87,15 +87,15 @@ clang-format [options] [<file> ...]
 
 - `--verbose`: 输出处理的文件列表
 
-## VSCode
+## VS Code
 
-在 VSCode 中安装 C/C++ 插件以启用两者支持时会自动安装 clang-format，因此无需进行任何操作，即可在 C/C++ 文件中对代码进行格式化。
+在 VS Code 中安装 C/C++ 插件以启用两者支持时会自动安装 clang-format，因此无需进行任何操作，即可在 C/C++ 文件中对代码进行格式化。
 
 ## 推荐样式
 
 Mr.Hope 推荐使用 Google 预设，所以在个人与工作室的每个项目中，都会使用 Google 编码风格。
 
-建议在 VSCode 中配置默认格式风格:
+建议在 VS Code 中配置默认格式风格:
 
 ```json
 {

@@ -106,7 +106,7 @@ Markdown 将会把它转换为:
 
 Markdown 就是一个扩展名为 `.md` 的文本文件。
 
-理论上你可以使用任何编辑器 (如 [VSCode](../../../software/vscode/readme.md))编辑 Markdown，也可以使用专门的 Markdown 编辑器 (如 [Typora](https://typora.io)) 进行编写。
+理论上你可以使用任何编辑器 (如 [VS Code](../../../software/vscode/readme.md))编辑 Markdown，也可以使用专门的 Markdown 编辑器 (如 [Typora](https://typora.io)) 进行编写。
 
 [1]: http://docutils.sourceforge.net/mirror/setext.html
 [2]: http://www.aaronsw.com/2002/atx/

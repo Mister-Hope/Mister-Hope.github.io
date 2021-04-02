@@ -29,7 +29,7 @@ isAdult(50); // true
 
     逻辑图如下:
 
-    @flowstart
+    ```flow
     st=>start: 开始执行函数
     getage=>inputoutput: 获得 age
     adult=>condition: age > 18?
@@ -41,7 +41,7 @@ isAdult(50); // true
     adult(yes)->true->end
     adult(no)->false->end
 
-    @flowend
+    ```
 
     最简单的想法肯定是使用 if 条件判断，把上面的流程图写下来:
 
@@ -157,7 +157,7 @@ bookPrice(6，30); // 144
 
     很简单，只是需要用多次 if 判断，我们把它逻辑图描述如下:
 
-    @flowstart
+    ```flow
     st=>start: 开始执行函数
     percent=>operation: 声明打折力度 percent
     result=>operation: 声明最终价格 result
@@ -179,7 +179,7 @@ bookPrice(6，30); // 144
     func2(no)->func3
     func3(yes,right)->p0.8->cal
     cal->return->end
-    @flowend
+    ```
 
     照着写，您得到了:
 
@@ -204,7 +204,7 @@ bookPrice(6，30); // 144
 
     您想了想，重新画了流程图:
 
-    @flowstart
+    ```flow
     st=>start: 开始执行函数
     percent=>operation: 声明打折力度 percent
     get=>inputoutput: 获得 price, ammount
@@ -222,7 +222,7 @@ bookPrice(6，30); // 144
     func2(yes,right)->p0.9->return
     func2(no)->p0.8->return
     return->end
-    @flowend
+    ```
 
     对应的函数为:
 
@@ -240,7 +240,7 @@ bookPrice(6，30); // 144
 
     接着您突发奇想，突然不想声明 `percent` 了，您又改了流程图:
 
-    @flowstart
+    ```flow
     st=>start: 开始执行函数
     get=>inputoutput: 获得 price, ammount
     func1=>condition: ammount < 10?
@@ -255,7 +255,7 @@ bookPrice(6，30); // 144
     func1(no)->func2
     func2(yes,right)->return2->end
     func2(no)->return3->end
-    @flowend
+    ```
 
     您得到了:
 
@@ -321,7 +321,7 @@ getTimes([1, 1, 2, 3, 4, 4, 4], 4); // 3
 
     用流程图就是:
 
-    @flowstart
+    ```flow
     st=>start: 开始执行函数
     get=>inputoutput: 获得 arr, element
     letcount=>operation: 声明出现次数 count = 0
@@ -339,7 +339,7 @@ getTimes([1, 1, 2, 3, 4, 4, 4], 4); // 3
     equal(no)->islast
     islast(yes)->return->end
     islast(no)->movex(top)->equal
-    @flowend
+    ```
 
     接下来，我们就要细化了。我们希望循环数组，从第一个元素 `arr[0]` 到 最后一个元素。
 
@@ -349,7 +349,7 @@ getTimes([1, 1, 2, 3, 4, 4, 4], 4); // 3
 
     所以新的流程图是:
 
-    @flowstart
+    ```flow
     st=>start: 开始执行函数
     get=>inputoutput: 获得 arr, element
     letcount=>operation: 声明出现次数 count = 0
@@ -367,7 +367,7 @@ getTimes([1, 1, 2, 3, 4, 4, 4], 4); // 3
     equal(no)->islast
     islast(yes)->return->end
     islast(no)->movex(top)->equal
-    @flowend
+    ```
 
     ```js
     const getTimes = (arr, element) => {
@@ -425,7 +425,7 @@ getTimes([1, 1, 2, 3, 4, 4, 4], 4); // 3
 
     思路:
 
-    @flowstart
+    ```flow
     start=>start: 开始执行函数
     get=>inputoutput: 获得 arr, element, count(默认为 0)
     equal=>condition: 数组长度是 0?
@@ -440,7 +440,7 @@ getTimes([1, 1, 2, 3, 4, 4, 4], 4); // 3
     start->get->equal
     equal(yes)->return->end
     equal(no)->operate->returnfunc(left)
-    @flowend
+    ```
 
     或
 
@@ -456,7 +456,7 @@ getTimes([1, 1, 2, 3, 4, 4, 4], 4); // 3
 
     思路:
 
-    @flowstart
+    ```flow
     start=>start: 开始执行函数
     get=>inputoutput: 获得 arr, element, count(默认为 0),position(默认为 0)
     equal=>condition: position === arr.length?
@@ -471,7 +471,7 @@ getTimes([1, 1, 2, 3, 4, 4, 4], 4); // 3
     start->get->equal
     equal(yes)->return->end
     equal(no)->operate->returnfunc(left)
-    @flowend
+    ```
 
 ## 小九九
 
@@ -493,7 +493,7 @@ nineNine(); // ['1 × 1 = 1', '1 × 2 = 2','2 × 2 = 4','1 × 3 = 3', ...,'9 × 
 
     流程图:
 
-    @flowstart
+    ```flow
     start=>start: 开始执行函数
     operate=>operation: let arr = [];
     let i = 1;
@@ -512,7 +512,7 @@ nineNine(); // ['1 × 1 = 1', '1 × 2 = 2','2 × 2 = 4','1 × 3 = 3', ...,'9 × 
     ji(no)->i9
     i9(yes)->plusi(left)->initj
     i9(no)->return->end
-    @flowend
+    ```
 
     所以很容易就可以写出:
 

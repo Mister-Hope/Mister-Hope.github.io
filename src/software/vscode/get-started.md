@@ -11,13 +11,13 @@ tags:
 
 ::: tip
 
-在完成 VSCode 安装并首次打开 VSCode 的时候，右下角会提示安装简体中文扩展，请点击安装。
+在完成 VS Code 安装并首次打开 VS Code 的时候，右下角会提示安装简体中文扩展，请点击安装。
 
-如果忘记点击或没有弹窗，请到侧边栏扩展搜索找到 "Chinese (Simplified) Language Pack for Visual Studio Code" 扩展进行安装，即可将 VSCode 改为中文页面。
+如果忘记点击或没有弹窗，请到侧边栏扩展搜索找到 "Chinese (Simplified) Language Pack for Visual Studio Code" 扩展进行安装，即可将 VS Code 改为中文页面。
 
 :::
 
-![VSCode UI 页面](./assets/layout.png)
+![VS Code UI 页面](./assets/layout.png)
 
 VS Code 最上方有一排菜单栏，其中有大量的快捷操作，对应的组合键会标于快捷操作旁。如果不能记忆快捷键可以到最上方的菜单栏处查看。
 
