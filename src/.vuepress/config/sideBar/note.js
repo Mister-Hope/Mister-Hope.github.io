@@ -1,4 +1,6 @@
-module.exports = [
+const { sidebarConfig } = require("vuepress-theme-hope");
+
+module.exports = sidebarConfig([
   "",
   {
     title: "秋之思",
@@ -138,4 +140,4 @@ module.exports = [
     ],
   },
   "node-js/",
-];
+]);

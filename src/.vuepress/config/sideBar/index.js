@@ -1,5 +1,7 @@
+const { sidebarConfig } = require("vuepress-theme-hope");
+
 module.exports = {
-  zh: {
+  zh: sidebarConfig({
     "/software/vscode/": require("./software/vscode"),
 
     "/software/git/": require("./software/git"),
@@ -70,9 +72,9 @@ module.exports = {
 
     // fallback
     "/": ["", "note/", "code/", "software/", "about/"],
-  },
+  }),
 
-  en: {
+  en: sidebarConfig({
     "/en/note/": [""],
 
     "/en/code/": [""],
@@ -81,5 +83,5 @@ module.exports = {
 
     // fallback
     "/en/": ["", "code/", "about/"],
-  },
+  }),
 };

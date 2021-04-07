@@ -1,4 +1,6 @@
-module.exports = [
+const { sidebarConfig } = require("vuepress-theme-hope");
+
+module.exports = sidebarConfig([
   "learning",
   {
     title: "JavaScript",
@@ -53,4 +55,4 @@ module.exports = [
     children: ["intro", "block", "inline", "extend", "emoji/"],
   },
   "linter/",
-];
+]);

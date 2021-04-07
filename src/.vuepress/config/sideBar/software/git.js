@@ -1,4 +1,6 @@
-module.exports = [
+const { sidebarConfig } = require("vuepress-theme-hope");
+
+module.exports = sidebarConfig([
   "",
   "install",
   "intro",
@@ -14,4 +16,4 @@ module.exports = [
   "ignore",
   "working",
   "custom",
-];
+]);

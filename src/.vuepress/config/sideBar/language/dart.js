@@ -1,4 +1,6 @@
-module.exports = [
+const { sidebarConfig } = require("vuepress-theme-hope");
+
+module.exports = sidebarConfig([
   "",
   {
     title: "快速入门",
@@ -8,4 +10,4 @@ module.exports = [
     prefix: "samples/",
     children: ["samples", "cheatsheet", "iterable"],
   },
-];
+]);

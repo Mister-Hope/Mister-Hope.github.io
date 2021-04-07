@@ -1,4 +1,6 @@
-module.exports = [
+const { sidebarConfig } = require("vuepress-theme-hope");
+
+module.exports = sidebarConfig([
   "",
   "intro",
   "selector",
@@ -8,4 +10,4 @@ module.exports = [
   "animation",
   "AJAX",
   "extend",
-];
+]);

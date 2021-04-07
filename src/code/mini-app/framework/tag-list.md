@@ -14,8 +14,8 @@ category: 小程序
 | desc      |  否  |      `string`       | 页面描述           | 会显示在页脚                                       |
 | author    |  否  |      `string`       | 页面的作者         | 会显示在页脚                                       |
 | time      |  否  |      `string`       | 页面更新时间       | 会显示在页脚                                       |
-| action    |  否  |       `string       | false`             | 左上角按钮函数名                                   | 填入按钮触发的函数名称，不填时执行返回，设置为 `false` 会隐藏按钮 |
 | grey      |  否  |      `boolean`      | 使用灰色背景       | 默认为白色背景                                     |
+| action    |  否  |       `string       | false`             | 左上角按钮函数名                                   | 填入按钮触发的函数名称，不填时执行返回，设置为 `false` 会隐藏按钮 |
 | content   |  否  | `ComponentConfig[]` | 页面的内容         | 数组的每个对象会最终渲染为一个组件                 |
 | footer    |  否  |      `boolean`      | 是否显示页脚       | 默认为 `true`                                      |
 | hidden    |  否  |      `boolean`      | 隐藏导航栏         | 默认显示导航栏                                     |

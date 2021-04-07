@@ -26,6 +26,7 @@ module.exports = config({
   dest: "dist",
 
   locales: {
+    "/": { lang: "zh-CN" },
     "/en/": {
       title: "My name is Mr.Hope",
       description: "Mr.Hope personal blog",
@@ -33,7 +34,6 @@ module.exports = config({
   },
 
   themeConfig: {
-    baseLang: "zh-CN",
     logo: "/logo.png",
     author: "Mr.Hope",
 

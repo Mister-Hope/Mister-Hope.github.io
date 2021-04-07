@@ -1,4 +1,6 @@
-module.exports = [
+const { sidebarConfig } = require("vuepress-theme-hope");
+
+module.exports = sidebarConfig([
   {
     title: "Vue.js",
     icon: "vue",
@@ -38,4 +40,4 @@ module.exports = [
     collapsable: false,
     children: ["get-started", "demo"],
   },
-];
+]);

@@ -1,4 +1,6 @@
-module.exports = [
+const { sidebarConfig } = require("vuepress-theme-hope");
+
+module.exports = sidebarConfig([
   "",
   {
     title: "TS 介绍",
@@ -49,4 +51,4 @@ module.exports = [
     prefix: "engineering/",
     children: ["", "lint"],
   },
-];
+]);

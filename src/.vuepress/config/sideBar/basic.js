@@ -1,4 +1,6 @@
-module.exports = [
+const { sidebarConfig } = require("vuepress-theme-hope");
+
+module.exports = sidebarConfig([
   "",
   "computer",
   "OS",
@@ -10,4 +12,4 @@ module.exports = [
   "ci",
   "license",
   "open-source-and-free.md",
-];
+]);

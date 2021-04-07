@@ -1,4 +1,6 @@
-module.exports = [
+const { sidebarConfig } = require("vuepress-theme-hope");
+
+module.exports = sidebarConfig([
   "",
   {
     title: "简介",
@@ -64,4 +66,4 @@ module.exports = [
   "centos",
   "WSL",
   "ssh",
-];
+]);

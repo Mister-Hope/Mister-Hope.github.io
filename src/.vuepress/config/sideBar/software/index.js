@@ -1,4 +1,6 @@
-module.exports = [
+const { sidebarConfig } = require("vuepress-theme-hope");
+
+module.exports = sidebarConfig([
   "",
   "editor",
   "vscode/",
@@ -27,4 +29,4 @@ module.exports = [
   "apache",
   "nginx",
   "mysql/",
-];
+]);

@@ -1,4 +1,6 @@
-module.exports = [
+const { sidebarConfig } = require("vuepress-theme-hope");
+
+module.exports = sidebarConfig([
   "",
   "install",
   "get-started",
@@ -23,4 +25,4 @@ module.exports = [
   "ui",
   "settings",
   "shortcut-key",
-];
+]);

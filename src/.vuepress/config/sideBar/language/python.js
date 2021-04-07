@@ -1,4 +1,6 @@
-module.exports = [
+const { sidebarConfig } = require("vuepress-theme-hope");
+
+module.exports = sidebarConfig([
   "",
   {
     title: "介绍",
@@ -92,4 +94,4 @@ module.exports = [
       "special",
     ],
   },
-];
+]);

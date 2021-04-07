@@ -1,4 +1,6 @@
-module.exports = [
+const { sidebarConfig } = require("vuepress-theme-hope");
+
+module.exports = sidebarConfig([
   "",
   {
     title: "图标",
@@ -48,4 +50,4 @@ module.exports = [
     children: ["", "gestalt-principle", "left-or-right", "infomation-flow"],
   },
   "APP",
-];
+]);

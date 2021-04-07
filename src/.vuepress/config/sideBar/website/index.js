@@ -1,4 +1,6 @@
-module.exports = [
+const { sidebarConfig } = require("vuepress-theme-hope");
+
+module.exports = sidebarConfig([
   "",
   "html/",
   "css/",
@@ -12,4 +14,4 @@ module.exports = [
   "js",
   "jQuery/",
   "https",
-];
+]);

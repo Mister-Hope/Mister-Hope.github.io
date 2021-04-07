@@ -1,4 +1,6 @@
-module.exports = [
+const { sidebarConfig } = require("vuepress-theme-hope");
+
+module.exports = sidebarConfig([
   "",
   "intro",
   "block",
@@ -13,4 +15,4 @@ module.exports = [
     collapsable: false,
     children: ["people", "nature", "object", "place", "symbol"],
   },
-];
+]);

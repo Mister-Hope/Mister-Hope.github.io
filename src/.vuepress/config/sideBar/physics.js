@@ -1,4 +1,6 @@
-module.exports = [
+const { sidebarConfig } = require("vuepress-theme-hope");
+
+module.exports = sidebarConfig([
   "",
   {
     title: "电磁学",
@@ -24,4 +26,4 @@ module.exports = [
     prefix: "tsp/",
     children: ["charpter1", "charpter2", "charpter3"],
   },
-];
+]);

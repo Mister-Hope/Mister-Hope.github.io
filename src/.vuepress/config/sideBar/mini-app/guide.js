@@ -1,4 +1,6 @@
-module.exports = [
+const { sidebarConfig } = require("vuepress-theme-hope");
+
+module.exports = sidebarConfig([
   "",
   "file-structure",
   "env",
@@ -74,4 +76,4 @@ module.exports = [
     prefix: "ability/",
     children: ["", "network", "storage", "file-system", "debug"],
   },
-];
+]);
