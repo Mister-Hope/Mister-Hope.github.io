@@ -10,13 +10,11 @@ star: true
 
 CSS 指层叠样式表 (**C**ascading **S**tyle **S**heets)，它负责描述网页元素的具体样式。
 
-- 样式定义如何显示 HTML 元素
-- 样式通常存储在样式表中
-- 多个样式定义可层叠为一
+CSS3 是最新的 CSS 标准，被拆分为"模块"。模块包括: 选择器、盒模型、背景和边框、文字特效、2D/3D 转换、动画、多列布局、用户界面。
 
 <!-- more -->
 
-## CSS
+## 目录
 
 - [快速上手](guide/readme.md)
 
@@ -35,20 +33,17 @@ CSS 指层叠样式表 (**C**ascading **S**tyle **S**heets)，它负责描述网
 
 - [CSS 工作原理](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps/CSS%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C)
 
-## CSS3
+## CSS 参考
 
-CSS3 是最新的 CSS 标准，被拆分为"模块"。
+- [MDN 教程](https://developer.mozilla.org/zh-CN/docs/Web/CSS)
 
-模块包括: 选择器、盒模型、背景和边框、文字特效、2D/3D 转换、动画、多列布局、用户界面。
-
-## 手册
+## 其他文档 <Badge text="不建议" type="warn" />
 
 - CSS
 
   - [W3CSchool 教程](https://www.w3cschool.cn/css/)
   - [W3School 教程](http://www.w3school.com.cn/css/index.asp)
   - [菜鸟教程](https://www.runoob.com/css/css-tutorial.html)
-  - [MDN 教程](https://developer.mozilla.org/zh-CN/docs/Web/CSS)
 
 - CSS3
 

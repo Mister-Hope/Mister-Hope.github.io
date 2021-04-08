@@ -15,11 +15,10 @@ category: JavaScript
 
 ### 在线教程
 
+- [MDN 教程](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
 - [W3School 教程](http://www.w3school.com.cn/js/index.asp)
 
 - [菜鸟教程](https://www.runoob.com/js/js-tutorial.html)
-
-- [MDN 教程](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
 
 ### ES6
 
