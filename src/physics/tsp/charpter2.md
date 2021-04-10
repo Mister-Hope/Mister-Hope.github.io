@@ -1,15 +1,12 @@
 ---
+title: 第二章
 category: 物理
 time: 2020-12-28
 tags:
   - 热统
 ---
 
-# 第二章
-
-## $\text{\S 2.1}$
-
-### 四个热力学函数
+## 四个热力学函数
 
 $$
 \begin{aligned}
@@ -75,6 +72,8 @@ $$
 
 $\mu=(\cfrac{\partial T}{\partial p})_H = \cfrac{V}{C_p}(T\alpha - 1)=\cfrac{1}{C_p}[T(\cfrac{\partial V}{\partial T})_p -V]$ 称为焦汤系数。
 
+可以利用节流过程中 $\mu > 0$ 一侧制冷区，利用节流过程使得液体降温而液化。
+
 ## 内能与焓的积分形式
 
 $$
@@ -103,12 +102,12 @@ $m=MV$ 是介质的总磁矩
 
 磁介质的吉布斯函数满足 $dG=-SdT-\mu_0mdH$
 
-磁介质的热容 $C_H=T(\cfrac{\partial S}{\partial T})_H$
+磁介质的热容 $C_H=T(\cfrac{\partial S}{\partial T})_H$ 则 $(\cfrac{\partial T}{\partial H})_S=-\cfrac{\mu_0T}{C_H}(\cfrac{\partial m}{\partial T})_M$
 
-$(\cfrac{\partial T}{\partial H})_S=-\cfrac{\mu_0T}{C_H}(\cfrac{\partial m}{\partial T})_M$
+居里定律: $m=\cfrac{C_V}{T}H$ 可以得出: $(\cfrac{\partial T}{\partial H})_S=\cfrac{C_V}{C_HT}\mu_0H$ 和 $TdS =C_VdT+T\cfrac{\alpha}{\kappa_T}dV$
 
-居里定律: $m=\cfrac{C_V}{T}H$
+## 重要习题
 
-有: $(\cfrac{\partial T}{\partial H})_S=\cfrac{C_V}{C_HT}\mu_0H$
+1. 证明 $\cfrac{\kappa_s}{\kappa_T} = \cfrac{C_v}{C_p}$
 
-和 $TdS =C_VdT+T\cfrac{\alpha}{\kappa_T}dV$
+2. 证明 $C_p - C_V = -T\cfrac{(\cfrac{\partial p}{\partial T})_V^2}{(\cfrac{\partial p}{\partial V})_T}$

@@ -39,8 +39,8 @@ $$
 \frac{dp}{dT}=\frac{S_m^\beta-S_m^\alpha}{V_m^\beta-V_m^\alpha}= \frac{L}{T(V_m^\beta - V_m^\alpha)}
 $$
 
-$L = T(S_m^\beta-S_m^\alpha)$ 称为箱变潜热。
+$L = T(S_m^\beta-S_m^\alpha)$ 称为相变潜热。
 
-在忽略液相体积、并将气相视为理想气体的情况下，可由该方程到处蒸汽压方程， 即 $\cfrac{1}{p}\cfrac{dp}{dT}=\cfrac{L}{RT^2}$。
+在忽略液相体积、并将气相视为理想气体的情况下，可由该方程导出蒸汽压方程， 即 $\cfrac{1}{p}\cfrac{dp}{dT}=\cfrac{L}{RT^2}$。
 
 解得 $lnp=-\cfrac{L}{RT}+A$

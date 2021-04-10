@@ -20,7 +20,7 @@ tags:
 
 热力学温标: 不依赖于任何具体物质特性的温标。
 
-### 公式
+## 公式
 
 简单系统的一般物态方程形式为 $f(p, V, T) = 0$
 
@@ -78,15 +78,13 @@ $$(p + \frac{an^2}{V^2})(V - nb) = nRT$$
 
 理想气体无相互作用，故:
 
-$(\cfrac{\partial U}{\partial V})_T=0$
-
-$(\cfrac{\partial H}{\partial p})_T=0$
-
-$(\cfrac{\partial T}{\partial V})_U=0$,称为焦耳系数
+$(\cfrac{\partial U}{\partial V})_T=0$ $(\cfrac{\partial H}{\partial p})_T=0$ $(\cfrac{\partial T}{\partial V})_U=0$,称为焦耳系数
 
 对于理想气体来说，满足多方过程 $pV^\gamma = \text{常量}$，同时有 $TV^{\gamma -1}$, $\cfrac{p^{\gamma -1}}{T^\gamma}$ 也为常量。
 
 ## 熵
+
+熵是系统中微观粒子无规运动的混乱程度的亮度。
 
 $$dS=\frac{dQ}{dT}$$
 
@@ -110,6 +108,8 @@ $$
 (\frac{\partial T}{\partial p})_S=\frac{VT\alpha}{C_p}
 $$
 
+熵增加原理: 经过绝热过程后，系统的熵永不减小。
+
 ## 热机与循环
 
 对于等温过程，满足 $Q=RTln\cfrac{T_2}{T_1}$
@@ -121,6 +121,16 @@ $$
 卡诺热机: $\eta =1 - \cfrac{T_2}{T_1}$
 
 制冷机: $\eta_{\text{制冷}}= \cfrac{T_2}{T_1-T_2}$
+
+## 自由能与吉布斯函数
+
+定义热力学状态函数自由能 $F = U -TS$
+
+在等温等容条件下，系统的自由能永不增加，系统中发生的不可逆过程总是朝着自由能减少的方向进行的。
+
+定义热力学状态函数吉布斯 (Gibbs) 函数 $G = F +pV = U -TS + pV$
+
+等温等压条件下，系统的吉布斯函数用不增加，系统中发生的不可逆过程总是朝着吉布斯函数减少的方向进行的。
 
 ## 习题
 
