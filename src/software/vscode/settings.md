@@ -27,7 +27,9 @@ tags:
     "source.fixAll.markdownlint": true
   },
   "editor.quickSuggestions": {
-    "strings": true
+    "comments": true,
+    "strings": true,
+    "other": true
   },
   "editor.renderControlCharacters": true,
   "editor.renderWhitespace": "boundary",
@@ -46,9 +48,10 @@ tags:
   // 文件相关
   "explorer.confirmDelete": false,
   "files.associations": {
-    "*.cjson": "jsonc", // 将 .cjson 设为 jsonc
-    "*.wxss": "css", // 将 wxss 视为 css
-    "*.wxs": "javascript" // 将 wxs 视为 JavaScript
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript",
+    "*.wxml": "wxml"
   },
   "files.autoSave": "off",
   "files.eol": "\n",
@@ -62,9 +65,9 @@ tags:
   // 编辑器窗口设置
   "window.closeWhenEmpty": true,
   "window.newWindowDimensions": "inherit",
-  "window.zoomLevel": 0,
   "breadcrumbs.enabled": true,
   // 工作台设置
+  "workbench.activityBar.visible": true,
   "workbench.colorTheme": "One Dark Pro",
   "workbench.commandPalette.preserveInput": true,
   "workbench.enableExperiments": false,
@@ -75,15 +78,25 @@ tags:
     "about": "Command",
     "intro": "Command",
     "file": "Public",
+    "github": "GitHub",
     "service-worker": "config",
     "store": "Vuex-store",
+    "demo": "Examples",
+    "basic": "Helper",
     "vuex": "Vuex-store",
     "module": "plugin",
     "router": "Routes",
     ".vuepress": "vue",
     "vuepress": "vue",
+    "node-js": "Node",
+    "react": "React-components",
     "workflows": "Ci",
     "guide": "content",
+    "git": "Git",
+    "mysql": "DataBase",
+    "software": "App",
+    "tool": "Tools",
+    "vscode": "VSCode",
     "en": "I18n",
     "zh": "I18n",
     "types": "typescript"
@@ -92,7 +105,6 @@ tags:
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "problems.showCurrentInStatus": true,
   // 在线服务设置
-  "extensions.showRecommendationsOnlyOnDemand": true,
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   // 终端设置
@@ -104,24 +116,27 @@ tags:
   "terminal.integrated.shell.linux": "/bin/bash",
   "terminal.external.linuxExec": "bash",
   // git设置
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": true,
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "diffEditor.renderSideBySide": true,
   "merge-conflict.autoNavigateNextConflict.enabled": true,
   // npm 设置
   "npm.enableRunFromFolder": true,
-  "npm.packageManager": "yarn",
   "npm.scriptExplorerAction": "run",
   "npm-intellisense.importQuotes": "\"",
   "npm-intellisense.packageSubfoldersIntellisense": true,
   "npm-intellisense.scanDevDependencies": true,
   "npm-intellisense.showBuildInLibs": true,
+  // 远程连接
   "remote.SSH.remotePlatform": {
     "codeserver": "linux"
   },
   // 特定格式文件设置
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
   "[dart]": {
     "editor.formatOnType": true,
     "editor.selectionHighlight": false,
@@ -130,20 +145,11 @@ tags:
     "editor.tabCompletion": "on",
     "editor.wordBasedSuggestions": true
   },
-  "[cpp]": {
-    "editor.defaultFormatter": "ms-vscode.cpptools"
-  },
   "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -151,18 +157,28 @@ tags:
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[matlab]": {
+    "files.encoding": "gb2312"
+  },
   "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[vue]": {
     "editor.defaultFormatter": "octref.vetur"
   },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
   "[xml]": {
-    "editor.defaultFormatter": "DotJoshJohnson.xml"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
   // typescript配置
   "typescript.locale": "zh-CN",
   "typescript.enablePromptUseWorkspaceTsdk": true,
@@ -171,8 +187,6 @@ tags:
   "typescript.referencesCodeLens.enabled": true,
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "javascript.implicitProjectConfig.checkJs": true,
-  "javascript.implicitProjectConfig.experimentalDecorators": true,
   "javascript.format.semicolons": "insert",
   "javascript.referencesCodeLens.enabled": true,
   "javascript.suggest.completeFunctionCalls": true,
@@ -183,14 +197,22 @@ tags:
   "php.validate.run": "onType",
   // c++设置
   "C_Cpp.default.cppStandard": "c++20",
+  "C_Cpp.default.includePath": [
+    "C:/Program Files/mingw-w64/lib/gcc/x86_64-w64-mingw32/8.1.0/include",
+    "C:/Program Files/mingw-w64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed",
+    "C:/Program Files/mingw-w64/x86_64-w64-mingw32/include"
+  ],
   "C_Cpp.clang_format_fallbackStyle": "Google",
   // dart
   "dart.debugExternalLibraries": false,
   "dart.debugSdkLibraries": false,
+  "dart.previewLsp": true,
+  "dart.openDevTools": "flutter",
   // java
+  "java.home": "C:/Program Files/Java/jdk-15.0.2",
   "java.semanticHighlighting.enabled": true,
-  "java.help.firstView": "gettingStarted",
   // python
+  "python.pythonPath": "C:/Users/zhang/AppData/Local/Programs/Python/Python39/python.exe",
   "python.languageServer": "Pylance",
   // css颜色提示配置
   "colorInfo.fields": ["hex", "rgb", "alpha", "css-color-name", "preview"],
@@ -227,8 +249,7 @@ tags:
   ],
   // gitLens设置
   "gitlens.advanced.messages": {
-    "suppressLineUncommittedWarning": true,
-    "suppressSupportGitLensNotification": true
+    "suppressLineUncommittedWarning": true
   },
   "gitlens.gitCommands.closeOnFocusOut": true,
   "gitlens.views.repositories.branches.layout": "list",
@@ -254,12 +275,12 @@ tags:
       "style": "---"
     }
   },
+  "markdown-pdf.executablePath": "C:/Users/zhang/AppData/Local/Google/Chrome/Application/chrome.exe",
   // vetur 设置
-  "vetur.format.defaultFormatter.html": "prettier",
-  "vetur.format.defaultFormatter.js": "prettier",
-  "vetur.format.defaultFormatter.ts": "prettier",
+  "vetur.completion.tagCasing": "initial",
+  "vetur.validation.templateProps": true,
   "vetur.useWorkspaceDependencies": true,
-  // vetur stylus 设置
+  // stylus 设置
   "stylusSupremacy.insertColons": false,
   "stylusSupremacy.insertSemicolons": false,
   "stylusSupremacy.insertBraces": false,
@@ -269,13 +290,24 @@ tags:
   // 微信小程序
   "minapp-vscode.disableAutoConfig": true,
   "minapp-vscode.wxmlFormatter": "prettier", //指定格式化工具
+  "minapp-vscode.prettier": {
+    "parser": "html",
+    "printWidth": 80
+  },
   // liveshare 设置
   "liveshare.audio.joinCallBehavior": "accept",
   // 项目管理器
   "projectManager.sortList": "Saved",
+  "projectManager.ignoreProjectsWithinProjects": true,
+  "projectManager.any.ignoredFolders": [
+    "dist",
+    "node_modules",
+    "out",
+    "typings",
+    "test"
+  ],
   // todoHightlight配置
   "todohighlight.keywords": ["WARNING: "],
-
   // leetcode
   "leetcode.hint.commentDescription": false,
   "leetcode.hint.commandShortcut": false,
@@ -284,18 +316,7 @@ tags:
   "leetcode.enableStatusBar": false,
   "leetcode.endpoint": "leetcode",
   "leetcode.showDescription": "In Webview",
-
-  // prettier
-  "prettier.packageManager": "yarn",
-
-  // ProjectManager
-  "projectManager.any.ignoredFolders": [
-    "dist",
-    "node_modules",
-    "out",
-    "typings",
-    "test"
-  ],
+  "leetcode.workspaceFolder": "C:/Users/zhang/.leetcode",
 
   // stylelint 设置
   "stylelint.packageManager": "yarn",
@@ -323,7 +344,12 @@ tags:
     "xsl",
     "wxss"
   ],
-  "codespaces.accountProvider": "Microsoft"
+  "codespaces.accountProvider": "Microsoft",
+  // Java
+  "redhat.telemetry.enabled": false,
+  // matlab
+  "matlab.matlabpath": "C:/Program Files/Polyspace/R2021a/bin/win64/matlab.exe",
+  "matlab.mlintpath": "C:/Program Files/Polyspace/R2021a/bin/win64/mlint.exe"
 }
 ```
 
