@@ -25,11 +25,15 @@ Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，
 
 以上，就是 Node.js 的简易介绍，系统学习可以查看下方的详细教程。
 
-## 详细教程
+## 初学者教程
 
 - [Node.js 入门](https://www.nodebeginner.org/index-zh-cn.html)
 
 - [W3CSchool](https://www.w3cschool.cn/nodejs/)
+
+## 官方文档
+
+- [地址](https://nodejs.org/dist/latest-v14.x/docs/api/)
 
 ## Yarn
 
