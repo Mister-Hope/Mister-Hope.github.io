@@ -40,6 +40,7 @@ module.exports = config({
     repo: "https://github.com/Mister-Hope/Mister-Hope.github.io",
     repoDisplay: false,
     docsDir: "src",
+    docsBranch: "main",
 
     nav: navBarConfig.zh,
     sidebar: sideBarConfig.zh,
