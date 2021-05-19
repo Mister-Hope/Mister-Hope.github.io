@@ -26,11 +26,11 @@ tags:
 
 三个重要的物理量
 
-$$\tag{体胀系数} \alpha = \frac{1}{V}(\frac{\partial V}{\partial T})_p$$
+$$\tag{体胀系数} \alpha = \frac{1}{V}\Big(\frac{\partial V}{\partial T}\Big)_p$$
 
-$$\tag{压强系数} \beta = \frac{1}{p}(\frac{\partial p}{\partial T})_V$$
+$$\tag{压强系数} \beta = \frac{1}{p}\Big(\frac{\partial p}{\partial T}\Big)_V$$
 
-$$\tag{等温压缩系数} \kappa_T = - \frac{1}{V}(\frac{\partial V}{\partial p})_T$$
+$$\tag{等温压缩系数} \kappa_T = - \frac{1}{V}\Big(\frac{\partial V}{\partial p}\Big)_T$$
 
 满足关系 $\alpha = \kappa_T \beta p$
 
@@ -48,7 +48,7 @@ $$\tag{等温压缩系数} \kappa_T = - \frac{1}{V}(\frac{\partial V}{\partial p
 
   $$\delta W = VEdD$$
 
-  $$\delta W = Vd(\frac{\epsilon_0E^2}{2})+VEdP$$
+  $$\delta W = Vd\Big(\frac{\epsilon_0E^2}{2}\Big)+VEdP$$
 
 - 磁介质:
 
@@ -57,7 +57,7 @@ $$\tag{等温压缩系数} \kappa_T = - \frac{1}{V}(\frac{\partial V}{\partial p
   $$\delta W = VHdB$$
 
   $$
-  \delta W = Vd(\frac{\mu_0H^2}{2})+\mu_0VHdM
+  \delta W = Vd\Big(\frac{\mu_0H^2}{2}\Big)+\mu_0VHdM
   $$
 
 ## 声速
@@ -78,7 +78,7 @@ $$(p + \frac{an^2}{V^2})(V - nb) = nRT$$
 
 理想气体无相互作用，故:
 
-$(\cfrac{\partial U}{\partial V})_T=0$ $(\cfrac{\partial H}{\partial p})_T=0$ $(\cfrac{\partial T}{\partial V})_U=0$,称为焦耳系数
+$\Big(\cfrac{\partial U}{\partial V}\Big)_T=0$ $\Big(\cfrac{\partial H}{\partial p}\Big)_T=0$ $\Big(\cfrac{\partial T}{\partial V}\Big)_U=0$,称为焦耳系数
 
 对于理想气体来说，满足多方过程 $pV^\gamma = \text{常量}$，同时有 $TV^{\gamma -1}$, $\cfrac{p^{\gamma -1}}{T^\gamma}$ 也为常量。
 
@@ -95,24 +95,24 @@ $$\Delta S=\int_{T_1}^{T_2}\frac{mC_pdT}{T}$$
 理想气体的熵:
 
 $$
-S = C_VlnT+nRlnV+S_0
+S = C_V\ln T+nR\ln V+S_0
 $$
 
 $$
-S=C_plnT-nRlnV+S_0
+S=C_p\ln T-nR\ln V+S_0
 $$
 
 对于理想气体有:
 
 $$
-(\frac{\partial T}{\partial p})_S=\frac{VT\alpha}{C_p}
+\Big(\frac{\partial T}{\partial p}\Big)_S=\frac{VT\alpha}{C_p}
 $$
 
 熵增加原理: 经过绝热过程后，系统的熵永不减小。
 
 ## 热机与循环
 
-对于等温过程，满足 $Q=RTln\cfrac{T_2}{T_1}$
+对于等温过程，满足 $Q=RT\ln\cfrac{T_2}{T_1}$
 
 克劳修斯不等式: $\sum\cfrac{Q_i}{T_i}\leqslant 0$
 

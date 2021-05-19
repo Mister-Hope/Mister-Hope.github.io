@@ -71,13 +71,19 @@ module.exports = config({
     },
 
     mdEnhance: {
-      enableAll: true,
+      align: true,
+      demo: true,
+      flowchart: true,
+      footnote: true,
+      presentation: true,
+      sub: true,
+      sup: true,
+      tex: true,
     },
 
     comment: {
-      type: "valine",
-      appId: "yV3IQ4Rz02liuTTm51spbQHV-gzGzoHsz",
-      appKey: "yr29K98irAzyUzY1ppfMbr5L",
+      type: "waline",
+      serverURL: "https://comment.mrhope.site",
     },
 
     footer: {

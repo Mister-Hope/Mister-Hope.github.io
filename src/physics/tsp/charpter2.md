@@ -33,33 +33,33 @@ $$U=F-T\frac{\partial F}{\partial T} =G-T\frac{\partial G}{\partial T}-p\frac{\p
 ## 麦克斯韦关系
 
 $$
-(\frac{\partial T}{\partial V})_S = -(\frac{\partial p}{\partial S})_V
+\Big(\frac{\partial T}{\partial V}\Big)_S = -\Big(\frac{\partial p}{\partial S}\Big)_V
 $$
 
 $$
-(\frac{\partial T}{\partial p})_S = (\frac{\partial V}{\partial S})_p
+\Big(\frac{\partial T}{\partial p}\Big)_S = \Big(\frac{\partial V}{\partial S}\Big)_p
 $$
 
 $$
-(\frac{\partial S}{\partial V})_T = (\frac{\partial p}{\partial T})_V
+\Big(\frac{\partial S}{\partial V}\Big)_T = \Big(\frac{\partial p}{\partial T}\Big)_V
 $$
 
 $$
-(\frac{\partial S}{\partial p})_T = -(\frac{\partial V}{\partial T})_p
+\Big(\frac{\partial S}{\partial p}\Big)_T = -\Big(\frac{\partial V}{\partial T}\Big)_p
 $$
 
 一些扩展:
 
 $$
-C_v = (\frac{\partial U}{\partial T})_V = T (\frac{\partial S}{\partial T})_V
+C_v = \Big(\frac{\partial U}{\partial T}\Big)_V = T \Big(\frac{\partial S}{\partial T}\Big)_V
 $$
 
 $$
-C_p = (\frac{\partial U}{\partial T})_p + p (\frac{\partial V}{\partial T})_p = (\frac{\partial H}{\partial T})_p = T (\frac{\partial S}{\partial T})_p
+C_p = \Big(\frac{\partial U}{\partial T}\Big)_p + p \Big(\frac{\partial V}{\partial T}\Big)_p = \Big(\frac{\partial H}{\partial T}\Big)_p = T \Big(\frac{\partial S}{\partial T}\Big)_p
 $$
 
 $$
-(\frac{\partial U}{\partial V})_T = T(\frac{\partial p}{\partial T})_V - p = \frac{T}{p}\beta - p
+\Big(\frac{\partial U}{\partial V}\Big)_T = T\Big(\frac{\partial p}{\partial T}\Big)_V - p = \frac{T}{p}\beta - p
 $$
 
 $$
@@ -70,7 +70,7 @@ $$
 
 气体在节流过程中焓不变。
 
-$\mu=(\cfrac{\partial T}{\partial p})_H = \cfrac{V}{C_p}(T\alpha - 1)=\cfrac{1}{C_p}[T(\cfrac{\partial V}{\partial T})_p -V]$ 称为焦汤系数。
+$\mu=\Big(\cfrac{\partial T}{\partial p}\Big)_H = \cfrac{V}{C_p}(T\alpha - 1)=\cfrac{1}{C_p}\Big[T\Big(\cfrac{\partial V}{\partial T}\Big)_p -V\Big]$ 称为焦汤系数。
 
 可以利用节流过程中 $\mu > 0$ 一侧制冷区，利用节流过程使得液体降温而液化。
 
