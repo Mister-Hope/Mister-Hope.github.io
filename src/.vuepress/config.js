@@ -83,7 +83,7 @@ module.exports = config({
 
     comment: {
       type: "waline",
-      serverURL: "https://comment.mrhope.site",
+      serverURL: "https://mister-hope-blog-comment.vercel.app/",
     },
 
     footer: {
