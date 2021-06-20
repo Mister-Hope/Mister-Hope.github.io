@@ -31,7 +31,7 @@ COMSOL Multiphysics^®^ 软件的 COMSOL Desktop^®^ 用户界面提供的建模
 
 在 COMSOL Multiphysics 中，COMSOL Desktop 为我们提供了功能强大的建模环境可供我们创建、分析以及可视化模型和 APP.
 
-![COMSOL 页面](./assets/layout.png)
+![COMSOL 界面](./assets/layout.png)
 
 ## 模型开发器和 App 开发器
 

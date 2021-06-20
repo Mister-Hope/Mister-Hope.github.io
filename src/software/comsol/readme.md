@@ -28,11 +28,11 @@ tags:
 
 - [快速上手 COMSOL](get-started.md)
 
-- [几何](geometry.md)
+- [几何](geometry/readme.md)
 
-  - [浏览几何](view-geometry.md)
+  - [浏览几何](geometry/view.md)
 
-  - [构建几何](build-geometry.md)
+  - [构建几何](geometry/build.md)
 
 - [选择](select.md)
 
@@ -40,7 +40,7 @@ tags:
 
 - [物理场](physic-field.md)
 
-- [网格](mesh.md)
+- [网格](mesh/readme.md)
 
 - [研究](study.md)
 

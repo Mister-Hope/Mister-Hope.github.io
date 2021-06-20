@@ -10,9 +10,9 @@ tags:
 
 ## 目录
 
-- [浏览几何](view-geometry.md)
+- [浏览几何](view.md)
 
-- [构建几何](build-geometry.md)
+- [构建几何](build.md)
 
 ## 官方文档
 
