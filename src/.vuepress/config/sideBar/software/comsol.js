@@ -8,7 +8,6 @@ module.exports = sidebarConfig([
   {
     title: "几何",
     icon: "geometry",
-    collapsable: true,
     prefix: "geometry/",
     path: "geometry/",
     children: ["view", "build"],
@@ -19,7 +18,6 @@ module.exports = sidebarConfig([
   {
     title: "网格",
     icon: "mesh",
-    collapsable: true,
     prefix: "mesh/",
     path: "mesh/",
     children: ["intro"],
