@@ -1208,10 +1208,10 @@
     "@mr-hope/vuepress-types" "1.18.2"
     balloon-css "^1.2.0"
 
-"@mr-hope/vuepress-plugin-feed@1.18.3":
-  version "1.18.3"
-  resolved "https://registry.yarnpkg.com/@mr-hope/vuepress-plugin-feed/-/vuepress-plugin-feed-1.18.3.tgz#d64a0f2a42616f668a6b051ac7c6cf2862722aee"
-  integrity sha512-fsqEsoyVl3xo0NSOYnagiiWN/Wup//9YffXWpQ7gwDUwoauBGEEz0yTVAM2wLgGS8RSQyGkwMqGrqRletCwv3Q==
+"@mr-hope/vuepress-plugin-feed@1.18.4":
+  version "1.18.4"
+  resolved "https://registry.yarnpkg.com/@mr-hope/vuepress-plugin-feed/-/vuepress-plugin-feed-1.18.4.tgz#299cd6f7843967e4f377adbd8fc870aeaf9781c9"
+  integrity sha512-12IesuTNuqwx0djPU1r0VTVhjXdqH1PMiQNUf8zyA/FpIbolGJy+Ak/CvpfI+8RteWn3ecOOfsRdCIGmietD3w==
   dependencies:
     "@mr-hope/vuepress-types" "1.18.2"
     chalk "^4.1.1"
@@ -1272,13 +1272,13 @@
   dependencies:
     tslib "^2.3.0"
 
-"@mr-hope/vuepress-theme-types@1.18.3":
-  version "1.18.3"
-  resolved "https://registry.yarnpkg.com/@mr-hope/vuepress-theme-types/-/vuepress-theme-types-1.18.3.tgz#256f2c0832dd97997c39721cf03d338de4e01498"
-  integrity sha512-BJ2p4Ob9QAfqlmsEjAy7lAbJo5ox5XdCvt3RHv1EwzlE0rz6iCiMDxQv7W4z0qgVkv7lISKQRtyy69FUVucLoQ==
+"@mr-hope/vuepress-theme-types@1.18.4":
+  version "1.18.4"
+  resolved "https://registry.yarnpkg.com/@mr-hope/vuepress-theme-types/-/vuepress-theme-types-1.18.4.tgz#f95ad19bf583e07963a6f2d53ffa96cb139297ee"
+  integrity sha512-xR9Ki/L3FmrLaoXep/sQhPUO/stpMZDgh4N4o70cpus5Dzk96WJezhowZ1jUcCFb7xG0ElwovShJXXs0p4JAkw==
   dependencies:
     "@mr-hope/vuepress-plugin-comment" "1.18.2"
-    "@mr-hope/vuepress-plugin-feed" "1.18.3"
+    "@mr-hope/vuepress-plugin-feed" "1.18.4"
     "@mr-hope/vuepress-plugin-git" "1.18.2"
     "@mr-hope/vuepress-plugin-pwa" "1.18.2"
     "@mr-hope/vuepress-plugin-reading-time" "1.18.2"
@@ -11871,6 +11871,11 @@ vue-property-decorator@^8.1.1:
   dependencies:
     vue-class-component "^7.1.0"
 
+vue-property-decorator@^9.1.2:
+  version "9.1.2"
+  resolved "https://registry.yarnpkg.com/vue-property-decorator/-/vue-property-decorator-9.1.2.tgz#266a2eac61ba6527e2e68a6933cfb98fddab5457"
+  integrity sha512-xYA8MkZynPBGd/w5QFJ2d/NM0z/YeegMqYTphy7NJQXbZcuU6FC6AOdUAcy4SXP+YnkerC6AfH+ldg7PDk9ESQ==
+
 vue-router@^3.4.5, vue-router@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.5.1.tgz#edf3cf4907952d1e0583e079237220c5ff6eb6c9"
@@ -12044,23 +12049,23 @@ vuepress-plugin-typescript@^0.3.1:
     cache-loader "^3.0.0"
     ts-loader "^7.0.3"
 
-vuepress-theme-hope@1.18.3:
-  version "1.18.3"
-  resolved "https://registry.yarnpkg.com/vuepress-theme-hope/-/vuepress-theme-hope-1.18.3.tgz#ed8cfd8392e85b2eb37872294fb4f56a0807cc9d"
-  integrity sha512-oy/Ufhz1BWWihYxg1Rczl6+Q2JUwE7m/OwY4touN4KqEdbdWAWYFGLOvdMhK3RT+NhWPPSt5X4lM3tdjG6BE2w==
+vuepress-theme-hope@1.18.4:
+  version "1.18.4"
+  resolved "https://registry.yarnpkg.com/vuepress-theme-hope/-/vuepress-theme-hope-1.18.4.tgz#a7e5d98f2e35a1dfb17fd2fad89c88000ae501b3"
+  integrity sha512-MO6Sy5ZN7viT2nWqw4lKpm/vIsK8T+cwMWQkbC74NtTbeLbu5BMP0pSpBPyHKn5nbNEgHjwU/i8J2i7ow5r25g==
   dependencies:
     "@docsearch/css" "^3.0.0-alpha.36"
     "@docsearch/js" "^3.0.0-alpha.36"
     "@mr-hope/vuepress-plugin-comment" "1.18.2"
     "@mr-hope/vuepress-plugin-components" "1.18.2"
     "@mr-hope/vuepress-plugin-copy-code" "1.18.2"
-    "@mr-hope/vuepress-plugin-feed" "1.18.3"
+    "@mr-hope/vuepress-plugin-feed" "1.18.4"
     "@mr-hope/vuepress-plugin-git" "1.18.2"
     "@mr-hope/vuepress-plugin-pwa" "1.18.2"
     "@mr-hope/vuepress-plugin-seo" "1.18.2"
     "@mr-hope/vuepress-plugin-sitemap" "1.18.2"
     "@mr-hope/vuepress-shared" "1.18.2"
-    "@mr-hope/vuepress-theme-types" "1.18.3"
+    "@mr-hope/vuepress-theme-types" "1.18.4"
     "@types/bcryptjs" "^2.4.2"
     "@types/lodash.debounce" "^4.0.6"
     "@types/lodash.throttle" "^4.1.6"
@@ -12073,6 +12078,7 @@ vuepress-theme-hope@1.18.3:
     lodash.debounce "^4.0.8"
     lodash.throttle "^4.1.1"
     vue-class-component "^7.2.6"
+    vue-property-decorator "^9.1.2"
     vuepress-plugin-add-this "1.18.2"
     vuepress-plugin-container "^2.1.5"
     vuepress-plugin-copyright "^1.0.2"
