@@ -6537,7 +6537,7 @@ js-yaml@^3.12.0, js-yaml@^3.13.1, js-yaml@^3.14.1, js-yaml@^3.6.1:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
-js-yaml@^4.0.0:
+js-yaml@^4.0.0, js-yaml@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-4.1.0.tgz#c1fb65f8f5017901cdd2c951864ba18458a10602"
   integrity sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==
@@ -8983,16 +8983,6 @@ rc-config-loader@^3.0.0:
     json5 "^2.1.1"
     require-from-string "^2.0.2"
 
-rc-config-loader@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/rc-config-loader/-/rc-config-loader-4.0.0.tgz#144cf31961c9f8ebcf252bd9c263fd40d62bd387"
-  integrity sha512-//LRTblJEcqbmmro1GCmZ39qZXD+JqzuD8Y5/IZU3Dhp3A1Yr0Xn68ks8MQ6qKfKvYCWDveUmRDKDA40c+sCXw==
-  dependencies:
-    debug "^4.1.1"
-    js-yaml "^4.0.0"
-    json5 "^2.1.2"
-    require-from-string "^2.0.2"
-
 rc@^1.2.8, rc@~1.2.8:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/rc/-/rc-1.2.8.tgz#cd924bf5200a075b83c188cd6b9e211b7fc0d3ed"
@@ -10971,15 +10961,15 @@ text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-textlint-filter-rule-allowlist@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/textlint-filter-rule-allowlist/-/textlint-filter-rule-allowlist-3.0.0.tgz#1302038b1f9549f59621636daa20401ae5f2f2c5"
-  integrity sha512-kOsPFQ+lU+kEEseB3PHatqlPfMcu7EpVJByEMcqW9/imKJ+QgBM0q7Jh09Viyie6cX1OrUQeAbgcDhk5XKwr6A==
+textlint-filter-rule-allowlist@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/textlint-filter-rule-allowlist/-/textlint-filter-rule-allowlist-4.0.0.tgz#44b62a3bf7f0586daeca6d14c2c6332b164cc6af"
+  integrity sha512-rOlWr12sff9ZS8mOtRACPB3l1yK0oW21Owz8XsTAgFWmRhOnBbCKw8tKMDm6EtQHO92SOfyJmT4nowxiJ85Qiw==
   dependencies:
     "@textlint/ast-node-types" "^12.0.0"
     "@textlint/get-config-base-dir" "^2.0.0"
     "@textlint/regexp-string-matcher" "^1.1.0"
-    rc-config-loader "^4.0.0"
+    js-yaml "^4.1.0"
 
 textlint-filter-rule-comments@1.2.2:
   version "1.2.2"
