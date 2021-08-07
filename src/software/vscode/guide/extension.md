@@ -38,10 +38,6 @@ VS Code 原生为英文，本插件为 VS Code 提供简体中文支持，会更
 
 ### 外观
 
-#### Bracket Pair Colorizer 2
-
-为 VS Code 显示彩虹括号，在码代码时帮助判断匹配括号
-
 #### indent-rainbow
 
 为代码中的缩进上色，更容易判断缩进层数
@@ -72,9 +68,9 @@ VS Code 原生为英文，本插件为 VS Code 提供简体中文支持，会更
 
 快速打开特定项目或在多个项目之间切换
 
-#### SVG Viewer
+#### SVG Preview
 
-提供在 VS Code 直接打开 SVG 的快捷菜单与支持
+提供在 VS Code 直接打开 SVG 预览
 
 #### Visual Studio IntelliCode
 
@@ -109,10 +105,6 @@ VS Code 不包含 Git，请自行安装 Git 并添加到 path 以实现版本管
 #### Color Info
 
 为 CSS 颜色详情显示更多信息
-
-#### Debugger for Chrome
-
-在 Chrome 中调试代码
 
 #### ESLint
 
@@ -222,7 +214,7 @@ Python 格式化、调试支持
 
 为 Markdown 添加表情支持
 
-#### Markdown Preview GitHub Style
+#### Markdown Preview GitHub Styling
 
 为 Markdown 预览应用 GitHub 风格
 

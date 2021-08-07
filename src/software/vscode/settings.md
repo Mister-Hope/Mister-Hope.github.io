@@ -16,16 +16,12 @@ tags:
   // 编辑器配置
   "editor.cursorSmoothCaretAnimation": true,
   "editor.detectIndentation": false,
-  "editor.fontFamily": "'Fira Code' ,Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.mouseWheelZoom": true,
   "editor.rulers": [80],
-  "editor.codeActionsOnSave": {
-    // markdownlint 自动修复
-    "source.fixAll.markdownlint": true
-  },
   "editor.quickSuggestions": {
     "comments": true,
     "strings": true,
@@ -47,6 +43,7 @@ tags:
   },
   // 文件相关
   "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
   "files.associations": {
     "*.cjson": "jsonc",
     "*.wxss": "css",
@@ -64,6 +61,7 @@ tags:
   "files.maxMemoryForLargeFilesMB": 4096,
   // 编辑器窗口设置
   "window.closeWhenEmpty": true,
+  "window.dialogStyle": "custom",
   "window.newWindowDimensions": "inherit",
   "breadcrumbs.enabled": true,
   // 工作台设置
@@ -72,13 +70,17 @@ tags:
   "workbench.commandPalette.preserveInput": true,
   "workbench.enableExperiments": false,
   "workbench.editor.scrollToSwitchTabs": true,
+  "workbench.editor.untitled.experimentalLanguageDetection": true,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
   "material-icon-theme.folders.associations": {
+    "global-components": "Global",
+    "node": "Node",
     "about": "Command",
     "intro": "Command",
     "file": "Public",
     "github": "GitHub",
+    "composables": "Include",
     "service-worker": "config",
     "store": "Vuex-store",
     "demo": "Examples",
@@ -108,14 +110,22 @@ tags:
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   // 终端设置
-  "terminal.integrated.confirmOnExit": false,
+  "terminal.integrated.confirmOnExit": "hasChildProcesses",
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.enableBell": true,
-  "terminal.integrated.shell.windows": "C:/Program Files/PowerShell/7/pwsh.exe",
-  "terminal.integrated.shellArgs.windows": "-nologo",
-  "terminal.integrated.shell.linux": "/bin/bash",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.defaultProfile.linux": "/bin/bash",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "overrideName": true,
+      "icon": "terminal-powershell",
+      "args": ["-NoLogo"]
+    }
+  },
+  "terminal.integrated.tabs.enabled": true,
   "terminal.external.linuxExec": "bash",
-  // git设置
+  // git
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": true,
   "git.autofetch": true,
@@ -163,6 +173,9 @@ tags:
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -179,7 +192,12 @@ tags:
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
-  // typescript配置
+  // typescript 配置
+  "javascript.format.semicolons": "insert",
+  "javascript.referencesCodeLens.enabled": true,
+  "javascript.suggest.completeFunctionCalls": true,
+  "javascript.preferences.quoteStyle": "double",
+  "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.locale": "zh-CN",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "typescript.format.semicolons": "insert",
@@ -187,15 +205,10 @@ tags:
   "typescript.referencesCodeLens.enabled": true,
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "javascript.format.semicolons": "insert",
-  "javascript.referencesCodeLens.enabled": true,
-  "javascript.suggest.completeFunctionCalls": true,
-  "javascript.preferences.quoteStyle": "double",
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  // php设置
+  // php 设置
   "php.validate.enable": true,
   "php.validate.run": "onType",
-  // c++设置
+  // c++ 设置
   "C_Cpp.default.cppStandard": "c++20",
   "C_Cpp.default.includePath": [
     "C:/Program Files/mingw-w64/lib/gcc/x86_64-w64-mingw32/8.1.0/include",
@@ -209,7 +222,7 @@ tags:
   "dart.previewLsp": true,
   "dart.openDevTools": "flutter",
   // java
-  "java.home": "C:/Program Files/Java/jdk-15.0.2",
+  "java.home": "C:/Program Files/Java/jdk-16.0.1",
   "java.semanticHighlighting.enabled": true,
   // python
   "python.pythonPath": "C:/Users/zhang/AppData/Local/Programs/Python/Python39/python.exe",
@@ -247,15 +260,12 @@ tags:
     "typescript",
     "typescriptreact"
   ],
-  // gitLens设置
-  "gitlens.advanced.messages": {
-    "suppressLineUncommittedWarning": true
-  },
+  // Git Lens 设置
   "gitlens.gitCommands.closeOnFocusOut": true,
   "gitlens.views.repositories.branches.layout": "list",
   // live server
   "liveServer.settings.donotShowInfoMsg": true,
-  // markdown设置
+  // markdown 设置
   "markdown.extension.orderedList.marker": "one",
   "markdown.extension.print.imgToBase64": true,
   // markdownlint 设置
@@ -289,7 +299,7 @@ tags:
   "xmlTools.removeCommentsOnMinify": true,
   // 微信小程序
   "minapp-vscode.disableAutoConfig": true,
-  "minapp-vscode.wxmlFormatter": "prettier", //指定格式化工具
+  "minapp-vscode.wxmlFormatter": "prettier",
   "minapp-vscode.prettier": {
     "parser": "html",
     "printWidth": 80
@@ -304,9 +314,10 @@ tags:
     "node_modules",
     "out",
     "typings",
-    "test"
+    "test",
+    "__tests__"
   ],
-  // todoHightlight配置
+  // TODO Highlight 配置
   "todohighlight.keywords": ["WARNING: "],
   // leetcode
   "leetcode.hint.commentDescription": false,
@@ -317,7 +328,6 @@ tags:
   "leetcode.endpoint": "leetcode",
   "leetcode.showDescription": "In Webview",
   "leetcode.workspaceFolder": "C:/Users/zhang/.leetcode",
-
   // stylelint 设置
   "stylelint.packageManager": "yarn",
   "stylelint.validate": [
@@ -344,7 +354,6 @@ tags:
     "xsl",
     "wxss"
   ],
-  "codespaces.accountProvider": "Microsoft",
   // Java
   "redhat.telemetry.enabled": false,
   // matlab
