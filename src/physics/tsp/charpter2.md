@@ -110,4 +110,4 @@ $m=MV$ 是介质的总磁矩
 
 1. 证明 $\cfrac{\kappa_s}{\kappa_T} = \cfrac{C_v}{C_p}$
 
-2. 证明 $C_p - C_V = -T\cfrac{(\cfrac{\partial p}{\partial T})_V^2}{(\cfrac{\partial p}{\partial V})_T}$
+1. 证明 $C_p - C_V = -T\cfrac{(\cfrac{\partial p}{\partial T})_V^2}{(\cfrac{\partial p}{\partial V})_T}$

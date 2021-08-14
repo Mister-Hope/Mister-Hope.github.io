@@ -69,6 +69,6 @@ Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理�
 ::: tip TODO
 
 1. 完善分支合并部分，加入更多命令介绍。如 `cherry-pick` `squash-merge`。
-2. 介绍 Git Hook
+1. 介绍 Git Hook
 
 :::

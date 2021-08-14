@@ -447,11 +447,11 @@ person.score |> double |> ((_) => add(7, _));
 管道运算符对于 `await` 函数也适用。
 
 ```js
-x |> await f;
+x |> (await f);
 // 等同于
 await f(x);
 
-const userAge = userId |> await fetchUserById |> getAgeFromUser;
+const userAge = userId |> (await fetchUserById) |> getAgeFromUser;
 // 等同于
 const userAge = getAgeFromUser(await fetchUserById(userId));
 ```

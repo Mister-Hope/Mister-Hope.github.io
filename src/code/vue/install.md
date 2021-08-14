@@ -45,7 +45,7 @@ tags:
 
 1. 使用 `git clone git@github.com:Mister-Hope/vue-template.git` 克隆模板。
 
-1. 使用 VS Code 打开刚刚克隆出来的文件夹，按下 ``Ctrl + ` `` 打开终端。
+1. 使用 VS Code 打开刚刚克隆出来的文件夹，按下 `` Ctrl + ` `` 打开终端。
 
 1. 使用 `npm install` 命令安装模块。
 

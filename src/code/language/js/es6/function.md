@@ -421,7 +421,7 @@ function foo(optional = undefined) { ··· }
 
 ## rest 参数
 
-ES6 引入 rest 参数(形式为 `...变量名 `)，用于获取函数的多余参数，这样就不需要使用 `arguments` 对象了。Rest 参数搭配的变量是一个数组，该变量将多余的参数放入数组中。
+ES6 引入 rest 参数(形式为 `...变量名`)，用于获取函数的多余参数，这样就不需要使用 `arguments` 对象了。Rest 参数搭配的变量是一个数组，该变量将多余的参数放入数组中。
 
 ```js
 function add(...values) {
@@ -935,7 +935,10 @@ insert(2).into([1, 3]).after(1); //[1, 2, 3]
 下面是一个部署管道机制(pipeline)的例子，即前一个函数的输出是后一个函数的输入。
 
 ```js
-const pipeline = (...funcs) => (val) => funcs.reduce((a, b) => b(a), val);
+const pipeline =
+  (...funcs) =>
+  (val) =>
+    funcs.reduce((a, b) => b(a), val);
 
 const plus1 = (a) => a + 1;
 const mult2 = (a) => a * 2;

@@ -128,7 +128,13 @@ f3(); // 16
 ```js
 function count() {
   const arr = [];
-  for (let i = 1; i <= 3; i++) arr.push(((n) => () => n * n)(i));
+  for (let i = 1; i <= 3; i++)
+    arr.push(
+      (
+        (n) => () =>
+          n * n
+      )(i)
+    );
 
   return arr;
 }
