@@ -40,7 +40,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 新添加的未跟踪文件前面有 `??` 标记，新添加到暂存区中的文件前面有 `A` 标记，修改过的文件前面有 `M` 标记。
 
-::: demo 案例
+::: details 案例
 
 ```sh
 $ git status -s
