@@ -11084,19 +11084,10 @@ remark-lint-unordered-list-marker-style@^3.0.0:
     unist-util-position "^4.0.0"
     unist-util-visit "^4.0.0"
 
-remark-lint@9.0.1:
+remark-lint@9.0.1, remark-lint@^9.0.0:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/remark-lint/-/remark-lint-9.0.1.tgz#85ede987d24b7def9a6cea4a4d40c2035723eaec"
   integrity sha512-q4VFsA7LEG4REJhR2P4A6CU9b4cCQL53845CX74Z4N/W0EgB9mm/GXpYzjbEqgkMPl5ctP8yp/vBYTNmjfUCtw==
-  dependencies:
-    "@types/mdast" "^3.0.0"
-    remark-message-control "^7.0.0"
-    unified "^10.1.0"
-
-remark-lint@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/remark-lint/-/remark-lint-9.0.0.tgz#af4949282ad56935c017108cf683ac9ad28a8be4"
-  integrity sha512-ETO4zI48PR1Nz42YiyaYBzyhOiEfppXLnck7HW2pjKqxd36SIyQgM6sxD4ToMQI9KuCgy8mLAl/iVJoDLKxVjw==
   dependencies:
     "@types/mdast" "^3.0.0"
     remark-message-control "^7.0.0"
@@ -11140,10 +11131,10 @@ remark-parse@^9.0.0:
   dependencies:
     mdast-util-from-markdown "^0.8.0"
 
-remark-preset-lint-consistent@5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/remark-preset-lint-consistent/-/remark-preset-lint-consistent-5.0.1.tgz#6a20eb58109ac6c6638bfeed3581d241e8697a82"
-  integrity sha512-uxc6oFn3pudPvCs4CSqTbCapmYfNXSkpYQDJ868ZxXtAvz45J8YbwXTcicLIPuf4SE3Ynv1MYXPoiTPPxfoung==
+remark-preset-lint-consistent@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/remark-preset-lint-consistent/-/remark-preset-lint-consistent-5.1.0.tgz#c994fbea71e93c4452368657ee093080d265c4a8"
+  integrity sha512-i5xmsBtOQrymbr1y0TS6cYOXQ9nueIMMfEfSG6xmOJRnLIEQ0wAAhbUn6bOUyr2YmLLnWyScby3aCjQsOiyRBA==
   dependencies:
     "@types/mdast" "^3.0.0"
     remark-lint "^9.0.0"
