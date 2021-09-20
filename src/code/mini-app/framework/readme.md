@@ -37,18 +37,18 @@ category: 小程序
 
 下面是开发中需要注意的一些问题
 
-- **img**组件图片链接填写
+- **img** 组件图片链接填写
 
   请在 `src` 中填入 `https://mp.innenu.com/img/分类名/图片文件名.后缀名`。
 
-- **doc**组件文档路径填写
+- **doc** 组件文档路径填写
 
   请在 `url` 中填入 `https://mp.innenu.com/file/文件名.文件类型`
 
-- **audio**音频路径填写
+- **audio** 音频路径填写
 
   请将音频上传至微信公众号并编辑图文发送，在 `src` 中填写图文链接。(请一直保留微信推送与素材库里的文件)
 
-- **swiper**组件图片链接填写
+- **carousel** 组件图片链接填写
 
   请在 `url` 的每个 element 依次填入 `https://mp.innenu.com/img/分类名/图片文件名.后缀名`。

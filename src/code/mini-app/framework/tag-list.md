@@ -38,12 +38,12 @@ content 的每个元素都为一个 Object，该 Object 有一个固定的键 `t
 - [doc](#doc-参数): 文档(支持 Wod Excel、PPT、PDF、图片等)
 - [phone](#phone-参数): 电话(用于电话展示、快速保存联系人或拨打电话)
 - [grid](#grid-参数): 九宫格(分类展示)
-- [swiper](#swiper-参数): 滑块视图容器(可以制作图片轮播图)
+- [carousel](#carousel-参数): 图片轮播图
 - [media](#media-参数): 媒体组件(音频视频)
 - [card](#card-参数): 卡片跳转组件(卡片形式，可跳转到指定页面、打开公众号图文或复制链接)
 - [copy](#copy-参数): 复制组件(快速复制指定文字)
-- [intro](#intro-参数): 介绍组件(用于组织或个人的 logo 与描述展示)
-- [advanced-list](#advanced-list-参数): 增强型列表(可包含按钮、选择器、开关和滑块)
+- [account](#account-参数): 账号组件(用于组织或个人的 logo 与描述展示)
+- [functional-list](#functional-list-参数): 功能列表(可包含按钮、选择器、开关和滑块)
 
 ## title 参数
 
@@ -211,31 +211,35 @@ _Tips:_ 图片懒加载是指只有图片滚动到页面显示区域才开始加
 | path  |  否  |                                       `string`                                        | 对应界面的 json 文件路径         |
 | url   |  否  |                                       `string`                                        | 九宫格指向的界面路径             |
 
-## swiper 参数
+## carousel 参数
 
 轮播图组件。
 
-| 参数          | 必填 |   值类型   | 内容                                  | 备注                                                 |
-| ------------- | :--: | :--------: | ------------------------------------- | ---------------------------------------------------- |
-| url           |  是  | `string[]` | swiper 展示的图片的在线网址或本地路径 | 将所有图片按顺序填入该 array 的每个 element          |
-| fill          |  否  | `boolean`  | 是否填充整个屏幕宽度                  | 默认为 `false`                                       |
-| Class         |  否  |  `string`  | swiper 的类名                         | 默认为 `width:100%;height:400rpx;`                   |
-| style         |  否  |  `string`  | swiper 的样式                         | 填入 css 样式                                        |
-| indicatorDots |  否  | `boolean`  | 面板指示点                            | 默认显示，设置 `false` 取消                          |
-| dotColor      |  否  |  `string`  | 指示点颜色                            | 默认为#ffffff88                                      |
-| autoplay      |  否  | `boolean`  | 设置为 `false` 取消自动切换           | 默认开启                                             |
-| interval      |  否  |  `number`  | 自动切换时间间隔                      | 默认为 5000                                          |
-| duration      |  否  |  `number`  | 滑动动画时长                          | 默认为 500                                           |
-| circular      |  否  | `boolean`  | 设置为 false 不采用衔接滑动           | 默认开启                                             |
-| vertical      |  否  | `boolean`  | 设置 true 滑动方向为纵向              | 默认为横向                                           |
-| preMargin     |  否  |  `string`  | 前一项露出边距                        | 默认为 `0px`，接受 px 和 rpx 值                      |
-| nextMargin    |  否  |  `string`  | 后一项露出边距                        | 默认为 `0px`，接受 px 和 rpx 值                      |
-| change        |  否  |  `string`  | swiper 改变时触发的函数名称           | 默认不触发函数                                       |
-| animation     |  否  |  `string`  | swiper 动画结束时触发的函数名称       | 默认不触发函数                                       |
-| imgClass      |  否  |  `string`  | swiper 中图片的类名                   | 默认为 `width:100%!important;height:100%!important;` |
-| imgMode       |  否  |  `string`  | swiper 中图片的显示模式               | 默认为 `aspectFill`                                  |
+| 参数          | 必填 |   值类型   | 内容                                    | 备注                                                 |
+| ------------- | :--: | :--------: | --------------------------------------- | ---------------------------------------------------- |
+| url           |  是  | `string[]` | carousel 展示的图片的在线网址或本地路径 | 将所有图片按顺序填入该 array 的每个 element          |
+| fill          |  否  | `boolean`  | 是否填充整个屏幕宽度                    | 默认为 `false`                                       |
+| Class         |  否  |  `string`  | carousel 项目的类名                     | 默认为 `width:100%;height:400rpx;`                   |
+| style         |  否  |  `string`  | carousel 项目的样式                     | 填入 css 样式                                        |
+| indicatorDots |  否  | `boolean`  | 面板指示点                              | 默认显示，设置 `false` 取消                          |
+| dotColor      |  否  |  `string`  | 指示点颜色                              | 默认为#ffffff88                                      |
+| autoplay      |  否  | `boolean`  | 设置为 `false` 取消自动切换             | 默认开启                                             |
+| interval      |  否  |  `number`  | 自动切换时间间隔                        | 默认为 5000                                          |
+| duration      |  否  |  `number`  | 滑动动画时长                            | 默认为 500                                           |
+| circular      |  否  | `boolean`  | 设置为 false 不采用衔接滑动             | 默认开启                                             |
+| vertical      |  否  | `boolean`  | 设置 true 滑动方向为纵向                | 默认为横向                                           |
+| preMargin     |  否  |  `string`  | 前一项露出边距                          | 默认为 `0px`，接受 px 和 rpx 值                      |
+| nextMargin    |  否  |  `string`  | 后一项露出边距                          | 默认为 `0px`，接受 px 和 rpx 值                      |
+| change        |  否  |  `string`  | carousel 改变时触发的函数名称           | 默认不触发函数                                       |
+| animation     |  否  |  `string`  | carousel 动画结束时触发的函数名称       | 默认不触发函数                                       |
+| imgClass      |  否  |  `string`  | carousel 中图片的类名                   | 默认为 `width:100%!important;height:100%!important;` |
+| imgMode       |  否  |  `string`  | carousel 中图片的显示模式               | 默认为 `aspectFill`                                  |
 
-> 注: swiper 默认高度为 400rpx，可以通过 style 属性调节
+::: info
+
+carousel 组件默认高度为 400rpx，可以通过 style 属性调节
+
+:::
 
 ## media 参数
 
@@ -288,29 +292,36 @@ _Tips:_ 图片懒加载是指只有图片滚动到页面显示区域才开始加
 | text   |  是  | `string` | 需要复制的文字 |
 | header |  否  | `string` | 可选的组件标题 |
 
-## intro 参数
+## account 参数
 
 介绍组件，用于对个人、组织、机构的简单介绍。
 
-| 参数 | 必填 |  值类型  | 内容             |
-| ---- | :--: | :------: | ---------------- |
-| name |  是  | `string` | 主体名称         |
-| logo |  是  | `string` | 头像图标在线地址 |
-| desc |  是  | `string` | 主体描述         |
+| 参数     | 必填 |  值类型  | 内容                   |
+| -------- | :--: | :------: | ---------------------- |
+| name     |  是  | `string` | 主体名称               |
+| logo     |  是  | `string` | 头像图标在线地址       |
+| detail   |  否  | `string` | 主体的全程             |
+| desc     |  否  | `string` | 主体描述               |
+| wx       |  否  | `string` | 主体的微信公众号 ID    |
+| qq       |  否  | `number` | 主体的 QQ 号           |
+| wxQRCode |  否  | `string` | 主体的微信二维码地址   |
+| qqQRCode |  否  | `string` | 主体的 QQ 二维码地址   |
+| openid   |  否  | `string` | 主体的 QQ OPENID       |
+| path     |  否  | `string` | 主体的微信图文页面地址 |
 
-## advanced-list 参数
+## functional-list 参数
 
-生成一个带有跳转功能、可包含图标、滑块、开关、选择器、自定义按钮功能、微信原生功能的高级列表
+生成一个带有跳转功能、可包含图标、滑块、开关、选择器、自定义按钮功能、微信原生功能的功能列表
 
 | 参数    | 必填 |        值类型         | 内容     | 备注                                                      |
 | ------- | :--: | :-------------------: | -------- | --------------------------------------------------------- |
 | header  |  否  | `string` \| `boolean` | 头部标题 | 不填会在标题所在处留空占位，设置为 `false` 来取消留空占位 |
 | footer  |  否  |       `string`        | 结尾标题 |                                                           |
-| content |  是  |   `AdvancedList[]`    | 列表内容 |                                                           |
+| content |  是  |  `FunctionalList[]`   | 列表内容 |                                                           |
 
-## AdvancedList 参数
+## FunctionalList 参数
 
-高级列表每一项参数
+功能列表每一项参数
 
 ### AdvancedList 通用参数
 
@@ -409,13 +420,12 @@ _Tips:_ 图片懒加载是指只有图片滚动到页面显示区域才开始加
 
 ## popup 参数
 
-| 参数        | 必填 |  值类型   | 内容                             |
-| ----------- | :--: | :-------: | -------------------------------- |
-| title       |  是  | `string`  | 主标题                           |
-| subtitle    |  是  | `string`  | 副标题                           |
-| text        |  是  | `string`  | 弹窗文字                         |
-| desc        |  否  | `string`  | 弹窗文字解释                     |
-| more        |  否  | `boolean` | 是否显示更多按钮，默认为 `false` |
-| cancel      |  否  | `boolean` | 设置为 `false` 来隐藏取消按钮    |
-| confirmText |  否  | `string`  | 确定按钮文字，默认为 `'确定'`    |
-| cancelText  |  否  | `string`  | 取消按钮文字，默认为 `'取消'`    |
+| 参数     | 必填 |       值类型        | 内容                                                         |
+| -------- | :--: | :-----------------: | ------------------------------------------------------------ |
+| title    |  是  |      `string`       | 主标题                                                       |
+| subtitle |  是  |      `string`       | 副标题                                                       |
+| text     |  是  |      `string`       | 弹窗文字                                                     |
+| desc     |  否  |      `string`       | 弹窗文字解释                                                 |
+| more     |  否  |      `boolean`      | 是否显示更多按钮，默认为 `false`                             |
+| confirm  |  否  |      `string`       | 确定按钮文字，默认为 `'确定'`                                |
+| cancel   |  否  | `boolean \| string` | 取消按钮文字，默认为 `'取消'`，设置为 `false` 来隐藏取消按钮 |

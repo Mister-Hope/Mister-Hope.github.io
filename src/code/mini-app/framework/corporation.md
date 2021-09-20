@@ -10,7 +10,7 @@ category: 小程序
 
 ---
 
-### 界面 json 文件案例
+### 界面 yaml 文件案例
 
 ```yaml
 title: 学生会
