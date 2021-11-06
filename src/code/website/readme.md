@@ -81,7 +81,7 @@ jQuery 是一个 JavaScript 库，极大地简化了 JavaScript 编程，很容�
 
 jQuery 的优势在于它能够在互联网发展早期兼容各式各样的浏览器，并轻松的选定与操作 DOM。
 
-由于 NVVM 的兴起，目前 jQuery 已逐步被前端三大框架所取代。
+由于 MVVM 的兴起，目前 jQuery 已逐步被前端三大框架所取代。
 
 - [jQuery 教程](jQuery/readme.md)
 
