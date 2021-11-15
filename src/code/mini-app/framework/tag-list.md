@@ -166,27 +166,27 @@ _Tips:_ 图片懒加载是指只有图片滚动到页面显示区域才开始加
 
 电话组件。
 
-| 参数     | 必填 |       值类型       | 内容                             |
-| -------- | :--: | :----------------: | -------------------------------- |
-| num      |  是  | `string \| number` | 联系人电话号码                   |
-| header   |  否  |      `string`      | 组件标题                         |
-| fName    |  是  |      `string`      | 联系人的名                       |
-| lName    |  否  |      `string`      | 联系人的姓                       |
-| org      |  否  |      `string`      | 联系人所在公司                   |
-| remark   |  否  |      `string`      | 联系人的备注                     |
-| workNum  |  否  | `string \| number` | 联系人的工作电话                 |
-| nickName |  否  |      `string`      | 联系人的昵称                     |
-| wechat   |  否  |      `string`      | 联系人的微信号                   |
-| province |  否  |      `string`      | 联系人的地址省份                 |
-| city     |  否  |      `string`      | 联系人的地址城市                 |
-| street   |  否  |      `string`      | 联系人的地址街道                 |
-| postCode |  否  | `string \| number` | 联系人的地址邮政编码             |
-| title    |  否  |      `string`      | 联系人的职位                     |
-| hostNum  |  否  | `string \| number` | 联系人的公司电话                 |
-| site     |  否  |      `string`      | 联系人的网站                     |
-| email    |  否  |      `string`      | 联系人的电子邮件                 |
-| homeNum  |  否  | `string \| number` | 联系人的住宅电话                 |
-| avatar   |  否  |      `string`      | 联系人头像图片路径(仅限本地路径) |
+| 参数     | 必填 |        值类型        | 内容                             |
+| -------- | :--: | :------------------: | -------------------------------- |
+| num      |  是  | `string` \| `number` | 联系人电话号码                   |
+| header   |  否  |       `string`       | 组件标题                         |
+| fName    |  是  |       `string`       | 联系人的名                       |
+| lName    |  否  |       `string`       | 联系人的姓                       |
+| org      |  否  |       `string`       | 联系人所在公司                   |
+| remark   |  否  |       `string`       | 联系人的备注                     |
+| workNum  |  否  | `string` \| `number` | 联系人的工作电话                 |
+| nickName |  否  |       `string`       | 联系人的昵称                     |
+| wechat   |  否  |       `string`       | 联系人的微信号                   |
+| province |  否  |       `string`       | 联系人的地址省份                 |
+| city     |  否  |       `string`       | 联系人的地址城市                 |
+| street   |  否  |       `string`       | 联系人的地址街道                 |
+| postCode |  否  | `string` \| `number` | 联系人的地址邮政编码             |
+| title    |  否  |       `string`       | 联系人的职位                     |
+| hostNum  |  否  | `string` \| `number` | 联系人的公司电话                 |
+| site     |  否  |       `string`       | 联系人的网站                     |
+| email    |  否  |       `string`       | 联系人的电子邮件                 |
+| homeNum  |  否  | `string` \| `number` | 联系人的住宅电话                 |
+| avatar   |  否  |       `string`       | 联系人头像图片路径(仅限本地路径) |
 
 ## grid 参数
 
@@ -447,12 +447,12 @@ carousel 组件默认高度为 400rpx，可以通过 style 属性调节
 
 ## popup 参数
 
-| 参数     | 必填 |       值类型        | 内容                                                         |
-| -------- | :--: | :-----------------: | ------------------------------------------------------------ |
-| title    |  是  |      `string`       | 主标题                                                       |
-| subtitle |  是  |      `string`       | 副标题                                                       |
-| text     |  是  |      `string`       | 弹窗文字                                                     |
-| desc     |  否  |      `string`       | 弹窗文字解释                                                 |
-| more     |  否  |      `boolean`      | 是否显示更多按钮，默认为 `false`                             |
-| confirm  |  否  |      `string`       | 确定按钮文字，默认为 `'确定'`                                |
-| cancel   |  否  | `boolean \| string` | 取消按钮文字，默认为 `'取消'`，设置为 `false` 来隐藏取消按钮 |
+| 参数     | 必填 |        值类型         | 内容                                                         |
+| -------- | :--: | :-------------------: | ------------------------------------------------------------ |
+| title    |  是  |       `string`        | 主标题                                                       |
+| subtitle |  是  |       `string`        | 副标题                                                       |
+| text     |  是  |       `string`        | 弹窗文字                                                     |
+| desc     |  否  |       `string`        | 弹窗文字解释                                                 |
+| more     |  否  |       `boolean`       | 是否显示更多按钮，默认为 `false`                             |
+| confirm  |  否  |       `string`        | 确定按钮文字，默认为 `'确定'`                                |
+| cancel   |  否  | `boolean` \| `string` | 取消按钮文字，默认为 `'取消'`，设置为 `false` 来隐藏取消按钮 |

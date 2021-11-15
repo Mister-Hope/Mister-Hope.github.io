@@ -29,14 +29,6 @@ VS Code 上方有一排菜单栏，其中有大量的快捷操作，对应的组
 
 资源管理器是最常使用的界面，快捷键为 `Ctrl + Shift + E`。
 
-::: tip
-
-请先点击扩展，搜索 JSON，安装 **JSON organizer** 和 **JSON Tools**，并按照界面提示重新加载 VS Code
-
-:::
-
----
-
 ## 用 VS Code 打开文件和文件夹
 
 VS Code 支持打开文件和文件夹。
@@ -68,10 +60,6 @@ VS Code 支持打开文件和文件夹。
 ### 格式化代码
 
 `Alt + shift + F`
-
-### 缩进显示 json: (由插件提供支持)
-
-`Ctrl + Alt + M` (在制作时使用，方便查看 json)
 
 ### 其他 Windows 快捷键
 
