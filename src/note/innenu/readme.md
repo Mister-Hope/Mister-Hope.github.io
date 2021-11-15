@@ -17,7 +17,7 @@ YAML 是专门用来写配置文件的语言，非常简洁和强大，其设计
 ## 快速上手
 
 1. 为了编写小程序页面配置文件，您需要先学习 [YAML 的规则](./yaml.md)，同时简单浏览一下一款编辑器 [VSCode 的介绍](../../software/vscode/simple.md)
-1. 掌握上述两个内容之后，您就可以尝试对照 [小程序参数表](../../code/mini-app/framework/tag-list.md) 通过 VSCode 编写页面 YAML 文件了，如果您觉得太难，您可以参阅 [快速上手](./get-started.md) 来体验一个示例。
+1. 掌握上述两个内容之后，您就可以尝试对照 [小程序简易参数表](./tag-list.md) 通过 VSCode 编写页面 YAML 文件了，如果您觉得太难，您可以参阅 [快速上手](./get-started.md) 来体验一个示例。
 
 ::: tip 更多参考
 

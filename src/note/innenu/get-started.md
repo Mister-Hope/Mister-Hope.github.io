@@ -12,10 +12,10 @@ category: 小程序
 
 假定您已经获得以下材料:
 
-- 统一身份认证登陆页截图
-  ![统一身份认证登陆页截图](https://mp.innenu.com/img/account/authserver.jpg)
+- 统一身份认证登陆
+  ![统一身份认证登陆](https://mp.innenu.com/img/account/authserver.jpg)
 - 修改密码页面截图
-  ![统一身份认证登陆页截图](https://mp.innenu.com/img/account/reset-password.jpg)
+  ![修改密码页面截图](https://mp.innenu.com/img/account/reset-password.jpg)
 - 别名管理页面截图
   ![别名管理页面截图](https://mp.innenu.com/img/account/email-address.jpg)
 
@@ -46,17 +46,17 @@ category: 小程序
 
 :::
 
-接下来您就需要按照参数表进行页面的创建。此时在 VSCode 新建一 `authorize.yml` 文件，并打开它。
+接下来您就需要按照 [参数表](./tag-list.md) 进行页面的创建。
+
+## 创建页面配置文件
+
+打开 VSCode 并选择“文件”-“新建文件”，并立即保存文件为 `authorize.yml`。
 
 ## 编写总体结构
 
-您需要按照参数表完成页面的基础信息添加。页面的标题可以起为“统一身份认证”，假定当天是 2021 年 11 月 1 日，您叫张三。
+按照 [参数表 → 总体结构](./tag-list.md#总体结构) 完成页面的基础信息添加。页面的标题可以起为“统一身份认证”，假定当天是 2021 年 11 月 1 日，您叫张三。
 
-根据下列内容，您可以开始输入内容。
-
-::: details 参考资料
-
-**总体结构**:
+::: details 总体结构
 
 | 参数      | 必填 |       值类型        | 内容         | 备注                                         |
 | --------- | :--: | :-----------------: | ------------ | -------------------------------------------- |
@@ -70,6 +70,8 @@ category: 小程序
 
 :::
 
+参照上述说明，你可以很轻松的编写如下内容:
+
 ```yml
 title: 统一身份认证
 author: 张三
@@ -82,16 +84,16 @@ content: []
 
 ## 添加第一个组件——标题
 
-如参数表中所说
+如 [参数表 → content 格式](./tag-list.md#content-格式) 所说:
 
-> content 的每个元素都为一个 Object，该 Object 有一个固定的键 `tag` 来标识该组件的内容，有效的 tag 值如下:
+> content 的每个元素都为一个对象，该对象有一个固定的键 `tag` 来标识该组件的结果，有效的 `tag` 值及对应的渲染结果如下:
 >
 > - [title](#title-参数): 大标题
 > - ...
 
-现在，我们需要为小程序页面添加第一个组件——标题，通过查询参数表，小程序提供了标题组件，那么我们需要让小程序渲染它。
+现在，我们需要为小程序页面添加第一个组件——标题。
 
-我们需要为 content 数组添加第一个元素，这个元素是一个对象。为了让这个元素渲染为标题组件，我们需要设置元素 `tag` 为 `title`。
+为让小程序渲染它，我们需要为 content 数组添加第一个元素。为了让这个元素渲染为标题组件，我们需要设置元素为一个对象，并设置 `tag` 键的值为 `title`:
 
 ```yml
 title: 统一身份认证
@@ -102,9 +104,9 @@ content:
   - tag: title
 ```
 
-接下来，我们需要参阅参数表，为组件写入更多参数。
+接下来，我们需要参阅 [参数表 → title 参数](./tag-list.md#title-参数)，设置更多参数描述组件。
 
-::: detailstitle 参数
+::: details title 参数
 
 | 参数 | 必填 |  值类型  | 内容       |
 | ---- | :--: | :------: | ---------- |
@@ -112,7 +114,7 @@ content:
 
 :::
 
-可以看到，我们需要使用 `text` 来渲染标题组件的文字，所以我们可以直接写入
+可以看到，我们需要使用 `text` 来设置标题组件的文字:
 
 ```yml
 title: 统一身份认证
@@ -126,11 +128,9 @@ content:
 
 ## 添加第二个组件文本
 
-查表可知，小程序提供了标题组件，以及段落、无序列表、有序列表三个文字组件。
+查阅参数表可知，小程序提供了标题组件，以及段落、无序列表、有序列表三个文字组件。
 
-对于 “学号是 10 位数字，您收到的录取通知书编号和日后发放的校园卡 💳 卡号即是学号。” 这段文字来说，它显然不够充当一个段落，因此，我们选择文本组件。
-
-通过参数表可以查到文本组件的 `tag` 是 `text`，其参数如下:
+对于 “学号是 10 位数字，您收到的录取通知书编号和日后发放的校园卡 💳 卡号即是学号。” 这段文字来说，它显然不够充当一个段落，因此，我们选择文本组件。而文本组件的 `tag` 是 `text`，其参数如下:
 
 ::: details 文本组件参数
 
@@ -158,7 +158,7 @@ content:
     text: 学号是 10 位数字，您收到的录取通知书编号和日后发放的校园卡 💳 卡号即是学号。
 ```
 
-在这里，我们注意到 `text` 同时接收 string 和 string 数组，这是因为文字可以有多个段落，所以如果我们需要添加第二行，我们需要将其改为:
+在这里，我们注意到 `text` 同时接收 string 和 string 数组，这是因为文字可以有一个或多个段落，所以如果我们需要添加一个新行，我们需要将其改为:
 
 ```yml
 title: 统一身份认证
@@ -172,7 +172,7 @@ content:
   - tag: text
     text:
       - 学号是 10 位数字，您收到的录取通知书编号和日后发放的校园卡 💳 卡号即是学号。
-      - 这里是第二段文字...
+      - 这里的文字另起了新行...
 ```
 
 ## 文本排版
@@ -227,9 +227,52 @@ content:
 
 所以您完全可以根据自己的习惯去进行编辑，不过 Mr.Hope 还是推荐前两种，因为他们更为直观。
 
+## 媒体文件存放
+
+由于 YAML 是纯文本文件，所有的图片、文件等需单独列出，并在对应的配置项处填入对应的网址。
+
+in 东师服务器文件结构如下:
+
+- 文件: 存放在 `https://mp.innenu.com/file/`
+- 图片: 存放在 `https://mp.innenu.com/img/`
+- 页面 YAML: 存放在 `https://mp.innenu.com/res/`
+- 图标: 存放在 `https://mp.innenu.com/res/icon/`
+
+::: info
+
+关于完整的服务器文件结构，请访问 <https://github.com/Hope-Studio/innenu-res>
+
+:::
+
+对于本页面，您可以获得的图片按照内容进行命名:
+
+- 统一身份认证登陆: `authserver.jpg`
+- 修改密码页面截图: `reset-password.jpg`
+- 别名管理页面截图: `email-address.jpg`
+
+同时，您需要在对应的配置项填入:
+
+- `https://mp.innenu.com/img/account/authserver.jpg`
+- `https://mp.innenu.com/img/account/reset-password.jpg`
+- `https://mp.innenu.com/img/account/email-address.jpg`
+
+提交时，直接提交下列压缩包结构。
+
+```
+├─ img
+|  └─ account
+|     ├─ authserver.jpg
+|     ├─ reset-passwor.jpg
+|     └─ email-address.jpg
+└─ res
+   └─ guide
+       └─ account
+           └─ authorize.yml
+```
+
 ## 继续完成页面
 
-类似的，通过添加新元素设置 `tag` 选定组件，并添加对应参数后，您很容易就可以得到如下的页面:
+类似的，通过添加新元素设置 `tag` 选定组件，并查表添加对应参数后，您很容易就可以得到如下的页面:
 
 ```yml
 title: 统一身份认证
@@ -296,50 +339,6 @@ content:
 
 这样您就创建出了一个简单的页面。
 
-## 媒体文件存放
-
-由于 YAML 是纯文本文件，所有的图片、文件等需单独列出，并在对应的配置项处填入对应的网址。
-
-in 东师服务器文件结构如下:
-
-- 文件: 存放在 `https://mp.innenu.com/file/`
-- 图片: 存放在 `https://mp.innenu.com/img/`
-- 页面 YAML: 存放在 `https://mp.innenu.com/res/`
-- 图标: 存放在 `https://mp.innenu.com/res/icon/`
-
-::: info
-
-关于完整的服务器文件结构，请访问 <https://github.com/Hope-Studio/innenu-res>
-
-:::
-
-比如您正在制作本部的快递站页面，您可以将配置文件命名为 `cainiao.yml`，您可以将拍摄的图片按照内容进行命名:
-
-- 菜鸟驿站外景: `outlook.jpg`
-- 菜鸟驿站扫描器: `scanner.jpg`
-- 菜鸟驿站货架: `shelf.jpg`
-
-同时，您需要在对应的配置项填入:
-
-- `https://mp.innenu.com/img/express/benbu-cainiao/outlook.jpg`
-- `https://mp.innenu.com/img/express/benbu-cainiao/scanner.jpg`
-- `https://mp.innenu.com/img/express/benbu-cainiao/shelf.jpg`
-
-提交时，直接提交下列压缩包结构。
-
-```
-├─ img
-|  └─ express
-|      └─ benbu-cainiao
-|         ├─ outlook.jpg
-|         ├─ scanner.jpg
-|         └─ shelf.jpg
-└─ res
-   └─ guide
-       └─ express
-           └─ cainiao.yml
-```
-
 ## 使用列表进行导航
 
 小程序主要使用列表和网格组件导航至其他页面，当然部分其他组件也有类似功能。
@@ -376,97 +375,116 @@ in 东师服务器文件结构如下:
 假定我们需要提交如下的页面结构:
 
 ```
-├─ detail
-|  ├─ about.yml  (关于)
-|  └─ item2.yml
-|
-├─ item3.yml
-├─ item4.yml
-└─ index.yml
+└─ res
+   ├─ intro
+   |    ...
+   └─ guide
+       └─ account
+            ├─ mail
+            |  ├─ intro.yml  (邮箱介绍)
+            |  ├─ ios.yml  (iOS 邮箱设置)
+            |  └─ android.yml (安卓邮箱设置)
+            |
+            ├─ authorize.yml (统一身份认证)
+            └─ index.yml (账号主页)
 ```
 
-在 index.yml 中，我们可以设置如下的列表项:
+在 `index.yml` 中，我们可以设置如下的列表项:
 
 ```yml
-title: 标题名
+title: 账号
 content:
   - tag: list
-    header: 列表标题
+    header: 了解更多
     content:
-      - text: 关于
+      - text: 统一身份认证
 
-      - text: item2
+  - tag: list
+    header: 校园邮箱
+    content:
+      - text: 邮箱介绍
 
-      - text: item3
+      - text: 安卓邮箱客户端设置
 
-      - text: item4
+      - text: iOS 邮箱客户端设置
 ```
 
-我们可以添加额外的 `icon` 属性来设置一个美观的图标。当前可用的全部图标请详见 <https://github.com/Hope-Studio/innenu-res/blob/main/res/icon/>。 比如我们想设置关于图标，我们可以直接找到图标文件名并设置这个值 (不带 `.svg` 后缀)。
+我们可以添加额外的 `icon` 属性来设置一个美观的图标。当前可用的全部图标请详见 <https://github.com/Hope-Studio/innenu-res/blob/main/res/icon/>。 我们可以直接找到相应图标并设置 `icon` 为文件名 (不带 `.svg` 后缀)。
 
 ```yml
-title: 标题名
+title: 账号
 content:
   - tag: list
-    header: 列表标题
+    header: 了解更多
     content:
-      - text: 关于
-        icon: about
+      - text: 统一身份认证
+        icon: authorize
 
-      - text: item2
-        icon: icon2
+  - tag: list
+    header: 校园邮箱
+    content:
+      - text: 邮箱介绍
+        icon: email
 
-      - text: item3
-        icon: icon3
+      - text: 安卓邮箱客户端设置
+        icon: android
 
-      - text: item4
-        icon: icon4
+      - text: iOS 邮箱客户端设置
+        icon: apple
 ```
 
-接下来，我们需要通过 `path` 设置路径。我们使用 `/` 来分割目录，所以 `about.yml` 相对 `index.yml` 的路径为 `detail/about.yml`。(这里同样省略万年不变的后缀 `.yml`)
+接下来，我们需要通过 `path` 设置路径。我们使用 `/` 来分割目录，所以 `intro.yml` 相对 `index.yml` 的路径为 `mail/intro`。(这里同样省略万年不变的后缀 `.yml`)
 
 ```yml
-title: 标题名
+title: 账号
 content:
   - tag: list
-    header: 列表标题
+    header: 了解更多
     content:
-      - text: 关于
-        icon: about
-        path: detail/about
+      - text: 统一身份认证
+        icon: authorize
+        path: authorize
 
-      - text: item2
-        icon: icon2
+  - tag: list
+    header: 校园邮箱
+    content:
+      - text: 邮箱介绍
+        icon: email
+        path: mail/intro
 
-      - text: item3
-        icon: icon3
+      - text: 安卓邮箱客户端设置
+        icon: android
+        path: mail/android
 
-      - text: item4
-        icon: icon4
+      - text: iOS 邮箱客户端设置
+        icon: apple
+        path: mail/ios
 ```
 
-此时，小程序就可以渲染出正确的列表项，并在您点击关于时跳转到新页面渲染 `about.yml` 文件。
+此时，小程序就可以渲染出正确的列表项，并在您点击“邮箱介绍”时跳转到新页面渲染 `intro.yml` 文件。
 
 ::: tip 回退上一层和从根目录访问
 
-有些时候，您可能需要从 about.yml 跳转到 index.yml 中去，这就涉及到表示父目录的方式。我们使用 `../` 表示父目录，所以对于 `about.yml` 来说，`index.yml` 的路径可写为 `../index`，而参数表中提到 `index` 为默认文件，所以可以简写为 `../`。
+有些时候，您可能需要从 `intro.yml` 跳转到 `index.yml` 中去，这就涉及到表示父目录的方式。我们使用 `../` 表示父目录，所以对于 `intro.yml` 来说，`index.yml` 的路径可写为 `../index`，而参数表中提到 `index` 为默认文件，所以可以简写为 `../`。
 
 有些时候您能想从根目录开始描述路径，这种情况下，请以 `/` 开头设置 path，此时您会从 `res/` 文件夹下开始进行路径的匹配。
 
 ```
-res
- └─ guide
-   └─ express
-    ├─ detail
-    |  ├─ about.yml  (关于)
-    |  └─ item2.yml
-    |
-    ├─ item3.yml
-    ├─ item4.yml
-    └─ index.yml
+└─ res
+   ├─ intro
+   |    ...
+   └─ guide
+       └─ account
+            ├─ mail
+            |  ├─ intro.yml  (邮箱介绍)
+            |  ├─ ios.yml  (iOS 邮箱设置)
+            |  └─ android.yml (安卓邮箱设置)
+            |
+            ├─ authorize.yml (统一身份认证)
+            └─ index.yml (账号主页)
 ```
 
-比如，对于所有文件来说，他们都可以通过 `/guide/express/detail/about` 访问 `about.yml`。
+比如，对于所有文件来说，他们都可以通过 `/guide/account/mail/intro` 访问 `intro.yml`。
 
 :::
 

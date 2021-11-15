@@ -12,7 +12,7 @@ module.exports = {
 
     "/physics/": require("./physics"),
 
-    "/note/innenu/": ["", "yaml", "get-started"],
+    "/note/innenu/": ["", "yaml", "tag-list", "get-started"],
 
     "/note/": require("./note"),
 
