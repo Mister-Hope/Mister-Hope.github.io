@@ -16,7 +16,7 @@ Markdown 的目标是实现「易读易写」。它的扩展名为 `.md`。
 
 Markdown 最需要强调的便是它的可读性。一份使用 Markdown 格式撰写的文件应该可以直接以纯文字发布，并且看起来不会像是由许多标签或是格式指令所构成。
 
-其语法在设计时受到一些既有 text-to-HTML 格式的影响，包括 [Setext][1]、[atx][2]、[Textile][3]、[reStructuredText][4]、[Grutatext][5] 和 [EtText][6]，然而最大灵感来源其实是纯文字的电子邮件格式。因此 Markdown 的语法全由标点符号所组成，并经过严谨慎选，是为了让它们看起来就像所要表达的意思。像是在文字两旁加上星号，看起来就像\*强调\*。Markdown 的列表看起来，嗯，就是列表。假如你有使用过电子邮件，引言写法看起来就真的像是引用一段文字。
+其语法在设计时受到一些既有 text-to-HTML 格式的影响，包括 [Setext][1]、[atx][2]、[Textile][3]、[reStructuredText][4]、[Grutatext][5] 和 [EtText][6]，然而最大灵感来源其实是纯文字的电子邮件格式。因此 Markdown 的语法全由标点符号所组成，并经过严谨慎选，是为了让它们看起来就像所要表达的意思。像是在文字两旁加上星号，看起来就像\*强调\*。Markdown 的列表看起来，嗯，就是列表。假如您有使用过电子邮件，引言写法看起来就真的像是引用一段文字。
 
 Markdown 具有一系列衍生版本，用于扩展 Markdown 的功能 (如表格、脚注、内嵌 HTML 等等) ，这些功能并不在最初的设计中，但它们能让 Markdown 转换成更多的格式，例如 LaTeX，Docbook。Markdown 增强版中比较有名的有 Markdown Extra、MultiMarkdown、 Maruku 等。这些衍生版本要么基于工具，如 Pandoc；要么基于网站，如 GitHub 和 Wikipedia，在语法上基本兼容，但在一些语法和渲染效果上有改动。
 
@@ -56,35 +56,35 @@ This is another regular paragraph.
 
 Markdown 语法在 HTML 块标签中将不会被进行处理。
 
-例如，你无法在 HTML 块内使用 Markdown 形式的 `*强调*`。
+例如，您无法在 HTML 块内使用 Markdown 形式的 `*强调*`。
 
 :::
 
 ### 特殊字符自动转换
 
-简单来说，在 Markdown 中，你无需考虑 HTML 本应考虑的特殊字符转义的问题。
+简单来说，在 Markdown 中，您无需考虑 HTML 本应考虑的特殊字符转义的问题。
 
 比如对于 `AT&T`，Markdown 就会将它转为 `AT&amp;T`。
 
 ::: tip HTML 中的特殊字符
 
-在 HTML 文件中，有两个字符需要特殊处理: `<` 和 `&` 。 `<` 符号用于起始标签，`&` 符号则用于标记 HTML 实体，如果你只是想要使用这些符号，你必须要使用实体的形式，像是 `&lt;` 和 `&amp;`。
+在 HTML 文件中，有两个字符需要特殊处理: `<` 和 `&` 。 `<` 符号用于起始标签，`&` 符号则用于标记 HTML 实体，如果您只是想要使用这些符号，您必须要使用实体的形式，像是 `&lt;` 和 `&amp;`。
 
 使用 HTML 时，`&` 符号其实很容易让写作网络文件的人感到困扰。
 
-如果你要打 「AT&T」 ，你必须要写成 `「AT&amp;T」`。
+如果您要打 「AT&T」 ，您必须要写成 `「AT&amp;T」`。
 
-同时你还得转换网址内的 `&` 符号，如果你要链接到 `http://images.google.com/images?num=30&q=larry+bird`，你必须要把网址转成 `http://images.google.com/images?num=30&amp;q=larry+bird`，才能放到链接标签的 `href` 属性里。
+同时您还得转换网址内的 `&` 符号，如果您要链接到 `http://images.google.com/images?num=30&q=larry+bird`，您必须要把网址转成 `http://images.google.com/images?num=30&amp;q=larry+bird`，才能放到链接标签的 `href` 属性里。
 
 不用说也知道这很容易忘记，这也可能是 HTML 标准检查所检查到的错误中，数量最多的。
 
 :::
 
-Markdown 即允许你直接使用这些符号。也允许你使用转义符号。
+Markdown 即允许您直接使用这些符号。也允许您使用转义符号。
 
-比如你如果要在文件中插入一个著作权的符号，但是你又不想费力地输入这个不常见的特殊符号，你可以直接在 Markdown 中输入 `&copy;`，Markdown 会推测出它是转移符号，并把它输出为 &copy;。
+比如您如果要在文件中插入一个著作权的符号，但是您又不想费力地输入这个不常见的特殊符号，您可以直接在 Markdown 中输入 `&copy;`，Markdown 会推测出它是转移符号，并把它输出为 &copy;。
 
-类似的状况也会发生在 `<` 符号上，因为 Markdown 支持 [行内 HTML](#行内-HTML) ，如果你是使用 `<` 符号作为 HTML 标签使用，那 Markdown 也不会对它做任何转换，但是如果你是写:
+类似的状况也会发生在 `<` 符号上，因为 Markdown 支持 [行内 HTML](#行内-HTML) ，如果您是使用 `<` 符号作为 HTML 标签使用，那 Markdown 也不会对它做任何转换，但是如果您是写:
 
 ```md
 4 < 5
@@ -98,7 +98,7 @@ Markdown 将会把它转换为:
 
 ::: tip
 
-需要注意的是，code 范围内，不论是行内还是块， `<` 和 `&` 两个符号都*一定*会被转换成 HTML 实体，这项特性让你可以很容易地用 Markdown 写 HTML code (和 HTML 相对而言， HTML 语法中，你要把所有的 `<` 和 `&` 都转换为 HTML 实体，才能在 HTML 文件里面写出 HTML code。)
+需要注意的是，code 范围内，不论是行内还是块， `<` 和 `&` 两个符号都*一定*会被转换成 HTML 实体，这项特性让您可以很容易地用 Markdown 写 HTML code (和 HTML 相对而言， HTML 语法中，您要把所有的 `<` 和 `&` 都转换为 HTML 实体，才能在 HTML 文件里面写出 HTML code。)
 
 :::
 
@@ -106,7 +106,7 @@ Markdown 将会把它转换为:
 
 Markdown 就是一个扩展名为 `.md` 的文本文件。
 
-理论上你可以使用任何编辑器 (如 [VS Code](../../../software/vscode/readme.md))编辑 Markdown，也可以使用专门的 Markdown 编辑器 (如 [Typora](https://typora.io)) 进行编写。
+理论上您可以使用任何编辑器 (如 [VS Code](../../../software/vscode/readme.md))编辑 Markdown，也可以使用专门的 Markdown 编辑器 (如 [Typora](https://typora.io)) 进行编写。
 
 [1]: http://docutils.sourceforge.net/mirror/setext.html
 [2]: http://www.aaronsw.com/2002/atx/

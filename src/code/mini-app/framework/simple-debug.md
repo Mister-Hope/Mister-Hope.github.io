@@ -10,9 +10,11 @@ category: 小程序
 
 YAML 是专门用来写配置文件的语言，非常简洁和强大。
 
-### 如何打开或编辑 yaml
+::: tip 如何打开或编辑 yaml
 
-推荐使用 VS Code，具体详见[VS Code 简单介绍](../../../software/vscode/simple.md)。
+推荐使用 VS Code，具体详见 [VS Code 简单介绍](../../../software/vscode/simple.md)。
+
+:::
 
 ### yaml 中的值
 

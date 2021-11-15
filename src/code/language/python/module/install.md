@@ -8,9 +8,9 @@ category: Python
 
 在 Python 中，安装第三方模块，是通过包管理工具 pip 完成的。
 
-如果你正在使用 Mac 或 Linux，安装 pip 本身这个步骤就可以跳过了。
+如果您正在使用 Mac 或 Linux，安装 pip 本身这个步骤就可以跳过了。
 
-如果你正在使用 Windows，请参考 [安装 Python](../intro/install.md) 一节的内容，确保安装时勾选了 `pip` 和 `Add python.exe to Path`。
+如果您正在使用 Windows，请参考 [安装 Python](../intro/install.md) 一节的内容，确保安装时勾选了 `pip` 和 `Add python.exe to Path`。
 
 在命令提示符窗口下尝试运行 pip，如果 Windows 提示未找到命令，可以重新运行安装程序添加 pip。
 
@@ -88,4 +88,4 @@ ImportError: No module named mymodule
 
 这种方法是在运行时修改，运行结束后失效。
 
-第二种方法是设置环境变量 `PYTHONPATH`，该环境变量的内容会被自动添加到模块搜索路径中。设置方式与 [设置 Path 环境变量](../../../windows/add-path.md) 类似。注意只需要添加你自己的搜索路径，Python 自己本身的搜索路径不受影响。
+第二种方法是设置环境变量 `PYTHONPATH`，该环境变量的内容会被自动添加到模块搜索路径中。设置方式与 [设置 Path 环境变量](../../../windows/add-path.md) 类似。注意只需要添加您自己的搜索路径，Python 自己本身的搜索路径不受影响。

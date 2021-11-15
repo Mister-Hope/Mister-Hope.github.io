@@ -12,6 +12,8 @@ module.exports = {
 
     "/physics/": require("./physics"),
 
+    "/note/innenu/": ["", "yaml", "get-started"],
+
     "/note/": require("./note"),
 
     "/linux/": require("./linux"),

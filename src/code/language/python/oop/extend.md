@@ -57,7 +57,7 @@ class Dog(Animal):
         print('Eating meat...')
 ```
 
-继承的第二个好处需要我们对代码做一点改进。你看到了，无论是 Dog 还是 Cat，它们 `run()` 的时候，显示的都是 `Animal is running...`，符合逻辑的做法是分别显示 `Dog is running...` 和 `Cat is running...`，因此，对 Dog 和 Cat 类改进如下:
+继承的第二个好处需要我们对代码做一点改进。您看到了，无论是 Dog 还是 Cat，它们 `run()` 的时候，显示的都是 `Animal is running...`，符合逻辑的做法是分别显示 `Dog is running...` 和 `Cat is running...`，因此，对 Dog 和 Cat 类改进如下:
 
 ```py
 class Dog(Animal):
@@ -170,7 +170,7 @@ Tortoise is running slowly...
 Tortoise is running slowly...
 ```
 
-你会发现，新增一个 Animal 的子类，不必对 `run_twice()` 做任何修改，实际上，任何依赖 Animal 作为参数的函数或者方法都可以不加修改地正常运行，原因就在于多态。
+您会发现，新增一个 Animal 的子类，不必对 `run_twice()` 做任何修改，实际上，任何依赖 Animal 作为参数的函数或者方法都可以不加修改地正常运行，原因就在于多态。
 
 多态的好处就是，当我们需要传入 Dog、Cat、Tortoise……时，我们只需要接收 Animal 类型就可以了，因为 Dog、Cat、Tortoise……都是 Animal 类型，然后，按照 Animal 类型进行操作即可。由于 Animal 类型有 `run()` 方法，因此，传入的任意类型，只要是 Animal 类或者子类，就会自动调用实际类型的 `run()` 方法，这就是多态的意思:
 
@@ -216,7 +216,7 @@ class Timer(object):
 
 这就是动态语言的“鸭子类型”，它并不要求严格的继承体系，一个对象只要“看起来像鸭子，走起路来像鸭子”，那它就可以被看做是鸭子。
 
-Python 的 “file-like object“ 就是一种鸭子类型。对真正的文件对象，它有一个 `read()` 方法，返回其内容。但是，许多对象，只要有 `read()` 方法，都被视为 “file-like object“。许多函数接收的参数就是 “file-like object“，你不一定要传入真正的文件对象，完全可以传入任何实现了 `read()` 方法的对象。
+Python 的 “file-like object“ 就是一种鸭子类型。对真正的文件对象，它有一个 `read()` 方法，返回其内容。但是，许多对象，只要有 `read()` 方法，都被视为 “file-like object“。许多函数接收的参数就是 “file-like object“，您不一定要传入真正的文件对象，完全可以传入任何实现了 `read()` 方法的对象。
 
 ## 多重继承
 
@@ -367,7 +367,7 @@ class Bat(Mammal, Flyable):
 
 在设计类的继承关系时，通常，主线都是单一继承下来的，例如，`Ostrich` 继承自 `Bird`。但是，如果需要“混入”额外的功能，通过多重继承就可以实现，比如，让 `Ostrich` 除了继承自 `Bird` 外，再同时继承 `Runnable`。这种设计通常称之为 MixIn。
 
-为了更好地看出继承关系，我们把 `Runnable` 和 `Flyable` 改为 `RunnableMixIn` 和 `FlyableMixIn`。类似的，你还可以定义出肉食动物`CarnivorousMixIn` 和植食动物 `HerbivoresMixIn`，让某个动物同时拥有好几个 MixIn:
+为了更好地看出继承关系，我们把 `Runnable` 和 `Flyable` 改为 `RunnableMixIn` 和 `FlyableMixIn`。类似的，您还可以定义出肉食动物`CarnivorousMixIn` 和植食动物 `HerbivoresMixIn`，让某个动物同时拥有好几个 MixIn:
 
 ```py
 class Dog(Mammal, RunnableMixIn, CarnivorousMixIn):
@@ -392,7 +392,7 @@ class MyUDPServer(UDPServer, ThreadingMixIn):
     pass
 ```
 
-如果你打算搞一个更先进的协程模型，可以编写一个 CoroutineMixIn:
+如果您打算搞一个更先进的协程模型，可以编写一个 CoroutineMixIn:
 
 ```py
 class MyTCPServer(TCPServer, CoroutineMixIn):

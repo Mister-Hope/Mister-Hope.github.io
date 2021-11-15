@@ -8,21 +8,20 @@ category: 小程序
 
 ## 总体结构
 
-| 参数      | 必填 |       值类型        | 内容               | 备注                                               |
-| --------- | :--: | :-----------------: | ------------------ | -------------------------------------------------- | ----------------------------------------------------------------- |
-| title     |  是  |      `string`       | 导航栏标题         | 一般不超过八个字，六字及以下为佳                   |
-| desc      |  否  |      `string`       | 页面描述           | 会显示在页脚                                       |
-| author    |  否  |      `string`       | 页面的作者         | 会显示在页脚                                       |
-| time      |  否  |      `string`       | 页面更新时间       | 会显示在页脚                                       |
-| grey      |  否  |      `boolean`      | 使用灰色背景       | 默认为白色背景                                     |
-| action    |  否  |       `string       | false`             | 左上角按钮函数名                                   | 填入按钮触发的函数名称，不填时执行返回，设置为 `false` 会隐藏按钮 |
-| content   |  否  | `ComponentConfig[]` | 页面的内容         | 数组的每个对象会最终渲染为一个组件                 |
-| footer    |  否  |      `boolean`      | 是否显示页脚       | 默认为 `true`                                      |
-| hidden    |  否  |      `boolean`      | 隐藏导航栏         | 默认显示导航栏                                     |
-| from      |  否  |      `string`       | 左上角返回按钮文字 | 设置左上角文字，默认为上一级页面标题，一般不用填写 |
-| shareable |  否  |      `boolean`      | 是否可被分享       | 是否可以使用小程序的界面分享，默认为 `false`       |
-| contact   |  否  |      `boolean`      | “联系开发者”按钮   | 是否在分享弹出菜单中显示，默认为 `true`            |
-| feedback  |  否  |      `boolean`      | “意见反馈”按钮     | 是否在分享弹出菜单中显示，默认为 `true`            |
+| 参数      | 必填 |       值类型        | 内容               | 备注                                                  |
+| --------- | :--: | :-----------------: | ------------------ | ----------------------------------------------------- | ----------------------------------------------------------------- |
+| title     |  是  |      `string`       | 导航栏标题         | 一般不超过八个字，六字及以下为佳                      |
+| desc      |  否  |      `string`       | 页面描述           | 会显示在页脚                                          |
+| author    |  否  |      `string`       | 页面的作者         | 会显示在页脚                                          |
+| time      |  否  |      `string`       | 页面更新时间       | 会显示在页脚                                          |
+| grey      |  否  |      `boolean`      | 使用灰色背景       | 默认为白色背景                                        |
+| action    |  否  |       `string       | false`             | 左上角按钮函数名                                      | 填入按钮触发的函数名称，不填时执行返回，设置为 `false` 会隐藏按钮 |
+| content   |  否  | `ComponentConfig[]` | 页面的内容         | 数组的每个对象会最终渲染为一个组件                    |
+| footer    |  否  |      `boolean`      | 是否显示页脚       | 默认为 `true`                                         |
+| hidden    |  否  |      `boolean`      | 隐藏导航栏         | 默认显示导航栏                                        |
+| from      |  否  |      `string`       | 左上角返回按钮文字 | 设置左上角文字，默认为上一级页面标题，一般不用填写    |
+| shareable |  否  |      `boolean`      | 是否可被分享       | 是否可以使用小程序的界面分享，默认为 `false`          |
+| contact   |  否  |      `boolean`      | “联系开发者”按钮   | 是否在分享弹出菜单中显示联系开发者按钮，默认为 `true` |
 
 ## content 格式
 
@@ -43,6 +42,7 @@ content 的每个元素都为一个 Object，该 Object 有一个固定的键 `t
 - [card](#card-参数): 卡片跳转组件(卡片形式，可跳转到指定页面、打开公众号图文或复制链接)
 - [copy](#copy-参数): 复制组件(快速复制指定文字)
 - [account](#account-参数): 账号组件(用于组织或个人的 logo 与描述展示)
+- [location](#location-参数): 账号组件(用于组织或个人的 logo 与描述展示)
 - [functional-list](#functional-list-参数): 功能列表(可包含按钮、选择器、开关和滑块)
 
 ## title 参数
@@ -123,13 +123,13 @@ content 的每个元素都为一个 Object，该 Object 有一个固定的键 `t
 | desc   |  否  | `string`  | 列表内容的描述               |
 | hidden |  否  | `boolean` | 设置为 `true` 时隐藏该列表项 |
 
-- 指向动态页面
+- 指向配置文件页面
 
-  | 参数 | 必填 |  值类型  | 内容                                                  |
-  | ---- | :--: | :------: | ----------------------------------------------------- |
-  | path |  否  | `string` | 对应界面的路径(不带后缀名)，以 `/` 结尾默认为 `index` |
+  | 参数 | 必填 |  值类型  | 内容                                                                |
+  | ---- | :--: | :------: | ------------------------------------------------------------------- |
+  | path |  否  | `string` | 对应配置文件的相对或绝对路径(不带后缀名)，以 `/` 结尾默认为 `index` |
 
-- 指向自定义页面页面
+- 指向程序内页面
 
   | 参数 | 必填 |  值类型  | 内容                                 |
   | ---- | :--: | :------: | ------------------------------------ |
@@ -153,42 +153,40 @@ _Tips:_ 图片懒加载是指只有图片滚动到页面显示区域才开始加
 
 文档组件。
 
-| 参数         | 必填 |  值类型   | 内容                                    | 备注          |
-| ------------ | :--: | :-------: | --------------------------------------- | ------------- |
-| name         |  是  | `string`  | 文档名称，需要使用 `文件名.后缀` 的格式 |               |
-| url          |  是  | `string`  | 文档在线路径                            |               |
-| header       |  否  | `string`  | 组件标题                                |               |
-| downloadable |  否  | `boolean` | 该文档是否可下载                        | 默认为 `true` |
+| 参数         | 必填 |  值类型   | 内容             | 备注          |
+| ------------ | :--: | :-------: | ---------------- | ------------- |
+| name         |  是  | `string`  | 文档名称         |               |
+| url          |  是  | `string`  | 文档在线路径     |               |
+| header       |  否  | `string`  | 组件标题         |               |
+| downloadable |  否  | `boolean` | 该文档是否可下载 | 默认为 `true` |
 
 > 文档类别仅支持 doc、docx、ppt、pptx、xls、xlsx、pdf、jpg、jpeg、png、gif。
->
-> 文档名称务必加入文件后缀名
 
 ## phone 参数
 
 电话组件。
 
-| 参数     | 必填 |  值类型  | 内容                             |
-| -------- | :--: | :------: | -------------------------------- |
-| num      |  是  | `string` | 联系人电话号码                   |
-| header   |  否  | `string` | 组件标题                         |
-| fName    |  是  | `string` | 联系人的名                       |
-| lName    |  否  | `string` | 填入联系人的姓                   |
-| org      |  否  | `string` | 联系人所在公司                   |
-| remark   |  否  | `string` | 联系人的备注                     |
-| workNum  |  否  | `string` | 联系人的工作电话                 |
-| nickName |  否  | `string` | 联系人的昵称                     |
-| head     |  否  | `string` | 联系人头像图片路径(仅限本地路径) |
-| wechat   |  否  | `string` | 联系人的微信号                   |
-| province |  否  | `string` | 联系人的地址省份                 |
-| city     |  否  | `string` | 联系人的地址城市                 |
-| street   |  否  | `string` | 联系人的地址街道                 |
-| postCode |  否  | `string` | 联系人的地址邮政编码             |
-| title    |  否  | `string` | 联系人的职位                     |
-| hostNum  |  否  | `string` | 联系人的公司电话                 |
-| website  |  否  | `string` | 联系人的网站                     |
-| email    |  否  | `string` | 联系人的电子邮件                 |
-| homeNum  |  否  | `string` | 联系人的住宅电话                 |
+| 参数     | 必填 |       值类型       | 内容                             |
+| -------- | :--: | :----------------: | -------------------------------- |
+| num      |  是  | `string \| number` | 联系人电话号码                   |
+| header   |  否  |      `string`      | 组件标题                         |
+| fName    |  是  |      `string`      | 联系人的名                       |
+| lName    |  否  |      `string`      | 联系人的姓                       |
+| org      |  否  |      `string`      | 联系人所在公司                   |
+| remark   |  否  |      `string`      | 联系人的备注                     |
+| workNum  |  否  | `string \| number` | 联系人的工作电话                 |
+| nickName |  否  |      `string`      | 联系人的昵称                     |
+| wechat   |  否  |      `string`      | 联系人的微信号                   |
+| province |  否  |      `string`      | 联系人的地址省份                 |
+| city     |  否  |      `string`      | 联系人的地址城市                 |
+| street   |  否  |      `string`      | 联系人的地址街道                 |
+| postCode |  否  | `string \| number` | 联系人的地址邮政编码             |
+| title    |  否  |      `string`      | 联系人的职位                     |
+| hostNum  |  否  | `string \| number` | 联系人的公司电话                 |
+| site     |  否  |      `string`      | 联系人的网站                     |
+| email    |  否  |      `string`      | 联系人的电子邮件                 |
+| homeNum  |  否  | `string \| number` | 联系人的住宅电话                 |
+| avatar   |  否  |      `string`      | 联系人头像图片路径(仅限本地路径) |
 
 ## grid 参数
 
@@ -218,8 +216,8 @@ _Tips:_ 图片懒加载是指只有图片滚动到页面显示区域才开始加
 | 参数          | 必填 |   值类型   | 内容                                    | 备注                                                 |
 | ------------- | :--: | :--------: | --------------------------------------- | ---------------------------------------------------- |
 | url           |  是  | `string[]` | carousel 展示的图片的在线网址或本地路径 | 将所有图片按顺序填入该 array 的每个 element          |
-| fill          |  否  | `boolean`  | 是否填充整个屏幕宽度                    | 默认为 `false`                                       |
-| Class         |  否  |  `string`  | carousel 项目的类名                     | 默认为 `width:100%;height:400rpx;`                   |
+| fill          |  否  | `boolean`  | 轮播图是否填满屏幕宽度                  | 默认为 `false`                                       |
+| class         |  否  |  `string`  | carousel 项目的类名                     | 默认为 `width:100%;height:400rpx;`                   |
 | style         |  否  |  `string`  | carousel 项目的样式                     | 填入 css 样式                                        |
 | indicatorDots |  否  | `boolean`  | 面板指示点                              | 默认显示，设置 `false` 取消                          |
 | dotColor      |  否  |  `string`  | 指示点颜色                              | 默认为#ffffff88                                      |
@@ -233,7 +231,7 @@ _Tips:_ 图片懒加载是指只有图片滚动到页面显示区域才开始加
 | change        |  否  |  `string`  | carousel 改变时触发的函数名称           | 默认不触发函数                                       |
 | animation     |  否  |  `string`  | carousel 动画结束时触发的函数名称       | 默认不触发函数                                       |
 | imgClass      |  否  |  `string`  | carousel 中图片的类名                   | 默认为 `width:100%!important;height:100%!important;` |
-| imgMode       |  否  |  `string`  | carousel 中图片的显示模式               | 默认为 `aspectFill`                                  |
+| imgmode       |  否  |  `string`  | carousel 中图片的显示模式               | 默认为 `aspectFill`                                  |
 
 ::: info
 
@@ -296,18 +294,47 @@ carousel 组件默认高度为 400rpx，可以通过 style 属性调节
 
 介绍组件，用于对个人、组织、机构的简单介绍。
 
-| 参数     | 必填 |  值类型  | 内容                   |
-| -------- | :--: | :------: | ---------------------- |
-| name     |  是  | `string` | 主体名称               |
-| logo     |  是  | `string` | 头像图标在线地址       |
-| detail   |  否  | `string` | 主体的全程             |
-| desc     |  否  | `string` | 主体描述               |
-| wx       |  否  | `string` | 主体的微信公众号 ID    |
-| qq       |  否  | `number` | 主体的 QQ 号           |
-| wxQRCode |  否  | `string` | 主体的微信二维码地址   |
-| qqQRCode |  否  | `string` | 主体的 QQ 二维码地址   |
-| openid   |  否  | `string` | 主体的 QQ OPENID       |
-| path     |  否  | `string` | 主体的微信图文页面地址 |
+| 参数     | 必填 |   值类型   | 内容                          |
+| -------- | :--: | :--------: | ----------------------------- |
+| name     |  是  |  `string`  | 主体名称                      |
+| logo     |  是  |  `string`  | 头像图标在线地址              |
+| detail   |  否  |  `string`  | 主体的全程                    |
+| desc     |  否  |  `string`  | 主体描述                      |
+| qq       |  否  |  `number`  | 主体的 QQ 号                  |
+| qqid     |  否  |  `string`  | 主体的 QQ OPENID              |
+| qqcode   |  否  |  `string`  | 主体的 QQ 二维码地址          |
+| wxid     |  否  |  `string`  | 主体的微信公众号 ID           |
+| wxcode   |  否  |  `string`  | 主体的微信二维码地址          |
+| account  |  否  |  `string`  | 主体的微信图文账号配置文件 ID |
+| location |  否  | `Location` | 主体的地址                    |
+| site     |  否  |  `string`  | 主体的网站地址                |
+
+### Location 参数
+
+| 参数       | 必填 |  值类型  | 内容 |
+| ---------- | :--: | :------: | ---- |
+| longtidude |  是  | `number` | 经度 |
+| latitude   |  是  | `number` | 维度 |
+
+## location 参数
+
+位置组件，用于在地图上显示位置并允许详情与导航。
+
+| 参数     | 必填 |  值类型   | 内容           | 备注                     |
+| -------- | :--: | :-------: | -------------- | ------------------------ |
+| title    |  是  | `string`  | 位置展示的内容 |                          |
+| points   |  是  | `Point[]` | 主体的全程     |                          |
+| navigate |  否  |  `false`  | 是否允许导航   | 导航仅在微信小程序上可用 |
+
+### Point 参数
+
+| 参数       | 必填 |  值类型  | 内容             | 备注           |
+| ---------- | :--: | :------: | ---------------- | -------------- |
+| longtidude |  是  | `number` | 经度             |                |
+| latitude   |  是  | `number` | 维度             |                |
+| name       |  否  | `string` | 点位名称         | 默认同 `title` |
+| detail     |  否  | `string` | 点位名称         | 默认为 `详情`  |
+| path       |  否  | `string` | 地图模块中的路径 |                |
 
 ## functional-list 参数
 
@@ -402,7 +429,7 @@ carousel 组件默认高度为 400rpx，可以通过 style 属性调节
 
 ## 其他参数
 
-### imgMode 参数
+### imgmode 参数
 
 - widthFix: 宽度不变，高度自动变化，保持原图宽高比不变;
 - scaleToFill: 保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素；

@@ -1,0 +1,113 @@
+---
+title: in东师小程序贡献指南
+icon: info
+category: 小程序
+---
+
+## 简介
+
+in 东师小程序的大部分页面页面都是由一个 YAML 文件生成来的。开发者只需要使用编辑器生成或编辑 YAML，即可修改或增加小程序页面。
+
+::: info YAML
+
+YAML 是专门用来写配置文件的语言，非常简洁和强大。
+
+YAML 语言(发音 /ˈjæməl/ )的设计目标，就是方便人类读写。
+
+:::
+
+## 快速上手
+
+1. 为了编写小程序页面配置文件，您需要先学习 [YAML 的规则](./yaml.md)，同时简单浏览一下一款编辑器 [VSCode 的介绍](../../software/vscode/simple.md)
+1. 掌握上述两个内容之后，您就可以尝试对照 [小程序参数表](../../code/mini-app/framework/tag-list.md) 通过 VSCode 编写页面 YAML 文件了，如果您觉得太难，您可以参阅 [快速上手](./get-started.md) 来体验一个示例。
+
+::: tip 更多参考
+
+所有的小程序页面都在 <https://github.com/Hope-Studio/innenu-res/blob/main/res/> 下，你可以尽情的进行参考。
+
+:::
+
+## 开发注意事项
+
+下面是开发中需要注意的一些问题。
+
+### 文件命名
+
+由于小程序的访问是通过网址进行的，需要避免中文。页面 YAML 和媒体文件的文件名，请遵守以下命名规则：
+
+1. 文件名只包含英文与数字和 `-`，不要包含特殊符号、空格或者中文字符。由多个单词组成的文件名建议使用 `-` 链接。如 `厚普公益学校` 可以表示为 `hope-good-school`。
+1. 尽可能使用简短的单词，必要时可缩写，比如使用 `intro` `desc` `guide` 而不是 `introduction` `description`，`handbook`。
+1. 表达相同或相近内容的多个媒体文件用 "短词组+编号" 的形式即可，不要试图用很长的文字命名。
+
+### 文本排版
+
+1. 中文和英文之间最好使用空格隔开
+1. 尽量使用英文的括号。
+
+### 注意高亮
+
+如果您在使用 VSCode 进行编辑，您可能会注意到，数字和布尔值、字符串、对象的键名使用三种不同的颜色进行高亮。
+
+如果您编写的文件出现“红色波浪线”，或您编写的内容的高亮颜色，和其类型不符，那么说明您编写的格式出现了错误。
+
+### 图片压缩
+
+图片在拍摄需使用 [Squoosh](https://squoosh.app/) 进行压缩。
+
+- 含有透明区域的图片需要压缩至 Brower PNG 格式
+- Gif 无需压缩
+- 其他图片压缩到 MozJpeg
+
+不含有文字、不需要细节的图片保持 2xxx × 1xxx 左右分辨率即可，如果图片使用后置摄像机拍摄，即 12 万或 20 万像素，压缩时可酌情考虑 50%缩放。
+
+### 文件转码
+
+由于 QQ 小程序对 2003 版本 Office 格式支持极差，即 `.doc` `.xls` `.ppt`。如遇到此类文件，请尝试用 Office 打开，并转换为最新版格式 (`docx`、`xlsx`、`pptx`)。具体方式为 “文件” - “信息” - “转换”。
+
+### 媒体文件存放
+
+由于 YAML 是纯文本文件，所有的图片、文件等需单独列出，并在对应的配置项处填入对应的网址。
+
+如:
+
+- **img** 组件的 `src`
+- **doc** 组件的 `url`
+
+in 东师服务器有默认的文档结构，其中:
+
+- 文件存放在 `https://mp.innenu.com/file/` 下
+- 图片存放在 `https://mp.innenu.com/img/` 下
+- 页面 YAML 存放在 `https://mp.innenu.com/res/` 下
+- 图标存放在 `https://mp.innenu.com/res/icon/` 下
+
+::: info
+
+关于完整的结构，请访问 <https://github.com/Hope-Studio/innenu-res>
+
+:::
+
+比如您正在制作本部的快递站页面，您可以将配置文件命名为，您可以将拍摄的图片命名为:
+
+- `outlook.jpg`: 菜鸟驿站外景
+- `scanner.jpg`: 菜鸟驿站扫描器
+- `shelf.jpg`: 菜鸟驿站货架
+
+同时，您需要在对应的配置项填入:
+
+- `https://mp.innenu.com/img/express/benbu-cainiao/outlook.jpg`: 菜鸟驿站外景
+- `https://mp.innenu.com/img/express/benbu-cainiao/scanner.jpg`: 菜鸟驿站扫描器
+- `https://mp.innenu.com/img/express/benbu-cainiao/shelf.jpg`: 菜鸟驿站货架
+
+提交时，即可直接提交下列压缩包结构
+
+```
+├─ img
+|  └─ express
+|      └─ benbu-cainiao
+|         ├─ outlook.jpg
+|         ├─ scanner.jpg
+|         └─ shelf.jpg
+└─ res
+   └─ express
+       └─ cainiao.yml
+```
