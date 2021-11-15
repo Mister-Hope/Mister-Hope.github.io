@@ -21,7 +21,7 @@ module.exports = sidebarConfig([
     icon: "frame",
     collapsable: false,
     prefix: "framework/",
-    children: ["", "simple-debug", "tag-list", "corporation", "page", "demo"],
+    children: ["", "simple-debug", "tag-list", "page", "demo"],
   },
   "qr-code",
 ]);

@@ -6,7 +6,7 @@ category: 小程序
 
 ::: tip
 
-`page.ts` 是 Mr.Hope 本人自己编写的库，目前仅做个人使用。
+`page.ts` 用于小程序页面渲染。
 
 :::
 
@@ -14,18 +14,18 @@ category: 小程序
 
 ## 插件的引入
 
-首先在 `ts` 文件头部引入 `page` 与 `wxpage`。
+首先在 `ts` 文件头部引入 `page` 与 `@mptool/enhance`。
 
 ```ts
-import $register from "wxpage";
-import $page from "path/to/page";
+import { $Page } from "`@mptool/enhance";
+import { xxx } from "path/to/page/ts";
 ```
 
 ## 函数
 
 ### resolvePage()
 
-`(option: MPPage.PageLifeTimeOptions, page?: ComponentData[] | undefined, setGlobal?: boolean) => ComponentData[] | undefined`
+`(option: PageQuery, page?: PageData, setGlobal = true) => PageData | null`
 
 **简介:**
 
@@ -89,7 +89,7 @@ import $page from "path/to/page";
 
 ### setOnlinePage()
 
-`(option: PageArg, ctx: any, preload?: boolean) => void`
+`(option: PageOption, ctx: PageInstanceWithPage, preload = true) => void`
 
 **简介:**
 
@@ -115,7 +115,7 @@ import $page from "path/to/page";
 
 ### popNotice()
 
-`(aim: string) => void`
+`(id: string) => void`
 
 **简介:**
 
@@ -125,25 +125,25 @@ import $page from "path/to/page";
 
 - 性质: 同步函数
 
-  | 参数 | 描述              |
-  | ---- | ----------------- |
-  | aim  | 当前界面的 aim 值 |
+  | 参数 | 描述             |
+  | ---- | ---------------- |
+  | id   | 当前界面的标识符 |
 
 **案例:**
 
 ```ts
-  onLoad(res: any) {
-    popNotice('main');
+  onLoad({ id }) {
+    popNotice(id);
   }
 ```
 
-### setColor()
+### getColor()
 
-`(grey?: boolean) => { NavigationBarColor, BackGroundColor}`
+`(grey?: boolean) => Colors`
 
 **简介:**
 
-- 描述: 设置胶囊与背景颜色
+- 描述: 获得页面背景相关颜色
 
 - 用法: 在页面 `onShow` 时调用
 
@@ -157,38 +157,8 @@ import $page from "path/to/page";
 
 ```ts
   onShow() {
-    if (this.data.page) {
-      // 设置胶囊和背景颜色
-      const { nc, bc } = setColor(this.data.page[0].grey);
-
-      wx.setNavigationBarColor(nc);
-      wx.setBackgroundColor(bc);
-    }
+    this.setData({
+      color: getColor(this.data.page[0].grey)
+    });
   }
-```
-
-### changeNav()
-
-`(option: WechatMiniprogram.Page.IPageScrollOption, ctx: any, headName?: string | undefined) => void`
-
-**简介:**
-
-- 描述: 导航栏动态改变
-
-- 用法: 在页面 `onPageScroll` 时调用
-
-- 性质: 同步函数
-
-  | 参数     | 描述                             |
-  | -------- | -------------------------------- |
-  | option   | 组件参数                         |
-  | ctx      | 页面指针                         |
-  | headName | 导航栏配置对象在 `data` 中的名称 |
-
-**案例:**
-
-```ts
-  onPageScroll(event) {
-    changeNav(event, this);
-  },
 ```
