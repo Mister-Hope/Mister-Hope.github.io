@@ -108,6 +108,7 @@ module.exports = config({
       favicon: "/favicon.ico",
       themeColor: "#5c92d1",
       cacheHTML: false,
+      maxSize: 3072,
       apple: {
         icon: "/assets/icon/apple-icon-152.png",
         statusBarColor: "black",
