@@ -635,3 +635,4 @@ Type a character > a
 ## 参考链接
 
 - [The Linux command-line](http://linuxcommand.org/tlcl.php), William Shotts
+- [Linux Commands Cheat Sheet](https://www.pcwdld.com/linux-commands-cheat-sheet) (一个很简短的 CheatSheet)
