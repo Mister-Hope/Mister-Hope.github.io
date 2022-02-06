@@ -2,7 +2,7 @@
 title: VS Code 指南
 icon: guide
 category: VS Code
-tags:
+tag:
   - VS Code
   - 软件
 ---

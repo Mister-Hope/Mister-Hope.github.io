@@ -1,7 +1,7 @@
 ---
 title: 应用资源概览
 icon: tree
-time: 2020-04-09
+date: 2020-04-09
 category: Android
 ---
 

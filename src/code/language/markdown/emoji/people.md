@@ -2,7 +2,7 @@
 title: 人物
 icon: emoji
 category: Markdown
-tags:
+tag:
   - Markdown
   - Emoji
 ---

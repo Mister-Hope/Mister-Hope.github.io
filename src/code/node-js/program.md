@@ -2,7 +2,7 @@
 title: 第一个 Node 程序
 icon: shell
 category: Node.js
-tags:
+tag:
   - Node.js
   - 软件
 ---

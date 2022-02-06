@@ -1,6 +1,6 @@
 ---
 category: 随笔
-tags:
+tag:
   - 笑谈人生
 ---
 

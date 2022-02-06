@@ -1,7 +1,7 @@
 ---
 title: 基础介绍
 icon: module
-time: 2019-12-26
+date: 2019-12-26
 category: 基础
 timeline: false
 star: true

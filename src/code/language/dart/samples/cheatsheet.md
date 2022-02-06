@@ -1,7 +1,7 @@
 ---
 title: dart 概要
 icon: form
-time: 2020-05-30
+date: 2020-05-30
 category: dart
 ---
 

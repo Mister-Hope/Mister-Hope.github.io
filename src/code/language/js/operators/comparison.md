@@ -1,7 +1,7 @@
 ---
 title: 比较运算符
 icon: compare
-time: 2019-09-26
+date: 2019-09-26
 category: JavaScript
 ---
 

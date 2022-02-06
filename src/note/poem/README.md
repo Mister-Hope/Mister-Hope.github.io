@@ -1,7 +1,7 @@
 ---
 title: 轻言细语
 category: 随笔
-tags:
+tag:
   - 轻言细语
 ---
 

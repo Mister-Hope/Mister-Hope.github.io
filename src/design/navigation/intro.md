@@ -1,9 +1,9 @@
 ---
 title: 导航设计介绍
 icon: info
-time: 2020-09-15
+date: 2020-09-15
 category: 设计
-tags:
+tag:
   - 导航
 ---
 

@@ -1,7 +1,7 @@
 ---
 icon: ask
 category: 教程
-tags:
+tag:
   - 快速上手
 ---
 

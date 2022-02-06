@@ -1,7 +1,7 @@
 ---
 title: 命令补全
 icon: square-check
-time: 2019-11-20
+date: 2019-11-20
 category: Linux
 ---
 

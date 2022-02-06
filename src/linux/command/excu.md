@@ -1,7 +1,7 @@
 ---
 title: 命令执行
 icon: play
-time: 2019-11-20
+date: 2019-11-20
 category: Linux
 ---
 

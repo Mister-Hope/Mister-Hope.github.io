@@ -1,7 +1,7 @@
 ---
 title: 箭头函数
 icon: arrow
-time: 2019-10-03
+date: 2019-10-03
 category: JavaScript
 ---
 

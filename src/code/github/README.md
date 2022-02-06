@@ -1,7 +1,7 @@
 ---
 title: GitHub
 icon: github
-time: 2019-11-20
+date: 2019-11-20
 category: GitHub
 ---
 

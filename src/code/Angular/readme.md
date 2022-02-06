@@ -1,9 +1,9 @@
 ---
 title: Angular
 icon: angular
-time: 2020-05-06
+date: 2020-05-06
 category: 前端
-tags:
+tag:
   - Angular
 ---
 

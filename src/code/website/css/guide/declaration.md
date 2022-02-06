@@ -1,9 +1,9 @@
 ---
 title: CSS 声明
 icon: object
-time: 2019-09-05
+date: 2019-09-05
 category: CSS
-tags:
+tag:
   - 快速上手
 ---
 

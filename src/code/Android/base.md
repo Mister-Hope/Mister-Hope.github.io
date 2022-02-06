@@ -1,9 +1,9 @@
 ---
 title: 应用基础知识
 icon: creative
-time: 2020-04-08
+date: 2020-04-08
 category: Android
-tags:
+tag:
   - 快速上手
 ---
 

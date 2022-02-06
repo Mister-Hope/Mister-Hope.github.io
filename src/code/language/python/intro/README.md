@@ -2,7 +2,7 @@
 title: 介绍
 icon: info
 author: 廖雪峰
-time: 2020-05-25
+date: 2020-05-25
 category: Python
 timeline: false
 ---

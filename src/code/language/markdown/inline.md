@@ -2,7 +2,7 @@
 title: Markdown 行内元素
 icon: markdown
 category: Markdown
-tags:
+tag:
   - Markdown
 ---
 

@@ -2,7 +2,7 @@
 title: Git 集成
 icon: git
 category: VS Code
-tags:
+tag:
   - VS Code
   - 软件
 ---

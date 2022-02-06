@@ -2,7 +2,7 @@
 title: 网格布局
 author: 阮一峰
 icon: grid
-time: 2020-10-20
+date: 2020-10-20
 category: CSS
 copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可证)
 ---

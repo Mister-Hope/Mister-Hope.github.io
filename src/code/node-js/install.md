@@ -2,7 +2,7 @@
 title: 安装 Node.js
 icon: install
 category: Node.js
-tags:
+tag:
   - Node.js
   - 软件
   - 安装

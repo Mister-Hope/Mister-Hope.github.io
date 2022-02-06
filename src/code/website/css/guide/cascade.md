@@ -1,9 +1,9 @@
 ---
 title: 优先级和继承
 icon: sort
-time: 2019-09-06
+date: 2019-09-06
 category: CSS
-tags:
+tag:
   - 快速上手
 ---
 

@@ -2,7 +2,7 @@
 title: 组件使用说明
 icon: plugin
 category: Vue
-tags:
+tag:
   - 文档
 ---
 

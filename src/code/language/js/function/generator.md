@@ -1,7 +1,7 @@
 ---
 title: generator
 icon: cycle
-time: 2019-10-07
+date: 2019-10-07
 category: JavaScript
 ---
 

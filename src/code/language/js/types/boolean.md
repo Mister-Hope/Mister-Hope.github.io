@@ -1,7 +1,7 @@
 ---
 title: 布尔值
 icon: boolean
-time: 2019-09-21
+date: 2019-09-21
 category: JavaScript
 ---
 

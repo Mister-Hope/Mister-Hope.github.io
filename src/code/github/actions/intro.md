@@ -1,9 +1,9 @@
 ---
 title: Actions 介绍
 icon: info
-time: 2021-02-18
+date: 2021-02-18
 category: GitHub
-tags:
+tag:
   - action
   - 介绍
 ---

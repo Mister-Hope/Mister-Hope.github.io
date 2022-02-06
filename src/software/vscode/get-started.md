@@ -2,7 +2,7 @@
 title: 快速上手
 icon: creative
 category: VS Code
-tags:
+tag:
   - VS Code
   - 软件
 ---

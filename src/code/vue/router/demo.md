@@ -2,7 +2,7 @@
 title: 案例
 icon: discover
 category: Vue
-tags:
+tag:
   - Vue Router
   - Demo
 ---

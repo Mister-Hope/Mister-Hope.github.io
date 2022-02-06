@@ -1,9 +1,9 @@
 ---
 title: 条件判断
 icon: condition
-time: 2019-09-16
+date: 2019-09-16
 category: JavaScript
-tags:
+tag:
   - 快速上手
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: 模型树
 icon: tree
-time: 2020-06-01
+date: 2020-06-01
 category: 软件
-tags:
+tag:
   - 仿真
   - COMSOL
 ---

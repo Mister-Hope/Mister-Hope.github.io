@@ -1,9 +1,9 @@
 ---
 title: 实战
 icon: exercise
-time: 2019-09-18
+date: 2019-09-18
 category: JavaScript
-tags:
+tag:
   - 快速上手
 ---
 

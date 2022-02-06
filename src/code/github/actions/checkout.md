@@ -1,8 +1,8 @@
 ---
 title: checkout
-time: 2021-02-18
+date: 2021-02-18
 category: GitHub
-tags:
+tag:
   - action
   - workflow
 ---

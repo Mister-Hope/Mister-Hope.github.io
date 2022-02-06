@@ -2,7 +2,7 @@
 title: 文件
 icon: folder
 category: VS Code
-tags:
+tag:
   - VS Code
   - 软件
 ---

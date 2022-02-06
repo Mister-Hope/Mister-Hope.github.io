@@ -1,7 +1,7 @@
 ---
 title: 动画
 icon: animation
-time: 2019-11-04
+date: 2019-11-04
 category: jQuery
 ---
 

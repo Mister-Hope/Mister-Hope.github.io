@@ -2,7 +2,7 @@
 title: Emoji 列表
 icon: emoji
 category: Markdown
-tags:
+tag:
   - Markdown
   - Emoji
 ---

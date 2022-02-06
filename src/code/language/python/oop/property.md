@@ -2,7 +2,7 @@
 title: 属性
 author: 廖雪峰
 icon: state
-time: 2021-03-28
+date: 2021-03-28
 category: Python
 ---
 

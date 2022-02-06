@@ -1,7 +1,7 @@
 ---
 title: JavaScript 简介
 icon: info
-time: 2019-09-13
+date: 2019-09-13
 category: JavaScript
 ---
 

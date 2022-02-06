@@ -1,9 +1,9 @@
 ---
 title: 媒体查询
 icon: search
-time: 2019-09-05
+date: 2019-09-05
 category: CSS
-tags:
+tag:
   - CSS
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 对象
 icon: object
-time: 2019-09-23
+date: 2019-09-23
 category: JavaScript
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: 循环
 icon: loop
-time: 2019-09-16
+date: 2019-09-16
 category: JavaScript
-tags:
+tag:
   - 快速上手
 ---
 

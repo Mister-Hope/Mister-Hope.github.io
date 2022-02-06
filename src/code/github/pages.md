@@ -1,7 +1,7 @@
 ---
 title: GitHub Pages
 icon: page
-time: 2021-02-20
+date: 2021-02-20
 category: GitHub
 ---
 

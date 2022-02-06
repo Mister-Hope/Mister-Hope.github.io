@@ -1,7 +1,7 @@
 ---
 icon: list
 title: 选择器
-time: 2019-11-03
+date: 2019-11-03
 category: jQuery
 ---
 

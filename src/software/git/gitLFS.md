@@ -1,7 +1,7 @@
 ---
 icon: Github
 category: Git
-tags:
+tag:
   - Git
   - 软件
 ---

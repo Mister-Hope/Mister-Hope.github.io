@@ -1,9 +1,9 @@
 ---
 title: 打开命令行
 icon: shell
-time: 2019-09-08
+date: 2019-09-08
 category: 基础
-tags:
+tag:
   - Win10
 ---
 

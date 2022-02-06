@@ -1,7 +1,7 @@
 ---
 title: 秋之思
 category: 随笔
-tags:
+tag:
   - 秋之思
 ---
 

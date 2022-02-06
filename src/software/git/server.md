@@ -2,7 +2,7 @@
 title: 服务器搭建
 icon: network
 category: Git
-tags:
+tag:
   - Git
   - 软件
 ---

@@ -1,7 +1,7 @@
 ---
 title: Nginx
 icon: nginx
-time: 2019-12-13
+date: 2019-12-13
 category: 服务器
 ---
 

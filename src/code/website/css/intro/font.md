@@ -1,7 +1,7 @@
 ---
 title: 文字样式
 icon: format
-time: 2019-09-05
+date: 2019-09-05
 category: CSS
 ---
 

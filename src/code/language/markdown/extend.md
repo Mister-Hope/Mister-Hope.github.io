@@ -2,7 +2,7 @@
 title: Markdown 扩展
 icon: plugin
 category: Markdown
-tags:
+tag:
   - Markdown
 ---
 

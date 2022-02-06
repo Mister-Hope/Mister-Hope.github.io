@@ -1,6 +1,6 @@
 ---
 title: CPU 的架构
-time: 2020-06-05
+date: 2020-06-05
 category: 硬件
 ---
 

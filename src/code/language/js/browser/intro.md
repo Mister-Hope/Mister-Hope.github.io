@@ -1,7 +1,7 @@
 ---
 title: 浏览器介绍
 icon: info
-time: 2019-10-15
+date: 2019-10-15
 category: JavaScript
 ---
 

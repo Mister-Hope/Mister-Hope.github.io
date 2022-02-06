@@ -1,7 +1,7 @@
 ---
 title: 算术运算符
 icon: calculate
-time: 2019-09-26
+date: 2019-09-26
 category: JavaScript
 ---
 

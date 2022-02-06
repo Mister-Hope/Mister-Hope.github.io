@@ -2,8 +2,8 @@
 title: jQuery 介绍
 icon: creative
 category: jQuery
-time: 2019-11-02
-tags:
+date: 2019-11-02
+tag:
   - 介绍
 ---
 

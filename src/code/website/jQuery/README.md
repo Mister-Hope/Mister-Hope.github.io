@@ -1,7 +1,7 @@
 ---
 title: jQuery
 icon: jQuery
-time: 2019-11-02
+date: 2019-11-02
 category: jQuery
 ---
 

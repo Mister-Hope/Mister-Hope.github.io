@@ -2,7 +2,7 @@
 title: 自然
 icon: emoji
 category: Markdown
-tags:
+tag:
   - Markdown
   - Emoji
 ---

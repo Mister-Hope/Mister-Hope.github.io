@@ -1,9 +1,9 @@
 ---
 title: 学习图标所需的软件
 icon: software
-time: 2020-09-13
+date: 2020-09-13
 category: 设计
-tags:
+tag:
   - Icon
 ---
 

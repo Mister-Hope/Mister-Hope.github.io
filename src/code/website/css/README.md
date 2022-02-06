@@ -1,9 +1,9 @@
 ---
 title: CSS
 icon: css
-time: 2019-09-05
+date: 2019-09-05
 category: CSS
-tags:
+tag:
   - 介绍
 star: true
 ---

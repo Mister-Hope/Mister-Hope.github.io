@@ -1,7 +1,7 @@
 ---
 title: 数据类型
 icon: type
-time: 2019-09-20
+date: 2019-09-20
 category: JavaScript
 ---
 

@@ -2,7 +2,7 @@
 title: 快速上手
 icon: state
 category: Vue
-tags:
+tag:
   - Vuex
   - 快速上手
 ---

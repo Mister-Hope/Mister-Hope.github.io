@@ -1,9 +1,9 @@
 ---
 title: 基础知识
 icon: windows
-time: 2019-09-07
+date: 2019-09-07
 category: 基础
-tags:
+tag:
   - Win10
 ---
 

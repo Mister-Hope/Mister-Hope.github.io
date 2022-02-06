@@ -1,7 +1,7 @@
 ---
 title: 函数的调用
 icon: call
-time: 2019-10-02
+date: 2019-10-02
 category: JavaScript
 ---
 

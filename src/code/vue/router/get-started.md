@@ -2,7 +2,7 @@
 title: 快速上手
 icon: router
 category: Vue
-tags:
+tag:
   - Vue Router
   - 快速上手
 ---

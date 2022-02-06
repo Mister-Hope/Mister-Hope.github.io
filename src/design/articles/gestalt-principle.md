@@ -2,9 +2,9 @@
 title: 格式塔原则
 author: 印迹
 icon: note
-time: 2020-09-26
+date: 2020-09-26
 category: 设计
-tags:
+tag:
   - UI
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 原型继承
 icon: extend
-time: 2019-10-10
+date: 2019-10-10
 category: JavaScript
 ---
 

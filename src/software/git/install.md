@@ -2,7 +2,7 @@
 title: 安装与配置
 icon: install
 category: Git
-tags:
+tag:
   - Git
   - 软件
   - 安装

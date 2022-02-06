@@ -1,9 +1,9 @@
 ---
 title: 基本特性
 icon: info
-time: 2020-04-07
+date: 2020-04-07
 category: Android
-tags:
+tag:
   - 介绍
 ---
 

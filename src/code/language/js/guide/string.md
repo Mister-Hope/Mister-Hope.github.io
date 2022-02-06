@@ -1,9 +1,9 @@
 ---
 title: 字符串
 icon: string
-time: 2019-09-16
+date: 2019-09-16
 category: JavaScript
-tags:
+tag:
   - 快速上手
 ---
 

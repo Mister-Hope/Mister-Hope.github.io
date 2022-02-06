@@ -1,7 +1,7 @@
 ---
 icon: discover
 category: 基础
-tags:
+tag:
   - TypeScript
 ---
 

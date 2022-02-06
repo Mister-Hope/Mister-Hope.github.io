@@ -2,7 +2,7 @@
 title: 基础内容介绍
 icon: module
 category: VS Code
-tags:
+tag:
   - VS Code
   - 软件
 ---

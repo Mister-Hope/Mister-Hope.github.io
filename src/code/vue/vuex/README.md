@@ -2,7 +2,7 @@
 title: Vuex
 icon: state
 category: Vue
-tags:
+tag:
   - Vuex
 ---
 

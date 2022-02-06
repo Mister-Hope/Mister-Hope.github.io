@@ -2,7 +2,7 @@
 title: Python 基础
 icon: module
 author: 廖雪峰
-time: 2020-05-21
+date: 2020-05-21
 category: Python
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: dart 快速入门
 icon: creative
-time: 2020-05-30
+date: 2020-05-30
 category: dart
 ---
 

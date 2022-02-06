@@ -1,9 +1,9 @@
 ---
 title: 常见标签
 icon: code
-time: 2019-09-01
+date: 2019-09-01
 category: HTML
-tags:
+tag:
   - 快速上手
 ---
 

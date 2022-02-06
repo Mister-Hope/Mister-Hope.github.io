@@ -1,7 +1,7 @@
 ---
 title: 计算机编码介绍
 icon: number
-time: 2019-12-27
+date: 2019-12-27
 category: 基础
 ---
 

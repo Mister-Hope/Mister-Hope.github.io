@@ -1,7 +1,7 @@
 ---
 icon: nodeJS
 title: NodeJS
-tags:
+tag:
   - Node.js
 ---
 

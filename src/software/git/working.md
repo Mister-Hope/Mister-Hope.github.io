@@ -2,7 +2,7 @@
 title: Git 原理
 icon: creative
 category: Git
-tags:
+tag:
   - Git
   - 软件
 ---

@@ -2,7 +2,7 @@
 title: 类和实例
 author: 廖雪峰
 icon: class
-time: 2021-03-28
+date: 2021-03-28
 category: Python
 ---
 

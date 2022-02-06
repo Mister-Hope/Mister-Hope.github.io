@@ -2,7 +2,7 @@
 title: 偏函数
 icon: plugin
 author: 廖雪峰
-time: 2021-03-15
+date: 2021-03-15
 category: Python
 ---
 

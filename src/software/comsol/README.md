@@ -1,9 +1,9 @@
 ---
 title: COMSOL 知识总结
 icon: app
-time: 2020-05-29
+date: 2020-05-29
 category: 软件
-tags:
+tag:
   - 仿真
   - COMSOL
 ---

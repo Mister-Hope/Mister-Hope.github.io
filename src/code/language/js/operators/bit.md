@@ -1,7 +1,7 @@
 ---
 title: 二进制位运算符
 icon: bit
-time: 2019-09-28
+date: 2019-09-28
 category: JavaScript
 ---
 

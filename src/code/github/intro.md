@@ -1,9 +1,9 @@
 ---
 title: GitHub 简介
 icon: info
-time: 2019-11-20
+date: 2019-11-20
 category: GitHub
-tags:
+tag:
   - 介绍
 ---
 

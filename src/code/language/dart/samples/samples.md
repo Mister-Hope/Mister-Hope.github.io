@@ -1,7 +1,7 @@
 ---
 title: dart 语言范例
 icon: discover
-time: 2020-05-30
+date: 2020-05-30
 category: dart
 ---
 

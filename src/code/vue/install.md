@@ -2,7 +2,7 @@
 title: 开发环境安装
 icon: install
 category: Vue
-tags:
+tag:
   - 安装
   - 基础
 ---

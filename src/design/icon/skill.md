@@ -1,9 +1,9 @@
 ---
 title: 图标设计技巧
 icon: creative
-time: 2020-09-14
+date: 2020-09-14
 category: 设计
-tags:
+tag:
   - Icon
 ---
 

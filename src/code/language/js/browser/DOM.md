@@ -1,7 +1,7 @@
 ---
 title: 操作 DOM
 icon: tree
-time: 2019-10-16
+date: 2019-10-16
 category: JavaScript
 ---
 

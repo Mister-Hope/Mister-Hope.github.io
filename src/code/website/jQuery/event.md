@@ -1,7 +1,7 @@
 ---
 title: 事件
 icon: activity
-time: 2019-11-04
+date: 2019-11-04
 category: jQuery
 ---
 

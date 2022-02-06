@@ -2,7 +2,7 @@
 title: 扩展
 icon: plugin
 category: VS Code
-tags:
+tag:
   - VS Code
   - 软件
 ---

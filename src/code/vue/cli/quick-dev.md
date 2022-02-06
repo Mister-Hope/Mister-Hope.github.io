@@ -2,7 +2,7 @@
 title: 快速原型开发
 icon: create
 category: Vue
-tags:
+tag:
   - Vue Cli
 ---
 

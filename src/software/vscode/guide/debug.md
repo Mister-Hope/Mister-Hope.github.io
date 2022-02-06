@@ -2,7 +2,7 @@
 title: 调试
 icon: debug
 category: VS Code
-tags:
+tag:
   - VS Code
   - 软件
 ---

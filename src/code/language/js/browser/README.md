@@ -1,7 +1,7 @@
 ---
 title: 浏览器
 icon: chrome
-time: 2019-10-15
+date: 2019-10-15
 category: JavaScript
 ---
 

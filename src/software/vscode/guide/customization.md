@@ -2,7 +2,7 @@
 title: 个性化
 icon: decorate
 category: VS Code
-tags:
+tag:
   - VS Code
   - 软件
 ---

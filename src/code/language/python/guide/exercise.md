@@ -2,7 +2,7 @@
 title: 练习
 icon: exercise
 author: 廖雪峰
-time: 2020-06-02
+date: 2020-06-02
 category: Python
 ---
 

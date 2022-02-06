@@ -1,7 +1,7 @@
 ---
 title: 数组
 icon: array
-time: 2019-09-25
+date: 2019-09-25
 category: JavaScript
 ---
 

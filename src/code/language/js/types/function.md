@@ -1,7 +1,7 @@
 ---
 title: 函数
 icon: function
-time: 2019-09-23
+date: 2019-09-23
 category: JavaScript
 ---
 

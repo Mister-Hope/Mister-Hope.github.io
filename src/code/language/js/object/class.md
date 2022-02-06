@@ -1,7 +1,7 @@
 ---
 title: class 继承
 icon: class
-time: 2019-10-10
+date: 2019-10-10
 category: JavaScript
 ---
 

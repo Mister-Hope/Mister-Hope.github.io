@@ -1,7 +1,7 @@
 ---
 title: 计算机
 icon: computer
-time: 2019-12-26
+date: 2019-12-26
 category: 基础
 ---
 

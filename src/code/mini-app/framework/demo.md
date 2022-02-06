@@ -44,7 +44,7 @@ shareable: true
 ```yaml
 title: 校园卡介绍
 author: Mr.Hope
-time: 2020年7月18日
+date: 2020年7月18日
 shareable: true
 content:
   - tag: title

@@ -1,7 +1,7 @@
 ---
 title: axios
 category: Node.js
-tags:
+tag:
   - Node.js
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: 搜索框设计
 icon: search
-time: 2020-09-15
+date: 2020-09-15
 category: 设计
-tags:
+tag:
   - UI
 ---
 

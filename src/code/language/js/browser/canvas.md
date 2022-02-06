@@ -1,7 +1,7 @@
 ---
 title: Canvas
 icon: stack
-time: 2019-10-19
+date: 2019-10-19
 category: JavaScript
 ---
 

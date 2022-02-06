@@ -2,7 +2,7 @@
 title: 函数式编程
 icon: function
 author: 廖雪峰
-time: 2020-05-31
+date: 2020-05-31
 category: Python
 ---
 

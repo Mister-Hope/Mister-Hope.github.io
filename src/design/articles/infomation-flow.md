@@ -1,9 +1,9 @@
 ---
 title: 信息流介绍
 icon: note
-time: 2020-09-26
+date: 2020-09-26
 category: 设计
-tags:
+tag:
   - UI
 ---
 

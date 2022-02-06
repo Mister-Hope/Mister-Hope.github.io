@@ -1,7 +1,7 @@
 ---
 title: 热力学与统计物理笔记
 category: 物理
-tags:
+tag:
   - 热统
 ---
 

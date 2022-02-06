@@ -1,7 +1,7 @@
 ---
 title: 冬之语
 category: 随笔
-tags:
+tag:
   - 冬之语
 ---
 

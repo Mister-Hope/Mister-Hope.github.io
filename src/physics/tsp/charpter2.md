@@ -1,8 +1,8 @@
 ---
 title: 第二章
 category: 物理
-time: 2020-12-28
-tags:
+date: 2020-12-28
+tag:
   - 热统
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 链接
 icon: ask
-time: 2019-11-20
+date: 2019-11-20
 category: Linux
 ---
 

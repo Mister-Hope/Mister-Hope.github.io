@@ -2,7 +2,7 @@
 title: 安装第三方模块
 icon: install
 author: 廖雪峰
-time: 2021-03-27
+date: 2021-03-27
 category: Python
 ---
 

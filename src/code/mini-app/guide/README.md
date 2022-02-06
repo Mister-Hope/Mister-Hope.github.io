@@ -1,7 +1,7 @@
 ---
 title: 小程序指南
 icon: creative
-time: 2019-11-25
+date: 2019-11-25
 category: 小程序
 ---
 

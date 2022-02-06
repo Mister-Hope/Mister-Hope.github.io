@@ -1,9 +1,9 @@
 ---
 title: 有限元网格划分和细化
 icon: creative
-time: 2020-06-02
+date: 2020-06-02
 category: 软件
-tags:
+tag:
   - 仿真
   - COMSOL
 ---

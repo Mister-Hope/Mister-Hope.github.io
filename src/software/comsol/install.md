@@ -1,9 +1,9 @@
 ---
 title: COMSOL 安装
 icon: install
-time: 2020-05-29
+date: 2020-05-29
 category: 软件
-tags:
+tag:
   - 安装
   - 仿真
   - COMSOL

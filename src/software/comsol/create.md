@@ -1,9 +1,9 @@
 ---
 title: 创建新模型
 icon: create
-time: 2020-06-01
+date: 2020-06-01
 category: 软件
-tags:
+tag:
   - 仿真
   - COMSOL
 ---

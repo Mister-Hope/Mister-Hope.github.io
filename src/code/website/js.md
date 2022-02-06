@@ -1,7 +1,7 @@
 ---
 icon: javascript
 title: JavaScript 教程
-time: 2019-09-01
+date: 2019-09-01
 category: JavaScript
 ---
 

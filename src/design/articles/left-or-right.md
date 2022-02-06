@@ -1,9 +1,9 @@
 ---
 title: 布局中的左和右
 icon: note
-time: 2020-09-26
+date: 2020-09-26
 category: 设计
-tags:
+tag:
   - UI
 ---
 

@@ -2,8 +2,8 @@
 title: 布尔值
 icon: boolean
 category: JavaScript
-time: 2019-09-15
-tags:
+date: 2019-09-15
+tag:
   - 快速上手
 ---
 

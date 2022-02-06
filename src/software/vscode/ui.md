@@ -1,9 +1,9 @@
 ---
 title: 用户界面
 icon: layout
-time: 2020-09-17
+date: 2020-09-17
 category: VS Code
-tags:
+tag:
   - VS Code
   - 软件
 ---

@@ -1,9 +1,9 @@
 ---
 title: 快速上手
 icon: creative
-time: 2019-09-14
+date: 2019-09-14
 category: JavaScript
-tags:
+tag:
   - 快速上手
 ---
 

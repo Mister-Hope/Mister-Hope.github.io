@@ -2,7 +2,7 @@
 title: Vue-cli
 icon: vue
 category: Vue
-tags:
+tag:
   - Vue Cli
 ---
 

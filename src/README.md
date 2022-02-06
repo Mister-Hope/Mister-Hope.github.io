@@ -1,6 +1,6 @@
 ---
-blog: true
 home: true
+layout: Blog
 icon: home
 heroImage: /logo.png
 heroText: 𝓜𝓻. 𝓗𝓸𝓹𝓮

@@ -1,7 +1,7 @@
 ---
 title: 其他运算符与运算顺序
 icon: more
-time: 2019-09-30
+date: 2019-09-30
 category: JavaScript
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: 对象
 icon: object
-time: 2019-09-17
+date: 2019-09-17
 category: JavaScript
-tags:
+tag:
   - 快速上手
 ---
 

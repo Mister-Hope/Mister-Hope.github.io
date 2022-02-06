@@ -1,7 +1,7 @@
 ---
 title: 快速上手
 icon: creative
-time: 2021-01-27
+date: 2021-01-27
 ---
 
 ## 安装

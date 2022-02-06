@@ -1,9 +1,9 @@
 ---
 title: 函数
 icon: info
-time: 2019-09-17
+date: 2019-09-17
 category: JavaScript
-tags:
+tag:
   - 快速上手
 ---
 

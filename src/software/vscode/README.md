@@ -2,7 +2,7 @@
 title: VS Code
 icon: vscode
 category: VS Code
-tags:
+tag:
   - VS Code
   - 软件
 ---

@@ -2,7 +2,7 @@
 title: 继承和多态
 author: 廖雪峰
 icon: extend
-time: 2021-03-28
+date: 2021-03-28
 category: Python
 ---
 

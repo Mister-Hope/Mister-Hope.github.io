@@ -1,8 +1,8 @@
 ---
 title: 记事本的遗留问题
 icon: warn
-time: 2019-09-07
-tags:
+date: 2019-09-07
+tag:
   - Win10
 ---
 

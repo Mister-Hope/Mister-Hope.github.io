@@ -1,7 +1,7 @@
 ---
 title: 其他文件命令
 icon: sort
-time: 2019-11-19
+date: 2019-11-19
 category: Linux
 ---
 

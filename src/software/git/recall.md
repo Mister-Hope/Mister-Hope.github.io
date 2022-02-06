@@ -2,7 +2,7 @@
 title: 撤销操作
 icon: return
 category: Git
-tags:
+tag:
   - Git
   - 软件
 ---

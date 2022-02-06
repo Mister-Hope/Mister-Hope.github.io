@@ -2,7 +2,7 @@
 title: Vue Router
 icon: router
 category: Vue
-tags:
+tag:
   - Vue Router
 ---
 

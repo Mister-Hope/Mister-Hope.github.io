@@ -2,7 +2,7 @@
 title: 第一个 Python 程序
 icon: info
 author: 廖雪峰
-time: 2020-05-20
+date: 2020-05-20
 category: Python
 ---
 

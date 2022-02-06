@@ -3,7 +3,7 @@ title: 标签管理
 icon: tag
 author: 廖雪峰
 category: Git
-tags:
+tag:
   - Git
   - 软件
 copyrightText: Copyright by 廖雪峰 Edited by Mr.Hope

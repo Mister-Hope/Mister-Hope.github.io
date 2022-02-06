@@ -1,7 +1,7 @@
 ---
 title: 操作系统
 icon: OS
-time: 2019-12-26
+date: 2019-12-26
 category: 基础
 ---
 

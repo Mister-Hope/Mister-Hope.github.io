@@ -2,7 +2,7 @@
 title: Vue-cli 介绍
 icon: creative
 category: Vue
-tags:
+tag:
   - Vue Cli
   - 快速上手
 ---

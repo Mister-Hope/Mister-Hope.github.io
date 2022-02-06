@@ -1,9 +1,9 @@
 ---
 title: 常见属性说明
 icon: info
-time: 2019-09-06
+date: 2019-09-06
 category: CSS
-tags:
+tag:
   - 快速上手
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: 选择器简介
 icon: select
-time: 2019-09-05
+date: 2019-09-05
 category: CSS
-tags:
+tag:
   - 快速上手
 ---
 

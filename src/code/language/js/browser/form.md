@@ -1,7 +1,7 @@
 ---
 title: 操作表单
 icon: form
-time: 2019-10-17
+date: 2019-10-17
 category: JavaScript
 ---
 

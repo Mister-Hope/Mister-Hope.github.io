@@ -1,9 +1,9 @@
 ---
 title: 图标设计准则
 icon: notice
-time: 2020-09-15
+date: 2020-09-15
 category: 设计
-tags:
+tag:
   - Icon
 ---
 

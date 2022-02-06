@@ -1,7 +1,7 @@
 ---
 title: 夏之歌
 category: 随笔
-tags:
+tag:
   - 夏之歌
 ---
 

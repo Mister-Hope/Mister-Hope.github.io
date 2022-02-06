@@ -1,9 +1,9 @@
 ---
 title: 变量
 icon: variable
-time: 2019-09-15
+date: 2019-09-15
 category: JavaScript
-tags:
+tag:
   - 快速上手
 ---
 

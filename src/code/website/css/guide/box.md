@@ -1,7 +1,7 @@
 ---
 title: 盒模型简介
 icon: box
-time: 2019-09-06
+date: 2019-09-06
 category: CSS
 tag:
   - 快速上手

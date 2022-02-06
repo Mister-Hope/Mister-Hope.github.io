@@ -1,7 +1,7 @@
 ---
 title: map & reduce
 icon: map
-time: 2019-10-05
+date: 2019-10-05
 category: JavaScript
 ---
 

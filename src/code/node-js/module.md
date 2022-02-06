@@ -2,7 +2,7 @@
 title: 模块
 icon: module
 category: Node.js
-tags:
+tag:
   - Node.js
   - 软件
 ---

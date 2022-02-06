@@ -1,9 +1,9 @@
 ---
 title: React
 icon: react
-time: 2020-05-08
+date: 2020-05-08
 category: 前端
-tags:
+tag:
   - 网页
   - React
 ---

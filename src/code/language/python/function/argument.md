@@ -2,7 +2,7 @@
 title: 函数的参数
 icon: variable
 author: 廖雪峰
-time: 2020-05-27
+date: 2020-05-27
 category: Python
 ---
 

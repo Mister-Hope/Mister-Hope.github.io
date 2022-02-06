@@ -2,7 +2,7 @@
 title: Vue 与小程序的异同
 icon: compare
 category: Vue
-tags:
+tag:
   - Vue
   - 小程序
   - 对比

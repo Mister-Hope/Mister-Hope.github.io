@@ -1,7 +1,7 @@
 ---
-time: 2014-9-3
+date: 2014-09-03
 category: 随笔
-tags:
+tag:
   - 笑谈人生
 ---
 

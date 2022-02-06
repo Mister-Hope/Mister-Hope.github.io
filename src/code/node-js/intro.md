@@ -2,7 +2,7 @@
 title: Node.js
 icon: creative
 category: Node.js
-tags:
+tag:
   - Node.js
   - 软件
   - 介绍

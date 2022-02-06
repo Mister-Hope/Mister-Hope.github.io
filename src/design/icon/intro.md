@@ -1,9 +1,9 @@
 ---
 title: 图标介绍
 icon: info
-time: 2020-09-13
+date: 2020-09-13
 category: 设计
-tags:
+tag:
   - Icon
 ---
 

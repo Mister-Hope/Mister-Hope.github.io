@@ -2,7 +2,7 @@
 title: 快速上手 Vue.js
 icon: creative
 category: Vue
-tags:
+tag:
   - 快速上手
   - 基础
 ---

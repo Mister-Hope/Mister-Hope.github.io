@@ -1,7 +1,7 @@
 ---
 title: 函数的声明
 icon: notice
-time: 2019-10-01
+date: 2019-10-01
 category: JavaScript
 ---
 

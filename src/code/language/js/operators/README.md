@@ -1,7 +1,7 @@
 ---
 title: 运算符
 icon: symbol
-time: 2019-09-26
+date: 2019-09-26
 category: JavaScript
 ---
 

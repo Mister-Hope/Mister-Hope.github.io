@@ -1,7 +1,7 @@
 ---
 title: 文本方向
 icon: direction
-time: 2019-09-06
+date: 2019-09-06
 category: CSS
 ---
 

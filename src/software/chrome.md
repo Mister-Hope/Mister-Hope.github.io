@@ -1,7 +1,7 @@
 ---
 title: Chrome
 icon: chrome
-time: 2019-12-13
+date: 2019-12-13
 category: 软件
 ---
 

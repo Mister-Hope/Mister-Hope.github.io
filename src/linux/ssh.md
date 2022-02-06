@@ -1,7 +1,7 @@
 ---
 title: ssh
 icon: mount
-time: 2019-11-23
+date: 2019-11-23
 category: 基础
 ---
 

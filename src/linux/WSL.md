@@ -1,7 +1,7 @@
 ---
 title: WSL
 icon: api
-time: 2019-11-23
+date: 2019-11-23
 category: Linux
 ---
 

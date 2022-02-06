@@ -1,7 +1,7 @@
 ---
 title: 解构赋值
 icon: structure
-time: 2019-10-03
+date: 2019-10-03
 category: JavaScript
 ---
 

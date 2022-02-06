@@ -1,9 +1,9 @@
 ---
 title: 研究
 icon: study
-time: 2020-06-01
+date: 2020-06-01
 category: 软件
-tags:
+tag:
   - 仿真
   - COMSOL
 ---

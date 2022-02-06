@@ -1,7 +1,7 @@
 ---
 title: 路径
 icon: navigation
-time: 2019-9-20
+date: 2019-09-20
 category: 基础
 ---
 

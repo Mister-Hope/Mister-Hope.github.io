@@ -1,7 +1,7 @@
 ---
 title: Number
 icon: number
-time: 2019-09-21
+date: 2019-09-21
 category: JavaScript
 ---
 

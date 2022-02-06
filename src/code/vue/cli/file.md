@@ -2,7 +2,7 @@
 title: 文件处理原则
 icon: file
 category: Vue
-tags:
+tag:
   - Vue Cli
 ---
 

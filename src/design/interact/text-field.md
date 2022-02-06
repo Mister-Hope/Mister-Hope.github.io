@@ -1,9 +1,9 @@
 ---
 title: 文本框设计
 icon: input
-time: 2020-09-26
+date: 2020-09-26
 category: 设计
-tags:
+tag:
   - UI
 ---
 

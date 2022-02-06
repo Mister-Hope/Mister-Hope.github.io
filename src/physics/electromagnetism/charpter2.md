@@ -1,7 +1,7 @@
 ---
 title: 第二章
 category: 物理
-tags:
+tag:
   - 电磁学
 ---
 

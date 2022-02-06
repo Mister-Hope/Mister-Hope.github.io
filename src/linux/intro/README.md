@@ -1,6 +1,6 @@
 ---
 icon: info
-time: 2019-11-15
+date: 2019-11-15
 category: Linux
 ---
 

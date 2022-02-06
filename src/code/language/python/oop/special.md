@@ -2,7 +2,7 @@
 title: 特殊的 class
 icon: any
 author: 廖雪峰
-time: 2021-03-28
+date: 2021-03-28
 category: Python
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: head 标签
 icon: heading
-time: 2019-09-02
+date: 2019-09-02
 category: HTML
 ---
 

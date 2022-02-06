@@ -2,7 +2,7 @@
 title: 编辑技巧
 icon: edit
 category: VS Code
-tags:
+tag:
   - VS Code
   - 软件
 ---

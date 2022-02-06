@@ -3,7 +3,7 @@ title: 版本回退
 icon: return
 author: 廖雪峰
 category: Git
-tags:
+tag:
   - Git
   - 软件
 copyrightText: Copyright by 廖雪峰 Edited by Mr.Hope

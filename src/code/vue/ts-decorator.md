@@ -2,7 +2,7 @@
 title: 在 Vue 中使用 Typescript
 icon: typescript
 category: 基础
-tags:
+tag:
   - TypeScript
 ---
 

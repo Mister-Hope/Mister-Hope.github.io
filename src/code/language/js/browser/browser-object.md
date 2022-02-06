@@ -1,7 +1,7 @@
 ---
 title: 浏览器对象
 icon: object
-time: 2019-10-16
+date: 2019-10-16
 category: JavaScript
 ---
 

@@ -1,6 +1,6 @@
 ---
 icon: mount
-time: 2019-11-17
+date: 2019-11-17
 category: Linux
 ---
 

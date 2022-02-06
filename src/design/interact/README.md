@@ -1,9 +1,9 @@
 ---
 title: 交互设计
 icon: interact
-time: 2020-09-26
+date: 2020-09-26
 category: 设计
-tags:
+tag:
   - UI
 ---
 

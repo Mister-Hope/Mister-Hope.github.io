@@ -2,7 +2,7 @@
 title: 获取对象信息
 author: 廖雪峰
 icon: info
-time: 2021-03-28
+date: 2021-03-28
 category: Python
 ---
 

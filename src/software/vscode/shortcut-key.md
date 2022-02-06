@@ -1,9 +1,9 @@
 ---
 title: 快捷键
 icon: keyboard
-time: 2020-09-17
+date: 2020-09-17
 category: VS Code
-tags:
+tag:
   - VS Code
   - 软件
   - 快捷键

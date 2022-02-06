@@ -1,9 +1,9 @@
 ---
 title: CSS Emmet
 icon: css
-time: 2019-09-03
+date: 2019-09-03
 category: Emmet
-tags:
+tag:
   - 快捷键
   - HTML
 ---

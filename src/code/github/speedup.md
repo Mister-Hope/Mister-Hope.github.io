@@ -1,7 +1,7 @@
 ---
 title: 加速 GitHub 克隆
 icon: speed
-time: 2021-02-18
+date: 2021-02-18
 category: GitHub
 ---
 

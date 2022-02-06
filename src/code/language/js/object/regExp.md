@@ -1,7 +1,7 @@
 ---
 title: RegExp
 icon: regexp
-time: 2019-10-13
+date: 2019-10-13
 category: JavaScript
 ---
 

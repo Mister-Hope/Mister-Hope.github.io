@@ -1,7 +1,7 @@
 ---
 title: UI 设计
 icon: skin
-time: 2019-11-24
+date: 2019-11-24
 category: 设计
 star: true
 sticky: 8

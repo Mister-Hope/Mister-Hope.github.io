@@ -1,7 +1,7 @@
 ---
 title: Windows Terminal
 icon: shell
-time: 2021-01-27
+date: 2021-01-27
 ---
 
 Windows Terminal 是一个面向命令行工具和 shell(如命令提示符、PowerShell 和适用于 Linux 的 Windows 子系统 (WSL))用户的新式终端应用程序。

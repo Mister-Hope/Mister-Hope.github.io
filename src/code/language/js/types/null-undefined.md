@@ -1,6 +1,6 @@
 ---
 title: null 和 undefined
-time: 2019-09-21
+date: 2019-09-21
 icon: "null"
 category: JavaScript
 ---

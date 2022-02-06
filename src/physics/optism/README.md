@@ -1,6 +1,6 @@
 ---
 category: 物理
-tags:
+tag:
   - 光学
 ---
 

@@ -2,7 +2,7 @@
 title: 自动部署
 icon: network
 category: GitHub
-tags:
+tag:
   - Git
   - deploy
 ---

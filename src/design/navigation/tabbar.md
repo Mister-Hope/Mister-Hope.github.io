@@ -1,9 +1,9 @@
 ---
 title: 标签导航设计
 icon: footer
-time: 2020-09-15
+date: 2020-09-15
 category: 设计
-tags:
+tag:
   - 导航
   - Tabbar
 ---

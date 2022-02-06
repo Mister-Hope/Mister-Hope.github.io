@@ -1,7 +1,7 @@
 ---
 title: 布尔运算符
 icon: boolean
-time: 2019-09-28
+date: 2019-09-28
 category: JavaScript
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 电磁学笔记
 category: 物理
-tags:
+tag:
   - 电磁学
 ---
 

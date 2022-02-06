@@ -1,7 +1,7 @@
 ---
 title: 操作文件
 icon: file
-time: 2019-10-17
+date: 2019-10-17
 category: JavaScript
 ---
 

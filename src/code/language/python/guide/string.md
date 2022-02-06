@@ -2,7 +2,7 @@
 title: 字符串
 icon: string
 author: 廖雪峰
-time: 2020-05-22
+date: 2020-05-22
 category: Python
 ---
 

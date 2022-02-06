@@ -1,8 +1,8 @@
 ---
 title: 概念
-time: 2021-04-10
+date: 2021-04-10
 category: 物理
-tags:
+tag:
   - 热统
 ---
 

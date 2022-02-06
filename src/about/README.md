@@ -2,7 +2,7 @@
 layout: Slide
 title: Mr.Hope 介绍
 icon: people
-tags:
+tag:
   - 个人介绍
 timeline: false
 star: true

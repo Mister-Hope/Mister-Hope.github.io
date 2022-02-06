@@ -2,7 +2,7 @@
 title: Markdown示例
 icon: markdown
 category: Markdown
-tags:
+tag:
   - Markdown
 ---
 

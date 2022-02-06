@@ -1,7 +1,7 @@
 ---
 title: JSON
 icon: json
-time: 2019-10-14
+date: 2019-10-14
 category: JavaScript
 ---
 

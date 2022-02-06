@@ -1,9 +1,9 @@
 ---
 title: 模型树
 icon: physics
-time: 2020-06-02
+date: 2020-06-02
 category: 软件
-tags:
+tag:
   - 仿真
   - COMSOL
 ---

@@ -2,7 +2,7 @@
 title: 配置 VS Code
 icon: config
 category: VS Code
-tags:
+tag:
   - VS Code
   - 软件
 ---

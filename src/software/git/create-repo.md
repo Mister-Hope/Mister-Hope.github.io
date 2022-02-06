@@ -3,7 +3,7 @@ title: Git 仓库
 icon: repo
 author: 廖雪峰
 category: Git
-tags:
+tag:
   - Git
   - 软件
 copyrightText: Copyright by 廖雪峰 Edited by Mr.Hope

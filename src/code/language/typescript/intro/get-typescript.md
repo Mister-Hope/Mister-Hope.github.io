@@ -2,7 +2,7 @@
 title: 安装 TypeScript
 icon: install
 category: TypeScript
-tags:
+tag:
   - 安装
 ---
 

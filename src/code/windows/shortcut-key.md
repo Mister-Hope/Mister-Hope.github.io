@@ -1,9 +1,9 @@
 ---
 title: 常用快捷键
 icon: keyboard
-time: 2019-09-07
+date: 2019-09-07
 category: 基础
-tags:
+tag:
   - 快捷键
   - Win10
 ---

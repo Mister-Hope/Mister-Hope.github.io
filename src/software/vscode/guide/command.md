@@ -2,7 +2,7 @@
 title: 命令行
 icon: shell
 category: VS Code
-tags:
+tag:
   - VS Code
   - 软件
 ---

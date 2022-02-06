@@ -2,7 +2,7 @@
 title: 什么是 TypeScript
 icon: info
 category: TypeScript
-tags:
+tag:
   - 介绍
 ---
 

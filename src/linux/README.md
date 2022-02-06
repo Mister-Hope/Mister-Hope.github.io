@@ -1,7 +1,7 @@
 ---
 title: Linux
 icon: linux
-time: 2019-11-15
+date: 2019-11-15
 category: Linux
 star: true
 ---

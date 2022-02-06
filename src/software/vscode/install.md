@@ -1,7 +1,7 @@
 ---
 icon: install
 category: VS Code
-tags:
+tag:
   - 安装
   - VS Code
   - 软件

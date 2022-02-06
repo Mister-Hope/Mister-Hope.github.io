@@ -1,8 +1,8 @@
 ---
 title: 第一章
-time: 2020-12-27
+date: 2020-12-27
 category: 物理
-tags:
+tag:
   - 电磁学
 ---
 

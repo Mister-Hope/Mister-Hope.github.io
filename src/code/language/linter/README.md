@@ -1,8 +1,8 @@
 ---
 title: linter 介绍
 icon: linter
-time: 2020-10-21
-tags:
+date: 2020-10-21
+tag:
   - linter
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: AJAX
-time: 2019-10-18
+date: 2019-10-18
 icon: ajax
 category: JavaScript
 ---

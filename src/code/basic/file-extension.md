@@ -1,7 +1,7 @@
 ---
 title: 文件名与文件扩展名
 icon: file
-time: 2019-12-26
+date: 2019-12-26
 category: 基础
 ---
 

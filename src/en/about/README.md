@@ -2,7 +2,7 @@
 layout: Slide
 title: Mr.Hope Intro
 icon: people
-tags:
+tag:
   - Personal Intro
 ---
 

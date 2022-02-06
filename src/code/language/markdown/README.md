@@ -2,7 +2,7 @@
 title: Markdown
 icon: markdown
 category: Markdown
-tags:
+tag:
   - Markdown
 ---
 

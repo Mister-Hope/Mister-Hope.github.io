@@ -2,7 +2,7 @@
 title: 相关指令
 icon: add
 category: Vue
-tags:
+tag:
   - Vue Cli
   - 指令
 ---

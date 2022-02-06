@@ -1,7 +1,7 @@
 ---
 title: Map 和 Set
 icon: map
-time: 2019-09-19
+date: 2019-09-19
 category: JavaScript
 ---
 

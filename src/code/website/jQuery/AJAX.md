@@ -1,7 +1,7 @@
 ---
 title: AJAX
 icon: ajax
-time: 2019-11-05
+date: 2019-11-05
 category: jQuery
 ---
 

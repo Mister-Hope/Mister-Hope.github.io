@@ -1,7 +1,7 @@
 ---
 title: CSS 布局
 icon: layout
-time: 2019-09-06
+date: 2019-09-06
 category: CSS
 ---
 

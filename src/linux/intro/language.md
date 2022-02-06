@@ -1,7 +1,7 @@
 ---
 title: 语言
 icon: language
-time: 2019-11-16
+date: 2019-11-16
 category: Linux
 ---
 

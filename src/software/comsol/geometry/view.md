@@ -1,9 +1,9 @@
 ---
 title: 几何浏览
 icon: view
-time: 2020-05-29
+date: 2020-05-29
 category: 软件
-tags:
+tag:
   - 仿真
   - COMSOL
 ---

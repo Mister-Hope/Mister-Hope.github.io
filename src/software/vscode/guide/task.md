@@ -2,7 +2,7 @@
 title: 任务执行器
 icon: operate
 category: VS Code
-tags:
+tag:
   - VS Code
   - 软件
 ---

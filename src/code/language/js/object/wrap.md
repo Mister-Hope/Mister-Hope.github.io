@@ -1,7 +1,7 @@
 ---
 title: 包装对象
 icon: wrap
-time: 2019-10-11
+date: 2019-10-11
 category: JavaScript
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 遍历
 icon: refresh
-time: 2019-09-19
+date: 2019-09-19
 category: JavaScript
 ---
 

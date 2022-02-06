@@ -1,7 +1,7 @@
 ---
 title: 持续集成
 icon: ci
-time: 2021-02-18
+date: 2021-02-18
 category: 基础
 ---
 

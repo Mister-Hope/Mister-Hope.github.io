@@ -1,7 +1,7 @@
 ---
 title: 春之诗
 category: 随笔
-tags:
+tag:
   - 春之诗
 ---
 

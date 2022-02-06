@@ -1,7 +1,7 @@
 ---
 title: 开源协议
 icon: license
-time: 2019-12-27
+date: 2019-12-27
 category: 基础
 next: ../../website/
 ---

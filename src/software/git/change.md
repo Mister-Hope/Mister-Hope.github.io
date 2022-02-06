@@ -3,7 +3,7 @@ title: 修改管理
 icon: change
 author: 廖雪峰
 category: Git
-tags:
+tag:
   - Git
   - 软件
 copyrightText: Copyright by 廖雪峰 Edited by Mr.Hope

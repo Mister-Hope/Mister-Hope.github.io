@@ -2,7 +2,7 @@
 title: 智能提示
 icon: creative
 category: VS Code
-tags:
+tag:
   - VS Code
   - 软件
 ---

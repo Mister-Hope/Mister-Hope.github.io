@@ -2,7 +2,7 @@
 title: 模块案例
 icon: discover
 category: Vue
-tags:
+tag:
   - Vuex
   - Demo
 ---

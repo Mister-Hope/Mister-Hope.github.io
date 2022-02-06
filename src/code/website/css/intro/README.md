@@ -1,7 +1,7 @@
 ---
 title: CSS 介绍
 icon: info
-time: 2019-09-06
+date: 2019-09-06
 category: CSS
 ---
 

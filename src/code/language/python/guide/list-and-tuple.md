@@ -2,7 +2,7 @@
 title: list 和 tuple
 icon: list
 author: 廖雪峰
-time: 2020-05-23
+date: 2020-05-23
 category: Python
 ---
 

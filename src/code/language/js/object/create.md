@@ -1,6 +1,6 @@
 ---
 title: 创建对象
-time: 2019-10-08
+date: 2019-10-08
 icon: add
 category: JavaScript
 ---

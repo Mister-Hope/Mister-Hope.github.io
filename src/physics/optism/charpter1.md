@@ -1,7 +1,7 @@
 ---
 title: 第一章
 category: 物理
-tags:
+tag:
   - 光学
 ---
 

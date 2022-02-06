@@ -1,7 +1,7 @@
 ---
 title: 浮动
 icon: float
-time: 2019-09-06
+date: 2019-09-06
 category: CSS
 ---
 

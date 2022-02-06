@@ -2,7 +2,7 @@
 title: 代码编辑器
 icon: editor
 category: 软件
-tags:
+tag:
   - 编辑器
 ---
 

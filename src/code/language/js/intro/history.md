@@ -1,9 +1,9 @@
 ---
 title: JavaScript 历史
 icon: time
-time: 2019-09-13
+date: 2019-09-13
 category: JavaScript
-tags:
+tag:
   - 介绍
 ---
 

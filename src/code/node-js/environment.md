@@ -2,7 +2,7 @@
 title: 搭建 Node 开发环境
 icon: leaf
 category: Node.js
-tags:
+tag:
   - Node.js
   - 软件
 ---

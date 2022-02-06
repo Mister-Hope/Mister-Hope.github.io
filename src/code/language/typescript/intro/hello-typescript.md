@@ -2,7 +2,7 @@
 title: Hello TypeScript
 icon: creative
 category: TypeScript
-tags:
+tag:
   - 快速上手
 ---
 

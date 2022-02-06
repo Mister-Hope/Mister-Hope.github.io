@@ -2,7 +2,7 @@
 title: Node.js
 icon: nodeJS
 category: Node.js
-tags:
+tag:
   - Node.js
   - 软件
 ---

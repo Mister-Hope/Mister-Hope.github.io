@@ -1,7 +1,7 @@
 ---
 title: 常见 Node 库
 category: Node.js
-tags:
+tag:
   - Node.js
 article: false
 ---

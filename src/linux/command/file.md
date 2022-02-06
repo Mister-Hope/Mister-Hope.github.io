@@ -1,7 +1,7 @@
 ---
 title: 文件
 icon: file
-time: 2019-11-19
+date: 2019-11-19
 category: Linux
 ---
 

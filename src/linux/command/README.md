@@ -1,7 +1,7 @@
 ---
 title: Linux 命令格式
 icon: shell
-time: 2019-11-18
+date: 2019-11-18
 category: Linux
 ---
 
