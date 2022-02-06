@@ -252,7 +252,7 @@ export default defineUserConfig<HopeThemeOptions>({
 
   plugins: [
     [
-      "@vuepress/docssearch",
+      "@vuepress/docsearch",
       {
         apiKey: "5c3a7145aeba231c3b85b742d24fc24f",
         indexName: "LDBQGQC8Q9",

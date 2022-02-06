@@ -8,9 +8,9 @@ export default sidebarConfig([
   "extend.md",
   "demo.md",
   {
-    title: "Emoji",
+    text: "Emoji",
     icon: "emoji",
-    path: "emoji/",
+    link: "emoji/",
     prefix: "emoji/",
     children: ["people.md", "nature.md", "object.md", "place.md", "symbol"],
   },

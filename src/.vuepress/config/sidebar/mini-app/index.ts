@@ -1,27 +1,31 @@
 import { sidebarConfig } from "vuepress-theme-hope";
+import guide from "./guide";
 
 export default sidebarConfig([
-  "",
+  "README.md",
   {
-    title: "小程序教程",
+    text: "小程序教程",
     icon: "creative",
-    collapsable: false,
     prefix: "guide/",
-    children: require("./guide"),
+    children: guide,
   },
   {
-    title: "开发者工具",
+    text: "开发者工具",
     icon: "tool",
-    collapsable: false,
     prefix: "tools/",
-    children: ["", "interface", "debug", "npm", "audit"],
+    children: ["README.md", "interface.md", "debug.md", "npm.md", "audit.md"],
   },
   {
-    title: "小程序框架",
+    text: "小程序框架",
     icon: "frame",
-    collapsable: false,
     prefix: "framework/",
-    children: ["", "simple-debug", "tag-list", "page", "demo"],
+    children: [
+      "README.md",
+      "simple-debug.md",
+      "tag-list.md",
+      "page.md",
+      "demo.md",
+    ],
   },
-  "qr-code",
+  "qr-code.md",
 ]);

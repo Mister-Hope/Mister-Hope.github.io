@@ -11,7 +11,7 @@ export default sidebarConfig([
   {
     text: "快速上手",
     icon: "creative",
-    path: "guide/",
+    link: "guide/",
     prefix: "guide/",
     children: [
       "get-started.md",
@@ -33,7 +33,7 @@ export default sidebarConfig([
   {
     text: "数据类型",
     icon: "type",
-    path: "types/",
+    link: "types/",
     prefix: "types/",
     children: [
       "general.md",
@@ -49,7 +49,7 @@ export default sidebarConfig([
   {
     text: "运算符",
     icon: "symbol",
-    path: "operators/",
+    link: "operators/",
     prefix: "operators/",
     children: [
       "arithmetic.md",
@@ -62,7 +62,7 @@ export default sidebarConfig([
   {
     text: "函数",
     icon: "function",
-    path: "function/",
+    link: "function/",
     prefix: "function/",
     children: [
       "intro.md",
@@ -82,7 +82,7 @@ export default sidebarConfig([
   {
     text: "对象",
     icon: "object",
-    path: "object/",
+    link: "object/",
     prefix: "object/",
     children: [
       "intro.md",
@@ -98,7 +98,7 @@ export default sidebarConfig([
   {
     text: "浏览器",
     icon: "chrome",
-    path: "browser/",
+    link: "browser/",
     prefix: "browser/",
     children: [
       "intro.md",
@@ -114,7 +114,7 @@ export default sidebarConfig([
   {
     text: "ES6",
     icon: "es6",
-    path: "es6/",
+    link: "es6/",
     prefix: "es6/",
     children: [
       "intro.md",

@@ -1,15 +1,15 @@
-const { sidebarConfig } = require("vuepress-theme-hope");
+import { sidebarConfig } from "vuepress-theme-hope";
 
-module.exports = sidebarConfig([
-  "",
-  "computer",
-  "OS",
-  "file-extension",
-  "encoding",
-  "path",
-  "glob",
-  "debug",
-  "ci",
-  "license",
+export default sidebarConfig([
+  "README.md",
+  "computer.md",
+  "OS.md",
+  "file-extension.md",
+  "encoding.md",
+  "path.md",
+  "glob.md",
+  "debug.md",
+  "ci.md",
+  "license.md",
   "open-source-and-free.md",
 ]);

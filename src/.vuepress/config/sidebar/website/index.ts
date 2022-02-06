@@ -1,17 +1,16 @@
 import { sidebarConfig } from "vuepress-theme-hope";
 
 export default sidebarConfig([
-  "",
-  "html/",
-  "css/",
+  "README.md",
+  "html/README.md",
+  "css/README.md",
   {
-    title: "Emmet",
+    text: "Emmet",
     icon: "emmet",
-    collapsable: false,
     prefix: "emmet/",
-    children: ["", "html", "css"],
+    children: ["README.md", "html.md", "css.md"],
   },
-  "js",
-  "jQuery/",
-  "https",
+  "js.md",
+  "jQuery/README.md",
+  "https.md",
 ]);

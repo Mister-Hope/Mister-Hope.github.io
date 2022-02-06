@@ -1,13 +1,13 @@
 import { sidebarConfig } from "vuepress-theme-hope";
 
 export default sidebarConfig([
-  "",
-  "intro",
-  "selector",
-  "operateDOM",
-  "modifyDOM",
-  "event",
-  "animation",
-  "AJAX",
-  "extend",
+  "README.md",
+  "intro.md",
+  "selector.md",
+  "operateDOM.md",
+  "modifyDOM.md",
+  "event.md",
+  "animation.md",
+  "AJAX.md",
+  "extend.md",
 ]);

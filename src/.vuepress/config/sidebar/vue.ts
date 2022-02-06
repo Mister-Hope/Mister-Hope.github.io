@@ -1,39 +1,39 @@
-import { sidebarConfig } from "vuepress-theme-hope";
+import { HopeThemeSidebarGroupItem, sidebarConfig } from "vuepress-theme-hope";
 
 export default sidebarConfig([
   {
     text: "Vue.js",
     icon: "vue",
     children: [
-      "",
-      "install",
-      "get-started",
-      "vue",
-      "ts-decorator",
-      "ts-demo",
-      "component",
-      "compare",
+      "README.md",
+      "install.md",
+      "get-started.md",
+      "vue.md",
+      "ts-decorator.md",
+      "ts-demo.md",
+      "component.md",
+      "compare.md",
     ],
   },
   {
     text: "Vue Router",
     icon: "router",
-    path: "router/",
+    link: "router/",
     prefix: "router/",
-    children: ["get-started", "demo"],
+    children: ["get-started.md", "demo.md"],
   },
   {
     text: "Vue Cli",
     icon: "vue",
-    path: "cli/",
+    link: "cli/",
     prefix: "cli/",
-    children: ["intro", "quick-dev", "create", "file"],
+    children: ["intro.md", "quick-dev.md", "create.md", "file.md"],
   },
   {
     text: "Vuex",
     icon: "state",
-    path: "vuex/",
+    link: "vuex/",
     prefix: "vuex/",
-    children: ["get-started", "demo"],
+    children: ["get-started.md", "demo.md"],
   },
 ]);

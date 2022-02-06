@@ -5,7 +5,7 @@ export default sidebarConfig([
   {
     text: "JavaScript",
     icon: "javascript",
-    path: "js/",
+    link: "js/",
     prefix: "js/",
     children: [
       "intro/README.md",
@@ -21,14 +21,14 @@ export default sidebarConfig([
   {
     text: "TypeScript",
     icon: "typescript",
-    path: "typescript/",
+    link: "typescript/",
     prefix: "typescript/",
     children: ["intro/README.md", "basics/README.md", "advanced/README.md"],
   },
   {
     text: "Python",
     icon: "python",
-    path: "python/",
+    link: "python/",
     prefix: "python/",
     children: [
       "intro/README.md",
@@ -46,7 +46,7 @@ export default sidebarConfig([
   {
     text: "Markdown",
     icon: "markdown",
-    path: "markdown/",
+    link: "markdown/",
     prefix: "markdown/",
     children: [
       "intro.md",

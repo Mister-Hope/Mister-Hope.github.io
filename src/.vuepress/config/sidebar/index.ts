@@ -1,89 +1,119 @@
 import { sidebarConfig } from "vuepress-theme-hope";
 
+import code from "./code";
+import basic from "./basic";
+import github from "./github";
+import language from "./language";
+import dart from "./language/dart";
+import js from "./language/javascript";
+import markdown from "./language/markdown";
+import python from "./language/python";
+import typescript from "./language/typescript";
+import miniApp from "./mini-app";
+import vue from "./vue";
+import website from "./website";
+import css from "./website/css";
+import html from "./website/html";
+import jQuery from "./website/jquery";
+import design from "./design";
+import physics from "./physics";
+import software from "./software";
+import comsol from "./software/comsol";
+import git from "./software/git";
+import vscode from "./software/vscode";
+import linux from "./linux";
+import note from "./note";
+
 export default {
   zh: sidebarConfig({
-    "/software/vscode/": require("./software/vscode"),
+    "/software/vscode/": vscode,
 
-    "/software/git/": require("./software/git"),
+    "/software/git/": git,
 
-    "/software/comsol/": require("./software/comsol"),
+    "/software/comsol/": comsol,
 
-    "/software/": require("./software"),
+    "/software/": software,
 
-    "/physics/": require("./physics"),
+    "/physics/": physics,
 
-    "/note/innenu/": ["", "yaml", "tag-list", "get-started"],
+    "/note/innenu/": ["README.md", "yaml.md", "tag-list.md", "get-started.md"],
 
-    "/note/": require("./note"),
+    "/note/": note,
 
-    "/linux/": require("./linux"),
+    "/linux/": linux,
 
-    "/design/": require("./design"),
+    "/design/": design,
 
     "/code/windows/": [
-      "",
-      "shortcut-key",
-      "hidden-file",
-      "add-path",
-      "cmd",
-      "notepad",
+      "README.md",
+      "shortcut-key.md",
+      "hidden-file.md",
+      "add-path.md",
+      "cmd.md",
+      "notepad.md",
     ],
 
-    "/code/website/jquery/": require("./website/jquery"),
+    "/code/website/jquery/": jQuery,
 
-    "/code/website/html/": require("./website/html"),
+    "/code/website/html/": html,
 
-    "/code/website/css/": require("./website/css"),
+    "/code/website/css/": css,
 
-    "/code/website/": require("./website"),
+    "/code/website/": website,
 
-    "/code/vue/": require("./vue"),
+    "/code/vue/": vue,
 
     "/code/node-js/": [
-      "",
-      "intro",
-      "install",
-      "environment",
-      "program",
-      "module",
+      "README.md",
+      "intro.md",
+      "install.md",
+      "environment.md",
+      "program.md",
+      "module.md",
     ],
 
-    "/code/mini-app/": require("./mini-app"),
+    "/code/mini-app/": miniApp,
 
-    "/code/language/python/": require("./language/python"),
+    "/code/language/typescript/": typescript,
 
-    "/code/language/typescript/": require("./language/typescript"),
+    "/code/language/python/": python,
 
-    "/code/language/markdown/": require("./language/markdown"),
+    "/code/language/markdown/": markdown,
 
-    "/code/language/js/": require("./language/javascript"),
+    "/code/language/js/": js,
 
-    "/code/language/dart/": require("./language/dart"),
+    "/code/language/dart/": dart,
 
-    "/code/language/": require("./language"),
+    "/code/language/": language,
 
-    "/code/github/": require("./github"),
+    "/code/github/": github,
 
-    "/code/basic/": require("./basic"),
+    "/code/basic/": basic,
 
-    "/code/Android/": ["", "intro", "base", "resource"],
+    "/code/Android/": ["README.md", "intro.md", "base.md", "resource.md"],
 
-    "/code/": require("./code"),
+    "/code/": code,
 
-    "/about/": ["", "site"],
+    "/about/": ["README.md", "site.md"],
 
     // fallback
-    "/": ["", "note/", "code/", "software/", "about/"],
+    "/": [
+      "README.md",
+      "note/README.md",
+      "code/README.md",
+      "software/README.md",
+      "about/README.md",
+    ],
   }),
 
   en: sidebarConfig({
-    "/en/note/": [""],
+    "/en/note/": ["README.md"],
 
-    "/en/code/": [""],
+    "/en/code/": ["README.md"],
 
-    "/en/about/": ["", "site"],
+    "/en/about/": ["README.md", "site.md"],
 
     // fallback
-    "/en/": ["", "code/", "about/"],
+    "/en/": ["README.md", "code/README.md", "about/README.md"],
   }),
 };
