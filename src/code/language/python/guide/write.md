@@ -42,7 +42,7 @@ category: Python
 
 ::: info 文本编辑器
 
-关于文本编辑器，请使用 [VS Code](../../../../software/vscode/readme.md)
+关于文本编辑器，请使用 [VS Code](../../../../software/vscode/README.md)
 
 :::
 

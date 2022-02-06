@@ -6,7 +6,7 @@ category: 小程序
 
 小程序开发框架的目标是通过尽可能简单、高效的方式让开发者可以在微信中开发具有原生 APP 体验的服务。
 
-整个小程序框架系统分为两部分: [**逻辑层**](../service/readme.md) (App Service) 和 [**视图层**](../view/readme.md) (../view)。小程序提供了自己的视图层描述语言 [WXML](../view/wxml.md) 和 [WXSS](../view/wxss.md)，以及基于 JavaScript 的逻辑层框架，并在视图层与逻辑层间提供了数据传输和事件系统，让开发者能够专注于数据与逻辑。
+整个小程序框架系统分为两部分: [**逻辑层**](../service/README.md) (App Service) 和 [**视图层**](../view/README.md) (../view)。小程序提供了自己的视图层描述语言 [WXML](../view/wxml.md) 和 [WXSS](../view/wxss.md)，以及基于 JavaScript 的逻辑层框架，并在视图层与逻辑层间提供了数据传输和事件系统，让开发者能够专注于数据与逻辑。
 
 <!-- more -->
 
@@ -55,4 +55,4 @@ Page({
 
 ## 丰富的 API
 
-**框架** 提供丰富的 [微信原生 API](../service/api/readme.md)，可以方便的调起微信提供的能力，如获取用户信息，本地存储，支付功能等。
+**框架** 提供丰富的 [微信原生 API](../service/api/README.md)，可以方便的调起微信提供的能力，如获取用户信息，本地存储，支付功能等。

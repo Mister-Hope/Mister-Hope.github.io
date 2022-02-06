@@ -120,7 +120,7 @@ Emoji 是 GFM 标准支持的格式，需要通过 `:emoji名称:` 来使用 emo
 
 例子: `:smile:` :smile:
 
-您可以在 [Emoji 列表](./emoji/readme.md) 找到所有可用的 Emoji。
+您可以在 [Emoji 列表](./emoji/README.md) 找到所有可用的 Emoji。
 
 ### 删除线
 

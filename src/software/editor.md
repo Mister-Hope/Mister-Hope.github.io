@@ -6,7 +6,7 @@ tags:
   - 编辑器
 ---
 
-- [VS Code](vscode/readme.md)
+- [VS Code](vscode/README.md)
 
   VS Code 的全称是 Visual Studio Code，是一款开源的、免费的、跨平台的、高性能的、轻量级的代码编辑器。它在性能、语言支持、开源社区方面，都做的很不错。
 

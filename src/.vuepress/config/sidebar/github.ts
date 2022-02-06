@@ -1,0 +1,28 @@
+import { sidebarConfig } from "vuepress-theme-hope";
+
+export default sidebarConfig([
+  "",
+  "intro",
+  "pr",
+  "semantic",
+  "pages",
+  "speedup",
+  "token",
+  {
+    text: "Github Actions",
+    icon: "actions",
+    prefix: "actions/",
+    children: [
+      "",
+      "intro",
+      "config",
+      {
+        text: "常见 Actions",
+        icon: "actions",
+        collapsable: true,
+        children: ["checkout", "cache", "gh-pages-deploy"],
+      },
+    ],
+  },
+  "deploy",
+]);

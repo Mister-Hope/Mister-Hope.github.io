@@ -1,0 +1,60 @@
+import { sidebarConfig } from "vuepress-theme-hope";
+
+export default sidebarConfig([
+  "learning.md",
+  {
+    text: "JavaScript",
+    icon: "javascript",
+    path: "js/",
+    prefix: "js/",
+    children: [
+      "intro/README.md",
+      "guide/README.md",
+      "types/README.md",
+      "operators/README.md",
+      "function/README.md",
+      "object/README.md",
+      "browser/README.md",
+      "es6/README.md",
+    ],
+  },
+  {
+    text: "TypeScript",
+    icon: "typescript",
+    path: "typescript/",
+    prefix: "typescript/",
+    children: ["intro/README.md", "basics/README.md", "advanced/README.md"],
+  },
+  {
+    text: "Python",
+    icon: "python",
+    path: "python/",
+    prefix: "python/",
+    children: [
+      "intro/README.md",
+      "guide/README.md",
+      "function/README.md",
+      "advance/README.md",
+      "functional-programming/README.md",
+      "module/README.md",
+      "oop/README.md",
+    ],
+  },
+  "python/README.md",
+  "json/README.md",
+  "yaml/README.md",
+  {
+    text: "Markdown",
+    icon: "markdown",
+    path: "markdown/",
+    prefix: "markdown/",
+    children: [
+      "intro.md",
+      "block.md",
+      "inline.md",
+      "extend.md",
+      "emoji/README.md",
+    ],
+  },
+  "linter/README.md",
+]);

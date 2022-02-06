@@ -24,12 +24,13 @@
     "personal-blog"
   ],
   "dependencies": {
-    "vuepress": "1.9.7",
-    "vuepress-theme-hope": "1.26.0"
+    "@vuepress/plugin-docsearch": "2.0.0-beta.35",
+    "vuepress": "2.0.0-beta.35",
+    "vuepress-theme-hope": "2.0.0-alpha.10"
   },
   "devDependencies": {
     "@textlint-rule/textlint-rule-no-unmatched-pair": "1.0.8",
-    "markdownlint-cli": "0.30.0",
+    "markdownlint-cli": "0.31.0",
     "prettier": "2.5.1",
     "remark-cli": "10.0.1",
     "remark-footnotes": "4.0.1",
@@ -47,7 +48,9 @@
     "textlint-rule-en-capitalization": "2.0.3",
     "textlint-rule-stop-words": "2.0.9",
     "textlint-rule-terminology": "2.1.5",
-    "textlint-rule-zh-half-and-full-width-bracket": "1.1.0"
+    "textlint-rule-zh-half-and-full-width-bracket": "1.1.0",
+    "tslib": "2.3.1",
+    "typescript": "4.5.5"
   },
   "remarkConfig": {
     "plugins": [

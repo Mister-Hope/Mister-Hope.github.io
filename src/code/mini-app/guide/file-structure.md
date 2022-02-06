@@ -111,7 +111,7 @@ app.json 是当前小程序的全局配置，包括了小程序的所有页面�
 
 ::: info
 
-更多 JSON 相关教程，请查看 [JSON 教程](../../language/json/readme.md)
+更多 JSON 相关教程，请查看 [JSON 教程](../../language/json/README.md)
 
 :::
 
@@ -219,4 +219,4 @@ Page({
 
 此外您还可以在 JS 中调用小程序提供的丰富的 API，利用这些 API 可以很方便的调起微信提供的能力，例如获取用户信息、本地存储、微信支付等。在前边的 QuickStart 例子中，在 `pages/index/index.js` 就调用了 `wx.getUserInfo` 获取微信用户的头像和昵称，最后通过 `setData` 把获取到的信息显示到界面上。
 
-更多 API 可以参考文档 [小程序的 API](service/api/readme.md) 。
+更多 API 可以参考文档 [小程序的 API](service/api/README.md) 。

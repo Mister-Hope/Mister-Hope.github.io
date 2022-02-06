@@ -106,7 +106,7 @@ JavaScript 代码可以直接嵌在网页的任何地方。
 
 ## JavaScript 的编写
 
-可以用任何文本编辑器来编写 JavaScript 代码。这里推荐 [Visual Studio Code](../../../../software/vscode/readme.md)。
+可以用任何文本编辑器来编写 JavaScript 代码。这里推荐 [Visual Studio Code](../../../../software/vscode/README.md)。
 
 ## JavaScript 的运行
 
@@ -130,7 +130,7 @@ Node.js 是一个著名的基于 JavaScript 的后端工具，可以很方便快
 
 ::: tip
 
-关于 Node.js 的详细教程，请查看[这里](../../../node-js/readme.md)
+关于 Node.js 的详细教程，请查看[这里](../../../node-js/README.md)
 
 :::
 

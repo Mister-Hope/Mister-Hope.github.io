@@ -164,7 +164,7 @@ tags:
 
 [根目录访问主页](/)
 
-[相对路径主页](../../readme.md)
+[相对路径主页](../../README.md)
 
 [根目录访问关于](/about)
 
@@ -173,7 +173,7 @@ tags:
 ```md
 [根目录访问主页](/)
 
-[相对路径主页](../../readme.md)
+[相对路径主页](../../README.md)
 
 [根目录访问关于](/about)
 
@@ -184,20 +184,20 @@ tags:
 
 VuePress 还兼容如下跳转到主页的写法:
 
-- [相对路径访问，兼容 Markdown 编写时相互跳转](../readme.md)
+- [相对路径访问，兼容 Markdown 编写时相互跳转](../README.md)
 
-- [根目录访问主页 2](/readme.md)
+- [根目录访问主页 2](/README.md)
 
 - [HTML 形式](../index.html)
 
-如果希望在使用编辑器编辑 Markdown 时也能够进行相互跳转的话，则需要全部使用**相对路径**，并且`readme.md`**不能省略**。
+如果希望在使用编辑器编辑 Markdown 时也能够进行相互跳转的话，则需要全部使用**相对路径**，并且`README.md`**不能省略**。
 
 代码:
 
 ```md
-[根目录访问主页 2](/readme.md)
+[根目录访问主页 2](/README.md)
 
-[相对路径访问，兼容 markdown 编写时相互跳转](../readme.md)
+[相对路径访问，兼容 markdown 编写时相互跳转](../README.md)
 
 [HTML 形式](../index.html)
 ```
