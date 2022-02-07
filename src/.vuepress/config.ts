@@ -1,6 +1,6 @@
 import { defineUserConfig } from "@vuepress/cli";
 import { enNavbarConfig, zhNavbarConfig } from "./config/navbar";
-import { enSidebarConfig, zhSidebarConig } from "./config/sideBar";
+import { enSidebarConfig, zhSidebarConig } from "./config/sidebar";
 
 import type { HopeThemeOptions } from "vuepress-theme-hope";
 
