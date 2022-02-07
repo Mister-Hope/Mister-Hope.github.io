@@ -1,36 +1,13 @@
-name: Test blog build
+name: Test blog
 
 on:
   push:
     branches-ignore:
       - main
-      - v2
+      - v1
   pull_request:
 
 jobs:
-  build-test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2.4.0
-        with:
-          persist-credentials: false
-          submodules: true
-
-      - uses: actions/cache@v2.1.7
-        id: node-modules
-        with:
-          path: node_modules/
-          key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node-modules-
-      - name: Install Deps
-        if: steps.node-modules.outputs.cache-hit != 'true'
-        run: yarn install --frozen-lockfile
-
-      - name: Build Blog
-        run: yarn run super:build
-
   linter-test:
     runs-on: ubuntu-latest
     steps:
@@ -54,3 +31,49 @@ jobs:
 
       - name: Linter test
         run: yarn run lint
+
+  webpack-build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.4.0
+        with:
+          persist-credentials: false
+          submodules: true
+
+      - uses: actions/cache@v2.1.7
+        id: node-modules
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-modules-
+      - name: Install Deps
+        if: steps.node-modules.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
+
+      - name: Build Blog with webpack
+        run: yarn run build:webpack
+
+  vite-build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.4.0
+        with:
+          persist-credentials: false
+          submodules: true
+
+      - uses: actions/cache@v2.1.7
+        id: node-modules
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-modules-
+      - name: Install Deps
+        if: steps.node-modules.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
+
+      - name: Build Blog with vite
+        run: yarn run build:vite
