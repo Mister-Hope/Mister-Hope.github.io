@@ -1,5 +1,5 @@
 ---
-title: COMSOL 知识总结
+title: COMSOL
 icon: app
 date: 2020-05-29
 category: 软件

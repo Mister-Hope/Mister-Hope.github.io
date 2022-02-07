@@ -1,6 +1,6 @@
 import { defineUserConfig } from "@vuepress/cli";
-import navBarConfig from "./config/navbar";
-import sideBarConfig from "./config/sideBar";
+import { enNavbarConfig, zhNavbarConfig } from "./config/navbar";
+import { enSidebarConfig, zhSidebarConig } from "./config/sideBar";
 
 import type { HopeThemeOptions } from "vuepress-theme-hope";
 
@@ -57,8 +57,8 @@ export default defineUserConfig<HopeThemeOptions>({
 
     locales: {
       "/": {
-        navbar: navBarConfig.zh,
-        sidebar: sideBarConfig.zh,
+        navbar: zhNavbarConfig,
+        sidebar: zhSidebarConig,
 
         blog: {
           intro: "/about/",
@@ -77,8 +77,8 @@ export default defineUserConfig<HopeThemeOptions>({
       },
       /** 英文设置 */
       "/en/": {
-        navbar: navBarConfig.en,
-        sidebar: sideBarConfig.en,
+        navbar: enNavbarConfig,
+        sidebar: enSidebarConfig,
 
         blog: {
           intro: "/en/about/",
@@ -94,8 +94,6 @@ export default defineUserConfig<HopeThemeOptions>({
 
     displayFooter: true,
     copyright: "Copyright © 2019-present Mr.Hope",
-
-    encrypt: {},
 
     plugins: {
       comment: {

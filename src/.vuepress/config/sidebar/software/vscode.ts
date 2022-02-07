@@ -1,6 +1,6 @@
-import { sidebarConfig } from "vuepress-theme-hope";
+import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
 
-export default sidebarConfig([
+export const vscode: HopeThemeSidebarArrayConfig = [
   "README.md",
   "install.md",
   "get-started.md",
@@ -24,4 +24,4 @@ export default sidebarConfig([
   "ui.md",
   "settings.md",
   "shortcut-key.md",
-]);
+];

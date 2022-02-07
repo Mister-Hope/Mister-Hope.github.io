@@ -1,6 +1,6 @@
-import { sidebarConfig } from "vuepress-theme-hope";
+import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
 
-export default sidebarConfig([
+export const jquery: HopeThemeSidebarArrayConfig = [
   "README.md",
   "intro.md",
   "selector.md",
@@ -10,4 +10,4 @@ export default sidebarConfig([
   "animation.md",
   "AJAX.md",
   "extend.md",
-]);
+];

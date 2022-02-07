@@ -1,6 +1,6 @@
-import { sidebarConfig } from "vuepress-theme-hope";
+import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
 
-export default sidebarConfig([
+export const markdown: HopeThemeSidebarArrayConfig = [
   "README.md",
   "intro.md",
   "block.md",
@@ -14,4 +14,4 @@ export default sidebarConfig([
     prefix: "emoji/",
     children: ["people.md", "nature.md", "object.md", "place.md", "symbol"],
   },
-]);
+];

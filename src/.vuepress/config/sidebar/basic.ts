@@ -1,6 +1,6 @@
-import { sidebarConfig } from "vuepress-theme-hope";
+import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
 
-export default sidebarConfig([
+export const basic: HopeThemeSidebarArrayConfig = [
   "README.md",
   "computer.md",
   "OS.md",
@@ -12,4 +12,4 @@ export default sidebarConfig([
   "ci.md",
   "license.md",
   "open-source-and-free.md",
-]);
+];

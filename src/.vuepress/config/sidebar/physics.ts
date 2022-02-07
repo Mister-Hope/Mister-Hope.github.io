@@ -1,6 +1,6 @@
-import { sidebarConfig } from "vuepress-theme-hope";
+import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
 
-export default sidebarConfig([
+export const physics: HopeThemeSidebarArrayConfig = [
   "README.md",
   {
     text: "电磁学",
@@ -22,4 +22,4 @@ export default sidebarConfig([
     prefix: "tsp/",
     children: ["charpter1.md", "charpter2.md", "charpter3.md"],
   },
-]);
+];

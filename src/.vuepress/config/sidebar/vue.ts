@@ -1,6 +1,6 @@
-import { HopeThemeSidebarGroupItem, sidebarConfig } from "vuepress-theme-hope";
+import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
 
-export default sidebarConfig([
+export const vue: HopeThemeSidebarArrayConfig = [
   {
     text: "Vue.js",
     icon: "vue",
@@ -36,4 +36,4 @@ export default sidebarConfig([
     prefix: "vuex/",
     children: ["get-started.md", "demo.md"],
   },
-]);
+];

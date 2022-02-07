@@ -1,6 +1,6 @@
-import { sidebarConfig } from "vuepress-theme-hope";
+import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
 
-export default sidebarConfig([
+export const linux: HopeThemeSidebarArrayConfig = [
   "README.md",
   {
     text: "简介",
@@ -76,4 +76,4 @@ export default sidebarConfig([
   "centos.md",
   "WSL.md",
   "ssh.md",
-]);
+];

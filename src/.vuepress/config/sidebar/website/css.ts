@@ -1,6 +1,6 @@
-import { sidebarConfig } from "vuepress-theme-hope";
+import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
 
-export default sidebarConfig([
+export const css: HopeThemeSidebarArrayConfig = [
   "README.md",
   {
     text: "快速上手",
@@ -49,4 +49,4 @@ export default sidebarConfig([
       "grid.md",
     ],
   },
-]);
+];

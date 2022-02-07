@@ -1,6 +1,6 @@
-import { sidebarConfig } from "vuepress-theme-hope";
+import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
 
-export default sidebarConfig([
+export const html: HopeThemeSidebarArrayConfig = [
   "README.md",
   {
     text: "快速上手",
@@ -33,4 +33,4 @@ export default sidebarConfig([
     prefix: "definition/",
     children: ["uri.md", "url.md", "seo.md", "mime.md"],
   },
-]);
+];

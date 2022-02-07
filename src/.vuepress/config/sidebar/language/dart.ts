@@ -1,6 +1,6 @@
-import { sidebarConfig } from "vuepress-theme-hope";
+import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
 
-export default sidebarConfig([
+export const dart: HopeThemeSidebarArrayConfig = [
   "README.md",
   {
     text: "快速入门",
@@ -9,4 +9,4 @@ export default sidebarConfig([
     prefix: "samples/",
     children: ["samples.md", "cheatsheet.md", "iterable.md"],
   },
-]);
+];

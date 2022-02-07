@@ -1,6 +1,6 @@
-import { sidebarConfig } from "vuepress-theme-hope";
+import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
 
-export default sidebarConfig([
+export const typescript: HopeThemeSidebarArrayConfig = [
   "README.md",
   {
     text: "TS 介绍",
@@ -55,4 +55,4 @@ export default sidebarConfig([
     prefix: "engineering/",
     children: ["README.md", "lint.md"],
   },
-]);
+];

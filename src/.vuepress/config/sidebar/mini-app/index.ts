@@ -1,7 +1,8 @@
-import { sidebarConfig } from "vuepress-theme-hope";
-import guide from "./guide";
+import { guide } from "./guide";
 
-export default sidebarConfig([
+import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+
+export const miniapp: HopeThemeSidebarArrayConfig = [
   "README.md",
   {
     text: "小程序教程",
@@ -28,4 +29,4 @@ export default sidebarConfig([
     ],
   },
   "qr-code.md",
-]);
+];
