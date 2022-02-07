@@ -110,6 +110,7 @@ export default defineUserConfig<HopeThemeOptions>({
         sub: true,
         sup: true,
         tex: true,
+        vpre: true,
       },
 
       pwa: {
