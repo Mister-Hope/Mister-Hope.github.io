@@ -81,7 +81,7 @@ export default defineUserConfig<HopeThemeOptions>({
         sidebar: sideBarConfig.en,
 
         blog: {
-          intro: "/about/",
+          intro: "/en/about/",
           sidebarDisplay: "mobile",
           links: {
             Gmail: "mailto:mister-hope@outlook.com",
@@ -95,14 +95,7 @@ export default defineUserConfig<HopeThemeOptions>({
     displayFooter: true,
     copyright: "Copyright © 2019-present Mr.Hope",
 
-    algolia: {
-      apiKey: "064a2d15d1a0f7b69df3ef1458d1a510",
-      indexName: "mrhope",
-    },
-
     encrypt: {},
-
-    algoliaType: "full",
 
     plugins: {
       comment: {
