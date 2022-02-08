@@ -1,37 +1,48 @@
 ---
 home: true
+layout: Blog
 icon: home
 title: Home
 heroImage: /logo.png
 heroText: 𝓜𝓻. 𝓗𝓸𝓹𝓮
 tagline: Where there is light, there is hope
-actions:
-  - text: Personal Intro
-    type: primary
-    link: /en/about/
-
-features:
-  - title: vuepress-theme-hope
-    details: A vuepress theme with tons of features✨
+projects:
+  - name: vuepress-theme-hope
+    type: link
+    desc: A vuepress theme with tons of features✨
     link: https://vuepress-theme-hope.github.io/
+    cover: /assets/img/vuepress-hope-logo.svg
 
-  - title: in NENU
-    details: 570,000+ words NENU guide, a comprehensive introduction to NENU life, the best admission guide for NENU freshmen❤
+  - name: in NENU
+    type: project
+    desc: 570,000+ words NENU guide, a comprehensive introduction to NENU life, the best admission guide for NENU freshmen❤
     link: https://github.com/Hope-Studio/inNENU-miniapp
+    cover: https://mp.innenu.com/img/inNENU.png
 
-  - title: "@mr-hope/vuepress-plugin-comment"
-    details: Comment plugin for Vuepress
-    link: https://vuepress-theme-hope.github.io/comment/
-
-  - title: vuepress-plugin-md-enhance
-    details: Vuepress Markdown Enhance plugin
+  - name: vuepress-plugin-md-enhance
+    type: link
+    desc: Vuepress Markdown Enhance plugin
     link: https://vuepress-theme-hope.github.io/md-enhance/
+    cover: /assets/img/vuepress-hope-logo.svg
 
-  - title: ftp-hope
-    details: A Node.js FTP client with promise support
+  - name: vuepress-plugin-feed2
+    type: link
+    desc: Vuepress2 Feed Plugin
+    link: https://vuepress-theme-hope.github.io/v2/feed/
+    cover: /assets/img/vuepress-hope-logo.svg
+
+  - name: ftp-hope
+    type: project
+    desc: A Node.js FTP client with promise support
     link: https://github.com/Mister-Hope/ftp-hope
 
-  - title: "@mr-hope/assert-type"
-    details: Interface Type Assert Library
+  - name: es-parser
+    type: project
+    desc: An es6 js parser
+    link: https://github.com/Mister-Hope/es-parser
+
+  - name: "@mr-hope/assert-type"
+    type: project
+    desc: Object shape asset library
     link: https://github.com/Mister-Hope/assert-type
 ---

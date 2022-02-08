@@ -7,7 +7,7 @@ heroImage: /logo.png
 heroText: 𝓜𝓻. 𝓗𝓸𝓹𝓮
 heroFullScreen: true
 tagline: Where there is light, there is hope
-project:
+projects:
   - name: vuepress-theme-hope
     type: link
     desc: 一个功能强大的 Vuepress 主题✨
@@ -20,22 +20,16 @@ project:
     link: https://github.com/Hope-Studio/inNENU-miniapp
     cover: https://mp.innenu.com/img/inNENU.png
 
-  - name: "@mr-hope/vuepress-plugin-comment"
-    type: link
-    desc: Vuepress 评论插件
-    link: https://vuepress-theme-hope.github.io/comment/zh/
-    cover: /assets/img/vuepress-hope-logo.svg
-
   - name: vuepress-plugin-md-enhance
     type: link
     desc: Vuepress Markdown 增强插件
     link: https://vuepress-theme-hope.github.io/md-enhance/zh/
     cover: /assets/img/vuepress-hope-logo.svg
 
-  - name: "@mr-hope/vuepress-plugin-feed"
+  - name: "vuepress-plugin-feed2"
     type: link
-    desc: Vuepress Feed 插件
-    link: https://vuepress-theme-hope.github.io/feed/zh/
+    desc: Vuepress2 Feed 插件
+    link: https://vuepress-theme-hope.github.io/v2/feed/zh/
     cover: /assets/img/vuepress-hope-logo.svg
 
   - name: ftp-hope

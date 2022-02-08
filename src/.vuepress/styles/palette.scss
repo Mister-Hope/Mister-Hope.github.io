@@ -1,4 +1,11 @@
-$themeColor: #5c92d1;
+$themeColor: (
+  base: #5c92d1,
+  scale: (
+    dark: -10%,
+    light: 10%,
+    lighter: 25%,
+  ),
+) !default;
 
 // code
 $codeLang: "js" "ts" "html" "md" "vue" "css" "scss" "shell" "bash" "apacheconf"
