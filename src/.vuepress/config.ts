@@ -101,6 +101,12 @@ export default defineUserConfig<HopeThemeOptions>({
         serverURL: "https://mister-hope-blog-comment.vercel.app/",
       },
 
+      feed: {
+        atom: true,
+        json: true,
+        rss: true,
+      },
+
       mdEnhance: {
         align: true,
         demo: true,
