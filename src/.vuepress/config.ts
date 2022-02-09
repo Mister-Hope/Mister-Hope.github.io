@@ -96,6 +96,8 @@ export default defineUserConfig<HopeThemeOptions>({
     copyright: "Copyright © 2019-present Mr.Hope",
 
     plugins: {
+      blog: true,
+
       comment: {
         type: "waline",
         serverURL: "https://mister-hope-blog-comment.vercel.app/",
