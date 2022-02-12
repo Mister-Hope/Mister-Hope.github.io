@@ -132,11 +132,9 @@ QQ 小程序本质还是换汤不换药的，且 QQ 开发者工具兼容 `wxml`
 
 - [tag 值参数表](framework/tag-list.md)
 
-- [setPage 库使用说明](framework/setPage.md)
+- [setPage 库使用说明](framework/page.md)
 
 - [界面简单开发学习指南](framework/simple-debug.md)
-
-- [社团资料提交说明](framework/corporation.md)
 
 - [分享相关](qr-code.md)
 

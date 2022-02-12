@@ -63,7 +63,7 @@ export default defineUserConfig<HopeThemeOptions>({
         blog: {
           intro: "/about/",
           sidebarDisplay: "mobile",
-          links: {
+          medias: {
             QQ: "http://wpa.qq.com/msgrd?v=3&uin=1178522294&site=qq&menu=yes",
             Qzone: "https://1178522294.qzone.qq.com/",
             Gmail: "mailto:mister-hope@outlook.com",
@@ -83,7 +83,7 @@ export default defineUserConfig<HopeThemeOptions>({
         blog: {
           intro: "/en/about/",
           sidebarDisplay: "mobile",
-          links: {
+          medias: {
             Gmail: "mailto:mister-hope@outlook.com",
             Steam: "https://steamcommunity.com/id/Mr-Hope/",
             GitHub: "https://github.com/Mister-Hope",

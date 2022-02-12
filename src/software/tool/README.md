@@ -13,6 +13,6 @@ icon: tool
 
 - [Potplayer](https://potplayer.daum.net/?lang=zh_CN): 心目中最 NB 的视频播放器，没有之一
 
-- [Terminal](Terminal.md): Windows 终端
+- [Terminal](terminal/README.md): Windows 终端
 
 - [PowerShell](powershell.md): Windows 的命令行外壳程序和脚本环境

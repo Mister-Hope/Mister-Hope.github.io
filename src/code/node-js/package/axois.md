@@ -416,7 +416,7 @@ axios.get("/user/12345").then(function (response) {
 });
 ```
 
-当使用 `catch` 或传递 [拒绝回调](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 作为 `then` 的第二个参数时， 如 [处理错误](＃处理错误)部分中所述，响应将通过 `error` 对象提供。
+当使用 `catch` 或传递 [拒绝回调](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 作为 `then` 的第二个参数时， 如 [处理错误](#处理错误)部分中所述，响应将通过 `error` 对象提供。
 
 ## 配置默认值
 

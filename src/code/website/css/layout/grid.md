@@ -4,7 +4,7 @@ author: 阮一峰
 icon: grid
 date: 2020-10-20
 category: CSS
-copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可证)
+copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可证)
 ---
 
 ## 概述

@@ -37,7 +37,7 @@ tag:
 
 - [安装 Node.js](../node-js/install.md)
 
-- [添加到 path](../windows/addPath.md)
+- [添加到 path](../windows/add-path.md)
 
 ## 初始化版本库、下载网页代码并安装 npm 模块
 

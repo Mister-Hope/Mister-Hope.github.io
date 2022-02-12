@@ -6,7 +6,7 @@ category: Git
 tag:
   - Git
   - 软件
-copyrightText: Copyright by 廖雪峰 Edited by Mr.Hope
+copyright: Copyright by 廖雪峰 Edited by Mr.Hope
 ---
 
 ## 概述

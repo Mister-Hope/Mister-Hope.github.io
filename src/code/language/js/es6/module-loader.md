@@ -4,7 +4,7 @@ icon: load
 author: 阮一峰
 date: 2019-10-23
 category: JavaScript
-copyrightText: 此部分博客采用 <a href="http://creativecommons.org/licenses/by-nc/4.0/">“保持署名—非商用”创意共享4.0许可证</a>
+copyright: 此部分博客采用 <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="noopener noreferrer" target="_blank">“保持署名—非商用”创意共享4.0许可证</a>
 ---
 
 上一章介绍了模块的语法，本章介绍如何在浏览器和 Node.js 之中加载 ES6 模块，以及实际开发中经常遇到的一些问题(比如循环加载)。

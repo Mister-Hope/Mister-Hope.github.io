@@ -7,7 +7,7 @@ category: JavaScript
 
 ::: tip
 
-此教程与快速上手章节中的 [布尔值介绍](../guide/boolean) 完全相同。
+此教程与快速上手章节中的 [布尔值介绍](../guide/boolean.md) 完全相同。
 
 :::
 

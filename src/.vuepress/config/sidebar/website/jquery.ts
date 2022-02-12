@@ -4,10 +4,10 @@ export const jquery: HopeThemeSidebarArrayConfig = [
   "README.md",
   "intro.md",
   "selector.md",
-  "operateDOM.md",
-  "modifyDOM.md",
+  "operate-dom.md",
+  "modify-dom.md",
   "event.md",
   "animation.md",
-  "AJAX.md",
+  "ajax.md",
   "extend.md",
 ];

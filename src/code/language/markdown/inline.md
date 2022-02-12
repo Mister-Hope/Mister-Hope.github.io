@@ -48,7 +48,7 @@ This is [an example](http://example.com/ "Title") inline link.
 如果您是要链接到同样主机的资源，您可以使用绝对路径或相对路径:
 
 ```md
-See my [About](/about/) page for details.
+See my [About](/about.html) page for details.
 ```
 
 ### 参考链接

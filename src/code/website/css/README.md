@@ -22,7 +22,6 @@ CSS3 是最新的 CSS 标准，被拆分为"模块"。模块包括: 选择器、
   - [CSS 声明](guide/declaration.md)
   - [CSS 引入](guide/import.md)
   - [CSS 常用属性介绍](guide/common.md)
-  - [CSS 媒体查询](guide/media.md)
   - [CSS 盒模型](guide/box.md)
 
 - [CSS 布局介绍](layout/README.md)

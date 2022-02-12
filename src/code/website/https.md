@@ -3,7 +3,7 @@ title: Http 与 Https 介绍
 icon: http
 date: 2019-11-03
 author: 小灰
-copyrightText: 本文转载自<a href="https://zhuanlan.zhihu.com/p/57142784">小灰的知乎专栏</a>
+copyright: 本文转载自<a href="https://zhuanlan.zhihu.com/p/57142784">小灰的知乎专栏</a>
 next: ../../vue/
 ---
 

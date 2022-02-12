@@ -166,18 +166,10 @@ tag:
 
 [相对路径主页](../../README.md)
 
-[根目录访问关于](/about)
-
-[相对路径关于](../../about.md)
-
 ```md
 [根目录访问主页](/)
 
 [相对路径主页](../../README.md)
-
-[根目录访问关于](/about)
-
-[相对路径关于](../../about.md)
 ```
 
 ::: tip
@@ -232,7 +224,7 @@ VuePress 还兼容如下跳转到主页的写法:
 
 ::: tip
 
-更多详见[emoji 列表](emoji.md)
+更多详见 [Emoji 列表](emoji/README.md)
 
 :::
 

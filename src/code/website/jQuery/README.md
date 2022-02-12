@@ -27,14 +27,14 @@ jQuery 是一款能够方便快捷的操作 DOM，并兼容所有主流浏览器
 
 - [选择器](selector.md)
 
-- [操作 DOM](operateDOM.md)
+- [操作 DOM](operate-dom.md)
 
-- [修改 DOM 结构](modifyDOM.md)
+- [修改 DOM 结构](modify-dom.md)
 
 - [事件](event.md)
 
 - [动画](animation.md)
 
-- [Ajax](AJAX.md)
+- [Ajax](ajax.md)
 
 - [扩展](extend.md)

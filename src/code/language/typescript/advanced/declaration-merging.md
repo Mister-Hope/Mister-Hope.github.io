@@ -10,7 +10,7 @@ category: TypeScript
 
 ## 函数的合并
 
-[之前学习过](/doc/private/language/typescript/basics/type-of-function#重载)，我们可以使用重载定义多个函数类型:
+[之前学习过](../basics/type-of-function#重载)，我们可以使用重载定义多个函数类型:
 
 ```ts
 function reverse(x: number): number;

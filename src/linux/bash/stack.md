@@ -5,7 +5,7 @@ author: 阮一峰
 category: Linux
 tag:
   - Bash
-copyrightText: 本教程采用<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh">知识共享 署名-相同方式共享 3.0协议</a>
+copyright: 本教程采用<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh" rel="noopener noreferrer" target="_blank">知识共享 署名-相同方式共享 3.0协议</a>
 ---
 
 为了方便用户在不同目录之间切换，Bash 提供了目录堆栈功能。

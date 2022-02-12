@@ -23,7 +23,7 @@ Emmet 是一个快速创建 HTML 和 CSS 的方式，如果您想要成为一个
 
 ## CSS
 
-- [CSS Emmet 语法](CSS.md)
+- [CSS Emmet 语法](css.md)
 
 ## 其他功能
 

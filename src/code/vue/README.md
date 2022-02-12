@@ -49,7 +49,7 @@ Vue.js 是世界上主流的渐近式 JavaScript 框架。其生态比较繁荣�
 
 - [Vue Cli 介绍](cli/intro.md)
 
-- [使用 Vue Cli 进行快速开发](cli/quickDev.md)
+- [使用 Vue Cli 进行快速开发](cli/quick-dev.md)
 
 - [Vue Cli 文件处理](cli/file.md)
 

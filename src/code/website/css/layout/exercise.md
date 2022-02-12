@@ -4,7 +4,7 @@ author: 阮一峰
 icon: exercise
 date: 2020-10-20
 category: CSS
-copyrightText: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可证)
+copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可证)
 ---
 
 本章包括了一些经典的布局实战案例。

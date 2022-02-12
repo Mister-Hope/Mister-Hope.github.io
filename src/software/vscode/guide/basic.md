@@ -56,7 +56,7 @@ tag:
 
 ## 键盘参考表
 
-[Windows 下 VS Code 快捷键指南](./assets/vscodeKeyboardShortcutsWindows.pdf) (英文)
+[Windows 下 VS Code 快捷键指南](/file/vscodeKeyboardShortcutsWindows.pdf) (英文)
 
 ## 快速打开
 

@@ -6,7 +6,7 @@ category: Git
 tag:
   - Git
   - 软件
-copyrightText: Copyright by 廖雪峰 Edited by Mr.Hope
+copyright: Copyright by 廖雪峰 Edited by Mr.Hope
 ---
 
 在安装 Git 一节中，我们已经配置了 `user.name` 和 `user.email`，实际上，Git 还有很多可配置项。

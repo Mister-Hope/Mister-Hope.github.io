@@ -103,10 +103,10 @@ export const javascript: HopeThemeSidebarArrayConfig = [
     children: [
       "intro.md",
       "browser-object.md",
-      "DOM.md",
+      "dom.md",
       "form.md",
       "file.md",
-      "AJAX.md",
+      "ajax.md",
       "promise.md",
       "canvas.md",
     ],

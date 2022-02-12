@@ -41,7 +41,7 @@ category: Python
 
 - [循环](guide/loop.md)
 
-- [Dictionary 和 Set](dict-and-set.md)
+- [Dictionary 和 Set](guide/dict-and-set.md)
 
 ## Python 函数
 

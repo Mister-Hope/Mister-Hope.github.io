@@ -19,7 +19,7 @@ tag:
 
 本博客包含大量的示例代码，只要电脑安装了浏览器，就可以用来实验了。读者可以一边读一边运行示例，加深理解。
 
-推荐安装 [Chrome 浏览器](../../../../software/Chrome.md)，它的“开发者工具”(Developer Tools)里面的“控制台”(console)，就是运行 JavaScript 代码的理想环境。
+推荐安装 [Chrome 浏览器](../../../../software/chrome.md)，它的“开发者工具”(Developer Tools)里面的“控制台”(console)，就是运行 JavaScript 代码的理想环境。
 
 进入 Chrome 浏览器的“控制台”，有两种方法。
 

@@ -4,7 +4,7 @@ icon: es6
 author: 阮一峰
 date: 2019-10-20
 category: JavaScript
-copyrightText: 此部分博客采用 <a href="http://creativecommons.org/licenses/by-nc/4.0/">“保持署名—非商用”创意共享4.0许可证</a>
+copyright: 此部分博客采用 <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="noopener noreferrer" target="_blank">“保持署名—非商用”创意共享4.0许可证</a>
 ---
 
 ## 目录
@@ -45,7 +45,7 @@ copyrightText: 此部分博客采用 <a href="http://creativecommons.org/license
 
 - [async 函数](async.md)
 
-- [Class 的基本语法](class)
+- [Class 的基本语法](class.md)
 
 - [Class 的继承](class-extends.md)
 
