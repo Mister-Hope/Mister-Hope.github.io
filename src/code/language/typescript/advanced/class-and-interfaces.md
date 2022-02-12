@@ -99,7 +99,7 @@ let point3d: Point3d = { x: 1, y: 2, z: 3 };
 
 ## 混合类型
 
-[之前学习过](../basics/type-of-function#接口中函数的定义)，可以使用接口的方式来定义一个函数需要符合的形状:
+[之前学习过](../basics/type-of-function.md#接口中函数的定义)，可以使用接口的方式来定义一个函数需要符合的形状:
 
 ```ts
 interface SearchFunc {

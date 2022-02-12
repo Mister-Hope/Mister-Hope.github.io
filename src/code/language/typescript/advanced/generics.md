@@ -24,7 +24,7 @@ function createArray(length: number, value: any): Array<any> {
 createArray(3, "x"); // ['x', 'x', 'x']
 ```
 
-上例中，我们使用了[之前提到过的数组泛型](../basics/type-of-array#数组泛型)来定义返回值的类型。
+上例中，我们使用了[之前提到过的数组泛型](../basics/type-of-array.md#数组泛型)来定义返回值的类型。
 
 这段代码编译不会报错，但是一个显而易见的缺陷是，它并没有准确的定义返回值的类型:
 
@@ -140,7 +140,7 @@ copyFields(x, { b: 10, d: 20 });
 
 ## 泛型接口
 
-[之前学习过](../basics/type-of-function#接口中函数的定义)，可以使用接口的方式来定义一个函数需要符合的形状:
+[之前学习过](../basics/type-of-function.md#接口中函数的定义)，可以使用接口的方式来定义一个函数需要符合的形状:
 
 ```ts
 interface SearchFunc {
