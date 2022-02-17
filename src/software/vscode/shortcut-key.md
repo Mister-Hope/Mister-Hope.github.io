@@ -131,7 +131,7 @@ tag:
 
 ::: info 官方文档
 
-[Windows 下 VS Code 快捷键指南](/files/vscodeKeyboardShortcutsWindows.pdf) (英文)
+[Windows 下 VS Code 快捷键指南](/file/vscodeKeyboardShortcutsWindows.pdf) (英文)
 
 :::
 

@@ -8,10 +8,12 @@ tag:
 
 @slidestart
 
-- Gender: male
-- Age: 20 - 30
-- Motion: In love
-- Hobbys: Fishing, chess, badminton, programming
-- Photos: None
+- Gender: Male
+- Age: 24
+- Marital status: unmarried
+- Single: No
+- Hobbies: fishing, chess, cursive English, badminton, programming
+
+Has a cheerful and easy-going personality, loves to help others, and likes to work with open source projects at spare.
 
 @slideend

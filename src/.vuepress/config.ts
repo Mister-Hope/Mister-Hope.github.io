@@ -11,7 +11,6 @@ export default defineUserConfig<HopeThemeOptions>({
     // 百度站点验证
     ["meta", { name: "baidu-site-verification", content: "nGf5yi0Gec" }],
     ["meta", { name: "baidu-site-verification", content: "4H7tszevS8" }],
-
     [
       "link",
       {
@@ -61,8 +60,8 @@ export default defineUserConfig<HopeThemeOptions>({
         sidebar: zhSidebarConig,
 
         blog: {
+          description: "VuePress 项目成员，前端开发者，理论物理硕士在读",
           intro: "/about/",
-          sidebarDisplay: "mobile",
           medias: {
             QQ: "http://wpa.qq.com/msgrd?v=3&uin=1178522294&site=qq&menu=yes",
             Qzone: "https://1178522294.qzone.qq.com/",
@@ -81,8 +80,9 @@ export default defineUserConfig<HopeThemeOptions>({
         sidebar: enSidebarConfig,
 
         blog: {
+          description:
+            "VuePress project member, front-end developer, studying for a master's degree in theoretical physics",
           intro: "/en/about/",
-          sidebarDisplay: "mobile",
           medias: {
             Gmail: "mailto:mister-hope@outlook.com",
             Steam: "https://steamcommunity.com/id/Mr-Hope/",
@@ -254,8 +254,9 @@ export default defineUserConfig<HopeThemeOptions>({
     [
       "@vuepress/docsearch",
       {
+        appId: "LDBQGQC8Q9",
         apiKey: "5c3a7145aeba231c3b85b742d24fc24f",
-        indexName: "LDBQGQC8Q9",
+        indexName: "mrhope",
       },
     ],
   ],

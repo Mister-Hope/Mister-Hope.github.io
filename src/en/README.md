@@ -5,6 +5,7 @@ icon: home
 title: Home
 heroImage: /logo.png
 heroText: 𝓜𝓻. 𝓗𝓸𝓹𝓮
+heroFullScreen: true
 tagline: Where there is light, there is hope
 projects:
   - name: vuepress-theme-hope

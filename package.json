@@ -11,6 +11,10 @@
     "build:webpack": "vuepress-webpack build src",
     "build-super:vite": "node --max_old_space_size=8192 ./node_modules/vuepress-vite/lib/index.js build src",
     "build-super:webpack": "node --max_old_space_size=8192 ./node_modules/vuepress-webpack/lib/index.js build src",
+    "debug-serve:vite": "cross-env DEBUG=vuepress* vuepress-vite dev src",
+    "debug-build:vite": "cross-env DEBUG=vuepress* vuepress-vite build src",
+    "debug-serve:webpack": "cross-env DEBUG=vuepress* vuepress-webpack dev src",
+    "debug-build:webpack": "cross-env DEBUG=vuepress* vuepress-webpack build src",
     "lint": "prettier --check --write .",
     "lint:check": "prettier --check .",
     "lint-md": "markdownlint **/*.md --ignore node_modules --fix",
@@ -29,7 +33,8 @@
   ],
   "dependencies": {
     "@vuepress/plugin-docsearch": "2.0.0-beta.35",
-    "vuepress-theme-hope": "2.0.0-alpha.19",
+    "cross-env": "7.0.3",
+    "vuepress-theme-hope": "2.0.0-alpha.27",
     "vuepress-vite": "2.0.0-beta.35",
     "vuepress-webpack": "2.0.0-beta.35"
   },
