@@ -83,3 +83,27 @@ jobs:
 
       - name: Linter test
         run: yarn run lint
+
+  vite-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.4.0
+        with:
+          persist-credentials: false
+          submodules: true
+
+      - uses: actions/cache@v2.1.7
+        id: node-modules
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-modules-
+
+      - name: Install Deps
+        if: steps.node-modules.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
+
+      - name: Build Blog
+        run: yarn run build:vite
