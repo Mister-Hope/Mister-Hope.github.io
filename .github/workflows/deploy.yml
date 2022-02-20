@@ -28,7 +28,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build Blog
-        run: yarn run build:webpack
+        run: yarn run build:vite
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.3
@@ -84,7 +84,7 @@ jobs:
       - name: Linter test
         run: yarn run lint
 
-  vite-test:
+  webpack-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -106,4 +106,4 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build Blog
-        run: yarn run build:vite
+        run: yarn run build:webpack
