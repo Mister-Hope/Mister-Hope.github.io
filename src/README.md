@@ -11,8 +11,14 @@ projects:
   - name: vuepress-theme-hope
     type: link
     desc: 一个功能强大的 Vuepress 主题✨
-    link: https://vuepress-theme-hope.github.io/zh/
+    link: https://vuepress-theme-hope.github.io/v2/zh/
     cover: /assets/img/vuepress-hope-logo.svg
+
+  - name: Waline
+    type: project
+    desc: 一个安全轻量的评论系统
+    link: https://waline.js.org/
+    cover: https://waline.js.org/logo.png
 
   - name: in东师
     type: project
@@ -23,44 +29,35 @@ projects:
   - name: vuepress-plugin-md-enhance
     type: link
     desc: Vuepress Markdown 增强插件
-    link: https://vuepress-theme-hope.github.io/md-enhance/zh/
+    link: https://vuepress-theme-hope.github.io/v2/md-enhance/zh/
     cover: /assets/img/vuepress-hope-logo.svg
 
-  - name: "vuepress-plugin-feed2"
+  - name: vuepress-plugin-feed2
     type: link
-    desc: Vuepress2 Feed 插件
+    desc: VuePress2 Feed 插件
     link: https://vuepress-theme-hope.github.io/v2/feed/zh/
     cover: /assets/img/vuepress-hope-logo.svg
 
-  - name: ftp-hope
-    type: project
-    desc: 一个 Node.js 环境下基于 Promise 的 FTP 客户端
-    link: https://github.com/Mister-Hope/ftp-hope
+  - name: vuepress-plugin-pwa2
+    type: link
+    desc: VuePress2 PWA 插件
+    link: https://vuepress-theme-hope.github.io/v2/pwa/zh/
+    cover: /assets/img/vuepress-hope-logo.svg
 
-  - name: es-parser
+  - name: "@mr-hope/gulp-sass"
     type: project
-    desc: 100kb 大小的 es6 解析器
-    link: https://github.com/Mister-Hope/es-parser
+    desc: Gulp Sass 插件
+    link: https://github.com/Mister-Hope/gulp-sass
 
-  - name: "@mr-hope/assert-type"
+  - name: mptool
     type: project
-    desc: 对象结构断言库
-    link: https://github.com/Mister-Hope/assert-type
+    desc: 轻量、高效的微信小程序框架
+    link: https://github.com/miniapp-tool/mptool
 
   # - name: in东师官网
   #   type: project
   #   desc: 提供各种功能的聚合入口，校历、讲座资讯
   #   link: https://innenu.com/
-
-  # - name: mppage
-  #   type: project
-  #   desc: 轻量、高效的微信小程序框架(源码即将开放)
-  #   link: https://github.com/Mister-Hope/mppage
-
-  # - name: WNMP
-  #   type: project
-  #   desc: Windows 下一键安装集成式 WNMP 开发环境，高效安装，方便本地调试
-  #   link: https://github.com/Mister-Hope/install-WAMP-WNMP
 
   - name: 代码教程
     type: book

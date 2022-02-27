@@ -14,6 +14,12 @@ projects:
     link: https://vuepress-theme-hope.github.io/
     cover: /assets/img/vuepress-hope-logo.svg
 
+  - name: Waline
+    type: project
+    desc: A safe and fast comment service
+    link: https://waline.js.org/en/
+    cover: https://waline.js.org/logo.png
+
   - name: in NENU
     type: project
     desc: 570,000+ words NENU guide, a comprehensive introduction to NENU life, the best admission guide for NENU freshmen❤
@@ -22,28 +28,29 @@ projects:
 
   - name: vuepress-plugin-md-enhance
     type: link
-    desc: Vuepress Markdown Enhance plugin
-    link: https://vuepress-theme-hope.github.io/md-enhance/
+    desc: VuePress Markdown Enhance plugin
+    link: https://vuepress-theme-hope.github.io/v2/md-enhance/
     cover: /assets/img/vuepress-hope-logo.svg
 
   - name: vuepress-plugin-feed2
     type: link
-    desc: Vuepress2 Feed Plugin
+    desc: VuePress2 Feed Plugin
     link: https://vuepress-theme-hope.github.io/v2/feed/
     cover: /assets/img/vuepress-hope-logo.svg
 
-  - name: ftp-hope
-    type: project
-    desc: A Node.js FTP client with promise support
-    link: https://github.com/Mister-Hope/ftp-hope
+  - name: vuepress-plugin-pwa2
+    type: link
+    desc: VuePress2 PWA Plugin
+    link: https://vuepress-theme-hope.github.io/v2/pwa/
+    cover: /assets/img/vuepress-hope-logo.svg
 
-  - name: es-parser
+  - name: "@mr-hope/gulp-sass"
     type: project
-    desc: An es6 js parser
-    link: https://github.com/Mister-Hope/es-parser
+    desc: Sass Plugin for Gulp
+    link: https://github.com/Mister-Hope/gulp-sass
 
-  - name: "@mr-hope/assert-type"
+  - name: mptool
     type: project
-    desc: Object shape asset library
-    link: https://github.com/Mister-Hope/assert-type
+    desc: Light, effective miniapp framwork
+    link: https://github.com/miniapp-tool/mptool
 ---
