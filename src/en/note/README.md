@@ -1,11 +1,11 @@
 ---
-title: Mr.Hope's essay
+title: Notes
 icon: note
 ---
 
 ::: tip
 
-Note, all the essay only contains **Chinese** version.
+Note, all the notes only contains **Chinese** version.
 
 :::
 

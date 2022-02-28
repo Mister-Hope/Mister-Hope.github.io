@@ -1,0 +1,53 @@
+import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+
+export const design: HopeThemeSidebarArrayConfig = [
+  "",
+  {
+    text: "图标",
+    icon: "discover",
+    collapsable: false,
+    prefix: "icon/",
+    children: [
+      "",
+      "intro",
+      "type",
+      "guide",
+      "software",
+      "draw",
+      "line",
+      "flour",
+      "decorative",
+      "start",
+      "skill",
+      "apply",
+    ],
+  },
+  {
+    text: "导航",
+    icon: "navigate",
+    collapsable: false,
+    prefix: "navigation/",
+    children: [
+      "intro",
+      "navbar",
+      "navbar-design",
+      "sidebar-navigate",
+      "tabbar",
+      "tabbar-design",
+    ],
+  },
+  {
+    text: "交互",
+    icon: "interact",
+    collapsable: false,
+    prefix: "interact/",
+    children: ["", "search", "text-field"],
+  },
+  {
+    text: "文章",
+    icon: "note",
+    prefix: "articles/",
+    children: ["", "gestalt-principle", "left-or-right", "infomation-flow"],
+  },
+  "APP",
+];

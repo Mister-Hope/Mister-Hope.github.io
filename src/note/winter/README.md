@@ -1,5 +1,6 @@
 ---
 title: 冬之语
+icon: snow
 category: 随笔
 tag:
   - 冬之语
