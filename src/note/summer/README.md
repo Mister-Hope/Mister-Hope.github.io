@@ -1,5 +1,6 @@
 ---
 title: 夏之歌
+icon: leaf
 category: 随笔
 tag:
   - 夏之歌

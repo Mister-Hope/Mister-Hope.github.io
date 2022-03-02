@@ -1,5 +1,6 @@
 ---
 title: 春之诗
+icon: flower
 category: 随笔
 tag:
   - 春之诗

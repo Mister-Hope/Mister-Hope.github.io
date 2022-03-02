@@ -1,5 +1,6 @@
 ---
 title: 轻言细语
+icon: like
 category: 随笔
 tag:
   - 轻言细语

@@ -1,11 +1,11 @@
 ---
+title: 春之诗【题记】
+icon: flower
 date: 2015-04-12
 category: 随笔
 tag:
   - 春之诗
 ---
-
-# 春之诗【题记】
 
 ::: center
 

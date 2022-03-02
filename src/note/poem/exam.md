@@ -1,4 +1,5 @@
 ---
+icon: like
 date: 2016-06-08
 category: 随笔
 tag:

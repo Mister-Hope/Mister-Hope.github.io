@@ -1,10 +1,10 @@
 ---
+title: 笑谈人生
+icon: form
 category: 随笔
 tag:
   - 笑谈人生
 ---
-
-# 笑谈人生
 
 ::: tip 介绍
 

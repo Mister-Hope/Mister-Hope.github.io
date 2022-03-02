@@ -1,5 +1,6 @@
 ---
 title: 秋之思
+icon: autumn
 category: 随笔
 tag:
   - 秋之思
