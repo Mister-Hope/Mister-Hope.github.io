@@ -33,7 +33,14 @@ jobs:
         run: yarn run lint
 
   webpack-build-test:
+    name: Test build using ${{ matrix.bundler }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        bundler:
+          - webpack
+          - vite
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -48,32 +55,10 @@ jobs:
           key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-node-modules-
+
       - name: Install Deps
         if: steps.node-modules.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile
 
-      - name: Build Blog with webpack
-        run: yarn run build:webpack
-
-  vite-build-test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: false
-          submodules: true
-
-      - uses: actions/cache@v2
-        id: node-modules
-        with:
-          path: node_modules/
-          key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node-modules-
-      - name: Install Deps
-        if: steps.node-modules.outputs.cache-hit != 'true'
-        run: yarn install --frozen-lockfile
-
-      - name: Build Blog with vite
-        run: yarn run build:vite
+      - name: Build Blog with {{ matrix.bundler }}
+        run: yarn run build:{{ matrix.bundler }}
