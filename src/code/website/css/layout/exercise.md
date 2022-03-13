@@ -21,84 +21,6 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 下面，就来看看 Flex 如何实现，从 1 个点到 9 个点的布局。`div` 元素 (代表骰子的一个面) 是 Flex 容器，`span` 元素 (代表一个点) 是 Flex 项目。如果有多个项目，就要添加多个 `span` 元素，以此类推。
 
-::: details 本项目通用样式
-
-```css
-.dice-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-  background-color: #000;
-}
-
-.dice-container .box {
-  width: 90px;
-  height: 90px;
-  padding: 8px;
-  border-radius: 8px;
-  background-color: #f8f8f8;
-}
-
-.dice-container .item {
-  width: 24px;
-  height: 24px;
-  margin: 3px;
-  border-radius: 50%;
-  background-color: #000;
-}
-
-.grid-cell {
-  margin: 4px;
-  padding: 12px;
-  border-radius: 4px;
-  background-color: rgb(207, 232, 220);
-  color: #666;
-  font-size: 14px;
-}
-```
-
-:::
-
-<!-- markdownlint-disable no-inline-html -->
-
-<style>
-.dice-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-  background-color: #000;
-}
-
-.dice-container .box {
-  width: 90px;
-  height: 90px;
-  padding: 8px;
-  border-radius: 8px;
-  background-color: #f8f8f8;
-}
-
-.dice-container .item {
-  width: 24px;
-  height: 24px;
-  margin: 3px;
-  border-radius: 50%;
-  background-color: #000;
-}
-
-.grid-cell {
-  margin: 4px;
-  padding: 12px;
-  border-radius: 4px;
-  background-color: rgb(207, 232, 220);
-  color: #666;
-  font-size: 14px;
-}
-</style>
-
-<!-- markdownlint-enable no-inline-html -->
-
 ### 单项目
 
 首先，只有左上角 1 个点的情况。Flex 布局默认就是首行左对齐，所以一行代码就够了。
@@ -116,6 +38,31 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 ```css
 .box {
   display: flex;
+}
+
+/* Common styles */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
+
+.dice-container .box {
+  width: 90px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.dice-container .item {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: #000;
 }
 ```
 
@@ -138,6 +85,31 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
   display: flex;
   justify-content: center;
 }
+
+/* Common styles */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
+
+.dice-container .box {
+  width: 90px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.dice-container .item {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: #000;
+}
 ```
 
 :::
@@ -156,6 +128,31 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 .box {
   display: flex;
   justify-content: flex-end;
+}
+
+/* Common styles */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
+
+.dice-container .box {
+  width: 90px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.dice-container .item {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: #000;
 }
 ```
 
@@ -178,6 +175,31 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
   display: flex;
   align-items: center;
 }
+
+/* Common styles */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
+
+.dice-container .box {
+  width: 90px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.dice-container .item {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: #000;
+}
 ```
 
 :::
@@ -197,6 +219,31 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Common styles */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
+
+.dice-container .box {
+  width: 90px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.dice-container .item {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: #000;
 }
 ```
 
@@ -218,6 +265,31 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
   justify-content: center;
   align-items: flex-end;
 }
+
+/* Common styles */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
+
+.dice-container .box {
+  width: 90px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.dice-container .item {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: #000;
+}
 ```
 
 :::
@@ -237,6 +309,31 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+}
+
+/* Common styles */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
+
+.dice-container .box {
+  width: 90px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.dice-container .item {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: #000;
 }
 ```
 
@@ -260,6 +357,31 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
   display: flex;
   justify-content: space-between;
 }
+
+/* Common styles */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
+
+.dice-container .box {
+  width: 90px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.dice-container .item {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: #000;
+}
 ```
 
 :::
@@ -280,6 +402,31 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+/* Common styles */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
+
+.dice-container .box {
+  width: 90px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.dice-container .item {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: #000;
 }
 ```
 
@@ -303,6 +450,31 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
   justify-content: space-between;
   align-items: center;
 }
+
+/* Common styles */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
+
+.dice-container .box {
+  width: 90px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.dice-container .item {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: #000;
+}
 ```
 
 :::
@@ -324,6 +496,31 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+/* Common styles */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
+
+.dice-container .box {
+  width: 90px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.dice-container .item {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: #000;
 }
 ```
 
@@ -348,6 +545,31 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 .item:nth-child(2) {
   align-self: center;
 }
+
+/* Common styles */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
+
+.dice-container .box {
+  width: 90px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.dice-container .item {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: #000;
+}
 ```
 
 :::
@@ -371,6 +593,31 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 .item:nth-child(2) {
   align-self: flex-end;
+}
+
+/* Common styles */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
+
+.dice-container .box {
+  width: 90px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.dice-container .item {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: #000;
 }
 ```
 
@@ -401,6 +648,31 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 .item:nth-child(3) {
   align-self: flex-end;
+}
+
+/* Common styles */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
+
+.dice-container .box {
+  width: 90px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.dice-container .item {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: #000;
 }
 ```
 
@@ -437,6 +709,31 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
   display: flex;
   justify-content: space-between;
 }
+
+/* Common styles */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
+
+.dice-container .box {
+  width: 90px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.dice-container .item {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: #000;
+}
 ```
 
 :::
@@ -465,6 +762,31 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
   justify-content: space-between;
   align-content: space-between;
 }
+
+/* Common styles */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
+
+.dice-container .box {
+  width: 90px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.dice-container .item {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: #000;
+}
 ```
 
 :::
@@ -491,6 +813,31 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
+}
+
+/* Common styles */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
+
+.dice-container .box {
+  width: 90px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.dice-container .item {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: #000;
 }
 ```
 
@@ -537,6 +884,31 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 .row:nth-child(3) {
   justify-content: space-between;
 }
+
+/* Common styles */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
+
+.dice-container .box {
+  width: 90px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.dice-container .item {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: #000;
+}
 ```
 
 :::
@@ -581,6 +953,16 @@ CSS 代码如下。
 
 .grid-cell {
   flex: 1;
+}
+
+/* Common styles */
+.grid-cell {
+  margin: 4px;
+  padding: 12px;
+  border-radius: 4px;
+  background-color: rgb(207, 232, 220);
+  color: #666;
+  font-size: 14px;
 }
 ```
 
@@ -629,6 +1011,16 @@ CSS 代码如下。
 .grid-cell-4 {
   width: 25%;
 }
+
+/* Common styles */
+.grid-cell {
+  margin: 4px;
+  padding: 12px;
+  border-radius: 4px;
+  background-color: rgb(207, 232, 220);
+  color: #666;
+  font-size: 14px;
+}
 ```
 
 :::
@@ -644,12 +1036,12 @@ CSS 代码如下。
 HTML 代码如下。
 
 ```html
-<body class="HolyGrail">
+<body class="holy-grail">
   <header>...</header>
-  <div class="HolyGrail-body">
-    <main class="HolyGrail-content">...</main>
-    <nav class="HolyGrail-nav">...</nav>
-    <aside class="HolyGrail-ads">...</aside>
+  <div class="holy-grail-body">
+    <main class="holy-grail-content">...</main>
+    <nav class="holy-grail-nav">...</nav>
+    <aside class="holy-grail-ads">...</aside>
   </div>
   <footer>...</footer>
 </body>
@@ -658,7 +1050,7 @@ HTML 代码如下。
 CSS 代码如下。
 
 ```css
-.HolyGrail {
+.holy-grail {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -669,22 +1061,22 @@ footer {
   flex: 1;
 }
 
-.HolyGrail-body {
+.holy-grail-body {
   display: flex;
   flex: 1;
 }
 
-.HolyGrail-content {
+.holy-grail-content {
   flex: 1;
 }
 
-.HolyGrail-nav,
-.HolyGrail-ads {
+.holy-grail-nav,
+.holy-grail-ads {
   /* 两个边栏的宽度设为 12em */
   flex: 0 0 12em;
 }
 
-.HolyGrail-nav {
+.holy-grail-nav {
   /* 导航放到最左边 */
   order: -1;
 }
@@ -694,13 +1086,13 @@ footer {
 
 ```css
 @media (max-width: 768px) {
-  .HolyGrail-body {
+  .holy-grail-body {
     flex-direction: column;
     flex: 1;
   }
-  .HolyGrail-nav,
-  .HolyGrail-ads,
-  .HolyGrail-content {
+  .holy-grail-nav,
+  .holy-grail-ads,
+  .holy-grail-content {
     flex: auto;
   }
 }
@@ -715,21 +1107,21 @@ footer {
 HTML 代码如下。
 
 ```html
-<div class="InputAddOn">
-  <span class="InputAddOn-item">...</span>
-  <input class="InputAddOn-field" />
-  <button class="InputAddOn-item">...</button>
+<div class="input-add-on">
+  <span class="input-add-on-item">...</span>
+  <input class="input-add-on-field" />
+  <button class="input-add-on-item">...</button>
 </div>
 ```
 
 CSS 代码如下。
 
 ```css
-.InputAddOn {
+.input-add-on {
   display: flex;
 }
 
-.InputAddOn-field {
+.input-add-on-field {
   flex: 1;
 }
 ```
@@ -743,25 +1135,25 @@ CSS 代码如下。
 HTML 代码如下。
 
 ```html
-<div class="Media">
-  <img class="Media-figure" src="" alt="" />
-  <p class="Media-body">...</p>
+<div class="media">
+  <img class="media-figure" src="" alt="" />
+  <p class="media-body">...</p>
 </div>
 ```
 
 CSS 代码如下。
 
 ```css
-.Media {
+.media {
   display: flex;
   align-items: flex-start;
 }
 
-.Media-figure {
+.media-figure {
   margin-right: 1em;
 }
 
-.Media-body {
+.media-body {
   flex: 1;
 }
 ```
@@ -775,9 +1167,9 @@ CSS 代码如下。
 HTML 代码如下。
 
 ```html
-<body class="Site">
+<body class="site">
   <header>...</header>
-  <main class="Site-content">...</main>
+  <main class="site-content">...</main>
   <footer>...</footer>
 </body>
 ```
@@ -785,13 +1177,13 @@ HTML 代码如下。
 CSS 代码如下。
 
 ```css
-.Site {
+.site {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
 
-.Site-content {
+.site-content {
   flex: 1;
 }
 ```

@@ -11,7 +11,69 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 网格布局 (Grid) 是最强大的 CSS 布局方案。它将网页划分成一个个网格，可以任意组合不同的网格，做出各种各样的布局。
 
-![布局案例](./assets/grid-example.png)
+::: demo 网格布局案例
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+</div>
+```
+
+```css
+.grid-demo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+/* Common styles */
+.grid-demo > div {
+  padding: 1em;
+  border: 2px solid rgb(233, 171, 88);
+  border-radius: 5px;
+  background-color: rgba(233, 171, 88, 0.5);
+  color: #d9480f;
+  font-size: 2rem;
+}
+
+.grid-demo > .item1 {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+.grid-demo > .item2 {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+}
+
+.grid-demo > .item3 {
+  grid-row: 2 / 5;
+  grid-column: 1;
+}
+
+.grid-demo > .item4 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.grid-demo > .item5 {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+.grid-demo > .item6 {
+  grid-column: 3;
+  grid-row: 4;
+}
+```
+
+:::
 
 上图这样的布局，就是 Grid 布局的拿手好戏。
 
@@ -22,96 +84,6 @@ Grid 布局与 Flex 布局有一定的相似性，都可以指定容器内部多
 Flex 布局是轴线布局，只能指定"项目"针对轴线的位置，可以看作是一维布局。Grid 布局则是将容器划分成"行"和"列"，产生单元格，然后指定"项目所在"的单元格，可以看作是二维布局。Grid 布局远比 Flex 布局强大。
 
 :::
-
-::: details 本章通用样式
-
-```css
-.grid-demo > div {
-  color: black;
-  font-size: 40px;
-}
-
-.grid-demo > .item1 {
-  background-color: #ff69b4;
-}
-
-.grid-demo > .item2 {
-  background-color: #ffa500;
-}
-
-.grid-demo > .item3 {
-  background-color: #3cb371;
-}
-
-.grid-demo > .item4 {
-  background-color: #87cefa;
-}
-
-.grid-demo > .item5 {
-  background-color: #9370db;
-}
-
-.grid-demo > .item6 {
-  background-color: #f0e68c;
-}
-
-.grid-demo > .item7 {
-  background-color: #fa8072;
-}
-
-.grid-demo > .item7 {
-  background-color: #008b8b;
-}
-```
-
-:::
-
-<!-- markdownlint-disable no-inline-html -->
-
-<style>
-.grid-demo > div{
-  color: black;
-  font-size: 32px;
-}
-
-.grid-demo > .item1 {
-  background-color:#ff69b4;
-}
-
-.grid-demo > .item2 {
-  background-color:#ffa500;
-}
-
-.grid-demo > .item3 {
-  background-color: #3cb371;
-}
-
-.grid-demo > .item4 {
-  background-color: #87cefa;
-}
-
-.grid-demo > .item5 {
-  background-color: #9370db;
-}
-
-.grid-demo > .item6 {
-  background-color: #f0e68c;
-}
-
-.grid-demo > .item7 {
-  background-color: #fa8072;
-}
-
-.grid-demo > .item8 {
-  background-color: #ffd700;
-}
-
-.grid-demo > .item9 {
-  background-color: #008b8b;
-}
-</style>
-
-<!-- markdownlint-enable no-inline-html -->
 
 ## 基本概念
 
@@ -195,6 +167,48 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
   grid-template-columns: 100px 100px 100px;
   grid-template-rows: 100px 100px 100px;
 }
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
 ```
 
 :::
@@ -224,6 +238,48 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
   display: inline-grid;
   grid-template-columns: 100px 100px 100px;
   grid-template-rows: 100px 100px 100px;
+}
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
 }
 ```
 
@@ -261,6 +317,48 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
   grid-template-columns: 100px 100px 100px;
   grid-template-rows: 100px 100px 100px;
 }
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
 ```
 
 :::
@@ -269,7 +367,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 除了使用绝对单位，也可以使用百分比。
 
-::: demo
+::: demo 百分比
 
 ```html
 <div class="grid-demo">
@@ -287,11 +385,51 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 ```css
 .grid-demo {
-  width: 300px;
-  height: 300px;
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
   grid-template-rows: 33.33% 33.33% 33.33%;
+}
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
 }
 ```
 
@@ -321,11 +459,51 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 ```css
 .grid-demo {
-  width: 300px;
-  height: 300px;
   display: grid;
   grid-template-columns: repeat(3, 33.33%);
   grid-template-rows: repeat(3, 33.33%);
+}
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
 }
 ```
 
@@ -357,6 +535,48 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
   height: 300px;
   display: grid;
   grid-template-columns: repeat(2, 100px 20px 80px);
+}
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
 }
 ```
 
@@ -392,6 +612,48 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 .grid-demo > div {
   height: 100px;
+}
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
 }
 ```
 
@@ -430,6 +692,48 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 .grid-demo > div {
   height: 100px;
 }
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
 ```
 
 :::
@@ -462,6 +766,48 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 .grid-demo > div {
   height: 100px;
+}
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
 }
 ```
 
@@ -498,6 +844,48 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 .grid-demo > div {
   height: 100px;
 }
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
 ```
 
 :::
@@ -533,6 +921,48 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 .grid-demo > div {
   height: 100px;
 }
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
 ```
 
 :::
@@ -564,6 +994,48 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
   display: grid;
   grid-template-columns: [c1] 100px [c2] 100px [c3] auto [c4];
   grid-template-rows: [r1] 100px [r2] 100px [r3] auto [r4];
+}
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
 }
 ```
 
@@ -626,6 +1098,48 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
   grid-template-rows: 100px 100px 100px;
   row-gap: 20px;
   column-gap: 20px;
+}
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
 }
 ```
 
@@ -742,15 +1256,57 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
   grid-template-columns: 100px 100px 100px;
   grid-template-rows: 100px 100px 100px;
 }
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
 ```
 
 :::
 
 这个顺序由 `grid-auto-flow` 属性决定，默认值是 `row`，即"先行后列"。也可以将它设成 `column`，变成"先列后行"。
 
-::: demo grid-auto-flow: column
-
 设置了 `column` 以后，放置顺序就变成了下图。
+
+::: demo grid-auto-flow: column
 
 ```html
 <div class="grid-demo">
@@ -773,6 +1329,48 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
   grid-template-rows: 100px 100px 100px;
   grid-auto-flow: column;
 }
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
 ```
 
 :::
@@ -781,11 +1379,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 下面的例子让 1 号项目和 2 号项目各占据两个单元格，然后在默认的 `grid-auto-flow: row` 情况下，会产生下面这样的布局。
 
-![grid-auto-flow 1](./assets/grid-auto-flow-1.png)
-
-::: demo grid-auto-flow: column
-
-设置了 `column` 以后，放置顺序就变成了下图。
+::: demo 项目占据多个单元格下的 grid-auto-flow: row
 
 ```html
 <div class="grid-demo">
@@ -805,9 +1399,56 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 .grid-demo {
   width: 300px;
   display: grid;
-  grid-template-columns: repeat(auto-fill);
+  grid-template-columns: 100px 100px 100px;
   grid-template-rows: 100px 100px 100px;
-  grid-auto-flow: column;
+  grid-auto-rows: 100px;
+  grid-auto-flow: row;
+}
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  /* 这个属性后面会提到 */
+  grid-column-start: span 2;
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  /* 这个属性后面会提到 */
+  grid-column-start: span 2;
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
 }
 ```
 
@@ -817,29 +1458,163 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 现在修改设置，设为 `row dense`，表示"先行后列"，并且尽可能紧密填满，尽量不出现空格。
 
+上面代码的效果如下。
+
+::: demo grid-auto-flow: row dense
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
 ```css
-.container {
+.grid-demo {
+  width: 300px;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  grid-auto-rows: 100px;
   grid-auto-flow: row dense;
+}
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  /* 这个属性后面会提到 */
+  grid-column-start: span 2;
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  /* 这个属性后面会提到 */
+  grid-column-start: span 2;
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
 }
 ```
 
-上面代码的效果如下。
-
-![grid-auto-flow 2](./assets/grid-auto-flow2.png)
+:::
 
 上图会先填满第一行，再填满第二行，所以 3 号项目就会紧跟在 1 号项目的后面。8 号项目和 9 号项目就会排到第四行。
 
 如果将设置改为 `column dense`，表示"先列后行"，并且尽量填满空格。
 
+上面代码的效果如下。
+
+::: demo grid-auto-flow: column dense
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
 ```css
-.container {
+.grid-demo {
+  width: 300px;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  grid-auto-columns: 100px;
   grid-auto-flow: column dense;
+}
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  /* 这个属性后面会提到 */
+  grid-column-start: span 2;
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  /* 这个属性后面会提到 */
+  grid-column-start: span 2;
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
 }
 ```
 
-上面代码的效果如下。
-
-![grid-auto-flow 3](./assets/grid-auto-flow3.png)
+:::
 
 上图会先填满第一列，再填满第 2 列，所以 3 号项目在第一列，4 号项目在第二列。8 号项目和 9 号项目被挤到了第四列。
 
@@ -869,7 +1644,75 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 上面代码表示，单元格的内容左对齐，效果如下图。
 
-![justify-items: start](./assets/grid-justify-start.png)
+::: demo justify-items: start
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
+```css
+.grid-demo {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  justify-items: start;
+}
+
+/* Common styles */
+.grid-demo > div {
+  width: 50px;
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
+```
+
+:::
 
 ```css
 .container {
@@ -879,7 +1722,75 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 上面代码表示，单元格的内容头部对齐，效果如下图。
 
-![align-items: start](./assets/grid-align-start.png)
+::: demo align-items: start
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
+```css
+.grid-demo {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  align-items: start;
+}
+
+/* Common styles */
+.grid-demo > div {
+  height: 50px;
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
+```
+
+:::
 
 `place-items` 属性是 `align-items` 属性和 `justify-items` 属性的合并简写形式。
 
@@ -891,11 +1802,76 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 下面是一个例子。
 
+::: demo place-items: start end
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
 ```css
-.container {
+.grid-demo {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
   place-items: start end;
 }
+
+/* Common styles */
+.grid-demo > div {
+  width: 50px;
+  height: 50px;
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
 ```
+
+:::
 
 如果省略第二个值，则浏览器认为与第一个值相等。
 
@@ -914,33 +1890,515 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 这两个属性的写法完全相同，都可以取下面这些值。(下面的图都以 `justify-content` 属性为例，`align-content` 属性的图完全一样，只是将水平方向改成垂直方向。)
 
-- start - 对齐容器的起始边框。
+::: demo start - 对齐容器的起始边框。
 
-  ![start](./assets/grid-content-start.png)
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
 
-- end - 对齐容器的结束边框。
+```css
+.grid-demo {
+  margin: 8px;
+  padding: 8px;
+  border: 1px solid grey;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  justify-content: start;
+}
 
-  ![end](./assets/grid-content-end.png)
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
 
-- center - 容器内部居中。
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
 
-  ![center](./assets/grid-content-center.png)
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
 
-- stretch - 项目大小没有指定时，拉伸占据整个网格容器。
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
 
-  ![stretch](./assets/grid-content-stretch.png)
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
 
-- space-around - 每个项目两侧的间隔相等。所以，项目之间的间隔比项目与容器边框的间隔大一倍。
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
 
-  ![space-around](./assets/grid-content-space-around.png)
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
 
-- space-between - 项目与项目的间隔相等，项目与容器边框之间没有间隔。
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
 
-  ![space-between](./assets/grid-content-space-between.png)
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
 
-- space-evenly - 项目与项目的间隔相等，项目与容器边框之间也是同样长度的间隔。
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
+```
 
-  ![space-evenly](./assets/grid-content-space-evenly.png)
+:::
+
+::: demo end - 对齐容器的结束边框
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
+```css
+.grid-demo {
+  margin: 8px;
+  padding: 8px;
+  border: 1px solid grey;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  justify-content: end;
+}
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
+```
+
+:::
+
+::: demo center - 容器内部居中
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
+```css
+.grid-demo {
+  margin: 8px;
+  padding: 8px;
+  border: 1px solid grey;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  justify-content: center;
+}
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
+```
+
+:::
+
+::: demo stretch - 项目大小没有指定时，拉伸占据整个网格容器
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
+```css
+.grid-demo {
+  margin: 8px;
+  padding: 8px;
+  border: 1px solid grey;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px 100px;
+  justify-content: stretch;
+}
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
+```
+
+:::
+
+::: demo space-around - 每个项目两侧的间隔相等
+
+这意味着项目之间的间隔比项目与容器边框的间隔大一倍。
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
+```css
+.grid-demo {
+  margin: 8px;
+  padding: 8px;
+  border: 1px solid grey;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  justify-content: space-around;
+}
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
+```
+
+:::
+
+::: demo space-between - 项目与项目的间隔相等
+
+这意味着项目与容器边框之间没有间隔。
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
+```css
+.grid-demo {
+  margin: 8px;
+  padding: 8px;
+  border: 1px solid grey;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  justify-content: space-between;
+}
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
+```
+
+:::
+
+::: demo space-evenly - 项目与项目的间隔相等
+
+这意味着项目与容器边框之间也是同样长度的间隔。
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
+```css
+.grid-demo {
+  margin: 8px;
+  padding: 8px;
+  border: 1px solid grey;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  justify-content: space-evenly;
+}
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
+```
+
+:::
 
 `place-content` 属性是 `align-content` 属性和 `justify-content` 属性的合并简写形式。
 
@@ -952,11 +2410,78 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 下面是一个例子。
 
+::: demo place-content: space-around space-evenly
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
 ```css
-.container {
+.grid-demo {
+  height: 450px;
+  margin: 8px;
+  padding: 8px;
+  border: 1px solid grey;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
   place-content: space-around space-evenly;
 }
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
 ```
+
+:::
 
 如果省略第二个值，浏览器就会假定第二个值等于第一个值。
 
@@ -1007,7 +2532,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 - `grid-row-end` 属性: 下边框所在的水平网格线
 
 ```css
-.item-1 {
+.item1 {
   grid-column-start: 2;
   grid-column-end: 4;
 }
@@ -1015,16 +2540,85 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 上面代码指定，1 号项目的左边框是第二根垂直网格线，右边框是第四根垂直网格线。
 
-![grid 5](./assets/grid5.png)
+::: demo 案例渲染结果
 
-上图中，只指定了 1 号项目的左右边框，没有指定上下边框，所以会采用默认位置，即上边框是第一根水平网格线，下边框是第二根水平网格线。
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
+```css
+.grid-demo {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  grid-auto-rows: 100px;
+}
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
+```
+
+:::
+
+上述案例中，只指定了 1 号项目的左右边框，没有指定上下边框，所以会采用默认位置，即上边框是第一根水平网格线，下边框是第二根水平网格线。
 
 除了 1 号项目以外，其他项目都没有指定位置，由浏览器自动布局，这时它们的位置由容器的 `grid-auto-flow` 属性决定，这个属性的默认值是 `row`，因此会"先行后列"进行排列。您可以把这个属性的值分别改成 `column`、`row dense` 和 `column dense`，看看其他项目的位置发生了怎样的变化。
 
-下面的例子是指定四个边框位置的效果。
+下面我们给出一个指定四个边框位置的案例。
 
 ```css
-.item-1 {
+.item1 {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 2;
@@ -1032,12 +2626,83 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 }
 ```
 
-![grid 6](./assets/grid6.png)
+::: demo 案例渲染结果
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
+```css
+.grid-demo {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  grid-auto-rows: 100px;
+}
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
+```
+
+:::
 
 这四个属性的值，除了指定为第几个网格线，还可以指定为网格线的名字。
 
 ```css
-.item-1 {
+.item1 {
   grid-column-start: header-start;
   grid-column-end: header-end;
 }
@@ -1048,14 +2713,82 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 这四个属性的值还可以使用 `span` 关键字，表示"跨越"，即左右边框 (上下边框) 之间跨越多少个网格。
 
 ```css
-.item-1 {
+.item1 {
   grid-column-start: span 2;
 }
 ```
 
 上面代码表示，1 号项目的左边框距离右边框跨越 2 个网格。
 
-![grid 7](./assets/grid7.png)
+::: demo grid-column-start: span 2
+
+```html
+<div class="grid-demo">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+</div>
+```
+
+```css
+.grid-demo {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  grid-auto-rows: 100px;
+}
+
+/* Common styles */
+.grid-demo > div {
+  color: black;
+  font-size: 32px;
+}
+
+.grid-demo > .item1 {
+  background-color: #ff69b4;
+  grid-column-start: span 2;
+}
+
+.grid-demo > .item2 {
+  background-color: #ffa500;
+}
+
+.grid-demo > .item3 {
+  background-color: #3cb371;
+}
+
+.grid-demo > .item4 {
+  background-color: #87cefa;
+}
+
+.grid-demo > .item5 {
+  background-color: #9370db;
+}
+
+.grid-demo > .item6 {
+  background-color: #f0e68c;
+}
+
+.grid-demo > .item7 {
+  background-color: #fa8072;
+}
+
+.grid-demo > .item8 {
+  background-color: #ffd700;
+}
+
+.grid-demo > .item9 {
+  background-color: #008b8b;
+}
+```
+
+:::
 
 这与下面的代码效果完全一样。
 
@@ -1065,7 +2798,11 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 }
 ```
 
+::: info
+
 使用这四个属性，如果产生了项目的重叠，则使用 `z-index` 属性指定项目的重叠顺序。
+
+:::
 
 ### grid-column 属性 和 grid-row 属性
 
