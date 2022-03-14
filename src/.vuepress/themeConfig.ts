@@ -135,6 +135,7 @@ export default defineThemeConfig({
       sup: true,
       tex: true,
       vpre: true,
+      delay: 1000,
     },
 
     pwa: {
