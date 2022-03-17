@@ -14,7 +14,7 @@ star: true
 
 ## Mr.Hope 介绍
 
-![Mr.Hope](/logo.svg)
+![Mr.Hope](/logo.png)
 
 ---
 

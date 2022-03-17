@@ -2,37 +2,10 @@ name: Test blog
 
 on:
   push:
-    branches-ignore:
-      - main
-      - v1
   pull_request:
 
 jobs:
-  linter-test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: false
-          submodules: true
-
-      - uses: actions/cache@v2
-        id: node-modules
-        with:
-          path: node_modules/
-          key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node-modules-
-
-      - name: Install Deps
-        if: steps.node-modules.outputs.cache-hit != 'true'
-        run: yarn install --frozen-lockfile
-
-      - name: Linter test
-        run: yarn run lint
-
-  webpack-build-test:
+  build-test:
     name: Test build using ${{ matrix.bundler }}
     runs-on: ubuntu-latest
     strategy:
@@ -61,4 +34,30 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build Blog with {{ matrix.bundler }}
+        env:
+          NODE_OPTIONS: --max_old_space_size=4096
         run: yarn run build:{{ matrix.bundler }}
+
+  linter-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          submodules: true
+
+      - uses: actions/cache@v2
+        id: node-modules
+        with:
+          path: node_modules/
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-modules-
+
+      - name: Install Deps
+        if: steps.node-modules.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
+
+      - name: Linter test
+        run: yarn run lint
