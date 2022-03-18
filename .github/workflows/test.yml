@@ -33,10 +33,10 @@ jobs:
         if: steps.node-modules.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile
 
-      - name: Build Blog with {{ matrix.bundler }}
+      - name: Build Blog with ${{ matrix.bundler }}
         env:
           NODE_OPTIONS: --max_old_space_size=4096
-        run: yarn run build:{{ matrix.bundler }}
+        run: yarn run build:${{ matrix.bundler }}
 
   linter-test:
     runs-on: ubuntu-latest
