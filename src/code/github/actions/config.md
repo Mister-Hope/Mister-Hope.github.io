@@ -52,11 +52,11 @@ on: [push, pull_request]
 指定触发事件时，可以限定分支或标签。
 
 ```yml
-# 指定只有 master 分支发生 push 事件时，才会触发 workflow。
+# 指定只有 main 分支发生 push 事件时，才会触发 workflow。
 on:
   push:
     branches:
-      - master
+      - main
 ```
 
 ### jobs

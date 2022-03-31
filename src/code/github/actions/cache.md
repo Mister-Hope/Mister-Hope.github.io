@@ -15,8 +15,7 @@ tag:
 
 ::: info 缓存依赖
 
-关于缓存依赖的文档，详见 [缓存依赖项以加快工作流程
-](https://docs.github.com/cn/actions/guides/caching-dependencies-to-speed-up-workflows)
+关于缓存依赖的文档，详见 [缓存依赖项以加快工作流程](https://docs.github.com/cn/actions/guides/caching-dependencies-to-speed-up-workflows)。
 
 :::
 
@@ -55,7 +54,7 @@ tag:
 Yarn:
 
 ```yml
-- uses: actions/cache@v2
+- uses: actions/cache@v3
   # 使用此 id 获得 `cache-hit`
   # (`steps.yarn-cache.outputs.cache-hit != 'true'`)
   id: yarn-cache
@@ -77,7 +76,7 @@ Yarn:
 例如，使用 `hashFiles` 功能可让您在依存关系更改时创建新的缓存。
 
 ```yml
-- uses: actions/cache@v2
+- uses: actions/cache@v3
   id: yarn-cache
   with:
     path: |
@@ -97,6 +96,6 @@ Yarn:
 
 一个存储库最多可以有 5GB 的缓存。达到 5GB 限制后，将根据上次访问缓存的时间驱逐较早的缓存。过去未访问的缓存也将被自动删除。
 
-## 地址
+## 仓库
 
-地址: <https://github.com/actions/cache>
+<https://github.com/actions/cache>

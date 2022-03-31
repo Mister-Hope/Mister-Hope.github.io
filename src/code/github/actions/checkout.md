@@ -25,7 +25,7 @@ tag:
 
 ### token
 
-个人访问令牌，又称 Personal access token (PAT)，用于配置机器 Git 配置，以运行需要身份验证的 Git 命令。
+个人访问令牌，又称 Personal access token (PAT)，用于配置机器 Git 配置，以运行需要身份验证的 Git 命令，详见 [GitHub Token](../token.md)。
 
 ::: v-pre
 
@@ -104,7 +104,7 @@ tag:
 - 获取所有标签与历史:
 
   ```yml
-  - uses: actions/checkout@v2
+  - uses: actions/checkout@v3
     with:
       fetch-depth: 0
   ```
@@ -112,7 +112,7 @@ tag:
 - 检出特定分支
 
 ```yml
-- uses: actions/checkout@v2
+- uses: actions/checkout@v3
   with:
     ref: my-branch
 ```
@@ -120,7 +120,7 @@ tag:
 - 检出 `HEAD^`
 
   ```yml
-  - uses: actions/checkout@v2
+  - uses: actions/checkout@v3
     with:
       fetch-depth: 2
   - run: git checkout HEAD^
@@ -130,12 +130,12 @@ tag:
 
   ```yml
   - name: Checkout
-    uses: actions/checkout@v2
+    uses: actions/checkout@v3
     with:
       path: main
 
   - name: Checkout tools repo
-    uses: actions/checkout@v2
+    uses: actions/checkout@v3
     with:
       repository: my-org/my-tools
       path: my-tools
@@ -145,10 +145,10 @@ tag:
 
   ```yml
   - name: Checkout
-    uses: actions/checkout@v2
+    uses: actions/checkout@v3
 
   - name: Checkout tools repo
-    uses: actions/checkout@v2
+    uses: actions/checkout@v3
     with:
       repository: my-org/my-tools
       path: my-tools
@@ -158,12 +158,12 @@ tag:
 
   ```yml
   - name: Checkout
-    uses: actions/checkout@v2
+    uses: actions/checkout@v3
     with:
       path: main
 
   - name: Checkout private tools
-    uses: actions/checkout@v2
+    uses: actions/checkout@v3
     with:
       repository: my-org/my-private-tools
       token: ${{ secrets.GitHub_PAT }} # `GitHub_PAT` is a secret that contains your PAT
@@ -183,7 +183,7 @@ tag:
 - 检出 PR HEAD commit 而不是 merge commit
 
   ```yml
-  - uses: actions/checkout@v2
+  - uses: actions/checkout@v3
     with:
       ref: ${{ github.event.pull_request.head.sha }}
   ```
@@ -199,7 +199,7 @@ tag:
     build:
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v2
+        - uses: actions/checkout@v3
   ```
 
 - 使用内置 token 进行提交
@@ -210,7 +210,7 @@ tag:
     build:
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v2
+        - uses: actions/checkout@v3
         - run: |
             date > generated.txt
             git config user.name github-actions

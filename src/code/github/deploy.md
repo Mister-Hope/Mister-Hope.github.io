@@ -105,7 +105,7 @@ jobs:
       # 第一步: 下载源码
       - name: Checkout
         # action 配置详见 https://github.com/actions/checkout
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v3
         with:
           # 如果本项目包含了子模块 (git submodules)，需要将此项设置为 true
           # submodules: true
@@ -123,7 +123,7 @@ jobs:
           # token:
 
       # 缓存 node_modules 以避免重复安装
-      - uses: actions/cache@v2.1.6
+      - uses: actions/cache@v3
         id: node-modules
         with:
           # 需要缓存的路径
@@ -149,7 +149,7 @@ jobs:
       # 第四步，部署
       - name: Deploy
         # action 配置详见 https://github.com/JamesIves/github-pages-deploy-action
-        uses: JamesIves/github-pages-deploy-action@4.1.3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           # 部署到的分支
           branch: gh-pages
@@ -164,7 +164,7 @@ jobs:
     steps:
       # 检出网站代码
       - name: Checkout
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v3
         with:
           # 检出 gh-pages 分支
           ref: gh-pages
