@@ -3,10 +3,12 @@
   <id>https://mrhope.site/</id>
   <title>Mr.Hope</title>
   <subtitle>Where there is light, there is hope.</subtitle>
-  <updated>2022-03-31T03:28:29.138Z</updated>
+  <updated>2022-04-01T16:15:22.106Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mrhope.site/atom.xml"/>
   <link rel="alternate" href="https://mrhope.site/"/>
+  <category term="Android"/>
+  <category term="快速上手"/>
   <category term="物理"/>
   <category term="Python"/>
   <category term="GitHub"/>
@@ -32,10 +34,536 @@
     <name>印迹</name>
   </contributor>
   <entry>
+    <title type="html">启动另一个 activity</title>
+    <id>https://mrhope.site/code/Android/get-started/activity.html</id>
+    <link href="https://mrhope.site/code/Android/get-started/activity.html"/>
+    <updated>2022-04-01T16:15:22.127Z</updated>
+    <summary type="html"><![CDATA[<p>在本课中，您将向 MainActivity 添加一些代码，以便在用户点按 Send 按钮时启动一个显示消息的新 activity。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>在本课中，您将向 MainActivity 添加一些代码，以便在用户点按 Send 按钮时启动一个显示消息的新 activity。</p>
+
+<h2 id="响应-send-按钮" tabindex="-1"> 响应“Send”按钮</h2>
+<p>您可按照以下步骤，向 MainActivity 类添加一个在用户点按 Send 按钮时调用的方法：</p>
+<ol>
+<li>
+<p>在 app &gt; java &gt; com.example.myfirstapp &gt; MainActivity 文件中，添加以下 sendMessage() 方法桩：</p>
+<p>:::: code-group</p>
+<p>::: coude-group-item Kotlin</p>
+<div><pre><code><span>class</span> MainActivity <span>:</span> <span>AppCompatActivity</span><span>(</span><span>)</span> <span>{</span>
+    <span>override</span> <span>fun</span> <span>onCreate</span><span>(</span>savedInstanceState<span>:</span> Bundle<span>?</span><span>)</span> <span>{</span>
+        <span>super</span><span>.</span><span>onCreate</span><span>(</span>savedInstanceState<span>)</span>
+        <span>setContentView</span><span>(</span>R<span>.</span>layout<span>.</span>activity_main<span>)</span>
+    <span>}</span>
+
+    <span>/** Called when the user taps the Send button */</span>
+    <span>fun</span> <span>sendMessage</span><span>(</span>view<span>:</span> View<span>)</span> <span>{</span>
+        <span>// Do something in response to button</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>:::</p>
+<p>::: coude-group-item Java</p>
+<div><pre><code><span>public</span> <span>class</span> <span>MainActivity</span> <span>extends</span> <span>AppCompatActivity</span> <span>{</span>
+    <span>@Override</span>
+    <span>protected</span> <span>void</span> <span>onCreate</span><span>(</span><span>Bundle</span> savedInstanceState<span>)</span> <span>{</span>
+        <span>super</span><span>.</span><span>onCreate</span><span>(</span>savedInstanceState<span>)</span><span>;</span>
+        <span>setContentView</span><span>(</span><span>R</span><span>.</span>layout<span>.</span>activity_main<span>)</span><span>;</span>
+    <span>}</span>
+
+    <span>/** Called when the user taps the Send button */</span>
+    <span>public</span> <span>void</span> <span>sendMessage</span><span>(</span><span>View</span> view<span>)</span> <span>{</span>
+        <span>// Do something in response to button</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div><p>:::</p>
+<p>::::</p>
+<p>您可能会看到一条错误，因为 Android Studio 无法解析用作方法参数的 View 类。若要清除错误，请点击 View 声明，将光标置于其上，然后按 <code>Alt + Enter</code>（在 Mac 上则按 <code>Option + Enter</code>）进行快速修复。如果出现一个菜单，请选择 Import class。</p>
+</li>
+<li>
+<p>返回到 activity_main.xml 文件，并从该按钮调用此方法:</p>
+<ol>
+<li>选择布局编辑器中的相应按钮。</li>
+<li>在 Attributes 窗口中，找到 onClick 属性，并从其下拉列表中选择 <code>sendMessage [MainActivity]</code>。</li>
+</ol>
+<p>现在，当用户点按该按钮时，系统将调用 <code>sendMessage()</code> 方法。</p>
+<p>请注意此方法中提供的详细信息。系统需要这些信息来识别此方法是否与 android:onClick 属性兼容。具体来说，此方法具有以下特性：</p>
+<ol>
+<li>公开。</li>
+<li>返回值为空，或在 Kotlin 中为隐式 Unit。</li>
+<li>View 是唯一的参数。这是您在第 1 步结束时点击的 View 对象。</li>
+</ol>
+</li>
+<li>
+<p>接下来，填写此方法，以读取文本字段的内容，并将该文本传递给另一个 activity。</p>
+</li>
+</ol>
+<h2 id="构建一个-intent" tabindex="-1"> 构建一个 intent</h2>
+<p><code>Intent</code> 是在相互独立的组件（如两个 activity）之间提供运行时绑定功能的对象。Intent 表示应用执行某项操作的意图。您可以使用 intent 执行多种任务，但在本课中，您的 intent 将用于启动另一个 activity。</p>
+<p>在 MainActivity 中，添加 EXTRA_MESSAGE 常量和 sendMessage() 代码，如下所示：</p>
+<p>:::: code-group</p>
+<p>::: coude-group-item Kotlin</p>
+<div><pre><code><span>const</span> <span>val</span> EXTRA_MESSAGE <span>=</span> <span><span>"com.example.myfirstapp.MESSAGE"</span></span>
+
+<span>class</span> MainActivity <span>:</span> <span>AppCompatActivity</span><span>(</span><span>)</span> <span>{</span>
+    <span>override</span> <span>fun</span> <span>onCreate</span><span>(</span>savedInstanceState<span>:</span> Bundle<span>?</span><span>)</span> <span>{</span>
+        <span>super</span><span>.</span><span>onCreate</span><span>(</span>savedInstanceState<span>)</span>
+        <span>setContentView</span><span>(</span>R<span>.</span>layout<span>.</span>activity_main<span>)</span>
+    <span>}</span>
+
+    <span>/** Called when the user taps the Send button */</span>
+    <span>fun</span> <span>sendMessage</span><span>(</span>view<span>:</span> View<span>)</span> <span>{</span>
+        <span>val</span> editText <span>=</span> findViewById<span>&lt;</span>EditText<span>></span><span>(</span>R<span>.</span>id<span>.</span>editTextTextPersonName<span>)</span>
+        <span>val</span> message <span>=</span> editText<span>.</span>text<span>.</span><span>toString</span><span>(</span><span>)</span>
+        <span>val</span> intent <span>=</span> <span>Intent</span><span>(</span><span>this</span><span>,</span> DisplayMessageActivity<span>::</span><span>class</span><span>.</span>java<span>)</span><span>.</span><span>apply</span> <span>{</span>
+            <span>putExtra</span><span>(</span>EXTRA_MESSAGE<span>,</span> message<span>)</span>
+        <span>}</span>
+        <span>startActivity</span><span>(</span>intent<span>)</span>
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br></div></div><p>:::</p>
+<p>::: coude-group-item Java</p>
+<div><pre><code><span>public</span> <span>class</span> <span>MainActivity</span> <span>extends</span> <span>AppCompatActivity</span> <span>{</span>
+    <span>public</span> <span>static</span> <span>final</span> <span>String</span> EXTRA_MESSAGE <span>=</span> <span>"com.example.myfirstapp.MESSAGE"</span><span>;</span>
+    <span>@Override</span>
+    <span>protected</span> <span>void</span> <span>onCreate</span><span>(</span><span>Bundle</span> savedInstanceState<span>)</span> <span>{</span>
+        <span>super</span><span>.</span><span>onCreate</span><span>(</span>savedInstanceState<span>)</span><span>;</span>
+        <span>setContentView</span><span>(</span><span>R</span><span>.</span>layout<span>.</span>activity_main<span>)</span><span>;</span>
+    <span>}</span>
+
+    <span>/** Called when the user taps the Send button */</span>
+    <span>public</span> <span>void</span> <span>sendMessage</span><span>(</span><span>View</span> view<span>)</span> <span>{</span>
+        <span>Intent</span> intent <span>=</span> <span>new</span> <span>Intent</span><span>(</span><span>this</span><span>,</span> <span>DisplayMessageActivity</span><span>.</span><span>class</span><span>)</span><span>;</span>
+        <span>EditText</span> editText <span>=</span> <span>(</span><span>EditText</span><span>)</span> <span>findViewById</span><span>(</span><span>R</span><span>.</span>id<span>.</span>editTextTextPersonName<span>)</span><span>;</span>
+        <span>String</span> message <span>=</span> editText<span>.</span><span>getText</span><span>(</span><span>)</span><span>.</span><span>toString</span><span>(</span><span>)</span><span>;</span>
+        intent<span>.</span><span>putExtra</span><span>(</span>EXTRA_MESSAGE<span>,</span> message<span>)</span><span>;</span>
+        <span>startActivity</span><span>(</span>intent<span>)</span><span>;</span>
+    <span>}</span>
+<span>}</span>
+
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br></div></div><p>:::</p>
+<p>::::</p>
+<p>预计 Android Studio 会再次遇到 Cannot resolve symbol 错误。如需清除这些错误，请按 Alt+Enter（在 Mac 上则按 Option+Return）。您最后应导入以下内容：</p>
+<p>:::: code-group</p>
+<p>::: coude-group-item Kotlin</p>
+<div><pre><code><span>import</span> androidx<span>.</span>appcompat<span>.</span>app<span>.</span>AppCompatActivity
+<span>import</span> android<span>.</span>content<span>.</span>Intent
+<span>import</span> android<span>.</span>os<span>.</span>Bundle
+<span>import</span> android<span>.</span>view<span>.</span>View
+<span>import</span> android<span>.</span>widget<span>.</span>EditText
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>:::</p>
+<p>::: coude-group-item Java</p>
+<div><pre><code><span>import</span> <span>androidx<span>.</span>appcompat<span>.</span>app<span>.</span></span><span>AppCompatActivity</span><span>;</span>
+<span>import</span> <span>android<span>.</span>content<span>.</span></span><span>Intent</span><span>;</span>
+<span>import</span> <span>android<span>.</span>os<span>.</span></span><span>Bundle</span><span>;</span>
+<span>import</span> <span>android<span>.</span>view<span>.</span></span><span>View</span><span>;</span>
+<span>import</span> <span>android<span>.</span>widget<span>.</span></span><span>EditText</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>:::</p>
+<p>::::</p>
+<p>DisplayMessageActivity 仍有错误，但没有关系。您将在下一部分中修复该错误。</p>
+<p>sendMessage() 将发生以下情况：</p>
+<ul>
+<li>
+<p>Intent 构造函数会获取两个参数：Context 和 Class。</p>
+<p>首先使用 Context 参数，因为 Activity 类是 Context 的子类。</p>
+<p>在本例中，系统将 Intent, 传递到的应用组件的 Class 参数是要启动的 activity。</p>
+</li>
+<li>
+<p>putExtra() 方法将 EditText 的值添加到 intent。Intent 能够以称为“extra”的键值对形式携带数据类型。</p>
+<p>您的键是一个公共常量 EXTRA_MESSAGE，因为下一个 activity 将使用该键检索文本值。为 intent extra 定义键时，最好使用应用的软件包名称作为前缀。这样可以确保这些键是独一无二的，这在您的应用需要与其他应用进行交互时会很重要。</p>
+</li>
+<li>
+<p>startActivity() 方法将启动一个由 Intent 指定的 DisplayMessageActivity 实例。接下来，您需要创建该类。</p>
+</li>
+</ul>
+<div><p>提示</p>
+<p>导航架构组件允许您使用导航编辑器将一个 activity 与另一个 activity 相关联。建立这种关联后，您可以利用 API 在用户触发关联的操作（例如，用户点击某个按钮时）时启动第二个 activity。如需了解详情，请参阅导航。</p>
+</div>
+<h2 id="创建第二个-activity" tabindex="-1"> 创建第二个 activity</h2>
+<p>若要创建第二个 activity，请按以下步骤操作：</p>
+<ol>
+<li>在 Project 窗口中，右键点击 app 文件夹，然后依次选择 New &gt; Activity &gt; Empty Activity。</li>
+<li>在 Configure Activity 窗口中，输入“DisplayMessageActivity”作为 Activity Name。将所有其他属性保留为默认设置，然后点击 Finish。</li>
+</ol>
+<p>Android Studio 会自动执行下列三项操作：</p>
+<ol>
+<li>创建 DisplayMessageActivity 文件。</li>
+<li>创建 DisplayMessageActivity 文件对应的布局文件 activity_display_message.xml。</li>
+<li>在 AndroidManifest.xml 中添加所需的 <code>&lt;activity&gt;</code> 元素。</li>
+</ol>
+<p>如果您运行应用并点按第一个 activity 上的按钮，将启动第二个 activity，但它为空。这是因为第二个 activity 使用模板提供的空布局。</p>
+<h2 id="添加文本视图" tabindex="-1"> 添加文本视图</h2>
+<p>新 activity 包含一个空白布局文件。请按以下步骤操作，在显示消息的位置添加一个文本视图：</p>
+<ol>
+<li>打开 app &gt; res &gt; layout &gt; activity_display_message.xml 文件。</li>
+<li>点击工具栏中的 Enable Autoconnection to Parent 。系统将启用 Autoconnect。参见图 1。</li>
+<li>在 Palette 面板中，点击 Text，将 TextView 拖动到布局中，然后将其放置在靠近布局顶部中心的位置，使其贴靠到出现的垂直线上。Autoconnect 将添加左侧和右侧约束条件，以便将该视图放置在水平中心位置。</li>
+<li>再创建一个从文本视图顶部到布局顶部的约束条件，使该视图如图 1 中所示。</li>
+</ol>
+<p>或者，您可以对文本样式进行一些调整，方法是在 Attributes 窗口的 Common Attributes 面板中展开 textAppearance，然后更改 textSize 和 textColor 等属性。</p>
+<h2 id="显示消息" tabindex="-1"> 显示消息</h2>
+<p>在此步骤中，您将修改第二个 activity 以显示第一个 activity 传递的消息。</p>
+<ol>
+<li>
+<p>在 DisplayMessageActivity 中，将以下代码添加到 <code>onCreate()</code> 方法中：</p>
+<p>:::: code-group</p>
+<p>::: coude-group-item Kotlin</p>
+<div><pre><code><span>override</span> <span>fun</span> <span>onCreate</span><span>(</span>savedInstanceState<span>:</span> Bundle<span>?</span><span>)</span> <span>{</span>
+    <span>super</span><span>.</span><span>onCreate</span><span>(</span>savedInstanceState<span>)</span>
+    <span>setContentView</span><span>(</span>R<span>.</span>layout<span>.</span>activity_display_message<span>)</span>
+
+    <span>// Get the Intent that started this activity and extract the string</span>
+    <span>val</span> message <span>=</span> intent<span>.</span><span>getStringExtra</span><span>(</span>EXTRA_MESSAGE<span>)</span>
+
+    <span>// Capture the layout's TextView and set the string as its text</span>
+    <span>val</span> textView <span>=</span> findViewById<span>&lt;</span>TextView<span>></span><span>(</span>R<span>.</span>id<span>.</span>textView<span>)</span><span>.</span><span>apply</span> <span>{</span>
+        text <span>=</span> message
+    <span>}</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div><p>:::</p>
+<p>::: coude-group-item Java</p>
+<div><pre><code><span>@Override</span>
+<span>protected</span> <span>void</span> <span>onCreate</span><span>(</span><span>Bundle</span> savedInstanceState<span>)</span> <span>{</span>
+    <span>super</span><span>.</span><span>onCreate</span><span>(</span>savedInstanceState<span>)</span><span>;</span>
+    <span>setContentView</span><span>(</span><span>R</span><span>.</span>layout<span>.</span>activity_display_message<span>)</span><span>;</span>
+
+    <span>// Get the Intent that started this activity and extract the string</span>
+    <span>Intent</span> intent <span>=</span> <span>getIntent</span><span>(</span><span>)</span><span>;</span>
+    <span>String</span> message <span>=</span> intent<span>.</span><span>getStringExtra</span><span>(</span><span>MainActivity</span><span>.</span>EXTRA_MESSAGE<span>)</span><span>;</span>
+
+    <span>// Capture the layout's TextView and set the string as its text</span>
+    <span>TextView</span> textView <span>=</span> <span>findViewById</span><span>(</span><span>R</span><span>.</span>id<span>.</span>textView<span>)</span><span>;</span>
+    textView<span>.</span><span>setText</span><span>(</span>message<span>)</span><span>;</span>
+<span>}</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br></div></div><p>:::</p>
+<p>::::</p>
+</li>
+<li>
+<p>按 <code>Alt + Enter</code>（在 Mac 上则按 <code>Option + Return</code>）导入其他所需的类：</p>
+<p>:::: code-group</p>
+<p>::: coude-group-item Kotlin</p>
+<div><pre><code><span>import</span> androidx<span>.</span>appcompat<span>.</span>app<span>.</span>AppCompatActivity
+<span>import</span> android<span>.</span>content<span>.</span>Intent
+<span>import</span> android<span>.</span>os<span>.</span>Bundle
+<span>import</span> android<span>.</span>widget<span>.</span>TextView
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>:::</p>
+<p>::: coude-group-item Java</p>
+<div><pre><code><span>import</span> <span>androidx<span>.</span>appcompat<span>.</span>app<span>.</span></span><span>AppCompatActivity</span><span>;</span>
+<span>import</span> <span>android<span>.</span>content<span>.</span></span><span>Intent</span><span>;</span>
+<span>import</span> <span>android<span>.</span>os<span>.</span></span><span>Bundle</span><span>;</span>
+<span>import</span> <span>android<span>.</span>widget<span>.</span></span><span>TextView</span><span>;</span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>:::</p>
+<p>::::</p>
+</li>
+</ol>
+<h2 id="添加向上导航功能" tabindex="-1"> 添加向上导航功能</h2>
+<p>在您的应用中，不是主入口点的每个屏幕（所有不是主屏幕的屏幕）都必须提供导航功能，以便将用户引导至应用层次结构中的逻辑父级屏幕。为此，请在应用栏中添加向上按钮。</p>
+<p>若要添加向上按钮，您需要在 <code>AndroidManifest.xml</code> 文件中声明哪个 activity 是逻辑父级。打开 app &gt; manifests &gt; AndroidManifest.xml 文件，找到 DisplayMessageActivity 的 <code>&lt;activity&gt;</code> 标记，然后将其替换为以下代码：</p>
+<div><pre><code><span><span><span>&lt;</span>activity</span> <span><span>android:</span>name</span><span><span>=</span><span>"</span>.DisplayMessageActivity<span>"</span></span>
+          <span><span>android:</span>parentActivityName</span><span><span>=</span><span>"</span>.MainActivity<span>"</span></span><span>></span></span>
+    <span>&lt;!-- The meta-data tag is required if you support API level 15 and lower --></span>
+    <span><span><span>&lt;</span>meta-data</span>
+        <span><span>android:</span>name</span><span><span>=</span><span>"</span>android.support.PARENT_ACTIVITY<span>"</span></span>
+        <span><span>android:</span>value</span><span><span>=</span><span>"</span>.MainActivity<span>"</span></span> <span>/></span></span>
+<span><span><span>&lt;/</span>activity</span><span>></span></span>
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>Android 系统现在会自动向应用栏添加向上按钮。</p>
+<h2 id="运行应用" tabindex="-1"> 运行应用</h2>
+<p>点击工具栏中的 Apply Changes 以运行应用。当应用打开后，在文本字段中输入一条消息，点按 Send 即会看到该消息显示在第二个 activity 中。</p>
+]]></content>
+    <category term="Android"/>
+    <category term="快速上手"/>
+    <published>2022-04-01T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="html">创建项目</title>
+    <id>https://mrhope.site/code/Android/get-started/create.html</id>
+    <link href="https://mrhope.site/code/Android/get-started/create.html"/>
+    <updated>2022-04-01T16:15:22.127Z</updated>
+    <content type="html"><![CDATA[<p>本课将介绍如何使用 Android Studio 创建新的 Android 项目，并介绍该项目中的一些文件。</p>
+<p>如需创建新的 Android 项目，请按以下步骤操作：</p>
+<ol>
+<li>
+<p>安装最新版 Android Studio。</p>
+</li>
+<li>
+<p>在 Welcome to Android Studio 窗口中，点击 Create New Project。</p>
+<p>如果您已打开一个项目，请依次选择 File &gt; New &gt; New Project。</p>
+</li>
+<li>
+<p>在 Select a Project Template 窗口中，选择 Empty Activity，然后点击 Next。</p>
+</li>
+<li>
+<p>在 Configure your project 窗口中，完成以下操作：</p>
+<ul>
+<li>
+<p>在 Name 字段中输入“My First App”。</p>
+</li>
+<li>
+<p>在 Package name 字段中输入“com.example.myfirstapp”。</p>
+</li>
+<li>
+<p>如果您想将项目放在其他文件夹中，请更改其 Save 位置。</p>
+</li>
+<li>
+<p>从 Language 下拉菜单中选择 Java 或 Kotlin。</p>
+</li>
+<li>
+<p>在 Minimum SDK 字段中选择您希望应用支持的最低 Android 版本。</p>
+</li>
+</ul>
+<div><p>提示</p>
+<p>点击 Help me choose 链接可打开 Android Platform/API Version Distribution 对话框。此对话框会提供有关各 Android 版本在设备间的分布情况的信息。您需要权衡的主要因素是，您想支持的 Android 设备所占的百分比，以及在这些设备所搭载的各个不同版本上维护应用所需的工作量。例如，如果您选择让应用与多个不同 Android 版本兼容，那么维护最旧版本与最新版本之间的兼容性所需的工作量就会增大。</p>
+</div>
+<ul>
+<li>
+<p>如果您的应用需要旧版库支持，请选中 Use legacy android.support libraries 复选框。</p>
+</li>
+<li>
+<p>其他选项保持原样。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>点击 Finish。</p>
+</li>
+</ol>
+<p>经过一段时间的处理后，Android Studio 主窗口会出现。</p>
+<p>下面花一点时间了解一下最重要的文件。</p>
+<p>首先，确保已打开 Project 窗口（依次选择 View &gt; Tool Windows &gt; Project），并从该窗口顶部的下拉列表中选择 Android 视图。随后，您可以看到以下文件：</p>
+<ul>
+<li>
+<p>app &gt; java &gt; com.example.myfirstapp &gt; MainActivity</p>
+<p>这是主 activity。它是应用的入口点。当您构建和运行应用时，系统会启动此 Activity 的实例并加载其布局。</p>
+</li>
+<li>
+<p>app &gt; res &gt; layout &gt; activity_main.xml</p>
+<p>此 XML 文件定义了 activity 界面 (UI) 的布局。它包含一个 TextView 元素，其中具有“Hello, World!”文本</p>
+</li>
+<li>
+<p>app &gt; manifests &gt; AndroidManifest.xml</p>
+<p>清单文件描述了应用的基本特性并定义了每个应用组件。</p>
+</li>
+<li>
+<p>Gradle Scripts &gt; build.gradle</p>
+<p>有两个使用此名称的文件：一个针对项目“Project: My First App”，另一个针对应用模块“Module: My_First_App.app”。每个模块均有自己的 build.gradle 文件，但此项目当前仅有一个模块。使用每个模块的 build.gradle 文件控制 Gradle 插件构建应用的方式。如需详细了解此文件，请参阅配置 build。</p>
+</li>
+</ul>
+]]></content>
+    <category term="Android"/>
+    <category term="快速上手"/>
+    <published>2022-04-01T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="html">构建简单的界面</title>
+    <id>https://mrhope.site/code/Android/get-started/interface.html</id>
+    <link href="https://mrhope.site/code/Android/get-started/interface.html"/>
+    <updated>2022-04-01T16:15:22.127Z</updated>
+    <summary type="html"><![CDATA[<p>在本节课中，您将学习如何使用 Android Studio 布局编辑器创建包含一个文本框和一个按钮的布局。这将为下一课打下基础，下节课将学习如何在点按该按钮时让应用将文本框的内容发送到其他 activity。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>在本节课中，您将学习如何使用 Android Studio 布局编辑器创建包含一个文本框和一个按钮的布局。这将为下一课打下基础，下节课将学习如何在点按该按钮时让应用将文本框的内容发送到其他 activity。</p>
+
+<p>Android 应用的界面 (UI) 以布局和微件的层次结构形式构建而成。布局是 ViewGroup 对象，即控制其子视图在屏幕上的放置方式的容器。微件是 View 对象，即按钮和文本框等界面组件。</p>
+<p><img src="@source/code/Android/get-started/assets/viewgroup.png" alt="ViewGroup"></p>
+<p>Android 提供了 ViewGroup 和 View 类的 XML 词汇表，因此界面的大部分内容都在 XML 文件中定义。不过，本节课将向您介绍如何使用 Android Studio 的布局编辑器创建布局，而不是教您编写 XML 代码。布局编辑器会在您拖放视图构建布局时为您编写 XML 代码。</p>
+<h2 id="打开布局编辑器" tabindex="-1"> 打开布局编辑器</h2>
+<p>首先，请按照以下步骤设置工作区：</p>
+<ol>
+<li>在 Project 窗口中，依次打开 app &gt; res &gt; layout &gt; activity_main.xml。</li>
+<li>若要给布局编辑器留出空间，请隐藏 Project 窗口。为此，请依次选择 View &gt; Tool Windows &gt; Project，或直接点击 Android Studio 屏幕左侧的 Project。</li>
+<li>如果您的编辑器显示 XML 源代码，请点击窗口右上角的 Design 标签页。</li>
+<li>点击 (Select Design Surface)，然后选择 Blueprint。</li>
+<li>点击布局编辑器工具栏中的 (View Options)，并确保选中 Show All Constraints。</li>
+<li>确保 Autoconnect 处于关闭状态。当 Autoconnect 处于关闭状态时，工具栏中的提示会显示 (Enable Autoconnection to Parent)。</li>
+<li>点击工具栏中的 (Default Margins)，然后选择 16。如果需要，您可以稍后调整每个视图的外边距。</li>
+<li>点击工具栏中的 (Device for Preview)，然后选择 5.5, 1440 × 2560, 560 dpi (Pixel XL)。</li>
+</ol>
+<p>您的布局编辑器现在如下图所示。</p>
+<p><img src="@source/code/Android/get-started/assets/layout-editor.png" alt="布局编辑器"></p>
+<p>左下方的 Component Tree 面板显示布局的视图层次结构。在本例中，根视图是 ConstraintLayout，它仅包含一个 TextView 对象。</p>
+<p>ConstraintLayout 是一种布局，它根据同级视图和父布局的约束条件定义每个视图的位置。这样一来，使用扁平视图层次结构既可以创建简单布局，又可以创建复杂布局。这种布局无需嵌套布局。嵌套布局是布局内的布局（如图 2 所示），会增加绘制界面所需的时间。</p>
+<p>例如，您可以声明以下布局，如下图所示：</p>
+<ul>
+<li>视图 A 距离父布局顶部 16 dp。</li>
+<li>视图 A 距离父布局左侧 16 dp。</li>
+<li>视图 B 距离视图 A 右侧 16 dp。</li>
+<li>视图 B 与视图 A 顶部对齐。</li>
+</ul>
+<p><img src="@source/code/Android/get-started/assets/constraint-example.png" alt="布局示例"></p>
+<h2 id="添加文本框" tabindex="-1"> 添加文本框</h2>
+<p>请按照下面的步骤添加文本框：</p>
+<ol>
+<li>首先，您需要移除布局中已有的内容。在 Component Tree 面板中点击 TextView，然后按 Delete 键。</li>
+<li>在 Palette 面板中，点击 Text 以显示可用的文本控件。</li>
+<li>将 Plain Text 拖动到设计编辑器中，并将其放在靠近布局顶部的位置。这是一个接受纯文本输入的 EditText 微件。</li>
+<li>点击设计编辑器中的视图。现在，您可以在每个角上看到调整视图大小的正方形手柄，并在每个边上看到圆形约束锚点。为了更好地控制，您可能需要放大编辑器。为此，请使用布局编辑器工具栏中的 Zoom 按钮。</li>
+<li>点击并按住顶边上的锚点，将其向上拖动，直至其贴靠到布局顶部，然后将其释放。这是一个约束条件：它会将视图约束在已设置的默认外边距内。在本例中，您将其设置为距离布局顶部 16 dp。</li>
+<li>使用相同的过程创建一个从视图左侧到布局左侧的约束条件。</li>
+</ol>
+<h2 id="添加按钮" tabindex="-1"> 添加按钮</h2>
+<ol>
+<li>在 Palette 面板中，点击 Buttons。</li>
+<li>将 Button 微件拖到设计编辑器中，并将其放在靠近右侧的位置。</li>
+<li>创建一个从按钮左侧到文本框右侧的约束条件。</li>
+<li>如需按水平对齐约束视图，请创建一个文本基线之间的约束条件。为此，请右键点击按钮，然后选择 Show Baseline 在布局编辑器中显示基准操作。基线锚点显示在按钮内部。点击并按住此锚点，然后将其拖动到相邻文本框中显示的基线锚点上。</li>
+</ol>
+<div><p>提示</p>
+<p>您还可以根据顶边或底边实现水平对齐。但按钮的图片周围有内边距，因此如果以这种方式对齐，那么它们看上去是没有对齐的。</p>
+</div>
+<h2 id="更改界面字符串" tabindex="-1"> 更改界面字符串</h2>
+<p>若要预览界面，请点击工具栏中的 (Select Design Surface)，然后选择 Design。请注意，文本输入和按钮标签应设置为默认值。</p>
+<p>若要更改界面字符串，请按以下步骤操作：</p>
+<ol>
+<li>
+<p>打开 Project 窗口，然后打开 app &gt; res &gt; values &gt; strings.xml。</p>
+<p>这是一个字符串资源文件，您可在此文件中指定所有界面字符串。您可以利用该文件在一个位置管理所有界面字符串，使字符串的查找、更新和本地化变得更加容易。</p>
+</li>
+<li>
+<p>点击窗口顶部的 Open editor。此时将打开 Translations Editor，它提供了一个可以添加和修改默认字符串的简单界面。它还有助于让所有已翻译的字符串井然有序。</p>
+</li>
+<li>
+<p>点击 (Add Key) 可以创建一个新字符串作为文本框的“提示文本”。此时会打开如图 7 所示的窗口。</p>
+<p>在 Add Key 对话框中，完成以下步骤：</p>
+<ul>
+<li>在 Key 字段中输入“edit_message”。</li>
+<li>在 Default Value 字段中输入“Enter a message”。</li>
+<li>点击 OK。</li>
+</ul>
+</li>
+<li>
+<p>再添加一个名为“button_send”且值为“Send”的键。</p>
+</li>
+</ol>
+<p>现在，您可以为每个视图设置这些字符串。若要返回布局文件，请点击标签页栏中的 activity_main.xml。然后，添加字符串，如下所示：</p>
+<ol>
+<li>点击布局中的文本框。如果右侧还未显示 Attributes 窗口，请点击右侧边栏上的 Attributes。</li>
+<li>找到 text 属性（当前设为“Name”）并删除相应的值。</li>
+<li>找到 hint 属性，然后点击文本框右侧的 (Pick a Resource)。在显示的对话框中，双击列表中的 edit_message。</li>
+<li>点击布局中的按钮，找到其 text 属性（当前设为“Button”）。然后点击 (Pick a Resource)，并选择 button_send。</li>
+</ol>
+<h2 id="让文本框大小可灵活调整" tabindex="-1"> 让文本框大小可灵活调整</h2>
+<p>若要创建一个适应不同屏幕尺寸的布局，您需要让文本框拉伸以填充去除按钮和外边距后剩余的所有水平空间。</p>
+<p>继续操作之前，请点击工具栏中的 (Select Design Surface)，然后选择 Blueprint。</p>
+<p>若要让文本框大小可灵活调整，请按以下步骤操作：</p>
+<ol>
+<li>
+<p>选择两个视图。若要执行此操作，请点击一个视图，在按住 Shift 键的同时点击另一个视图，然后右键点击任一视图并依次选择 Chains &gt; Create Horizontal Chain。布局随即显示出来，如图 8 所示。</p>
+<div><p>相关信息</p>
+<p>链是两个或多个视图之间的双向约束条件，可让您采用一致的方式安排链接的视图。</p>
+</div>
+</li>
+<li>
+<p>选择按钮并打开 Attributes 窗口。然后使用 Constraint Widget 将右外边距设为 16 dp。
+点击文本框以查看其属性。然后，点击宽度指示器两次，确保将其设置为锯齿状线 (Match Constraints)，如图 9 中的标注 1 所示。</p>
+</li>
+<li>
+<p>“Match constraints”表示宽度将延长以符合水平约束条件和外边距的定义。因此，文本框将拉伸以填充去除按钮和所有外边距后剩余的水平空间。</p>
+</li>
+</ol>
+<h2 id="运行应用" tabindex="-1"> 运行应用</h2>
+<p>如果已在上一课中将您的应用安装到设备上，只需点击工具栏中的 (Apply Changes)，即可使用新布局更新应用。或者点击 Run 'app' 以安装并运行应用。</p>
+]]></content>
+    <category term="Android"/>
+    <category term="快速上手"/>
+    <published>2022-04-01T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="html">基础知识</title>
+    <id>https://mrhope.site/code/Android/get-started/intro.html</id>
+    <link href="https://mrhope.site/code/Android/get-started/intro.html"/>
+    <updated>2022-04-01T16:15:22.127Z</updated>
+    <summary type="html"><![CDATA[<p>本部分介绍如何构建简单的 Android 应用。首先，您将了解如何通过 Android Studio 创建“Hello, World!”项目并运行它。然后，您将为应用创建一个新界面，该界面会接受用户输入，并切换到应用中的一个新屏幕以显示用户输入内容。</p>
+<p>开始之前，您需要了解有关 Android 应用的两个基本概念：它们如何提供多个入口点，以及它们如何适应不同的设备。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>本部分介绍如何构建简单的 Android 应用。首先，您将了解如何通过 Android Studio 创建“Hello, World!”项目并运行它。然后，您将为应用创建一个新界面，该界面会接受用户输入，并切换到应用中的一个新屏幕以显示用户输入内容。</p>
+<p>开始之前，您需要了解有关 Android 应用的两个基本概念：它们如何提供多个入口点，以及它们如何适应不同的设备。</p>
+
+<h2 id="应用提供多个入口点" tabindex="-1"> 应用提供多个入口点</h2>
+<p>Android 应用都是将各种可单独调用的组件加以组合构建而成。例如，activity 是提供界面 (UI) 的一种应用组件。</p>
+<p>“主”activity 在用户点按您的应用图标时启动。您还可以将用户从其他位置（例如，从通知中，甚至从其他应用中）引导至某个 activity。</p>
+<p>其他组件（如 WorkManager）可使应用能够在没有界面的情况下执行后台任务。</p>
+<p>构建您的首个应用后，请参阅 [应用基础知识][] 来详细了解其他应用组件。</p>
+<h2 id="应用可适应不同的设备" tabindex="-1"> 应用可适应不同的设备</h2>
+<p>Android 允许您为不同的设备提供不同的资源。例如，您可以针对不同的屏幕尺寸创建不同的布局。系统会根据当前设备的屏幕尺寸确定要使用的布局。</p>
+<p>如果应用的任何功能需要使用特定的硬件（例如摄像头），您可以在运行时查询该设备是否具有该硬件，如果没有，则停用相应的功能。您可以指定应用需要使用特定的硬件，这样，Google Play 就不会允许在没有这些硬件的设备上安装应用。</p>
+<p>构建您的首个应用后，请参阅 [设备兼容性概览][] 来详细了解设备配置。</p>
+]]></content>
+    <category term="Android"/>
+    <category term="快速上手"/>
+    <published>2022-04-01T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="html">运行应用</title>
+    <id>https://mrhope.site/code/Android/get-started/run.html</id>
+    <link href="https://mrhope.site/code/Android/get-started/run.html"/>
+    <updated>2022-04-01T16:15:22.127Z</updated>
+    <content type="html"><![CDATA[<h2 id="在真实设备上运行" tabindex="-1"> 在真实设备上运行</h2>
+<p>按照以下步骤设置设备：</p>
+<ol>
+<li>
+<p>使用一根 USB 线将设备连接到开发机器。如果您是在 Windows 上开发的，则可能需要为设备安装合适的 USB 驱动程序。</p>
+</li>
+<li>
+<p>执行以下步骤，在开发者选项窗口中启用 USB 调试：</p>
+<ol>
+<li>
+<p>打开设置应用。</p>
+</li>
+<li>
+<p>如果您的设备使用 Android v8.0 或更高版本，请选择系统。否则，请继续执行下一步。</p>
+</li>
+<li>
+<p>滚动到底部，然后选择关于手机。</p>
+</li>
+<li>
+<p>滚动到底部，然后点按版本号七次。</p>
+</li>
+<li>
+<p>返回上一屏幕，滚动到底部，然后点按开发者选项。</p>
+</li>
+<li>
+<p>在开发者选项窗口中，向下滚动以查找并启用 USB 调试。</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>按照以下步骤操作，在设备上运行应用：</p>
+<ol>
+<li>
+<p>在 Android Studio 中，从工具栏中的运行/调试配置下拉菜单中选择您的应用。</p>
+</li>
+<li>
+<p>在工具栏中，从目标设备下拉菜单中选择要用来运行应用的设备。</p>
+</li>
+<li>
+<p>点击 Run 。</p>
+<p>Android Studio 会在已连接的设备上安装您的应用并启动它。您现在会看到设备上的应用中显示了“Hello, World!”。</p>
+</li>
+</ol>
+<h2 id="在模拟器上运行" tabindex="-1"> 在模拟器上运行</h2>
+<p>按照以下步骤操作，在模拟器上运行应用：</p>
+<ol>
+<li>
+<p>在 Android Studio 中创建一个 Android 虚拟设备 (AVD)，模拟器可以使用该设备安装和运行您的应用。</p>
+</li>
+<li>
+<p>在工具栏中，从运行/调试配置下拉菜单中选择您的应用。</p>
+</li>
+<li>
+<p>从目标设备下拉菜单中，选择要用来运行应用的 AVD。</p>
+</li>
+<li>
+<p>点击 Run 图标 。</p>
+<p>Android Studio 会在 AVD 上安装应用并启动模拟器。您现在会看到应用中显示了“Hello, World!”。</p>
+</li>
+</ol>
+]]></content>
+    <category term="Android"/>
+    <category term="快速上手"/>
+    <published>2022-04-01T00:00:00.000Z</published>
+  </entry>
+  <entry>
     <title type="html">概念</title>
     <id>https://mrhope.site/physics/tsp/definition.html</id>
     <link href="https://mrhope.site/physics/tsp/definition.html"/>
-    <updated>2022-03-31T03:28:29.168Z</updated>
+    <updated>2022-04-01T16:15:22.128Z</updated>
     <content type="html"><![CDATA[<h2 id="基本概念" tabindex="-1"> 基本概念</h2>
 <p>弛豫时间: 系统由其初始状态达到平衡状态所经历的时间。</p>
 <p>平衡态: 系统的各种宏观性质长时间内不发生变化，这样的状态成为热力学平衡态。</p>
@@ -82,7 +610,7 @@
     <title type="html">面向对象编程</title>
     <id>https://mrhope.site/code/language/python/oop/</id>
     <link href="https://mrhope.site/code/language/python/oop/"/>
-    <updated>2022-03-31T03:28:29.168Z</updated>
+    <updated>2022-04-01T16:15:22.128Z</updated>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -122,7 +650,7 @@
     <title type="html">定制类</title>
     <id>https://mrhope.site/code/language/python/oop/customize.html</id>
     <link href="https://mrhope.site/code/language/python/oop/customize.html"/>
-    <updated>2022-03-31T03:28:29.169Z</updated>
+    <updated>2022-04-01T16:15:22.129Z</updated>
     <content type="html"><![CDATA[<p>看到类似 <code>__slots__</code> 这种形如 <code>__xxx__</code> 的变量或者函数名就要注意，这些在 Python 中是有特殊用途的。</p>
 <p><code>__slots__</code> 我们已经知道怎么用了，<code>__len__()</code> 方法我们也知道是为了能让 class 作用于 <code>len()</code> 函数。</p>
 <p>除此之外，Python 的 class 中还有许多这样有特殊用途的函数，可以帮助我们定制类。</p>
@@ -370,7 +898,7 @@ My name <span>is</span> Michael<span>.</span>
     <title type="html">继承和多态</title>
     <id>https://mrhope.site/code/language/python/oop/extend.html</id>
     <link href="https://mrhope.site/code/language/python/oop/extend.html"/>
-    <updated>2022-03-31T03:28:29.170Z</updated>
+    <updated>2022-04-01T16:15:22.129Z</updated>
     <content type="html"><![CDATA[<p>在 OOP 程序设计中，当我们定义一个 class 的时候，可以从某个现有的 class 继承，新的 class 称为子类 (Subclass) ，而被继承的 class 称为基类、父类或超类 (Base class、Super class) 。</p>
 <p>比如，我们已经编写了一个名为 Animal 的 class，有一个 <code>run()</code> 方法可以直接打印:</p>
 <div><pre><code><span>class</span> <span>Animal</span><span>(</span><span>object</span><span>)</span><span>:</span>
@@ -641,7 +1169,7 @@ Tortoise is running slowly<span>..</span>.
     <title type="html">获取对象信息</title>
     <id>https://mrhope.site/code/language/python/oop/info.html</id>
     <link href="https://mrhope.site/code/language/python/oop/info.html"/>
-    <updated>2022-03-31T03:28:29.170Z</updated>
+    <updated>2022-04-01T16:15:22.130Z</updated>
     <content type="html"><![CDATA[<p>当我们拿到一个对象的引用时，如何知道这个对象是什么类型、有哪些方法呢？</p>
 <h2 id="使用-type" tabindex="-1"> 使用 <code>type()</code></h2>
 <p>首先，我们来判断对象类型，使用 <code>type()</code> 函数:</p>
@@ -808,7 +1336,7 @@ AttributeError<span>:</span> <span>'MyObject'</span> <span>object</span> has no 
     <title type="html">类和实例</title>
     <id>https://mrhope.site/code/language/python/oop/instance.html</id>
     <link href="https://mrhope.site/code/language/python/oop/instance.html"/>
-    <updated>2022-03-31T03:28:29.171Z</updated>
+    <updated>2022-04-01T16:15:22.130Z</updated>
     <summary type="html"><![CDATA[<p>面向对象最重要的概念就是类 (Class) 和实例 (Instance) ，必须牢记类是抽象的模板，比如 <code>Student</code> 类，而实例是根据类创建出来的一个个具体的“对象”，每个对象都拥有相同的方法，但各自的数据可能不同。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>面向对象最重要的概念就是类 (Class) 和实例 (Instance) ，必须牢记类是抽象的模板，比如 <code>Student</code> 类，而实例是根据类创建出来的一个个具体的“对象”，每个对象都拥有相同的方法，但各自的数据可能不同。</p>
@@ -975,7 +1503,7 @@ AttributeError<span>:</span> <span>'Student'</span> <span>object</span> has no a
     <title type="html">面向对象编程</title>
     <id>https://mrhope.site/code/language/python/oop/intro.html</id>
     <link href="https://mrhope.site/code/language/python/oop/intro.html"/>
-    <updated>2022-03-31T03:28:29.171Z</updated>
+    <updated>2022-04-01T16:15:22.131Z</updated>
     <content type="html"><![CDATA[<p>面向对象编程——Object Oriented Programming，简称 OOP，是一种程序设计思想。OOP 把对象作为程序的基本单元，一个对象包含了数据和操作数据的函数。</p>
 <p>面向过程的程序设计把计算机程序视为一系列的命令集合，即一组函数的顺序执行。为了简化程序设计，面向过程把函数继续切分为子函数，即把大块函数通过切割成小块函数来降低系统的复杂度。</p>
 <p>而面向对象的程序设计把计算机程序视为一组对象的集合，而每个对象都可以接收其他对象发过来的消息，并处理这些消息，计算机程序的执行就是一系列消息在各个对象之间传递。</p>
@@ -1012,7 +1540,7 @@ lisa<span>.</span>print_score<span>(</span><span>)</span>
     <title type="html">属性</title>
     <id>https://mrhope.site/code/language/python/oop/property.html</id>
     <link href="https://mrhope.site/code/language/python/oop/property.html"/>
-    <updated>2022-03-31T03:28:29.171Z</updated>
+    <updated>2022-04-01T16:15:22.131Z</updated>
     <content type="html"><![CDATA[<h2 id="私有属性" tabindex="-1"> 私有属性</h2>
 <p>在 Class 内部，可以有属性和方法，而外部代码可以通过直接调用实例变量的方法来操作数据，这样，就隐藏了内部的复杂逻辑。</p>
 <p>但是，从前面 Student 类的定义来看，外部代码还是可以自由地修改一个实例的 <code>name</code>、<code>score</code> 属性:</p>
@@ -1221,7 +1749,7 @@ ValueError<span>:</span> score must between <span>0</span> <span>~</span> <span>
     <title type="html">特殊的 class</title>
     <id>https://mrhope.site/code/language/python/oop/special.html</id>
     <link href="https://mrhope.site/code/language/python/oop/special.html"/>
-    <updated>2022-03-31T03:28:29.172Z</updated>
+    <updated>2022-04-01T16:15:22.132Z</updated>
     <content type="html"><![CDATA[<h2 id="type" tabindex="-1"> <code>type()</code></h2>
 <p>动态语言和静态语言最大的不同，就是函数和类的定义，不是编译时定义的，而是运行时动态创建的。</p>
 <p>比方说我们要定义一个 <code>Hello</code> 的 class，就写一个 <code>hello.py</code> 模块:</p>
@@ -1480,7 +2008,7 @@ ARGS<span>:</span> <span>[</span><span>'my-pwd'</span><span>,</span> <span>'test
     <title type="html">模块</title>
     <id>https://mrhope.site/code/language/python/module/</id>
     <link href="https://mrhope.site/code/language/python/module/"/>
-    <updated>2022-03-31T03:28:29.172Z</updated>
+    <updated>2022-04-01T16:15:22.132Z</updated>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -1508,7 +2036,7 @@ ARGS<span>:</span> <span>[</span><span>'my-pwd'</span><span>,</span> <span>'test
     <title type="html">安装第三方模块</title>
     <id>https://mrhope.site/code/language/python/module/install.html</id>
     <link href="https://mrhope.site/code/language/python/module/install.html"/>
-    <updated>2022-03-31T03:28:29.172Z</updated>
+    <updated>2022-04-01T16:15:22.133Z</updated>
     <content type="html"><![CDATA[<p>在 Python 中，安装第三方模块，是通过包管理工具 pip 完成的。</p>
 <p>如果您正在使用 Mac 或 Linux，安装 pip 本身这个步骤就可以跳过了。</p>
 <p>如果您正在使用 Windows，请参考 <a href="/code/language/python/intro/install.html">安装 Python</a> 一节的内容，确保安装时勾选了 <code>pip</code> 和 <code>Add python.exe to Path</code>。</p>
@@ -1571,7 +2099,7 @@ ImportError: No module named mymodule
     <title type="html">模块</title>
     <id>https://mrhope.site/code/language/python/module/intro.html</id>
     <link href="https://mrhope.site/code/language/python/module/intro.html"/>
-    <updated>2022-03-31T03:28:29.172Z</updated>
+    <updated>2022-04-01T16:15:22.133Z</updated>
     <summary type="html"><![CDATA[<p>在计算机程序的开发过程中，随着程序代码越写越多，在一个文件里代码就会越来越长，越来越不容易维护。为了编写可维护的代码，我们把很多函数分组，分别放到不同的文件里，这样，每个文件包含的代码就相对较少，很多编程语言都采用这种组织代码的方式。在 Python 中，一个 <code>.py</code> 文件就称之为一个模块 (Module) 。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>在计算机程序的开发过程中，随着程序代码越写越多，在一个文件里代码就会越来越长，越来越不容易维护。为了编写可维护的代码，我们把很多函数分组，分别放到不同的文件里，这样，每个文件包含的代码就相对较少，很多编程语言都采用这种组织代码的方式。在 Python 中，一个 <code>.py</code> 文件就称之为一个模块 (Module) 。</p>
@@ -1639,7 +2167,7 @@ ImportError: No module named mymodule
     <title type="html">使用模块</title>
     <id>https://mrhope.site/code/language/python/module/usage.html</id>
     <link href="https://mrhope.site/code/language/python/module/usage.html"/>
-    <updated>2022-03-31T03:28:29.173Z</updated>
+    <updated>2022-04-01T16:15:22.133Z</updated>
     <summary type="html"><![CDATA[<p>Python 本身就内置了很多非常有用的模块，只要安装完毕，这些模块就可以立刻使用。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>Python 本身就内置了很多非常有用的模块，只要安装完毕，这些模块就可以立刻使用。</p>
@@ -1731,7 +2259,7 @@ Hello, world<span>!</span>
     <title type="html">匿名函数</title>
     <id>https://mrhope.site/code/language/python/functional-programming/anonymous-function.html</id>
     <link href="https://mrhope.site/code/language/python/functional-programming/anonymous-function.html"/>
-    <updated>2022-03-31T03:28:29.173Z</updated>
+    <updated>2022-04-01T16:15:22.133Z</updated>
     <content type="html"><![CDATA[<p>当我们在传入函数时，有些时候，不需要显式地定义函数，直接传入匿名函数更方便。</p>
 <p>在 Python 中，对匿名函数提供了有限支持。还是以 <code>map()</code> 函数为例，计算 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.10764em;">f</span><span>(</span><span>x</span><span>)</span><span style="margin-right:0.2778em;"></span><span>=</span><span style="margin-right:0.2778em;"></span></span><span><span style="height:0.8141em;"></span><span><span>x</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span></span></span></span> 时，除了定义一个 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:1em;vertical-align:-0.25em;"></span><span style="margin-right:0.10764em;">f</span><span>(</span><span>x</span><span>)</span></span></span></span> 的函数外，还可以直接传入匿名函数:</p>
 <div><pre><code><span>>></span><span>></span> <span>list</span><span>(</span><span>map</span><span>(</span><span>lambda</span> x<span>:</span> x <span>*</span>x<span>,</span> <span>[</span><span>1</span><span>,</span> <span>2</span><span>,</span> <span>3</span><span>,</span> <span>4</span><span>,</span> <span>5</span><span>,</span> <span>6</span><span>,</span> <span>7</span><span>,</span> <span>8</span><span>,</span> <span>9</span><span>]</span><span>)</span><span>)</span>
@@ -1767,7 +2295,7 @@ Hello, world<span>!</span>
     <title type="html">装饰器</title>
     <id>https://mrhope.site/code/language/python/functional-programming/decorator.html</id>
     <link href="https://mrhope.site/code/language/python/functional-programming/decorator.html"/>
-    <updated>2022-03-31T03:28:29.173Z</updated>
+    <updated>2022-04-01T16:15:22.134Z</updated>
     <content type="html"><![CDATA[<p>由于函数也是一个对象，而且函数对象可以被赋值给变量，所以，通过变量也能调用该函数。</p>
 <div><pre><code><span>>></span><span>></span> <span>def</span> <span>now</span><span>(</span><span>)</span><span>:</span>
 <span>.</span><span>.</span><span>.</span>     <span>print</span><span>(</span><span>'2021-3-15'</span><span>)</span>
@@ -1870,7 +2398,7 @@ execute now<span>(</span><span>)</span><span>:</span>
     <title type="html">偏函数</title>
     <id>https://mrhope.site/code/language/python/functional-programming/parital-function.html</id>
     <link href="https://mrhope.site/code/language/python/functional-programming/parital-function.html"/>
-    <updated>2022-03-31T03:28:29.173Z</updated>
+    <updated>2022-04-01T16:15:22.134Z</updated>
     <content type="html"><![CDATA[<p>Python 的 <code>functools</code> 模块提供了很多有用的功能，其中一个就是偏函数 (Partial function) 。</p>
 <div><p>提示</p>
 <p>要注意，这里的偏函数和数学意义上的偏函数不一样。</p>
@@ -1936,7 +2464,7 @@ kw <span>=</span> <span>{</span> <span>'base'</span><span>:</span> <span>2</span
     <title type="html">GitHub Pages</title>
     <id>https://mrhope.site/code/github/pages.html</id>
     <link href="https://mrhope.site/code/github/pages.html"/>
-    <updated>2022-03-31T03:28:29.174Z</updated>
+    <updated>2022-04-01T16:15:22.134Z</updated>
     <summary type="html"><![CDATA[<p>GitHub Pages 是静态站点托管服务，可直接从 GitHub 上的存储库中获取 HTML，CSS 和 JavaScript 文件，还可以选择在构建过程中运行这些文件并发布网站。</p>
 <p>您可以将站点托管在 GitHub 的 <code>github.io</code> 域名或您自己的自定义域名上。</p>
 ]]></summary>
@@ -2007,7 +2535,7 @@ kw <span>=</span> <span>{</span> <span>'base'</span><span>:</span> <span>2</span
     <title type="html">cache</title>
     <id>https://mrhope.site/code/github/actions/cache.html</id>
     <link href="https://mrhope.site/code/github/actions/cache.html"/>
-    <updated>2022-03-31T03:28:29.174Z</updated>
+    <updated>2022-04-01T16:15:22.134Z</updated>
     <summary type="html"><![CDATA[<p>这个 Action 允许您缓存依赖项和构建输出内容以缩短 Workflow 执行时间。</p>
 <p>日常最多使用的就是缓存依赖项，在每个工作流程中，将安装后的依赖通过安装后生成的依赖版本文件的哈希值进行缓存。</p>
 <p>当前工作流程的版本文件哈希值与历史缓存中的某一项完全相同时，直接载入这些依赖项缓存，这样就可以免去安装步骤。</p>
@@ -2076,7 +2604,7 @@ kw <span>=</span> <span>{</span> <span>'base'</span><span>:</span> <span>2</span
     <title type="html">github-pages-deploy</title>
     <id>https://mrhope.site/code/github/actions/gh-pages-deploy.html</id>
     <link href="https://mrhope.site/code/github/actions/gh-pages-deploy.html"/>
-    <updated>2022-03-31T03:28:29.174Z</updated>
+    <updated>2022-04-01T16:15:22.134Z</updated>
     <summary type="html"><![CDATA[<p>github-pages-deploy-action 用于自动将网站内容部署到 GitHub Pages。</p>
 <p>您可以使用这个 Action 将代码推送到您想要的任何分支中，包括 gh-pages 和 docs, 甚至可以处理跨存储库部署。</p>
 ]]></summary>
@@ -2147,7 +2675,7 @@ kw <span>=</span> <span>{</span> <span>'base'</span><span>:</span> <span>2</span
     <title type="html">持续集成</title>
     <id>https://mrhope.site/code/basic/ci.html</id>
     <link href="https://mrhope.site/code/basic/ci.html"/>
-    <updated>2022-03-31T03:28:29.174Z</updated>
+    <updated>2022-04-01T16:15:22.134Z</updated>
     <summary type="html"><![CDATA[<p>持续集成 (Continuous Integration) 指的是，频繁地 (一天多次) 将代码集成到主干，每次集成都通过自动化的构建 (包括编译，发布，自动化测试) 来验证，从而尽早地发现集成错误。</p>
 <p>持续集成的目的让产品可以快速迭代，同时还能保持高质量。就是说每完成一个完整的部分，就向下个环节交付，发现问题可以马上调整，使得问题不会放大到其他部分和后面的环节。</p>
 ]]></summary>
@@ -2236,7 +2764,7 @@ kw <span>=</span> <span>{</span> <span>'base'</span><span>:</span> <span>2</span
     <title type="html">Glob</title>
     <id>https://mrhope.site/code/basic/glob.html</id>
     <link href="https://mrhope.site/code/basic/glob.html"/>
-    <updated>2022-03-31T03:28:29.174Z</updated>
+    <updated>2022-04-01T16:15:22.135Z</updated>
     <summary type="html"><![CDATA[<p>本文介绍 Glob 匹配。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>本文介绍 Glob 匹配。</p>
@@ -2307,7 +2835,7 @@ kw <span>=</span> <span>{</span> <span>'base'</span><span>:</span> <span>2</span
     <title type="html">Pull Request</title>
     <id>https://mrhope.site/code/github/pr.html</id>
     <link href="https://mrhope.site/code/github/pr.html"/>
-    <updated>2022-03-31T03:28:29.174Z</updated>
+    <updated>2022-04-01T16:15:22.135Z</updated>
     <content type="html"><![CDATA[<h2 id="简介" tabindex="-1"> 简介</h2>
 <p>对于一个用户的公开仓库，在默认情况下虽然其他用户可以拉取该库的代码，但是他们并不能够直接向这个库进行推送。</p>
 <p>GitHub 是一个代码社区，这意味着鼓励大家互相提交与贡献代码。所以这就是 Fork 和 Pull Request 出现的意义。没有人会给一个陌生人添加访问自己仓库的权限，所以我们需要一种方式，能够让大家向仓库所有者发起贡献代码的请求。这就是 pull request 的由来。</p>
@@ -2352,7 +2880,7 @@ kw <span>=</span> <span>{</span> <span>'base'</span><span>:</span> <span>2</span
     <title type="html">加速 GitHub 克隆</title>
     <id>https://mrhope.site/code/github/speedup.html</id>
     <link href="https://mrhope.site/code/github/speedup.html"/>
-    <updated>2022-03-31T03:28:29.174Z</updated>
+    <updated>2022-04-01T16:15:22.135Z</updated>
     <content type="html"><![CDATA[<p>由于天朝墙的存在，GitHub 的访问速度在大部分国内地区都很慢。如果需要克隆体积比较大的项目，可能需要很长时间，也很大概率会在中途因为网络波动、终端问题导致克隆失败。</p>
 <p>本文介绍如何使用 Gitee 加快 GitHub 项目克隆。</p>
 <h2 id="gitee" tabindex="-1"> Gitee</h2>
@@ -2378,7 +2906,7 @@ kw <span>=</span> <span>{</span> <span>'base'</span><span>:</span> <span>2</span
     <title type="html">GitHub Actions</title>
     <id>https://mrhope.site/code/github/actions/</id>
     <link href="https://mrhope.site/code/github/actions/"/>
-    <updated>2022-03-31T03:28:29.175Z</updated>
+    <updated>2022-04-01T16:15:22.135Z</updated>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -2420,7 +2948,7 @@ kw <span>=</span> <span>{</span> <span>'base'</span><span>:</span> <span>2</span
     <title type="html">checkout</title>
     <id>https://mrhope.site/code/github/actions/checkout.html</id>
     <link href="https://mrhope.site/code/github/actions/checkout.html"/>
-    <updated>2022-03-31T03:28:29.175Z</updated>
+    <updated>2022-04-01T16:15:22.135Z</updated>
     <summary type="html"><![CDATA[<p>该操作将检出您的存储库 <code>$GITHUB_WORKSPACE</code>，使您的工作流可以访问它。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>该操作将检出您的存储库 <code>$GITHUB_WORKSPACE</code>，使您的工作流可以访问它。</p>
@@ -2582,7 +3110,7 @@ kw <span>=</span> <span>{</span> <span>'base'</span><span>:</span> <span>2</span
     <title type="html">Action 配置</title>
     <id>https://mrhope.site/code/github/actions/config.html</id>
     <link href="https://mrhope.site/code/github/actions/config.html"/>
-    <updated>2022-03-31T03:28:29.175Z</updated>
+    <updated>2022-04-01T16:15:22.135Z</updated>
     <summary type="html"><![CDATA[<p>GitHub Actions 的配置文件叫做 <code>workflow</code> 文件，存放在代码仓库的 <code>.github/workflows</code> 目录。</p>
 <p><code>workflow</code> 文件采用 <code>YAML</code> 格式，文件名可以任意取，但是后缀名统一为 <code>.yml</code>，比如<code>foo.yml</code>。</p>
 <p>一个库可以有多个 <code>workflow</code> 文件。GitHub 只要发现 <code>.github/workflows</code> 目录里面有 <code>.yml</code> 文件，就会自动运行该文件。</p>
@@ -2674,7 +3202,7 @@ kw <span>=</span> <span>{</span> <span>'base'</span><span>:</span> <span>2</span
     <title type="html">Actions 介绍</title>
     <id>https://mrhope.site/code/github/actions/intro.html</id>
     <link href="https://mrhope.site/code/github/actions/intro.html"/>
-    <updated>2022-03-31T03:28:29.175Z</updated>
+    <updated>2022-04-01T16:15:22.136Z</updated>
     <summary type="html"><![CDATA[<p>在 GitHub Actions 的仓库中自动化、自定义和执行软件开发工作流程。</p>
 <p>您可以发现、创建和共享操作以执行您喜欢的任何作业 (包括 CI/CD) ，并将操作合并到完全自定义的工作流程中。</p>
 ]]></summary>
@@ -2743,7 +3271,7 @@ kw <span>=</span> <span>{</span> <span>'base'</span><span>:</span> <span>2</span
     <title type="html">Windows Terminal</title>
     <id>https://mrhope.site/software/tool/terminal/</id>
     <link href="https://mrhope.site/software/tool/terminal/"/>
-    <updated>2022-03-31T03:28:29.175Z</updated>
+    <updated>2022-04-01T16:15:22.136Z</updated>
     <summary type="html"><![CDATA[<p>Windows Terminal 是一个面向命令行工具和 shell(如命令提示符、PowerShell 和适用于 Linux 的 Windows 子系统 (WSL))用户的新式终端应用程序。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>Windows Terminal 是一个面向命令行工具和 shell(如命令提示符、PowerShell 和适用于 Linux 的 Windows 子系统 (WSL))用户的新式终端应用程序。</p>
@@ -2796,7 +3324,7 @@ kw <span>=</span> <span>{</span> <span>'base'</span><span>:</span> <span>2</span
     <title type="html">快速上手</title>
     <id>https://mrhope.site/software/tool/terminal/get-started.html</id>
     <link href="https://mrhope.site/software/tool/terminal/get-started.html"/>
-    <updated>2022-03-31T03:28:29.175Z</updated>
+    <updated>2022-04-01T16:15:22.136Z</updated>
     <content type="html"><![CDATA[<h2 id="安装" tabindex="-1"> 安装</h2>
 <p>您可以通过 <a href="https://aka.ms/terminal" target="_blank" rel="noopener noreferrer">Microsoft Store<ExternalLinkIcon/></a> 进行安装，同样您可以访问 <a href="https://github.com/microsoft/terminal/releases/" target="_blank" rel="noopener noreferrer">GitHub release<ExternalLinkIcon/></a> 下载任意版本可执行文件。</p>
 <div><p>注意</p>
@@ -2991,7 +3519,7 @@ kw <span>=</span> <span>{</span> <span>'base'</span><span>:</span> <span>2</span
     <title type="html">自定义设置</title>
     <id>https://mrhope.site/software/tool/terminal/settings.html</id>
     <link href="https://mrhope.site/software/tool/terminal/settings.html"/>
-    <updated>2022-03-31T03:28:29.176Z</updated>
+    <updated>2022-04-01T16:15:22.136Z</updated>
     <summary type="html"><![CDATA[<p>配置文件代表着您可以在 Windows Terminal 中配置的不同的命令行环境。默认情况下，每个配置文件使用不同的命令行可执行程序，但是您可以根据自己的喜好，创建任意数量的使用同一可执行程序的配置文件。每个配置文件可以有自己的定制项以帮助您区分它们，并可以自由定制。</p>
 <p>可以使用快捷键 <code>Ctrl + Shift + *</code> 来打开对应的配置文件，可使用 <code>Ctrl + ,</code> 打开 settings.json 文件，来进行个性化调整和默认设置更改等设置。</p>
 ]]></summary>
@@ -3120,7 +3648,7 @@ kw <span>=</span> <span>{</span> <span>'base'</span><span>:</span> <span>2</span
     <title type="html">第一章</title>
     <id>https://mrhope.site/physics/tsp/charpter1.html</id>
     <link href="https://mrhope.site/physics/tsp/charpter1.html"/>
-    <updated>2022-03-31T03:28:29.178Z</updated>
+    <updated>2022-04-01T16:15:22.140Z</updated>
     <content type="html"><![CDATA[<h2 id="概念" tabindex="-1"> 概念</h2>
 <ul>
 <li>孤立系: 与其他物体既没有物质交换也没有能量交换的系统。</li>
@@ -3222,7 +3750,7 @@ s76,-153,76,-153s77,-151,77,-151c0.7,0.7,35.7,202,105,604c67.3,400.7,102,602.7,1
     <title type="html">第二章</title>
     <id>https://mrhope.site/physics/tsp/charpter2.html</id>
     <link href="https://mrhope.site/physics/tsp/charpter2.html"/>
-    <updated>2022-03-31T03:28:29.181Z</updated>
+    <updated>2022-04-01T16:15:22.144Z</updated>
     <content type="html"><![CDATA[<h2 id="四个热力学函数" tabindex="-1"> 四个热力学函数</h2>
 <p class='katex-block'><span><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:4.5em;vertical-align:-2em;"></span><span><span><span><span><span><span style="height:2.5em;"><span style="top:-4.66em;"><span style="height:3em;"></span><span><span style="margin-right:0.08125em;">H</span><span style="margin-right:0.2778em;"></span><span>=</span></span></span><span style="top:-3.16em;"><span style="height:3em;"></span><span><span style="margin-right:0.13889em;">F</span><span style="margin-right:0.2778em;"></span><span>=</span></span></span><span style="top:-1.66em;"><span style="height:3em;"></span><span><span>G</span><span style="margin-right:0.2778em;"></span><span>=</span></span></span></span><span>​</span></span><span><span style="height:2em;"><span></span></span></span></span></span><span><span><span><span style="height:2.5em;"><span style="top:-4.66em;"><span style="height:3em;"></span><span><span></span><span style="margin-right:0.10903em;">U</span><span style="margin-right:0.2222em;"></span><span>+</span><span style="margin-right:0.2222em;"></span><span>p</span><span style="margin-right:0.22222em;">V</span></span></span><span style="top:-3.16em;"><span style="height:3em;"></span><span><span></span><span style="margin-right:0.10903em;">U</span><span style="margin-right:0.2222em;"></span><span>−</span><span style="margin-right:0.2222em;"></span><span style="margin-right:0.05764em;">TS</span></span></span><span style="top:-1.66em;"><span style="height:3em;"></span><span><span></span><span style="margin-right:0.10903em;">U</span><span style="margin-right:0.2222em;"></span><span>−</span><span style="margin-right:0.2222em;"></span><span style="margin-right:0.05764em;">TS</span><span style="margin-right:0.2222em;"></span><span>+</span><span style="margin-right:0.2222em;"></span><span>p</span><span style="margin-right:0.22222em;">V</span></span></span></span><span>​</span></span><span><span style="height:2em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
 <p>微分形式:</p>
@@ -3277,7 +3805,7 @@ s76,-153,76,-153s77,-151,77,-151c0.7,0.7,35.7,202,105,604c67.3,400.7,102,602.7,1
     <title type="html">第三章</title>
     <id>https://mrhope.site/physics/tsp/charpter3.html</id>
     <link href="https://mrhope.site/physics/tsp/charpter3.html"/>
-    <updated>2022-03-31T03:28:29.182Z</updated>
+    <updated>2022-04-01T16:15:22.145Z</updated>
     <content type="html"><![CDATA[<h2 id="稳定平衡条件" tabindex="-1"> 稳定平衡条件</h2>
 <p>在等温等容的条件下，自由能 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.6833em;"></span><span style="margin-right:0.13889em;">F</span></span></span></span> 永不增加。在稳定状态下 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.6833em;"></span><span style="margin-right:0.13889em;">F</span></span></span></span> 为极小(即 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.6944em;"></span><span style="margin-right:0.03785em;">δ</span><span style="margin-right:0.13889em;">F</span><span style="margin-right:0.2778em;"></span><span>=</span><span style="margin-right:0.2778em;"></span></span><span><span style="height:1.0085em;vertical-align:-0.1944em;"></span><span>0</span><span>,</span><span style="margin-right:0.1667em;"></span><span><span style="margin-right:0.03785em;">δ</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span><span style="margin-right:0.13889em;">F</span><span style="margin-right:0.2778em;"></span><span>⩾</span><span style="margin-right:0.2778em;"></span></span><span><span style="height:0.6444em;"></span><span>0</span></span></span></span>)</p>
 <p>在等温等压的条件下，吉布斯函数 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.6833em;"></span><span>G</span></span></span></span> 永不增加。在稳定状态下 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.6833em;"></span><span>G</span></span></span></span> 为极小(即 <span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.6944em;"></span><span style="margin-right:0.03785em;">δ</span><span>G</span><span style="margin-right:0.2778em;"></span><span>=</span><span style="margin-right:0.2778em;"></span></span><span><span style="height:1.0085em;vertical-align:-0.1944em;"></span><span>0</span><span>,</span><span style="margin-right:0.1667em;"></span><span><span style="margin-right:0.03785em;">δ</span><span><span><span><span style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span><span>G</span><span style="margin-right:0.2778em;"></span><span>⩾</span><span style="margin-right:0.2778em;"></span></span><span><span style="height:0.6444em;"></span><span>0</span></span></span></span>)</p>
@@ -3301,7 +3829,7 @@ s76,-153,76,-153s77,-151,77,-151c0.7,0.7,35.7,202,105,604c67.3,400.7,102,602.7,1
     <title type="html">第一章</title>
     <id>https://mrhope.site/physics/electromagnetism/charpter1.html</id>
     <link href="https://mrhope.site/physics/electromagnetism/charpter1.html"/>
-    <updated>2022-03-31T03:28:29.184Z</updated>
+    <updated>2022-04-01T16:15:22.148Z</updated>
     <content type="html"><![CDATA[<h2 id="电场与电势" tabindex="-1"> 电场与电势</h2>
 <p class='katex-block'><span><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.6944em;"></span><span style="margin-right:0.03148em;">k</span><span style="margin-right:0.2778em;"></span><span>=</span><span style="margin-right:0.2778em;"></span></span><span><span style="height:2.1574em;vertical-align:-0.836em;"></span><span><span></span><span><span><span><span style="height:1.3214em;"><span style="top:-2.314em;"><span style="height:3em;"></span><span><span>4</span><span style="margin-right:0.03588em;">π</span><span><span>ε</span><span><span><span><span style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>0</span></span></span></span><span>​</span></span><span><span style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span style="height:3em;"></span><span style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span style="height:3em;"></span><span><span>1</span></span></span></span><span>​</span></span><span><span style="height:0.836em;"><span></span></span></span></span></span><span></span></span><span style="margin-right:0.2778em;"></span><span>=</span><span style="margin-right:0.2778em;"></span></span><span><span style="height:1.7936em;vertical-align:-0.686em;"></span><span><span></span><span><span><span><span style="height:1.1076em;"><span style="top:-2.314em;"><span style="height:3em;"></span><span><span>4</span><span style="margin-right:0.03588em;">π</span></span></span><span style="top:-3.23em;"><span style="height:3em;"></span><span style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span style="height:3em;"></span><span><span><span>μ</span><span><span><span><span style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>0</span></span></span></span><span>​</span></span><span><span style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span>​</span></span><span><span style="height:0.686em;"><span></span></span></span></span></span><span></span></span></span></span></span></span></p>
 <p class='katex-block'><span><span><span><i>Content not supported</i></span><span aria-hidden="true"><span><span style="height:0.8333em;vertical-align:-0.15em;"></span><span><span style="margin-right:0.13889em;">F</span><span><span><span><span style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span><span>12</span></span></span></span></span><span>​</span></span><span><span style="height:0.15em;"><span></span></span></span></span></span></span><span style="margin-right:0.2778em;"></span><span>=</span><span style="margin-right:0.2778em;"></span></span><span><span style="height:1.7936em;vertical-align:-0.686em;"></span><span style="margin-right:0.03148em;">k</span><span><span></span><span><span><span><span style="height:1.1076em;"><span style="top:-2.314em;"><span style="height:3em;"></span><span><span><span style="margin-right:0.02778em;">r</span><span><span><span><span style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span style="height:3em;"></span><span style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span style="height:3em;"></span><span><span><span style="margin-right:0.03588em;">q</span><span><span><span><span style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>1</span></span></span></span><span>​</span></span><span><span style="height:0.15em;"><span></span></span></span></span></span></span><span><span style="margin-right:0.03588em;">q</span><span><span><span><span style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span>2</span></span></span></span><span>​</span></span><span><span style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span>​</span></span><span><span style="height:0.686em;"><span></span></span></span></span></span><span></span></span><span><span><span><span style="height:0.9526em;"><span style="top:-3em;"><span style="height:3em;"></span><span><span>e</span><span><span><span><span style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span style="height:2.7em;"></span><span><span><span>12</span></span></span></span></span><span>​</span></span><span><span style="height:0.15em;"><span></span></span></span></span></span></span></span><span style="top:-3.4306em;"><span style="height:3em;"></span><span style="height:0.522em;min-width:0.888em;"><svg xmlns="http://www.w3.org/2000/svg" width='400em' height='0.522em' viewBox='0 0 400000 522' preserveAspectRatio='xMaxYMin slice'><path d='M0 241v40h399993c4.7-4.7 7-9.3 7-14 0-9.3
@@ -3376,7 +3904,7 @@ c0 110 84 276 504 276s502.4-166 502.4-276z'/></svg></span></span></span><span>�
     <title type="html">linter 介绍</title>
     <id>https://mrhope.site/code/language/linter/</id>
     <link href="https://mrhope.site/code/language/linter/"/>
-    <updated>2022-03-31T03:28:29.185Z</updated>
+    <updated>2022-04-01T16:15:22.148Z</updated>
     <summary type="html"><![CDATA[<p>linter 用来检查程序的语法错误，并即时标注和指出来 (例如，把声明了但没使用的多余变量指出来，向错误语句添加红色波浪线)，是程序开发的辅助工具。同时，linter 也有统一规范代码书写方式的功能。</p>
 <p>在大型项目中，编码需要统一的风格，比如在 JavaScript 中使用单引号还是双引号包裹字符串，在何时进行折行等。目前各种语言基本都有自己的出色 linter，能够确保相同的使用不同换行方式、缩进、标记代码会最终格式化为相同的输出。</p>
 ]]></summary>
@@ -3401,7 +3929,7 @@ c0 110 84 276 504 276s502.4-166 502.4-276z'/></svg></span></span></span><span>�
     <title type="html">clang-format</title>
     <id>https://mrhope.site/code/language/linter/clang-format.html</id>
     <link href="https://mrhope.site/code/language/linter/clang-format.html"/>
-    <updated>2022-03-31T03:28:29.185Z</updated>
+    <updated>2022-04-01T16:15:22.148Z</updated>
     <summary type="html"><![CDATA[<p>clang-format 是一种代码格式化工具，可用于格式化(排版) C / C++ / Java / JavaScript / Objective-C / Protobuf / C# 的代码。它支持多种预设代码风格与自定义风格 (通过编写 <code>.clang-format</code> 文件)。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>clang-format 是一种代码格式化工具，可用于格式化(排版) C / C++ / Java / JavaScript / Objective-C / Protobuf / C# 的代码。它支持多种预设代码风格与自定义风格 (通过编写 <code>.clang-format</code> 文件)。</p>
@@ -3495,7 +4023,7 @@ c0 110 84 276 504 276s502.4-166 502.4-276z'/></svg></span></span></span><span>�
     <title type="html">布局实战</title>
     <id>https://mrhope.site/code/website/css/layout/exercise.html</id>
     <link href="https://mrhope.site/code/website/css/layout/exercise.html"/>
-    <updated>2022-03-31T03:28:29.193Z</updated>
+    <updated>2022-04-01T16:15:22.159Z</updated>
     <summary type="html"><![CDATA[<p>本章包括了一些经典的布局实战案例。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>本章包括了一些经典的布局实战案例。</p>
@@ -4483,7 +5011,7 @@ footer</span> <span>{</span>
     <title type="html">网格布局</title>
     <id>https://mrhope.site/code/website/css/layout/grid.html</id>
     <link href="https://mrhope.site/code/website/css/layout/grid.html"/>
-    <updated>2022-03-31T03:28:29.199Z</updated>
+    <updated>2022-04-01T16:15:22.168Z</updated>
     <content type="html"><![CDATA[<h2 id="概述" tabindex="-1"> 概述</h2>
 <p>网格布局 (Grid) 是最强大的 CSS 布局方案。它将网页划分成一个个网格，可以任意组合不同的网格，做出各种各样的布局。</p>
 
@@ -6908,7 +7436,7 @@ footer</span> <span>{</span>
     <title type="html">设计文章</title>
     <id>https://mrhope.site/design/articles/</id>
     <link href="https://mrhope.site/design/articles/"/>
-    <updated>2022-03-31T03:28:29.199Z</updated>
+    <updated>2022-04-01T16:15:22.168Z</updated>
     <content type="html"><![CDATA[<h2 id="文章列表" tabindex="-1"> 文章列表</h2>
 <ul>
 <li>
@@ -6929,7 +7457,7 @@ footer</span> <span>{</span>
     <title type="html">格式塔原则</title>
     <id>https://mrhope.site/design/articles/gestalt-principle.html</id>
     <link href="https://mrhope.site/design/articles/gestalt-principle.html"/>
-    <updated>2022-03-31T03:28:29.200Z</updated>
+    <updated>2022-04-01T16:15:22.168Z</updated>
     <content type="html"><![CDATA[<p>好的设计师理解心理学在视觉感知中的强大作用。当别人的目光与您的设计创作相遇时，会发生什么? 他们对您分享的信息有什么反应?</p>
 <h2 id="格式塔原理概述" tabindex="-1"> 格式塔原理概述</h2>
 <h3 id="前言" tabindex="-1"> 前言</h3>
@@ -7189,7 +7717,7 @@ footer</span> <span>{</span>
     <title type="html">信息流介绍</title>
     <id>https://mrhope.site/design/articles/infomation-flow.html</id>
     <link href="https://mrhope.site/design/articles/infomation-flow.html"/>
-    <updated>2022-03-31T03:28:29.200Z</updated>
+    <updated>2022-04-01T16:15:22.168Z</updated>
     <content type="html"><![CDATA[<p>今日头条的出现颠覆了传统新闻产品(如网易、新浪和搜狐新闻)。</p>
 <p>传统新闻依靠着编辑人员的推荐，将新闻触达给用户，而今日头条则依靠着新闻算法，抛弃传统人工分发的思路，使分发效率数以万计的提升，其迅速崛起，成为头部新闻资讯产品。</p>
 <p>今日头条作为新闻信息流的头部产品，里面的设计细节和设计逻辑值得我们思考和分析。</p>
@@ -7260,7 +7788,7 @@ footer</span> <span>{</span>
     <title type="html">布局中的左和右</title>
     <id>https://mrhope.site/design/articles/left-or-right.html</id>
     <link href="https://mrhope.site/design/articles/left-or-right.html"/>
-    <updated>2022-03-31T03:28:29.200Z</updated>
+    <updated>2022-04-01T16:15:22.168Z</updated>
     <content type="html"><![CDATA[<h2 id="左右横跳的泳道" tabindex="-1"> 左右横跳的泳道</h2>
 <p>最近经常在人人视频上看电视剧，发现人人视频在设计上有个很有意思的点。</p>
 <p>它的电影页中有很多推荐电影片单，每个片单里有 5-12 部电影；碍于手机尺寸，用户只能看到 3 部电影；如果您对这个片单里的电影比较感兴趣，可以滑动查看更多的电影——这种横向滑动的设计又被称之为“泳道”。</p>
@@ -7321,7 +7849,7 @@ footer</span> <span>{</span>
     <title type="html">交互设计</title>
     <id>https://mrhope.site/design/interact/</id>
     <link href="https://mrhope.site/design/interact/"/>
-    <updated>2022-03-31T03:28:29.200Z</updated>
+    <updated>2022-04-01T16:15:22.168Z</updated>
     <content type="html"><![CDATA[<h2 id="文章列表" tabindex="-1"> 文章列表</h2>
 <ul>
 <li>
@@ -7339,7 +7867,7 @@ footer</span> <span>{</span>
     <title type="html">文本框设计</title>
     <id>https://mrhope.site/design/interact/text-field.html</id>
     <link href="https://mrhope.site/design/interact/text-field.html"/>
-    <updated>2022-03-31T03:28:29.200Z</updated>
+    <updated>2022-04-01T16:15:22.168Z</updated>
     <content type="html"><![CDATA[<p>文本框的出现几乎可以追溯到可视化交互诞生的源头，是一个再经典不过的「鼻祖」控件了。我们每天都在和文本框打交道，不论您是产品设计者还是用户。</p>
 <h2 id="文本框的拆解" tabindex="-1"> 文本框的拆解</h2>
 <p>文本框(Text Fields)根据 Material Design 指导规范，被拆解为七个部分。分别是:</p>
@@ -7410,7 +7938,7 @@ footer</span> <span>{</span>
     <title type="html">快捷键</title>
     <id>https://mrhope.site/software/vscode/shortcut-key.html</id>
     <link href="https://mrhope.site/software/vscode/shortcut-key.html"/>
-    <updated>2022-03-31T03:28:29.200Z</updated>
+    <updated>2022-04-01T16:15:22.168Z</updated>
     <content type="html"><![CDATA[<p>通过快捷键，Visual Studio Code 可让您直接从键盘执行大多数任务。</p>
 <h2 id="常用的快捷键" tabindex="-1"> 常用的快捷键</h2>
 <div><p>提示</p>
@@ -7599,7 +8127,7 @@ footer</span> <span>{</span>
     <title type="html">用户界面</title>
     <id>https://mrhope.site/software/vscode/ui.html</id>
     <link href="https://mrhope.site/software/vscode/ui.html"/>
-    <updated>2022-03-31T03:28:29.200Z</updated>
+    <updated>2022-04-01T16:15:22.169Z</updated>
     <content type="html"><![CDATA[<p>本质上，Visual Studio Code 是代码编辑器。像许多其他代码编辑器一样，VS Code 在左边采用通用的用户界面和资源管理器布局，以显示您有权访问的所有文件和文件夹，而在右边的编辑器则显示您已打开文件的内容。</p>
 <h2 id="基本布局" tabindex="-1"> 基本布局</h2>
 <p>VS Code 具有简单直观的布局，可最大程度地为编辑器提供空间，同时为浏览和访问文件夹或项目的整个上下文留出足够的空间。用户界面分为五个区域:</p>
@@ -7806,7 +8334,7 @@ footer</span> <span>{</span>
     <title type="html">显示文件后缀名与隐藏文件</title>
     <id>https://mrhope.site/code/windows/hidden-file.html</id>
     <link href="https://mrhope.site/code/windows/hidden-file.html"/>
-    <updated>2022-03-31T03:28:29.200Z</updated>
+    <updated>2022-04-01T16:15:22.169Z</updated>
     <content type="html"><![CDATA[<p>显示文件后缀名与隐藏文件</p>
 <p><img src="@source/code/windows/assets/hidden-file.png" alt="如何显示隐藏的文件与文件夹"></p>
 ]]></content>
@@ -7817,7 +8345,7 @@ footer</span> <span>{</span>
     <title type="html">图标绘制流程</title>
     <id>https://mrhope.site/design/icon/draw.html</id>
     <link href="https://mrhope.site/design/icon/draw.html"/>
-    <updated>2022-03-31T03:28:29.200Z</updated>
+    <updated>2022-04-01T16:15:22.169Z</updated>
     <content type="html"><![CDATA[<h2 id="情绪板" tabindex="-1"> 情绪板</h2>
 <p>情绪板是在执行一项设计操作之前非常重要的一个步骤，情绪板并不是像设计平台展示作品集里那样放几张图片，几个关键词，而是一套对接下来设计的一个风格走向定位。根据不同的用户人群，不同颜色的色彩情绪，不同产品的业务，将用户调研的结果，产品的背景进行总结与思考，定位接下来的设计风格。</p>
 <h2 id="绘制流程" tabindex="-1"> 绘制流程</h2>
@@ -7847,7 +8375,7 @@ footer</span> <span>{</span>
     <title type="html">图标设计准则</title>
     <id>https://mrhope.site/design/icon/rule.html</id>
     <link href="https://mrhope.site/design/icon/rule.html"/>
-    <updated>2022-03-31T03:28:29.200Z</updated>
+    <updated>2022-04-01T16:15:22.169Z</updated>
     <summary type="html"><![CDATA[<p>规范是图标设计的重点。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>规范是图标设计的重点。</p>
@@ -7983,7 +8511,7 @@ footer</span> <span>{</span>
     <title type="html">搜索框设计</title>
     <id>https://mrhope.site/design/interact/search.html</id>
     <link href="https://mrhope.site/design/interact/search.html"/>
-    <updated>2022-03-31T03:28:29.200Z</updated>
+    <updated>2022-04-01T16:15:22.169Z</updated>
     <content type="html"><![CDATA[<p>搜索框是我们最常用到的 UI 控件之一，它几乎存在于所有的网站和 APP 当中。许多人认为搜索框不需要设计，因为它似乎就是由两个最简单的元素构成的。在以内容为导向的网站中，搜索框的重要性会相对更明显，用户需要快速又无痛地找到他们想要的内容。而对于设计相对负责的网站而言，这个需求尤其明显。搜索框的可用性设计，是整个设计的关键，也就是如何让用户尽量节省时间，搜到他们想要的内容。</p>
 <h2 id="使用放大镜图标" tabindex="-1"> 使用放大镜图标</h2>
 <p>时至今日，搜索的概念和放大镜图标之间的关系已经深入人心，根深蒂固了。在日常最常用、最易于识别的几个图标当中，放大镜所带代表的搜索图标就是其中之一。</p>
@@ -8062,7 +8590,7 @@ footer</span> <span>{</span>
     <title type="html">导航设计教程</title>
     <id>https://mrhope.site/design/navigation/</id>
     <link href="https://mrhope.site/design/navigation/"/>
-    <updated>2022-03-31T03:28:29.200Z</updated>
+    <updated>2022-04-01T16:15:22.169Z</updated>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -8092,7 +8620,7 @@ footer</span> <span>{</span>
     <title type="html">导航设计介绍</title>
     <id>https://mrhope.site/design/navigation/intro.html</id>
     <link href="https://mrhope.site/design/navigation/intro.html"/>
-    <updated>2022-03-31T03:28:29.201Z</updated>
+    <updated>2022-04-01T16:15:22.169Z</updated>
     <content type="html"><![CDATA[<p>其实网页或者 App 中的导航(Navigation)这个概念远不止我们熟悉的导航栏，而是一个更加广的交互概念: 引导用户和产品进行有效的交互，实现用户的目标。本文将详细地介绍界面的导航设计。</p>
 <p>一个网页或 App 产品要想有很好的可用性(usability)，需要做好的最基本的一点是导航的设计或者说引导用户的设计。如果用户在使用一个网站或者 App 的时候找不到自己的处在什么位置或者该怎么去到想要的页面，那么视觉效果再怎么有创意或者抓人眼球都无法弥补产品的缺陷。无论您的产品想满足用户什么需求，让用户知道产品当下的状态和每一步操作之后的结果是对用户最基本的尊重。</p>
 <h2 id="导航" tabindex="-1"> 导航</h2>
@@ -8201,7 +8729,7 @@ footer</span> <span>{</span>
     <title type="html">导航栏设计技巧</title>
     <id>https://mrhope.site/design/navigation/navbar-design.html</id>
     <link href="https://mrhope.site/design/navigation/navbar-design.html"/>
-    <updated>2022-03-31T03:28:29.201Z</updated>
+    <updated>2022-04-01T16:15:22.169Z</updated>
     <content type="html"><![CDATA[<p>评判导航菜单的设计好坏有多种不同的维度，由于它太过常用，它的好坏并没有得到更多重视。实际上，导航作为网站设计的一个基础组成部分，对于可用性的要求并不低。以下是一些常见的设计技巧。</p>
 <h2 id="超大菜单栏" tabindex="-1"> 超大菜单栏</h2>
 <p><img src="@source/design/navigation/assets/big-navbar.jpg" alt="超大菜单栏"></p>
@@ -8248,7 +8776,7 @@ footer</span> <span>{</span>
     <title type="html">导航栏设计</title>
     <id>https://mrhope.site/design/navigation/navbar.html</id>
     <link href="https://mrhope.site/design/navigation/navbar.html"/>
-    <updated>2022-03-31T03:28:29.201Z</updated>
+    <updated>2022-04-01T16:15:22.170Z</updated>
     <content type="html"><![CDATA[<p>其实网页或者 App 中的导航(Navigation)这个概念远不止我们熟悉的导航栏，而是一个更加广的交互概念: 引导用户和产品进行有效的交互，实现用户的目标。</p>
 <h2 id="导航栏究竟在哪里" tabindex="-1"> 导航栏究竟在哪里</h2>
 <p>导航栏 Navigation Bar，也简称为 Navbar。一定会有不少刚入门的 UI 新人，在诸多的 Bar 控件中，难以区分它所指代的区域。</p>
@@ -8304,7 +8832,7 @@ footer</span> <span>{</span>
     <title type="html">侧边栏导航</title>
     <id>https://mrhope.site/design/navigation/sidebar-navigate.html</id>
     <link href="https://mrhope.site/design/navigation/sidebar-navigate.html"/>
-    <updated>2022-03-31T03:28:29.201Z</updated>
+    <updated>2022-04-01T16:15:22.170Z</updated>
     <content type="html"><![CDATA[<p>厌倦了传统顶部导航的设计师，越来越偏爱侧边栏导航了。这种常见于页面左侧的侧边栏设计，已经成了许多独树一帜的设计师的选择了。</p>
 <h2 id="无处不在的侧边栏导航" tabindex="-1"> 无处不在的侧边栏导航</h2>
 <p>侧边栏导航和菜单设计的演变有着密不可分的关系。响应式设计的流行使得向移动端偏移的网页设计，不得不采用菜单栏来替代传统的导航模式，其直接的影响就是催生了汉堡图标。</p>
@@ -8361,7 +8889,7 @@ footer</span> <span>{</span>
     <title type="html">标签导航设计技巧</title>
     <id>https://mrhope.site/design/navigation/tabbar-design.html</id>
     <link href="https://mrhope.site/design/navigation/tabbar-design.html"/>
-    <updated>2022-03-31T03:28:29.201Z</updated>
+    <updated>2022-04-01T16:15:22.170Z</updated>
     <content type="html"><![CDATA[<h2 id="底部导航栏图标重要性及维度" tabindex="-1"> 底部导航栏图标重要性及维度</h2>
 <h3 id="重要性" tabindex="-1"> 重要性</h3>
 <p>底部导航栏的图标是路牌，承担着指路的作用，给用户指明进入产品后可以分别通往什么页面。早期的底部导航栏是单一的指路功能，经过多年的交互设计迭代后，附加了「信息展示」和「引导操作」的作用，这点会在下文中详细阐述。</p>
@@ -8429,7 +8957,7 @@ footer</span> <span>{</span>
     <title type="html">标签导航设计</title>
     <id>https://mrhope.site/design/navigation/tabbar.html</id>
     <link href="https://mrhope.site/design/navigation/tabbar.html"/>
-    <updated>2022-03-31T03:28:29.201Z</updated>
+    <updated>2022-04-01T16:15:22.170Z</updated>
     <content type="html"><![CDATA[<p>导航分很多类别，如标签导航、抽屉式导航、九宫格导航、混合组合导航、列表式导航、Tab 导航、平铺导航等等。</p>
 <p>现在用到更多的导航其实是标签导航(tabbar)，它随处可见，相信目前大部分的 App 用的导航都是标签形式的。</p>
 <h2 id="理清产品框架" tabindex="-1"> 理清产品框架</h2>
@@ -8481,7 +9009,7 @@ footer</span> <span>{</span>
     <title type="html">图标应用</title>
     <id>https://mrhope.site/design/icon/apply.html</id>
     <link href="https://mrhope.site/design/icon/apply.html"/>
-    <updated>2022-03-31T03:28:29.201Z</updated>
+    <updated>2022-04-01T16:15:22.170Z</updated>
     <summary type="html"><![CDATA[<p>在 UI 设计中，图标不是孤立存在的。我们学习图标的设计，不是为了画一组套图，然后上传到设计平台中分享或求赞，而是要在真实的项目中发挥作用。如果不了解图标应用到项目中的知识点，那么真实的图标设计水平就会在项目设计过程中被损耗。</p>
 <p>所以，本章讲述工具图标在项目中应用的方法。</p>
 ]]></summary>
@@ -8572,7 +9100,7 @@ footer</span> <span>{</span>
     <title type="html">装饰性图标设计</title>
     <id>https://mrhope.site/design/icon/decorative.html</id>
     <link href="https://mrhope.site/design/icon/decorative.html"/>
-    <updated>2022-03-31T03:28:29.201Z</updated>
+    <updated>2022-04-01T16:15:22.170Z</updated>
     <summary type="html"><![CDATA[<p>装饰图标最主要的应用区域，集中在首页的快速入口上，也是今天多数应用中会使用的组件。下面，我们会讲解国内主流应用中的几种装饰图标的设计。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>装饰图标最主要的应用区域，集中在首页的快速入口上，也是今天多数应用中会使用的组件。下面，我们会讲解国内主流应用中的几种装饰图标的设计。</p>
@@ -8663,7 +9191,7 @@ footer</span> <span>{</span>
     <title type="html">图标设计技巧</title>
     <id>https://mrhope.site/design/icon/skill.html</id>
     <link href="https://mrhope.site/design/icon/skill.html"/>
-    <updated>2022-03-31T03:28:29.201Z</updated>
+    <updated>2022-04-01T16:15:22.170Z</updated>
     <content type="html"><![CDATA[<p>图标是 UI 设计中最基础也是很重要的部分，辅助人们更好的理解功能内容。随着扁平化设计风格的普及，图标的风格越来越简约，看似简单的图形，实际要准确的表达含义，也是需要注意一些方法的。下面是是图标设计的实用技巧。</p>
 <h2 id="简单" tabindex="-1"> 简单</h2>
 <p>一个图标一个非写实的表现。不需要担心图标不够真实，消除不必要的细节，用基本的形状只保留最基础的部分，让这个图标更容易被理解。</p>
@@ -8697,7 +9225,7 @@ footer</span> <span>{</span>
     <title type="html">启动图标设计指南</title>
     <id>https://mrhope.site/design/icon/start.html</id>
     <link href="https://mrhope.site/design/icon/start.html"/>
-    <updated>2022-03-31T03:28:29.201Z</updated>
+    <updated>2022-04-01T16:15:22.170Z</updated>
     <content type="html"><![CDATA[<p>想要在启动图标设计上入门，就要先从规范开始学习，然后了解不同的风格以及对应风格的设计过程。</p>
 <h2 id="启动图标的设计规范" tabindex="-1"> 启动图标的设计规范</h2>
 <p>说到启动图标的规范，首先会想到的，就是 iOS 提供的图标栅格。通过这个栅格，会规范图形的尺寸，以及所处的位置。</p>
@@ -8751,7 +9279,7 @@ footer</span> <span>{</span>
     <title type="html">图标</title>
     <id>https://mrhope.site/design/icon/</id>
     <link href="https://mrhope.site/design/icon/"/>
-    <updated>2022-03-31T03:28:29.201Z</updated>
+    <updated>2022-04-01T16:15:22.170Z</updated>
     <summary type="html"><![CDATA[<p>本文介绍了 UI 设计中图标的相关介绍与技巧。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>本文介绍了 UI 设计中图标的相关介绍与技巧。</p>
@@ -8842,7 +9370,7 @@ footer</span> <span>{</span>
     <title type="html">面性图标设计</title>
     <id>https://mrhope.site/design/icon/flour.html</id>
     <link href="https://mrhope.site/design/icon/flour.html"/>
-    <updated>2022-03-31T03:28:29.201Z</updated>
+    <updated>2022-04-01T16:15:22.170Z</updated>
     <content type="html"><![CDATA[<p>面性图标在操作中和线性图标的最大差别就在于描边和填充模式，我们知道为了满足像素对齐的要求，线性描边会在操作中产生很多不可控的因素，要用很多额外的操作步骤去弥补。在面性图标中，就不需要使用描边，并且使用相同的图标模板即可。</p>
 <p><img src="@source/design/icon/assets/flour-icon.jpg" alt="面性图标"></p>
 <p>下面就进入本篇的具体案例演示。</p>
@@ -8887,7 +9415,7 @@ footer</span> <span>{</span>
     <title type="html">图标设计指南</title>
     <id>https://mrhope.site/design/icon/guide.html</id>
     <link href="https://mrhope.site/design/icon/guide.html"/>
-    <updated>2022-03-31T03:28:29.201Z</updated>
+    <updated>2022-04-01T16:15:22.171Z</updated>
     <content type="html"><![CDATA[<h2 id="图标的可用性" tabindex="-1"> 图标的可用性</h2>
 <p>图标可用性，顾名思义就是图标绘制出来是否能被用户所看懂并快速识别，是否可以为业务赋能。以下是总结的四条图标绘制的评判标准。</p>
 <p><img src="@source/design/icon/assets/rule.jpg" alt="图标绘制的评判标准"></p>
@@ -9008,7 +9536,7 @@ footer</span> <span>{</span>
     <title type="html">图标介绍</title>
     <id>https://mrhope.site/design/icon/intro.html</id>
     <link href="https://mrhope.site/design/icon/intro.html"/>
-    <updated>2022-03-31T03:28:29.201Z</updated>
+    <updated>2022-04-01T16:15:22.171Z</updated>
     <content type="html"><![CDATA[<h2 id="图标的基本认识" tabindex="-1"> 图标的基本认识</h2>
 <p>图标，是一种图形化的标识，它有广义和狭义两种概念，广义指的是所有现实中有明确指向含义的图形符号，狭义主要指在计算机设备界面中的图形符号，有非常大的覆盖范围。</p>
 <p>对于 UI 设计师而言，主要针对的就是狭义的概念，它是 UI 界面视觉组成的关键元素之一。</p>
@@ -9032,7 +9560,7 @@ footer</span> <span>{</span>
     <title type="html">线性图标设计</title>
     <id>https://mrhope.site/design/icon/line.html</id>
     <link href="https://mrhope.site/design/icon/line.html"/>
-    <updated>2022-03-31T03:28:29.202Z</updated>
+    <updated>2022-04-01T16:15:22.171Z</updated>
     <summary type="html"><![CDATA[<p>线性图标是所有图标中最基础的设计形式，也是最简单的入门。在我们后续设计其它的风格图标前，首先要通过练习线性图标来打下坚实的基础。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>线性图标是所有图标中最基础的设计形式，也是最简单的入门。在我们后续设计其它的风格图标前，首先要通过练习线性图标来打下坚实的基础。</p>
@@ -9210,7 +9738,7 @@ footer</span> <span>{</span>
     <title type="html">学习图标所需的软件</title>
     <id>https://mrhope.site/design/icon/software.html</id>
     <link href="https://mrhope.site/design/icon/software.html"/>
-    <updated>2022-03-31T03:28:29.202Z</updated>
+    <updated>2022-04-01T16:15:22.171Z</updated>
     <summary type="html"><![CDATA[<p>了解了图标的类型，就要开始了解做出这些图标应该使用哪些软件了。通常，UI 主要使用的设计软件包含 PS、AI、Sketch、XD 四款，理论上，它们都包含了图标绘制的功能，下面介绍这四款软件对于图标设计的优劣，以及需要掌握的部分。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>了解了图标的类型，就要开始了解做出这些图标应该使用哪些软件了。通常，UI 主要使用的设计软件包含 PS、AI、Sketch、XD 四款，理论上，它们都包含了图标绘制的功能，下面介绍这四款软件对于图标设计的优劣，以及需要掌握的部分。</p>
@@ -9251,7 +9779,7 @@ footer</span> <span>{</span>
     <title type="html">图标种类</title>
     <id>https://mrhope.site/design/icon/type.html</id>
     <link href="https://mrhope.site/design/icon/type.html"/>
-    <updated>2022-03-31T03:28:29.202Z</updated>
+    <updated>2022-04-01T16:15:22.172Z</updated>
     <summary type="html"><![CDATA[<p>设计图标可以划分成三种大类:</p>
 <ul>
 <li>工具图标</li>
@@ -9342,7 +9870,7 @@ footer</span> <span>{</span>
     <title type="html">YAML 教程</title>
     <id>https://mrhope.site/code/language/yaml/</id>
     <link href="https://mrhope.site/code/language/yaml/"/>
-    <updated>2022-03-31T03:28:29.202Z</updated>
+    <updated>2022-04-01T16:15:22.172Z</updated>
     <content type="html"><![CDATA[<p>编程免不了要写配置文件，怎么写配置也是一门学问。</p>
 <p>YAML 是专门用来写配置文件的语言，非常简洁和强大。</p>
 <h2 id="yaml-介绍" tabindex="-1"> yaml 介绍</h2>
@@ -9593,7 +10121,7 @@ footer</span> <span>{</span>
     <title type="html">JSON 教程</title>
     <id>https://mrhope.site/code/language/json/</id>
     <link href="https://mrhope.site/code/language/json/"/>
-    <updated>2022-03-31T03:28:29.202Z</updated>
+    <updated>2022-04-01T16:15:22.172Z</updated>
     <summary type="html"><![CDATA[<p>JSON: JavaScript Object Notation(JavaScript 对象表示法)</p>
 <ul>
 <li>
@@ -9680,7 +10208,7 @@ footer</span> <span>{</span>
     <title type="html">机械硬盘</title>
     <id>https://mrhope.site/hardware/HDD.html</id>
     <link href="https://mrhope.site/hardware/HDD.html"/>
-    <updated>2022-03-31T03:28:29.202Z</updated>
+    <updated>2022-04-01T16:15:22.172Z</updated>
     <content type="html"><![CDATA[<p>现代计算机大部分文件存储功能都是由机械硬盘这种设备提供的。(现在的 SSD 和闪存从概念和逻辑上都部分继承自机械硬盘，所以使用机械硬盘来进行理解也是没有问题的)</p>
 <p>机械硬盘能实现信息存储的功能基于: 磁性存储介质能够被磁化，且磁化后会长久保留被磁化的状态，这种被磁化状态能够被读取出来，同时这种磁化状态还能够不断被修改，磁化正好有两个方向，所以可以表示 0 和 1。
 于是硬盘就是把这种磁性存储介质做成一个个盘片，每一个盘片上都分布着数量巨大的磁性存储单位，使用磁性读写头对盘片进行写入和读取(从原理上类似黑胶唱片的播放)。</p>
@@ -9712,7 +10240,7 @@ footer</span> <span>{</span>
     <title type="html">CPU 的架构</title>
     <id>https://mrhope.site/hardware/structure.html</id>
     <link href="https://mrhope.site/hardware/structure.html"/>
-    <updated>2022-03-31T03:28:29.202Z</updated>
+    <updated>2022-04-01T16:15:22.172Z</updated>
     <content type="html"><![CDATA[<p>CPU 内部已经含有一些微指令，我们所使用的软件都要经过 CPU 内部的微指令集来达成才行。那这些指令集的设计主要又被分为两种设计理念，这就是目前世界上常见到的两种主要 CPU 架构，分别是: 精简指令集(RISC)与复杂指令集(CISC) 系统。</p>
 <h2 id="精简指令集" tabindex="-1"> 精简指令集</h2>
 <p>精简指令集，(Reduced Instruction Set Computer, RISC) 的设计中，微指令集较为精简。每个指令的执行时间都很短，完成的动作也很单纯，指令的执行性能较佳；但是若要做复杂的事情，就要由多个指令来完成。常见的 RISC 微指令集 CPU 主要例如甲骨文(Oracle) 公司的 SPARC 系列、IBM 公司的 Power Architecture (包括 PowerPC) 系列、与 ARM 公司(ARM Holdings) 的 ARM CPU 系列等。</p>
@@ -9733,7 +10261,7 @@ footer</span> <span>{</span>
     <title type="html">开源与免费</title>
     <id>https://mrhope.site/code/basic/open-source-and-free.html</id>
     <link href="https://mrhope.site/code/basic/open-source-and-free.html"/>
-    <updated>2022-03-31T03:28:29.203Z</updated>
+    <updated>2022-04-01T16:15:22.173Z</updated>
     <summary type="html"><![CDATA[<p>开源软件和免费软件是两个概念:</p>
 <ul>
 <li>
@@ -9826,7 +10354,7 @@ footer</span> <span>{</span>
     <title type="html">仿真介绍</title>
     <id>https://mrhope.site/software/comsol/intro.html</id>
     <link href="https://mrhope.site/software/comsol/intro.html"/>
-    <updated>2022-03-31T03:28:29.203Z</updated>
+    <updated>2022-04-01T16:15:22.173Z</updated>
     <content type="html"><![CDATA[<h2 id="有限元分析" tabindex="-1"> 有限元分析</h2>
 <p>有限元分析(Finite Element Analysis，FEA)软件可以通过仿真减少原型测试的原型数量和测试次数。一旦建立了能够准确预测真实物理参数的有限元分析模型，就可以借助它大幅改进产品或过程的设计和运行。在此基础上，优化算法和自动控制的应用，可以进一步实现仅凭直觉完全无法达到的设计改进。目前的有限元分析软件大多已包含自动控制功能，并将这些功能嵌入数学和数值模型中，而优化算法也通常包含在求解过程中。</p>
 <p>基于数学模型表示的物理定律构成了有限元分析软件的基础。对于有限元分析来说，这些定律包括各项守恒定律、经典力学定律和电磁学定律。</p>
@@ -9932,7 +10460,7 @@ footer</span> <span>{</span>
     <title type="html">模型树</title>
     <id>https://mrhope.site/software/comsol/physic-field.html</id>
     <link href="https://mrhope.site/software/comsol/physic-field.html"/>
-    <updated>2022-03-31T03:28:29.203Z</updated>
+    <updated>2022-04-01T16:15:22.173Z</updated>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -9993,7 +10521,7 @@ footer</span> <span>{</span>
     <title type="html">网格</title>
     <id>https://mrhope.site/software/comsol/mesh/</id>
     <link href="https://mrhope.site/software/comsol/mesh/"/>
-    <updated>2022-03-31T03:28:29.203Z</updated>
+    <updated>2022-04-01T16:15:22.173Z</updated>
     <content type="html"><![CDATA[<h2 id="网格基础" tabindex="-1"> 网格基础</h2>
 <ul>
 <li><a href="/software/comsol/mesh/intro.html">网格划分和细化介绍</a></li>
@@ -10061,7 +10589,7 @@ footer</span> <span>{</span>
     <title type="html">有限元网格划分和细化</title>
     <id>https://mrhope.site/software/comsol/mesh/intro.html</id>
     <link href="https://mrhope.site/software/comsol/mesh/intro.html"/>
-    <updated>2022-03-31T03:28:29.203Z</updated>
+    <updated>2022-04-01T16:15:22.173Z</updated>
     <content type="html"><![CDATA[<h2 id="有限元网格划分和细化" tabindex="-1"> 有限元网格划分和细化</h2>
 <p>基于任何有限元分析模型得到的精度都与所用的有限元网格直接相关。有限元网格用于将 CAD 模型分割为很多较小的域，我们称之为单元，然后在这些单元上求解一组方程，这些方程通过在每个单元上定义的一组多项式函数来近似表示所需的控制方程。随着网格的不断细化，这些单元变得越来越小，从而使求解的结果越来越接近真实解。</p>
 <p>网格细化过程是我们验证有限元模型，并对软件、模型和计算结果建立信心的关键步骤。</p>
@@ -10147,7 +10675,7 @@ footer</span> <span>{</span>
     <title type="html">返回函数</title>
     <id>https://mrhope.site/code/language/python/functional-programming/return-function.html</id>
     <link href="https://mrhope.site/code/language/python/functional-programming/return-function.html"/>
-    <updated>2022-03-31T03:28:29.203Z</updated>
+    <updated>2022-04-01T16:15:22.173Z</updated>
     <content type="html"><![CDATA[<h2 id="函数作为返回值" tabindex="-1"> 函数作为返回值</h2>
 <p>高阶函数除了可以接受函数作为参数外，还可以把函数作为结果值返回。</p>
 <p>我们来实现一个可变参数的求和。通常情况下，求和的函数是这样定义的:</p>
@@ -10239,7 +10767,7 @@ f1<span>,</span> f2<span>,</span> f3 <span>=</span> count<span>(</span><span>)</
     <title type="html">练习</title>
     <id>https://mrhope.site/code/language/python/guide/exercise.html</id>
     <link href="https://mrhope.site/code/language/python/guide/exercise.html"/>
-    <updated>2022-03-31T03:28:29.203Z</updated>
+    <updated>2022-04-01T16:15:22.173Z</updated>
     <content type="html"><![CDATA[<h2 id="bmi" tabindex="-1"> BMI</h2>
 <p>小明的成绩从去年的 72 分提升到了今年的 85 分，请计算小明成绩提升的百分点，并用字符串格式化显示出 'xx.x%'，只保留小数点后 1 位:</p>
 <p>答案<sup></sup></p>
@@ -10271,7 +10799,7 @@ result <span>=</span> <span>(</span>score2 <span>-</span> score1<span>)</span> <
     <title type="html">APP</title>
     <id>https://mrhope.site/software/comsol/app.html</id>
     <link href="https://mrhope.site/software/comsol/app.html"/>
-    <updated>2022-03-31T03:28:29.203Z</updated>
+    <updated>2022-04-01T16:15:22.173Z</updated>
     <content type="html"><![CDATA[<div><p>提示</p>
 <p>制作中...</p>
 </div>
@@ -10292,7 +10820,7 @@ result <span>=</span> <span>(</span>score2 <span>-</span> score1<span>)</span> <
     <title type="html">创建新模型</title>
     <id>https://mrhope.site/software/comsol/create.html</id>
     <link href="https://mrhope.site/software/comsol/create.html"/>
-    <updated>2022-03-31T03:28:29.203Z</updated>
+    <updated>2022-04-01T16:15:22.174Z</updated>
     <summary type="html"><![CDATA[<p>您可以遵循模型向导的指示来建立模型，也可以使用空模型开始建模操作。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>您可以遵循模型向导的指示来建立模型，也可以使用空模型开始建模操作。</p>
@@ -10319,7 +10847,7 @@ result <span>=</span> <span>(</span>score2 <span>-</span> score1<span>)</span> <
     <title type="html">快速上手</title>
     <id>https://mrhope.site/software/comsol/get-started.html</id>
     <link href="https://mrhope.site/software/comsol/get-started.html"/>
-    <updated>2022-03-31T03:28:29.203Z</updated>
+    <updated>2022-04-01T16:15:22.174Z</updated>
     <summary type="html"><![CDATA[<p>本章简单介绍如何在 COMSOL Multiphysics<sup>®</sup> 中建立和运行有限元模型。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>本章简单介绍如何在 COMSOL Multiphysics<sup>®</sup> 中建立和运行有限元模型。</p>
@@ -10429,7 +10957,7 @@ result <span>=</span> <span>(</span>score2 <span>-</span> score1<span>)</span> <
     <title type="html">材料</title>
     <id>https://mrhope.site/software/comsol/material.html</id>
     <link href="https://mrhope.site/software/comsol/material.html"/>
-    <updated>2022-03-31T03:28:29.203Z</updated>
+    <updated>2022-04-01T16:15:22.174Z</updated>
     <content type="html"><![CDATA[<h2 id="内置材料" tabindex="-1"> 内置材料</h2>
 <p>COMSOL Multiphysics<sup>®</sup> 软件提供了按应用领域分组的多种预定义材料，您可以根据需要将其添加到仿真中。</p>
 <p>您可以很轻松的通过<strong>添加材料</strong>窗口或<strong>材料浏览器</strong>来添加材料。</p>
@@ -10474,7 +11002,7 @@ result <span>=</span> <span>(</span>score2 <span>-</span> score1<span>)</span> <
     <title type="html">模型树</title>
     <id>https://mrhope.site/software/comsol/model-tree.html</id>
     <link href="https://mrhope.site/software/comsol/model-tree.html"/>
-    <updated>2022-03-31T03:28:29.204Z</updated>
+    <updated>2022-04-01T16:15:22.174Z</updated>
     <summary type="html"><![CDATA[<p>使用“模型开发器”时，可通过以在默认的模型树中添加节点并编辑节点设置来构建模型。</p>
 <p>默认模型树中的所有节点均为顶层父节点。可以右键单击这些节点以查看可在其中添加的子节点的列表。这是将节点添加到模型树的方式。</p>
 <p>当您单击某个子节点时，可以在设置窗口中查看其节点设置。您可以在此编辑节点设置。</p>
@@ -10540,7 +11068,7 @@ result <span>=</span> <span>(</span>score2 <span>-</span> score1<span>)</span> <
     <title type="html">结果</title>
     <id>https://mrhope.site/software/comsol/result.html</id>
     <link href="https://mrhope.site/software/comsol/result.html"/>
-    <updated>2022-03-31T03:28:29.204Z</updated>
+    <updated>2022-04-01T16:15:22.174Z</updated>
     <content type="html"><![CDATA[<div><p>提示</p>
 <p>制作中...</p>
 </div>
@@ -10582,7 +11110,7 @@ result <span>=</span> <span>(</span>score2 <span>-</span> score1<span>)</span> <
     <title type="html">选择</title>
     <id>https://mrhope.site/software/comsol/select.html</id>
     <link href="https://mrhope.site/software/comsol/select.html"/>
-    <updated>2022-03-31T03:28:29.204Z</updated>
+    <updated>2022-04-01T16:15:22.174Z</updated>
     <content type="html"><![CDATA[<h2 id="显式选择" tabindex="-1"> 显式选择</h2>
 <p>COMSOL Multiphysics<sup>®</sup> 软件中的“显式选择”特征可以为单独的几何实体分别创建选择，从而帮助简化模型并优化工作流程。</p>
 <p>比如您做了一个(保温层-镀层-铜)的三层管道，您可以预先创建一个显式选择，选中所有镀层的几何域。则您可以在物理场、网格和结果中，使用这个选择，来快速选中所有镀层的几何对象。</p>
@@ -10616,7 +11144,7 @@ result <span>=</span> <span>(</span>score2 <span>-</span> score1<span>)</span> <
     <title type="html">研究</title>
     <id>https://mrhope.site/software/comsol/study.html</id>
     <link href="https://mrhope.site/software/comsol/study.html"/>
-    <updated>2022-03-31T03:28:29.204Z</updated>
+    <updated>2022-04-01T16:15:22.174Z</updated>
     <content type="html"><![CDATA[<div><p>提示</p>
 <p>制作中...</p>
 </div>
@@ -10638,7 +11166,7 @@ result <span>=</span> <span>(</span>score2 <span>-</span> score1<span>)</span> <
     <title type="html">函数式编程</title>
     <id>https://mrhope.site/code/language/python/functional-programming/</id>
     <link href="https://mrhope.site/code/language/python/functional-programming/"/>
-    <updated>2022-03-31T03:28:29.204Z</updated>
+    <updated>2022-04-01T16:15:22.174Z</updated>
     <content type="html"><![CDATA[<p>函数是 Python 内建支持的一种封装，我们通过把大段代码拆成函数，通过一层一层的函数调用，就可以把复杂任务分解成简单的任务，这种分解可以称之为面向过程的程序设计。函数就是面向过程的程序设计的基本单元。</p>
 <p>而函数式编程(请注意多了一个“式”字)——Functional Programming，虽然也可以归结到面向过程的程序设计，但其思想更接近数学计算。</p>
 <p>我们首先要搞明白计算机(Computer)和计算(Compute)的概念。</p>
@@ -10690,7 +11218,7 @@ result <span>=</span> <span>(</span>score2 <span>-</span> score1<span>)</span> <
     <title type="html">filter</title>
     <id>https://mrhope.site/code/language/python/functional-programming/high-order-function/filter.html</id>
     <link href="https://mrhope.site/code/language/python/functional-programming/high-order-function/filter.html"/>
-    <updated>2022-03-31T03:28:29.204Z</updated>
+    <updated>2022-04-01T16:15:22.174Z</updated>
     <content type="html"><![CDATA[<p>Python 内建的 <code>filter()</code> 函数用于过滤序列。</p>
 <p>和 <code>map()</code> 类似，<code>filter()</code> 也接收一个函数和一个序列。和 <code>map()</code> 不同的是，<code>filter()</code> 把传入的函数依次作用于每个元素，然后根据返回值是 <code>True</code> 还是 <code>False</code> 决定保留还是丢弃该元素。</p>
 <p>例如，在一个 list 中，删掉偶数，只保留奇数，可以这么写:</p>
@@ -10763,7 +11291,7 @@ result <span>=</span> <span>(</span>score2 <span>-</span> score1<span>)</span> <
     <title type="html">介绍</title>
     <id>https://mrhope.site/code/language/python/functional-programming/high-order-function/intro.html</id>
     <link href="https://mrhope.site/code/language/python/functional-programming/high-order-function/intro.html"/>
-    <updated>2022-03-31T03:28:29.204Z</updated>
+    <updated>2022-04-01T16:15:22.175Z</updated>
     <summary type="html"><![CDATA[<p>高阶函数英文叫 Higher-order function。什么是高阶函数? 把函数作为参数传入，这样的函数称为高阶函数。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>高阶函数英文叫 Higher-order function。什么是高阶函数? 把函数作为参数传入，这样的函数称为高阶函数。</p>
@@ -10833,7 +11361,7 @@ f<span>(</span>x<span>)</span> <span>+</span> f<span>(</span>y<span>)</span> <sp
     <title type="html">map / reduce</title>
     <id>https://mrhope.site/code/language/python/functional-programming/high-order-function/map-and-reduce.html</id>
     <link href="https://mrhope.site/code/language/python/functional-programming/high-order-function/map-and-reduce.html"/>
-    <updated>2022-03-31T03:28:29.204Z</updated>
+    <updated>2022-04-01T16:15:22.175Z</updated>
     <summary type="html"><![CDATA[<p>Python 内建了 <code>map()</code> 和 <code>reduce()</code> 函数。</p>
 <p>如果您读过 Google 的那篇大名鼎鼎的论文 <a href="http://research.google.com/archive/mapreduce.html" target="_blank" rel="noopener noreferrer">“MapReduce: Simplified Data Processing on Large Clusters”<ExternalLinkIcon/></a>，您就能大概明白 map / reduce 的概念。</p>
 <blockquote>
@@ -10947,7 +11475,7 @@ DIGITS <span>=</span> <span>{</span><span>'0'</span><span>:</span> <span>0</span
     <title type="html">高阶函数</title>
     <id>https://mrhope.site/code/language/python/functional-programming/high-order-function/</id>
     <link href="https://mrhope.site/code/language/python/functional-programming/high-order-function/"/>
-    <updated>2022-03-31T03:28:29.205Z</updated>
+    <updated>2022-04-01T16:15:22.175Z</updated>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -10978,7 +11506,7 @@ DIGITS <span>=</span> <span>{</span><span>'0'</span><span>:</span> <span>0</span
     <title type="html">sorted</title>
     <id>https://mrhope.site/code/language/python/functional-programming/high-order-function/sorted.html</id>
     <link href="https://mrhope.site/code/language/python/functional-programming/high-order-function/sorted.html"/>
-    <updated>2022-03-31T03:28:29.205Z</updated>
+    <updated>2022-04-01T16:15:22.175Z</updated>
     <content type="html"><![CDATA[<h2 id="排序算法" tabindex="-1"> 排序算法</h2>
 <p>排序也是在程序中经常用到的算法。无论使用冒泡排序还是快速排序，排序的核心是比较两个元素的大小。如果是数字，我们可以直接比较，但如果是字符串或者两个 dict 呢? 直接比较数学上的大小是没有意义的，因此，比较的过程必须通过函数抽象出来。</p>
 <p>Python 内置的 <code>sorted()</code> 函数就可以对 list 进行排序:</p>
@@ -11024,7 +11552,7 @@ keys <span>=</span> <span>[</span><span>36</span><span>,</span> <span>5</span><s
     <title type="html">Dart 教程</title>
     <id>https://mrhope.site/code/language/dart/</id>
     <link href="https://mrhope.site/code/language/dart/"/>
-    <updated>2022-03-31T03:28:29.205Z</updated>
+    <updated>2022-04-01T16:15:22.175Z</updated>
     <summary type="html"><![CDATA[<div><p>提示</p>
 <p>正在完善中...</p>
 </div>
@@ -11052,7 +11580,7 @@ keys <span>=</span> <span>[</span><span>36</span><span>,</span> <span>5</span><s
     <title type="html">dart 快速入门</title>
     <id>https://mrhope.site/code/language/dart/samples/</id>
     <link href="https://mrhope.site/code/language/dart/samples/"/>
-    <updated>2022-03-31T03:28:29.205Z</updated>
+    <updated>2022-04-01T16:15:22.175Z</updated>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -11068,877 +11596,5 @@ keys <span>=</span> <span>[</span><span>36</span><span>,</span> <span>5</span><s
 ]]></content>
     <category term="Dart"/>
     <published>2020-05-30T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="html">dart 概要</title>
-    <id>https://mrhope.site/code/language/dart/samples/cheatsheet.html</id>
-    <link href="https://mrhope.site/code/language/dart/samples/cheatsheet.html"/>
-    <updated>2022-03-31T03:28:29.206Z</updated>
-    <summary type="html"><![CDATA[<p>Dart 语言旨在让其他语言的编码人员易于学习，但具有一些独特功能。</p>
-]]></summary>
-    <content type="html"><![CDATA[<p>Dart 语言旨在让其他语言的编码人员易于学习，但具有一些独特功能。</p>
-
-<h2 id="字符串插值" tabindex="-1"> 字符串插值</h2>
-<p>要将表达式的值放在字符串中，请使用 <code>${expression}</code>。如果表达式是标识符，则可以省略 <code>{}</code>。</p>
-<p>以下是一些使用字符串插值的示例:</p>
-<table>
-<thead>
-<tr>
-<th>串</th>
-<th>结果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>'\${3 + 2}'</code></td>
-<td><code>'5'</code></td>
-</tr>
-<tr>
-<td><code>'\${&quot;word&quot;.toUpperCase()}'</code></td>
-<td><code>'WORD'</code></td>
-</tr>
-<tr>
-<td><code>'$myObject'</code></td>
-<td><code>myObject.toString()</code> 的值</td>
-</tr>
-</tbody>
-</table>
-<h2 id="空感知运算符" tabindex="-1"> 空感知运算符</h2>
-<p>Dart 提供了一些方便的运算符来处理可能为 null 的值。一种是 <code>??=</code> 赋值运算符，它仅在该变量当前为 null 时才为该变量赋值:</p>
-<div><pre><code>int a<span>;</span> <span>// The initial value of a is null.</span>
-a <span>?</span><span>?</span><span>=</span> <span>3</span><span>;</span>
-<span>print</span><span>(</span>a<span>)</span><span>;</span> <span>// &lt;-- Prints 3.</span>
-
-a <span>?</span><span>?</span><span>=</span> <span>5</span><span>;</span>
-<span>print</span><span>(</span>a<span>)</span><span>;</span> <span>// &lt;-- Still prints 3.</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>另一个可识别空值的运算符是 <code>??</code>，只有左侧表达式的值为 null，它将求值并在其右侧返回表达式，否则它将在返回左侧表达式:</p>
-<div><pre><code><span>print</span><span>(</span><span>1</span> <span>?</span><span>?</span> <span>3</span><span>)</span><span>;</span> <span>// &lt;-- Prints 1.</span>
-<span>print</span><span>(</span><span>null</span> <span>?</span><span>?</span> <span>12</span><span>)</span><span>;</span> <span>// &lt;-- Prints 12.</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><h2 id="受控的属性访问" tabindex="-1"> 受控的属性访问</h2>
-<p>为了保护对可能为空的对象的属性或方法的访问，请在点 <code>.</code> 之前添加问号 <code>?</code>:</p>
-<div><pre><code>myObject<span>?</span><span>.</span>someProperty
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>上面的代码等效于以下代码:</p>
-<div><pre><code><span>(</span>myObject <span>!=</span> <span>null</span><span>)</span> <span>?</span> myObject<span>.</span>someProperty <span>:</span> <span>null</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>您可以在单个表达式中将多个 <code>?.</code> 链接在一起:</p>
-<div><pre><code>myObject<span>?</span><span>.</span>someProperty<span>?</span><span>.</span><span>someMethod</span><span>(</span><span>)</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>如果 <code>myObject</code> 或 <code>myObject.someProperty</code> 为 null，则代码返回 null(并且从不调用 <code>someMethod()</code>) 。</p>
-<h2 id="集合" tabindex="-1"> 集合</h2>
-<p>Dart 内置了对列表，地图和集合的支持。您可以使用文字创建它们:</p>
-<div><pre><code><span>final</span> aListOfStrings <span>=</span> <span>[</span><span><span>'one'</span></span><span>,</span> <span><span>'two'</span></span><span>,</span> <span><span>'three'</span></span><span>]</span><span>;</span>
-<span>final</span> aSetOfStrings <span>=</span> <span>{</span><span><span>'one'</span></span><span>,</span> <span><span>'two'</span></span><span>,</span> <span><span>'three'</span></span><span>}</span><span>;</span>
-<span>final</span> aMapOfStringsToInts <span>=</span> <span>{</span>
-  <span><span>'one'</span></span><span>:</span> <span>1</span><span>,</span>
-  <span><span>'two'</span></span><span>:</span> <span>2</span><span>,</span>
-  <span><span>'three'</span></span><span>:</span> <span>3</span><span>,</span>
-<span>}</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>Dart 的类型推断可以为您为这些变量分配类型。在这种情况下，推断的类型 <code>List&lt;String&gt;</code>， <code>Set&lt;String&gt;</code> 和 <code>Map&lt;String, int&gt;</code>。</p>
-<p>或者您可以自己指定类型:</p>
-<div><pre><code><span>final</span> aListOfInts <span>=</span> <span><span>&lt;</span>int<span>></span></span><span>[</span><span>]</span><span>;</span>
-<span>final</span> aSetOfInts <span>=</span> <span><span>&lt;</span>int<span>></span></span><span>{</span><span>}</span><span>;</span>
-<span>final</span> aMapOfIntToDouble <span>=</span> <span><span>&lt;</span>int<span>,</span> double<span>></span></span><span>{</span><span>}</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>当您想使用子类型的内容初始化列表但仍然希望列表为 <code>List&lt;BaseType&gt;</code> 时，指定类型很方便:</p>
-<div><pre><code><span>final</span> aListOfBaseType <span>=</span> <span><span>&lt;</span><span>BaseType</span><span>></span></span><span>[</span><span>SubType</span><span>(</span><span>)</span><span>,</span> <span>SubType</span><span>(</span><span>)</span><span>]</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="箭头语法" tabindex="-1"> 箭头语法</h2>
-<p>您可能已经在 Dart 代码中看到了该符号 <code>=&gt;</code>。此箭头语法是一种定义函数的方法，该函数将在其右侧执行表达式并返回其值。</p>
-<p>例如，考虑这个对 <code>List</code> 类的 <code>any()</code> 方法的调用:</p>
-<div><pre><code>bool hasEmpty <span>=</span> aListOfStrings<span>.</span><span>any</span><span>(</span><span>(</span>s<span>)</span> <span>{</span>
-  <span>return</span> s<span>.</span>isEmpty<span>;</span>
-<span>}</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>这是编写该代码的一种更简单的方法:</p>
-<div><pre><code>bool hasEmpty <span>=</span> aListOfStrings<span>.</span><span>any</span><span>(</span><span>(</span>s<span>)</span> <span>=</span><span>></span> s<span>.</span>isEmpty<span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="级联" tabindex="-1"> 级联</h2>
-<p>要对同一对象执行一系列操作，请使用级联(<code>..</code>)。我们都看到过这样的表达式:</p>
-<div><pre><code>myObject<span>.</span><span>someMethod</span><span>(</span><span>)</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>它调用 <code>myObject</code> 上的 <code>someMethod()</code> ，和表达的结果是的返回值 <code>someMethod()</code>。</p>
-<p>这是带有级联的相同表达式:</p>
-<div><pre><code>myObject<span>.</span><span>.</span><span>someMethod</span><span>(</span><span>)</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>尽管它仍然调用 <code>myObject</code> 上的 <code>someMethod()</code> ，但表达式的结果不是返回值，而是对 <code>myObject</code> 的引用。使用级联，可以将原本需要单独语句的操作链接在一起。例如，考虑以下代码:</p>
-<div><pre><code><span>var</span> button <span>=</span> <span>querySelector</span><span>(</span><span><span>'#confirm'</span></span><span>)</span><span>;</span>
-button<span>.</span>text <span>=</span> <span><span>'Confirm'</span></span><span>;</span>
-button<span>.</span>classes<span>.</span><span>add</span><span>(</span><span><span>'important'</span></span><span>)</span><span>;</span>
-button<span>.</span>onClick<span>.</span><span>listen</span><span>(</span><span>(</span>e<span>)</span> <span>=</span><span>></span> window<span>.</span><span>alert</span><span>(</span><span><span>'Confirmed!'</span></span><span>)</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>使用层叠时，代码变得更短，并且您不需要 <code>button</code> 变量:</p>
-<div><pre><code><span>querySelector</span><span>(</span><span><span>'#confirm'</span></span><span>)</span>
-<span>.</span><span>.</span>text <span>=</span> <span><span>'Confirm'</span></span>
-<span>.</span><span>.</span>classes<span>.</span><span>add</span><span>(</span><span><span>'important'</span></span><span>)</span>
-<span>.</span><span>.</span>onClick<span>.</span><span>listen</span><span>(</span><span>(</span>e<span>)</span> <span>=</span><span>></span> window<span>.</span><span>alert</span><span>(</span><span><span>'Confirmed!'</span></span><span>)</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h2 id="getter-和-setter" tabindex="-1"> Getter 和 Setter</h2>
-<p>只要您对一个字段进行特殊的控制要求，就可以定义 getter 和 setter。</p>
-<p>例如，您可以确保属性的值有效:</p>
-<div><pre><code><span>class</span> <span>MyClass</span> <span>{</span>
-  int _aProperty <span>=</span> <span>0</span><span>;</span>
-
-  int <span>get</span> aProperty <span>=</span><span>></span> _aProperty<span>;</span>
-
-  <span>set</span> <span>aProperty</span><span>(</span>int value<span>)</span> <span>{</span>
-    <span>if</span> <span>(</span>value <span>>=</span> <span>0</span><span>)</span> <span>{</span>
-      _aProperty <span>=</span> value<span>;</span>
-    <span>}</span>
-  <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>您还可以使用 getter 来定义计算属性:</p>
-<div><pre><code><span>class</span> <span>MyClass</span> <span>{</span>
-  <span>List</span><span><span>&lt;</span>int<span>></span></span> _values <span>=</span> <span>[</span><span>]</span><span>;</span>
-
-  <span>void</span> <span>addValue</span><span>(</span>int value<span>)</span> <span>{</span>
-    _values<span>.</span><span>add</span><span>(</span>value<span>)</span><span>;</span>
-  <span>}</span>
-
-  <span>// A computed property.</span>
-  int <span>get</span> count <span>{</span>
-    <span>return</span> _values<span>.</span>length<span>;</span>
-  <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div><h2 id="可选的位置参数" tabindex="-1"> 可选的位置参数</h2>
-<p>Dart 具有两种函数参数: 基于位置的和具名的。位置参数是您可能熟悉的一种:</p>
-<div><pre><code>int <span>sumUp</span><span>(</span>int a<span>,</span> int b<span>,</span> int c<span>)</span> <span>{</span>
-  <span>return</span> a <span>+</span> b <span>+</span> c<span>;</span>
-<span>}</span>
-<span>// ···</span>
-  int total <span>=</span> <span>sumUp</span><span>(</span><span>1</span><span>,</span> <span>2</span><span>,</span> <span>3</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>使用 Dart，您可以将这些位置参数包装在方括号中，以使其成为可选参数:</p>
-<div><pre><code>int <span>sumUpToFive</span><span>(</span>int a<span>,</span> <span>[</span>int b<span>,</span> int c<span>,</span> int d<span>,</span> int e<span>]</span><span>)</span> <span>{</span>
-  int sum <span>=</span> a<span>;</span>
-  <span>if</span> <span>(</span>b <span>!=</span> <span>null</span><span>)</span> sum <span>+=</span> b<span>;</span>
-  <span>if</span> <span>(</span>c <span>!=</span> <span>null</span><span>)</span> sum <span>+=</span> c<span>;</span>
-  <span>if</span> <span>(</span>d <span>!=</span> <span>null</span><span>)</span> sum <span>+=</span> d<span>;</span>
-  <span>if</span> <span>(</span>e <span>!=</span> <span>null</span><span>)</span> sum <span>+=</span> e<span>;</span>
-  <span>return</span> sum<span>;</span>
-<span>}</span>
-<span>// ···</span>
-  int total <span>=</span> <span>sumUpToFive</span><span>(</span><span>1</span><span>,</span> <span>2</span><span>)</span><span>;</span>
-  int otherTotal <span>=</span> <span>sumUpToFive</span><span>(</span><span>1</span><span>,</span> <span>2</span><span>,</span> <span>3</span><span>,</span> <span>4</span><span>,</span> <span>5</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>可选的位置参数始终位于函数的参数列表的最后。除非您提供另一个默认值，否则它们的默认值为 null:</p>
-<div><pre><code>int <span>sumUpToFive</span><span>(</span>int a<span>,</span> <span>[</span>int b <span>=</span> <span>2</span><span>,</span> int c <span>=</span> <span>3</span><span>,</span> int d <span>=</span> <span>4</span><span>,</span> int e <span>=</span> <span>5</span><span>]</span><span>)</span> <span>{</span>
-<span>// ···</span>
-<span>}</span>
-<span>// ···</span>
-  int newTotal <span>=</span> <span>sumUpToFive</span><span>(</span><span>1</span><span>)</span><span>;</span>
-  <span>print</span><span>(</span>newTotal<span>)</span><span>;</span> <span>// &lt;-- prints 15</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><h2 id="可选的命名参数" tabindex="-1"> 可选的命名参数</h2>
-<p>使用大括号语法，可以定义具有名称的可选参数。</p>
-<div><pre><code><span>void</span> <span>printName</span><span>(</span><span>String</span> firstName<span>,</span> <span>String</span> lastName<span>,</span> <span>{</span><span>String</span> suffix<span>}</span><span>)</span> <span>{</span>
-  <span>print</span><span>(</span>'$firstName $lastName $<span>{</span>suffix <span>?</span><span>?</span> <span><span>''</span></span><span>}</span>'<span>)</span><span>;</span>
-<span>}</span>
-<span>// ···</span>
-  <span>printName</span><span>(</span><span><span>'Avinash'</span></span><span>,</span> <span><span>'Gupta'</span></span><span>)</span><span>;</span>
-  <span>printName</span><span>(</span><span><span>'Poshmeister'</span></span><span>,</span> <span><span>'Moneybuckets'</span></span><span>,</span> suffix<span>:</span> <span><span>'IV'</span></span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>如您所料，默认情况下，这些参数的值为 null，但是您可以提供默认值:</p>
-<div><pre><code><span>void</span> <span>printName</span><span>(</span><span>String</span> firstName<span>,</span> <span>String</span> lastName<span>,</span> <span>{</span><span>String</span> suffix <span>=</span> <span><span>''</span></span><span>}</span><span>)</span> <span>{</span>
-  <span>print</span><span>(</span><span><span>'</span><span><span>$</span><span>firstName</span></span><span> </span><span><span>$</span><span>lastName</span></span><span> </span><span><span>$</span><span>suffix</span></span><span>'</span></span><span>)</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>函数不能同时具有可选的位置参数和可选的命名参数。</p>
-<h2 id="异常" tabindex="-1"> 异常</h2>
-<p>Dart 代码可以引发并捕获异常。与 Java 相反，Dart 的所有异常都是未经检查的异常。方法需要制订它们可能引发哪些异常，您也不被强制捕获任何异常。</p>
-<p>Dart 提供 <code>Exception</code> 和 <code>Error</code> 类型，但是您可以抛出任何非 null 对象:</p>
-<div><pre><code><span>throw</span> <span>Exception</span><span>(</span><span><span>'Something bad happened.'</span></span><span>)</span><span>;</span>
-<span>throw</span> <span><span>'Waaaaaaah!'</span></span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p>使用 <code>try</code>，<code>on</code> 以及 <code>catch</code> 处理异常时的关键字:</p>
-<div><pre><code><span>try</span> <span>{</span>
-  <span>breedMoreLlamas</span><span>(</span><span>)</span><span>;</span>
-<span>}</span> <span>on</span> <span>OutOfLlamasException</span> <span>{</span>
-  <span>// A specific exception</span>
-  <span>buyMoreLlamas</span><span>(</span><span>)</span><span>;</span>
-<span>}</span> <span>on</span> <span>Exception</span> <span>catch</span> <span>(</span>e<span>)</span> <span>{</span>
-  <span>// Anything else that is an exception</span>
-  <span>print</span><span>(</span><span><span>'Unknown exception: </span><span><span>$</span><span>e</span></span><span>'</span></span><span>)</span><span>;</span>
-<span>}</span> <span>catch</span> <span>(</span>e<span>)</span> <span>{</span>
-  <span>// No specified type, handles all</span>
-  <span>print</span><span>(</span><span><span>'Something really unknown: </span><span><span>$</span><span>e</span></span><span>'</span></span><span>)</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br></div></div><p><code>try</code> 的作用和大多数其他语言一样。使用 <code>on</code> 关键字按类型过滤特定的异常，并使用 <code>catch</code> 关键字获取对异常对象的引用。</p>
-<p>如果您不能完全处理该异常，请使用 <code>rethrow</code> 关键字传播该异常:</p>
-<div><pre><code><span>try</span> <span>{</span>
-  <span>breedMoreLlamas</span><span>(</span><span>)</span><span>;</span>
-<span>}</span> <span>catch</span> <span>(</span>e<span>)</span> <span>{</span>
-  <span>print</span><span>(</span><span><span>'I was just trying to breed llamas!.'</span></span><span>)</span><span>;</span>
-  <span>rethrow</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>要执行代码(无论是否引发异常)，请使用 <code>finally</code>:</p>
-<div><pre><code><span>try</span> <span>{</span>
-  <span>breedMoreLlamas</span><span>(</span><span>)</span><span>;</span>
-<span>}</span> <span>catch</span> <span>(</span>e<span>)</span> <span>{</span>
-  <span>// ... handle exception ...</span>
-<span>}</span> <span>finally</span> <span>{</span>
-  <span>// Always clean up, even if an exception is thrown.</span>
-  <span>cleanLlamaStalls</span><span>(</span><span>)</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><h2 id="在构造函数种使用-this" tabindex="-1"> 在构造函数种使用 <code>this</code></h2>
-<p>Dart 提供了一个方便的快捷方式，用于将值分配给构造函数中的属性: <code>this.propertyName</code> 在声明构造函数时使用:</p>
-<div><pre><code><span>class</span> <span>MyColor</span> <span>{</span>
-  int red<span>;</span>
-  int green<span>;</span>
-  int blue<span>;</span>
-
-  <span>MyColor</span><span>(</span><span>this</span><span>.</span>red<span>,</span> <span>this</span><span>.</span>green<span>,</span> <span>this</span><span>.</span>blue<span>)</span><span>;</span>
-<span>}</span>
-
-<span>final</span> color <span>=</span> <span>MyColor</span><span>(</span><span>80</span><span>,</span> <span>80</span><span>,</span> <span>128</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>该技术也适用于命名参数。属性名称成为参数的名称:</p>
-<div><pre><code><span>class</span> <span>MyColor</span> <span>{</span>
-  <span>.</span><span>.</span><span>.</span>
-
-  <span>MyColor</span><span>(</span><span>{</span><span>this</span><span>.</span>red<span>,</span> <span>this</span><span>.</span>green<span>,</span> <span>this</span><span>.</span>blue<span>}</span><span>)</span><span>;</span>
-<span>}</span>
-
-<span>final</span> color <span>=</span> <span>MyColor</span><span>(</span>red<span>:</span> <span>80</span><span>,</span> green<span>:</span> <span>80</span><span>,</span> blue<span>:</span> <span>80</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>对于可选参数，默认值可以按预期运行:</p>
-<div><pre><code><span>MyColor</span><span>(</span><span>[</span><span>this</span><span>.</span>red <span>=</span> <span>0</span><span>,</span> <span>this</span><span>.</span>green <span>=</span> <span>0</span><span>,</span> <span>this</span><span>.</span>blue <span>=</span> <span>0</span><span>]</span><span>)</span><span>;</span>
-<span>// or</span>
-<span>MyColor</span><span>(</span><span>{</span><span>this</span><span>.</span>red <span>=</span> <span>0</span><span>,</span> <span>this</span><span>.</span>green <span>=</span> <span>0</span><span>,</span> <span>this</span><span>.</span>blue <span>=</span> <span>0</span><span>}</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h2 id="初始化列表" tabindex="-1"> 初始化列表</h2>
-<p>有时在实现构造函数时，需要在构造函数主体执行之前进行一些设置。例如，在构造函数主体执行之前，final 字段必须具有值。您可以在构造函数的签名及其主体之间的初始化器列表中执行此操作:</p>
-<div><pre><code><span>Point</span><span>.</span><span>fromJson</span><span>(</span><span>Map</span><span><span>&lt;</span><span>String</span><span>,</span> num<span>></span></span> json<span>)</span>
-    <span>:</span> x <span>=</span> json<span>[</span><span><span>'x'</span></span><span>]</span><span>,</span>
-      y <span>=</span> json<span>[</span><span><span>'y'</span></span><span>]</span> <span>{</span>
-  <span>print</span><span>(</span><span><span>'In Point.fromJson(): (</span><span><span>$</span><span>x</span></span><span>, </span><span><span>$</span><span>y</span></span><span>)'</span></span><span>)</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>初始化器列表也是放置断言的方便位置，断言仅在开发期间运行:</p>
-<div><pre><code><span>NonNegativePoint</span><span>(</span><span>this</span><span>.</span>x<span>,</span> <span>this</span><span>.</span>y<span>)</span>
-    <span>:</span> <span>assert</span><span>(</span>x <span>>=</span> <span>0</span><span>)</span><span>,</span>
-      <span>assert</span><span>(</span>y <span>>=</span> <span>0</span><span>)</span> <span>{</span>
-  <span>print</span><span>(</span><span><span>'I just made a NonNegativePoint: (</span><span><span>$</span><span>x</span></span><span>, </span><span><span>$</span><span>y</span></span><span>)'</span></span><span>)</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h2 id="命名构造函数" tabindex="-1"> 命名构造函数</h2>
-<p>为了允许类具有多个构造函数，Dart 支持命名构造函数:</p>
-<div><pre><code><span>class</span> <span>Point</span> <span>{</span>
-  double x<span>,</span> y<span>;</span>
-
-  <span>Point</span><span>(</span><span>this</span><span>.</span>x<span>,</span> <span>this</span><span>.</span>y<span>)</span><span>;</span>
-
-  <span>Point</span><span>.</span><span>origin</span><span>(</span><span>)</span> <span>{</span>
-    x <span>=</span> <span>0</span><span>;</span>
-    y <span>=</span> <span>0</span><span>;</span>
-  <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><p>要使用命名构造函数，请使用其全名调用它:</p>
-<div><pre><code><span>final</span> myPoint <span>=</span> <span>Point</span><span>.</span><span>origin</span><span>(</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><h2 id="工厂构造函数" tabindex="-1"> 工厂构造函数</h2>
-<p>Dart 支持工厂构造函数，该构造函数可以返回子类型，甚至可以返回 null。要创建工厂构造函数，请使用 <code>factory</code> 关键字:</p>
-<div><pre><code><span>class</span> <span>Square</span> <span>extends</span> <span>Shape</span> <span>{</span><span>}</span>
-
-<span>class</span> <span>Circle</span> <span>extends</span> <span>Shape</span> <span>{</span><span>}</span>
-
-<span>class</span> <span>Shape</span> <span>{</span>
-  <span>Shape</span><span>(</span><span>)</span><span>;</span>
-
-  <span>factory</span> <span>Shape</span><span>.</span><span>fromTypeName</span><span>(</span><span>String</span> typeName<span>)</span> <span>{</span>
-    <span>if</span> <span>(</span>typeName <span>==</span> <span><span>'square'</span></span><span>)</span> <span>return</span> <span>Square</span><span>(</span><span>)</span><span>;</span>
-    <span>if</span> <span>(</span>typeName <span>==</span> <span><span>'circle'</span></span><span>)</span> <span>return</span> <span>Circle</span><span>(</span><span>)</span><span>;</span>
-
-    <span>print</span><span>(</span><span><span>'I don\'t recognize </span><span><span>$</span><span>typeName</span></span><span>'</span></span><span>)</span><span>;</span>
-    <span>return</span> <span>null</span><span>;</span>
-  <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br></div></div><h2 id="重定向构造函数" tabindex="-1"> 重定向构造函数</h2>
-<p>有时，构造函数的唯一目的是重定向到同一类中的另一个构造函数。重定向构造函数的主体为空，构造函数调用出现在冒号(<code>:</code>)之后。</p>
-<div><pre><code><span>class</span> <span>Automobile</span> <span>{</span>
-  <span>String</span> make<span>;</span>
-  <span>String</span> model<span>;</span>
-  int mpg<span>;</span>
-
-  <span>// The main constructor for this class.</span>
-  <span>Automobile</span><span>(</span><span>this</span><span>.</span>make<span>,</span> <span>this</span><span>.</span>model<span>,</span> <span>this</span><span>.</span>mpg<span>)</span><span>;</span>
-
-  <span>// Delegates to the main constructor.</span>
-  <span>Automobile</span><span>.</span><span>hybrid</span><span>(</span><span>String</span> make<span>,</span> <span>String</span> model<span>)</span> <span>:</span> <span>this</span><span>(</span>make<span>,</span> model<span>,</span> <span>60</span><span>)</span><span>;</span>
-
-  <span>// Delegates to a named constructor</span>
-  <span>Automobile</span><span>.</span><span>fancyHybrid</span><span>(</span><span>)</span> <span>:</span> <span>this</span><span>.</span><span>hybrid</span><span>(</span><span><span>'Futurecar'</span></span><span>,</span> <span><span>'Mark 2'</span></span><span>)</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br></div></div><h2 id="const-构造函数" tabindex="-1"> const 构造函数</h2>
-<p>如果您的类产生了永不改变的对象，则可以使这些对象具有编译时常量。为此，请定义一个 <code>const</code> 构造函数，并确保所有实例变量都是最终变量。</p>
-<div><pre><code><span>class</span> <span>ImmutablePoint</span> <span>{</span>
-  <span>const</span> <span>ImmutablePoint</span><span>(</span><span>this</span><span>.</span>x<span>,</span> <span>this</span><span>.</span>y<span>)</span><span>;</span>
-
-  <span>final</span> int x<span>;</span>
-  <span>final</span> int y<span>;</span>
-
-  <span>static</span> <span>const</span> <span>ImmutablePoint</span> origin <span>=</span> <span>ImmutablePoint</span><span>(</span><span>0</span><span>,</span> <span>0</span><span>)</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div>]]></content>
-    <category term="Dart"/>
-    <published>2020-05-30T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="html">可迭代的集合</title>
-    <id>https://mrhope.site/code/language/dart/samples/iterable.html</id>
-    <link href="https://mrhope.site/code/language/dart/samples/iterable.html"/>
-    <updated>2022-03-31T03:28:29.206Z</updated>
-    <summary type="html"><![CDATA[<p>本节教您如何使用实现 <a href="https://api.dart.dev/stable/dart-core/Iterable-class.html" target="_blank" rel="noopener noreferrer">Iterable<ExternalLinkIcon/></a> 类的集合 - 例如 <a href="https://api.dart.dev/stable/dart-core/List-class.html" target="_blank" rel="noopener noreferrer">List<ExternalLinkIcon/></a> 和 <a href="https://api.dart.dev/stable/dart-core/Set-class.html" target="_blank" rel="noopener noreferrer">Set<ExternalLinkIcon/></a>。可迭代对象是各种 Dart 应用程序的基本构建块，即使您没有注意到，您可能已经在使用它们。</p>
-<p>本节包含以下内容:</p>
-<ul>
-<li>如何读取 Iterable 的元素。</li>
-<li>如何检查 Iterable 的元素是否满足条件。</li>
-<li>如何过滤 Iterable 的内容。</li>
-<li>如何将 Iterable 的内容映射到其他值。</li>
-</ul>
-]]></summary>
-    <content type="html"><![CDATA[<p>本节教您如何使用实现 <a href="https://api.dart.dev/stable/dart-core/Iterable-class.html" target="_blank" rel="noopener noreferrer">Iterable<ExternalLinkIcon/></a> 类的集合 - 例如 <a href="https://api.dart.dev/stable/dart-core/List-class.html" target="_blank" rel="noopener noreferrer">List<ExternalLinkIcon/></a> 和 <a href="https://api.dart.dev/stable/dart-core/Set-class.html" target="_blank" rel="noopener noreferrer">Set<ExternalLinkIcon/></a>。可迭代对象是各种 Dart 应用程序的基本构建块，即使您没有注意到，您可能已经在使用它们。</p>
-<p>本节包含以下内容:</p>
-<ul>
-<li>如何读取 Iterable 的元素。</li>
-<li>如何检查 Iterable 的元素是否满足条件。</li>
-<li>如何过滤 Iterable 的内容。</li>
-<li>如何将 Iterable 的内容映射到其他值。</li>
-</ul>
-
-<h2 id="什么是集合" tabindex="-1"> 什么是集合</h2>
-<p>集合是代表一组对象(称为元素)的对象。可迭代对象是一种集合。</p>
-<p>集合可以为空，也可以包含许多元素。根据目的，集合可以具有不同的结构和实现。这些是一些最常见的集合类型:</p>
-<ul>
-<li><a href="https://api.dart.dev/stable/dart-core/List-class.html" target="_blank" rel="noopener noreferrer">List<ExternalLinkIcon/></a>: 用于按元素索引读取元素。</li>
-<li><a href="https://api.dart.dev/stable/dart-core/Set-class.html" target="_blank" rel="noopener noreferrer">Set<ExternalLinkIcon/></a>: 用于包含只能出现一次的元素。</li>
-<li><a href="https://api.dart.dev/stable/dart-core/Map-class.html" target="_blank" rel="noopener noreferrer">Map<ExternalLinkIcon/></a>: 用于使用键读取元素。</li>
-</ul>
-<h2 id="什么是可迭代的" tabindex="-1"> 什么是可迭代的</h2>
-<p>一个 <code>Iterable</code> 是可以顺序访问的元素的集合。</p>
-<p>在 Dart 中，一个 <code>Iterable</code> 是一个抽象类，这意味着您不能直接实例化它。但是，您可以 <code>Iterable</code> 通过创建新的 <code>List</code> 或来创建新的 <code>Set</code>。</p>
-<p><code>List</code> 和 <code>Set</code> 都是 <code>Iterable</code>，所以它们具有和 <code>Iterable</code> 类相同的方法和属性。</p>
-<p>一个 <code>Map</code> 在其内部使用不同的数据结构，这取决于它的实现。例如，<a href="https://api.dart.dev/stable/dart-collection/HashMap-class.html" target="_blank" rel="noopener noreferrer">HashMap<ExternalLinkIcon/></a> 使用一个哈希表，其中的元素(也称为 values)是使用键获得的。<code>Map</code> 也可以使用 <code>Iterable</code> 上的 <code>entries</code> 或 <code>values</code> 属性读取他的元素。</p>
-<p>此示例显示 <code>List</code> 的 <code>int</code>，也为 <code>Iterable</code> 的 <code>int</code>:</p>
-<div><pre><code><span>Iterable</span><span><span>&lt;</span>int<span>></span></span> iterable <span>=</span> <span>[</span><span>1</span><span>,</span> <span>2</span><span>,</span> <span>3</span><span>]</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>一个 List 的不同之处 在于，使用 <code>Iterable</code>，您不能保证按索引读取元素将是有效的。<code>Iterable</code> 相对 <code>List</code>，没有 <code>[]</code> 运算符。</p>
-<p>例如，考虑以下代码，该代码无效:</p>
-<div><pre><code><span>Iterable</span><span><span>&lt;</span>int<span>></span></span> iterable <span>=</span> <span>[</span><span>1</span><span>,</span> <span>2</span><span>,</span> <span>3</span><span>]</span><span>;</span>
-int value <span>=</span> iterable<span>[</span><span>1</span><span>]</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><p>如果您使用 <code>[]</code> 读取元素，则编译器会告诉您 <code>Iterable</code> 类上未定义运算符 '<code>[]</code>'，这意味着您不能在这种情况下使用 <code>[index]</code>。</p>
-<p>您可以改为使用读取元素 <code>elementAt()</code>，该元素将逐步浏览可迭代的元素，直到到达该位置为止。</p>
-<div><pre><code><span>Iterable</span><span><span>&lt;</span>int<span>></span></span> iterable <span>=</span> <span>[</span><span>1</span><span>,</span> <span>2</span><span>,</span> <span>3</span><span>]</span><span>;</span>
-int value <span>=</span> iterable<span>.</span><span>elementAt</span><span>(</span><span>1</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br></div></div><h2 id="读取元素" tabindex="-1"> 读取元素</h2>
-<p>您可以使用 <code>for-in</code> 循环依次读取可迭代的元素。</p>
-<div><pre><code><span>void</span> <span>main</span><span>(</span><span>)</span> <span>{</span>
-  <span>var</span> iterable <span>=</span> <span>[</span><span><span>'Salad'</span></span><span>,</span> <span><span>'Popcorn'</span></span><span>,</span> <span><span>'Toast'</span></span><span>]</span><span>;</span>
-  <span>for</span> <span>(</span><span>var</span> element <span>in</span> iterable<span>)</span> <span>{</span>
-    <span>print</span><span>(</span>element<span>)</span><span>;</span>
-  <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><div><p>提示</p>
-<p>在后台，<code>for-in</code> 循环使用迭代器。但是，您很少看到直接使用 <code>Iterator</code> API 的情况，因为 <code>for-in</code> 它更易于阅读和理解，并且不易出错。</p>
-</div>
-<div><p>关键词</p>
-<ul>
-<li>Iterable: Dart Iterable 类。</li>
-<li>Iterator: 用于使用 for-in 从 Iterable 对象读取元素的对象。</li>
-<li><code>for-in</code> 循环: 一种简单的按顺序读取 <code>Iterable</code> 元素的方法。</li>
-</ul>
-</div>
-<h3 id="使用-fist-和-last" tabindex="-1"> 使用 <code>fist</code> 和 <code>last</code></h3>
-<p>在某些情况下，您只想访问 <code>Iterable</code> 的第一个或最后一个元素。</p>
-<p>使用 <code>Iterable</code> 类，您无法直接访问元素，因此无法调用 <code>iterable[0]</code> 来访问第一个元素。相反，您可以使用 <code>first</code> 获取第一个元素的。</p>
-<p>同样，对于 Iterable 类，您不能使用运算符 <code>[]</code> 来访问最后一个元素，但是可以使用该 <code>last</code> 属性。</p>
-<div><pre><code><span>void</span> <span>main</span><span>(</span><span>)</span> <span>{</span>
-  <span>var</span> iterable <span>=</span> <span>[</span><span><span>'Salad'</span></span><span>,</span> <span><span>'Popcorn'</span></span><span>,</span> <span><span>'Toast'</span></span><span>]</span><span>;</span>
-  <span>print</span><span>(</span><span><span>'The first element is </span><span><span>${</span><span>iterable<span>.</span>first</span><span>}</span></span><span>'</span></span><span>)</span><span>;</span>
-  <span>print</span><span>(</span><span><span>'The last element is </span><span><span>${</span><span>iterable<span>.</span>last</span><span>}</span></span><span>'</span></span><span>)</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><div><p>注意</p>
-<p>因为访问 <code>Iterable</code> 的最后一个元素需要逐步浏览所有其他元素， 所以 <code>last</code> 可能很慢。使用 <code>first</code> 或 <code>last</code> 在一个空 <code>Iterable</code> 会产生 <code>StateError</code>。</p>
-</div>
-<h3 id="使用-firstwhere" tabindex="-1"> 使用 <code>firstWhere()</code></h3>
-<p>您已经看到您可以按顺序访问 <code>Iterable</code> 元素，并且可以轻松获取第一个或最后一个元素。</p>
-<p>现在，您将学习如何使用 <code>firstWhere()</code> 来找到满足某些条件的第一个元素。此方法要求您传递一个谓词(predicate)，该谓词是一个在输入满足特定条件时返回 true 的函数。</p>
-<div><pre><code><span>String</span> element <span>=</span> iterable<span>.</span><span>firstWhere</span><span>(</span><span>(</span>element<span>)</span> <span>=</span><span>></span> element<span>.</span>length <span>></span> <span>5</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>例如，如果要查找第一个字符数超过 5 个的 String，则必须传递一个在元素大小大于 5 时返回 true 的谓词。</p>
-<div><pre><code>bool <span>predicate</span><span>(</span><span>String</span> element<span>)</span> <span>{</span>
-  <span>return</span> element<span>.</span>length <span>></span> <span>5</span><span>;</span>
-<span>}</span>
-
-<span>main</span><span>(</span><span>)</span> <span>{</span>
-  <span>var</span> items <span>=</span> <span>[</span><span><span>'Salad'</span></span><span>,</span> <span><span>'Popcorn'</span></span><span>,</span> <span><span>'Toast'</span></span><span>,</span> <span><span>'Lasagne'</span></span><span>]</span><span>;</span>
-
-  <span>// You can find with a simple expression:</span>
-  <span>var</span> element1 <span>=</span> items<span>.</span><span>firstWhere</span><span>(</span><span>(</span>element<span>)</span> <span>=</span><span>></span> element<span>.</span>length <span>></span> <span>5</span><span>)</span><span>;</span>
-  <span>print</span><span>(</span>element1<span>)</span><span>;</span>
-
-  <span>// Or try using a function block:</span>
-  <span>var</span> element2 <span>=</span> items<span>.</span><span>firstWhere</span><span>(</span><span>(</span>element<span>)</span> <span>{</span>
-    <span>return</span> element<span>.</span>length <span>></span> <span>5</span><span>;</span>
-  <span>}</span><span>)</span><span>;</span>
-  <span>print</span><span>(</span>element2<span>)</span><span>;</span>
-
-  <span>// Or even pass in a function reference:</span>
-  <span>var</span> element3 <span>=</span> items<span>.</span><span>firstWhere</span><span>(</span>predicate<span>)</span><span>;</span>
-  <span>print</span><span>(</span>element3<span>)</span><span>;</span>
-
-  <span>// You can also use an `orElse` function in case no value is found!</span>
-  <span>var</span> element4 <span>=</span> items<span>.</span><span>firstWhere</span><span>(</span>
-    <span>(</span>element<span>)</span> <span>=</span><span>></span> element<span>.</span>length <span>></span> <span>10</span><span>,</span>
-    orElse<span>:</span> <span>(</span><span>)</span> <span>=</span><span>></span> <span><span>'None!'</span></span><span>,</span>
-  <span>)</span><span>;</span>
-  <span>print</span><span>(</span>element4<span>)</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br></div></div><p>在此示例中，您可以看到三种不同的方式来编写谓词:</p>
-<ul>
-<li>作为表达式: 测试代码的一行使用箭头语法(<code>=&gt;</code>)。</li>
-<li>作为一个块: 测试代码在方括号和 <code>return</code> 语句之间有多行。</li>
-<li>作为函数: 测试代码位于 <code>firstWhere()</code> 作为参数传递给方法的外部函数中。</li>
-</ul>
-<p>没有正确或错误的方法。使用最适合您的方式，使您的代码更易于阅读和理解。</p>
-<p>在示例中，<code>firstWhereWithOrElse()</code> 使用可选的 named 参数 <code>orElse</code> 调用了 <code>firstWhere()</code>。当找不到元素时，该参数提供了替代方法。在这种情况下，由于没有元素满足提供的条件，因此返回了文本 <code>'None!'</code>。</p>
-<div><p>注意</p>
-<p>如果没有元素满足测试谓词，并且 <code>orElse</code> 未提供参数，则 <code>firstWhere()</code> 抛出 <code>StateError</code>。</p>
-</div>
-<div><p>快速回顾</p>
-<ul>
-<li>Iterable 中的元素必须被依次访问。</li>
-<li>遍历所有元素的最简单方法是使用 <code>for-in</code> 循环。</li>
-<li>您可以使用 <code>first</code> 和 <code>last</code> getter 获取第一个和最后一个元素。</li>
-<li>您还可以通过找到第一个满足条件的元素 <code>firstWhere()</code>。</li>
-<li>您可以将测试谓词编写为表达式，块或函数。</li>
-</ul>
-<p>关键词:</p>
-<ul>
-<li>谓词(Predicate): 满足特定条件时返回 true 的函数。</li>
-</ul>
-</div>
-<h3 id="singlewhere" tabindex="-1"> singleWhere</h3>
-<p><code>singleWhere()</code> 工作方式与 <code>firstWhere()</code> 相似，但是在这种情况下，它只期望 Iterable 的一个元素满足谓词。如果 Iterable 满足谓词条件的元素超过一个或全部不满足，则该方法将引发 <code>StateError</code> 异常。</p>
-<div><p>注意</p>
-<p><code>singleWhere()</code> 依次执行直到 Iterable 的最后一个元素，如果 Iterable 数量为无限或包含大量元素，可能会导致问题。</p>
-</div>
-<h2 id="条件检查" tabindex="-1"> 条件检查</h2>
-<p>使用 Iterable 时，有时您需要验证集合的所有元素都满足某些条件。</p>
-<p>您可能很想使用这样的 <code>for-in</code> 循环来编写解决方案:</p>
-<div><pre><code><span>for</span> <span>(</span><span>var</span> item <span>in</span> items<span>)</span> <span>{</span>
-  <span>if</span> <span>(</span>item<span>.</span>length <span>&lt;</span> <span>5</span><span>)</span> <span>{</span>
-    <span>return</span> <span>false</span><span>;</span>
-  <span>}</span>
-<span>}</span>
-<span>return</span> <span>true</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>但是，您可以使用 <code>every()</code> 方法完成相同操作:</p>
-<div><pre><code><span>return</span> items<span>.</span><span>every</span><span>(</span><span>(</span>element<span>)</span> <span>=</span><span>></span> element<span>.</span>length <span>>=</span> <span>5</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>使用 <code>every()</code> 方法可以使代码更易读，更紧凑且更不易出错。</p>
-<h3 id="使用-any-和-every" tabindex="-1"> 使用 any() 和 every()</h3>
-<p>Iterable 类提供了两个方法，您可以用它来验证条件:</p>
-<ul>
-<li>any(): 如果至少一个元素满足条件，则返回 true。</li>
-<li>every(): 如果所有元素都满足条件，则返回 true。</li>
-</ul>
-<div><pre><code><span>void</span> <span>main</span><span>(</span><span>)</span> <span>{</span>
-  <span>var</span> items <span>=</span> <span>[</span><span><span>'Salad'</span></span><span>,</span> <span><span>'Popcorn'</span></span><span>,</span> <span><span>'Toast'</span></span><span>]</span><span>;</span>
-
-  <span>if</span> <span>(</span>items<span>.</span><span>any</span><span>(</span><span>(</span>element<span>)</span> <span>=</span><span>></span> element<span>.</span><span>contains</span><span>(</span><span><span>'a'</span></span><span>)</span><span>)</span><span>)</span> <span>{</span>
-    <span>print</span><span>(</span><span><span>'At least one element contains "a"'</span></span><span>)</span><span>;</span>
-  <span>}</span>
-
-  <span>if</span> <span>(</span>items<span>.</span><span>every</span><span>(</span><span>(</span>element<span>)</span> <span>=</span><span>></span> element<span>.</span>length <span>>=</span> <span>5</span><span>)</span><span>)</span> <span>{</span>
-    <span>print</span><span>(</span><span><span>'All elements have length >= 5'</span></span><span>)</span><span>;</span>
-  <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>在示例中，<code>any()</code> 验证至少一个元素包含字符 <code>a</code>，<code>every()</code> 验证所有元素的长度等于或大于 5。</p>
-<p>运行代码后，尝试更改 <code>any()</code> 的谓词，使其返回 false:</p>
-<div><pre><code><span>if</span> <span>(</span>items<span>.</span><span>any</span><span>(</span><span>(</span>element<span>)</span> <span>=</span><span>></span> element<span>.</span><span>contains</span><span>(</span><span><span>'Z'</span></span><span>)</span><span>)</span><span>)</span> <span>{</span>
-  <span>print</span><span>(</span><span><span>'At least one element contains "Z"'</span></span><span>)</span><span>;</span>
-<span>}</span> <span>else</span> <span>{</span>
-  <span>print</span><span>(</span><span><span>'No element contains "Z"'</span></span><span>)</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>您还可以 <code>any()</code> 用来验证 Iterable 中没有任何元素满足特定条件。</p>
-<div><p>快速回顾</p>
-<ul>
-<li>尽管可以使用 <code>for-in</code> 循环来检查条件，但是有更好的方法可以执行此操作。</li>
-<li>any() 允许您检查是否有任何元素满足条件。</li>
-<li>every() 允许您检查所有元素均满足条件。</li>
-</ul>
-</div>
-<h2 id="筛选" tabindex="-1"> 筛选</h2>
-<p>前面的部分介绍了 <code>firstWhere()</code> 与 <code>singleWhere()</code> 这些可以帮助您找到满足特定谓词的元素的方法。</p>
-<p>但是，如果要查找满足特定条件的所有元素怎么办? 您可以使用 <code>where()</code> 方法来完成。</p>
-<div><pre><code><span>var</span> evenNumbers <span>=</span> numbers<span>.</span><span>where</span><span>(</span><span>(</span>number<span>)</span> <span>=</span><span>></span> number<span>.</span>isEven<span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>在此示例中， numbers 是包含多个 int 值的 Iterable，<code>where()</code> 会查找所有偶数。</p>
-<p><code>where()</code> 的输出是另一个 Iterable，您可以使用它来对其进行迭代或应用其他 Iterable 方法。在下一个示例中，where() 的输出直接在 <code>for-in</code> 循环内部使用。</p>
-<div><pre><code><span>var</span> evenNumbers <span>=</span> numbers<span>.</span><span>where</span><span>(</span><span>(</span>number<span>)</span> <span>=</span><span>></span> number<span>.</span>isEven<span>)</span><span>;</span>
-<span>for</span> <span>(</span><span>var</span> number <span>in</span> evenNumbers<span>)</span> <span>{</span>
-  <span>print</span><span>(</span><span><span>'</span><span><span>$</span><span>number</span></span><span> is even'</span></span><span>)</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><h3 id="使用-where" tabindex="-1"> 使用 where()</h3>
-<p>此示例真是如何将 <code>where()</code> 与其他方法(例如 <code>any()</code>)一起使用。</p>
-<p>在此示例中，<code>where()</code> 用于查找所有偶数，然后 <code>any()</code> 用于检查结果是否包含负数。</p>
-<p>在示例的后面，<code>where()</code> 再次用于查找所有大于 1000 的数字。由于没有数字，结果为空 Iterable。</p>
-<div><p>提示</p>
-<p>如果没有元素满足 <code>where()</code> 中的谓词 ，则该方法返回 null Iterable。不同于 <code>singleWhere()</code> 或 <code>firstWhere()</code>， <code>where()</code> 不会引发 StateError 异常。</p>
-</div>
-<h3 id="使用-takewhile" tabindex="-1"> 使用 takeWhile</h3>
-<p>方法 <code>takeWhile()</code> 和 <code>skipWhile()</code> 还可以帮助您从 Iterable 中过滤元素。</p>
-<p>这个例子展示了 <code>takeWhile()</code> 和 <code>skipWhile()</code> 是如何拆分包含数字的 Iterable。</p>
-<div><pre><code><span>main</span><span>(</span><span>)</span> <span>{</span>
-  <span>var</span> numbers <span>=</span> <span>[</span><span>1</span><span>,</span> <span>3</span><span>,</span> <span>-</span><span>2</span><span>,</span> <span>0</span><span>,</span> <span>4</span><span>,</span> <span>5</span><span>]</span><span>;</span>
-
-  <span>var</span> numbersUntilZero <span>=</span> numbers<span>.</span><span>takeWhile</span><span>(</span><span>(</span>number<span>)</span> <span>=</span><span>></span> number <span>!=</span> <span>0</span><span>)</span><span>;</span>
-  <span>print</span><span>(</span><span><span>'Numbers until 0: </span><span><span>$</span><span>numbersUntilZero</span></span><span>'</span></span><span>)</span><span>;</span>
-
-  <span>var</span> numbersAfterZero <span>=</span> numbers<span>.</span><span>skipWhile</span><span>(</span><span>(</span>number<span>)</span> <span>=</span><span>></span> number <span>!=</span> <span>0</span><span>)</span><span>;</span>
-  <span>print</span><span>(</span><span><span>'Numbers after 0: </span><span><span>$</span><span>numbersAfterZero</span></span><span>'</span></span><span>)</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>在此示例中，<code>takeWhile()</code> 返回一个 Iterable，其中包含所有导致满足谓词的元素的元素。另一方面，<code>skipWhile()</code> 返回一个移除了满足谓词的元素及它之前的所有元素的 Iterable。注意，包括满足谓词的元素。</p>
-<div><p>快速回顾</p>
-<ul>
-<li>使用 <code>where()</code> 过滤 Iterable 的元素。</li>
-<li><code>where()</code> 的输出是另一个 Iterable。</li>
-<li>使用 <code>takeWhile()</code> 和 <code>skipWhile()</code> 获取元素，直到满足条件为止。</li>
-<li>这些方法的输出可以为空 Iterable。</li>
-</ul>
-</div>
-<h2 id="映射" tabindex="-1"> 映射</h2>
-<p>Iterables 使用 <code>map()</code> 方法进行映射。您可以在每个元素上应用功能，并用新元素替换每个元素。</p>
-<div><pre><code><span>Iterable</span><span><span>&lt;</span>int<span>></span></span> output <span>=</span> numbers<span>.</span><span>map</span><span>(</span><span>(</span>number<span>)</span> <span>=</span><span>></span> number <span>*</span> <span>10</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>在此示例中，Iterable 数字的每个元素都乘以 10。</p>
-<p>您还可以使用 <code>map()</code> 将元素转换为其他对象，例如，将 int 全部转换为 String，如下面的示例所示。</p>
-<div><pre><code><span>Iterable</span><span><span>&lt;</span><span>String</span><span>></span></span> output <span>=</span> numbers<span>.</span><span>map</span><span>(</span><span>(</span>number<span>)</span> <span>=</span><span>></span> number<span>.</span><span>toString</span><span>(</span><span>)</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><div><p>提示</p>
-<p><code>map()</code> 返回一个惰性的 Iterable，这意味着仅在迭代元素时才调用提供的函数。</p>
-</div>
-<div><p>快速回顾</p>
-<ul>
-<li><code>map()</code> 将对应函数应用于 Iterable 的所有元素。</li>
-<li><code>map()</code> 的输出是另一个 Iterable。</li>
-<li>在 Iterable 迭代之前，不会调用该函数。</li>
-</ul>
-</div>
-]]></content>
-    <category term="Dart"/>
-    <published>2020-05-30T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="html">dart 语言范例</title>
-    <id>https://mrhope.site/code/language/dart/samples/samples.html</id>
-    <link href="https://mrhope.site/code/language/dart/samples/samples.html"/>
-    <updated>2022-03-31T03:28:29.207Z</updated>
-    <summary type="html"><![CDATA[<p>该章内容并不全面，只是为喜欢通过示例学习的人们简要介绍了该语言。您可能还需要查看语言和库导览，或 <a href="/code/language/dart/samples/cheatsheet.html">Dart 概要</a>。</p>
-]]></summary>
-    <content type="html"><![CDATA[<p>该章内容并不全面，只是为喜欢通过示例学习的人们简要介绍了该语言。您可能还需要查看语言和库导览，或 <a href="/code/language/dart/samples/cheatsheet.html">Dart 概要</a>。</p>
-
-<h2 id="hello-world" tabindex="-1"> Hello World</h2>
-<p>每个应用都有 <code>main()</code> 函数。要在控制台上显示文本，可以使用顶级 <code>print()</code> 函数:</p>
-<div><pre><code><span>void</span> <span>main</span><span>(</span><span>)</span> <span>{</span>
-  <span>print</span><span>(</span><span><span>'Hello, World!'</span></span><span>)</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h2 id="变量" tabindex="-1"> 变量</h2>
-<p>即使在类型安全的 Dart 代码中，由于类型推断，大多数变量也不需要显式类型:</p>
-<div><pre><code><span>var</span> name <span>=</span> <span><span>'Voyager I'</span></span><span>;</span>
-<span>var</span> year <span>=</span> <span>1977</span><span>;</span>
-<span>var</span> antennaDiameter <span>=</span> <span>3.7</span><span>;</span>
-<span>var</span> flybyObjects <span>=</span> <span>[</span><span><span>'Jupiter'</span></span><span>,</span> <span><span>'Saturn'</span></span><span>,</span> <span><span>'Uranus'</span></span><span>,</span> <span><span>'Neptune'</span></span><span>]</span><span>;</span>
-<span>var</span> image <span>=</span> <span>{</span>
-  <span><span>'tags'</span></span><span>:</span> <span>[</span><span><span>'saturn'</span></span><span>]</span><span>,</span>
-  <span><span>'url'</span></span><span>:</span> <span><span>'//path/to/saturn.jpg'</span></span>
-<span>}</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><p><a href="https://dart.dev/guides/language/language-tour#variables" target="_blank" rel="noopener noreferrer">阅读有关 Dart 中变量的更多信息<ExternalLinkIcon/></a>，包括默认值，<code>final</code> 和 <code>const</code> 关键字以及静态类型。</p>
-<h2 id="控制语句" tabindex="-1"> 控制语句</h2>
-<p>Dart 支持通常的控制语句:</p>
-<div><pre><code><span>if</span> <span>(</span>year <span>>=</span> <span>2001</span><span>)</span> <span>{</span>
-  <span>print</span><span>(</span><span><span>'21st century'</span></span><span>)</span><span>;</span>
-<span>}</span> <span>else</span> <span>if</span> <span>(</span>year <span>>=</span> <span>1901</span><span>)</span> <span>{</span>
-  <span>print</span><span>(</span><span><span>'20th century'</span></span><span>)</span><span>;</span>
-<span>}</span>
-
-<span>for</span> <span>(</span><span>var</span> object <span>in</span> flybyObjects<span>)</span> <span>{</span>
-  <span>print</span><span>(</span>object<span>)</span><span>;</span>
-<span>}</span>
-
-<span>for</span> <span>(</span>int month <span>=</span> <span>1</span><span>;</span> month <span>&lt;=</span> <span>12</span><span>;</span> month<span>++</span><span>)</span> <span>{</span>
-  <span>print</span><span>(</span>month<span>)</span><span>;</span>
-<span>}</span>
-
-<span>while</span> <span>(</span>year <span>&lt;</span> <span>2016</span><span>)</span> <span>{</span>
-  year <span>+=</span> <span>1</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br></div></div><p><a href="https://dart.dev/guides/language/language-tour#control-flow-statements" target="_blank" rel="noopener noreferrer">阅读有关 Dart 中控制流语句的更多信息<ExternalLinkIcon/></a>，包括 <code>break</code> 和 <code>continue</code>，<code>switch</code> 和 <code>case</code>，和 <code>assert</code>。</p>
-<h2 id="函数" tabindex="-1"> 函数</h2>
-<p><a href="https://dart.dev/guides/language/effective-dart/design#types" target="_blank" rel="noopener noreferrer">我们建议<ExternalLinkIcon/></a> 指定每个函数的参数和返回值的类型:</p>
-<div><pre><code>int <span>fibonacci</span><span>(</span>int n<span>)</span> <span>{</span>
-  <span>if</span> <span>(</span>n <span>==</span> <span>0</span> <span>||</span> n <span>==</span> <span>1</span><span>)</span> <span>return</span> n<span>;</span>
-  <span>return</span> <span>fibonacci</span><span>(</span>n <span>-</span> <span>1</span><span>)</span> <span>+</span> <span>fibonacci</span><span>(</span>n <span>-</span> <span>2</span><span>)</span><span>;</span>
-<span>}</span>
-
-<span>var</span> result <span>=</span> <span>fibonacci</span><span>(</span><span>20</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>简写 <code>=&gt;</code>(箭头)语法对于包含单个语句的函数很方便。当将匿名函数作为参数传递时，此语法特别有用:</p>
-<div><pre><code>flybyObjects<span>.</span><span>where</span><span>(</span><span>(</span>name<span>)</span> <span>=</span><span>></span> name<span>.</span><span>contains</span><span>(</span><span><span>'turn'</span></span><span>)</span><span>)</span><span>.</span><span>forEach</span><span>(</span>print<span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br></div></div><p>除了显示匿名函数(<code>where()</code> 的参数)之外，此代码还显示您可以将函数用作参数: 顶级 <code>print()</code> 函数是 <code>forEach()</code> 的参数。</p>
-<p><a href="https://dart.dev/guides/language/language-tour#functions" target="_blank" rel="noopener noreferrer">阅读有关<ExternalLinkIcon/></a> Dart 中函数的更多信息，包括可选参数，默认参数值和词法范围。</p>
-<h2 id="注释" tabindex="-1"> 注释</h2>
-<p>Dart 注释通常以开头 <code>//</code>。</p>
-<div><pre><code><span>// This is a normal, one-line comment.</span>
-
-<span>/// This is a documentation comment, used to document libraries,</span>
-<span>/// classes, and their members. Tools like IDEs and dartdoc treat</span>
-<span>/// doc comments specially.</span>
-
-<span>/*Comments like these are also supported.*/</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p><a href="https://dart.dev/guides/language/language-tour#comments" target="_blank" rel="noopener noreferrer">阅读有关<ExternalLinkIcon/></a> Dart 中注释的更多信息，包括文档工具的工作方式。</p>
-<h2 id="导入" tabindex="-1"> 导入</h2>
-<p>要访问其他库中定义的 API，请使用 <code>import</code>。</p>
-<div><pre><code><span>// Importing core libraries</span>
-<span>import</span> <span><span>'dart:math'</span></span><span>;</span>
-
-<span>// Importing libraries from external packages</span>
-<span>import</span> <span><span>'package:test/test.dart'</span></span><span>;</span>
-
-<span>// Importing files</span>
-<span>import</span> <span><span>'path/to/my_other_file.dart'</span></span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br></div></div><p><a href="https://dart.dev/guides/language/language-tour#libraries-and-visibility" target="_blank" rel="noopener noreferrer">阅读有关<ExternalLinkIcon/></a> Dart 中库和可见性的更多信息，包括库前缀 <code>show</code> 和 <code>hide</code>，以及通过 <code>deferred</code> 关键字的延迟加载。</p>
-<h2 id="类" tabindex="-1"> 类</h2>
-<p>这是一个具有三个属性，两个构造函数和一个方法的类的示例。其中一个属性不能直接设置，因此是使用 <code>getter</code> 方法(而不是变量)定义的。</p>
-<div><pre><code><span>class</span> <span>Spacecraft</span> <span>{</span>
-  <span>String</span> name<span>;</span>
-  <span>DateTime</span> launchDate<span>;</span>
-
-  <span>// Constructor, with syntactic sugar for assignment to members.</span>
-  <span>Spacecraft</span><span>(</span><span>this</span><span>.</span>name<span>,</span> <span>this</span><span>.</span>launchDate<span>)</span> <span>{</span>
-    <span>// Initialization code goes here.</span>
-  <span>}</span>
-
-  <span>// Named constructor that forwards to the default one.</span>
-  <span>Spacecraft</span><span>.</span><span>unlaunched</span><span>(</span><span>String</span> name<span>)</span> <span>:</span> <span>this</span><span>(</span>name<span>,</span> <span>null</span><span>)</span><span>;</span>
-
-  int <span>get</span> launchYear <span>=</span><span>></span>
-      launchDate<span>?</span><span>.</span>year<span>;</span> <span>// read-only non-final property</span>
-
-  <span>// Method.</span>
-  <span>void</span> <span>describe</span><span>(</span><span>)</span> <span>{</span>
-    <span>print</span><span>(</span><span><span>'Spacecraft: </span><span><span>$</span><span>name</span></span><span>'</span></span><span>)</span><span>;</span>
-    <span>if</span> <span>(</span>launchDate <span>!=</span> <span>null</span><span>)</span> <span>{</span>
-      int years <span>=</span>
-          <span>DateTime</span><span>.</span><span>now</span><span>(</span><span>)</span><span>.</span><span>difference</span><span>(</span>launchDate<span>)</span><span>.</span>inDays <span>~/</span>
-              <span>365</span><span>;</span>
-      <span>print</span><span>(</span><span><span>'Launched: </span><span><span>$</span><span>launchYear</span></span><span> (</span><span><span>$</span><span>years</span></span><span> years ago)'</span></span><span>)</span><span>;</span>
-    <span>}</span> <span>else</span> <span>{</span>
-      <span>print</span><span>(</span><span><span>'Unlaunched'</span></span><span>)</span><span>;</span>
-    <span>}</span>
-  <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br><span>18</span><br><span>19</span><br><span>20</span><br><span>21</span><br><span>22</span><br><span>23</span><br><span>24</span><br><span>25</span><br><span>26</span><br><span>27</span><br><span>28</span><br></div></div><p>您可以使用这样的 <code>Spacecraft</code> 类:</p>
-<div><pre><code><span>var</span> voyager <span>=</span> <span>Spacecraft</span><span>(</span><span><span>'Voyager I'</span></span><span>,</span> <span>DateTime</span><span>(</span><span>1977</span><span>,</span> <span>9</span><span>,</span> <span>5</span><span>)</span><span>)</span><span>;</span>
-voyager<span>.</span><span>describe</span><span>(</span><span>)</span><span>;</span>
-
-<span>var</span> voyager3 <span>=</span> <span>Spacecraft</span><span>.</span><span>unlaunched</span><span>(</span><span><span>'Voyager III'</span></span><span>)</span><span>;</span>
-voyager3<span>.</span><span>describe</span><span>(</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p><a href="https://dart.dev/guides/language/language-tour#classes" target="_blank" rel="noopener noreferrer">阅读有关<ExternalLinkIcon/></a> Dart 中类的更多信息，包括初始化列表，可选 <code>new</code> 和 <code>const</code>，重定向构造函数，<code>factory</code> 构造函数，getter，setter 等。</p>
-<h2 id="遗产" tabindex="-1"> 遗产</h2>
-<p>Dart 具有单一继承。</p>
-<div><pre><code><span>class</span> <span>Orbiter</span> <span>extends</span> <span>Spacecraft</span> <span>{</span>
-  double altitude<span>;</span>
-  <span>Orbiter</span><span>(</span><span>String</span> name<span>,</span> <span>DateTime</span> launchDate<span>,</span> <span>this</span><span>.</span>altitude<span>)</span>
-      <span>:</span> <span>super</span><span>(</span>name<span>,</span> launchDate<span>)</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p><a href="https://dart.dev/guides/language/language-tour#extending-a-class" target="_blank" rel="noopener noreferrer">阅读有关<ExternalLinkIcon/></a> 扩展类，可选 <code>@override</code> 注释等的更多信息。</p>
-<h2 id="混入" tabindex="-1"> 混入</h2>
-<p>Mixins 是在多个类层次结构中重用代码的一种方式。以下类可以充当 mixin:</p>
-<div><pre><code><span>class</span> <span>Piloted</span> <span>{</span>
-  int astronauts <span>=</span> <span>1</span><span>;</span>
-  <span>void</span> <span>describeCrew</span><span>(</span><span>)</span> <span>{</span>
-    <span>print</span><span>(</span><span><span>'Number of astronauts: </span><span><span>$</span><span>astronauts</span></span><span>'</span></span><span>)</span><span>;</span>
-  <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>要将 mixin 的功能添加到类中，只需使用 mixin 扩展类即可。</p>
-<div><pre><code><span>class</span> <span>PilotedCraft</span> <span>extends</span> <span>Spacecraft</span> <span>with</span> <span>Piloted</span> <span>{</span>
-  <span>// ···</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p><code>PilotedCraft</code> 现在具有 <code>astronauts</code> 字段和 <code>describeCrew()</code> 方法。</p>
-<p><a href="https://dart.dev/guides/language/language-tour#adding-features-to-a-class-mixins" target="_blank" rel="noopener noreferrer">阅读有关<ExternalLinkIcon/></a> mixin 的更多信息。</p>
-<h2 id="接口和抽象类" tabindex="-1"> 接口和抽象类</h2>
-<p>Dart 没有 <code>interface</code> 关键字。相反，所有类都隐式定义一个接口。因此，您可以实现任何类。</p>
-<div><pre><code><span>class</span> <span>MockSpaceship</span> <span>implements</span> <span>Spacecraft</span> <span>{</span>
-  <span>// ···</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p><a href="https://dart.dev/guides/language/language-tour#implicit-interfaces" target="_blank" rel="noopener noreferrer">阅读有关<ExternalLinkIcon/></a> 隐式接口的更多信息。</p>
-<p>您可以创建要由具体类扩展(或实现)的抽象类。抽象类可以包含抽象方法(具有空主体)。</p>
-<div><pre><code><span>abstract</span> <span>class</span> <span>Describable</span> <span>{</span>
-  <span>void</span> <span>describe</span><span>(</span><span>)</span><span>;</span>
-
-  <span>void</span> <span>describeWithEmphasis</span><span>(</span><span>)</span> <span>{</span>
-    <span>print</span><span>(</span><span><span>'========='</span></span><span>)</span><span>;</span>
-    <span>describe</span><span>(</span><span>)</span><span>;</span>
-    <span>print</span><span>(</span><span><span>'========='</span></span><span>)</span><span>;</span>
-  <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>任何扩展类 <code>Describable</code> 都具有 <code>describeWithEmphasis()</code> 方法，该方法调用扩展程序的实现 <code>describe()</code>。</p>
-<p><a href="https://dart.dev/guides/language/language-tour#abstract-classes" target="_blank" rel="noopener noreferrer">阅读有关<ExternalLinkIcon/></a> 抽象类和方法的更多信息。</p>
-<h2 id="异步" tabindex="-1"> 异步</h2>
-<p>避免陷入回调地狱，您可以使用 <code>async</code> 和 <code>await</code> 来提高代码的可读性。</p>
-<div><pre><code><span>const</span> oneSecond <span>=</span> <span>Duration</span><span>(</span>seconds<span>:</span> <span>1</span><span>)</span><span>;</span>
-<span>// ···</span>
-<span>Future</span><span><span>&lt;</span><span>void</span><span>></span></span> <span>printWithDelay</span><span>(</span><span>String</span> message<span>)</span> <span>async</span> <span>{</span>
-  <span>await</span> <span>Future</span><span>.</span><span>delayed</span><span>(</span>oneSecond<span>)</span><span>;</span>
-  <span>print</span><span>(</span>message<span>)</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p>上面的方法等效于:</p>
-<div><pre><code><span>Future</span><span><span>&lt;</span><span>void</span><span>></span></span> <span>printWithDelay</span><span>(</span><span>String</span> message<span>)</span> <span>{</span>
-  <span>return</span> <span>Future</span><span>.</span><span>delayed</span><span>(</span>oneSecond<span>)</span><span>.</span><span>then</span><span>(</span><span>(</span>_<span>)</span> <span>{</span>
-    <span>print</span><span>(</span>message<span>)</span><span>;</span>
-  <span>}</span><span>)</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><p>如下例所示，<code>async</code> 和 <code>await</code> 有助于使异步代码易于阅读。</p>
-<div><pre><code><span>Future</span><span><span>&lt;</span><span>void</span><span>></span></span> <span>createDescriptions</span><span>(</span><span>Iterable</span><span><span>&lt;</span><span>String</span><span>></span></span> objects<span>)</span> <span>async</span> <span>{</span>
-  <span>for</span> <span>(</span><span>var</span> object <span>in</span> objects<span>)</span> <span>{</span>
-    <span>try</span> <span>{</span>
-      <span>var</span> file <span>=</span> <span>File</span><span>(</span><span><span>'</span><span><span>$</span><span>object</span></span><span>.txt'</span></span><span>)</span><span>;</span>
-      <span>if</span> <span>(</span><span>await</span> file<span>.</span><span>exists</span><span>(</span><span>)</span><span>)</span> <span>{</span>
-        <span>var</span> modified <span>=</span> <span>await</span> file<span>.</span><span>lastModified</span><span>(</span><span>)</span><span>;</span>
-        <span>print</span><span>(</span>
-            <span><span>'File for </span><span><span>$</span><span>object</span></span><span> already exists. It was modified on </span><span><span>$</span><span>modified</span></span><span>.'</span></span><span>)</span><span>;</span>
-        <span>continue</span><span>;</span>
-      <span>}</span>
-      <span>await</span> file<span>.</span><span>create</span><span>(</span><span>)</span><span>;</span>
-      <span>await</span> file<span>.</span><span>writeAsString</span><span>(</span><span><span>'Start describing </span><span><span>$</span><span>object</span></span><span> in this file.'</span></span><span>)</span><span>;</span>
-    <span>}</span> <span>on</span> <span>IOException</span> <span>catch</span> <span>(</span>e<span>)</span> <span>{</span>
-      <span>print</span><span>(</span><span><span>'Cannot create description for </span><span><span>$</span><span>object</span></span><span>: </span><span><span>$</span><span>e</span></span><span>'</span></span><span>)</span><span>;</span>
-    <span>}</span>
-  <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br><span>12</span><br><span>13</span><br><span>14</span><br><span>15</span><br><span>16</span><br><span>17</span><br></div></div><p>您还可以使用 <code>async*</code>，它为您提供了一种很好的，易于阅读的方式来构建流。</p>
-<div><pre><code><span>Stream</span><span><span>&lt;</span><span>String</span><span>></span></span> <span>report</span><span>(</span><span>Spacecraft</span> craft<span>,</span> <span>Iterable</span><span><span>&lt;</span><span>String</span><span>></span></span> objects<span>)</span> <span>async*</span> <span>{</span>
-  <span>for</span> <span>(</span><span>var</span> object <span>in</span> objects<span>)</span> <span>{</span>
-    <span>await</span> <span>Future</span><span>.</span><span>delayed</span><span>(</span>oneSecond<span>)</span><span>;</span>
-    <span>yield</span> <span><span>'</span><span><span>${</span><span>craft<span>.</span>name</span><span>}</span></span><span> flies by </span><span><span>$</span><span>object</span></span><span>'</span></span><span>;</span>
-  <span>}</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br></div></div><p><a href="https://dart.dev/guides/language/language-tour#asynchrony-support" target="_blank" rel="noopener noreferrer">阅读更多<ExternalLinkIcon/></a> 关于异步支持，包括 <code>async</code> 功能 <code>Future</code>，<code>Stream</code> 和异步循环(await for)。</p>
-<h2 id="异常" tabindex="-1"> 异常</h2>
-<p>要引发异常，请使用 <code>throw</code>:</p>
-<div><pre><code><span>if</span> <span>(</span>astronauts <span>==</span> <span>0</span><span>)</span> <span>{</span>
-  <span>throw</span> <span>StateError</span><span>(</span><span><span>'No astronauts.'</span></span><span>)</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>要捕获异常，请使用 <code>try</code> 带有 <code>on</code> 或 <code>catch</code>(或两者)的语句:</p>
-<div><pre><code><span>try</span> <span>{</span>
-  <span>for</span> <span>(</span><span>var</span> object <span>in</span> flybyObjects<span>)</span> <span>{</span>
-    <span>var</span> description <span>=</span> <span>await</span> <span>File</span><span>(</span><span><span>'</span><span><span>$</span><span>object</span></span><span>.txt'</span></span><span>)</span><span>.</span><span>readAsString</span><span>(</span><span>)</span><span>;</span>
-    <span>print</span><span>(</span>description<span>)</span><span>;</span>
-  <span>}</span>
-<span>}</span> <span>on</span> <span>IOException</span> <span>catch</span> <span>(</span>e<span>)</span> <span>{</span>
-  <span>print</span><span>(</span><span><span>'Could not describe object: </span><span><span>$</span><span>e</span></span><span>'</span></span><span>)</span><span>;</span>
-<span>}</span> <span>finally</span> <span>{</span>
-  flybyObjects<span>.</span><span>clear</span><span>(</span><span>)</span><span>;</span>
-<span>}</span>
-</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></div></div><p>注意上面的代码是异步的； <code>try</code> 适用于同步代码和 <code>async</code> 函数中的代码。</p>
-<p>阅读有关异常的更多信息，包括堆栈跟踪 <code>rethrow</code>，和错误与异常之间的区别。</p>
-<h2 id="其他话题" tabindex="-1"> 其他话题</h2>
-<p>更多的代码示例在 <a href="https://dart.dev/guides/language/language-tour" target="_blank" rel="noopener noreferrer">语言示例<ExternalLinkIcon/></a> 和 <a href="https://dart.dev/guides/libraries/library-tour" target="_blank" rel="noopener noreferrer">库示例<ExternalLinkIcon/></a> 中。另请参阅 <a href="https://api.dart.dev/" target="_blank" rel="noopener noreferrer">Dart API 参考<ExternalLinkIcon/></a>， 其中通常包含示例。</p>
-]]></content>
-    <category term="Dart"/>
-    <published>2020-05-30T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="html">COMSOL</title>
-    <id>https://mrhope.site/software/comsol/</id>
-    <link href="https://mrhope.site/software/comsol/"/>
-    <updated>2022-03-31T03:28:29.207Z</updated>
-    <summary type="html"><![CDATA[<p>这里是一些 Comsol 的学习资料整理与学习心得。</p>
-]]></summary>
-    <content type="html"><![CDATA[<p>这里是一些 Comsol 的学习资料整理与学习心得。</p>
-
-<div><p>写在前面</p>
-<p>本教程只适用于从未接触过仿真的人员，内容比较基础。</p>
-<p>我本人主要活跃在计算机相关领域，本科专业是物理学，并没有学过系统的工程原理、数值分析、模型建构以及相关的误差分析。COMSOL 是我本科制作毕设的软件，在毕设前，我也使用 COMSOL 构建了几个模型，完成了一些装置的模拟与优化。</p>
-<p>本篇教程，是根据我对 COMSOL 以及有限元仿真的理解书写的，一定会有一些疏漏与理解错误之处，还望大家指出。另外我主要研究过的方向是传热与流体流动，在本教程的举例中，也大多以这两方面为主。对其他的方向与模块，我是不熟悉的。</p>
-</div>
-<ul>
-<li>
-<p><a href="/software/comsol/install.html">软件下载与安装</a></p>
-</li>
-<li>
-<p><a href="/software/comsol/intro.html">有限元分析软件介绍</a></p>
-</li>
-<li>
-<p><a href="/software/comsol/get-started.html">快速上手 COMSOL</a></p>
-</li>
-<li>
-<p><a href="/software/comsol/geometry/">几何</a></p>
-<ul>
-<li>
-<p><a href="/software/comsol/geometry/view.html">浏览几何</a></p>
-</li>
-<li>
-<p><a href="/software/comsol/geometry/build.html">构建几何</a></p>
-</li>
-</ul>
-</li>
-<li>
-<p><a href="/software/comsol/select.html">选择</a></p>
-</li>
-<li>
-<p><a href="/software/comsol/material.html">材料</a></p>
-</li>
-<li>
-<p><a href="/software/comsol/physic-field.html">物理场</a></p>
-</li>
-<li>
-<p><a href="/software/comsol/mesh/">网格</a></p>
-</li>
-<li>
-<p><a href="/software/comsol/study.html">研究</a></p>
-</li>
-<li>
-<p><a href="/software/comsol/result.html">结果</a></p>
-</li>
-<li>
-<p><a href="/software/comsol/app.html">APP</a></p>
-</li>
-</ul>
-<h2 id="文档" tabindex="-1"> 文档</h2>
-<ul>
-<li>
-<p><a href="https://mrhope.site/file/comsol/IntroductionToCOMSOLMultiphysics.zh_CN.pdf" target="_blank" rel="noopener noreferrer">COMSOL 新手指南<ExternalLinkIcon/></a></p>
-</li>
-<li>
-<p><a href="https://mrhope.site/file/comsol/App%E5%BC%80%E5%8F%91%E5%99%A8%E7%AE%80%E4%BB%8B.pdf" target="_blank" rel="noopener noreferrer">COMSOL App 开发器简介<ExternalLinkIcon/></a></p>
-</li>
-<li>
-<p><a href="https://mrhope.site/file/comsol/ApplicationProgrammingGuide.zh_CN.pdf" target="_blank" rel="noopener noreferrer">COMSOL Multiphysics 应用程序编程指南<ExternalLinkIcon/></a></p>
-</li>
-<li>
-<p><a href="http://cn.comsol.com/multiphysics/" target="_blank" rel="noopener noreferrer">COMSOL 多物理场仿真百科<ExternalLinkIcon/></a></p>
-</li>
-<li>
-<p><a href="https://cn.comsol.com/videos" target="_blank" rel="noopener noreferrer">COMSOL 视频中心<ExternalLinkIcon/></a></p>
-</li>
-<li>
-<p><a href="https://cn.comsol.com/video-training" target="_blank" rel="noopener noreferrer">COMSOL 在线课程回放<ExternalLinkIcon/></a> (应该是在疫情期间限时开放)</p>
-</li>
-<li>
-<p><a href="https://cn.comsol.com/papers-presentations" target="_blank" rel="noopener noreferrer">基于 COMSOL 的论文<ExternalLinkIcon/></a></p>
-</li>
-</ul>
-<h2 id="其他杂项" tabindex="-1"> 其他杂项</h2>
-<ul>
-<li>
-<p><a href="https://cn.comsol.com/blogs/how-to-make-boundary-conditions-conditional-in-your-simulation/" target="_blank" rel="noopener noreferrer">如何设置特殊边界条件<ExternalLinkIcon/></a></p>
-</li>
-<li>
-<p><a href="https://cn.comsol.com/blogs/how-to-customize-the-comsol-desktop-and-use-keyboard-shortcuts/" target="_blank" rel="noopener noreferrer">如何定制 COMSOL Desktop<sup>®</sup> 和使用键盘快捷键<ExternalLinkIcon/></a></p>
-</li>
-<li>
-<p><a href="https://cn.comsol.com/blogs/how-to-use-the-find-and-auto-completion-tools-for-faster-model-setup/" target="_blank" rel="noopener noreferrer">使用查找工具和自动完成工具加快建模过程<ExternalLinkIcon/></a></p>
-</li>
-</ul>
-]]></content>
-    <category term="软件"/>
-    <published>2020-05-29T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="html">COMSOL 安装</title>
-    <id>https://mrhope.site/software/comsol/install.html</id>
-    <link href="https://mrhope.site/software/comsol/install.html"/>
-    <updated>2022-03-31T03:28:29.207Z</updated>
-    <content type="html"><![CDATA[<h2 id="软件下载" tabindex="-1"> 软件下载</h2>
-<p>您可以直接从 <a href="https://cn.comsol.com/product-download" target="_blank" rel="noopener noreferrer">官网下载页面<ExternalLinkIcon/></a> 进行下载。</p>
-<h2 id="软件许可" tabindex="-1"> 软件许可</h2>
-<ol>
-<li>
-<p>可以注册一个 COMSOL 账号，积极参与并收听 COMSOL 官网上的免费 Workshop，每次参加都会附赠 15 天的免费试用许可证。</p>
-<div><p>试用许可证</p>
-<p>COMSOL 试用许可证与 COMSOL 全产品许可证的唯一区别是无法使用 COMSOL Compiler，即不能使用该许可证将 COMSOL 模型编译为各平台可用的应用程序。</p>
-<p>COMSOL workshop 的频率很高，平均不到十天就有一期，在 <a href="http://cn.comsol.com/events" target="_blank" rel="noopener noreferrer">这里<ExternalLinkIcon/></a> 查看并注册。</p>
-</div>
-</li>
-<li>
-<p><s>打着学习交流的名义，科学上网在国外相关论坛上搜索 “LMCOMSOL_Multiphysics_SSQ.lic”</s> ❌</p>
-<p>这是违法的，并且可能收到 COMSOL 公司的追责。</p>
-</li>
-</ol>
-]]></content>
-    <category term="软件"/>
-    <published>2020-05-29T00:00:00.000Z</published>
   </entry>
 </feed>
