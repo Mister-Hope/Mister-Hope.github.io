@@ -170,7 +170,7 @@ An element is:
 1. 属性名称，后面跟着一个等于号。
 1. 一个属性值，由一对引号 `" "` 引起来。
 
-比如 `<img src="/logo.png" />`，`attribute` 为 `src`，`value` 是 `/logo.png`
+比如 `<img src="/logo.svg" />`，`attribute` 为 `src`，`value` 是 `/logo.svg`
 
 属性值应该始终被包括在引号内。双引号是最常用的，不过使用单引号也没有问题。
 

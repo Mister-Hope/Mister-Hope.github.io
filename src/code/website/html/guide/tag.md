@@ -88,7 +88,7 @@ HTML 图像是通过标签 `<img>` 来定义的。
 ::: demo HTML 图像
 
 ```html
-<img src="/logo.png" width="60" height="60" />
+<img src="/logo.svg" width="60" height="60" />
 ```
 
 :::

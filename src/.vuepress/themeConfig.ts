@@ -13,7 +13,7 @@ export default defineThemeConfig({
 
   iconPrefix: "iconfont icon-",
 
-  logo: "/logo.png",
+  logo: "/logo.svg",
 
   repo: "https://github.com/Mister-Hope/Mister-Hope.github.io",
 
@@ -143,8 +143,8 @@ export default defineThemeConfig({
       cacheHTML: false,
       maxSize: 3072,
       apple: {
-        icon: "/assets/icon/apple-icon-152.png",
-        statusBarColor: "black",
+        icon: "/assets/icon/apple-touch-icon.png",
+        statusBarColor: "white",
       },
       msTile: {
         image: "/assets/icon/ms-icon-144.png",

@@ -39,7 +39,7 @@ CSS 每个属性都会有且仅有一个值。
 
 ```css
 .logo {
-  background-image: url(/logo.png);
+  background-image: url(/logo.svg);
 }
 ```
 

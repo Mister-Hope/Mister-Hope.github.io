@@ -198,10 +198,10 @@ VuePress 还兼容如下跳转到主页的写法:
 
 ## 图片
 
-![Logo](/logo.png)
+![Logo](/logo.svg)
 
 ```md
-![Logo](/logo.png)
+![Logo](/logo.svg)
 ```
 
 ## Emoji

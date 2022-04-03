@@ -3,7 +3,7 @@ home: true
 layout: Blog
 icon: home
 title: 主页
-heroImage: /logo.png
+heroImage: /logo.svg
 heroText: 𝓜𝓻. 𝓗𝓸𝓹𝓮
 heroFullScreen: true
 tagline: Where there is light, there is hope
