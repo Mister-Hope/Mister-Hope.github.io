@@ -341,5 +341,5 @@ const age = 20;
 if (age >= 18) console.log("adult");
 else if (age >= 6) console.log("teenager");
 else console.log("kid");
-
+```
 ## 注意事项
