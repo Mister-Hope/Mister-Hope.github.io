@@ -14,7 +14,7 @@ HTML 指的是超文本标记语言 (Hyper Text Markup Language)，它不是一�
 
 ::: tip
 
-在网页的前端开发中，它描绘了了视图层的具体结构。
+在网页的前端开发中，它描绘了视图层的具体结构。
 
 :::
 
@@ -54,7 +54,7 @@ HTML5 是 HTML 现行的最新修订版本，主要的新特性包括:
 
 - 用于绘画的 `<canvas />` 元素
 - 用于媒体播放的 `<video />` 和 `<audio />` 元素
-- 对本地离线存储的更好的支持
+- 更好地支持本地离线存储
 - 新的特殊内容元素，比如 `<article />`、`<footer />`、`<header />`、`<nav />`、`<section />`
 - 新的表单控件，比如 calendar、date、time、email、url、search
 
