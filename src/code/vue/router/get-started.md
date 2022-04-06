@@ -110,7 +110,7 @@ const route = [
     path: "/handbook",
     name: "handbook",
     meta: { title: "东师攻略" },
-    // 使用import来进行异步调用实现懒加载，打包时，webpack会识别webpackChunkName注释，将相同的一起打包一同执行懒加载
+    // 使用 import 来进行异步调用实现懒加载，打包时，webpack 会识别 webpackChunkName 注释，将相同的一起打包一同执行懒加载
     component: () =>
       import(/* webpackChunkName: "handbook" */ "@/views/Handbook.vue"),
   },
