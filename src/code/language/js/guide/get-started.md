@@ -154,10 +154,15 @@ Node.js 是一个著名的基于 JavaScript 的后端工具，可以很方便快
 
 如果本地已经安装了 Node.js，也可以通过使用 Node.js 直接执行相应文件的方式来进行调试。
 
-### Visual Studio Code
+### VS Code
 
- 1.安装 Live Server 扩展，然后新建一个HTML网页，写完基本内容(<head>和<body>标签都需要有)，引入Javascript。
- 
- 2.在这个HTML文件中右键 Open with Live Server 或者点击右下角得Go Live，打开网页，并记下网址。
- 
- 3.回到Visual Studio Code，设置断点，按F5调试，运行与调试窗口就会显示变量数值，下方的调试控制台会显示输出内容。
+1. 安装 Live Server 扩展。
+
+1. 新建一个 HTML 网页，补全必要结构。
+
+1. 通过 `<script>` 标签引入 Javascript。
+
+1. 在 HTML 文件中右键选择 "Open with Live Server" 或者点击右下角的 Go Live，这会在 VSCode 内的 Tab 选项卡打开一个网页。
+
+1. 在 VS Code 编辑器中在需要的位置设置断点，按 F5 调试，运行与调试窗口就会显示变量数值，下方的调试控制台会显示输出内容。
+
