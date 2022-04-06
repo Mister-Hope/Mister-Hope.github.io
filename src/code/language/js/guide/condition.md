@@ -274,9 +274,9 @@ switch (x) {
 
 上面代码中，由于变量 `x` 没有发生类型转换，所以不会执行 `case true` 的情况。这表明，`switch` 语句内部采用的是“严格相等运算符”。
 
-## `? :` 三元运算符
+## `? : ;` 三元运算符
 
-JavaScript 还有一个三元运算符(即该运算符需要三个运算子)`? :`，也可以用于逻辑判断。
+JavaScript 还有一个三元运算符(即该运算符需要三个运算子)`? : ;`，也可以用于逻辑判断。
 
 ```js
 条件 ? 表达式1 : 表达式2;
@@ -332,4 +332,14 @@ else console.log("kid");
 
 由于 `age` 的值为 `20`，它实际上同时满足条件 `age >= 6` 和 `age >= 18` ，这说明条件判断的顺序非常重要。请修复后让其显示 `'adult'`。
 
-:::
+修复参考:
+
+```js
+"use strict";
+const age = 20;
+
+if (age >= 18) console.log("adult");
+else if (age >= 6) console.log("teenager");
+else console.log("kid");
+
+## 注意事项
