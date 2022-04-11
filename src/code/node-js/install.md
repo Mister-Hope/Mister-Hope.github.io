@@ -14,9 +14,9 @@ tag:
 
 ## 安装 Node.js
 
-目前 Node.js 的 LTS 版本是 12.18.0。首先，从 Node.js 官网下载对应平台的安装程序。
+目前 Node.js 的 LTS 版本是 16.14.2。首先，从 Node.js 官网下载对应平台的安装程序。点击 LTS 版本的下载按钮。
 
-- [Windows LTS 下载地址](https://nodejs.org/dist/v12.18.0/node-v12.18.0-x64.msi)
+- [Node.js官网](https://nodejs.org/en/)
 
 ### 安装过程
 
