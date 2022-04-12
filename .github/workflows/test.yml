@@ -35,7 +35,7 @@ jobs:
 
       - name: Build Blog with ${{ matrix.bundler }}
         env:
-          NODE_OPTIONS: --max_old_space_size=4096
+          NODE_OPTIONS: --max_old_space_size=8192
         run: yarn run build:${{ matrix.bundler }}
 
   linter-test:
