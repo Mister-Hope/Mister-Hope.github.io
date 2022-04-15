@@ -130,6 +130,7 @@ export default defineThemeConfig({
       demo: true,
       flowchart: true,
       footnote: true,
+      imageMark: true,
       presentation: true,
       sub: true,
       sup: true,
