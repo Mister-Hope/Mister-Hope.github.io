@@ -1,6 +1,6 @@
-import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+import { arraySidebar } from "vuepress-theme-hope";
 
-export const dart: HopeThemeSidebarArrayConfig = [
+export const dart = arraySidebar([
   "",
   {
     text: "快速入门",
@@ -9,4 +9,4 @@ export const dart: HopeThemeSidebarArrayConfig = [
     prefix: "samples/",
     children: ["samples", "cheatsheet", "iterable"],
   },
-];
+]);

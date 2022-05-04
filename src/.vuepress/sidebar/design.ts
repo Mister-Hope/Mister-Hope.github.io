@@ -1,6 +1,6 @@
-import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+import { arraySidebar } from "vuepress-theme-hope";
 
-export const design: HopeThemeSidebarArrayConfig = [
+export const design = arraySidebar([
   "",
   {
     text: "图标",
@@ -50,4 +50,4 @@ export const design: HopeThemeSidebarArrayConfig = [
     children: ["", "gestalt-principle", "left-or-right", "infomation-flow"],
   },
   "APP",
-];
+]);

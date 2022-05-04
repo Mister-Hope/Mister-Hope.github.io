@@ -15,22 +15,24 @@ jobs:
           submodules: true
           fetch-depth: 0
 
-      - uses: actions/cache@v3
-        id: node-modules
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
         with:
-          path: node_modules/
-          key: ${{ runner.os }}-node-modules-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node-modules-
+          version: 7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: pnpm
 
       - name: Install Deps
-        if: steps.node-modules.outputs.cache-hit != 'true'
-        run: yarn install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Build Blog
         env:
           NODE_OPTIONS: --max_old_space_size=8192
-        run: yarn run build:webpack
+        run: pnpm run build:webpack
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4

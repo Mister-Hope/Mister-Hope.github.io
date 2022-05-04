@@ -1,6 +1,6 @@
-import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+import { arraySidebar } from "vuepress-theme-hope";
 
-export const note: HopeThemeSidebarArrayConfig = [
+export const note = arraySidebar([
   "",
   {
     text: "秋之思",
@@ -141,4 +141,4 @@ export const note: HopeThemeSidebarArrayConfig = [
     ],
   },
   "node-js/",
-];
+]);

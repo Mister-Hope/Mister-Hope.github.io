@@ -1,6 +1,6 @@
-import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+import { arraySidebar } from "vuepress-theme-hope";
 
-export const html: HopeThemeSidebarArrayConfig = [
+export const html = arraySidebar([
   "",
   {
     text: "快速上手",
@@ -33,4 +33,4 @@ export const html: HopeThemeSidebarArrayConfig = [
     prefix: "definition/",
     children: ["uri", "url", "seo", "mime"],
   },
-];
+]);

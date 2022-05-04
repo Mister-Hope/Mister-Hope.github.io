@@ -1,6 +1,6 @@
-import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+import { arraySidebar } from "vuepress-theme-hope";
 
-export const basic: HopeThemeSidebarArrayConfig = [
+export const basic = arraySidebar([
   "",
   "computer",
   "OS",
@@ -12,4 +12,4 @@ export const basic: HopeThemeSidebarArrayConfig = [
   "ci",
   "license",
   "open-source-and-free",
-];
+]);

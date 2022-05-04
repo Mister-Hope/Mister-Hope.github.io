@@ -1,6 +1,6 @@
-import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+import { arraySidebar } from "vuepress-theme-hope";
 
-export const python: HopeThemeSidebarArrayConfig = [
+export const python = arraySidebar([
   "",
   {
     text: "介绍",
@@ -86,4 +86,4 @@ export const python: HopeThemeSidebarArrayConfig = [
       "special",
     ],
   },
-];
+]);

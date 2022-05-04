@@ -1,6 +1,6 @@
-import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+import { arraySidebar } from "vuepress-theme-hope";
 
-export const jquery: HopeThemeSidebarArrayConfig = [
+export const jquery = arraySidebar([
   "",
   "intro",
   "selector",
@@ -10,4 +10,4 @@ export const jquery: HopeThemeSidebarArrayConfig = [
   "animation",
   "ajax",
   "extend",
-];
+]);

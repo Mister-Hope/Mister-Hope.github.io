@@ -1,6 +1,6 @@
-import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+import { arraySidebar } from "vuepress-theme-hope";
 
-export const vue: HopeThemeSidebarArrayConfig = [
+export const vue = arraySidebar([
   {
     text: "Vue.js",
     icon: "vue",
@@ -36,4 +36,4 @@ export const vue: HopeThemeSidebarArrayConfig = [
     prefix: "vuex/",
     children: ["get-started", "demo"],
   },
-];
+]);

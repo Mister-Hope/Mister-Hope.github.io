@@ -1,6 +1,6 @@
-import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+import { arraySidebar } from "vuepress-theme-hope";
 
-export const code: HopeThemeSidebarArrayConfig = [
+export const code = arraySidebar([
   "",
   {
     text: "基础介绍",
@@ -36,4 +36,4 @@ export const code: HopeThemeSidebarArrayConfig = [
   },
   "Android/",
   "backEnd/",
-];
+]);

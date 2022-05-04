@@ -1,6 +1,6 @@
-import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+import { arraySidebar } from "vuepress-theme-hope";
 
-export const linux: HopeThemeSidebarArrayConfig = [
+export const linux = arraySidebar([
   "",
   {
     text: "简介",
@@ -61,4 +61,4 @@ export const linux: HopeThemeSidebarArrayConfig = [
   "centos",
   "WSL",
   "ssh",
-];
+]);

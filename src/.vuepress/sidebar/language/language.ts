@@ -1,6 +1,6 @@
-import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+import { arraySidebar } from "vuepress-theme-hope";
 
-export const language: HopeThemeSidebarArrayConfig = [
+export const language = arraySidebar([
   "learning",
   {
     text: "JavaScript",
@@ -51,4 +51,4 @@ export const language: HopeThemeSidebarArrayConfig = [
     children: ["intro", "block", "inline", "extend", "emoji/"],
   },
   "linter/",
-];
+]);

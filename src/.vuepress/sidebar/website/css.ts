@@ -1,6 +1,6 @@
-import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+import { arraySidebar } from "vuepress-theme-hope";
 
-export const css: HopeThemeSidebarArrayConfig = [
+export const css = arraySidebar([
   "",
   {
     text: "快速上手",
@@ -42,4 +42,4 @@ export const css: HopeThemeSidebarArrayConfig = [
     prefix: "layout/",
     children: ["intro", "flow", "float", "flex", "exercise", "grid"],
   },
-];
+]);

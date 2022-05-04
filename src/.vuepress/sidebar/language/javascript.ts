@@ -1,6 +1,6 @@
-import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+import { arraySidebar } from "vuepress-theme-hope";
 
-export const javascript: HopeThemeSidebarArrayConfig = [
+export const javascript = arraySidebar([
   "",
   {
     text: "JS 介绍",
@@ -140,4 +140,4 @@ export const javascript: HopeThemeSidebarArrayConfig = [
     ],
   },
   "error",
-];
+]);

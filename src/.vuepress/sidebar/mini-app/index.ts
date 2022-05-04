@@ -1,8 +1,7 @@
+import { arraySidebar } from "vuepress-theme-hope";
 import { guide } from "./guide";
 
-import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
-
-export const miniapp: HopeThemeSidebarArrayConfig = [
+export const miniapp = arraySidebar([
   "",
   {
     text: "小程序教程",
@@ -23,4 +22,4 @@ export const miniapp: HopeThemeSidebarArrayConfig = [
     children: ["", "simple-debug", "tag-list", "page", "demo"],
   },
   "qr-code",
-];
+]);

@@ -1,4 +1,4 @@
-import { HopeThemeSidebarConfig } from "vuepress-theme-hope";
+import { sidebar } from "vuepress-theme-hope";
 import { basic } from "./basic";
 import { code } from "./code";
 import { design } from "./design";
@@ -19,7 +19,7 @@ import { comsol, git, software, vscode } from "./software";
 import { vue } from "./vue";
 import { css, html, jquery, website } from "./website";
 
-export const zhSidebarConig: HopeThemeSidebarConfig = {
+export const zhSidebarConig = sidebar({
   "/software/vscode/": vscode,
 
   "/software/git/": git,
@@ -92,9 +92,9 @@ export const zhSidebarConig: HopeThemeSidebarConfig = {
 
   // fallback
   "/": ["", "note/", "code/", "software/", "about/"],
-};
+});
 
-export const enSidebarConfig: HopeThemeSidebarConfig = {
+export const enSidebarConfig = sidebar({
   "/en/note/": [""],
 
   "/en/code/": [""],
@@ -103,4 +103,4 @@ export const enSidebarConfig: HopeThemeSidebarConfig = {
 
   // fallback
   "/en/": ["", "code/", "about/"],
-};
+});

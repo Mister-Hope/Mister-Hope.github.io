@@ -1,6 +1,6 @@
-import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+import { arraySidebar } from "vuepress-theme-hope";
 
-export const markdown: HopeThemeSidebarArrayConfig = [
+export const markdown = arraySidebar([
   "",
   "intro",
   "block",
@@ -14,4 +14,4 @@ export const markdown: HopeThemeSidebarArrayConfig = [
     prefix: "emoji/",
     children: ["people", "nature", "object", "place", "symbol"],
   },
-];
+]);

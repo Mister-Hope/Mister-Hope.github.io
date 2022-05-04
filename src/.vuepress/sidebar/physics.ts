@@ -1,6 +1,6 @@
-import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+import { arraySidebar } from "vuepress-theme-hope";
 
-export const physics: HopeThemeSidebarArrayConfig = [
+export const physics = arraySidebar([
   "",
   {
     text: "电磁学",
@@ -22,4 +22,4 @@ export const physics: HopeThemeSidebarArrayConfig = [
     prefix: "tsp/",
     children: ["charpter1", "charpter2", "charpter3"],
   },
-];
+]);

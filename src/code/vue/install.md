@@ -29,7 +29,7 @@ tag:
 
 ### Git 安装
 
-- [安装 Git](../../../software/git/install.md)
+- [安装 Git](../../software/git/install.md)
 
 ### Node.js 环境安装
 

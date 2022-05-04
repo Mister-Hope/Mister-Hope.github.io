@@ -1,6 +1,6 @@
-import { defineNavbarConfig } from "vuepress-theme-hope";
+import { navbar } from "vuepress-theme-hope";
 
-export const zhNavbarConfig = defineNavbarConfig([
+export const zhNavbarConfig = navbar([
   "/",
   {
     text: "随笔",
@@ -57,7 +57,7 @@ export const zhNavbarConfig = defineNavbarConfig([
   },
 ]);
 
-export const enNavbarConfig = defineNavbarConfig([
+export const enNavbarConfig = navbar([
   "/en/",
   "/en/note/",
   "/en/code/",

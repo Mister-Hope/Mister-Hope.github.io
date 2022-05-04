@@ -1,6 +1,6 @@
-import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+import { arraySidebar } from "vuepress-theme-hope";
 
-export const guide: HopeThemeSidebarArrayConfig = [
+export const guide = arraySidebar([
   "",
   "file-structure",
   "env",
@@ -72,4 +72,4 @@ export const guide: HopeThemeSidebarArrayConfig = [
     prefix: "ability/",
     children: ["", "network", "storage", "file-system", "debug"],
   },
-];
+]);

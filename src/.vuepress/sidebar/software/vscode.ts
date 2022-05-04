@@ -1,6 +1,6 @@
-import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+import { arraySidebar } from "vuepress-theme-hope";
 
-export const vscode: HopeThemeSidebarArrayConfig = [
+export const vscode = arraySidebar([
   "",
   "install",
   "get-started",
@@ -24,4 +24,4 @@ export const vscode: HopeThemeSidebarArrayConfig = [
   "ui",
   "settings",
   "shortcut-key",
-];
+]);

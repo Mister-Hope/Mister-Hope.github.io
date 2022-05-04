@@ -1,6 +1,6 @@
-import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+import { arraySidebar } from "vuepress-theme-hope";
 
-export const typescript: HopeThemeSidebarArrayConfig = [
+export const typescript = arraySidebar([
   "",
   {
     text: "TS 介绍",
@@ -51,4 +51,4 @@ export const typescript: HopeThemeSidebarArrayConfig = [
     prefix: "engineering/",
     children: ["", "lint"],
   },
-];
+]);

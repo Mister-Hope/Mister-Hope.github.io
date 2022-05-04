@@ -1,6 +1,6 @@
-import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+import { arraySidebar } from "vuepress-theme-hope";
 
-export const comsol: HopeThemeSidebarArrayConfig = [
+export const comsol = arraySidebar([
   "",
   "intro",
   "install",
@@ -25,4 +25,4 @@ export const comsol: HopeThemeSidebarArrayConfig = [
   "study",
   "result",
   "app",
-];
+]);

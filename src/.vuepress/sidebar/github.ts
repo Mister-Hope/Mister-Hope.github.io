@@ -1,6 +1,6 @@
-import type { HopeThemeSidebarArrayConfig } from "vuepress-theme-hope";
+import { arraySidebar } from "vuepress-theme-hope";
 
-export const github: HopeThemeSidebarArrayConfig = [
+export const github = arraySidebar([
   "",
   "intro",
   "pr",
@@ -25,4 +25,4 @@ export const github: HopeThemeSidebarArrayConfig = [
     ],
   },
   "deploy",
-];
+]);
