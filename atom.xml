@@ -3,10 +3,11 @@
   <id>https://mrhope.site/</id>
   <title>Mr.Hope</title>
   <subtitle>Where there is light, there is hope.</subtitle>
-  <updated>2022-05-03T20:22:18.563Z</updated>
+  <updated>2022-05-04T19:06:24.053Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mrhope.site/atom.xml"/>
   <link rel="alternate" href="https://mrhope.site/"/>
+  <category term="小程序"/>
   <category term="Android"/>
   <category term="快速上手"/>
   <category term="前端"/>
@@ -21,7 +22,6 @@
   <category term="基础"/>
   <category term="GitHub"/>
   <category term="教程"/>
-  <category term="小程序"/>
   <category term="Node.js"/>
   <category term="软件"/>
   <category term="Git"/>
@@ -48,6 +48,129 @@
   <contributor>
     <name>廖雪峰</name>
   </contributor>
+  <entry>
+    <title type="html">API &amp;lt;Badge text=&amp;quot;重要&amp;quot; type=&amp;quot;error&amp;quot; /&amp;gt;</title>
+    <id>https://mrhope.site/code/mini-app/guide/service/api/</id>
+    <link href="https://mrhope.site/code/mini-app/guide/service/api/"/>
+    <updated>2022-05-04T19:02:05.000Z</updated>
+    <summary type="html"><![CDATA[<p>小程序开发框架提供丰富的微信原生 API，可以方便的调起微信提供的能力，如获取用户信息，本地存储，支付功能等。详细介绍请参考 <a href="https://developers.weixin.qq.com/miniprogram/dev/api/" target="_blank" rel="noopener noreferrer">API 文档</a>。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>小程序开发框架提供丰富的微信原生 API，可以方便的调起微信提供的能力，如获取用户信息，本地存储，支付功能等。详细介绍请参考 <a href="https://developers.weixin.qq.com/miniprogram/dev/api/" target="_blank" rel="noopener noreferrer">API 文档</a>。</p>
+
+<p>通常，在小程序 API 有以下几种类型:</p>
+<h2 id="事件监听-api" tabindex="-1"> 事件监听 API</h2>
+<p>我们约定，以 on 开头的 API 用来监听某个事件是否触发，如: <code>wx.onSocketOpen</code>, <code>wx.onCompassChange</code> 等。</p>
+<p>这类 API 接受一个回调函数作为参数，当事件触发时会调用这个回调函数，并将相关数据以参数形式传入。</p>
+<div><pre><code>wx.onCompassChange((res) =&gt; {
+  console.log(res.direction);
+});
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><h2 id="同步-api" tabindex="-1"> 同步 API</h2>
+<p>我们约定，以 <code>Sync</code> 结尾的 API 都是同步 API， 如 <code>wx.setStorageSync</code>，<code>wx.getSystemInfoSync</code> 等。此外，也有一些其他的同步 API，如 <code>wx.createWorker</code>, <code>wx.getBackgroundAudioManager</code> 等，详情参见 API 文档中的说明。</p>
+<p>同步 API 的执行结果可以通过函数返回值直接获取，如果执行出错会抛出异常。</p>
+<div><pre><code>try {
+  wx.setStorageSync(&quot;key&quot;, &quot;value&quot;);
+} catch (e) {
+  console.error(e);
+}
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><h2 id="异步-api" tabindex="-1"> 异步 API</h2>
+<p>大多数 API 都是异步 API，如 <code>wx.request</code>，<code>wx.login</code> 等。这类 API 接口通常都接受一个 <code>Object</code> 类型的参数，这个参数都支持按需指定以下字段来接收接口调用结果:</p>
+<h3 id="object-参数说明" tabindex="-1"> Object 参数说明</h3>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>function</td>
+<td>否</td>
+<td>接口调用成功的回调函数</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>function</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>function</td>
+<td>否</td>
+<td>接口调用结束的回调函数(调用成功、失败都会执行)</td>
+</tr>
+<tr>
+<td>其他</td>
+<td>Any</td>
+<td>-</td>
+<td>接口定义的其他参数</td>
+</tr>
+</tbody>
+</table>
+<h3 id="回调函数的参数" tabindex="-1"> 回调函数的参数</h3>
+<p><code>success</code>, <code>fail</code>, <code>complete</code> 函数调用时会传入一个 <code>Object</code> 类型参数，包含以下字段:</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>errMsg</td>
+<td>string</td>
+<td>错误信息，如果调用成功返回 <code>${apiName}:ok</code></td>
+</tr>
+<tr>
+<td>errCode</td>
+<td>number</td>
+<td>错误码，仅部分 API 支持，具体含义请参考对应 API 文档，成功时为 0。</td>
+</tr>
+<tr>
+<td>其他</td>
+<td>Any</td>
+<td>接口返回的其他数据</td>
+</tr>
+</tbody>
+</table>
+<p>异步 API 的执行结果需要通过 <code>Object</code> 类型的参数中传入的对应回调函数获取。部分异步 API 也会有返回值，可以用来实现更丰富的功能，如 <code>wx.request</code>, <code>wx.connectSocke</code>t` 等。</p>
+<div><pre><code>wx.login({
+  success: (res) =&gt; {
+    console.log(res.code);
+  },
+});
+</code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br></div></div><div><p>注意</p>
+<p>异步函数会在异步动作进行完之后，触发对应设置好的回调函数，所以此时的函数执行已经脱离了正常 js 的执行上下文。</p>
+<p>如果对上面的话不理解，请务必查阅<strong>什么是同步/异步函数</strong>。</p>
+</div>
+<h2 id="常见-api" tabindex="-1"> 常见 API</h2>
+<ul>
+<li>
+<p><a href="/code/mini-app/guide/service/api/route.html">路由</a></p>
+</li>
+<li>
+<p><a href="/code/mini-app/guide/service/api/storage.html">数据缓存</a></p>
+</li>
+<li>
+<p><a href="/code/mini-app/guide/service/api/interact.html">交互</a></p>
+</li>
+<li>
+<p><a href="/code/mini-app/guide/service/api/network.html">网络</a></p>
+</li>
+<li>
+<p><a href="/code/mini-app/guide/service/api/system.html">系统信息</a></p>
+</li>
+</ul>
+]]></content>
+    <category term="小程序"/>
+    <published>2022-05-04T19:02:05.000Z</published>
+  </entry>
   <entry>
     <title type="html">启动另一个 activity</title>
     <id>https://mrhope.site/code/Android/get-started/activity.html</id>
@@ -2538,7 +2661,7 @@ parent.removeChild(parent.children[1]); // &lt;-- 浏览器报错
     <title type="html">网页入门</title>
     <id>https://mrhope.site/code/website/</id>
     <link href="https://mrhope.site/code/website/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
+    <updated>2022-05-04T19:02:05.000Z</updated>
     <summary type="html"><![CDATA[<p>网页需要三件套: <strong>HTML</strong>、<strong>CSS</strong> 和 <strong>JavaScript</strong>。</p>
 <ol>
 <li>HTML 定义了网页的内容</li>
@@ -2638,7 +2761,7 @@ parent.removeChild(parent.children[1]); // &lt;-- 浏览器报错
 </ul>
 <h3 id="angular" tabindex="-1"> Angular</h3>
 <ul>
-<li><a href="/code/angular/">Angular 教程</a></li>
+<li><a href="/code/Angular/">Angular 教程</a></li>
 </ul>
 <h2 id="其他文档" tabindex="-1"> 其他文档</h2>
 <ul>
@@ -5561,36 +5684,6 @@ try {
     <published>2019-09-13T00:00:00.000Z</published>
   </entry>
   <entry>
-    <title type="html">运算符</title>
-    <id>https://mrhope.site/code/language/js/operators/</id>
-    <link href="https://mrhope.site/code/language/js/operators/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
-    <content type="html"><![CDATA[<div><p>提示</p>
-<p>二进制位运算符章节使用较少，无需阅读。</p>
-</div>
-<h2 id="目录" tabindex="-1"> 目录</h2>
-<ul>
-<li>
-<p><a href="/code/language/js/operators/arithmetic.html">算术运算符</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/operators/comparison.html">比较运算符</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/operators/boolean.html">布尔运算符</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/operators/bit.html">二进制位运算符</a> <i>Content not supported</i></p>
-</li>
-<li>
-<p><a href="/code/language/js/operators/priority.html">其他运算符，运算顺序</a></p>
-</li>
-</ul>
-]]></content>
-    <category term="JavaScript"/>
-    <published>2019-09-26T00:00:00.000Z</published>
-  </entry>
-  <entry>
     <title type="html">对象</title>
     <id>https://mrhope.site/code/language/js/object/</id>
     <link href="https://mrhope.site/code/language/js/object/"/>
@@ -5632,6 +5725,36 @@ try {
 ]]></content>
     <category term="JavaScript"/>
     <published>2019-10-08T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="html">运算符</title>
+    <id>https://mrhope.site/code/language/js/operators/</id>
+    <link href="https://mrhope.site/code/language/js/operators/"/>
+    <updated>2022-02-06T16:46:58.000Z</updated>
+    <content type="html"><![CDATA[<div><p>提示</p>
+<p>二进制位运算符章节使用较少，无需阅读。</p>
+</div>
+<h2 id="目录" tabindex="-1"> 目录</h2>
+<ul>
+<li>
+<p><a href="/code/language/js/operators/arithmetic.html">算术运算符</a></p>
+</li>
+<li>
+<p><a href="/code/language/js/operators/comparison.html">比较运算符</a></p>
+</li>
+<li>
+<p><a href="/code/language/js/operators/boolean.html">布尔运算符</a></p>
+</li>
+<li>
+<p><a href="/code/language/js/operators/bit.html">二进制位运算符</a> <i>Content not supported</i></p>
+</li>
+<li>
+<p><a href="/code/language/js/operators/priority.html">其他运算符，运算顺序</a></p>
+</li>
+</ul>
+]]></content>
+    <category term="JavaScript"/>
+    <published>2019-09-26T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="html">数据类型</title>
@@ -5923,46 +6046,6 @@ try {
       <name>廖雪峰</name>
     </contributor>
     <published>2021-03-27T00:00:00.000Z</published>
-    <rights>Copyright by 廖雪峰</rights>
-  </entry>
-  <entry>
-    <title type="html">面向对象编程</title>
-    <id>https://mrhope.site/code/language/python/oop/</id>
-    <link href="https://mrhope.site/code/language/python/oop/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
-<ul>
-<li>
-<p><a href="/code/language/python/oop/intro.html">介绍</a></p>
-</li>
-<li>
-<p><a href="/code/language/python/oop/instance.html">类和实例</a></p>
-</li>
-<li>
-<p><a href="/code/language/python/oop/extend.html">继承和多态</a></p>
-</li>
-<li>
-<p><a href="/code/language/python/oop/property.html">属性</a></p>
-</li>
-<li>
-<p><a href="/code/language/python/oop/info.html">获取对象信息</a></p>
-</li>
-<li>
-<p><a href="/code/language/python/oop/customize.html">定制类</a></p>
-</li>
-<li>
-<p><a href="/code/language/python/oop/special.html">特殊的 class</a></p>
-</li>
-</ul>
-]]></content>
-    <author>
-      <name>廖雪峰</name>
-    </author>
-    <category term="Python"/>
-    <contributor>
-      <name>廖雪峰</name>
-    </contributor>
-    <published>2021-03-28T00:00:00.000Z</published>
     <rights>Copyright by 廖雪峰</rights>
   </entry>
 </feed>
