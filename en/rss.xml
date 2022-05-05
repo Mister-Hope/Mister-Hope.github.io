@@ -6,8 +6,8 @@
     <link>https://mrhope.site/en/</link>
     <description>Mr.Hope personal blog</description>
     <language>en-US</language>
-    <pubDate>Wed, 04 May 2022 19:06:24 GMT</pubDate>
-    <lastBuildDate>Wed, 04 May 2022 19:06:24 GMT</lastBuildDate>
+    <pubDate>Thu, 05 May 2022 16:39:59 GMT</pubDate>
+    <lastBuildDate>Thu, 05 May 2022 16:39:59 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -140,31 +140,31 @@
 <p>An important web server task is serving out files (such as images or static HTML pages). You will implement an example where, depending on the request, files will be served from different local directories: <code>/data/www</code> (which may contain HTML files) and <code>/data/images</code> (containing images). This will require editing of the configuration file and setting up of a server block inside the http block with two location blocks.</p>
 <p>First, create the <code>/data/www</code> directory and put an <code>index.html</code> file with any text content into it and create the <code>/data/images</code> directory and place some images in it.</p>
 <p>Next, open the configuration file. The default configuration file already includes several examples of the server block, mostly commented out. For now comment out all such blocks and start a new server block:</p>
-<div><pre><code>http {
-    server {
-    }
-}
+<div><pre><code><span><span>http</span></span> <span>{</span>
+    <span><span>server</span></span> <span>{</span>
+    <span>}</span>
+<span>}</span>
 </code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br></div></div><p>Generally, the configuration file may include several server blocks distinguished by ports on which they listen to and by server names. Once nginx decides which server processes a request, it tests the URI specified in the request’s header against the parameters of the location directives defined inside the server block.</p>
 <p>Add the following location block to the server block:</p>
-<div><pre><code>location / {
-    root /data/www;
-}
+<div><pre><code><span><span>location</span> /</span> <span>{</span>
+    <span><span>root</span> /data/www</span><span>;</span>
+<span>}</span>
 </code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>This location block specifies the “<code>/</code>” prefix compared with the URI from the request. For matching requests, the URI will be added to the path specified in the root directive, that is, to <code>/data/www</code>, to form the path to the requested file on the local file system. If there are several matching location blocks nginx selects the one with the longest prefix. The location block above provides the shortest prefix, of length one, and so only if all other location blocks fail to provide a match, this block will be used.</p>
 <p>Next, add the second location block:</p>
-<div><pre><code>location /images/ {
-    root /data;
-}
+<div><pre><code><span><span>location</span> /images/</span> <span>{</span>
+    <span><span>root</span> /data</span><span>;</span>
+<span>}</span>
 </code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>It will be a match for requests starting with <code>/images/</code> (location <code>/</code> also matches such requests, but has shorter prefix).</p>
 <p>The resulting configuration of the server block should look like this:</p>
-<div><pre><code>server {
-    location / {
-        root /data/www;
-    }
+<div><pre><code><span><span>server</span></span> <span>{</span>
+    <span><span>location</span> /</span> <span>{</span>
+        <span><span>root</span> /data/www</span><span>;</span>
+    <span>}</span>
 
-    location /images/ {
-        root /data;
-    }
-}
+    <span><span>location</span> /images/</span> <span>{</span>
+        <span><span>root</span> /data</span><span>;</span>
+    <span>}</span>
+<span>}</span>
 </code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>This is already a working configuration of a server that listens on the standard port <code>80</code> and is accessible on the local machine at <code>http://localhost/</code>. In response to requests with URIs starting with <code>/images/</code>, the server will send files from the <code>/data/images</code> directory. For example, in response to the <code>http://localhost/images/example.png</code> request nginx will send the <code>/data/images/example.png</code> file. If such file does not exist, nginx will send a response indicating the 404 error. Requests with URIs not starting with <code>/images/</code> will be mapped onto the <code>/data/www</code> directory. For example, in response to the <code>http://localhost/some/example.html</code> request nginx will send the <code>/data/www/some/example.html</code> file.</p>
 <p>To apply the new configuration, start nginx if it is not yet started or send the <code>reload</code> signal to the nginx’s master process, by executing:</p>
 <div><pre><code>nginx -s reload
@@ -173,57 +173,57 @@
 <p>One of the frequent uses of nginx is setting it up as a proxy server, which means a server that receives requests, passes them to the proxied servers, retrieves responses from them, and sends them to the clients.</p>
 <p>We will configure a basic proxy server, which serves requests of images with files from the local directory and sends all other requests to a proxied server. In this example, both servers will be defined on a single nginx instance.</p>
 <p>First, define the proxied server by adding one more <code>server</code> block to the nginx’s configuration file with the following contents:</p>
-<div><pre><code>server {
-    listen 8080;
-    root /data/up1;
+<div><pre><code><span><span>server</span></span> <span>{</span>
+    <span><span>listen</span> <span>8080</span></span><span>;</span>
+    <span><span>root</span> /data/up1</span><span>;</span>
 
-    location / {
-    }
-}
+    <span><span>location</span> /</span> <span>{</span>
+    <span>}</span>
+<span>}</span>
 </code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br></div></div><p>This will be a simple server that listens on the port <code>8080</code> (previously, the listen directive has not been specified since the standard port <code>80</code> was used) and maps all requests to the <code>/data/up1</code> directory on the local file system. Create this directory and put the <code>index.html</code> file into it. Note that the root directive is placed in the server context. Such root directive is used when the location block selected for serving a request does not include own root directive.</p>
 <p>Next, use the server configuration from the previous section and modify it to make it a proxy server configuration. In the first location block, put the <code>proxy_pass</code> directive with the protocol, name and port of the proxied server specified in the parameter (in our case, it is <code>http://localhost:8080</code>):</p>
-<div><pre><code>server {
-    location / {
-        proxy_pass http://localhost:8080;
-    }
+<div><pre><code><span><span>server</span></span> <span>{</span>
+    <span><span>location</span> /</span> <span>{</span>
+        <span><span>proxy_pass</span> http://localhost:8080</span><span>;</span>
+    <span>}</span>
 
-    location /images/ {
-        root /data;
-    }
-}
+    <span><span>location</span> /images/</span> <span>{</span>
+        <span><span>root</span> /data</span><span>;</span>
+    <span>}</span>
+<span>}</span>
 </code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>We will modify the second location block, which currently maps requests with the <code>/images/</code> prefix to the files under the <code>/data/images</code> directory, to make it match the requests of images with typical file extensions. The modified location block looks like this:</p>
-<div><pre><code>location ~ \.(gif|jpg|png)$ {
-    root /data/images;
-}
+<div><pre><code><span><span>location</span> ~ \.(gif|jpg|png)$</span> <span>{</span>
+    <span><span>root</span> /data/images</span><span>;</span>
+<span>}</span>
 </code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br></div></div><p>The parameter is a regular expression matching all URIs ending with <code>.gif</code>, <code>.jpg</code>, or <code>.png</code>. A regular expression should be preceded with <code>~</code>. The corresponding requests will be mapped to the <code>/data/images</code> directory.</p>
 <p>When nginx selects a <code>location</code> block to serve a request it first checks location directives that specify prefixes, remembering <code>location</code> with the longest prefix, and then checks regular expressions. If there is a match with a regular expression, nginx picks this <code>location</code> or, otherwise, it picks the one remembered earlier.</p>
 <p>The resulting configuration of a proxy server will look like this:</p>
-<div><pre><code>server {
-    location / {
-        proxy_pass http://localhost:8080/;
-    }
+<div><pre><code><span><span>server</span></span> <span>{</span>
+    <span><span>location</span> /</span> <span>{</span>
+        <span><span>proxy_pass</span> http://localhost:8080/</span><span>;</span>
+    <span>}</span>
 
-    location ~ \.(gif|jpg|png)$ {
-        root /data/images;
-    }
-}
+    <span><span>location</span> ~ \.(gif|jpg|png)$</span> <span>{</span>
+        <span><span>root</span> /data/images</span><span>;</span>
+    <span>}</span>
+<span>}</span>
 </code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br></div></div><p>This server will filter requests ending with <code>.gif</code>, <code>.jpg</code>, or <code>.png</code> and map them to the <code>/data/images</code> directory (by adding URI to the root directive’s parameter) and pass all other requests to the proxied server configured above.</p>
 <p>To apply new configuration, send the reload signal to nginx as described in the previous sections.</p>
 <p>There are many more directives that may be used to further configure a proxy connection.</p>
 <h2 id="setting-up-fastcgi-proxying" tabindex="-1"> Setting Up FastCGI Proxying</h2>
 <p>Nginx can be used to route requests to FastCGI servers which run applications built with various frameworks and programming languages such as PHP.</p>
 <p>The most basic nginx configuration to work with a FastCGI server includes using the <code>fastcgi_pass</code> directive instead of the <code>proxy_pass</code> directive, and <code>fastcgi_param</code> directives to set parameters passed to a FastCGI server. Suppose the FastCGI server is accessible on <code>localhost:9000</code>. Taking the proxy configuration from the previous section as a basis, replace the <code>proxy_pass</code> directive with the fastcgi_pass directive and change the parameter to <code>localhost:9000</code>. In PHP, the <code>SCRIPT_FILENAME</code> parameter is used for determining the script name, and the <code>QUERY_STRING</code> parameter is used to pass request parameters. The resulting configuration would be:</p>
-<div><pre><code>server {
-    location / {
-        fastcgi_pass  localhost:9000;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-        fastcgi_param QUERY_STRING    $query_string;
-    }
+<div><pre><code><span><span>server</span></span> <span>{</span>
+    <span><span>location</span> /</span> <span>{</span>
+        <span><span>fastcgi_pass</span>  localhost:9000</span><span>;</span>
+        <span><span>fastcgi_param</span> SCRIPT_FILENAME <span>$document_root</span><span>$fastcgi_script_name</span></span><span>;</span>
+        <span><span>fastcgi_param</span> QUERY_STRING    <span>$query_string</span></span><span>;</span>
+    <span>}</span>
 
-    location ~ \.(gif|jpg|png)$ {
-        root /data/images;
-    }
-}
+    <span><span>location</span> ~ \.(gif|jpg|png)$</span> <span>{</span>
+        <span><span>root</span> /data/images</span><span>;</span>
+    <span>}</span>
+<span>}</span>
 </code></pre><div aria-hidden="true"><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br><span>11</span><br></div></div><p>This will set up a server that will route all requests except for requests for static images to the proxied server operating on <code>localhost:9000</code> through the FastCGI protocol.</p>
 <h2 id="official-docs" tabindex="-1"> Official Docs</h2>
 <ul>
