@@ -6,8 +6,8 @@ export default defineUserConfig({
   dest: "dist",
 
   head: [
-    ["meta", { name: "baidu-site-verification", content: "nGf5yi0Gec" }],
     ["meta", { name: "baidu-site-verification", content: "4H7tszevS8" }],
+    ["meta", { name: "baidu-site-verification", content: "nGf5yi0Gec" }],
     [
       "link",
       {
