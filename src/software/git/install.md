@@ -115,7 +115,7 @@ tag:
 
    ```bash
    git config --global user.name "Mr.Hope"
-   git config --global user.email "zhangbowang1998@gmail.com"
+   git config --global user.email "mister-hope@outlook.com"
    ```
 
    ::: info

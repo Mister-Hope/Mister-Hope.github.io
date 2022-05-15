@@ -8,6 +8,11 @@ heroText: 𝓜𝓻. 𝓗𝓸𝓹𝓮
 heroFullScreen: true
 tagline: Where there is light, there is hope
 projects:
+  - name: vuepress
+    desc: 基于 Vue 的静态文档构建起
+    link: https://v2.vuepress.vuejs.org/zh/
+    icon: /assets/img/vuepress.png
+
   - name: vuepress-theme-hope
     desc: 一个功能强大的 Vuepress 主题✨
     link: https://vuepress-theme-hope.github.io/v2/zh/
@@ -47,39 +52,6 @@ projects:
     desc: 轻量、高效的微信小程序框架
     link: https://github.com/miniapp-tool/mptool
     icon: https://miniapp-tool.github.io/logo.png
-
-  # - name: in东师官网
-  #   icon: project
-  #   desc: 提供各种功能的聚合入口，校历、讲座资讯
-  #   link: https://innenu.com/
-
-  - name: 代码教程
-    icon: book
-    link: /code/
-
-  - name: 软件教程
-    icon: book
-    link: /software/
-
-  - name: Linux 教程
-    icon: book
-    link: /linux/
-
-  - name: 前端入门
-    icon: book
-    link: /code/website/
-
-  - name: 设计教程
-    icon: article
-    link: /design/
-
-  - name: 随笔
-    icon: article
-    link: /note/
-
-  - name: 物理笔记
-    icon: article
-    link: /physics/
 
 footer: '<a href="http://beian.miit.gov.cn/" rel="noopener noreferrer" target="_blank">备案号: 辽ICP备18007023号</a> | <a href="/about/site.html">关于网站</a>'
 ---
