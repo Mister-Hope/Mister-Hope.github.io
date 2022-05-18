@@ -15,7 +15,7 @@ category: CSS
 
 在默认情况下，CSS 会将元素溢出的部分显示在和盒子外。
 
-::: demo 例子
+::: normal-demo 例子
 
 ```html
 <div class="word">Overflow</div>

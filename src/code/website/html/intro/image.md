@@ -57,7 +57,7 @@ category: HTML
 
 `alt` 的值应该是对图片的文字描述，用于在图片无法显示或不能被看到的情况。
 
-::: demo 案例
+::: normal-demo 案例
 
 ```html
 <img
@@ -102,7 +102,7 @@ category: HTML
 
 您可以用宽度和高度属性来指定您的图片的高度和宽度。
 
-::: demo 设置宽度和高度
+::: normal-demo 设置宽度和高度
 
 ```html
 <img
@@ -133,7 +133,7 @@ category: HTML
 
 类似于超链接，您可以给图片增加 `title` 属性来提供需要更进一步的支持信息。
 
-::: demo 图片标题
+::: normal-demo 图片标题
 
 ```html
 <img
@@ -163,7 +163,7 @@ category: HTML
 
 HTML5 的 `<figure>` 和 `<figcaption>` 元素为图片提供一个语义容器，在标题和图片之间建立清晰的关联。
 
-::: demo HTML5 语义容器
+::: normal-demo HTML5 语义容器
 
 ```html
 <figure>

@@ -25,7 +25,7 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 首先，只有左上角 1 个点的情况。Flex 布局默认就是首行左对齐，所以一行代码就够了。
 
-::: demo 点位 1
+::: normal-demo 点位 1
 
 ```html
 <div class="dice-container">
@@ -70,7 +70,7 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 设置项目的对齐方式，就能实现居中对齐和右对齐。
 
-::: demo 点位 2
+::: normal-demo 点位 2
 
 ```html
 <div class="dice-container">
@@ -114,7 +114,7 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 :::
 
-::: demo 点位 3
+::: normal-demo 点位 3
 
 ```html
 <div class="dice-container">
@@ -160,7 +160,7 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 设置交叉轴对齐方式，可以垂直移动主轴。
 
-::: demo 点位 4
+::: normal-demo 点位 4
 
 ```html
 <div class="dice-container">
@@ -204,7 +204,7 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 :::
 
-::: demo 点位 5
+::: normal-demo 点位 5
 
 ```html
 <div class="dice-container">
@@ -249,7 +249,7 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 :::
 
-::: demo 点位 8
+::: normal-demo 点位 8
 
 ```html
 <div class="dice-container">
@@ -294,7 +294,7 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 :::
 
-::: demo 点位 9
+::: normal-demo 点位 9
 
 ```html
 <div class="dice-container">
@@ -341,7 +341,7 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 ### 双项目
 
-::: demo 双点位 13
+::: normal-demo 双点位 13
 
 ```html
 <div class="dice-container">
@@ -386,53 +386,7 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 :::
 
-::: demo 双点位 17
-
-```html
-<div class="dice-container">
-  <div class="box">
-    <span class="item" />
-    <span class="item" />
-  </div>
-</div>
-```
-
-```css
-.box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Common styles */
-.dice-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-  background-color: #000;
-}
-
-.dice-container .box {
-  width: 90px;
-  height: 90px;
-  padding: 8px;
-  border-radius: 8px;
-  background-color: #f8f8f8;
-}
-
-.dice-container .item {
-  width: 24px;
-  height: 24px;
-  margin: 3px;
-  border-radius: 50%;
-  background-color: #000;
-}
-```
-
-:::
-
-::: demo 双点位 28
+::: normal-demo 双点位 17
 
 ```html
 <div class="dice-container">
@@ -448,6 +402,52 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+/* Common styles */
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background-color: #000;
+}
+
+.dice-container .box {
+  width: 90px;
+  height: 90px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.dice-container .item {
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  border-radius: 50%;
+  background-color: #000;
+}
+```
+
+:::
+
+::: normal-demo 双点位 28
+
+```html
+<div class="dice-container">
+  <div class="box">
+    <span class="item" />
+    <span class="item" />
+  </div>
+</div>
+```
+
+```css
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -479,7 +479,7 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 :::
 
-::: demo 双点位 39
+::: normal-demo 双点位 39
 
 ```html
 <div class="dice-container">
@@ -526,7 +526,7 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 :::
 
-::: demo 双点位 15
+::: normal-demo 双点位 15
 
 ```html
 <div class="dice-container">
@@ -574,7 +574,7 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 :::
 
-::: demo 双点位 19
+::: normal-demo 双点位 19
 
 ```html
 <div class="dice-container">
@@ -625,7 +625,7 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 ### 三项目
 
-::: demo 三点
+::: normal-demo 三点
 
 ```html
 <div class="dice-container">
@@ -680,7 +680,7 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 ### 四项目
 
-::: demo 四点
+::: normal-demo 四点
 
 ```html
 <div class="dice-container">
@@ -740,7 +740,7 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 ### 六项目
 
-::: demo 六点
+::: normal-demo 六点
 
 ```html
 <div class="dice-container">
@@ -791,7 +791,7 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 :::
 
-::: demo 六点 2
+::: normal-demo 六点 2
 
 ```html
 <div class="dice-container">
@@ -845,7 +845,7 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 您还可以使用高级选择器:
 
-::: demo 一个图案
+::: normal-demo 一个图案
 
 ```html
 <div class="dice-container">
@@ -919,7 +919,7 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 最简单的网格布局，就是平均分布。在容器里面平均分配空间，跟上面的骰子布局很像，但是需要设置项目的自动缩放。
 
-::: demo 网格布局
+::: normal-demo 网格布局
 
 ```html
 <div class="grid-wrapper">
@@ -972,7 +972,7 @@ CSS 代码如下。
 
 某个网格的宽度为固定的百分比，其余网格平均分配剩余的空间。
 
-::: demo 百分比布局
+::: normal-demo 百分比布局
 
 ```html
 <div class="grid-wrapper">

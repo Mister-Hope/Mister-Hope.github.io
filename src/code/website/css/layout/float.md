@@ -18,7 +18,7 @@ category: CSS
 - `right`: 将元素浮动到右侧。
 - `none`: 默认值, 不浮动。
 
-::: demo float 案例
+::: normal-demo float 案例
 
 ```html
 <h1>Simple float example</h1>
@@ -53,7 +53,7 @@ category: CSS
 
 ## 首字下沉
 
-::: demo 首字下沉
+::: normal-demo 首字下沉
 
 ```html
 <p>
@@ -87,7 +87,7 @@ p::first-letter {
 
 ## 多列浮动布局
 
-::: demo 多列浮动布局
+::: normal-demo 多列浮动布局
 
 ```html
 <div class="container">
@@ -145,7 +145,7 @@ p::first-letter {
 
 有些情况下，浮动元素内容过多会错乱排版。
 
-::: demo 一个糟糕的浮动布局
+::: normal-demo 一个糟糕的浮动布局
 
 ```html
 <div class="container">
@@ -233,7 +233,7 @@ clear 可以取三个值:
 - `right`: 停止任何活动的右浮动
 - `both`: 停止任何活动的左右浮动
 
-::: demo 改进后的浮动布局
+::: normal-demo 改进后的浮动布局
 
 ```html
 <div class="container">
@@ -388,7 +388,7 @@ footer {
 }
 ```
 
-::: demo 最终结果
+::: normal-demo 最终结果
 
 ```html
 <div class="container">

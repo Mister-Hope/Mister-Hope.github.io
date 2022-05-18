@@ -109,7 +109,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 1. `nowrap`(默认): 不换行。
 
-   ::: demo nowrap
+   ::: normal-demo nowrap
 
    ```html
    <div class="wrapper">
@@ -146,7 +146,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 1. `wrap`: 换行，第一行在上方。
 
-   ::: demo wrap
+   ::: normal-demo wrap
 
    ```html
    <div class="wrapper">
@@ -183,7 +183,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 1. `wrap-reverse`: 换行，第一行在下方。
 
-   ::: demo wrap-reverse
+   ::: normal-demo wrap-reverse
 
    ```html
    <div class="wrapper">
@@ -238,7 +238,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 }
 ```
 
-::: demo flex-start
+::: normal-demo flex-start
 
 ```html
 <div class="wrapper">
@@ -275,7 +275,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 :::
 
-::: demo flex-end
+::: normal-demo flex-end
 
 ```html
 <div class="wrapper">
@@ -312,7 +312,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 :::
 
-::: demo center
+::: normal-demo center
 
 ```html
 <div class="wrapper">
@@ -349,7 +349,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 :::
 
-::: demo space-between
+::: normal-demo space-between
 
 ```html
 <div class="wrapper">
@@ -386,7 +386,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 :::
 
-::: demo space-around
+::: normal-demo space-around
 
 ```html
 <div class="wrapper">
@@ -423,7 +423,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 :::
 
-::: demo space-evenly
+::: normal-demo space-evenly
 
 ```html
 <div class="wrapper">
@@ -479,7 +479,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 }
 ```
 
-::: demo flex-start
+::: normal-demo flex-start
 
 ```html
 <div class="wrapper">
@@ -523,7 +523,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 :::
 
-::: demo flex-end
+::: normal-demo flex-end
 
 ```html
 <div class="wrapper">
@@ -567,7 +567,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 :::
 
-::: demo center
+::: normal-demo center
 
 ```html
 <div class="wrapper">
@@ -611,7 +611,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 :::
 
-::: demo baseline
+::: normal-demo baseline
 
 ```html
 <div class="wrapper">
@@ -657,7 +657,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 :::
 
-::: demo stretch
+::: normal-demo stretch
 
 ```html
 <div class="wrapper">

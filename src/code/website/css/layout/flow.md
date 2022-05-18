@@ -23,7 +23,7 @@ category: CSS
 
 如果两个相邻的元素都设置了 `margin` 并且两个 `margin` 有重叠，那么更大的设置会被保留，小的则会消失。这被称为外边距叠加。
 
-::: demo 一个简单例子
+::: normal-demo 一个简单例子
 
 ```html
 <h1>Basic document flow</h1>

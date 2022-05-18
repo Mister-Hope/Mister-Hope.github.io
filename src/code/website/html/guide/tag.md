@@ -11,7 +11,7 @@ tag:
 
 HTML 标题 (Heading) 是通过 `<h1>` - `<h6>` 标签来定义的。
 
-::: demo HTML 标题
+::: normal-demo HTML 标题
 
 ```html
 <h1>这是一个标题</h1>
@@ -25,7 +25,7 @@ HTML 标题 (Heading) 是通过 `<h1>` - `<h6>` 标签来定义的。
 
 HTML 段落是通过标签 `<p>` 来定义的。
 
-::: demo HTML 段落
+::: normal-demo HTML 段落
 
 ```html
 <p>这是一个段落。</p>
@@ -43,7 +43,7 @@ HTML 段落是通过标签 `<p>` 来定义的。
 
 列表的每个项目用一个列表项目 (List Item) 元素 `<li>` 包围。
 
-::: demo HTML 列表
+::: normal-demo HTML 列表
 
 ```html
 <p>购物清单</p>
@@ -67,7 +67,7 @@ HTML 段落是通过标签 `<p>` 来定义的。
 
 HTML 链接是通过标签 `<a>` 来定义的。
 
-::: demo HTML 链接
+::: normal-demo HTML 链接
 
 ```html
 <a href="https://mrhope.site">这是一个链接</a>
@@ -85,7 +85,7 @@ href 属性指定链接的地址。
 
 HTML 图像是通过标签 `<img>` 来定义的。
 
-::: demo HTML 图像
+::: normal-demo HTML 图像
 
 ```html
 <img src="/logo.svg" width="60" height="60" />
@@ -99,7 +99,7 @@ HTML 图像是通过标签 `<img>` 来定义的。
 
 `hr` 元素可用于分隔内容。
 
-::: demo HTML 水平线
+::: normal-demo HTML 水平线
 
 ```html
 <p>这是一个段落。</p>
@@ -133,7 +133,7 @@ HTML 图像是通过标签 `<img>` 来定义的。
 
 如果您希望在不产生一个新段落的情况下进行换行(新行)，请使用 `<br>` 标签:
 
-::: demo HTML 折行
+::: normal-demo HTML 折行
 
 ```html
 <p>这个<br />段落<br />演示了分行的效果</p>
@@ -147,7 +147,7 @@ HTML 图像是通过标签 `<img>` 来定义的。
 
 在开发中，最常用的就是块标签(`<div />`)。
 
-::: demo HTML 块
+::: normal-demo HTML 块
 
 ```html
 <div>这是一个没有任何样式的块</div>

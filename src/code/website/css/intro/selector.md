@@ -13,7 +13,7 @@ CSS 选择器是 CSS 规则的第一部分。它是元素和其他部分组合�
 
 <!-- more -->
 
-::: demo 案例
+::: normal-demo 案例
 
 ```html
 <img src="/logo.svg" alt="logo" style="max-width: 150px" />

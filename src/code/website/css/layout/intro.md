@@ -9,7 +9,7 @@ category: CSS
 
 正常布局流(normal flow)是指在不对页面进行任何布局控制时，浏览器默认的 HTML 布局方式。HTML 元素完全按照源码中出现的先后次序显示。
 
-::: demo 正常布局流
+::: normal-demo 正常布局流
 
 ```html
 <p>Mr.Hope 很帅</p>
@@ -74,7 +74,7 @@ category: CSS
 
 Flexbox 是 CSS 弹性盒子布局模块(Flexible Box Layout Module)的缩写，它被专门设计出来用于创建横向或是纵向的一维页面布局。要使用 flexbox，您只需要在想要进行 flex 布局的父元素上应用 `display: flex` ，所有直接子元素都将会按照 flex 进行布局。
 
-::: demo Flexbox
+::: normal-demo Flexbox
 
 当我们把 `display: flex` 添加到父元素时，三个元素就自动按列进行排列。这是由于它们变成了 flex 项(flex items)，按照 flex 容器(也就是它们的父元素)的一些 flex 相关的初值进行 flex 布局: 它们整整齐齐排成一行，是因为父元素上 flex-direction 的初值是 row。它们全都被拉伸至和最高的元素高度相同，是因为父元素上 `align-items` 属性的初值是 `stretch`。这就意味着所有的子元素都会被拉伸到它们的 flex 容器的高度，在这个案例里就是所有 flex 项中最高的一项。所有项目都从容器的开始位置进行排列，排列成一行后，在尾部留下一片空白。
 
@@ -102,7 +102,7 @@ Flexbox 是 CSS 弹性盒子布局模块(Flexible Box Layout Module)的缩写，
 
 很多属性可以被应用到 flex 项(flex items)上面。这些属性可以改变 flex 项在 flex 布局中占用宽/高的方式，允许它们通过伸缩来适应可用空间。
 
-::: demo flex 属性
+::: normal-demo flex 属性
 
 作为一个简单的例子，我们可以在我们的所有子元素上添加 flex 属性，并赋值为 1，这会使得所有的子元素都伸展并填充容器，而不是在尾部留下空白，如果有更多空间，那么子元素们就会变得更宽，反之，他们就会变得更窄。除此之外，如果您在 HTML 标记中添加了一个新元素，那么它们也会变得更小，来为新元素创造空间——不管怎样，最终它们会调整自己直到占用相同宽度的空间。
 
@@ -143,7 +143,7 @@ Flexbox 用于设计横向或纵向的布局，而 Grid 布局则被设计用于
 
 使用 `grid-template-rows` 和 `grid-template-columns` 两个属性定义行和列的轨道。
 
-::: demo Grid 布局
+::: normal-demo Grid 布局
 
 ```html
 <div class="wrapper">
@@ -176,7 +176,7 @@ Flexbox 用于设计横向或纵向的布局，而 Grid 布局则被设计用于
 
 利用 `grid-column` 和 `grid-row` 两个属性，您可以指定每一个子元素应该从哪一行/列开始，并在哪一行/列结束。这就能够让子元素在多个行/列上展开。
 
-::: demo 显示指定元素摆放
+::: normal-demo 显示指定元素摆放
 
 ```html
 <div class="wrapper">
@@ -237,7 +237,7 @@ Flexbox 用于设计横向或纵向的布局，而 Grid 布局则被设计用于
 
 ### 简单定位
 
-::: demo 默认定位方式
+::: normal-demo 默认定位方式
 
 ```html
 <h1>定位</h1>
@@ -280,7 +280,7 @@ p {
 
 请注意，`top` 和 `left` 不能被理解成向上或向左，而是顶部与左侧与初始距离的位置。
 
-::: demo 相对定位
+::: normal-demo 相对定位
 
 ```html
 <h1>相对定位</h1>
@@ -324,7 +324,7 @@ p {
 }
 ```
 
-::: demo 绝对定位
+::: normal-demo 绝对定位
 
 ```html
 <h1>绝对定位</h1>
@@ -360,7 +360,7 @@ p {
 
 固定定位(fixed positioning)同绝对定位(absolute positioning)一样，将元素从文档流(document flow)当中移出了。但是，定位的坐标不会应用于"容器"边框来计算元素的位置，而是会应用于视口(viewport)边框。利用这一特性，我们可以轻松搞出一个固定位置的菜单，而不受底下的页面滚动的影响。
 
-::: demo 固定定位
+::: normal-demo 固定定位
 
 ```html
 <h1>固定定位</h1>
@@ -387,7 +387,7 @@ p {
 
 粘性定位(sticky positioning)是最后一种我们能够使用的定位方式。它将默认的静态定位(static positioning)和固定定位(fixed positioning)相混合。当一个元素被指定了 `position: sticky` 时，它会在正常布局流中滚动，直到它出现在了我们给它设定的相对于容器的位置，这时候它就会停止随滚动移动，就像它被应用了 `position: fixed` 一样。
 
-::: demo 粘性定位
+::: normal-demo 粘性定位
 
 ```html
 <h1>Sticky positioning</h1>
@@ -446,7 +446,7 @@ p {
 - `none`: 默认值, 不浮动。
 - `inherit`: 继承父元素的浮动属性。
 
-::: demo float 案例
+::: normal-demo float 案例
 
 ```html
 <h1>简单的 float 案例</h1>
@@ -481,7 +481,7 @@ p {
 
 要把一个块转变成多列容器(multicol container)，我们可以使用 `column-count` 属性来告诉浏览器我们需要多少列，也可以使用 `column-width` 来告诉浏览器以至少某个宽度的尽可能多的列来填充容器。
 
-::: demo 多列布局
+::: normal-demo 多列布局
 
 ```html
 <h1>Multi-column layout</h1>

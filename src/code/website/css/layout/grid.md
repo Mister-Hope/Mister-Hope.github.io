@@ -11,7 +11,7 @@ copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可�
 
 网格布局 (Grid) 是最强大的 CSS 布局方案。它将网页划分成一个个网格，可以任意组合不同的网格，做出各种各样的布局。
 
-::: demo 网格布局案例
+::: normal-demo 网格布局案例
 
 ```html
 <div class="grid-demo">
@@ -143,7 +143,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 `display: grid` 指定一个容器采用网格布局。
 
-::: demo 网格布局
+::: normal-demo 网格布局
 
 ```html
 <span style="font-size: 22px">Mr.Hope</span>
@@ -215,7 +215,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 默认情况下，容器元素都是块级元素，但也可以设成行内元素。
 
-::: demo 行内网格布局
+::: normal-demo 行内网格布局
 
 ```html
 <span style="font-size: 22px">Mr.Hope</span>
@@ -295,7 +295,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 容器指定了网格布局以后，接着就要划分行和列。`grid-template-columns` 属性定义每一列的列宽，`grid-template-rows` 属性定义每一行的行高。
 
-::: demo 划分行和列
+::: normal-demo 划分行和列
 
 ```html
 <div class="grid-demo">
@@ -367,7 +367,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 除了使用绝对单位，也可以使用百分比。
 
-::: demo 百分比
+::: normal-demo 百分比
 
 ```html
 <div class="grid-demo">
@@ -439,7 +439,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 有时候，重复写同样的值非常麻烦，尤其网格很多时。这时，可以使用 `repeat()` 函数，简化重复的值。
 
-::: demo repeat()
+::: normal-demo repeat()
 
 上面的代码用 `repeat()` 改写如下。
 
@@ -513,7 +513,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 `repeat()` 重复某种模式也是可以的。
 
-::: demo 重复模式
+::: normal-demo 重复模式
 
 ```html
 <div class="grid-demo">
@@ -588,7 +588,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 有时，单元格的大小是固定的，但是容器的大小不确定。如果希望每一行 (或每一列) 容纳尽可能多的单元格，这时可以使用 `auto-fill` 关键字表示自动填充。
 
-::: demo 自动填充
+::: normal-demo 自动填充
 
 ```html
 <div class="grid-demo">
@@ -665,7 +665,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 为了方便表示比例关系，网格布局提供了 `fr` 关键字 (fraction 的缩写，意为"片段") 。如果两列的宽度分别为 `1fr` 和 `2fr`，就表示后者是前者的两倍。
 
-::: demo fr
+::: normal-demo fr
 
 下面代码表示两个相同宽度的列。
 
@@ -740,7 +740,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 `fr` 可以与绝对长度的单位结合使用，这时会非常方便。
 
-::: demo fr 的混用
+::: normal-demo fr 的混用
 
 下面代码表示，第一列的宽度为 150 像素，第二列的宽度是第三列的一半。
 
@@ -817,7 +817,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 `minmax()` 函数产生一个长度范围，表示长度就在这个范围之中。它接受两个参数，分别为最小值和最大值。
 
-::: demo minmax()
+::: normal-demo minmax()
 
 下面代码中，`minmax(100px, 1fr)` 表示列宽不小于 `100px`，不大于 `1fr`。
 
@@ -894,7 +894,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 `auto` 关键字表示由浏览器自己决定长度。
 
-::: demo auto
+::: normal-demo auto
 
 下面代码中，第二列的宽度，基本上等于该列单元格的最大宽度，除非单元格内容设置了 `min-width`，且这个值大于最大宽度。
 
@@ -971,7 +971,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 `grid-template-columns` 属性和 `grid-template-rows` 属性里面，还可以使用方括号，指定每一根网格线的名字，方便以后的引用。
 
-::: demo 网格线的名称
+::: normal-demo 网格线的名称
 
 下面代码指定网格布局为 3 行 x 3 列，因此有 4 根垂直网格线和 4 根水平网格线。方括号里面依次是这八根线的名字。
 
@@ -1075,7 +1075,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 }
 ```
 
-::: demo 间距设置
+::: normal-demo 间距设置
 
 ```html
 <div class="grid-demo">
@@ -1234,7 +1234,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 划分网格以后，容器的子元素会按照顺序，自动放置在每一个网格。默认的放置顺序是"先行后列"，即先填满第一行，再开始放入第二行，即下方数字的顺序。
 
-::: demo 默认顺序“先行后列”
+::: normal-demo 默认顺序“先行后列”
 
 ```html
 <div class="grid-demo">
@@ -1306,7 +1306,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 设置了 `column` 以后，放置顺序就变成了下图。
 
-::: demo grid-auto-flow: column
+::: normal-demo grid-auto-flow: column
 
 ```html
 <div class="grid-demo">
@@ -1379,7 +1379,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 下面的例子让 1 号项目和 2 号项目各占据两个单元格，然后在默认的 `grid-auto-flow: row` 情况下，会产生下面这样的布局。
 
-::: demo 项目占据多个单元格下的 grid-auto-flow: row
+::: normal-demo 项目占据多个单元格下的 grid-auto-flow: row
 
 ```html
 <div class="grid-demo">
@@ -1460,7 +1460,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 上面代码的效果如下。
 
-::: demo grid-auto-flow: row dense
+::: normal-demo grid-auto-flow: row dense
 
 ```html
 <div class="grid-demo">
@@ -1541,7 +1541,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 上面代码的效果如下。
 
-::: demo grid-auto-flow: column dense
+::: normal-demo grid-auto-flow: column dense
 
 ```html
 <div class="grid-demo">
@@ -1644,7 +1644,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 上面代码表示，单元格的内容左对齐，效果如下图。
 
-::: demo justify-items: start
+::: normal-demo justify-items: start
 
 ```html
 <div class="grid-demo">
@@ -1722,7 +1722,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 上面代码表示，单元格的内容头部对齐，效果如下图。
 
-::: demo align-items: start
+::: normal-demo align-items: start
 
 ```html
 <div class="grid-demo">
@@ -1802,7 +1802,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 下面是一个例子。
 
-::: demo place-items: start end
+::: normal-demo place-items: start end
 
 ```html
 <div class="grid-demo">
@@ -1890,7 +1890,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 这两个属性的写法完全相同，都可以取下面这些值。(下面的图都以 `justify-content` 属性为例，`align-content` 属性的图完全一样，只是将水平方向改成垂直方向。)
 
-::: demo start - 对齐容器的起始边框。
+::: normal-demo start - 对齐容器的起始边框。
 
 ```html
 <div class="grid-demo">
@@ -1962,7 +1962,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 :::
 
-::: demo end - 对齐容器的结束边框
+::: normal-demo end - 对齐容器的结束边框
 
 ```html
 <div class="grid-demo">
@@ -2034,7 +2034,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 :::
 
-::: demo center - 容器内部居中
+::: normal-demo center - 容器内部居中
 
 ```html
 <div class="grid-demo">
@@ -2106,7 +2106,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 :::
 
-::: demo stretch - 项目大小没有指定时，拉伸占据整个网格容器
+::: normal-demo stretch - 项目大小没有指定时，拉伸占据整个网格容器
 
 ```html
 <div class="grid-demo">
@@ -2178,7 +2178,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 :::
 
-::: demo space-around - 每个项目两侧的间隔相等
+::: normal-demo space-around - 每个项目两侧的间隔相等
 
 这意味着项目之间的间隔比项目与容器边框的间隔大一倍。
 
@@ -2252,7 +2252,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 :::
 
-::: demo space-between - 项目与项目的间隔相等
+::: normal-demo space-between - 项目与项目的间隔相等
 
 这意味着项目与容器边框之间没有间隔。
 
@@ -2326,7 +2326,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 :::
 
-::: demo space-evenly - 项目与项目的间隔相等
+::: normal-demo space-evenly - 项目与项目的间隔相等
 
 这意味着项目与容器边框之间也是同样长度的间隔。
 
@@ -2410,7 +2410,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 下面是一个例子。
 
-::: demo place-content: space-around space-evenly
+::: normal-demo place-content: space-around space-evenly
 
 ```html
 <div class="grid-demo">
@@ -2540,7 +2540,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 上面代码指定，1 号项目的左边框是第二根垂直网格线，右边框是第四根垂直网格线。
 
-::: demo 案例渲染结果
+::: normal-demo 案例渲染结果
 
 ```html
 <div class="grid-demo">
@@ -2626,7 +2626,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 }
 ```
 
-::: demo 案例渲染结果
+::: normal-demo 案例渲染结果
 
 ```html
 <div class="grid-demo">
@@ -2720,7 +2720,7 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 上面代码表示，1 号项目的左边框距离右边框跨越 2 个网格。
 
-::: demo grid-column-start: span 2
+::: normal-demo grid-column-start: span 2
 
 ```html
 <div class="grid-demo">

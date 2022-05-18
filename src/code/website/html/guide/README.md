@@ -35,7 +35,7 @@ Mr.Hope is handsome.
 
 HTML 可以将这行文字封装成一个段落(**p**aragraph)元素来使其在单独一行呈现:
 
-::: demo HTML 段落
+::: normal-demo HTML 段落
 
 ```html
 <p>Mr.Hope is handsome.</p>
@@ -71,7 +71,7 @@ An element is:
 <tagname attribution1="value1" attribution2="value2">content</tagname>
 ```
 
-::: demo 案例
+::: normal-demo 案例
 
 ```html
 <p>Mr.Hope is handsome.</p>
@@ -141,7 +141,7 @@ An element is:
 
 除了并列放置标签以外，标签的内容也可以放置其他标签，这就构成了标签的嵌套。比如您想强调 Mr.Hope 的帅:
 
-::: demo 标签的嵌套
+::: normal-demo 标签的嵌套
 
 ```html
 <p>Mr.Hope is <strong>very</strong> handsome.</p>
@@ -271,7 +271,7 @@ W3C  也将 UTF-8 标记为推荐的字符编码，所以建议在任何 HTML �
 
 您可能已经注意到了在代码中包含了很多的空格——这是没有必要的。
 
-::: demo 两个完全等价的段落
+::: normal-demo 两个完全等价的段落
 
 ```html
 <p>狗    狗
