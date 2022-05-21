@@ -19,9 +19,9 @@ tag:
 
 1. 在 app > java > com.example.myfirstapp > MainActivity 文件中，添加以下 sendMessage() 方法桩：
 
-   :::: code-group
+   ::: code-tabs#anrdoid
 
-   ::: coude-group-item Kotlin
+   @tab Kotlin
 
    ```kotlin
    class MainActivity : AppCompatActivity() {
@@ -37,9 +37,7 @@ tag:
    }
    ```
 
-   :::
-
-   ::: coude-group-item Java
+   @tab Java
 
    ```java
    public class MainActivity extends AppCompatActivity {
@@ -57,8 +55,6 @@ tag:
    ```
 
    :::
-
-   ::::
 
    您可能会看到一条错误，因为 Android Studio 无法解析用作方法参数的 View 类。若要清除错误，请点击 View 声明，将光标置于其上，然后按 `Alt + Enter`（在 Mac 上则按 `Option + Enter`）进行快速修复。如果出现一个菜单，请选择 Import class。
 
@@ -83,9 +79,9 @@ tag:
 
 在 MainActivity 中，添加 EXTRA_MESSAGE 常量和 sendMessage() 代码，如下所示：
 
-:::: code-group
+::: code-tabs#anrdoid
 
-::: coude-group-item Kotlin
+@tab Kotlin
 
 ```kotlin
 const val EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE"
@@ -108,9 +104,7 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-:::
-
-::: coude-group-item Java
+@tab Java
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -135,13 +129,11 @@ public class MainActivity extends AppCompatActivity {
 
 :::
 
-::::
-
 预计 Android Studio 会再次遇到 Cannot resolve symbol 错误。如需清除这些错误，请按 Alt+Enter（在 Mac 上则按 Option+Return）。您最后应导入以下内容：
 
-:::: code-group
+::: code-tabs#anrdoid
 
-::: coude-group-item Kotlin
+@tab Kotlin
 
 ```kotlin
 import androidx.appcompat.app.AppCompatActivity
@@ -151,9 +143,7 @@ import android.view.View
 import android.widget.EditText
 ```
 
-:::
-
-::: coude-group-item Java
+@tab Java
 
 ```java
 import androidx.appcompat.app.AppCompatActivity;
@@ -164,8 +154,6 @@ import android.widget.EditText;
 ```
 
 :::
-
-::::
 
 DisplayMessageActivity 仍有错误，但没有关系。您将在下一部分中修复该错误。
 
@@ -221,9 +209,9 @@ Android Studio 会自动执行下列三项操作：
 
 1. 在 DisplayMessageActivity 中，将以下代码添加到 `onCreate()` 方法中：
 
-   :::: code-group
+   ::: code-tabs#anrdoid
 
-   ::: coude-group-item Kotlin
+   @tab Kotlin
 
    ```kotlin
    override fun onCreate(savedInstanceState: Bundle?) {
@@ -240,9 +228,7 @@ Android Studio 会自动执行下列三项操作：
    }
    ```
 
-   :::
-
-   ::: coude-group-item Java
+   @tab Java
 
    ```java
    @Override
@@ -262,13 +248,11 @@ Android Studio 会自动执行下列三项操作：
 
    :::
 
-   ::::
-
 1. 按 `Alt + Enter`（在 Mac 上则按 `Option + Return`）导入其他所需的类：
 
-   :::: code-group
+   ::: code-tabs#anrdoid
 
-   ::: coude-group-item Kotlin
+   @tab Kotlin
 
    ```kotlin
    import androidx.appcompat.app.AppCompatActivity
@@ -277,9 +261,7 @@ Android Studio 会自动执行下列三项操作：
    import android.widget.TextView
    ```
 
-   :::
-
-   ::: coude-group-item Java
+   @tab Java
 
    ```java
    import androidx.appcompat.app.AppCompatActivity;
@@ -289,8 +271,6 @@ Android Studio 会自动执行下列三项操作：
    ```
 
    :::
-
-   ::::
 
 ## 添加向上导航功能
 

@@ -11,15 +11,9 @@ category: 基础
 
 :::
 
-Vue.js 是世界上主流的渐近式 JavaScript 框架。其生态比较繁荣，且很多组件都由官方进行维护、同步更新。相比 React 虽然第三方组件及支持少一些，但是其各模块之间兼容性良好，不会发生冲突。
+Vue.js 是世界上主流的前端框架。
 
-## 介绍视频
-
-- [查看详情](https://v.youku.com/v_show/id_XMzMwMTYyODMyNA==.html?refer=shipinyunPC_operation.liuliling_bofangqi_1244000_fQZ7Fj_18101900)
-
-## 学习视频
-
-- [查看详情](https://learning.dcloud.io/#/)
+官方介绍为：渐近式 JavaScript 框架。一款用于构建 Web 界面，易学易用，性能出色且功能丰富的框架。
 
 ## Vue.js 教程目录
 
@@ -28,8 +22,6 @@ Vue.js 是世界上主流的渐近式 JavaScript 框架。其生态比较繁荣�
 - [起步上手](get-started.md)
 
 - [Vue 单文件组件说明](vue.md)
-
-- [使用 TypeScript 进行 Vue 开发](ts-decorator.md)
 
 ## Vue 生态
 

@@ -4,16 +4,7 @@ export const vue = arraySidebar([
   {
     text: "Vue.js",
     icon: "vue",
-    children: [
-      "",
-      "install",
-      "get-started",
-      "vue",
-      "ts-decorator",
-      "ts-demo",
-      "component",
-      "compare",
-    ],
+    children: ["", "install", "get-started", "vue", "component", "compare"],
   },
   {
     text: "Vue Router",

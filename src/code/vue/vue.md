@@ -1,109 +1,176 @@
 ---
+title: Vue 单文件组件
 icon: vue
 category: Vue
 ---
 
-# Vue 单文件组件说明
+## 介绍
 
-Vue 文件即是一个组件文件，组件文件既可以成为其他 vue 文件的一个组件，又可以添加到 router 中成为一个页面视图。
+Vue 的单文件组件 (即 `*.vue` 文件，简称 **SFC**) 是一种特殊的文件格式，使我们能够将一个 Vue 组件的模板、逻辑与样式封装在单个文件中。下面是一个单文件组件的示例：
 
-Vue 文件主要由三部分构成:
-
-- `template` 对应网站视图树，即 HTML 部分
-
-- `script` 对应网站的脚本。即 js 部分，默认为 Javascript，可以添加 `lang="ts"` 来指定页面脚本文件为 `Typescript`
-
-- `style` 对应网站的样式，即 CSS 部分，可以通过添加 `scoped` 属性来指定样式只在当前文件生效。
-
-在脚本部分中，如有需要，需要使用 `export default{}` 向外暴露一个对象以供 Router 或其他 Vue 文件引用。
-
-在 HTML 标签中，由于页面都被 Router 托管，如需要跳转到本网站的其他视图上去，需要使用 `<route-link to="内部url地址">链接文字</route-link>`
-
----
-
-下面是学校公众号界面
-
-```js
-<template>
-  <div class="container">
-    <h2 class="px-3 pt-3">学院微信</h2>
-    <hr class="mx-3" />
-    <div class="row px-3">
-      <a
-        :href="item.url"
-        :key="item.text"
-        class="col-4 col-sm-3 col-md-2 col-lg-1 col-fix"
-        v-for="item in gzh"
-      >
-        <img
-          :src="require(`@/icon/function/schoolGzh/${item.src}.jpg`)"
-          class="img-thumbnail mt-1 img-fix"
-          style="border-radius:50%;"
-        />
-        <p class="mx-1 my-2 gzhName">{{ item.text }}</p>
-      </a>
-    </div>
-  </div>
-</template>
+```vue
 <script>
 export default {
-  name: "SchoolGzh",
-  data: () => ({
-    gzh: [
-      {
-        url:
-          "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA3NTM3MTkzOQ==&scene=110#wechat_redirect",
-        text: "美术学院",
-        src: "art"
-      },
-      // ...中间的学院数据在此省略
-      {
-        url:
-          "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzIwMzI0NTE0NQ==#wechat_webview_type=1&wechat_redirect",
-        text: "纽瓦克学院",
-        src: "runin"
-      }
-    ]
-  })
+  data() {
+    return {
+      greeting: "Hello World!",
+    };
+  },
 };
 </script>
-<style scoped>
-.col-fix {
-  padding: 0 5px;
-}
-.img-fix {
-  width: 90%;
-  margin: 0.25rem 5% 0 5%;
-}
-.gzhName {
-  text-align: center;
-  color: #000;
-  font-size: 14px;
+
+<template>
+  <p class="greeting">{{ greeting }}</p>
+</template>
+
+<style>
+.greeting {
+  color: red;
+  font-weight: bold;
 }
 </style>
 ```
 
-下面是网站的 404 页面
+如你所见，Vue 的单文件组件是 HTML、CSS 和 JavaScript 三种元素的自然延伸。`<template>`、`<script>` 和 `<style>` 三个块在同一个文件中封装、组合了组件的视图、逻辑和样式。
 
-```js
+## 总览
+
+## 总览 {#overview}
+
+一个 Vue 单文件组件 (SFC)，通常使用 `*.vue` 作为文件扩展名，它是一种使用了类似 HTML 语法的自定义文件格式，用于定义 Vue 组件。一个 Vue 单文件组件在语法上是兼容 HTML 的。
+
+每一个 `*.vue` 文件都由三种顶层语块构成：`<template>`、`<script>` 和 `<style>`，以及一些其他的自定义块：
+
+```vue
 <template>
-  <div class="container">
-    <h1 mt-1>Page not found</h1>
-    <p>
-      很抱歉并未找到您打开的界面，可能是您输入的路径有误，网页尚未制作或者出现了一个bug。
-    </p>
-    <p>
-      您可以反馈给
-      <router-link
-        to="http://wpa.qq.com/msgrd?v=3&amp;uin=1178522294&amp;site=qq&amp;menu=yes"
-        >Mr.Hope</router-link
-      >
-    </p>
-  </div>
+  <div class="example">{{ msg }}</div>
 </template>
+
 <script>
-export default{
-  name: "Page404"
+export default {
+  data() {
+    return {
+      msg: "Hello world!",
+    };
+  },
+};
+</script>
+
+<style>
+.example {
+  color: red;
 }
+</style>
+
+<custom1>
+  This could be e.g. documentation for the component.
+</custom1>
+```
+
+## 相应语言块 {#language-blocks}
+
+### `<template>` {#template}
+
+- 每个 `*.vue` 文件最多可以包含一个顶层 `<template>` 块。
+
+- 语块包裹的内容将会被提取、传递给 `@vue/compiler-dom`，预编译为 JavaScript 渲染函数，并附在导出的组件上作为其 `render` 选项。
+
+### `<script>` {#script}
+
+- 每个 `*.vue` 文件最多可以包含一个 `<script>` 块。(使用 [`<script setup>`](/api/sfc-script-setup.html) 的情况除外)
+
+- 这个脚本代码块将作为 ES 模块执行。
+
+- **默认导出**应该是 Vue 的组件选项对象，可以是一个对象字面量或是 [defineComponent](/api/general.html#definecomponent) 函数的返回值。
+
+### `<script setup>` {#script-setup}
+
+- 每个 `*.vue` 文件最多可以包含一个 `<script setup>`。(不包括一般的 `<script>`)
+
+- 这个脚本块将被预处理为组件的 `setup()` 函数，这意味着它将**为每一个组件实例**都执行。`<script setup>` 中的顶层绑定都将自动暴露给模板。要了解更多细节，请看 [`<script setup>` 的专门文档](/api/sfc-script-setup)。
+
+### `<style>` {#style}
+
+- 每个 `*.vue` 文件可以包含多个 `<style>` 标签。
+
+- 一个 `<style>` 标签可以使用 `scoped` 或 `module` attribute (查看 [SFC 样式功能](/api/sfc-css-features)了解更多细节) 来帮助封装当前组件的样式。使用了不同封装模式的多个 `<style>` 标签可以被混合入同一个组件。
+
+### 自定义块 {#custom-blocks}
+
+在一个 `*.vue` 文件中可以为任何项目特定需求使用额外的自定义块。举个例子，一个用作写文档的 `<docs>` 块。这里是一些自定义块的真实用例：
+
+- [Gridsome：`<page-query>`](https://gridsome.org/docs/querying-data/)
+- [vite-plugin-vue-gql：`<gql>`](https://github.com/wheatjs/vite-plugin-vue-gql)
+- [vue-i18n：`<i18n>`](https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n#i18n-custom-block)
+
+自定义块的处理需要依赖工具链。如果你想要在构建中集成你的自定义语块，请参见[相关工具链指南](/guide/scaling-up/tooling.html#sfc-custom-block-integrations)获取更多细节。
+
+## 自动名称推导 {#automatic-name-inference}
+
+SFC 在以下场景中会根据**文件名**自动推导其组件名：
+
+- 开发警告信息格式
+- DevTools 审阅
+- 递归组件自引用。例如一个名为 `FooBar.vue` 的组件可以在模板中通过 `<FooBar/>` 引用自己。(同名情况下) 这比明确注册/导入的组件优先级低。
+
+## 预处理器 {#pre-processors}
+
+代码块可以使用 `lang` 这个 attribute 来声明预处理器语言，最常见的用例就是对 `<script>` 块使用 TypeScript：
+
+```vue-html
+<script lang="ts">
+  // use TypeScript
 </script>
 ```
+
+`lang` 在任意块上都能使用，比如我们可以在 `<style>` 标签上使用 [SASS](https://sass-lang.com/) 或是 `<template>` 上使用 [Pug](https://pugjs.org/api/getting-started.html)：
+
+```vue-html
+<template lang="pug">
+p {{ msg }}
+</template>
+
+<style lang="scss">
+  $primary-color: #333;
+  body {
+    color: $primary-color;
+  }
+</style>
+```
+
+注意对各种不同的预处理的集成会导致工具链的不同，你应该查看相应的工具链文档了解细节：
+
+- [Vite](https://vitejs.dev/guide/features.html#css-pre-processors)
+- [Vue CLI](https://cli.vuejs.org/guide/css.html#pre-processors)
+- [webpack + vue-loader](https://vue-loader.vuejs.org/guide/pre-processors.html#using-pre-processors)
+
+## Src 导入 {#src-imports}
+
+如果你更喜欢将 `*.vue` 组件分散到多个文件中，可以为一个语块使用 `src` 这个 attribute 来导入一个外部文件：
+
+```vue
+<template src="./template.html"></template>
+<style src="./style.css"></style>
+<script src="./script.js"></script>
+```
+
+请注意 `src` 导入和 Webpack 的模块请求遵循相同的路径解析规则，这意味着：
+
+- 相对路径需要以 `./` 开头
+- 你也可以从 npm 依赖中导入资源
+
+```vue
+<!-- 从所安装的 "todomvc-app-css" npm 包中导入一个文件 -->
+<style src="todomvc-app-css/index.css" />
+```
+
+`src` 导入对自定义语块也同样适用：
+
+```vue
+<unit-test src="./unit-test.js">
+</unit-test>
+```
+
+## 注释 {#comments}
+
+在每一个语块中你都可以按照相应语言 (HTML、CSS、JavaScript 和 Pug 等等) 的语法书写注释。对于顶层注释，请使用 HTML 的注释语法 `<!-- comment contents here -->`
