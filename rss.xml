@@ -6,8 +6,8 @@
     <link>https://mrhope.site/</link>
     <description>Where there is light, there is hope.</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 18 May 2022 14:28:08 GMT</pubDate>
-    <lastBuildDate>Wed, 18 May 2022 14:28:08 GMT</lastBuildDate>
+    <pubDate>Sat, 21 May 2022 16:42:12 GMT</pubDate>
+    <lastBuildDate>Sat, 21 May 2022 16:42:12 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>小程序</category>
@@ -182,8 +182,8 @@
 <ol>
 <li>
 <p>在 app &gt; java &gt; com.example.myfirstapp &gt; MainActivity 文件中，添加以下 sendMessage() 方法桩：</p>
-<p>:::: code-group</p>
-<p>::: coude-group-item Kotlin</p>
+<p>::: code-tabs#anrdoid</p>
+<p>@tab Kotlin</p>
 <div><pre><code><span>class</span> MainActivity <span>:</span> <span>AppCompatActivity</span><span>(</span><span>)</span> <span>{</span>
     <span>override</span> <span>fun</span> <span>onCreate</span><span>(</span>savedInstanceState<span>:</span> Bundle<span>?</span><span>)</span> <span>{</span>
         <span>super</span><span>.</span><span>onCreate</span><span>(</span>savedInstanceState<span>)</span>
@@ -195,8 +195,7 @@
         <span>// Do something in response to button</span>
     <span>}</span>
 <span>}</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>:::</p>
-<p>::: coude-group-item Java</p>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>@tab Java</p>
 <div><pre><code><span>public</span> <span>class</span> <span>MainActivity</span> <span>extends</span> <span>AppCompatActivity</span> <span>{</span>
     <span>@Override</span>
     <span>protected</span> <span>void</span> <span>onCreate</span><span>(</span><span>Bundle</span> savedInstanceState<span>)</span> <span>{</span>
@@ -210,7 +209,6 @@
     <span>}</span>
 <span>}</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>:::</p>
-<p>::::</p>
 <p>您可能会看到一条错误，因为 Android Studio 无法解析用作方法参数的 View 类。若要清除错误，请点击 View 声明，将光标置于其上，然后按 <code>Alt + Enter</code>（在 Mac 上则按 <code>Option + Enter</code>）进行快速修复。如果出现一个菜单，请选择 Import class。</p>
 </li>
 <li>
@@ -234,8 +232,8 @@
 <h2 id="构建一个-intent" tabindex="-1"> 构建一个 intent</h2>
 <p><code>Intent</code> 是在相互独立的组件（如两个 activity）之间提供运行时绑定功能的对象。Intent 表示应用执行某项操作的意图。您可以使用 intent 执行多种任务，但在本课中，您的 intent 将用于启动另一个 activity。</p>
 <p>在 MainActivity 中，添加 EXTRA_MESSAGE 常量和 sendMessage() 代码，如下所示：</p>
-<p>:::: code-group</p>
-<p>::: coude-group-item Kotlin</p>
+<p>::: code-tabs#anrdoid</p>
+<p>@tab Kotlin</p>
 <div><pre><code><span>const</span> <span>val</span> EXTRA_MESSAGE <span>=</span> <span><span>"com.example.myfirstapp.MESSAGE"</span></span>
 
 <span>class</span> MainActivity <span>:</span> <span>AppCompatActivity</span><span>(</span><span>)</span> <span>{</span>
@@ -254,8 +252,7 @@
         <span>startActivity</span><span>(</span>intent<span>)</span>
     <span>}</span>
 <span>}</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>:::</p>
-<p>::: coude-group-item Java</p>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>@tab Java</p>
 <div><pre><code><span>public</span> <span>class</span> <span>MainActivity</span> <span>extends</span> <span>AppCompatActivity</span> <span>{</span>
     <span>public</span> <span>static</span> <span>final</span> <span>String</span> EXTRA_MESSAGE <span>=</span> <span>"com.example.myfirstapp.MESSAGE"</span><span>;</span>
     <span>@Override</span>
@@ -275,24 +272,21 @@
 <span>}</span>
 
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>:::</p>
-<p>::::</p>
 <p>预计 Android Studio 会再次遇到 Cannot resolve symbol 错误。如需清除这些错误，请按 Alt+Enter（在 Mac 上则按 Option+Return）。您最后应导入以下内容：</p>
-<p>:::: code-group</p>
-<p>::: coude-group-item Kotlin</p>
+<p>::: code-tabs#anrdoid</p>
+<p>@tab Kotlin</p>
 <div><pre><code><span>import</span> androidx<span>.</span>appcompat<span>.</span>app<span>.</span>AppCompatActivity
 <span>import</span> android<span>.</span>content<span>.</span>Intent
 <span>import</span> android<span>.</span>os<span>.</span>Bundle
 <span>import</span> android<span>.</span>view<span>.</span>View
 <span>import</span> android<span>.</span>widget<span>.</span>EditText
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div><p>:::</p>
-<p>::: coude-group-item Java</p>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div><p>@tab Java</p>
 <div><pre><code><span>import</span> <span><span>androidx<span>.</span>appcompat<span>.</span>app<span>.</span></span><span>AppCompatActivity</span></span><span>;</span>
 <span>import</span> <span><span>android<span>.</span>content<span>.</span></span><span>Intent</span></span><span>;</span>
 <span>import</span> <span><span>android<span>.</span>os<span>.</span></span><span>Bundle</span></span><span>;</span>
 <span>import</span> <span><span>android<span>.</span>view<span>.</span></span><span>View</span></span><span>;</span>
 <span>import</span> <span><span>android<span>.</span>widget<span>.</span></span><span>EditText</span></span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div><p>:::</p>
-<p>::::</p>
 <p>DisplayMessageActivity 仍有错误，但没有关系。您将在下一部分中修复该错误。</p>
 <p>sendMessage() 将发生以下情况：</p>
 <ul>
@@ -339,8 +333,8 @@
 <ol>
 <li>
 <p>在 DisplayMessageActivity 中，将以下代码添加到 <code>onCreate()</code> 方法中：</p>
-<p>:::: code-group</p>
-<p>::: coude-group-item Kotlin</p>
+<p>::: code-tabs#anrdoid</p>
+<p>@tab Kotlin</p>
 <div><pre><code><span>override</span> <span>fun</span> <span>onCreate</span><span>(</span>savedInstanceState<span>:</span> Bundle<span>?</span><span>)</span> <span>{</span>
     <span>super</span><span>.</span><span>onCreate</span><span>(</span>savedInstanceState<span>)</span>
     <span>setContentView</span><span>(</span>R<span>.</span>layout<span>.</span>activity_display_message<span>)</span>
@@ -353,8 +347,7 @@
         text <span>=</span> message
     <span>}</span>
 <span>}</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>:::</p>
-<p>::: coude-group-item Java</p>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>@tab Java</p>
 <div><pre><code><span>@Override</span>
 <span>protected</span> <span>void</span> <span>onCreate</span><span>(</span><span>Bundle</span> savedInstanceState<span>)</span> <span>{</span>
     <span>super</span><span>.</span><span>onCreate</span><span>(</span>savedInstanceState<span>)</span><span>;</span>
@@ -369,24 +362,21 @@
     textView<span>.</span><span>setText</span><span>(</span>message<span>)</span><span>;</span>
 <span>}</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>:::</p>
-<p>::::</p>
 </li>
 <li>
 <p>按 <code>Alt + Enter</code>（在 Mac 上则按 <code>Option + Return</code>）导入其他所需的类：</p>
-<p>:::: code-group</p>
-<p>::: coude-group-item Kotlin</p>
+<p>::: code-tabs#anrdoid</p>
+<p>@tab Kotlin</p>
 <div><pre><code><span>import</span> androidx<span>.</span>appcompat<span>.</span>app<span>.</span>AppCompatActivity
 <span>import</span> android<span>.</span>content<span>.</span>Intent
 <span>import</span> android<span>.</span>os<span>.</span>Bundle
 <span>import</span> android<span>.</span>widget<span>.</span>TextView
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><p>:::</p>
-<p>::: coude-group-item Java</p>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><p>@tab Java</p>
 <div><pre><code><span>import</span> <span><span>androidx<span>.</span>appcompat<span>.</span>app<span>.</span></span><span>AppCompatActivity</span></span><span>;</span>
 <span>import</span> <span><span>android<span>.</span>content<span>.</span></span><span>Intent</span></span><span>;</span>
 <span>import</span> <span><span>android<span>.</span>os<span>.</span></span><span>Bundle</span></span><span>;</span>
 <span>import</span> <span><span>android<span>.</span>widget<span>.</span></span><span>TextView</span></span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><p>:::</p>
-<p>::::</p>
 </li>
 </ol>
 <h2 id="添加向上导航功能" tabindex="-1"> 添加向上导航功能</h2>
@@ -2506,15 +2496,8 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
       <content:encoded><![CDATA[<div><p>注意</p>
 <p>目前此部分为 Vue 2 的文档，待 Vue 3 出官方中文文档后，本博客会进行跟进。</p>
 </div>
-<p>Vue.js 是世界上主流的渐近式 JavaScript 框架。其生态比较繁荣，且很多组件都由官方进行维护、同步更新。相比 React 虽然第三方组件及支持少一些，但是其各模块之间兼容性良好，不会发生冲突。</p>
-<h2 id="介绍视频" tabindex="-1"> 介绍视频</h2>
-<ul>
-<li><a href="https://v.youku.com/v_show/id_XMzMwMTYyODMyNA==.html?refer=shipinyunPC_operation.liuliling_bofangqi_1244000_fQZ7Fj_18101900" target="_blank" rel="noopener noreferrer">查看详情</a></li>
-</ul>
-<h2 id="学习视频" tabindex="-1"> 学习视频</h2>
-<ul>
-<li><a href="https://learning.dcloud.io/#/" target="_blank" rel="noopener noreferrer">查看详情</a></li>
-</ul>
+<p>Vue.js 是世界上主流的前端框架。</p>
+<p>官方介绍为：渐近式 JavaScript 框架。一款用于构建 Web 界面，易学易用，性能出色且功能丰富的框架。</p>
 <h2 id="vue-js-教程目录" tabindex="-1"> Vue.js 教程目录</h2>
 <ul>
 <li>
@@ -2525,9 +2508,6 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 <li>
 <p><a href="/code/vue/vue.html">Vue 单文件组件说明</a></p>
-</li>
-<li>
-<p><a href="/code/vue/ts-decorator.html">使用 TypeScript 进行 Vue 开发</a></p>
 </li>
 </ul>
 <h2 id="vue-生态" tabindex="-1"> Vue 生态</h2>
@@ -5318,6 +5298,54 @@ Emmet 是一个快速创建 HTML 和 CSS 的方式，如果您想要成为一个
 ]]></content:encoded>
     </item>
     <item>
+      <title>函数</title>
+      <link>https://mrhope.site/code/language/js/function/</link>
+      <guid>https://mrhope.site/code/language/js/function/</guid>
+      <source url="https://mrhope.site/rss.xml">函数</source>
+      <category>JavaScript</category>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="基础部分" tabindex="-1"> 基础部分</h2>
+<ul>
+<li>
+<p><a href="/code/language/js/function/intro.html">函数介绍</a></p>
+</li>
+<li>
+<p><a href="/code/language/js/function/declare.html">函数声明</a></p>
+</li>
+<li>
+<p><a href="/code/language/js/function/call.html">函数调用</a></p>
+</li>
+<li>
+<p><a href="/code/language/js/function/scope.html">函数作用域</a></p>
+</li>
+<li>
+<p><a href="/code/language/js/function/destructuring.html">解构赋值</a></p>
+</li>
+<li>
+<p><a href="/code/language/js/function/this.html">this 的指向</a></p>
+</li>
+<li>
+<p><a href="/code/language/js/function/arrow-function.html">箭头函数</a></p>
+</li>
+</ul>
+<h2 id="进阶" tabindex="-1"> 进阶</h2>
+<ul>
+<li>
+<p><a href="/code/language/js/function/higher-order-function.html">高阶函数</a></p>
+</li>
+<li>
+<p><a href="/code/language/js/function/map-and-reduce.html">map reduce 与 sort</a></p>
+</li>
+<li>
+<p><a href="/code/language/js/function/closure.html">闭包</a></p>
+</li>
+<li>
+<p><a href="/code/language/js/function/generator.html">generator</a></p>
+</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
       <title>es6 入门</title>
       <link>https://mrhope.site/code/language/js/es6/</link>
       <guid>https://mrhope.site/code/language/js/es6/</guid>
@@ -5409,54 +5437,6 @@ Emmet 是一个快速创建 HTML 和 CSS 的方式，如果您想要成为一个
 </li>
 <li>
 <p><a href="/code/language/js/es6/reference.html">参考链接</a></p>
-</li>
-</ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>函数</title>
-      <link>https://mrhope.site/code/language/js/function/</link>
-      <guid>https://mrhope.site/code/language/js/function/</guid>
-      <source url="https://mrhope.site/rss.xml">函数</source>
-      <category>JavaScript</category>
-      <pubDate>Tue, 01 Oct 2019 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="基础部分" tabindex="-1"> 基础部分</h2>
-<ul>
-<li>
-<p><a href="/code/language/js/function/intro.html">函数介绍</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/declare.html">函数声明</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/call.html">函数调用</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/scope.html">函数作用域</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/destructuring.html">解构赋值</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/this.html">this 的指向</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/arrow-function.html">箭头函数</a></p>
-</li>
-</ul>
-<h2 id="进阶" tabindex="-1"> 进阶</h2>
-<ul>
-<li>
-<p><a href="/code/language/js/function/higher-order-function.html">高阶函数</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/map-and-reduce.html">map reduce 与 sort</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/closure.html">闭包</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/generator.html">generator</a></p>
 </li>
 </ul>
 ]]></content:encoded>
