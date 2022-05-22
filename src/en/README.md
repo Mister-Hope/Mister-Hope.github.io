@@ -8,6 +8,11 @@ heroText: 𝓜𝓻. 𝓗𝓸𝓹𝓮
 heroFullScreen: true
 tagline: Where there is light, there is hope
 projects:
+  - name: vuepress
+    desc: Vue-powered Static Site Generator
+    link: https://v2.vuepress.vuejs.org/
+    icon: /assets/img/vuepress.png
+
   - name: vuepress-theme-hope
     desc: A vuepress theme with tons of features✨
     link: https://vuepress-theme-hope.github.io/
