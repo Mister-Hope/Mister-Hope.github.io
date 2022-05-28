@@ -3,7 +3,7 @@
   <id>https://mrhope.site/</id>
   <title>Mr.Hope</title>
   <subtitle>Where there is light, there is hope.</subtitle>
-  <updated>2022-05-22T10:30:54.319Z</updated>
+  <updated>2022-05-28T16:35:13.161Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mrhope.site/atom.xml"/>
   <link rel="alternate" href="https://mrhope.site/"/>
@@ -11,7 +11,6 @@
   <category term="Android"/>
   <category term="快速上手"/>
   <category term="前端"/>
-  <category term="VS Code"/>
   <category term="jQuery"/>
   <category term="JavaScript"/>
   <category term="设计"/>
@@ -25,6 +24,7 @@
   <category term="Node.js"/>
   <category term="软件"/>
   <category term="Git"/>
+  <category term="VS Code"/>
   <category term="C"/>
   <category term="C++"/>
   <category term="dart"/>
@@ -168,14 +168,14 @@
 </li>
 </ul>
 ]]></content>
-    <category term="小程序"/>
+    <category term="小程序" scheme=""/>
     <published>2022-05-04T19:02:05.000Z</published>
   </entry>
   <entry>
     <title type="html">启动另一个 activity</title>
     <id>https://mrhope.site/code/Android/get-started/activity.html</id>
     <link href="https://mrhope.site/code/Android/get-started/activity.html"/>
-    <updated>2022-05-21T16:30:58.000Z</updated>
+    <updated>2022-05-28T16:24:21.000Z</updated>
     <summary type="html"><![CDATA[<p>在本课中，您将向 MainActivity 添加一些代码，以便在用户点按 Send 按钮时启动一个显示消息的新 activity。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>在本课中，您将向 MainActivity 添加一些代码，以便在用户点按 Send 按钮时启动一个显示消息的新 activity。</p>
@@ -396,8 +396,8 @@
 <h2 id="运行应用" tabindex="-1"> 运行应用</h2>
 <p>点击工具栏中的 Apply Changes 以运行应用。当应用打开后，在文本字段中输入一条消息，点按 Send 即会看到该消息显示在第二个 activity 中。</p>
 ]]></content>
-    <category term="Android"/>
-    <category term="快速上手"/>
+    <category term="Android" scheme=""/>
+    <category term="快速上手" scheme=""/>
     <published>2022-04-01T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -475,8 +475,8 @@
 </li>
 </ul>
 ]]></content>
-    <category term="Android"/>
-    <category term="快速上手"/>
+    <category term="Android" scheme=""/>
+    <category term="快速上手" scheme=""/>
     <published>2022-04-01T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -588,8 +588,8 @@
 <h2 id="运行应用" tabindex="-1"> 运行应用</h2>
 <p>如果已在上一课中将您的应用安装到设备上，只需点击工具栏中的 (Apply Changes)，即可使用新布局更新应用。或者点击 Run 'app' 以安装并运行应用。</p>
 ]]></content>
-    <category term="Android"/>
-    <category term="快速上手"/>
+    <category term="Android" scheme=""/>
+    <category term="快速上手" scheme=""/>
     <published>2022-04-01T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -613,8 +613,8 @@
 <p>如果应用的任何功能需要使用特定的硬件（例如摄像头），您可以在运行时查询该设备是否具有该硬件，如果没有，则停用相应的功能。您可以指定应用需要使用特定的硬件，这样，Google Play 就不会允许在没有这些硬件的设备上安装应用。</p>
 <p>构建您的首个应用后，请参阅 [设备兼容性概览][] 来详细了解设备配置。</p>
 ]]></content>
-    <category term="Android"/>
-    <category term="快速上手"/>
+    <category term="Android" scheme=""/>
+    <category term="快速上手" scheme=""/>
     <published>2022-04-01T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -683,8 +683,8 @@
 </li>
 </ol>
 ]]></content>
-    <category term="Android"/>
-    <category term="快速上手"/>
+    <category term="Android" scheme=""/>
+    <category term="快速上手" scheme=""/>
     <published>2022-04-01T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -717,7 +717,7 @@
 <li><a href="https://angular.cn/docs" target="_blank" rel="noopener noreferrer">中文文档</a></li>
 </ul>
 ]]></content>
-    <category term="前端"/>
+    <category term="前端" scheme=""/>
     <published>2020-05-06T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -739,127 +739,6 @@
     </contributor>
     <published>2022-02-12T05:50:30.000Z</published>
     <rights>Copyright by 李欣桐</rights>
-  </entry>
-  <entry>
-    <title type="html">推荐扩展</title>
-    <id>https://mrhope.site/software/vscode/extension.html</id>
-    <link href="https://mrhope.site/software/vscode/extension.html"/>
-    <updated>2022-04-06T04:04:43.000Z</updated>
-    <content type="html"><![CDATA[<p>以下是推荐的 VS Code 扩展:</p>
-<h3 id="语言包" tabindex="-1"> 语言包</h3>
-<h4 id="chinese-simplified-language-pack-for-visual-studio-code" tabindex="-1"> Chinese (Simplified) Language Pack for Visual Studio Code</h4>
-<p>VS Code 原生为英文，本插件为 VS Code 提供简体中文支持，会更改页面为简体中文。</p>
-<h3 id="外观" tabindex="-1"> 外观</h3>
-<h4 id="indent-rainbow" tabindex="-1"> indent-rainbow</h4>
-<p>为代码中的缩进上色，更容易判断缩进层数。</p>
-<h4 id="material-icon-theme" tabindex="-1"> Material Icon Theme</h4>
-<p>为 VS Code 文件图标应用安卓的 Material 主题。</p>
-<h4 id="one-dark-pro" tabindex="-1"> One Dark Pro</h4>
-<p>为添加一款类 Atom 的一款暗色风格主题，配色会比 VS Code 默认风格好看一些。</p>
-<h4 id="todo-highlight" tabindex="-1"> TODO Highlight</h4>
-<p>高光显示特定注释，如 <code>TODO:</code> 等。</p>
-<h3 id="工具" tabindex="-1"> 工具</h3>
-<h4 id="bookmarks" tabindex="-1"> Bookmarks</h4>
-<p>在代码中添加书签并支持快速跳转。</p>
-<h4 id="filesize" tabindex="-1"> filesize</h4>
-<p>在 VS Code 底部状态栏显示文件大小。</p>
-<h4 id="project-manager" tabindex="-1"> Project Manager</h4>
-<p>快速打开特定项目或在多个项目之间切换。</p>
-<h4 id="svg-preview" tabindex="-1"> SVG Preview</h4>
-<p>提供在 VS Code 直接打开 SVG 预览。</p>
-<h4 id="visual-studio-intellicode" tabindex="-1"> Visual Studio IntelliCode</h4>
-<p>基于 AI 的智能提示</p>
-<h3 id="版本管理与多人协作" tabindex="-1"> 版本管理与多人协作</h3>
-<div><p>提示</p>
-<p>VS Code 不包含 Git，请自行安装 Git 并添加到 path 以实现版本管理。</p>
-</div>
-<h4 id="gitlens" tabindex="-1"> GitLens</h4>
-<p>在文件中提供 Git 版本增强功能，包括但不限于行历史、文件历史、分支查看、本地与远程库提交查看与对比分析等。</p>
-<h4 id="live-share" tabindex="-1"> Live Share</h4>
-<p>官方实时分享功能，可多人同时协作一份文件，也可做在线演示。</p>
-<h4 id="live-share-audio" tabindex="-1"> Live Share Audio</h4>
-<p>官方实时语音通话，可在多人协作或演示中使用。</p>
-<h4 id="remote-development" tabindex="-1"> Remote Development</h4>
-<p>远程仓库连接与控制。</p>
-<h3 id="网页" tabindex="-1"> 网页</h3>
-<h4 id="color-info" tabindex="-1"> Color Info</h4>
-<p>为 CSS 颜色详情显示更多信息。</p>
-<h4 id="eslint" tabindex="-1"> ESLint</h4>
-<p>需要 <code>eslint</code> 模块，进行 JS、TS 等文件的的错误检查、格式化。</p>
-<h4 id="javascript-es6-code-snippets" tabindex="-1"> JavaScript (ES6) code snippets</h4>
-<p>ES6 快速补全，提升代码编写利器。</p>
-<h4 id="language-stylus" tabindex="-1"> language-stylus</h4>
-<p>Stylus 格式化，高亮支持。</p>
-<h4 id="live-server" tabindex="-1"> Live Server</h4>
-<p>快速启动本地开发服务器。</p>
-<h4 id="manta-s-stylus-supremacy" tabindex="-1"> Manta’s Stylus Supremacy</h4>
-<p>Stylus 格式化支持。</p>
-<h4 id="quokka-js" tabindex="-1"> Quokka.js</h4>
-<p>JavaScript TypeScript 及时运行与结果显示。</p>
-<h4 id="scss-intellisence" tabindex="-1"> SCSS IntelliSence</h4>
-<p>SCSS 格式化、补全支持。</p>
-<h4 id="stylelint" tabindex="-1"> stylelint</h4>
-<p>CSS / SCSS / Less 格式化。</p>
-<h4 id="vetur" tabindex="-1"> Vetur</h4>
-<p>为 VS Code 添加 <code>.vue</code> 文件的支持。</p>
-<h3 id="小程序" tabindex="-1"> 小程序</h3>
-<h4 id="minapp" tabindex="-1"> minapp</h4>
-<p>小程序标签属性补全。</p>
-<h3 id="xml-与-json" tabindex="-1"> XML 与 JSON</h3>
-<h4 id="json-organizer" tabindex="-1"> JSON Organizer</h4>
-<p>提供 json 到 js object 的相互转换。</p>
-<h4 id="xml-tools" tabindex="-1"> XML Tools</h4>
-<p>提供 XML 补全、格式化等。</p>
-<h3 id="php" tabindex="-1"> PHP</h3>
-<h4 id="php-debug" tabindex="-1"> PHP Debug</h4>
-<p>PHP 逐行调试，需要提前在 PHP 中配置好 XDebug。</p>
-<h4 id="php-intelephense" tabindex="-1"> PHP Intelephense</h4>
-<p>提供 PHP 函数补全。</p>
-<h4 id="phpcs" tabindex="-1"> phpcs</h4>
-<p>PHP 错误检查与修复。</p>
-<h3 id="app-开发" tabindex="-1"> APP 开发</h3>
-<h4 id="dart" tabindex="-1"> Dart</h4>
-<p>提供 dart 语言支持与调试。</p>
-<h4 id="flutter" tabindex="-1"> Flutter</h4>
-<p>提供 Flutter 支持与调试。</p>
-<h4 id="gradle-language-support" tabindex="-1"> Gradle Language Support</h4>
-<p>Gradle 语言支持。</p>
-<h3 id="编程" tabindex="-1"> 编程</h3>
-<h4 id="c-c" tabindex="-1"> C/C++</h4>
-<p>提供代码格式化、自动完成、逐行调试等功能等。</p>
-<h4 id="code-runner" tabindex="-1"> Code Runner</h4>
-<p>提供多种编程语言的运行。</p>
-<h4 id="java-extension-pack" tabindex="-1"> Java Extension Pack</h4>
-<p>Java 调试包。</p>
-<h4 id="python" tabindex="-1"> Python</h4>
-<p>Python 格式化、调试支持。</p>
-<h3 id="markdown" tabindex="-1"> Markdown</h3>
-<h4 id="markdown-all-in-one" tabindex="-1"> Markdown All in One</h4>
-<p>提供快速添加 Markdown 标记的支持。</p>
-<h4 id="markdown-emoji" tabindex="-1"> Markdown Emoji</h4>
-<p>为 Markdown 添加表情支持。</p>
-<h4 id="markdown-preview-github-styling" tabindex="-1"> Markdown Preview GitHub Styling</h4>
-<p>为 Markdown 预览应用 GitHub 风格。</p>
-<h4 id="markdownlint" tabindex="-1"> markdownlint</h4>
-<p>检查 Markdown 文法错误。</p>
-<h3 id="node-js" tabindex="-1"> Node.js</h3>
-<h4 id="node-js-modules-intellisense" tabindex="-1"> Node.js Modules Intellisense</h4>
-<p>提供 Node.js 模块智能提示。</p>
-<h4 id="npm-intellisense" tabindex="-1"> npm Intellisense</h4>
-<p>为 VS Code 添加 npm 模块导入补全。</p>
-<h3 id="latex" tabindex="-1"> LaTeX</h3>
-<h4 id="latex-workshop" tabindex="-1"> LaTeX Workshop</h4>
-<p>LaTeX 插件，支持常见功能与编译。</p>
-<h4 id="latex-formatter" tabindex="-1"> latex-formatter</h4>
-<p>提供 LaTeX 格式化。</p>
-<h3 id="其他" tabindex="-1"> 其他</h3>
-<h4 id="yaml" tabindex="-1"> YAML</h4>
-<p>提供 YAML 格式化，高亮支持。</p>
-<h4 id="leetcode" tabindex="-1"> LeetCode</h4>
-<p>代码学习练习软件。</p>
-]]></content>
-    <category term="VS Code"/>
-    <published>2022-02-12T05:50:30.000Z</published>
   </entry>
   <entry>
     <title type="html">AJAX</title>
@@ -955,7 +834,7 @@
 <p>如果需要使用 JSONP，可以在 <code>ajax()</code> 中设置 <code>jsonp: 'callback'</code>，让 jQuery 实现 JSONP 跨域加载数据。</p>
 <p>关于跨域的设置请参考浏览器 Ajax 一节中 CORS 的设置。</p>
 ]]></content>
-    <category term="jQuery"/>
+    <category term="jQuery" scheme=""/>
     <published>2019-11-05T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1012,7 +891,7 @@ js<span>.</span><span>after</span><span>(</span><span>"&lt;li>&lt;span>Lua&lt;/s
 <div><pre><code><span>const</span> li <span>=</span> <span>$</span><span>(</span><span>"#test-div>ul>li"</span><span>)</span><span>;</span>
 li<span>.</span><span>remove</span><span>(</span><span>)</span><span>;</span> <span>// 所有&lt;li>全被删除</span>
 </code></pre><div aria-hidden="true"><div></div><div></div></div></div>]]></content>
-    <category term="jQuery"/>
+    <category term="jQuery" scheme=""/>
     <published>2019-11-03T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1157,7 +1036,7 @@ textarea<span>.</span><span>val</span><span>(</span><span>)</span><span>;</span>
 textarea<span>.</span><span>val</span><span>(</span><span>"Hi"</span><span>)</span><span>;</span> <span>// 文本区域已更新为 'Hi'</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>可见，一个 <code>val()</code> 就统一了各种输入框的取值和赋值的问题。</p>
 ]]></content>
-    <category term="jQuery"/>
+    <category term="jQuery" scheme=""/>
     <published>2019-11-03T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1327,7 +1206,7 @@ request<span>.</span><span>send</span><span>(</span><span>)</span><span>;</span>
 <p>由于以 POST、PUT 方式传送 JSON 格式的数据在 REST 中很常见，所以要跨域正确处理 POST 和 PUT 请求，服务器端必须正确响应 OPTIONS 请求。</p>
 <p>需要深入了解 CORS 的童鞋请移步 <a href="https://www.w3.org/TR/cors/" target="_blank" rel="noopener noreferrer">W3C 文档</a>。</p>
 ]]></content>
-    <category term="JavaScript"/>
+    <category term="JavaScript" scheme=""/>
     <published>2019-10-18T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1534,7 +1413,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><p>浏览器报错: <code>parent.children[1]</code> 不是一个有效的节点。原因就在于，当 <code>&lt;p&gt;First&lt;/p&gt;</code> 节点被删除后，<code>parent.children</code> 的节点数量已经从 <code>2</code> 变为了 <code>1</code>，索引 <code>[1]</code> 已经不存在了。</p>
 <p>因此，删除多个节点时，要注意 <code>children</code> 属性时刻都在变化。</p>
 ]]></content>
-    <category term="JavaScript"/>
+    <category term="JavaScript" scheme=""/>
     <published>2019-10-16T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1706,7 +1585,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="设计"/>
+    <category term="设计" scheme=""/>
     <published>2019-11-24T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1807,7 +1686,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <li><a href="/linux/WSL.html">点击前往</a></li>
 </ul>
 ]]></content>
-    <category term="Linux"/>
+    <category term="Linux" scheme=""/>
     <published>2019-11-15T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1860,7 +1739,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <li><a href="/note/node-js/current-path.html">current-path 相关</a></li>
 </ul>
 ]]></content>
-    <category term="随笔"/>
+    <category term="随笔" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -1884,7 +1763,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="物理"/>
+    <category term="物理" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -1971,7 +1850,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <p>更多详情有待日后补充</p>
 </div>
 ]]></content>
-    <category term="后端"/>
+    <category term="后端" scheme=""/>
     <published>2019-09-10T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2016,7 +1895,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="基础"/>
+    <category term="基础" scheme=""/>
     <published>2019-12-26T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2100,7 +1979,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <h4 id="安装-手机版-github" tabindex="-1"> 安装 手机版 GitHub</h4>
 <p>要安装 Android 或 iOS 版 手机版 GitHub，请参阅 <a href="https://github.com/mobile" target="_blank" rel="noopener noreferrer">手机版 GitHub</a>。</p>
 ]]></content>
-    <category term="GitHub"/>
+    <category term="GitHub" scheme=""/>
     <published>2019-11-20T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2143,7 +2022,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <p>C 、C++、Java、PHP 正在编写中...</p>
 </div>
 ]]></content>
-    <category term="教程"/>
+    <category term="教程" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -2387,7 +2266,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="小程序"/>
+    <category term="小程序" scheme=""/>
     <published>2019-11-25T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2474,7 +2353,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="Node.js"/>
+    <category term="Node.js" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -2494,14 +2373,14 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <li><a href="https://react.docschina.org/docs/getting-started.html" target="_blank" rel="noopener noreferrer">中文文档</a></li>
 </ul>
 ]]></content>
-    <category term="前端"/>
+    <category term="前端" scheme=""/>
     <published>2020-05-08T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="html">Vue.js</title>
     <id>https://mrhope.site/code/vue/</id>
     <link href="https://mrhope.site/code/vue/"/>
-    <updated>2022-05-21T16:30:58.000Z</updated>
+    <updated>2022-05-28T16:24:21.000Z</updated>
     <content type="html"><![CDATA[<div><p>注意</p>
 <p>目前此部分为 Vue 2 的文档，待 Vue 3 出官方中文文档后，本博客会进行跟进。</p>
 </div>
@@ -2634,7 +2513,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="基础"/>
+    <category term="基础" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -2748,7 +2627,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <li><a href="/code/website/https.html">HTTPS 介绍</a></li>
 </ul>
 ]]></content>
-    <category term="前端"/>
+    <category term="前端" scheme=""/>
     <published>2019-09-01T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2778,7 +2657,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="基础"/>
+    <category term="基础" scheme=""/>
     <published>2019-09-07T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2799,7 +2678,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="设计"/>
+    <category term="设计" scheme=""/>
     <published>2020-09-26T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2890,7 +2769,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="设计"/>
+    <category term="设计" scheme=""/>
     <published>2020-09-13T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2908,7 +2787,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="设计"/>
+    <category term="设计" scheme=""/>
     <published>2020-09-26T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2938,7 +2817,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="设计"/>
+    <category term="设计" scheme=""/>
     <published>2020-09-15T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -3013,7 +2892,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <author>
       <name>阮一峰</name>
     </author>
-    <category term="Linux"/>
+    <category term="Linux" scheme=""/>
     <contributor>
       <name>阮一峰</name>
     </contributor>
@@ -3053,7 +2932,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="Linux"/>
+    <category term="Linux" scheme=""/>
     <published>2019-11-18T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -3074,7 +2953,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="Linux"/>
+    <category term="Linux" scheme=""/>
     <published>2019-11-17T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -3101,7 +2980,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="Linux"/>
+    <category term="Linux" scheme=""/>
     <published>2019-11-15T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -3125,7 +3004,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="Linux"/>
+    <category term="Linux" scheme=""/>
     <published>2019-11-21T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -3147,7 +3026,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <li><a href="https://h5.qzone.qq.com/ugc/share/?sharetag=7C43C7A8C547ED48D9D15448BEECAF99&amp;subtype=3&amp;ciphertext=&amp;sid=&amp;blog_photo=&amp;g=&amp;res_uin=1178522294&amp;cellid=V10JYlHT4Y23uM&amp;subid=&amp;bp1=&amp;bp2=&amp;bp7=&amp;appid=4&amp;g_f=2000000103" target="_blank" rel="noopener noreferrer"><strong>空间相册链接</strong></a></li>
 </ul>
 ]]></content>
-    <category term="随笔"/>
+    <category term="随笔" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -3213,7 +3092,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <p>关于完整的服务器文件结构，请访问 <a href="https://github.com/Hope-Studio/innenu-res" target="_blank" rel="noopener noreferrer">https://github.com/Hope-Studio/innenu-res</a></p>
 </div>
 ]]></content>
-    <category term="小程序"/>
+    <category term="小程序" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -3229,7 +3108,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <li><a href="https://h5.qzone.qq.com/ugc/share/?sharetag=126FDE98906EB067815B0EEA0F72BEC0&amp;subtype=3&amp;ciphertext=&amp;sid=&amp;blog_photo=&amp;g=&amp;res_uin=1178522294&amp;cellid=V10JYlHT49u8Sd&amp;subid=&amp;bp1=&amp;bp2=&amp;bp7=&amp;appid=4&amp;g_f=2000000103" target="_blank" rel="noopener noreferrer"><strong>空间相册链接</strong></a></li>
 </ul>
 ]]></content>
-    <category term="随笔"/>
+    <category term="随笔" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -3266,7 +3145,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <p>由 赵婧一 摘抄</p>
 </blockquote>
 ]]></content>
-    <category term="随笔"/>
+    <category term="随笔" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -3285,7 +3164,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </div>
 
 ]]></content>
-    <category term="随笔"/>
+    <category term="随笔" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -3304,7 +3183,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </div>
 
 ]]></content>
-    <category term="随笔"/>
+    <category term="随笔" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -3326,7 +3205,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <li><a href="https://h5.qzone.qq.com/ugc/share/?sharetag=2AC65F349EEC4F95F047C3685529CF9E&amp;subtype=3&amp;ciphertext=&amp;sid=&amp;blog_photo=&amp;g=&amp;res_uin=1178522294&amp;cellid=V10JYlHT0dBJbe&amp;subid=&amp;bp1=&amp;bp2=&amp;bp7=&amp;appid=4&amp;g_f=2000000103" target="_blank" rel="noopener noreferrer"><strong>空间相册链接</strong></a></li>
 </ul>
 ]]></content>
-    <category term="随笔"/>
+    <category term="随笔" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -3344,7 +3223,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="物理"/>
+    <category term="物理" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -3357,7 +3236,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <li><a href="/physics/optism/charpter1.html">第一章</a></li>
 </ul>
 ]]></content>
-    <category term="物理"/>
+    <category term="物理" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -3370,7 +3249,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <li><a href="/physics/quatum/charpter1.html">第一章</a></li>
 </ul>
 ]]></content>
-    <category term="物理"/>
+    <category term="物理" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -3394,7 +3273,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="物理"/>
+    <category term="物理" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -3491,7 +3370,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="软件"/>
+    <category term="软件" scheme=""/>
     <published>2020-05-29T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -3585,7 +3464,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </ol>
 </div>
 ]]></content>
-    <category term="Git"/>
+    <category term="Git" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
     <rights>Copyright by 廖雪峰 Edited by Mr.Hope</rights>
   </entry>
@@ -3704,7 +3583,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="VS Code"/>
+    <category term="VS Code" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -3746,7 +3625,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="GitHub"/>
+    <category term="GitHub" scheme=""/>
     <published>2021-02-18T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -3763,7 +3642,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </div>
 
 ]]></content>
-    <category term="C"/>
+    <category term="C" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -3780,7 +3659,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </div>
 
 ]]></content>
-    <category term="C++"/>
+    <category term="C++" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -3808,7 +3687,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <li><a href="https://www.dartcn.com/" target="_blank" rel="noopener noreferrer">中文官网</a> (不推荐，已有一年多未更新)</li>
 </ul>
 ]]></content>
-    <category term="dart"/>
+    <category term="dart" scheme=""/>
     <published>2020-05-30T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -3825,7 +3704,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </div>
 
 ]]></content>
-    <category term="Java"/>
+    <category term="Java" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -3901,7 +3780,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <h2 id="许可协议" tabindex="-1"> 许可协议</h2>
 <p>此部分博客采用 <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh" target="_blank" rel="noopener noreferrer">知识共享 署名-相同方式共享 3.0 协议</a></p>
 ]]></content>
-    <category term="JavaScript"/>
+    <category term="JavaScript" scheme=""/>
     <published>2019-09-12T00:00:00.000Z</published>
     <rights>此部分博客采用 &lt;a href="https://creativecommons.org/licenses/by-sa/3.0/deed.zh"&gt;知识共享 署名-相同方式共享 3.0 协议&lt;/a&gt;</rights>
   </entry>
@@ -3989,7 +3868,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <h2 id="json-null" tabindex="-1"> JSON null</h2>
 <p>JSON 可以设置 <code>null</code> 值</p>
 ]]></content>
-    <category term="JSON"/>
+    <category term="JSON" scheme=""/>
     <published>2020-07-25T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4042,7 +3921,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <li><a href="/code/language/markdown/demo.html">查看详情</a></li>
 </ul>
 ]]></content>
-    <category term="Markdown"/>
+    <category term="Markdown" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -4054,7 +3933,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <p>正在完善中...</p>
 </div>
 ]]></content>
-    <category term="PHP"/>
+    <category term="PHP" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -4185,7 +4064,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <author>
       <name>廖雪峰</name>
     </author>
-    <category term="Python"/>
+    <category term="Python" scheme=""/>
     <contributor>
       <name>廖雪峰</name>
     </contributor>
@@ -4268,7 +4147,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <li><a href="https://www.tslang.cn/docs/home.html" target="_blank" rel="noopener noreferrer">点击查看第三方中文文档</a></li>
 </ul>
 ]]></content>
-    <category term="TypeScript"/>
+    <category term="TypeScript" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -4519,7 +4398,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
   console<span>.</span><span>log</span><span>(</span>e<span>)</span><span>;</span>
 <span>}</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>]]></content>
-    <category term="YAML"/>
+    <category term="YAML" scheme=""/>
     <published>2020-07-26T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4540,7 +4419,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ol>
 ]]></content>
-    <category term="小程序"/>
+    <category term="小程序" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -4693,7 +4572,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="小程序"/>
+    <category term="小程序" scheme=""/>
     <published>2019-11-25T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4717,7 +4596,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="小程序"/>
+    <category term="小程序" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -4741,7 +4620,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="Vue"/>
+    <category term="Vue" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -4775,7 +4654,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="Vue"/>
+    <category term="Vue" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -4803,7 +4682,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <li><a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer">Vuex repository</a></li>
 </ul>
 ]]></content>
-    <category term="Vue"/>
+    <category term="Vue" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -4895,7 +4774,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="CSS"/>
+    <category term="CSS" scheme=""/>
     <published>2019-09-05T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4924,7 +4803,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <h2 id="其他功能" tabindex="-1"> 其他功能</h2>
 <p>Emmet 还提供了很多内置功能，在 VS Code 中，您可以按下 <code>F1</code> 并输入 <code>emmet</code> 来查看功能列表。详细的功能列表说明请见 <a href="https://docs.emmet.io/actions/" target="_blank" rel="noopener noreferrer">Emmet 文档</a></p>
 ]]></content>
-    <category term="Emmet"/>
+    <category term="Emmet" scheme=""/>
     <published>2019-09-03T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4998,7 +4877,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="HTML"/>
+    <category term="HTML" scheme=""/>
     <published>2019-09-01T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -5050,7 +4929,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="jQuery"/>
+    <category term="jQuery" scheme=""/>
     <published>2019-11-02T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -5102,7 +4981,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="软件"/>
+    <category term="软件" scheme=""/>
     <published>2020-05-29T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -5170,7 +5049,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <li><a href="https://wenku.baidu.com/view/8d2eebe4eff9aef8941e06fe.html" target="_blank" rel="noopener noreferrer">COMSOL Multiphysics 网格剖分 变形几何</a></li>
 </ul>
 ]]></content>
-    <category term="软件"/>
+    <category term="软件" scheme=""/>
     <published>2020-06-02T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -5264,7 +5143,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="VS Code"/>
+    <category term="VS Code" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -5285,7 +5164,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="dart"/>
+    <category term="dart" scheme=""/>
     <published>2020-05-30T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -5321,7 +5200,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="JavaScript"/>
+    <category term="JavaScript" scheme=""/>
     <published>2019-10-15T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -5420,7 +5299,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <author>
       <name>阮一峰</name>
     </author>
-    <category term="JavaScript"/>
+    <category term="JavaScript" scheme=""/>
     <contributor>
       <name>阮一峰</name>
     </contributor>
@@ -5472,7 +5351,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="JavaScript"/>
+    <category term="JavaScript" scheme=""/>
     <published>2019-10-01T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -5542,7 +5421,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <li>Axel Rauschmayer, <a href="http://www.2ality.com/2011/10/javascript-overview.html" target="_blank" rel="noopener noreferrer">A quick overview of JavaScript</a></li>
 </ul>
 ]]></content>
-    <category term="JavaScript"/>
+    <category term="JavaScript" scheme=""/>
     <published>2019-09-14T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -5660,7 +5539,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <h3 id="社区支持和就业机会" tabindex="-1"> 社区支持和就业机会</h3>
 <p>全世界程序员都在使用 JavaScript，它有着极大的社区、广泛的文献和图书、丰富的代码资源。绝大部分您需要用到的功能，都有多个开源函数库可供选用。</p>
 ]]></content>
-    <category term="JavaScript"/>
+    <category term="JavaScript" scheme=""/>
     <published>2019-09-13T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -5703,7 +5582,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="JavaScript"/>
+    <category term="JavaScript" scheme=""/>
     <published>2019-10-08T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -5733,7 +5612,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="JavaScript"/>
+    <category term="JavaScript" scheme=""/>
     <published>2019-09-26T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -5773,7 +5652,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 </ul>
 ]]></content>
-    <category term="JavaScript"/>
+    <category term="JavaScript" scheme=""/>
     <published>2019-09-20T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -5802,7 +5681,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <li><a href="/code/language/markdown/emoji/symbol.html">点击前往</a></li>
 </ul>
 ]]></content>
-    <category term="Markdown"/>
+    <category term="Markdown" scheme=""/>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
@@ -5832,7 +5711,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <author>
       <name>廖雪峰</name>
     </author>
-    <category term="Python"/>
+    <category term="Python" scheme=""/>
     <contributor>
       <name>廖雪峰</name>
     </contributor>
@@ -5866,7 +5745,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <author>
       <name>廖雪峰</name>
     </author>
-    <category term="Python"/>
+    <category term="Python" scheme=""/>
     <contributor>
       <name>廖雪峰</name>
     </contributor>
@@ -5918,7 +5797,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <author>
       <name>廖雪峰</name>
     </author>
-    <category term="Python"/>
+    <category term="Python" scheme=""/>
     <contributor>
       <name>廖雪峰</name>
     </contributor>
@@ -5965,7 +5844,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <author>
       <name>廖雪峰</name>
     </author>
-    <category term="Python"/>
+    <category term="Python" scheme=""/>
     <contributor>
       <name>廖雪峰</name>
     </contributor>
@@ -5993,7 +5872,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <author>
       <name>廖雪峰</name>
     </author>
-    <category term="Python"/>
+    <category term="Python" scheme=""/>
     <contributor>
       <name>廖雪峰</name>
     </contributor>
@@ -6021,11 +5900,51 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <author>
       <name>廖雪峰</name>
     </author>
-    <category term="Python"/>
+    <category term="Python" scheme=""/>
     <contributor>
       <name>廖雪峰</name>
     </contributor>
     <published>2021-03-27T00:00:00.000Z</published>
+    <rights>Copyright by 廖雪峰</rights>
+  </entry>
+  <entry>
+    <title type="html">面向对象编程</title>
+    <id>https://mrhope.site/code/language/python/oop/</id>
+    <link href="https://mrhope.site/code/language/python/oop/"/>
+    <updated>2022-02-06T16:46:58.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
+<ul>
+<li>
+<p><a href="/code/language/python/oop/intro.html">介绍</a></p>
+</li>
+<li>
+<p><a href="/code/language/python/oop/instance.html">类和实例</a></p>
+</li>
+<li>
+<p><a href="/code/language/python/oop/extend.html">继承和多态</a></p>
+</li>
+<li>
+<p><a href="/code/language/python/oop/property.html">属性</a></p>
+</li>
+<li>
+<p><a href="/code/language/python/oop/info.html">获取对象信息</a></p>
+</li>
+<li>
+<p><a href="/code/language/python/oop/customize.html">定制类</a></p>
+</li>
+<li>
+<p><a href="/code/language/python/oop/special.html">特殊的 class</a></p>
+</li>
+</ul>
+]]></content>
+    <author>
+      <name>廖雪峰</name>
+    </author>
+    <category term="Python" scheme=""/>
+    <contributor>
+      <name>廖雪峰</name>
+    </contributor>
+    <published>2021-03-28T00:00:00.000Z</published>
     <rights>Copyright by 廖雪峰</rights>
   </entry>
 </feed>
