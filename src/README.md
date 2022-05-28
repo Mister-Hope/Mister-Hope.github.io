@@ -9,7 +9,7 @@ heroFullScreen: true
 tagline: Where there is light, there is hope
 projects:
   - name: vuepress
-    desc: 基于 Vue 的静态文档构建起
+    desc: 基于 Vue 的静态文档构建器
     link: https://v2.vuepress.vuejs.org/zh/
     icon: /assets/img/vuepress.png
 

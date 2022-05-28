@@ -11,6 +11,7 @@ export default hopeTheme({
     url: "https://mrhope.site",
   },
 
+  iconAssets: "//at.alicdn.com/t/font_2410206_vuzkjonf4s9.css",
   iconPrefix: "iconfont icon-",
 
   logo: "/logo.svg",
