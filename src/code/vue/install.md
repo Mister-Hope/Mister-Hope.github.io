@@ -62,9 +62,3 @@ npm 模块介绍
 Vue 官方提供的浏览器插件 VueTools 可以更好的帮助开发。
 
 使用 VPN 用 Chrome 打开[安装网址](https://chrome.google.com/webstore/detail/nhdogjmejiglipccpnnnanhbledajbpd)，安装 VueTools 开发工具
-
-::: tip
-
-VPN 可以使用赛风 3 或 Betternet。
-
-:::

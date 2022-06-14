@@ -1,10 +1,10 @@
 ---
-title: API <Badge text="重要" type="error" />
+title: API
 icon: api
 category: 小程序
 ---
 
-小程序开发框架提供丰富的微信原生 API，可以方便的调起微信提供的能力，如获取用户信息，本地存储，支付功能等。详细介绍请参考 [API 文档](https://developers.weixin.qq.com/miniprogram/dev/api/)。
+小程序开发框架提供丰富的微信原生 API，可以方便的调起微信提供的能力，如获取用户信息，本地存储，支付功能等。详细介绍请参考 [API 文档](https://developers.weixin.qq.com/miniprogram/dev/api/)。 <Badge text="重要" type="error" />
 
 <!-- more -->
 

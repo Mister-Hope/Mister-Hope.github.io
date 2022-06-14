@@ -57,14 +57,7 @@ export const zhSidebarConig = sidebar({
 
   "/code/vue/": vue,
 
-  "/code/node-js/": [
-    "",
-    "intro",
-    "install",
-    "environment",
-    "program",
-    "module",
-  ],
+  "/code/node-js/": "structure",
 
   "/code/mini-app/": miniapp,
 

@@ -5,12 +5,6 @@ prev: ../website/https.html
 category: 基础
 ---
 
-::: warning
-
-目前此部分为 Vue 2 的文档，待 Vue 3 出官方中文文档后，本博客会进行跟进。
-
-:::
-
 Vue.js 是世界上主流的前端框架。
 
 官方介绍为：渐近式 JavaScript 框架。一款用于构建 Web 界面，易学易用，性能出色且功能丰富的框架。

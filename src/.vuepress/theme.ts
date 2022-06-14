@@ -67,7 +67,7 @@ export default hopeTheme({
     blog: true,
 
     comment: {
-      type: "waline",
+      provider: "Waline",
       serverURL: "https://mister-hope-blog-comment.vercel.app/",
     },
 
@@ -79,6 +79,7 @@ export default hopeTheme({
 
     mdEnhance: {
       align: true,
+      codetabs: true,
       demo: true,
       flowchart: true,
       footnote: true,

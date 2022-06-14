@@ -1,6 +1,7 @@
 ---
 title: 搭建 Node 开发环境
 icon: leaf
+order: 3
 category: Node.js
 tag:
   - Node.js
@@ -25,14 +26,14 @@ VS Code 以文件夹作为工程目录 (Workspace Dir)，所有的 JavaScript �
 
 假设我们在 `C:\Work\` 目录下创建了一个 hello 目录作为工程目录，并编写了一个 `hello.js` 文件，则该工程目录的结构如下:
 
-```md
+```
 hello/ <-- workspace dir
 |
-+- hello.js <-- JavaScript file
+├─ hello.js <-- JavaScript file
 |
-+- .vscode/ <-- VS Code config
-|
-+- launch.json <-- VS Code config file for JavaScript
+└─ .vscode/ <-- VS Code config
+      |
+      └ launch.json <-- VS Code config file for JavaScript
 ```
 
 可以用 VS Code 快速创建 `launch.json`，然后修改如下:

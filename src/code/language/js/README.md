@@ -7,7 +7,11 @@ copyright: 此部分博客采用 <a href="https://creativecommons.org/licenses/b
 star: true
 ---
 
-> 部分内容参考/来自廖雪峰、阮一峰书籍与博客
+::: note
+
+部分内容参考/来自廖雪峰、阮一峰书籍与博客
+
+:::
 
 <!-- more -->
 

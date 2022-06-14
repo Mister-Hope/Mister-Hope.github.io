@@ -1,6 +1,7 @@
 ---
 title: Node.js
 icon: creative
+order: 1
 category: Node.js
 tag:
   - Node.js
@@ -56,8 +57,8 @@ Chrome 浏览器是跨 Windows 和 Mac 平台的，并且，Google 认为要运�
 
 ## Node.js 相关链接
 
-- [Node.js 官网](https://nodejs.org/en/)
+- [Node.js 官网](https://nodejs.org/zh-cn/)
 
-- [Node.js 最新文档](https://nodejs.org/en/docs/)
+- [Node.js 最新文档](https://nodejs.org/zh-cn/docs/)
 
-- [Node.js 最新 API 文档](https://nodejs.org/dist/latest-v14.x/docs/api/)
+- [Node.js 最新 API 文档](https://nodejs.org/dist/latest-v16.x/docs/api/)

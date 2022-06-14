@@ -72,11 +72,16 @@ git init --separate-git-dir=. <部署位置>
 
 ```sh
 git config receive.denyCurrentBranch ignore
+git config --global --add safe.directory <部署文件夹>
 ```
 
-这是由于 Git 默认拒绝外部对当前分支的推送操作，因为这可能会覆盖或变更工作区文件。
+::: note
 
-设置完毕后，Git 会允许外部对当前工作区分支进行推送操作。
+Git 默认拒绝外部对当前分支的推送操作，因为这可能会覆盖或变更工作区文件。所以我们需要显式通知 Git 不要拒绝当前分支的推送操作。
+
+另外在新版本 Git 中，考虑到安全因素，Git 会在检出时检测项目文件夹是否属于其他组成员，如果检测到会默认拒绝相关操作以防止其他用于获取到本不应该获取到的代码信息。因为部署文件夹的所有者通常不会是 git，所以我们需要标记对应的部署文件夹“安全”。
+
+:::
 
 ## GitHub Actions
 

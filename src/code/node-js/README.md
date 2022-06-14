@@ -21,7 +21,7 @@ Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，
 
 - [编程](program.md)
 
-- [Node.js 模块](module.md)
+- [Node.js CJS 模块](cjs.md)
 
 以上，就是 Node.js 的简易介绍，系统学习可以查看下方的详细教程。
 
