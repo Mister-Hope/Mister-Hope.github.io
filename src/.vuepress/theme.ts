@@ -68,7 +68,7 @@ export default hopeTheme({
 
     comment: {
       provider: "Waline",
-      serverURL: "https://mister-hope-blog-comment.vercel.app/",
+      serverURL: "https://mister-hope-blog-comment.vercel.app",
     },
 
     feed: {
