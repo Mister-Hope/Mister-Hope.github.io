@@ -77,13 +77,14 @@ category: 小程序
 
 段落，可设置标题与样式
 
-| 参数    | 必填 |                    值类型                    | 内容         | 备注                                                            |
-| ------- | :--: | :------------------------------------------: | ------------ | --------------------------------------------------------------- |
-| heading |  否  |             `string \| boolean`              | 标题         |                                                                 |
-| text    |  是  |             `string \| string[]`             | 段落文字内容 |                                                                 |
-| type    |  否  |   `'tip' \| 'warn' \| 'danger' \| 'info'`    | 文字块样式   | 不填无额外样式                                                  |
-| align   |  否  | `'left' \| 'right' \| 'center' \| 'justify'` | 段落对齐方式 | 默认为 `'justify'`                                              |
-| style   |  否  |      `string \| Record<string, string>`      | 段落文字样式 | 填入 css 样式，会对段落的默认样式进行覆盖，该样式不会影响到标题 |
+| 参数    | 必填 |                    值类型                    | 内容           | 备注                                                            |
+| ------- | :--: | :------------------------------------------: | -------------- | --------------------------------------------------------------- |
+| heading |  否  |             `string \| boolean`              | 标题           |                                                                 |
+| text    |  是  |             `string \| string[]`             | 段落文字内容   |                                                                 |
+| type    |  否  |   `'tip' \| 'warn' \| 'danger' \| 'info'`    | 文字块样式     | 不填无额外样式                                                  |
+| path    |  否  |                   `string`                   | 对应页面的路径 | 仅设置 `type` 时可用                                            |
+| align   |  否  | `'left' \| 'right' \| 'center' \| 'justify'` | 段落对齐方式   | 默认为 `'justify'`                                              |
+| style   |  否  |      `string \| Record<string, string>`      | 段落文字样式   | 填入 css 样式，会对段落的默认样式进行覆盖，该样式不会影响到标题 |
 
 ## ul
 
@@ -94,6 +95,7 @@ category: 小程序
 | heading |  否  |             `string \| boolean`              | 标题               |                                                                 |
 | text    |  是  |             `string \| string[]`             | 无序列表项文字内容 |                                                                 |
 | type    |  否  |   `'tip' \| 'warn' \| 'danger' \| 'info'`    | 文字块样式         | 不填无额外样式                                                  |
+| path    |  否  |                   `string`                   | 对应页面的路径     | 仅设置 `type` 时可用                                            |
 | align   |  否  | `'left' \| 'right' \| 'center' \| 'justify'` | 段落对齐方式       | 默认为 `'justify'`                                              |
 | style   |  否  |      `string \| Record<string, string>`      | 段落文字样式       | 填入 css 样式，会对段落的默认样式进行覆盖，该样式不会影响到标题 |
 
@@ -106,6 +108,7 @@ category: 小程序
 | heading |  否  |             `string \| boolean`              | 标题               |                                                                 |
 | text    |  是  |             `string \| string[]`             | 有序列表项文字内容 |                                                                 |
 | type    |  否  |   `'tip' \| 'warn' \| 'danger' \| 'info'`    | 文字块样式         | 不填无额外样式                                                  |
+| path    |  否  |                   `string`                   | 对应页面的路径     | 仅设置 `type` 时可用                                            |
 | align   |  否  | `'left' \| 'right' \| 'center' \| 'justify'` | 段落对齐方式       | 默认为 `'justify'`                                              |
 | style   |  否  |      `string \| Record<string, string>`      | 段落文字样式       | 填入 css 样式，会对段落的默认样式进行覆盖，该样式不会影响到标题 |
 
@@ -299,15 +302,16 @@ carousel 组件默认高度为 400rpx，可以通过 style 属性调节
 
 卡片组件，可跳转到指定页面、打开公众号图文或复制链接
 
-| 参数  | 必填 |      值类型       | 内容           |
-| ----- | :--: | :---------------: | -------------- |
-| type  |  是  | `'page' \| 'web'` | 卡片类型       |
-| url   |  是  |     `string`      | 跳转的路径     |
-| src   |  是  |     `string`      | 卡片图片地址   |
-| title |  是  |     `string`      | 卡片标题       |
-| desc  |  否  |     `string`      | 卡片描述       |
-| logo  |  否  |     `string`      | 卡片 logo 地址 |
-| name  |  否  |     `string`      | 卡片 logo 名称 |
+| 参数    | 必填 |      值类型       | 内容           |
+| ------- | :--: | :---------------: | -------------- |
+| url     |  是  |     `string`      | 跳转的路径     |
+| src     |  否  |     `string`      | 卡片图片地址   |
+| type    |  否  | `'page' \| 'web'` | 卡片类型       |
+| title   |  是  |     `string`      | 卡片标题       |
+| desc    |  否  |     `string`      | 卡片描述       |
+| logo    |  否  |     `string`      | 卡片 logo 地址 |
+| name    |  否  |     `string`      | 卡片 logo 名称 |
+| options |  否  |     `string`      | 小程序卡片选项 |
 
 ## grid
 
