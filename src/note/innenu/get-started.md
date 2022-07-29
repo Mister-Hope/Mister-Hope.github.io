@@ -58,15 +58,19 @@ category: 小程序
 
 ::: details 总体结构
 
-| 参数      | 必填 |       值类型        | 内容         | 备注                                         |
-| --------- | :--: | :-----------------: | ------------ | -------------------------------------------- |
-| title     |  是  |      `string`       | 导航栏标题   | 一般不超过八个字，六字及以下为佳             |
-| desc      |  否  |      `string`       | 页面描述     | 会显示在页脚                                 |
-| author    |  否  |      `string`       | 页面的作者   | 会显示在页脚                                 |
-| time      |  否  |      `string`       | 页面更新时间 | 会显示在页脚                                 |
-| grey      |  否  |      `boolean`      | 使用灰色背景 | 默认为白色背景                               |
-| content   |  否  | `ComponentConfig[]` | 页面的内容   | 数组的每个对象会最终渲染为一个组件           |
-| shareable |  否  |      `boolean`      | 是否可被分享 | 是否可以使用小程序的界面分享，默认为 `false` |
+| 参数      | 必填 |        值类型        | 内容               | 备注                                            |
+| --------- | :--: | :------------------: | ------------------ | ----------------------------------------------- |
+| title     |  是  |       `string`       | 导航栏标题         | 一般不超过八个字，六字及以下为佳                |
+| desc      |  否  |       `string`       | 页面描述           | 会显示在页脚                                    |
+| author    |  否  |       `string`       | 页面的作者         | 会显示在页脚                                    |
+| time      |  否  |       `string`       | 页面更新时间       | 会显示在页脚                                    |
+| grey      |  否  |      `boolean`       | 使用灰色背景       | 默认为白色背景                                  |
+| cite      |  否  | `string \| string[]` | 页面引用链接       |                                                 |
+| content   |  否  | `ComponentConfig[]`  | 页面的内容         | 数组的每个对象会最终渲染为一个组件              |
+| from      |  否  |       `string`       | 左上角返回按钮文字 | 设置左上角文字，默认为上一级页面标题            |
+| outdated  |  否  |      `boolean`       | 是否已过时         | 可展示一条“页面过时”提示                        |
+| shareable |  否  |      `boolean`       | 是否可被分享       | 是否可以使用小程序的界面分享，默认为 `false`    |
+| contact   |  否  |      `boolean`       | “联系开发者”按钮   | 是否在分享菜单中显示“联系开发者”，默认为 `true` |
 
 :::
 
@@ -235,8 +239,8 @@ content:
 
 in 东师服务器文件结构如下:
 
-- 文件: 存放在 `https://mp.innenu.com/file/`
-- 图片: 存放在 `https://mp.innenu.com/img/`
+- 文件: 存放在 `https://mp.innenu.com/file/`，可以用 `$file` 索引
+- 图片: 存放在 `https://mp.innenu.com/img/`，可以用 `$img` 索引
 - 页面 YAML: 存放在 `https://mp.innenu.com/res/`
 - 图标: 存放在 `https://mp.innenu.com/res/icon/`
 
@@ -254,9 +258,9 @@ in 东师服务器文件结构如下:
 
 同时，您需要在对应的配置项填入:
 
-- `https://mp.innenu.com/img/account/authserver.jpg`
-- `https://mp.innenu.com/img/account/reset-password.jpg`
-- `https://mp.innenu.com/img/account/email-address.jpg`
+- `$img/account/authserver.jpg`
+- `$img/account/reset-password.jpg`
+- `$img/account/email-address.jpg`
 
 提交时，直接提交下列压缩包结构。
 
@@ -305,7 +309,7 @@ content:
       - 邮箱地址统一为 “别名” + “@nenu.edu.cn”
 
   - tag: img
-    src: https://mp.innenu.com/img/account/email-address.jpg
+    src: $img/account/email-address.jpg
     desc: 本例中邮箱为 "mr-hope@nenu.edu.cn"
 
   - tag: text
@@ -314,7 +318,7 @@ content:
     text: Nenu + 身份证后六位，X 用 1 代替
 
   - tag: img
-    src: https://mp.innenu.com/img/account/authserver.jpg
+    src: $img/account/authserver.jpg
 
   - tag: title
     text: 修改密码及密保绑定
@@ -329,7 +333,7 @@ content:
     text: 点击“修改密码”，修改初始密码。
 
   - tag: img
-    src: https://mp.innenu.com/img/account/reset-password.jpg
+    src: $img/account/reset-password.jpg
 
   - tag: ul
     type: tip
@@ -347,15 +351,15 @@ content:
 
 如果您同时提交了多个文件，或者您编写的页面想要导航至其他页面，您就需要创建列表来构建“页面跳转”。
 
-列表组件因为含有多个子项目，其 `content` 属性的值和文件的根键值 `content` 很像。您需要为数组中的每个元素设置文字与可选的图标、描述和链接。
+列表组件因为含有多个子项目，其 `items` 属性的值和文件的根键值 `content` 很像。您需要为数组中的每个元素设置文字与可选的图标、描述和链接。
 
 ::: details 列表参数
 
-| 参数    | 必填 |        值类型         | 内容     | 备注                                                      |
-| ------- | :--: | :-------------------: | -------- | --------------------------------------------------------- |
-| header  |  否  | `string` \| `boolean` | 头部标题 | 不填会在标题所在处留空占位，设置为 `false` 来取消留空占位 |
-| footer  |  否  |       `string`        | 尾部标题 |                                                           |
-| content |  是  |    `SimpleList[]`     | 列表内容 |                                                           |
+| 参数   | 必填 |        值类型         | 内容     | 备注                                                      |
+| ------ | :--: | :-------------------: | -------- | --------------------------------------------------------- |
+| header |  否  | `string` \| `boolean` | 头部标题 | 不填会在标题所在处留空占位，设置为 `false` 来取消留空占位 |
+| footer |  否  |       `string`        | 尾部标题 |                                                           |
+| items  |  是  |    `SimpleList[]`     | 列表内容 |                                                           |
 
 列表每一项参数如下:
 
@@ -392,12 +396,12 @@ title: 账号
 content:
   - tag: list
     header: 了解更多
-    content:
+    items:
       - text: 统一身份认证
 
   - tag: list
     header: 校园邮箱
-    content:
+    items:
       - text: 邮箱介绍
 
       - text: 安卓邮箱客户端设置
@@ -412,13 +416,13 @@ title: 账号
 content:
   - tag: list
     header: 了解更多
-    content:
+    items:
       - text: 统一身份认证
         icon: authorize
 
   - tag: list
     header: 校园邮箱
-    content:
+    items:
       - text: 邮箱介绍
         icon: email
 
@@ -436,14 +440,14 @@ title: 账号
 content:
   - tag: list
     header: 了解更多
-    content:
+    items:
       - text: 统一身份认证
         icon: authorize
         path: authorize
 
   - tag: list
     header: 校园邮箱
-    content:
+    items:
       - text: 邮箱介绍
         icon: email
         path: mail/intro
@@ -468,16 +472,16 @@ content:
 ```
 └─ res
    ├─ intro
-   |    ...
+   |   ...
    └─ guide
        └─ account
-            ├─ mail
-            |  ├─ intro.yml  (邮箱介绍)
-            |  ├─ ios.yml  (iOS 邮箱设置)
-            |  └─ android.yml (安卓邮箱设置)
-            |
-            ├─ authorize.yml (统一身份认证)
-            └─ index.yml (账号主页)
+          ├─ mail
+          |  ├─ intro.yml  (邮箱介绍)
+          |  ├─ ios.yml  (iOS 邮箱设置)
+          |  └─ android.yml (安卓邮箱设置)
+          |
+          ├─ authorize.yml (统一身份认证)
+          └─ index.yml (账号主页)
 ```
 
 比如，对于所有文件来说，他们都可以通过 `/guide/account/mail/intro` 访问 `intro.yml`。
