@@ -83,3 +83,7 @@ in 东师服务器文件结构如下:
 关于完整的服务器文件结构，请访问 <https://github.com/Hope-Studio/innenu-res>
 
 :::
+
+### 点位获取
+
+如需获取地理点位，请使用 [腾讯地图选点工具](https://lbs.qq.com/getPoint/)。
