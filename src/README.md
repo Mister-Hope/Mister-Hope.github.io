@@ -6,7 +6,7 @@ title: 主页
 heroImage: /logo.svg
 heroText: Thân Sơn
 heroFullScreen: true
-tagline: Where there is light, there is hope
+tagline: bé iu của anh
 projects:
   - name: vuepress
     desc: 基于 Vue 的静态文档构建器
