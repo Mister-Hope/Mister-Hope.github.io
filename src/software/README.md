@@ -1,5 +1,5 @@
 ---
-title: 软件教程
+title: Phần mềm
 icon: software
 star: 9
 sticky: 9
