@@ -40,12 +40,12 @@ export const zhNavbarConfig = navbar([
     ],
   },
   {
-    text: "软件教程",
+    text: "Phần mềm",
     icon: "software",
     prefix: "/software/",
     children: [
       {
-        text: "软件教程",
+        text: "Phần mềm",
         icon: "software",
         link: "",
         activeMatch: "^/software/$",
