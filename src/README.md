@@ -4,7 +4,7 @@ layout: Blog
 icon: home
 title: 主页
 heroImage: /logo.svg
-heroText: 𝓜𝓻. 𝓗𝓸𝓹𝓮
+heroText: Thân Sơn
 heroFullScreen: true
 tagline: Where there is light, there is hope
 projects:
