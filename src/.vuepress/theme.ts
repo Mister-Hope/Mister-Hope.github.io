@@ -7,7 +7,7 @@ export default hopeTheme({
   hostname: "https://mrhope.site",
 
   author: {
-    name: "Mr.Hope",
+    name: "Thân Sơn",
     url: "https://mrhope.site",
   },
 
@@ -28,7 +28,7 @@ export default hopeTheme({
       sidebar: zhSidebarConig,
 
       blog: {
-        description: "VuePress 项目成员，前端开发者，理论物理硕士在读",
+        description: " Đi một ngày đàng học một sàng khôn",
         intro: "/about/",
         medias: {
           QQ: "http://wpa.qq.com/msgrd?v=3&uin=1178522294&site=qq&menu=yes",
