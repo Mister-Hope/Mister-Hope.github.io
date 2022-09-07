@@ -6,8 +6,8 @@
     <link>https://mrhope.site/</link>
     <description>Where there is light, there is hope.</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 06 Aug 2022 18:09:30 GMT</pubDate>
-    <lastBuildDate>Sat, 06 Aug 2022 18:09:30 GMT</lastBuildDate>
+    <pubDate>Wed, 07 Sep 2022 13:27:13 GMT</pubDate>
+    <lastBuildDate>Wed, 07 Sep 2022 13:27:13 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>Node.js</category>
@@ -355,7 +355,8 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
     console<span>.</span><span>log</span><span>(</span>res<span>.</span>code<span>)</span><span>;</span>
   <span>}</span><span>,</span>
 <span>}</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div><div><p>注意</p>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div><div>
+<p>注意</p>
 <p>异步函数会在异步动作进行完之后，触发对应设置好的回调函数，所以此时的函数执行已经脱离了正常 js 的执行上下文。</p>
 <p>如果对上面的话不理解，请务必查阅<strong>什么是同步/异步函数</strong>。</p>
 </div>
@@ -473,7 +474,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></template>
 <template #tab1="{ title, value, isActive }">
 <div><pre><code><span>public</span> <span>class</span> <span>MainActivity</span> <span>extends</span> <span>AppCompatActivity</span> <span>{</span>
-    <span>public</span> <span>static</span> <span>final</span> <span>String</span> EXTRA_MESSAGE <span>=</span> <span>"com.example.myfirstapp.MESSAGE"</span><span>;</span>
+    <span>public</span> <span>static</span> <span>final</span> <span>String</span> <span>EXTRA_MESSAGE</span> <span>=</span> <span>"com.example.myfirstapp.MESSAGE"</span><span>;</span>
     <span>@Override</span>
     <span>protected</span> <span>void</span> <span>onCreate</span><span>(</span><span>Bundle</span> savedInstanceState<span>)</span> <span>{</span>
         <span>super</span><span>.</span><span>onCreate</span><span>(</span>savedInstanceState<span>)</span><span>;</span>
@@ -485,7 +486,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
         <span>Intent</span> intent <span>=</span> <span>new</span> <span>Intent</span><span>(</span><span>this</span><span>,</span> <span>DisplayMessageActivity</span><span>.</span><span>class</span><span>)</span><span>;</span>
         <span>EditText</span> editText <span>=</span> <span>(</span><span>EditText</span><span>)</span> <span>findViewById</span><span>(</span><span>R</span><span>.</span>id<span>.</span>editTextTextPersonName<span>)</span><span>;</span>
         <span>String</span> message <span>=</span> editText<span>.</span><span>getText</span><span>(</span><span>)</span><span>.</span><span>toString</span><span>(</span><span>)</span><span>;</span>
-        intent<span>.</span><span>putExtra</span><span>(</span>EXTRA_MESSAGE<span>,</span> message<span>)</span><span>;</span>
+        intent<span>.</span><span>putExtra</span><span>(</span><span>EXTRA_MESSAGE</span><span>,</span> message<span>)</span><span>;</span>
         <span>startActivity</span><span>(</span>intent<span>)</span><span>;</span>
     <span>}</span>
 <span>}</span>
@@ -526,7 +527,8 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 <p>startActivity() 方法将启动一个由 Intent 指定的 DisplayMessageActivity 实例。接下来，您需要创建该类。</p>
 </li>
 </ul>
-<div><p>提示</p>
+<div>
+<p>提示</p>
 <p>导航架构组件允许您使用导航编辑器将一个 activity 与另一个 activity 相关联。建立这种关联后，您可以利用 API 在用户触发关联的操作（例如，用户点击某个按钮时）时启动第二个 activity。如需了解详情，请参阅导航。</p>
 </div>
 <h2 id="创建第二个-activity" tabindex="-1"> 创建第二个 activity</h2>
@@ -580,7 +582,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 
     <span>// Get the Intent that started this activity and extract the string</span>
     <span>Intent</span> intent <span>=</span> <span>getIntent</span><span>(</span><span>)</span><span>;</span>
-    <span>String</span> message <span>=</span> intent<span>.</span><span>getStringExtra</span><span>(</span><span>MainActivity</span><span>.</span>EXTRA_MESSAGE<span>)</span><span>;</span>
+    <span>String</span> message <span>=</span> intent<span>.</span><span>getStringExtra</span><span>(</span><span>MainActivity</span><span>.</span><span>EXTRA_MESSAGE</span><span>)</span><span>;</span>
 
     <span>// Capture the layout's TextView and set the string as its text</span>
     <span>TextView</span> textView <span>=</span> <span>findViewById</span><span>(</span><span>R</span><span>.</span>id<span>.</span>textView<span>)</span><span>;</span>
@@ -663,7 +665,8 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 <p>在 Minimum SDK 字段中选择您希望应用支持的最低 Android 版本。</p>
 </li>
 </ul>
-<div><p>提示</p>
+<div>
+<p>提示</p>
 <p>点击 Help me choose 链接可打开 Android Platform/API Version Distribution 对话框。此对话框会提供有关各 Android 版本在设备间的分布情况的信息。您需要权衡的主要因素是，您想支持的 Android 设备所占的百分比，以及在这些设备所搭载的各个不同版本上维护应用所需的工作量。例如，如果您选择让应用与多个不同 Android 版本兼容，那么维护最旧版本与最新版本之间的兼容性所需的工作量就会增大。</p>
 </div>
 <ul>
@@ -758,7 +761,8 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 <li>创建一个从按钮左侧到文本框右侧的约束条件。</li>
 <li>如需按水平对齐约束视图，请创建一个文本基线之间的约束条件。为此，请右键点击按钮，然后选择 Show Baseline 在布局编辑器中显示基准操作。基线锚点显示在按钮内部。点击并按住此锚点，然后将其拖动到相邻文本框中显示的基线锚点上。</li>
 </ol>
-<div><p>提示</p>
+<div>
+<p>提示</p>
 <p>您还可以根据顶边或底边实现水平对齐。但按钮的图片周围有内边距，因此如果以这种方式对齐，那么它们看上去是没有对齐的。</p>
 </div>
 <h2 id="更改界面字符串" tabindex="-1"> 更改界面字符串</h2>
@@ -799,7 +803,8 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 <ol>
 <li>
 <p>选择两个视图。若要执行此操作，请点击一个视图，在按住 Shift 键的同时点击另一个视图，然后右键点击任一视图并依次选择 Chains &gt; Create Horizontal Chain。布局随即显示出来，如图 8 所示。</p>
-<div><p>相关信息</p>
+<div>
+<p>相关信息</p>
 <p>链是两个或多个视图之间的双向约束条件，可让您采用一致的方式安排链接的视图。</p>
 </div>
 </li>
@@ -923,7 +928,8 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
       <content:encoded><![CDATA[<p>Angular 是 Google 官方在 2016 年 9 月出品的一款框架。</p>
 <p>框架强制 Typescript，更倾向于大型项目。</p>
 
-<div><p>Angular 的优点</p>
+<div>
+<p>Angular 的优点</p>
 <ol>
 <li>零配置 CLI，享受到 webpack 每次升级的好处，但是不用关心任何 webpack config</li>
 <li>官方提供所有的必须组件(http、router、animation、ssr、e2e 等等)，在 2000+ 内部应用测试之后才会发布，基本零 bug，并且保证在未来很多年内一直保证兼容升级</li>
@@ -961,13 +967,15 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
       <link>https://mrhope.site/code/website/jQuery/ajax.html</link>
       <guid>https://mrhope.site/code/website/jQuery/ajax.html</guid>
       <source url="https://mrhope.site/rss.xml">AJAX</source>
-      <description>章节过时
+      <description>
+章节过时
 目前，一套代码已经可以在多个浏览器上运行良好了，所以 jQuery 的意义并不大。在 Node.js 中，我们使用 axios 来进行请求。
 
 </description>
       <category>jQuery</category>
       <pubDate>Tue, 05 Nov 2019 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<div><p>章节过时</p>
+      <content:encoded><![CDATA[<div>
+<p>章节过时</p>
 <p>目前，一套代码已经可以在多个浏览器上运行良好了，所以 jQuery 的意义并不大。在 Node.js 中，我们使用 <a href="/code/node-js/package/axois.html">axios</a> 来进行请求。</p>
 </div>
 
@@ -1058,13 +1066,15 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
       <link>https://mrhope.site/code/website/jQuery/modify-dom.html</link>
       <guid>https://mrhope.site/code/website/jQuery/modify-dom.html</guid>
       <source url="https://mrhope.site/rss.xml">修改 DOM 结构</source>
-      <description>章节过时
+      <description>
+章节过时
 而且目前浏览器 API 已经基本统一，除非兼容旧版本 IE，否则无需针对不同浏览器写不同的代码。
 
 </description>
       <category>jQuery</category>
       <pubDate>Sun, 03 Nov 2019 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<div><p>章节过时</p>
+      <content:encoded><![CDATA[<div>
+<p>章节过时</p>
 <p>而且目前浏览器 API 已经基本统一，除非兼容旧版本 IE，否则无需针对不同浏览器写不同的代码。</p>
 </div>
 
@@ -1115,13 +1125,15 @@ li<span>.</span><span>remove</span><span>(</span><span>)</span><span>;</span> <s
       <link>https://mrhope.site/code/website/jQuery/operate-dom.html</link>
       <guid>https://mrhope.site/code/website/jQuery/operate-dom.html</guid>
       <source url="https://mrhope.site/rss.xml">操作 DOM</source>
-      <description>章节过时
+      <description>
+章节过时
 目前，新型的框架大多遵循 MVVM 逻辑，及把逻辑层的数据绑定到视图层去显示。这种思路下，无需也不应操作 DOM。
 
 </description>
       <category>jQuery</category>
       <pubDate>Sun, 03 Nov 2019 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<div><p>章节过时</p>
+      <content:encoded><![CDATA[<div>
+<p>章节过时</p>
 <p>目前，新型的框架大多遵循 MVVM 逻辑，及把逻辑层的数据绑定到视图层去显示。这种思路下，无需也不应操作 DOM。</p>
 </div>
 
@@ -1349,7 +1361,8 @@ request<span>.</span><span>send</span><span>(</span><span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><p>通过检测 <code>window</code> 对象是否有 <code>XMLHttpRequest</code> 属性来确定浏览器是否支持标准的 <code>XMLHttpRequest</code>。注意，不要根据浏览器的 <code>navigator.userAgent</code> 来检测浏览器是否支持某个 JavaScript 特性，一是因为这个字符串本身可以伪造，二是通过 IE 版本判断 JavaScript 特性将非常复杂。</p>
 <p>当创建了 <code>XMLHttpRequest</code> 对象后，要先设置 <code>onreadystatechange</code> 的回调函数。在回调函数中，通常我们只需通过 <code>readyState === 4</code> 判断请求是否完成，如果已完成，再根据 <code>status === 200</code> 判断是否是一个成功的响应。</p>
 <p><code>XMLHttpRequest</code> 对象的 <code>open()</code> 方法有 3 个参数，第一个参数指定是 GET 还是 POST，第二个参数指定 URL 地址，第三个参数指定是否使用异步，默认是 <code>true</code>，所以不用写。</p>
-<div><p>警告</p>
+<div>
+<p>警告</p>
 <p>千万不要把第三个参数指定为 <code>false</code>，否则浏览器将停止响应，直到 Ajax 请求完成。如果这个请求耗时 10 秒，那么 10 秒内您会发现浏览器处于“假死”状态。</p>
 </div>
 <p>最后调用 <code>send()</code> 方法才真正发送请求。GET 请求不需要参数，POST 请求需要把 body 部分以字符串或者 <code>FormData</code> 对象传进去。</p>
@@ -1473,7 +1486,8 @@ request<span>.</span><span>send</span><span>(</span><span>)</span><span>;</span>
 
 <span>// 通过 querySelectorAll 获取 q1 节点内的符合条件的所有节点:</span>
 <span>const</span> ps <span>=</span> q1<span>.</span><span>querySelectorAll</span><span>(</span><span>"div.highlighted > p"</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div><div><p>注意</p>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div><div>
+<p>注意</p>
 <p>低版本的 IE &lt; 8 不支持 <code>querySelector</code> 和 <code>querySelectorAll</code>。IE8 仅有限支持。</p>
 <p>在历史上，使用的方法是 <code>document.getElementById()</code> 和 <code>document.getElementsByTagName()</code>，以及 CSS 选择器 <code>document.getElementsByClassName()</code>。</p>
 <p>由于 ID 在 HTML 文档中是唯一的，所以 <code>document.getElementById()</code> 可以直接定位唯一的一个 DOM 节点。<code>document.getElementsByTagName()</code> 和 <code>document.getElementsByClassName()</code> 总是返回一组 DOM 节点。要精确地选择 DOM，可以先定位父节点，再从父节点开始选择，以缩小范围。</p>
@@ -1515,7 +1529,8 @@ p<span>.</span>innerText <span>=</span> <span>'&lt;script>alert("Hi")&lt;/script
 <span>// HTML被自动编码，无法设置一个&lt;script>节点:</span>
 <span>// &lt;p id="p-id">&amp;lt;script&amp;gt;alert("Hi")&amp;lt;/script&amp;gt;&lt;/p></span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>两者的区别在于读取属性时，<code>innerText</code> 不返回隐藏元素的文本，而 <code>textContent</code> 返回所有文本。</p>
-<div><p>注意</p>
+<div>
+<p>注意</p>
 <p>IE &lt; 9 不支持 <code>textContent</code>。</p>
 </div>
 <p>修改 CSS 也是经常需要的操作。DOM 节点的 style 属性对应所有的 CSS，可以直接获取或设置。因为 CSS 允许 <code>font-size</code> 这样的名称，但它并非 JavaScript 有效的属性名，所以需要在 JavaScript 中改写为驼峰式命名 <code>fontSize</code>:</p>
@@ -1614,7 +1629,8 @@ list<span>.</span><span>insertBefore</span><span>(</span>haskell<span>,</span> r
 <span>const</span> removed <span>=</span> parent<span>.</span><span>removeChild</span><span>(</span>self<span>)</span><span>;</span>
 
 removed <span>===</span> self<span>;</span> <span>// true</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><div><p>注意</p>
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><div>
+<p>注意</p>
 <p>删除后的节点虽然不在文档树中了，但其实它还在内存中，可以随时再次被添加到别的位置。</p>
 </div>
 <p>当您遍历一个父节点的子节点并进行删除操作时，要注意，<code>children</code> 属性是一个只读属性，并且它在子节点变化时会实时更新。</p>
@@ -1725,7 +1741,8 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 <li>
 <p><a href="https://developer.mozilla.org/zh-CN/" target="_blank" rel="noopener noreferrer">MDN</a></p>
-<div><p>相关信息</p>
+<div>
+<p>相关信息</p>
 <p>MDN 的中文文档翻译很差，大多都是机翻，十分建议直接阅读英文文档。</p>
 </div>
 </li>
@@ -1915,7 +1932,8 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
       <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
       <content:encoded><![CDATA[<p>这里是 Mr.Hope 的一些随笔，后续被整理进博客中。</p>
 <h2 id="四季" tabindex="-1"> 四季</h2>
-<div><p>介绍</p>
+<div>
+<p>介绍</p>
 <p>这是我在高一写的散文诗集，最初发表在空间日志上。</p>
 <p>后续也写了一些诗补充了进去，其中以 “秋之思” 篇幅最多</p>
 <p>近日将其作为少年回忆，整理在博客中。</p>
@@ -1934,11 +1952,13 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <p><a href="/note/summer/1.html">夏之歌</a></p>
 </li>
 </ul>
-<div><p>其他方式</p>
+<div>
+<p>其他方式</p>
 <p>也可查看 <a href="https://user.qzone.qq.com/1178522294" target="_blank" rel="noopener noreferrer">空间相册</a></p>
 </div>
 <h2 id="笑谈人生" tabindex="-1"> 笑谈人生</h2>
-<div><p>介绍</p>
+<div>
+<p>介绍</p>
 <p>这是我在高一写的人生感悟，最初发表在空间日志上。</p>
 <p>近日将其作为少年回忆，整理在博客中。</p>
 </div>
@@ -1946,7 +1966,8 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <li><a href="/note/life/">点击前往</a></li>
 </ul>
 <h2 id="轻言细语" tabindex="-1"> 轻言细语</h2>
-<div><p>介绍</p>
+<div>
+<p>介绍</p>
 <p>这是我在高一写的一些小的散文诗，最初发表在空间日志上。</p>
 <p>近日将其作为少年回忆，整理在博客中。</p>
 </div>
@@ -2065,7 +2086,8 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <p><a href="https://www.runoob.com/asp/asp-tutorial.html" target="_blank" rel="noopener noreferrer">菜鸟教程</a></p>
 </li>
 </ul>
-<div><p>提示</p>
+<div>
+<p>提示</p>
 <p>更多详情有待日后补充</p>
 </div>
 ]]></content:encoded>
@@ -2237,7 +2259,8 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <ul>
 <li><a href="/code/language/linter/">Linter 介绍</a></li>
 </ul>
-<div><p>提示</p>
+<div>
+<p>提示</p>
 <p>C 、C++、Java、PHP 正在编写中...</p>
 </div>
 ]]></content:encoded>
@@ -2247,20 +2270,23 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
       <link>https://mrhope.site/code/mini-app/</link>
       <guid>https://mrhope.site/code/mini-app/</guid>
       <source url="https://mrhope.site/rss.xml">小程序</source>
-      <description>提示
+      <description>
+提示
 在开发小程序之前。应当掌握 HTML、CSS、JavaScript 基础 以及 ES6。
 
 </description>
       <category>小程序</category>
       <pubDate>Mon, 25 Nov 2019 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<div><p>提示</p>
+      <content:encoded><![CDATA[<div>
+<p>提示</p>
 <p>在开发小程序之前。应当掌握 <a href="/code/website/html/">HTML</a>、<a href="/code/website/css/">CSS</a>、<a href="/code/language/js/guide/">JavaScript 基础</a> 以及 <a href="/code/language/js/es6/">ES6</a>。</p>
 </div>
 
 <h2 id="小程序基础简介" tabindex="-1"> 小程序基础简介</h2>
 <p>在微信小程序中主要有四种文件结构: <code>wxml</code>、<code>wxss</code>、<code>js</code> 和 <code>json</code>。其中 <code>wxml</code> 对应带有 vue.js 特征的 html5，<code>wxss</code> 对应 css3，<code>js</code> 对应 ES6 标准的的 javaScript。</p>
 <p>对于 QQ 小程序，其文件结构为 <code>QML</code>、<code>qss</code>、<code>js</code> 和 <code>json</code>。</p>
-<div><p>提示</p>
+<div>
+<p>提示</p>
 <p>QQ 小程序本质还是换汤不换药的，且 QQ 开发者工具兼容 <code>wxml</code> 与 <code>wss</code>)</p>
 </div>
 <p>小程序开发与网页开发极其相似。所以必须有适当的网页开发基础。零基础的人可能很难直接上手小程序开发。</p>
@@ -2565,7 +2591,8 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </li>
 <li>
 <p><code>yarn config set registry &lt;registry&gt;</code>: 更改源</p>
-<div><p>提示</p>
+<div>
+<p>提示</p>
 <p>在国内，建议换成淘宝源 <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener noreferrer">https://registry.npm.taobao.org</a></p>
 <p>即执行</p>
 <div><pre><code><span>yarn</span> config <span>set</span> registry https://registry.npm.taobao.org
@@ -2586,7 +2613,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <p>创建普通模板:</p>
 <div><pre><code>npx create-react-app xxx
 </code></pre><div aria-hidden="true"><div></div></div></div><p>创建 TS 模板:</p>
-<div><pre><code>npx create-react-app xxx --template typescript
+<div><pre><code>npx create-react-app xxx <span>--template</span> typescript
 </code></pre><div aria-hidden="true"><div></div></div></div><h2 id="react-文档" tabindex="-1"> React 文档</h2>
 <ul>
 <li><a href="https://reactjs.org/docs/getting-started.html" target="_blank" rel="noopener noreferrer">官方文档</a></li>
@@ -2752,12 +2779,14 @@ JavaScript 编写网页的行为
 <li>JavaScript 编写网页的行为</li>
 </ol>
 
-<div><p>提示</p>
+<div>
+<p>提示</p>
 <p>一个大型的网站，很少是直接使用原生代码写的。</p>
 <p>最新的网站大多数都是用三大框架(、、)搭建，并引入 npm 上的 UI 库编写而成。</p>
 <p>稍微老的网站会使用其他框架作为辅助，比如、等。</p>
 </div>
-<div><p>网页标准指定</p>
+<div>
+<p>网页标准指定</p>
 <p>互联网网页标准由 W3C 组织制定，它的全称是万维网联盟组织。</p>
 </div>
 <h2 id="html" tabindex="-1"> HTML</h2>
@@ -3220,14 +3249,16 @@ JavaScript 编写网页的行为
       <link>https://mrhope.site/note/fall/</link>
       <guid>https://mrhope.site/note/fall/</guid>
       <source url="https://mrhope.site/rss.xml">秋之思</source>
-      <description>介绍
+      <description>
+介绍
 这是我在高一写的一个散文诗集，最初发表在空间日志上。
 近日将其作为少年回忆，整理在博客中。
 
 </description>
       <category>随笔</category>
       <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
-      <content:encoded><![CDATA[<div><p>介绍</p>
+      <content:encoded><![CDATA[<div>
+<p>介绍</p>
 <p>这是我在高一写的一个散文诗集，最初发表在空间日志上。</p>
 <p>近日将其作为少年回忆，整理在博客中。</p>
 </div>
@@ -3246,7 +3277,8 @@ JavaScript 编写网页的行为
       <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
       <content:encoded><![CDATA[<h2 id="简介" tabindex="-1"> 简介</h2>
 <p>in 东师小程序的大部分页面都均由 YAML 文件生成。开发者只需要使用编辑器编辑 YAML，即可增添或修改小程序页面。</p>
-<div><p>YAML</p>
+<div>
+<p>YAML</p>
 <p>YAML 是专门用来写配置文件的语言，非常简洁和强大，其设计目标，就是方便人类读写。</p>
 </div>
 <h2 id="快速上手" tabindex="-1"> 快速上手</h2>
@@ -3254,7 +3286,8 @@ JavaScript 编写网页的行为
 <li>为了编写小程序页面配置文件，您需要先学习 <a href="/note/innenu/yaml.html">YAML 的规则</a>，同时简单浏览一下一款编辑器 <a href="/software/vscode/simple.html">VSCode 的介绍</a></li>
 <li>掌握上述两个内容之后，您就可以尝试对照 <a href="/note/innenu/tag-list.html">小程序简易参数表</a> 通过 VSCode 编写页面 YAML 文件了，如果您觉得直接上手太难，您可以参阅 <a href="/note/innenu/get-started.html">交互式教程</a> 来体验一个示例。</li>
 </ol>
-<div><p>更多参考</p>
+<div>
+<p>更多参考</p>
 <p>所有的小程序页面都在 <a href="https://github.com/Hope-Studio/innenu-res/blob/main/res/" target="_blank" rel="noopener noreferrer">https://github.com/Hope-Studio/innenu-res/blob/main/res/</a> 下，您可以尽情的进行参考。</p>
 </div>
 <h2 id="开发注意事项" tabindex="-1"> 开发注意事项</h2>
@@ -3298,7 +3331,8 @@ JavaScript 编写网页的行为
 <li>页面 YAML 存放在 <code>https://mp.innenu.com/res/</code> 下</li>
 <li>图标存放在 <code>https://mp.innenu.com/res/icon/</code> 下</li>
 </ul>
-<div><p>相关信息</p>
+<div>
+<p>相关信息</p>
 <p>关于完整的服务器文件结构，请访问 <a href="https://github.com/Hope-Studio/innenu-res" target="_blank" rel="noopener noreferrer">https://github.com/Hope-Studio/innenu-res</a></p>
 </div>
 <h3 id="点位获取" tabindex="-1"> 点位获取</h3>
@@ -3312,7 +3346,8 @@ JavaScript 编写网页的行为
       <source url="https://mrhope.site/rss.xml">笑谈人生</source>
       <category>随笔</category>
       <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
-      <content:encoded><![CDATA[<div><p>介绍</p>
+      <content:encoded><![CDATA[<div>
+<p>介绍</p>
 <p>这是我在高一写的人生感悟，最初发表在空间日志上。</p>
 <p>近日将其作为少年回忆，整理在博客中。</p>
 </div>
@@ -3338,14 +3373,16 @@ JavaScript 编写网页的行为
       <link>https://mrhope.site/note/poem/</link>
       <guid>https://mrhope.site/note/poem/</guid>
       <source url="https://mrhope.site/rss.xml">轻言细语</source>
-      <description>介绍
+      <description>
+介绍
 这是我在高一写的一些小的散文诗，最初发表在空间日志上。
 近日将其作为少年回忆，整理在博客中。
 
 </description>
       <category>随笔</category>
       <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
-      <content:encoded><![CDATA[<div><p>介绍</p>
+      <content:encoded><![CDATA[<div>
+<p>介绍</p>
 <p>这是我在高一写的一些小的散文诗，最初发表在空间日志上。</p>
 <p>近日将其作为少年回忆，整理在博客中。</p>
 </div>
@@ -3363,14 +3400,16 @@ JavaScript 编写网页的行为
       <link>https://mrhope.site/note/spring/</link>
       <guid>https://mrhope.site/note/spring/</guid>
       <source url="https://mrhope.site/rss.xml">春之诗</source>
-      <description>介绍
+      <description>
+介绍
 这是我在高一写的第三篇散文诗集，最初发表在空间日志上。
 近日将其作为少年回忆，整理在博客中。
 
 </description>
       <category>随笔</category>
       <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
-      <content:encoded><![CDATA[<div><p>介绍</p>
+      <content:encoded><![CDATA[<div>
+<p>介绍</p>
 <p>这是我在高一写的第三篇散文诗集，最初发表在空间日志上。</p>
 <p>近日将其作为少年回忆，整理在博客中。</p>
 </div>
@@ -3382,14 +3421,16 @@ JavaScript 编写网页的行为
       <link>https://mrhope.site/note/summer/</link>
       <guid>https://mrhope.site/note/summer/</guid>
       <source url="https://mrhope.site/rss.xml">夏之歌</source>
-      <description>介绍
+      <description>
+介绍
 这是我在高一写的第四篇散文诗集，最初发表在空间日志上。
 近日将其作为少年回忆，整理在博客中。
 
 </description>
       <category>随笔</category>
       <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
-      <content:encoded><![CDATA[<div><p>介绍</p>
+      <content:encoded><![CDATA[<div>
+<p>介绍</p>
 <p>这是我在高一写的第四篇散文诗集，最初发表在空间日志上。</p>
 <p>近日将其作为少年回忆，整理在博客中。</p>
 </div>
@@ -3401,14 +3442,16 @@ JavaScript 编写网页的行为
       <link>https://mrhope.site/note/winter/</link>
       <guid>https://mrhope.site/note/winter/</guid>
       <source url="https://mrhope.site/rss.xml">冬之语</source>
-      <description>介绍
+      <description>
+介绍
 这是我在高一写的第二篇散文诗集，最初发表在空间日志上。
 近日将其作为少年回忆，整理在博客中。
 
 </description>
       <category>随笔</category>
       <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
-      <content:encoded><![CDATA[<div><p>介绍</p>
+      <content:encoded><![CDATA[<div>
+<p>介绍</p>
 <p>这是我在高一写的第二篇散文诗集，最初发表在空间日志上。</p>
 <p>近日将其作为少年回忆，整理在博客中。</p>
 </div>
@@ -3497,7 +3540,8 @@ JavaScript 编写网页的行为
       <pubDate>Fri, 29 May 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>这里是一些 Comsol 的学习资料整理与学习心得。</p>
 
-<div><p>写在前面</p>
+<div>
+<p>写在前面</p>
 <p>本教程只适用于从未接触过仿真的人员，内容比较基础。</p>
 <p>我本人主要活跃在计算机相关领域，本科专业是物理学，并没有学过系统的工程原理、数值分析、模型建构以及相关的误差分析。COMSOL 是我本科制作毕设的软件，在毕设前，我也使用 COMSOL 构建了几个模型，完成了一些装置的模拟与优化。</p>
 <p>本篇教程，是根据我对 COMSOL 以及有限元仿真的理解书写的，一定会有一些疏漏与理解错误之处，还望大家指出。另外我主要研究过的方向是传热与流体流动，在本教程的举例中，也大多以这两方面为主。对其他的方向与模块，我是不熟悉的。</p>
@@ -3589,6 +3633,7 @@ JavaScript 编写网页的行为
       <guid>https://mrhope.site/software/git/</guid>
       <source url="https://mrhope.site/rss.xml">Git</source>
       <description>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。在开发中分布式文件管理系统，可以便于多人协作开发。
+
 交互式学习
 如果您觉得本文太枯燥，这里有一个 交互式的分支演示与学习网站。您可以在这里领略 Git 的魅力。
 但 Mr.Hope 仍建议您操作完再系统的学习并阅读以下内容。
@@ -3597,7 +3642,8 @@ JavaScript 编写网页的行为
       <category>Git</category>
       <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
       <content:encoded><![CDATA[<p>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。在开发中分布式文件管理系统，可以便于多人协作开发。</p>
-<div><p>交互式学习</p>
+<div>
+<p>交互式学习</p>
 <p>如果您觉得本文太枯燥，这里有一个 <a href="http://learngitbranching.js.org/" target="_blank" rel="noopener noreferrer">交互式的分支演示与学习网站</a>。您可以在这里领略 Git 的魅力。</p>
 <p>但 Mr.Hope 仍建议您操作完再系统的学习并阅读以下内容。</p>
 </div>
@@ -3669,7 +3715,8 @@ JavaScript 编写网页的行为
 <p><a href="https://mrhope.site/file/git/progit_v2.1.45.pdf" target="_blank" rel="noopener noreferrer">Pro Git</a> (PDF)</p>
 </li>
 </ul>
-<div><p>TODO</p>
+<div>
+<p>TODO</p>
 <ol>
 <li>完善分支合并部分，加入更多命令介绍。如 <code>cherry-pick</code> <code>squash-merge</code>。</li>
 <li>介绍 Git Hook</li>
@@ -3842,13 +3889,15 @@ JavaScript 编写网页的行为
       <link>https://mrhope.site/code/language/C/</link>
       <guid>https://mrhope.site/code/language/C/</guid>
       <source url="https://mrhope.site/rss.xml">C 语言教程</source>
-      <description>提示
+      <description>
+提示
 正在完善中...
 
 </description>
       <category>C</category>
       <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
-      <content:encoded><![CDATA[<div><p>提示</p>
+      <content:encoded><![CDATA[<div>
+<p>提示</p>
 <p>正在完善中...</p>
 </div>
 
@@ -3859,13 +3908,15 @@ JavaScript 编写网页的行为
       <link>https://mrhope.site/code/language/C++/</link>
       <guid>https://mrhope.site/code/language/C++/</guid>
       <source url="https://mrhope.site/rss.xml">C++ 教程</source>
-      <description>提示
+      <description>
+提示
 正在完善中...
 
 </description>
       <category>C++</category>
       <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
-      <content:encoded><![CDATA[<div><p>提示</p>
+      <content:encoded><![CDATA[<div>
+<p>提示</p>
 <p>正在完善中...</p>
 </div>
 
@@ -3876,13 +3927,15 @@ JavaScript 编写网页的行为
       <link>https://mrhope.site/code/language/dart/</link>
       <guid>https://mrhope.site/code/language/dart/</guid>
       <source url="https://mrhope.site/rss.xml">Dart 教程</source>
-      <description>提示
+      <description>
+提示
 正在完善中...
 
 </description>
       <category>dart</category>
       <pubDate>Sat, 30 May 2020 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<div><p>提示</p>
+      <content:encoded><![CDATA[<div>
+<p>提示</p>
 <p>正在完善中...</p>
 </div>
 
@@ -3904,13 +3957,15 @@ JavaScript 编写网页的行为
       <link>https://mrhope.site/code/language/java/</link>
       <guid>https://mrhope.site/code/language/java/</guid>
       <source url="https://mrhope.site/rss.xml">Java 教程</source>
-      <description>提示
+      <description>
+提示
 正在完善中...
 
 </description>
       <category>Java</category>
       <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
-      <content:encoded><![CDATA[<div><p>提示</p>
+      <content:encoded><![CDATA[<div>
+<p>提示</p>
 <p>正在完善中...</p>
 </div>
 
@@ -3921,13 +3976,15 @@ JavaScript 编写网页的行为
       <link>https://mrhope.site/code/language/js/</link>
       <guid>https://mrhope.site/code/language/js/</guid>
       <source url="https://mrhope.site/rss.xml">JavaScript 教程</source>
-      <description>注
+      <description>
+注
 部分内容参考/来自廖雪峰、阮一峰书籍与博客
 
 </description>
       <category>JavaScript</category>
       <pubDate>Thu, 12 Sep 2019 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<div><p>注</p>
+      <content:encoded><![CDATA[<div>
+<p>注</p>
 <p>部分内容参考/来自廖雪峰、阮一峰书籍与博客</p>
 </div>
 
@@ -3935,7 +3992,8 @@ JavaScript 编写网页的行为
 <ul>
 <li><a href="/code/language/js/intro/">导论</a></li>
 </ul>
-<div><p>有趣的历史</p>
+<div>
+<p>有趣的历史</p>
 <p>1995 年网景公司正凭借其 Navigator 浏览器成为 Web 时代开启时最著名的第一代互联网公司。由于网景公司希望能在静态 HTML 页面上添加一些动态效果，于是叫 Brendan Eich 这哥们在两周之内设计出了 JavaScript 语言。您没看错，这哥们只用了 10 天时间 (这也是为什么至今也有人也在吐槽 JavaScript 垃圾的原因)。</p>
 <p>为什么起名叫 JavaScript? 原因是当时 Java 语言非常红火，所以网景公司就来碰瓷了，实际上两者没任何关系。</p>
 <ul>
@@ -4139,7 +4197,8 @@ Markdown 的主要目的是用来作为一种网络内容的写作用语言。
       <source url="https://mrhope.site/rss.xml">PHP 语言教程</source>
       <category>PHP</category>
       <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
-      <content:encoded><![CDATA[<div><p>提示</p>
+      <content:encoded><![CDATA[<div>
+<p>提示</p>
 <p>正在完善中...</p>
 </div>
 ]]></content:encoded>
@@ -4161,7 +4220,8 @@ Markdown 的主要目的是用来作为一种网络内容的写作用语言。
 <li>缺点: Python 是一种脚本语言，它的执行效率不是很高。</li>
 </ul>
 
-<div><p>注意</p>
+<div>
+<p>注意</p>
 <p>本教程基于 Python3, Python2 已经过时停止维护多年，请不要使用学习。</p>
 </div>
 <h2 id="python-简介" tabindex="-1"> Python 简介</h2>
@@ -4967,7 +5027,8 @@ CSS3 是最新的 CSS 标准，被拆分为&amp;quot;模块&amp;quot;。模块�
 <blockquote>
 <p>注: 官网说的，不是我说的 😂</p>
 </blockquote>
-<div><p>提示</p>
+<div>
+<p>提示</p>
 <p>SCSS 是 Sass3 版本当中引入的新语法特性,完全兼容 CSS3 的同时继承了 Sass 强大的动态功能。</p>
 </div>
 <ul>
@@ -4983,14 +5044,16 @@ CSS3 是最新的 CSS 标准，被拆分为&amp;quot;模块&amp;quot;。模块�
       <link>https://mrhope.site/code/website/emmet/</link>
       <guid>https://mrhope.site/code/website/emmet/</guid>
       <source url="https://mrhope.site/rss.xml">Emmet 语法</source>
-      <description>简介
+      <description>
+简介
 所有操作按下 “tab” 键即可瞬间完成
 
 Emmet 是一个快速创建 HTML 和 CSS 的方式，如果您想要成为一个高级 Web 开发者，为了工作效率，您应该掌握 Emmet 语法。
 </description>
       <category>Emmet</category>
       <pubDate>Tue, 03 Sep 2019 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<div><p>简介</p>
+      <content:encoded><![CDATA[<div>
+<p>简介</p>
 <p>所有操作按下 “tab” 键即可瞬间完成</p>
 </div>
 <p>Emmet 是一个快速创建 HTML 和 CSS 的方式，如果您想要成为一个高级 Web 开发者，为了工作效率，您应该掌握 Emmet 语法。</p>
@@ -5018,7 +5081,8 @@ Emmet 是一个快速创建 HTML 和 CSS 的方式，如果您想要成为一个
       <pubDate>Sun, 01 Sep 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>HTML 指的是超文本标记语言 (Hyper Text Markup Language)，它不是一种编程语言，而是一种标记语言 (markup language)，它使用标记标签来描述网页。HTML5 是 HTML 最新的修订版本。</p>
 
-<div><p>提示</p>
+<div>
+<p>提示</p>
 <p>在网页的前端开发中，它描绘了视图层的具体结构。</p>
 </div>
 <h2 id="初学者教程" tabindex="-1"> 初学者教程</h2>
@@ -5087,6 +5151,7 @@ Emmet 是一个快速创建 HTML 和 CSS 的方式，如果您想要成为一个
       <guid>https://mrhope.site/code/website/jQuery/</guid>
       <source url="https://mrhope.site/rss.xml">jQuery</source>
       <description>jQuery 是一款能够方便快捷的操作 DOM，并兼容所有主流浏览器的框架，目前最新版本是 3.5.1。
+
 提示
 由于目前前端应用的愈加复杂，前端开发者大多数转向 MVVM 框架，目前世界比较流行的三大 MVVM 框架是 Vue React Angular。可以说，在 2020 年，jQuery 已经过时了!
 不过 jQuery 无论说从代码实现还是从写法上，到今天都是值得借鉴的。
@@ -5097,7 +5162,8 @@ Emmet 是一个快速创建 HTML 和 CSS 的方式，如果您想要成为一个
       <category>jQuery</category>
       <pubDate>Sat, 02 Nov 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>jQuery 是一款能够方便快捷的操作 DOM，并兼容所有主流浏览器的框架，目前最新版本是 3.5.1。</p>
-<div><p>提示</p>
+<div>
+<p>提示</p>
 <p>由于目前前端应用的愈加复杂，前端开发者大多数转向 MVVM 框架，目前世界比较流行的三大 MVVM 框架是 Vue React Angular。可以说，在 2020 年，<strong>jQuery 已经过时了</strong>!</p>
 <p>不过 jQuery 无论说从代码实现还是从写法上，到今天都是值得借鉴的。</p>
 <p>所以如果您只想简单了解并掌握前端开发，而不是深入地从事相关行业，您可以直接 <a href="/code/vue/">跳过本章节</a>。</p>
@@ -5553,13 +5619,15 @@ Emmet 是一个快速创建 HTML 和 CSS 的方式，如果您想要成为一个
       <link>https://mrhope.site/code/language/js/guide/</link>
       <guid>https://mrhope.site/code/language/js/guide/</guid>
       <source url="https://mrhope.site/rss.xml">快速上手</source>
-      <description>提示
+      <description>
+提示
 本部分将带您尽快进入 JavaScript 的世界。
 
 </description>
       <category>JavaScript</category>
       <pubDate>Sat, 14 Sep 2019 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<div><p>提示</p>
+      <content:encoded><![CDATA[<div>
+<p>提示</p>
 <p>本部分将带您尽快进入 JavaScript 的世界。</p>
 </div>
 
@@ -5623,14 +5691,16 @@ Emmet 是一个快速创建 HTML 和 CSS 的方式，如果您想要成为一个
       <link>https://mrhope.site/code/language/js/intro/</link>
       <guid>https://mrhope.site/code/language/js/intro/</guid>
       <source url="https://mrhope.site/rss.xml">JavaScript 简介</source>
-      <description>JavaScript 语言是什么
+      <description>
+JavaScript 语言是什么
 JavaScript 是一种轻量级的脚本语言。所谓“脚本语言” (script language)，指的是它不具备开发操作系统的能力，而是只用来编写控制其他大型应用程序(比如浏览器)的“脚本”。
 JavaScript 也是一种嵌入式 (embedded) 语言。它本身提供的核心语法不算很多，只能用来做一些数学和逻辑运算。JavaScript 本身不提供任何与 I/O (输入/输出)相关的 API，都要靠宿主环境(host)提供，所以 JavaScript 只合适嵌入更大型的应用程序环境，去调用宿主环境提供的底层 API。
 
 </description>
       <category>JavaScript</category>
       <pubDate>Fri, 13 Sep 2019 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<div><p>JavaScript 语言是什么</p>
+      <content:encoded><![CDATA[<div>
+<p>JavaScript 语言是什么</p>
 <p>JavaScript 是一种轻量级的脚本语言。所谓“脚本语言” (script language)，指的是它不具备开发操作系统的能力，而是只用来编写控制其他大型应用程序(比如浏览器)的“脚本”。</p>
 <p>JavaScript 也是一种嵌入式 (embedded) 语言。它本身提供的核心语法不算很多，只能用来做一些数学和逻辑运算。JavaScript 本身不提供任何与 I/O (输入/输出)相关的 API，都要靠宿主环境(host)提供，所以 JavaScript 只合适嵌入更大型的应用程序环境，去调用宿主环境提供的底层 API。</p>
 </div>
@@ -5786,7 +5856,8 @@ JavaScript 也是一种嵌入式 (embedded) 语言。它本身提供的核心语
       <source url="https://mrhope.site/rss.xml">运算符</source>
       <category>JavaScript</category>
       <pubDate>Thu, 26 Sep 2019 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<div><p>提示</p>
+      <content:encoded><![CDATA[<div>
+<p>提示</p>
 <p>二进制位运算符章节使用较少，无需阅读。</p>
 </div>
 <h2 id="目录" tabindex="-1"> 目录</h2>

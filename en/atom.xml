@@ -3,7 +3,7 @@
   <id>https://mrhope.site/en/</id>
   <title>My name is Mr.Hope</title>
   <subtitle>Mr.Hope personal blog</subtitle>
-  <updated>2022-08-06T18:09:30.293Z</updated>
+  <updated>2022-09-07T13:27:13.087Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mrhope.site/atom.xml"/>
   <link rel="alternate" href="https://mrhope.site/en/"/>
@@ -20,7 +20,8 @@
     <id>https://mrhope.site/en/code/</id>
     <link href="https://mrhope.site/en/code/"/>
     <updated>2022-02-06T16:01:38.000Z</updated>
-    <content type="html"><![CDATA[<div><p>Info</p>
+    <content type="html"><![CDATA[<div>
+<p>Info</p>
 <p>Code notes only contains <strong>Chinese</strong> version.</p>
 </div>
 ]]></content>
@@ -31,11 +32,13 @@
     <id>https://mrhope.site/en/note/</id>
     <link href="https://mrhope.site/en/note/"/>
     <updated>2022-02-28T17:19:37.000Z</updated>
-    <content type="html"><![CDATA[<div><p>Tips</p>
+    <content type="html"><![CDATA[<div>
+<p>Tips</p>
 <p>Note, all the notes only contains <strong>Chinese</strong> version.</p>
 </div>
 <h2 id="seasons" tabindex="-1"> Seasons</h2>
-<div><p>Introduction</p>
+<div>
+<p>Introduction</p>
 <p>This is a collection of prose poems I wrote in Senior 1, originally published in the qzone dairy.</p>
 <p>Later I also wrote some poems to add in, among which &quot;Autumn Thought&quot; has most poems.</p>
 <p>Recently, I moved it as a teenager’s memory in my blog.</p>
@@ -54,11 +57,13 @@
 <p><a href="/note/summer/">Summer Songs</a></p>
 </li>
 </ul>
-<div><p>Tips</p>
+<div>
+<p>Tips</p>
 <p>Also check <a href="https://user.qzone.qq.com/1178522294" target="_blank" rel="noopener noreferrer">Qzone Album</a></p>
 </div>
 <h2 id="life-discussion" tabindex="-1"> Life Discussion</h2>
-<div><p>Introduction</p>
+<div>
+<p>Introduction</p>
 <p>This is the sentiment of life I wrote in Senior 1, originally published in the qzone dairy.</p>
 <p>Recently, I moved it as a teenager’s memory in my blog.</p>
 </div>
@@ -66,7 +71,8 @@
 <li><a href="/note/life/">Details</a></li>
 </ul>
 <h2 id="whisper" tabindex="-1"> Whisper</h2>
-<div><p>Introduction</p>
+<div>
+<p>Introduction</p>
 <p>This is some small prose poems I wrote in Senior 1, originally published in the qzone dairy.</p>
 <p>Recently, I moved it as a teenager’s memory in my blog.</p>
 </div>
@@ -81,7 +87,8 @@
     <id>https://mrhope.site/en/software/</id>
     <link href="https://mrhope.site/en/software/"/>
     <updated>2022-02-06T16:01:38.000Z</updated>
-    <content type="html"><![CDATA[<div><p>Info</p>
+    <content type="html"><![CDATA[<div>
+<p>Info</p>
 <p>Most of the software guide only contains <strong>Chinese</strong> version.</p>
 </div>
 <h2 id="http-server" tabindex="-1"> Http Server</h2>
@@ -97,7 +104,8 @@
     <link href="https://mrhope.site/en/about/site.html"/>
     <updated>2021-01-19T13:09:25.000Z</updated>
     <content type="html"><![CDATA[<h1 id="about-site" tabindex="-1"> About site</h1>
-<div><p>building</p>
+<div>
+<p>building</p>
 <p>This site is built with <a href="https://v1.vuepress.vuejs.org/guide/" target="_blank" rel="noopener noreferrer">VuePress</a>.</p>
 </div>
 <h2 id="repository-link" tabindex="-1"> Repository Link</h2>
@@ -120,7 +128,7 @@
 <p>Nginx is a high performance HTTP and reverse proxy server and an IMAP / POP3 / SMTP proxy server. It features low memory, high concurrency, high stability, and Nginx’s friendly and flexible configuration.</p>
 <h2 id="starting-stopping-and-reloading-configuration" tabindex="-1"> Starting, Stopping, and Reloading Configuration</h2>
 <p>To start nginx, run the executable file. Once nginx is started, it can be controlled by invoking the executable with the <code>-s</code> parameter. Use the following syntax:</p>
-<div><pre><code>nginx -s signal
+<div><pre><code>nginx <span>-s</span> signal
 </code></pre><div aria-hidden="true"><div></div></div></div><p>Where signal may be one of the following:</p>
 <ul>
 <li>stop — fast shutdown</li>
@@ -163,7 +171,7 @@
 <span>}</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>This is already a working configuration of a server that listens on the standard port <code>80</code> and is accessible on the local machine at <code>http://localhost/</code>. In response to requests with URIs starting with <code>/images/</code>, the server will send files from the <code>/data/images</code> directory. For example, in response to the <code>http://localhost/images/example.png</code> request nginx will send the <code>/data/images/example.png</code> file. If such file does not exist, nginx will send a response indicating the 404 error. Requests with URIs not starting with <code>/images/</code> will be mapped onto the <code>/data/www</code> directory. For example, in response to the <code>http://localhost/some/example.html</code> request nginx will send the <code>/data/www/some/example.html</code> file.</p>
 <p>To apply the new configuration, start nginx if it is not yet started or send the <code>reload</code> signal to the nginx’s master process, by executing:</p>
-<div><pre><code>nginx -s reload
+<div><pre><code>nginx <span>-s</span> reload
 </code></pre><div aria-hidden="true"><div></div></div></div><p>In case something does not work as expected, you may try to find out the reason in <code>access.log</code> and <code>error.log</code> files in the directory <code>/usr/local/nginx/logs</code> or <code>/var/log/nginx</code>.</p>
 <h2 id="setting-up-a-simple-proxy-server" tabindex="-1"> Setting Up a Simple Proxy Server</h2>
 <p>One of the frequent uses of nginx is setting it up as a proxy server, which means a server that receives requests, passes them to the proxied servers, retrieves responses from them, and sends them to the clients.</p>
