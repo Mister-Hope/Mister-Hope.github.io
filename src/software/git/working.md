@@ -1,6 +1,7 @@
 ---
 title: Git 原理
 icon: creative
+order: 13
 category: Git
 tag:
   - Git

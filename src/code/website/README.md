@@ -116,7 +116,7 @@ Vue 与 React、Angular 一起合称前端三大框架。
 
 ### Angular
 
-- [Angular 教程](../Angular/README.md)
+- [Angular 教程](../angular/README.md)
 
 ## 其他文档
 

@@ -1,6 +1,7 @@
 ---
 title: 服务器搭建
 icon: network
+order: 16
 category: Git
 tag:
   - Git

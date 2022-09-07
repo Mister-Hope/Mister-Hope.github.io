@@ -1,6 +1,7 @@
 ---
 title: 自定义 Git
 icon: skin
+order: 14
 author: 廖雪峰
 category: Git
 tag:

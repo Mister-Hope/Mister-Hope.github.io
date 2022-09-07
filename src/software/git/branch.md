@@ -1,6 +1,7 @@
 ---
 title: 分支管理
 icon: branch
+order: 10
 author: 廖雪峰
 category: Git
 tag:
@@ -372,7 +373,49 @@ $ git log --graph --pretty=oneline --abbrev-commit
 
 所以，团队合作的分支看起来就像这样:
 
-![示例图](./assets/git15.png)
+```git-graph
+commit
+branch hotfix
+checkout hotfix
+commit
+branch develop
+checkout develop
+commit id:"ash" tag:"abc"
+branch featureB
+checkout featureB
+commit type:HIGHLIGHT
+checkout main
+checkout hotfix
+commit type:NORMAL
+checkout develop
+commit type:REVERSE
+checkout featureB
+commit
+checkout main
+merge hotfix
+checkout featureB
+commit
+checkout develop
+branch featureA
+commit
+checkout develop
+merge hotfix
+checkout featureA
+commit
+checkout featureB
+commit
+checkout develop
+merge featureA
+branch release
+checkout release
+commit
+checkout main
+commit
+checkout release
+merge main
+checkout develop
+merge release
+```
 
 ### 分支管理小结
 

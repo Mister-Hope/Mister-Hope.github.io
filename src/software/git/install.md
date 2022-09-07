@@ -1,6 +1,7 @@
 ---
 title: 安装与配置
 icon: install
+order: 1
 category: Git
 tag:
   - Git
@@ -97,6 +98,11 @@ tag:
 ::: tip
 
 如果您对 VS Code 和 PowerShell 还不熟悉，您可以在接下来的学习与操作中使用 Git Bash。
+
+否则，你可以:
+
+- 在 Linux 上直接通过终端来使用 Git。
+- 在 Windows 上安装最新的 PowerShell，并在终端中使用 Git。
 
 :::
 

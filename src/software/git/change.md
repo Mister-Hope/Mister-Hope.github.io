@@ -1,6 +1,7 @@
 ---
 title: 修改管理
 icon: change
+order: 8
 author: 廖雪峰
 category: Git
 tag:

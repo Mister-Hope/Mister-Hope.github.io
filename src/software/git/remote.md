@@ -1,6 +1,7 @@
 ---
 title: 远程仓库
 icon: remote
+order: 9
 author: 廖雪峰
 category: Git
 tag:

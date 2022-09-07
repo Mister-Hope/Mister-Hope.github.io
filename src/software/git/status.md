@@ -1,6 +1,7 @@
 ---
 title: 纵向查看
 icon: list
+order: 4
 author: 廖雪峰
 category: Git
 tag:

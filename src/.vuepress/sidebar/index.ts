@@ -1,8 +1,8 @@
 import { sidebar } from "vuepress-theme-hope";
-import { basic } from "./basic";
-import { code } from "./code";
-import { design } from "./design";
-import { github } from "./github";
+import { basic } from "./basic.js";
+import { code } from "./code.js";
+import { design } from "./design.js";
+import { github } from "./github.js";
 import {
   dart,
   javascript,
@@ -10,19 +10,19 @@ import {
   markdown,
   python,
   typescript,
-} from "./language";
-import { linux } from "./linux";
-import { miniapp } from "./mini-app";
-import { note } from "./note";
-import { physics } from "./physics";
-import { comsol, git, software, vscode } from "./software";
-import { vue } from "./vue";
-import { css, html, jquery, website } from "./website";
+} from "./language/index.js";
+import { linux } from "./linux.js";
+import { miniapp } from "./mini-app/index.js";
+import { note } from "./note.js";
+import { physics } from "./physics.js";
+import { comsol, software, vscode } from "./software/index.js";
+import { vue } from "./vue.js";
+import { css, html, jquery, website } from "./website/index.js";
 
 export const zhSidebarConig = sidebar({
   "/software/vscode/": vscode,
 
-  "/software/git/": git,
+  "/software/git/": "structure",
 
   "/software/comsol/": comsol,
 

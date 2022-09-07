@@ -1,6 +1,7 @@
 ---
 title: 工作区和暂存区
 icon: workingDirectory
+order: 7
 author: 廖雪峰
 category: Git
 tag:

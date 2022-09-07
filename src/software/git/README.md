@@ -58,6 +58,8 @@ Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理�
 
 - [搭建 Git 服务器](server.md)
 
+- [高级合并](merge.md)
+
 ## 扩展阅读
 
 - [官方文档](https://git-scm.com/doc)

@@ -1,6 +1,7 @@
 ---
 title: Git 仓库
 icon: repo
+order: 3
 author: 廖雪峰
 category: Git
 tag:

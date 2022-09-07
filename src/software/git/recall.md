@@ -1,6 +1,7 @@
 ---
 title: 撤销操作
 icon: return
+order: 5
 category: Git
 tag:
   - Git

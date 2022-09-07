@@ -1,6 +1,7 @@
 ---
 title: 忽略特殊文件
 icon: skin
+order: 12
 author: 廖雪峰
 category: Git
 tag:

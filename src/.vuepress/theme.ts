@@ -1,7 +1,7 @@
 import { hopeTheme } from "vuepress-theme-hope";
 
-import { enNavbarConfig, zhNavbarConfig } from "./navbar";
-import { enSidebarConfig, zhSidebarConig } from "./sidebar";
+import { enNavbarConfig, zhNavbarConfig } from "./navbar.js";
+import { enSidebarConfig, zhSidebarConig } from "./sidebar/index.js";
 
 export default hopeTheme({
   hostname: "https://mrhope.site",
@@ -84,6 +84,7 @@ export default hopeTheme({
       flowchart: true,
       footnote: true,
       imageMark: true,
+      mermaid: true,
       presentation: true,
       sub: true,
       sup: true,

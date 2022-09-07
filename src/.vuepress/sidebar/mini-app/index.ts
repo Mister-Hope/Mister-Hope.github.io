@@ -1,5 +1,5 @@
 import { arraySidebar } from "vuepress-theme-hope";
-import { guide } from "./guide";
+import { guide } from "./guide.js";
 
 export const miniapp = arraySidebar([
   "",

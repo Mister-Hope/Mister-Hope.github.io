@@ -1,6 +1,7 @@
 ---
 title: 版本回退
 icon: return
+order: 6
 author: 廖雪峰
 category: Git
 tag:
