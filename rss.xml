@@ -6,10 +6,11 @@
     <link>https://mrhope.site/</link>
     <description>Where there is light, there is hope.</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 07 Sep 2022 13:27:13 GMT</pubDate>
-    <lastBuildDate>Wed, 07 Sep 2022 13:27:13 GMT</lastBuildDate>
+    <pubDate>Wed, 14 Sep 2022 09:57:14 GMT</pubDate>
+    <lastBuildDate>Wed, 14 Sep 2022 09:57:14 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>Git</category>
     <category>Node.js</category>
     <category>小程序</category>
     <category>Android</category>
@@ -26,7 +27,6 @@
     <category>GitHub</category>
     <category>教程</category>
     <category>软件</category>
-    <category>Git</category>
     <category>VS Code</category>
     <category>C</category>
     <category>C++</category>
@@ -42,6 +42,28 @@
     <category>CSS</category>
     <category>Emmet</category>
     <category>HTML</category>
+    <item>
+      <title>高级合并</title>
+      <link>https://mrhope.site/software/git/merge.html</link>
+      <guid>https://mrhope.site/software/git/merge.html</guid>
+      <source url="https://mrhope.site/rss.xml">高级合并</source>
+      <category>Git</category>
+      <pubDate>Wed, 07 Sep 2022 17:18:06 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="squash-merge" tabindex="-1"> Squash merge</h2>
+<p>通过使用 <code>--squash</code> 选项，你可以在合并中将多个 commit 合并为一个。</p>
+<p>也就是对于以下的例子</p>
+<i>Content not supported</i><p><code>git merge feature</code> 得到的结果为:</p>
+<i>Content not supported</i><p>而如果 <code>feature</code> 分支意在实现一个完成的特性，两个 commit 只是工作进度实际上并不重要的时候，我们可以通过 <code>git merge --squash feature</code> 得到:</p>
+<i>Content not supported</i><h2 id="cherry-pick" tabindex="-1"> Cherry pick</h2>
+<p>有些时候，我们可能需要提取其他分支的某个 commit，这个时候我们可以用 cherry pick 进行操作。</p>
+<i>Content not supported</i><p>在这种情况下，我们可以回到 main 分支，执行 <code>git cherry-pick &lt;commit id&gt;</code> 来挑拣某个提交，当然，你可以一并在命令中提交挑拣多个 commit。</p>
+<i>Content not supported</i><ul>
+<li><code>git cherry-pick &lt;commit id 1&gt; &lt;commit id 2&gt;</code> 表示挑拣 commit id 1 和 commit id 2</li>
+<li><code>git cherry-pick &lt;commit id 1&gt;...&lt;commit id 2&gt;</code> 表示挑拣 commit id 1 与 commit id 2 之间 (包括两者) 的所有提交</li>
+<li><code>git cherry-pick &lt;branch&gt;</code> 表示挑拣该分支最新的提交</li>
+</ul>
+]]></content:encoded>
+    </item>
     <item>
       <title>模块</title>
       <link>https://mrhope.site/code/node-js/cjs.html</link>
@@ -2866,7 +2888,7 @@ JavaScript 编写网页的行为
 </ul>
 <h3 id="angular" tabindex="-1"> Angular</h3>
 <ul>
-<li><a href="/code/Angular/">Angular 教程</a></li>
+<li><a href="/code/angular/">Angular 教程</a></li>
 </ul>
 <h2 id="其他文档" tabindex="-1"> 其他文档</h2>
 <ul>
@@ -3701,6 +3723,9 @@ JavaScript 编写网页的行为
 </li>
 <li>
 <p><a href="/software/git/server.html">搭建 Git 服务器</a></p>
+</li>
+<li>
+<p><a href="/software/git/merge.html">高级合并</a></p>
 </li>
 </ul>
 <h2 id="扩展阅读" tabindex="-1"> 扩展阅读</h2>
@@ -6105,27 +6130,6 @@ JavaScript 也是一种嵌入式 (embedded) 语言。它本身提供的核心语
 </li>
 <li>
 <p><a href="/code/language/python/intro/interpreter.html">解释器</a></p>
-</li>
-</ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>模块</title>
-      <link>https://mrhope.site/code/language/python/module/</link>
-      <guid>https://mrhope.site/code/language/python/module/</guid>
-      <source url="https://mrhope.site/rss.xml">模块</source>
-      <category>Python</category>
-      <pubDate>Sat, 27 Mar 2021 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
-<ul>
-<li>
-<p><a href="/code/language/python/module/intro.html">介绍</a></p>
-</li>
-<li>
-<p><a href="/code/language/python/module/usage.html">使用模块</a></p>
-</li>
-<li>
-<p><a href="/code/language/python/module/install.html">安装第三方模块</a></p>
 </li>
 </ul>
 ]]></content:encoded>
