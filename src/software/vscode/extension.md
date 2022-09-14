@@ -47,7 +47,7 @@ VS Code 原生为英文，本插件为 VS Code 提供简体中文支持，会更
 
 快速打开特定项目或在多个项目之间切换。
 
-#### SVG Preview
+#### Svg Preview
 
 提供在 VS Code 直接打开 SVG 预览。
 

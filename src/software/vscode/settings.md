@@ -21,9 +21,10 @@ tag:
   "editor.detectIndentation": false,
   "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
-  "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
   "editor.guides.bracketPairs": true,
+  "editor.inlineSuggest.enabled": true,
   "editor.mouseWheelZoom": true,
   "editor.rulers": [80],
   "editor.quickSuggestions": {
@@ -34,12 +35,15 @@ tag:
   "editor.renderControlCharacters": true,
   "editor.renderWhitespace": "boundary",
   "editor.smoothScrolling": true,
+  "editor.stickyScroll.enabled": true,
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
+  "editor.experimental.pasteActions.enabled": true,
   // emmet 包含 wxml 视为 html
   "emmet.includeLanguages": {
-    "wxml": "html" // 为 wxml 开启 HTML emmet 支持
+    "wxml": "html",
+    "axml": "xml"
   },
   "emmet.variables": {
     "lang": "zh-CN",
@@ -48,6 +52,7 @@ tag:
   // 文件相关
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "explorer.fileNesting.enabled": true,
   "files.associations": {
     "*.cjson": "jsonc",
     "*.wxss": "css",
@@ -65,6 +70,7 @@ tag:
   "files.maxMemoryForLargeFilesMB": 4096,
   // 编辑器窗口设置
   "window.closeWhenEmpty": true,
+  "window.commandCenter": true,
   "window.dialogStyle": "custom",
   "window.newWindowDimensions": "inherit",
   "breadcrumbs.enabled": true,
@@ -76,6 +82,8 @@ tag:
   "workbench.editor.scrollToSwitchTabs": true,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
+  "security.workspace.trust.untrustedFiles": "open",
+
   "material-icon-theme.folders.associations": {
     "global-components": "Global",
     "node": "Node",
@@ -112,6 +120,7 @@ tag:
   // 在线服务设置
   "telemetry.telemetryLevel": "error",
   // 终端设置
+  "terminal.external.linuxExec": "bash",
   "terminal.integrated.confirmOnExit": "hasChildProcesses",
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.enableBell": true,
@@ -128,17 +137,20 @@ tag:
       "args": ["-NoLogo"]
     }
   },
+  "terminal.integrated.shellIntegration.enabled": true,
+  "terminal.integrated.smoothScrolling": true,
   "terminal.integrated.tabs.enabled": true,
-  "terminal.external.linuxExec": "bash",
+  // git
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": true,
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
+  "git.mergeEditor": true,
   "merge-conflict.autoNavigateNextConflict.enabled": true,
-  "security.workspace.trust.untrustedFiles": "open",
   // npm 设置
   "npm.enableRunFromFolder": true,
+  "npm.packageManager": "pnpm",
   "npm.scriptExplorerAction": "run",
   "npm-intellisense.importQuotes": "\"",
   "npm-intellisense.packageSubfoldersIntellisense": true,
@@ -219,24 +231,25 @@ tag:
   "typescript.referencesCodeLens.enabled": true,
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
+
   // php 设置
   "php.validate.enable": true,
   "php.validate.run": "onType",
+
   // c++ 设置
-  "C_Cpp.default.cppStandard": "c++20",
-  "C_Cpp.default.includePath": [
-    "C:/Program Files/mingw-w64/lib/gcc/x86_64-w64-mingw32/8.1.0/include",
-    "C:/Program Files/mingw-w64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed",
-    "C:/Program Files/mingw-w64/x86_64-w64-mingw32/include"
-  ],
+  "C_Cpp.default.cppStandard": "c++23",
   "C_Cpp.clang_format_fallbackStyle": "Google",
+
   // dart
   "dart.debugSdkLibraries": false,
   "dart.openDevTools": "flutter",
+
   // java
-  "java.jdt.ls.java.home": "C:/Program Files/Java/jdk-16.0.1",
+  "java.jdt.ls.java.home": "c:\\Program Files\\Java\\jdk-18.0.1",
+
   // python
   "python.languageServer": "Pylance",
+
   // css颜色提示配置
   "colorInfo.fields": ["hex", "rgb", "alpha", "css-color-name", "preview"],
   "colorInfo.languages": [
@@ -261,8 +274,9 @@ tag:
       "colors": "css"
     }
   ],
+
   // eslint
-  "eslint.packageManager": "yarn",
+  "eslint.packageManager": "pnpm",
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -270,15 +284,21 @@ tag:
     "typescript",
     "typescriptreact"
   ],
+
   // Git Lens 设置
   "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm",
   "gitlens.defaultDateShortFormat": "YYYY-MM-DD",
   "gitlens.defaultTimeFormat": "HH:mm",
   "gitlens.gitCommands.closeOnFocusOut": true,
   "gitlens.views.repositories.branches.layout": "list",
+  "gitlens.advanced.messages": {
+    "suppressRebaseSwitchToTextWarning": true
+  },
+
   // markdown 设置
   "markdown.extension.orderedList.marker": "one",
   "markdown.extension.print.imgToBase64": true,
+
   // markdownlint 设置
   "markdownlint.config": {
     "default": true,
@@ -296,11 +316,9 @@ tag:
       "style": "---"
     }
   },
+
   "markdown-pdf.executablePath": "C:/Users/zhang/AppData/Local/Google/Chrome/Application/chrome.exe",
-  // stylus 设置
-  "stylusSupremacy.insertColons": false,
-  "stylusSupremacy.insertSemicolons": false,
-  "stylusSupremacy.insertBraces": false,
+
   // XML工具设置
   "xmlTools.enforcePrettySelfClosingTagOnFormat": true,
   "xmlTools.removeCommentsOnMinify": true,
@@ -336,7 +354,7 @@ tag:
   "leetcode.showDescription": "In Webview",
   "leetcode.workspaceFolder": "C:/Users/zhang/.leetcode",
   // stylelint 设置
-  "stylelint.packageManager": "yarn",
+  "stylelint.packageManager": "pnpm",
   // Java
   "redhat.telemetry.enabled": false,
   // latex
@@ -502,12 +520,12 @@ tag:
       "tools": ["tectonic"]
     }
   ],
-  // matlab
-  "matlab.matlabpath": "C:/Program Files/Polyspace/R2021a/bin/win64/matlab.exe",
-  "matlab.mlintpath": "C:/Program Files/Polyspace/R2021a/bin/win64/mlint.exe",
-  "jest.autoRun": {
-    "watch": false,
-    "onSave": "test-src-file"
+  // github copilot
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true
   }
 }
 ```

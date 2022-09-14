@@ -58,5 +58,4 @@ Chrome 具有很多快捷键，熟练掌握后可以大幅减少时间。
 - Office Online: 在线查看并编辑 Office 文件；
 - React Developer Tools: React 开发者工具
 - Save to Pocket: 离线网页的最佳插件；
-- VPN Free - Betternet Unlimited VPN Proxy: 一款免费的 VPN 插件；
 - Vue.js Devtools: Vue.js 的开发者工具；
