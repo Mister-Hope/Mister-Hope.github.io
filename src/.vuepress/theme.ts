@@ -84,11 +84,11 @@ export default hopeTheme({
       flowchart: true,
       footnote: true,
       imageMark: true,
+      katex: true,
       mermaid: true,
       presentation: true,
       sub: true,
       sup: true,
-      tex: true,
       vpre: true,
     },
 
