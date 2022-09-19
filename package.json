@@ -50,6 +50,10 @@
         "react-dom",
         "webpack"
       ]
+    },
+    "patchedDependencies": {
+      "@vuepress/bundler-vite@2.0.0-beta.51": "patches/@vuepress__bundler-vite@2.0.0-beta.51.patch",
+      "@vuepress/bundler-webpack@2.0.0-beta.51": "patches/@vuepress__bundler-webpack@2.0.0-beta.51.patch"
     }
   }
 }

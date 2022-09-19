@@ -1,0 +1,41 @@
+diff --git a/dist/index.js b/dist/index.js
+index cbfc8416b3a7b54192f42bc326f36f00f63366ea..d2013fe730dea540304c32d5fcdd5c54318392da 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -804,23 +804,19 @@ var build = async (options, app) => {
+     const { createVueApp } = await importFileDefault(serverEntryPath);
+     const { app: vueApp, router: vueRouter } = await createVueApp();
+     const { renderToString } = await import("vue/server-renderer");
+-    for (const page of app.pages) {
+-      if (spinner) {
+-        spinner.text = `Rendering pages ${chalk.magenta(page.path)}`;
+-      }
+-      await renderPage({
+-        app,
+-        page,
+-        vueApp,
+-        vueRouter,
+-        renderToString,
+-        ssrTemplate,
+-        allFilesMeta,
+-        initialFilesMeta,
+-        asyncFilesMeta,
+-        moduleFilesMetaMap
+-      });
+-    }
++    if (spinner) spinner.text = `Starting to render pages ${chalk.magenta(app.pages?.map(vuePressPage => vuePressPage?.path))}`
++    await Promise.all(app.pages?.map((page) => renderPage({
++      app,
++      page,
++      vueApp,
++      vueRouter,
++      renderToString,
++      ssrTemplate,
++      allFilesMeta,
++      initialFilesMeta,
++      asyncFilesMeta,
++      moduleFilesMetaMap,
++    })))
+   });
+   if (!app.env.isDebug) {
+     await fs5.remove(app.dir.temp(".server"));
