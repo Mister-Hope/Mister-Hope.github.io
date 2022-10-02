@@ -3,7 +3,7 @@
   <id>https://mrhope.site/</id>
   <title>Mr.Hope</title>
   <subtitle>Where there is light, there is hope.</subtitle>
-  <updated>2022-09-30T17:04:35.841Z</updated>
+  <updated>2022-10-02T02:15:16.158Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mrhope.site/atom.xml"/>
   <link rel="alternate" href="https://mrhope.site/"/>
@@ -422,7 +422,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 <ol>
 <li>
 <p>在 app &gt; java &gt; com.example.myfirstapp &gt; MainActivity 文件中，添加以下 sendMessage() 方法桩：</p>
-<CodeTabs :data='[{"title":"Kotlin"},{"title":"Java"}]' tab-id="anrdoid">
+<CodeTabs id="15" :data='[{"title":"Kotlin"},{"title":"Java"}]' tab-id="anrdoid">
 
 <template #tab0="{ title, value, isActive }">
 <div><pre><code><span>class</span> MainActivity <span>:</span> <span>AppCompatActivity</span><span>(</span><span>)</span> <span>{</span>
@@ -475,7 +475,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 <h2 id="构建一个-intent" tabindex="-1"> 构建一个 intent</h2>
 <p><code>Intent</code> 是在相互独立的组件（如两个 activity）之间提供运行时绑定功能的对象。Intent 表示应用执行某项操作的意图。您可以使用 intent 执行多种任务，但在本课中，您的 intent 将用于启动另一个 activity。</p>
 <p>在 MainActivity 中，添加 EXTRA_MESSAGE 常量和 sendMessage() 代码，如下所示：</p>
-<CodeTabs :data='[{"title":"Kotlin"},{"title":"Java"}]' tab-id="anrdoid">
+<CodeTabs id="82" :data='[{"title":"Kotlin"},{"title":"Java"}]' tab-id="anrdoid">
 
 <template #tab0="{ title, value, isActive }">
 <div><pre><code><span>const</span> <span>val</span> EXTRA_MESSAGE <span>=</span> <span><span>"com.example.myfirstapp.MESSAGE"</span></span>
@@ -519,7 +519,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></template>
 </CodeTabs>
 <p>预计 Android Studio 会再次遇到 Cannot resolve symbol 错误。如需清除这些错误，请按 Alt+Enter（在 Mac 上则按 Option+Return）。您最后应导入以下内容：</p>
-<CodeTabs :data='[{"title":"Kotlin"},{"title":"Java"}]' tab-id="anrdoid">
+<CodeTabs id="93" :data='[{"title":"Kotlin"},{"title":"Java"}]' tab-id="anrdoid">
 
 <template #tab0="{ title, value, isActive }">
 <div><pre><code><span>import</span> androidx<span>.</span>appcompat<span>.</span>app<span>.</span>AppCompatActivity
@@ -583,7 +583,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 <ol>
 <li>
 <p>在 DisplayMessageActivity 中，将以下代码添加到 <code>onCreate()</code> 方法中：</p>
-<CodeTabs :data='[{"title":"Kotlin"},{"title":"Java"}]' tab-id="anrdoid">
+<CodeTabs id="221" :data='[{"title":"Kotlin"},{"title":"Java"}]' tab-id="anrdoid">
 
 <template #tab0="{ title, value, isActive }">
 <div><pre><code><span>override</span> <span>fun</span> <span>onCreate</span><span>(</span>savedInstanceState<span>:</span> Bundle<span>?</span><span>)</span> <span>{</span>
@@ -618,7 +618,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 </li>
 <li>
 <p>按 <code>Alt + Enter</code>（在 Mac 上则按 <code>Option + Return</code>）导入其他所需的类：</p>
-<CodeTabs :data='[{"title":"Kotlin"},{"title":"Java"}]' tab-id="anrdoid">
+<CodeTabs id="234" :data='[{"title":"Kotlin"},{"title":"Java"}]' tab-id="anrdoid">
 
 <template #tab0="{ title, value, isActive }">
 <div><pre><code><span>import</span> androidx<span>.</span>appcompat<span>.</span>app<span>.</span>AppCompatActivity
