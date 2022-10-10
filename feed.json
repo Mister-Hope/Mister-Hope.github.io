@@ -6,6 +6,31 @@
   "description": "Where there is light, there is hope.",
   "items": [
     {
+      "title": "后端开发",
+      "url": "https://mrhope.site/code/back-end/",
+      "id": "https://mrhope.site/code/back-end/",
+      "content_html": "<h2 id=\"后端入门\" tabindex=\"-1\"> 后端入门</h2>\n<h3 id=\"php\" tabindex=\"-1\"> PHP</h3>\n<p>PHP 是一种创建动态交互性站点的强有力的服务器端脚本语言，免费，并且使用非常广泛。PHP (全称 Hypertext Preprocessor，即超文本预处理器)是一种通用开源脚本语言。</p>\n<p>PHP 手册:</p>\n<ul>\n<li>\n<p><a href=\"http://www.w3school.com.cn/php/index.asp\" target=\"_blank\" rel=\"noopener noreferrer\">W3School 教程</a></p>\n</li>\n<li>\n<p><a href=\"https://www.runoob.com/php/php-tutorial.html\" target=\"_blank\" rel=\"noopener noreferrer\">菜鸟教程</a></p>\n</li>\n</ul>\n<p>如果服务器访问数量不大的情况下，PHP 作为一种门槛低，开发方便的脚本语言，还是挺受到欢迎的。</p>\n<h3 id=\"asp\" tabindex=\"-1\"> ASP</h3>\n<p>ASP 文件可包含文本、HTML 标签和脚本。ASP 文件中的脚本可在服务器上执行。由于 ASP 在服务器上运行，浏览器无需支持客户端脚本就可以显示 ASP 文件!</p>\n<ul>\n<li>\n<p><a href=\"http://www.w3school.com.cn/asp/index.asp\" target=\"_blank\" rel=\"noopener noreferrer\">W3School 教程</a></p>\n</li>\n<li>\n<p><a href=\"https://www.runoob.com/asp/asp-tutorial.html\" target=\"_blank\" rel=\"noopener noreferrer\">菜鸟教程</a></p>\n</li>\n</ul>\n<div>\n<p>提示</p>\n<p>更多详情有待日后补充</p>\n</div>\n",
+      "date_published": "2019-09-10T00:00:00.000Z",
+      "date_modified": "2022-10-10T05:08:58.000Z",
+      "authors": [],
+      "tags": [
+        "后端"
+      ]
+    },
+    {
+      "title": "操作系统",
+      "url": "https://mrhope.site/code/basic/os.html",
+      "id": "https://mrhope.site/code/basic/os.html",
+      "summary": "操作系统 (Operating System，OS) 是软件的一部分，它是硬件基础上的第一层软件，是硬件和其它软件沟通的桥梁(或者说接口、中间人、中介等)。\n",
+      "content_html": "<p>操作系统 (Operating System，OS) 是软件的一部分，它是硬件基础上的第一层软件，是硬件和其它软件沟通的桥梁(或者说接口、中间人、中介等)。</p>\n\n<p>操作系统会控制其他程序运行，管理系统资源，提供最基本的计算功能，如管理及配置内存、决定系统资源供需的优先次序等，同时还提供一些基本的服务程序，例如:</p>\n<ol>\n<li>\n<p>文件系统</p>\n<p>提供计算机存储信息的结构，信息存储在文件中，文件主要存储在计算机的内部硬盘里，在目录的分层结构中组织文件。文件系统为操作系统提供了组织管理数据的方式。</p>\n</li>\n<li>\n<p>设备驱动程序</p>\n<p>提供连接计算机的每个硬件设备的接口，设备驱动器使程序能够写入设备，而不需要了解执行每个硬件的细节。简单来说，就是让您能吃到鸡蛋，但不用养一只鸡。</p>\n</li>\n<li>\n<p>用户接口</p>\n<p>操作系统需要为用户提供一种运行程序和访问文件系统的方法。如常用的 Windows 图形界面，可以理解为一种用户与操作系统交互的方式；智能手机的 Android 或 iOS 系统，也是一种操作系统的交互方式。</p>\n</li>\n<li>\n<p>系统服务程序</p>\n<p>当计算机启动时，会自启动许多系统服务程序，执行安装文件系统、启动网络服务、运行预定任务等操作。</p>\n</li>\n</ol>\n<p>打个比方，操作系统就好像是一个政府，其它软件都会被它管控；操作系统在给其他软件提供各种便利的同时，还会约束其他软件不能为所欲为。</p>\n<p><img src=\"@source/code/basic/assets/OS.gif\" alt=\"操作系统结构示意图\"></p>\n<p>目前流行的服务器和 PC 端操作系统有 Linux、Windows、UNIX 等，手机操作系统有 Android、iOS，嵌入式操作系统有 Windows CE、PalmOS、eCos、uClinux 等。</p>\n",
+      "date_published": "2019-12-26T00:00:00.000Z",
+      "date_modified": "2022-10-10T05:08:58.000Z",
+      "authors": [],
+      "tags": [
+        "基础"
+      ]
+    },
+    {
       "title": "高级合并",
       "url": "https://mrhope.site/software/git/merge.html",
       "id": "https://mrhope.site/software/git/merge.html",
@@ -219,9 +244,9 @@
       "url": "https://mrhope.site/code/",
       "id": "https://mrhope.site/code/",
       "summary": "此处是 Mr.Hope 存放的一些代码笔记。\n",
-      "content_html": "<p>此处是 Mr.Hope 存放的一些代码笔记。</p>\n\n<h2 id=\"目录\" tabindex=\"-1\"> 目录</h2>\n<h3 id=\"基础\" tabindex=\"-1\"> 基础</h3>\n<ul>\n<li>\n<p><a href=\"/code/basic/\">基础知识</a></p>\n</li>\n<li>\n<p><a href=\"/code/windows/\">Windows 基础</a></p>\n</li>\n<li>\n<p><a href=\"/code/github/\">GitHub 介绍</a></p>\n</li>\n</ul>\n<h3 id=\"前端开发\" tabindex=\"-1\"> 前端开发</h3>\n<ul>\n<li>\n<p><a href=\"/code/website/\">网站相关</a></p>\n</li>\n<li>\n<p><a href=\"/code/vue/\">Vue 相关</a></p>\n</li>\n<li>\n<p><a href=\"/code/mini-app/\">小程序教程</a></p>\n</li>\n<li>\n<p><a href=\"/code/node-js/\">Node.js</a></p>\n</li>\n</ul>\n<h3 id=\"代码学习\" tabindex=\"-1\"> 代码学习</h3>\n<ul>\n<li>\n<p><a href=\"/code/language/\">代码学习</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/learning.html\">如何学习一门语言</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/js/\">JavaScript 教程</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/typescript/\">TypeScript 教程</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/\">Python 教程</a> (编写中...)</p>\n</li>\n<li>\n<p><a href=\"/code/language/markdown/\">Markdown 教程</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/yaml/\">YAML 教程</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/json/\">JSON 教程</a></p>\n</li>\n</ul>\n<h3 id=\"app\" tabindex=\"-1\"> APP</h3>\n<ul>\n<li><a href=\"/code/Android/\">Android 开发</a></li>\n</ul>\n<h3 id=\"后端开发\" tabindex=\"-1\"> 后端开发</h3>\n<ul>\n<li><a href=\"/code/backEnd/\">后端开发</a></li>\n</ul>\n<h3 id=\"代码学习网站\" tabindex=\"-1\"> 代码学习网站</h3>\n<h3 id=\"优质网站\" tabindex=\"-1\"> 优质网站</h3>\n<ul>\n<li>\n<p><a href=\"https://wangdoc.com/\" target=\"_blank\" rel=\"noopener noreferrer\">网道</a></p>\n</li>\n<li>\n<p><a href=\"https://www.liaoxuefeng.com/\" target=\"_blank\" rel=\"noopener noreferrer\">廖雪峰的网站</a></p>\n</li>\n<li>\n<p><a href=\"https://developer.mozilla.org/zh-CN/\" target=\"_blank\" rel=\"noopener noreferrer\">MDN</a></p>\n<div>\n<p>相关信息</p>\n<p>MDN 的中文文档翻译很差，大多都是机翻，十分建议直接阅读英文文档。</p>\n</div>\n</li>\n</ul>\n<h3 id=\"杂牌网站\" tabindex=\"-1\"> 杂牌网站</h3>\n<ul>\n<li>\n<p><a href=\"https://www.runoob.com/\" target=\"_blank\" rel=\"noopener noreferrer\">菜鸟教程</a> <i>Content not supported</i></p>\n</li>\n<li>\n<p><a href=\"https://www.w3cschool.cn\" target=\"_blank\" rel=\"noopener noreferrer\">w3cschool</a> <i>Content not supported</i> <i>Content not supported</i> <i>Content not supported</i></p>\n</li>\n<li>\n<p><a href=\"http://www.w3school.com.cn/\" target=\"_blank\" rel=\"noopener noreferrer\">w3school</a> <i>Content not supported</i></p>\n</li>\n</ul>\n",
+      "content_html": "<p>此处是 Mr.Hope 存放的一些代码笔记。</p>\n\n<h2 id=\"目录\" tabindex=\"-1\"> 目录</h2>\n<h3 id=\"基础\" tabindex=\"-1\"> 基础</h3>\n<ul>\n<li>\n<p><a href=\"/code/basic/\">基础知识</a></p>\n</li>\n<li>\n<p><a href=\"/code/windows/\">Windows 基础</a></p>\n</li>\n<li>\n<p><a href=\"/code/github/\">GitHub 介绍</a></p>\n</li>\n</ul>\n<h3 id=\"前端开发\" tabindex=\"-1\"> 前端开发</h3>\n<ul>\n<li>\n<p><a href=\"/code/website/\">网站相关</a></p>\n</li>\n<li>\n<p><a href=\"/code/vue/\">Vue 相关</a></p>\n</li>\n<li>\n<p><a href=\"/code/mini-app/\">小程序教程</a></p>\n</li>\n<li>\n<p><a href=\"/code/node-js/\">Node.js</a></p>\n</li>\n</ul>\n<h3 id=\"代码学习\" tabindex=\"-1\"> 代码学习</h3>\n<ul>\n<li>\n<p><a href=\"/code/language/\">代码学习</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/learning.html\">如何学习一门语言</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/js/\">JavaScript 教程</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/typescript/\">TypeScript 教程</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/\">Python 教程</a> (编写中...)</p>\n</li>\n<li>\n<p><a href=\"/code/language/markdown/\">Markdown 教程</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/yaml/\">YAML 教程</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/json/\">JSON 教程</a></p>\n</li>\n</ul>\n<h3 id=\"app\" tabindex=\"-1\"> APP</h3>\n<ul>\n<li><a href=\"/code/Android/\">Android 开发</a></li>\n</ul>\n<h3 id=\"后端开发\" tabindex=\"-1\"> 后端开发</h3>\n<ul>\n<li><a href=\"/code/back-end/\">后端开发</a></li>\n</ul>\n<h3 id=\"代码学习网站\" tabindex=\"-1\"> 代码学习网站</h3>\n<h3 id=\"优质网站\" tabindex=\"-1\"> 优质网站</h3>\n<ul>\n<li>\n<p><a href=\"https://wangdoc.com/\" target=\"_blank\" rel=\"noopener noreferrer\">网道</a></p>\n</li>\n<li>\n<p><a href=\"https://www.liaoxuefeng.com/\" target=\"_blank\" rel=\"noopener noreferrer\">廖雪峰的网站</a></p>\n</li>\n<li>\n<p><a href=\"https://developer.mozilla.org/zh-CN/\" target=\"_blank\" rel=\"noopener noreferrer\">MDN</a></p>\n<div>\n<p>相关信息</p>\n<p>MDN 的中文文档翻译很差，大多都是机翻，十分建议直接阅读英文文档。</p>\n</div>\n</li>\n</ul>\n<h3 id=\"杂牌网站\" tabindex=\"-1\"> 杂牌网站</h3>\n<ul>\n<li>\n<p><a href=\"https://www.runoob.com/\" target=\"_blank\" rel=\"noopener noreferrer\">菜鸟教程</a> <i>Content not supported</i></p>\n</li>\n<li>\n<p><a href=\"https://www.w3cschool.cn\" target=\"_blank\" rel=\"noopener noreferrer\">w3cschool</a> <i>Content not supported</i> <i>Content not supported</i> <i>Content not supported</i></p>\n</li>\n<li>\n<p><a href=\"http://www.w3school.com.cn/\" target=\"_blank\" rel=\"noopener noreferrer\">w3school</a> <i>Content not supported</i></p>\n</li>\n</ul>\n",
       "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-07T16:53:33.000Z",
+      "date_modified": "2022-10-10T05:08:58.000Z",
       "authors": [],
       "tags": []
     },
@@ -296,25 +321,13 @@
       "tags": []
     },
     {
-      "title": "后端开发",
-      "url": "https://mrhope.site/code/backEnd/",
-      "id": "https://mrhope.site/code/backEnd/",
-      "content_html": "<h2 id=\"后端入门\" tabindex=\"-1\"> 后端入门</h2>\n<h3 id=\"php\" tabindex=\"-1\"> PHP</h3>\n<p>PHP 是一种创建动态交互性站点的强有力的服务器端脚本语言，免费，并且使用非常广泛。PHP (全称 Hypertext Preprocessor，即超文本预处理器)是一种通用开源脚本语言。</p>\n<p>PHP 手册:</p>\n<ul>\n<li>\n<p><a href=\"http://www.w3school.com.cn/php/index.asp\" target=\"_blank\" rel=\"noopener noreferrer\">W3School 教程</a></p>\n</li>\n<li>\n<p><a href=\"https://www.runoob.com/php/php-tutorial.html\" target=\"_blank\" rel=\"noopener noreferrer\">菜鸟教程</a></p>\n</li>\n</ul>\n<p>如果服务器访问数量不大的情况下，PHP 作为一种门槛低，开发方便的脚本语言，还是挺受到欢迎的。</p>\n<h3 id=\"asp\" tabindex=\"-1\"> ASP</h3>\n<p>ASP 文件可包含文本、HTML 标签和脚本。ASP 文件中的脚本可在服务器上执行。由于 ASP 在服务器上运行，浏览器无需支持客户端脚本就可以显示 ASP 文件!</p>\n<ul>\n<li>\n<p><a href=\"http://www.w3school.com.cn/asp/index.asp\" target=\"_blank\" rel=\"noopener noreferrer\">W3School 教程</a></p>\n</li>\n<li>\n<p><a href=\"https://www.runoob.com/asp/asp-tutorial.html\" target=\"_blank\" rel=\"noopener noreferrer\">菜鸟教程</a></p>\n</li>\n</ul>\n<div>\n<p>提示</p>\n<p>更多详情有待日后补充</p>\n</div>\n",
-      "date_published": "2019-09-10T00:00:00.000Z",
-      "date_modified": "2022-02-06T16:46:58.000Z",
-      "authors": [],
-      "tags": [
-        "后端"
-      ]
-    },
-    {
       "title": "基础介绍",
       "url": "https://mrhope.site/code/basic/",
       "id": "https://mrhope.site/code/basic/",
       "summary": "这些是一些最为基础的内容，是后来补充进博客中的，供访客查阅。\n",
-      "content_html": "<p>这些是一些最为基础的内容，是后来补充进博客中的，供访客查阅。</p>\n\n<ul>\n<li>\n<p><a href=\"/code/basic/computer.html\">计算机</a></p>\n</li>\n<li>\n<p><a href=\"/code/basic/OS.html\">操作系统</a></p>\n</li>\n<li>\n<p><a href=\"/code/basic/file-extension.html\">文件扩展名</a></p>\n</li>\n<li>\n<p><a href=\"/code/basic/encoding.html\">文件编码</a></p>\n</li>\n<li>\n<p><a href=\"/code/basic/path.html\">路径</a></p>\n</li>\n<li>\n<p><a href=\"/code/basic/glob.html\">Glob 模式介绍</a></p>\n</li>\n<li>\n<p><a href=\"/code/basic/debug.html\">开发简介</a></p>\n</li>\n<li>\n<p><a href=\"/code/basic/ci.html\">持续集成</a></p>\n</li>\n<li>\n<p><a href=\"/code/basic/license.html\">许可介绍</a></p>\n</li>\n<li>\n<p><a href=\"/code/basic/open-source-and-free.html\">开源与免费</a></p>\n</li>\n</ul>\n",
+      "content_html": "<p>这些是一些最为基础的内容，是后来补充进博客中的，供访客查阅。</p>\n\n<ul>\n<li>\n<p><a href=\"/code/basic/computer.html\">计算机</a></p>\n</li>\n<li>\n<p><a href=\"/code/basic/os.html\">操作系统</a></p>\n</li>\n<li>\n<p><a href=\"/code/basic/file-extension.html\">文件扩展名</a></p>\n</li>\n<li>\n<p><a href=\"/code/basic/encoding.html\">文件编码</a></p>\n</li>\n<li>\n<p><a href=\"/code/basic/path.html\">路径</a></p>\n</li>\n<li>\n<p><a href=\"/code/basic/glob.html\">Glob 模式介绍</a></p>\n</li>\n<li>\n<p><a href=\"/code/basic/debug.html\">开发简介</a></p>\n</li>\n<li>\n<p><a href=\"/code/basic/ci.html\">持续集成</a></p>\n</li>\n<li>\n<p><a href=\"/code/basic/license.html\">许可介绍</a></p>\n</li>\n<li>\n<p><a href=\"/code/basic/open-source-and-free.html\">开源与免费</a></p>\n</li>\n</ul>\n",
       "date_published": "2019-12-26T00:00:00.000Z",
-      "date_modified": "2022-02-06T16:46:58.000Z",
+      "date_modified": "2022-10-10T05:08:58.000Z",
       "authors": [],
       "tags": [
         "基础"
@@ -1253,22 +1266,6 @@
       "summary": "本章节介绍 Python 的基础语法，帮助您尽快了解 Python 的基础内容\n",
       "content_html": "<p>本章节介绍 Python 的基础语法，帮助您尽快了解 Python 的基础内容</p>\n\n<h2 id=\"目录\" tabindex=\"-1\"> 目录</h2>\n<ul>\n<li>\n<p><a href=\"/code/language/python/guide/write.html\">第一个 Python 程序</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/guide/io.html\">输入与输出</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/guide/basic.html\">基础语法</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/guide/string.html\">字符串</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/guide/list-and-tuple.html\">List 和 Tuple</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/guide/condition.html\">条件判断</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/guide/loop.html\">循环</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/guide/dict-and-set.html\">Dictionary 和 Set</a></p>\n</li>\n</ul>\n",
       "date_published": "2020-05-19T00:00:00.000Z",
-      "date_modified": "2022-02-06T16:46:58.000Z",
-      "authors": [
-        {
-          "name": "廖雪峰"
-        }
-      ],
-      "tags": [
-        "Python"
-      ]
-    },
-    {
-      "title": "介绍",
-      "url": "https://mrhope.site/code/language/python/intro/",
-      "id": "https://mrhope.site/code/language/python/intro/",
-      "content_html": "<h2 id=\"目录\" tabindex=\"-1\"> 目录</h2>\n<ul>\n<li>\n<p><a href=\"/code/language/python/intro/intro.html\">Python 介绍</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/intro/install.html\">Python 安装</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/intro/interpreter.html\">解释器</a></p>\n</li>\n</ul>\n",
-      "date_published": "2020-05-25T00:00:00.000Z",
       "date_modified": "2022-02-06T16:46:58.000Z",
       "authors": [
         {

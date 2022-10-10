@@ -3,10 +3,12 @@
   <id>https://mrhope.site/</id>
   <title>Mr.Hope</title>
   <subtitle>Where there is light, there is hope.</subtitle>
-  <updated>2022-10-02T02:15:16.158Z</updated>
+  <updated>2022-10-10T05:20:33.412Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mrhope.site/atom.xml"/>
   <link rel="alternate" href="https://mrhope.site/"/>
+  <category term="后端"/>
+  <category term="基础"/>
   <category term="Git"/>
   <category term="Node.js"/>
   <category term="小程序"/>
@@ -19,8 +21,6 @@
   <category term="Linux"/>
   <category term="随笔"/>
   <category term="物理"/>
-  <category term="后端"/>
-  <category term="基础"/>
   <category term="GitHub"/>
   <category term="教程"/>
   <category term="软件"/>
@@ -48,6 +48,77 @@
   <contributor>
     <name>廖雪峰</name>
   </contributor>
+  <entry>
+    <title type="html">后端开发</title>
+    <id>https://mrhope.site/code/back-end/</id>
+    <link href="https://mrhope.site/code/back-end/"/>
+    <updated>2022-10-10T05:08:58.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="后端入门" tabindex="-1"> 后端入门</h2>
+<h3 id="php" tabindex="-1"> PHP</h3>
+<p>PHP 是一种创建动态交互性站点的强有力的服务器端脚本语言，免费，并且使用非常广泛。PHP (全称 Hypertext Preprocessor，即超文本预处理器)是一种通用开源脚本语言。</p>
+<p>PHP 手册:</p>
+<ul>
+<li>
+<p><a href="http://www.w3school.com.cn/php/index.asp" target="_blank" rel="noopener noreferrer">W3School 教程</a></p>
+</li>
+<li>
+<p><a href="https://www.runoob.com/php/php-tutorial.html" target="_blank" rel="noopener noreferrer">菜鸟教程</a></p>
+</li>
+</ul>
+<p>如果服务器访问数量不大的情况下，PHP 作为一种门槛低，开发方便的脚本语言，还是挺受到欢迎的。</p>
+<h3 id="asp" tabindex="-1"> ASP</h3>
+<p>ASP 文件可包含文本、HTML 标签和脚本。ASP 文件中的脚本可在服务器上执行。由于 ASP 在服务器上运行，浏览器无需支持客户端脚本就可以显示 ASP 文件!</p>
+<ul>
+<li>
+<p><a href="http://www.w3school.com.cn/asp/index.asp" target="_blank" rel="noopener noreferrer">W3School 教程</a></p>
+</li>
+<li>
+<p><a href="https://www.runoob.com/asp/asp-tutorial.html" target="_blank" rel="noopener noreferrer">菜鸟教程</a></p>
+</li>
+</ul>
+<div>
+<p>提示</p>
+<p>更多详情有待日后补充</p>
+</div>
+]]></content>
+    <category term="后端" scheme=""/>
+    <published>2019-09-10T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="html">操作系统</title>
+    <id>https://mrhope.site/code/basic/os.html</id>
+    <link href="https://mrhope.site/code/basic/os.html"/>
+    <updated>2022-10-10T05:08:58.000Z</updated>
+    <summary type="html"><![CDATA[<p>操作系统 (Operating System，OS) 是软件的一部分，它是硬件基础上的第一层软件，是硬件和其它软件沟通的桥梁(或者说接口、中间人、中介等)。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>操作系统 (Operating System，OS) 是软件的一部分，它是硬件基础上的第一层软件，是硬件和其它软件沟通的桥梁(或者说接口、中间人、中介等)。</p>
+
+<p>操作系统会控制其他程序运行，管理系统资源，提供最基本的计算功能，如管理及配置内存、决定系统资源供需的优先次序等，同时还提供一些基本的服务程序，例如:</p>
+<ol>
+<li>
+<p>文件系统</p>
+<p>提供计算机存储信息的结构，信息存储在文件中，文件主要存储在计算机的内部硬盘里，在目录的分层结构中组织文件。文件系统为操作系统提供了组织管理数据的方式。</p>
+</li>
+<li>
+<p>设备驱动程序</p>
+<p>提供连接计算机的每个硬件设备的接口，设备驱动器使程序能够写入设备，而不需要了解执行每个硬件的细节。简单来说，就是让您能吃到鸡蛋，但不用养一只鸡。</p>
+</li>
+<li>
+<p>用户接口</p>
+<p>操作系统需要为用户提供一种运行程序和访问文件系统的方法。如常用的 Windows 图形界面，可以理解为一种用户与操作系统交互的方式；智能手机的 Android 或 iOS 系统，也是一种操作系统的交互方式。</p>
+</li>
+<li>
+<p>系统服务程序</p>
+<p>当计算机启动时，会自启动许多系统服务程序，执行安装文件系统、启动网络服务、运行预定任务等操作。</p>
+</li>
+</ol>
+<p>打个比方，操作系统就好像是一个政府，其它软件都会被它管控；操作系统在给其他软件提供各种便利的同时，还会约束其他软件不能为所欲为。</p>
+<p><img src="@source/code/basic/assets/OS.gif" alt="操作系统结构示意图"></p>
+<p>目前流行的服务器和 PC 端操作系统有 Linux、Windows、UNIX 等，手机操作系统有 Android、iOS，嵌入式操作系统有 Windows CE、PalmOS、eCos、uClinux 等。</p>
+]]></content>
+    <category term="基础" scheme=""/>
+    <published>2019-12-26T00:00:00.000Z</published>
+  </entry>
   <entry>
     <title type="html">高级合并</title>
     <id>https://mrhope.site/software/git/merge.html</id>
@@ -1695,7 +1766,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <title type="html">代码笔记</title>
     <id>https://mrhope.site/code/</id>
     <link href="https://mrhope.site/code/"/>
-    <updated>2022-02-07T16:53:33.000Z</updated>
+    <updated>2022-10-10T05:08:58.000Z</updated>
     <summary type="html"><![CDATA[<p>此处是 Mr.Hope 存放的一些代码笔记。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>此处是 Mr.Hope 存放的一些代码笔记。</p>
@@ -1761,7 +1832,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </ul>
 <h3 id="后端开发" tabindex="-1"> 后端开发</h3>
 <ul>
-<li><a href="/code/backEnd/">后端开发</a></li>
+<li><a href="/code/back-end/">后端开发</a></li>
 </ul>
 <h3 id="代码学习网站" tabindex="-1"> 代码学习网站</h3>
 <h3 id="优质网站" tabindex="-1"> 优质网站</h3>
@@ -2091,46 +2162,10 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
-    <title type="html">后端开发</title>
-    <id>https://mrhope.site/code/backEnd/</id>
-    <link href="https://mrhope.site/code/backEnd/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="后端入门" tabindex="-1"> 后端入门</h2>
-<h3 id="php" tabindex="-1"> PHP</h3>
-<p>PHP 是一种创建动态交互性站点的强有力的服务器端脚本语言，免费，并且使用非常广泛。PHP (全称 Hypertext Preprocessor，即超文本预处理器)是一种通用开源脚本语言。</p>
-<p>PHP 手册:</p>
-<ul>
-<li>
-<p><a href="http://www.w3school.com.cn/php/index.asp" target="_blank" rel="noopener noreferrer">W3School 教程</a></p>
-</li>
-<li>
-<p><a href="https://www.runoob.com/php/php-tutorial.html" target="_blank" rel="noopener noreferrer">菜鸟教程</a></p>
-</li>
-</ul>
-<p>如果服务器访问数量不大的情况下，PHP 作为一种门槛低，开发方便的脚本语言，还是挺受到欢迎的。</p>
-<h3 id="asp" tabindex="-1"> ASP</h3>
-<p>ASP 文件可包含文本、HTML 标签和脚本。ASP 文件中的脚本可在服务器上执行。由于 ASP 在服务器上运行，浏览器无需支持客户端脚本就可以显示 ASP 文件!</p>
-<ul>
-<li>
-<p><a href="http://www.w3school.com.cn/asp/index.asp" target="_blank" rel="noopener noreferrer">W3School 教程</a></p>
-</li>
-<li>
-<p><a href="https://www.runoob.com/asp/asp-tutorial.html" target="_blank" rel="noopener noreferrer">菜鸟教程</a></p>
-</li>
-</ul>
-<div>
-<p>提示</p>
-<p>更多详情有待日后补充</p>
-</div>
-]]></content>
-    <category term="后端" scheme=""/>
-    <published>2019-09-10T00:00:00.000Z</published>
-  </entry>
-  <entry>
     <title type="html">基础介绍</title>
     <id>https://mrhope.site/code/basic/</id>
     <link href="https://mrhope.site/code/basic/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
+    <updated>2022-10-10T05:08:58.000Z</updated>
     <summary type="html"><![CDATA[<p>这些是一些最为基础的内容，是后来补充进博客中的，供访客查阅。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>这些是一些最为基础的内容，是后来补充进博客中的，供访客查阅。</p>
@@ -2140,7 +2175,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <p><a href="/code/basic/computer.html">计算机</a></p>
 </li>
 <li>
-<p><a href="/code/basic/OS.html">操作系统</a></p>
+<p><a href="/code/basic/os.html">操作系统</a></p>
 </li>
 <li>
 <p><a href="/code/basic/file-extension.html">文件扩展名</a></p>
@@ -6173,34 +6208,6 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
       <name>廖雪峰</name>
     </contributor>
     <published>2020-05-19T00:00:00.000Z</published>
-    <rights>Copyright by 廖雪峰</rights>
-  </entry>
-  <entry>
-    <title type="html">介绍</title>
-    <id>https://mrhope.site/code/language/python/intro/</id>
-    <link href="https://mrhope.site/code/language/python/intro/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
-<ul>
-<li>
-<p><a href="/code/language/python/intro/intro.html">Python 介绍</a></p>
-</li>
-<li>
-<p><a href="/code/language/python/intro/install.html">Python 安装</a></p>
-</li>
-<li>
-<p><a href="/code/language/python/intro/interpreter.html">解释器</a></p>
-</li>
-</ul>
-]]></content>
-    <author>
-      <name>廖雪峰</name>
-    </author>
-    <category term="Python" scheme=""/>
-    <contributor>
-      <name>廖雪峰</name>
-    </contributor>
-    <published>2020-05-25T00:00:00.000Z</published>
     <rights>Copyright by 廖雪峰</rights>
   </entry>
 </feed>

@@ -6,10 +6,12 @@
     <link>https://mrhope.site/</link>
     <description>Where there is light, there is hope.</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 02 Oct 2022 02:15:16 GMT</pubDate>
-    <lastBuildDate>Sun, 02 Oct 2022 02:15:16 GMT</lastBuildDate>
+    <pubDate>Mon, 10 Oct 2022 05:20:33 GMT</pubDate>
+    <lastBuildDate>Mon, 10 Oct 2022 05:20:33 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>后端</category>
+    <category>基础</category>
     <category>Git</category>
     <category>Node.js</category>
     <category>小程序</category>
@@ -22,8 +24,6 @@
     <category>Linux</category>
     <category>随笔</category>
     <category>物理</category>
-    <category>后端</category>
-    <category>基础</category>
     <category>GitHub</category>
     <category>教程</category>
     <category>软件</category>
@@ -42,6 +42,77 @@
     <category>CSS</category>
     <category>Emmet</category>
     <category>HTML</category>
+    <item>
+      <title>后端开发</title>
+      <link>https://mrhope.site/code/back-end/</link>
+      <guid>https://mrhope.site/code/back-end/</guid>
+      <source url="https://mrhope.site/rss.xml">后端开发</source>
+      <category>后端</category>
+      <pubDate>Tue, 10 Sep 2019 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2 id="后端入门" tabindex="-1"> 后端入门</h2>
+<h3 id="php" tabindex="-1"> PHP</h3>
+<p>PHP 是一种创建动态交互性站点的强有力的服务器端脚本语言，免费，并且使用非常广泛。PHP (全称 Hypertext Preprocessor，即超文本预处理器)是一种通用开源脚本语言。</p>
+<p>PHP 手册:</p>
+<ul>
+<li>
+<p><a href="http://www.w3school.com.cn/php/index.asp" target="_blank" rel="noopener noreferrer">W3School 教程</a></p>
+</li>
+<li>
+<p><a href="https://www.runoob.com/php/php-tutorial.html" target="_blank" rel="noopener noreferrer">菜鸟教程</a></p>
+</li>
+</ul>
+<p>如果服务器访问数量不大的情况下，PHP 作为一种门槛低，开发方便的脚本语言，还是挺受到欢迎的。</p>
+<h3 id="asp" tabindex="-1"> ASP</h3>
+<p>ASP 文件可包含文本、HTML 标签和脚本。ASP 文件中的脚本可在服务器上执行。由于 ASP 在服务器上运行，浏览器无需支持客户端脚本就可以显示 ASP 文件!</p>
+<ul>
+<li>
+<p><a href="http://www.w3school.com.cn/asp/index.asp" target="_blank" rel="noopener noreferrer">W3School 教程</a></p>
+</li>
+<li>
+<p><a href="https://www.runoob.com/asp/asp-tutorial.html" target="_blank" rel="noopener noreferrer">菜鸟教程</a></p>
+</li>
+</ul>
+<div>
+<p>提示</p>
+<p>更多详情有待日后补充</p>
+</div>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>操作系统</title>
+      <link>https://mrhope.site/code/basic/os.html</link>
+      <guid>https://mrhope.site/code/basic/os.html</guid>
+      <source url="https://mrhope.site/rss.xml">操作系统</source>
+      <description>操作系统 (Operating System，OS) 是软件的一部分，它是硬件基础上的第一层软件，是硬件和其它软件沟通的桥梁(或者说接口、中间人、中介等)。
+</description>
+      <category>基础</category>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>操作系统 (Operating System，OS) 是软件的一部分，它是硬件基础上的第一层软件，是硬件和其它软件沟通的桥梁(或者说接口、中间人、中介等)。</p>
+
+<p>操作系统会控制其他程序运行，管理系统资源，提供最基本的计算功能，如管理及配置内存、决定系统资源供需的优先次序等，同时还提供一些基本的服务程序，例如:</p>
+<ol>
+<li>
+<p>文件系统</p>
+<p>提供计算机存储信息的结构，信息存储在文件中，文件主要存储在计算机的内部硬盘里，在目录的分层结构中组织文件。文件系统为操作系统提供了组织管理数据的方式。</p>
+</li>
+<li>
+<p>设备驱动程序</p>
+<p>提供连接计算机的每个硬件设备的接口，设备驱动器使程序能够写入设备，而不需要了解执行每个硬件的细节。简单来说，就是让您能吃到鸡蛋，但不用养一只鸡。</p>
+</li>
+<li>
+<p>用户接口</p>
+<p>操作系统需要为用户提供一种运行程序和访问文件系统的方法。如常用的 Windows 图形界面，可以理解为一种用户与操作系统交互的方式；智能手机的 Android 或 iOS 系统，也是一种操作系统的交互方式。</p>
+</li>
+<li>
+<p>系统服务程序</p>
+<p>当计算机启动时，会自启动许多系统服务程序，执行安装文件系统、启动网络服务、运行预定任务等操作。</p>
+</li>
+</ol>
+<p>打个比方，操作系统就好像是一个政府，其它软件都会被它管控；操作系统在给其他软件提供各种便利的同时，还会约束其他软件不能为所欲为。</p>
+<p><img src="@source/code/basic/assets/OS.gif" alt="操作系统结构示意图"></p>
+<p>目前流行的服务器和 PC 端操作系统有 Linux、Windows、UNIX 等，手机操作系统有 Android、iOS，嵌入式操作系统有 Windows CE、PalmOS、eCos、uClinux 等。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>高级合并</title>
       <link>https://mrhope.site/software/git/merge.html</link>
@@ -1750,7 +1821,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 </ul>
 <h3 id="后端开发" tabindex="-1"> 后端开发</h3>
 <ul>
-<li><a href="/code/backEnd/">后端开发</a></li>
+<li><a href="/code/back-end/">后端开发</a></li>
 </ul>
 <h3 id="代码学习网站" tabindex="-1"> 代码学习网站</h3>
 <h3 id="优质网站" tabindex="-1"> 优质网站</h3>
@@ -2079,42 +2150,6 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 ]]></content:encoded>
     </item>
     <item>
-      <title>后端开发</title>
-      <link>https://mrhope.site/code/backEnd/</link>
-      <guid>https://mrhope.site/code/backEnd/</guid>
-      <source url="https://mrhope.site/rss.xml">后端开发</source>
-      <category>后端</category>
-      <pubDate>Tue, 10 Sep 2019 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="后端入门" tabindex="-1"> 后端入门</h2>
-<h3 id="php" tabindex="-1"> PHP</h3>
-<p>PHP 是一种创建动态交互性站点的强有力的服务器端脚本语言，免费，并且使用非常广泛。PHP (全称 Hypertext Preprocessor，即超文本预处理器)是一种通用开源脚本语言。</p>
-<p>PHP 手册:</p>
-<ul>
-<li>
-<p><a href="http://www.w3school.com.cn/php/index.asp" target="_blank" rel="noopener noreferrer">W3School 教程</a></p>
-</li>
-<li>
-<p><a href="https://www.runoob.com/php/php-tutorial.html" target="_blank" rel="noopener noreferrer">菜鸟教程</a></p>
-</li>
-</ul>
-<p>如果服务器访问数量不大的情况下，PHP 作为一种门槛低，开发方便的脚本语言，还是挺受到欢迎的。</p>
-<h3 id="asp" tabindex="-1"> ASP</h3>
-<p>ASP 文件可包含文本、HTML 标签和脚本。ASP 文件中的脚本可在服务器上执行。由于 ASP 在服务器上运行，浏览器无需支持客户端脚本就可以显示 ASP 文件!</p>
-<ul>
-<li>
-<p><a href="http://www.w3school.com.cn/asp/index.asp" target="_blank" rel="noopener noreferrer">W3School 教程</a></p>
-</li>
-<li>
-<p><a href="https://www.runoob.com/asp/asp-tutorial.html" target="_blank" rel="noopener noreferrer">菜鸟教程</a></p>
-</li>
-</ul>
-<div>
-<p>提示</p>
-<p>更多详情有待日后补充</p>
-</div>
-]]></content:encoded>
-    </item>
-    <item>
       <title>基础介绍</title>
       <link>https://mrhope.site/code/basic/</link>
       <guid>https://mrhope.site/code/basic/</guid>
@@ -2130,7 +2165,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <p><a href="/code/basic/computer.html">计算机</a></p>
 </li>
 <li>
-<p><a href="/code/basic/OS.html">操作系统</a></p>
+<p><a href="/code/basic/os.html">操作系统</a></p>
 </li>
 <li>
 <p><a href="/code/basic/file-extension.html">文件扩展名</a></p>
@@ -6109,27 +6144,6 @@ JavaScript 也是一种嵌入式 (embedded) 语言。它本身提供的核心语
 </li>
 <li>
 <p><a href="/code/language/python/guide/dict-and-set.html">Dictionary 和 Set</a></p>
-</li>
-</ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>介绍</title>
-      <link>https://mrhope.site/code/language/python/intro/</link>
-      <guid>https://mrhope.site/code/language/python/intro/</guid>
-      <source url="https://mrhope.site/rss.xml">介绍</source>
-      <category>Python</category>
-      <pubDate>Mon, 25 May 2020 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
-<ul>
-<li>
-<p><a href="/code/language/python/intro/intro.html">Python 介绍</a></p>
-</li>
-<li>
-<p><a href="/code/language/python/intro/install.html">Python 安装</a></p>
-</li>
-<li>
-<p><a href="/code/language/python/intro/interpreter.html">解释器</a></p>
 </li>
 </ul>
 ]]></content:encoded>
