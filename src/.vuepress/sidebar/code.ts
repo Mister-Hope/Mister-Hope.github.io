@@ -35,5 +35,5 @@ export const code = arraySidebar([
     ],
   },
   "Android/",
-  "backEnd/",
+  "back-end/",
 ]);

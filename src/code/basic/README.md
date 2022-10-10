@@ -13,7 +13,7 @@ star: true
 
 - [计算机](computer.md)
 
-- [操作系统](OS.md)
+- [操作系统](os.md)
 
 - [文件扩展名](file-extension.md)
 

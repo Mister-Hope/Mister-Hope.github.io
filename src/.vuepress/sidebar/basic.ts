@@ -3,7 +3,7 @@ import { arraySidebar } from "vuepress-theme-hope";
 export const basic = arraySidebar([
   "",
   "computer",
-  "OS",
+  "os",
   "file-extension",
   "encoding",
   "path",
