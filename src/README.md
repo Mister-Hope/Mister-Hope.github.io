@@ -36,7 +36,7 @@ projects:
   - name: "bycrypt-ts"
     icon: project
     desc: Bycrypt written in typescript
-    link: https://github.com/Mister-Hope/bycrypt-ts
+    link: https://github.com/Mister-Hope/bcrypt-ts
 
   - name: "@mr-hope/gulp-sass"
     icon: project

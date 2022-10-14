@@ -33,15 +33,10 @@ projects:
     link: https://vuepress-theme-hope.github.io/v2/md-enhance/
     icon: /assets/img/vuepress-hope-logo.svg
 
-  - name: vuepress-plugin-feed2
-    desc: VuePress2 Feed Plugin
-    link: https://vuepress-theme-hope.github.io/v2/feed/
-    icon: /assets/img/vuepress-hope-logo.svg
-
-  - name: vuepress-plugin-pwa2
-    desc: VuePress2 PWA Plugin
-    link: https://vuepress-theme-hope.github.io/v2/pwa/
-    icon: /assets/img/vuepress-hope-logo.svg
+  - name: "bycrypt-ts"
+    icon: project
+    desc: Bycrypt written in typescript
+    link: https://github.com/Mister-Hope/bcrypt-ts
 
   - name: "@mr-hope/gulp-sass"
     type: project
