@@ -71,8 +71,6 @@ export default hopeTheme({
       serverURL: "https://comment.mrhope.site",
     },
 
-    components: ["BiliBili"],
-
     feed: {
       atom: true,
       json: true,
