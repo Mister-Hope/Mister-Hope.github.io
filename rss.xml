@@ -6,8 +6,8 @@
     <link>https://mrhope.site/</link>
     <description>Where there is light, there is hope.</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 14 Oct 2022 11:21:41 GMT</pubDate>
-    <lastBuildDate>Fri, 14 Oct 2022 11:21:41 GMT</lastBuildDate>
+    <pubDate>Sat, 22 Oct 2022 12:27:57 GMT</pubDate>
+    <lastBuildDate>Sat, 22 Oct 2022 12:27:57 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>后端</category>
@@ -156,7 +156,7 @@
 
 <p>在上一节，我们编写了一个 hello.js 文件，这个 hello.js 文件就是一个模块，模块的名字就是文件名(去掉.js 后缀)，所以 hello.js 文件就是名为 hello 的模块。</p>
 <p>我们把 hello.js 改造一下，创建一个函数，这样我们就可以在其他地方调用这个函数:</p>
-<div><pre><code><span>"use strict"</span><span>;</span>
+<div data-ext="js"><pre><code><span>"use strict"</span><span>;</span>
 
 <span>const</span> s <span>=</span> <span>"Hello"</span><span>;</span>
 
@@ -167,7 +167,7 @@
 module<span>.</span>exports <span>=</span> greet<span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>函数 <code>greet()</code> 是我们在 hello 模块中定义的，您可能注意到最后一行是一个奇怪的赋值语句，它的意思是，把函数 <code>greet</code> 作为模块的输出暴露出去，这样其他模块就可以使用 <code>greet</code> 函数了。</p>
 <p>问题是其他模块怎么使用 hello 模块的这个 <code>greet</code> 函数呢? 我们再编写一个 <code>main.js</code> 文件，调用 <code>hello</code> 模块的 <code>greet</code> 函数:</p>
-<div><pre><code><span>"use strict"</span><span>;</span>
+<div data-ext="js"><pre><code><span>"use strict"</span><span>;</span>
 
 <span>// 引入hello模块:</span>
 <span>const</span> greet <span>=</span> <span>require</span><span>(</span><span>"./hello"</span><span>)</span><span>;</span>
@@ -176,14 +176,14 @@ module<span>.</span>exports <span>=</span> greet<span>;</span>
 
 <span>greet</span><span>(</span>s<span>)</span><span>;</span> <span>// Hello, Michael!</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>注意到引入 <code>hello</code> 模块用 Node.js 提供的 <code>require</code> 函数:</p>
-<div><pre><code><span>const</span> greet <span>=</span> <span>require</span><span>(</span><span>"./hello"</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code><span>const</span> greet <span>=</span> <span>require</span><span>(</span><span>"./hello"</span><span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>引入的模块作为变量保存在 <code>greet</code> 变量中，那 greet 变量到底是什么东西? 其实变量 <code>greet</code> 就是在 <code>hello.js</code> 中我们用 <code>module.exports = greet;</code> 输出的 <code>greet</code> 函数。所以，<code>main.js</code> 就成功地引用了 <code>hello.js</code> 模块中定义的 <code>greet()</code> 函数，接下来就可以直接使用它了。</p>
 <p>在使用 <code>require()</code> 引入模块的时候，请注意模块的相对路径。因为 main.js 和 hello.js 位于同一个目录，所以我们用了当前目录.:</p>
-<div><pre><code><span>const</span> greet <span>=</span> <span>require</span><span>(</span><span>"./hello"</span><span>)</span><span>;</span> <span>// 不要忘了写相对目录!</span>
+<div data-ext="js"><pre><code><span>const</span> greet <span>=</span> <span>require</span><span>(</span><span>"./hello"</span><span>)</span><span>;</span> <span>// 不要忘了写相对目录!</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>如果只写模块名:</p>
-<div><pre><code><span>const</span> greet <span>=</span> <span>require</span><span>(</span><span>"hello"</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code><span>const</span> greet <span>=</span> <span>require</span><span>(</span><span>"hello"</span><span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>则 Node.js 会依次在内置模块、全局模块和当前模块下查找 hello.js，您很可能会得到一个错误:</p>
-<div><pre><code>module<span>.</span>js
+<div data-ext="js"><pre><code>module<span>.</span>js
     <span>throw</span> err<span>;</span>
           <span>^</span>
 <span>Error</span><span>:</span> Cannot find module <span>'hello'</span>
@@ -203,26 +203,26 @@ module<span>.</span>exports <span>=</span> greet<span>;</span>
 <p>一个模块想要对外暴露变量(函数也是变量)，可以用 <code>module.exports = variable;</code>，一个模块要引用其他模块暴露的变量，用 <code>const ref = require('module_name');</code> 就拿到了引用模块的变量。</p>
 <h2 id="总结" tabindex="-1"> 总结</h2>
 <p>要在模块中对外输出变量，用:</p>
-<div><pre><code>module<span>.</span>exports <span>=</span> variable<span>;</span>
+<div data-ext="js"><pre><code>module<span>.</span>exports <span>=</span> variable<span>;</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>输出的变量可以是任意对象、函数、数组等等。</p>
 <p>要引入其他模块输出的对象，用:</p>
-<div><pre><code><span>const</span> foo <span>=</span> <span>require</span><span>(</span><span>"other_module"</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code><span>const</span> foo <span>=</span> <span>require</span><span>(</span><span>"other_module"</span><span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>引入的对象具体是什么，取决于引入模块输出的对象。</p>
 <h2 id="深入了解模块原理" tabindex="-1"> 深入了解模块原理</h2>
 <p>如果您想详细地了解<strong>CommonJS</strong>的模块实现原理，请继续往下阅读。如果不想了解，请结束阅读。</p>
 <p>当我们编写 JavaScript 代码时，我们可以申明全局变量:</p>
-<div><pre><code><span>const</span> s <span>=</span> <span>"global"</span><span>;</span>
+<div data-ext="js"><pre><code><span>const</span> s <span>=</span> <span>"global"</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>在浏览器中，大量使用全局变量可不好。如果您在 <code>a.js</code> 中使用了全局变量 s，那么，在 <code>b.js</code> 中也使用全局变量 s，将造成冲突，<code>b.js</code> 中对 s 赋值会改变 <code>a.js</code> 的运行逻辑。</p>
 <p>也就是说，JavaScript 语言本身并没有一种模块机制来保证不同模块可以使用相同的变量名。</p>
 <p>那 Node.js 是如何实现这一点的?</p>
 <p>其实要实现“模块”这个功能，并不需要语法层面的支持。Node.js 也并不会增加任何 JavaScript 语法。实现“模块”功能的奥妙就在于 JavaScript 是一种函数式编程语言，它支持闭包。如果我们把一段 JavaScript 代码用一个函数包装起来，这段代码的所有“全局”变量就变成了函数内部的局部变量。</p>
 <p>请注意我们编写的 <code>hello.js</code> 代码是这样的:</p>
-<div><pre><code><span>const</span> s <span>=</span> <span>"Hello"</span><span>;</span>
+<div data-ext="js"><pre><code><span>const</span> s <span>=</span> <span>"Hello"</span><span>;</span>
 <span>const</span> name <span>=</span> <span>"world"</span><span>;</span>
 
 console<span>.</span><span>log</span><span>(</span>s <span>+</span> <span>" "</span> <span>+</span> name <span>+</span> <span>"!"</span><span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><p>Node.js 加载了 hello.js 后，它可以把代码包装一下，变成这样执行:</p>
-<div><pre><code><span>(</span><span>function</span> <span>(</span><span>)</span> <span>{</span>
+<div data-ext="js"><pre><code><span>(</span><span>function</span> <span>(</span><span>)</span> <span>{</span>
   <span>// 读取的hello.js代码:</span>
   <span>const</span> s <span>=</span> <span>"Hello"</span><span>;</span>
   <span>const</span> name <span>=</span> <span>"world"</span><span>;</span>
@@ -234,7 +234,7 @@ console<span>.</span><span>log</span><span>(</span>s <span>+</span> <span>" "</s
 <p>所以，Node.js 利用 JavaScript 的函数式编程的特性，轻而易举地实现了模块的隔离。</p>
 <p>但是，模块的输出 <code>module.exports</code> 怎么实现?</p>
 <p>这个也很容易实现，Node.js 可以先准备一个对象 <code>module</code>:</p>
-<div><pre><code><span>// 准备module对象:</span>
+<div data-ext="js"><pre><code><span>// 准备module对象:</span>
 <span>const</span> module <span>=</span> <span>{</span>
   <span>id</span><span>:</span> <span>"hello"</span><span>,</span>
   <span>exports</span><span>:</span> <span>{</span><span>}</span><span>,</span>
@@ -253,15 +253,15 @@ console<span>.</span><span>log</span><span>(</span>s <span>+</span> <span>" "</s
 <span>// 保存module:</span>
 <span>save</span><span>(</span>module<span>,</span> exported<span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>可见，变量 module 是 Node.js 在加载 js 文件前准备的一个变量，并将其传入加载函数，我们在 <code>hello.js</code> 中可以直接使用变量 <code>module</code> 原因就在于它实际上是函数的一个参数:</p>
-<div><pre><code>module<span>.</span>exports <span>=</span> greet<span>;</span>
+<div data-ext="js"><pre><code>module<span>.</span>exports <span>=</span> greet<span>;</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>通过把参数 <code>module</code> 传递给 <code>load()</code> 函数，<code>hello.js</code> 就顺利地把一个变量传递给了 Node.js 执行环境，Node.js 会把 module 变量保存到某个地方。</p>
 <p>由于 Node.js 保存了所有导入的 module，当我们用 <code>require()</code> 获取 module 时，Node.js 找到对应的 module，把这个 module 的 <code>exports</code> 变量返回，这样，另一个模块就顺利拿到了模块的输出:</p>
-<div><pre><code><span>const</span> greet <span>=</span> <span>require</span><span>(</span><span>"./hello"</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code><span>const</span> greet <span>=</span> <span>require</span><span>(</span><span>"./hello"</span><span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>以上是 Node.js 实现 JavaScript 模块的一个简单的原理介绍。</p>
 <h2 id="module-exports-vs-exports" tabindex="-1"> module.exports vs exports</h2>
 <p>很多时候，您会看到，在 Node.js 环境中，有两种方法可以在一个模块中输出变量:</p>
 <p>方法一: 对 module.exports 赋值:</p>
-<div><pre><code><span>// hello.js</span>
+<div data-ext="js"><pre><code><span>// hello.js</span>
 
 <span>function</span> <span>hello</span><span>(</span><span>)</span> <span>{</span>
   console<span>.</span><span>log</span><span>(</span><span>"Hello, world!"</span><span>)</span><span>;</span>
@@ -276,7 +276,7 @@ module<span>.</span>exports <span>=</span> <span>{</span>
   <span>greet</span><span>:</span> greet<span>,</span>
 <span>}</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>方法二: 直接使用 exports:</p>
-<div><pre><code><span>// hello.js</span>
+<div data-ext="js"><pre><code><span>// hello.js</span>
 
 <span>function</span> <span>hello</span><span>(</span><span>)</span> <span>{</span>
   console<span>.</span><span>log</span><span>(</span><span>"Hello, world!"</span><span>)</span><span>;</span>
@@ -293,19 +293,19 @@ module<span>.</span>exports <span>=</span> <span>{</span>
 exports<span>.</span>hello <span>=</span> hello<span>;</span>
 exports<span>.</span>greet <span>=</span> greet<span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>但是您不可以直接对 exports 赋值:</p>
-<div><pre><code><span>// 代码可以执行，但是模块并没有输出任何变量:</span>
+<div data-ext="js"><pre><code><span>// 代码可以执行，但是模块并没有输出任何变量:</span>
 exports <span>=</span> <span>{</span>
   <span>hello</span><span>:</span> hello<span>,</span>
   <span>greet</span><span>:</span> greet<span>,</span>
 <span>}</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div><p>如果您对上面的写法感到十分困惑，不要着急，我们来分析 Node.js 的加载机制:</p>
 <p>首先，Node.js 会把整个待加载的 hello.js 文件放入一个包装函数 load 中执行。在执行这个 load()函数前，Node.js 准备好了 module 变量:</p>
-<div><pre><code><span>const</span> module <span>=</span> <span>{</span>
+<div data-ext="js"><pre><code><span>const</span> module <span>=</span> <span>{</span>
   <span>id</span><span>:</span> <span>"hello"</span><span>,</span>
   <span>exports</span><span>:</span> <span>{</span><span>}</span><span>,</span>
 <span>}</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><p><code>load()</code> 函数最终返回 <code>module.exports</code>:</p>
-<div><pre><code><span>const</span> <span>load</span> <span>=</span> <span>function</span> <span>(</span><span>exports<span>,</span> module</span><span>)</span> <span>{</span>
+<div data-ext="js"><pre><code><span>const</span> <span>load</span> <span>=</span> <span>function</span> <span>(</span><span>exports<span>,</span> module</span><span>)</span> <span>{</span>
     <span>// hello.js的文件内容</span>
     <span>...</span>
     <span>// load函数返回:</span>
@@ -314,14 +314,14 @@ exports <span>=</span> <span>{</span>
 
 <span>const</span> exported <span>=</span> <span>load</span><span>(</span>module<span>.</span>exports<span>,</span> module<span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>也就是说，默认情况下，Node.js 准备的 <code>exports</code> 变量和 <code>module.exports</code> 变量实际上是同一个变量，并且初始化为空对象 <code>{}</code>，于是，我们可以写:</p>
-<div><pre><code>exports<span>.</span><span>foo</span> <span>=</span> <span>function</span> <span>(</span><span>)</span> <span>{</span>
+<div data-ext="js"><pre><code>exports<span>.</span><span>foo</span> <span>=</span> <span>function</span> <span>(</span><span>)</span> <span>{</span>
   <span>return</span> <span>"foo"</span><span>;</span>
 <span>}</span><span>;</span>
 exports<span>.</span><span>bar</span> <span>=</span> <span>function</span> <span>(</span><span>)</span> <span>{</span>
   <span>return</span> <span>"bar"</span><span>;</span>
 <span>}</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>也可以写:</p>
-<div><pre><code>module<span>.</span>exports<span>.</span><span>foo</span> <span>=</span> <span>function</span> <span>(</span><span>)</span> <span>{</span>
+<div data-ext="js"><pre><code>module<span>.</span>exports<span>.</span><span>foo</span> <span>=</span> <span>function</span> <span>(</span><span>)</span> <span>{</span>
   <span>return</span> <span>"foo"</span><span>;</span>
 <span>}</span><span>;</span>
 module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>function</span> <span>(</span><span>)</span> <span>{</span>
@@ -329,7 +329,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 <span>}</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>换句话说，Node.js 默认给您准备了一个空对象 <code>{}</code>，这样您可以直接往里面加东西。</p>
 <p>但是，如果我们要输出的是一个函数或数组，那么，只能给 <code>module.exports</code> 赋值:</p>
-<div><pre><code>module<span>.</span><span>exports</span> <span>=</span> <span>function</span> <span>(</span><span>)</span> <span>{</span>
+<div data-ext="js"><pre><code>module<span>.</span><span>exports</span> <span>=</span> <span>function</span> <span>(</span><span>)</span> <span>{</span>
   <span>return</span> <span>"foo"</span><span>;</span>
 <span>}</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>给 <code>exports</code> 赋值是无效的，因为赋值后，<code>module.exports</code> 仍然是空对象 <code>{}</code>。</p>
@@ -337,13 +337,13 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 <p>如果要输出一个键值对象 <code>{}</code>，可以利用 <code>exports</code> 这个已存在的空对象 <code>{}</code>，并继续在上面添加新的键值；</p>
 <p>如果要输出一个函数或数组，必须直接对 <code>module.exports</code> 对象赋值。</p>
 <p>所以我们可以得出结论: 直接对 <code>module.export</code>s 赋值，可以应对任何情况:</p>
-<div><pre><code>module<span>.</span>exports <span>=</span> <span>{</span>
+<div data-ext="js"><pre><code>module<span>.</span>exports <span>=</span> <span>{</span>
   <span>foo</span><span>:</span> <span>function</span> <span>(</span><span>)</span> <span>{</span>
     <span>return</span> <span>"foo"</span><span>;</span>
   <span>}</span><span>,</span>
 <span>}</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div><p>或者:</p>
-<div><pre><code>module<span>.</span><span>exports</span> <span>=</span> <span>function</span> <span>(</span><span>)</span> <span>{</span>
+<div data-ext="js"><pre><code>module<span>.</span><span>exports</span> <span>=</span> <span>function</span> <span>(</span><span>)</span> <span>{</span>
   <span>return</span> <span>"foo"</span><span>;</span>
 <span>}</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>最终，我们强烈建议使用 <code>module.exports = xxx</code> 的方式来输出模块变量，这样，您只需要记忆一种方法。</p>
@@ -364,13 +364,13 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 <h2 id="事件监听-api" tabindex="-1"> 事件监听 API</h2>
 <p>我们约定，以 on 开头的 API 用来监听某个事件是否触发，如: <code>wx.onSocketOpen</code>, <code>wx.onCompassChange</code> 等。</p>
 <p>这类 API 接受一个回调函数作为参数，当事件触发时会调用这个回调函数，并将相关数据以参数形式传入。</p>
-<div><pre><code>wx<span>.</span><span>onCompassChange</span><span>(</span><span>(</span><span>res</span><span>)</span> <span>=></span> <span>{</span>
+<div data-ext="js"><pre><code>wx<span>.</span><span>onCompassChange</span><span>(</span><span>(</span><span>res</span><span>)</span> <span>=></span> <span>{</span>
   console<span>.</span><span>log</span><span>(</span>res<span>.</span>direction<span>)</span><span>;</span>
 <span>}</span><span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><h2 id="同步-api" tabindex="-1"> 同步 API</h2>
 <p>我们约定，以 <code>Sync</code> 结尾的 API 都是同步 API， 如 <code>wx.setStorageSync</code>，<code>wx.getSystemInfoSync</code> 等。此外，也有一些其他的同步 API，如 <code>wx.createWorker</code>, <code>wx.getBackgroundAudioManager</code> 等，详情参见 API 文档中的说明。</p>
 <p>同步 API 的执行结果可以通过函数返回值直接获取，如果执行出错会抛出异常。</p>
-<div><pre><code><span>try</span> <span>{</span>
+<div data-ext="js"><pre><code><span>try</span> <span>{</span>
   wx<span>.</span><span>setStorageSync</span><span>(</span><span>"key"</span><span>,</span> <span>"value"</span><span>)</span><span>;</span>
 <span>}</span> <span>catch</span> <span>(</span>e<span>)</span> <span>{</span>
   console<span>.</span><span>error</span><span>(</span>e<span>)</span><span>;</span>
@@ -443,7 +443,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 </tbody>
 </table>
 <p>异步 API 的执行结果需要通过 <code>Object</code> 类型的参数中传入的对应回调函数获取。部分异步 API 也会有返回值，可以用来实现更丰富的功能，如 <code>wx.request</code>, <code>wx.connectSocke</code>t` 等。</p>
-<div><pre><code>wx<span>.</span><span>login</span><span>(</span><span>{</span>
+<div data-ext="js"><pre><code>wx<span>.</span><span>login</span><span>(</span><span>{</span>
   <span>success</span><span>:</span> <span>(</span><span>res</span><span>)</span> <span>=></span> <span>{</span>
     console<span>.</span><span>log</span><span>(</span>res<span>.</span>code<span>)</span><span>;</span>
   <span>}</span><span>,</span>
@@ -493,7 +493,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 <CodeTabs id="15" :data='[{"title":"Kotlin"},{"title":"Java"}]' tab-id="anrdoid">
 
 <template #tab0="{ title, value, isActive }">
-<div><pre><code><span>class</span> MainActivity <span>:</span> <span>AppCompatActivity</span><span>(</span><span>)</span> <span>{</span>
+<div data-ext="kt"><pre><code><span>class</span> MainActivity <span>:</span> <span>AppCompatActivity</span><span>(</span><span>)</span> <span>{</span>
     <span>override</span> <span>fun</span> <span>onCreate</span><span>(</span>savedInstanceState<span>:</span> Bundle<span>?</span><span>)</span> <span>{</span>
         <span>super</span><span>.</span><span>onCreate</span><span>(</span>savedInstanceState<span>)</span>
         <span>setContentView</span><span>(</span>R<span>.</span>layout<span>.</span>activity_main<span>)</span>
@@ -506,7 +506,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 <span>}</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></template>
 <template #tab1="{ title, value, isActive }">
-<div><pre><code><span>public</span> <span>class</span> <span>MainActivity</span> <span>extends</span> <span>AppCompatActivity</span> <span>{</span>
+<div data-ext="java"><pre><code><span>public</span> <span>class</span> <span>MainActivity</span> <span>extends</span> <span>AppCompatActivity</span> <span>{</span>
     <span>@Override</span>
     <span>protected</span> <span>void</span> <span>onCreate</span><span>(</span><span>Bundle</span> savedInstanceState<span>)</span> <span>{</span>
         <span>super</span><span>.</span><span>onCreate</span><span>(</span>savedInstanceState<span>)</span><span>;</span>
@@ -546,7 +546,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 <CodeTabs id="82" :data='[{"title":"Kotlin"},{"title":"Java"}]' tab-id="anrdoid">
 
 <template #tab0="{ title, value, isActive }">
-<div><pre><code><span>const</span> <span>val</span> EXTRA_MESSAGE <span>=</span> <span><span>"com.example.myfirstapp.MESSAGE"</span></span>
+<div data-ext="kt"><pre><code><span>const</span> <span>val</span> EXTRA_MESSAGE <span>=</span> <span><span>"com.example.myfirstapp.MESSAGE"</span></span>
 
 <span>class</span> MainActivity <span>:</span> <span>AppCompatActivity</span><span>(</span><span>)</span> <span>{</span>
     <span>override</span> <span>fun</span> <span>onCreate</span><span>(</span>savedInstanceState<span>:</span> Bundle<span>?</span><span>)</span> <span>{</span>
@@ -566,7 +566,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 <span>}</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></template>
 <template #tab1="{ title, value, isActive }">
-<div><pre><code><span>public</span> <span>class</span> <span>MainActivity</span> <span>extends</span> <span>AppCompatActivity</span> <span>{</span>
+<div data-ext="java"><pre><code><span>public</span> <span>class</span> <span>MainActivity</span> <span>extends</span> <span>AppCompatActivity</span> <span>{</span>
     <span>public</span> <span>static</span> <span>final</span> <span>String</span> <span>EXTRA_MESSAGE</span> <span>=</span> <span>"com.example.myfirstapp.MESSAGE"</span><span>;</span>
     <span>@Override</span>
     <span>protected</span> <span>void</span> <span>onCreate</span><span>(</span><span>Bundle</span> savedInstanceState<span>)</span> <span>{</span>
@@ -590,14 +590,14 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 <CodeTabs id="93" :data='[{"title":"Kotlin"},{"title":"Java"}]' tab-id="anrdoid">
 
 <template #tab0="{ title, value, isActive }">
-<div><pre><code><span>import</span> androidx<span>.</span>appcompat<span>.</span>app<span>.</span>AppCompatActivity
+<div data-ext="kt"><pre><code><span>import</span> androidx<span>.</span>appcompat<span>.</span>app<span>.</span>AppCompatActivity
 <span>import</span> android<span>.</span>content<span>.</span>Intent
 <span>import</span> android<span>.</span>os<span>.</span>Bundle
 <span>import</span> android<span>.</span>view<span>.</span>View
 <span>import</span> android<span>.</span>widget<span>.</span>EditText
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div></template>
 <template #tab1="{ title, value, isActive }">
-<div><pre><code><span>import</span> <span><span>androidx<span>.</span>appcompat<span>.</span>app<span>.</span></span><span>AppCompatActivity</span></span><span>;</span>
+<div data-ext="java"><pre><code><span>import</span> <span><span>androidx<span>.</span>appcompat<span>.</span>app<span>.</span></span><span>AppCompatActivity</span></span><span>;</span>
 <span>import</span> <span><span>android<span>.</span>content<span>.</span></span><span>Intent</span></span><span>;</span>
 <span>import</span> <span><span>android<span>.</span>os<span>.</span></span><span>Bundle</span></span><span>;</span>
 <span>import</span> <span><span>android<span>.</span>view<span>.</span></span><span>View</span></span><span>;</span>
@@ -654,7 +654,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 <CodeTabs id="221" :data='[{"title":"Kotlin"},{"title":"Java"}]' tab-id="anrdoid">
 
 <template #tab0="{ title, value, isActive }">
-<div><pre><code><span>override</span> <span>fun</span> <span>onCreate</span><span>(</span>savedInstanceState<span>:</span> Bundle<span>?</span><span>)</span> <span>{</span>
+<div data-ext="kt"><pre><code><span>override</span> <span>fun</span> <span>onCreate</span><span>(</span>savedInstanceState<span>:</span> Bundle<span>?</span><span>)</span> <span>{</span>
     <span>super</span><span>.</span><span>onCreate</span><span>(</span>savedInstanceState<span>)</span>
     <span>setContentView</span><span>(</span>R<span>.</span>layout<span>.</span>activity_display_message<span>)</span>
 
@@ -668,7 +668,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 <span>}</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></template>
 <template #tab1="{ title, value, isActive }">
-<div><pre><code><span>@Override</span>
+<div data-ext="java"><pre><code><span>@Override</span>
 <span>protected</span> <span>void</span> <span>onCreate</span><span>(</span><span>Bundle</span> savedInstanceState<span>)</span> <span>{</span>
     <span>super</span><span>.</span><span>onCreate</span><span>(</span>savedInstanceState<span>)</span><span>;</span>
     <span>setContentView</span><span>(</span><span>R</span><span>.</span>layout<span>.</span>activity_display_message<span>)</span><span>;</span>
@@ -689,13 +689,13 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 <CodeTabs id="234" :data='[{"title":"Kotlin"},{"title":"Java"}]' tab-id="anrdoid">
 
 <template #tab0="{ title, value, isActive }">
-<div><pre><code><span>import</span> androidx<span>.</span>appcompat<span>.</span>app<span>.</span>AppCompatActivity
+<div data-ext="kt"><pre><code><span>import</span> androidx<span>.</span>appcompat<span>.</span>app<span>.</span>AppCompatActivity
 <span>import</span> android<span>.</span>content<span>.</span>Intent
 <span>import</span> android<span>.</span>os<span>.</span>Bundle
 <span>import</span> android<span>.</span>widget<span>.</span>TextView
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div></template>
 <template #tab1="{ title, value, isActive }">
-<div><pre><code><span>import</span> <span><span>androidx<span>.</span>appcompat<span>.</span>app<span>.</span></span><span>AppCompatActivity</span></span><span>;</span>
+<div data-ext="java"><pre><code><span>import</span> <span><span>androidx<span>.</span>appcompat<span>.</span>app<span>.</span></span><span>AppCompatActivity</span></span><span>;</span>
 <span>import</span> <span><span>android<span>.</span>content<span>.</span></span><span>Intent</span></span><span>;</span>
 <span>import</span> <span><span>android<span>.</span>os<span>.</span></span><span>Bundle</span></span><span>;</span>
 <span>import</span> <span><span>android<span>.</span>widget<span>.</span></span><span>TextView</span></span><span>;</span>
@@ -706,7 +706,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 <h2 id="添加向上导航功能" tabindex="-1"> 添加向上导航功能</h2>
 <p>在您的应用中，不是主入口点的每个屏幕（所有不是主屏幕的屏幕）都必须提供导航功能，以便将用户引导至应用层次结构中的逻辑父级屏幕。为此，请在应用栏中添加向上按钮。</p>
 <p>若要添加向上按钮，您需要在 <code>AndroidManifest.xml</code> 文件中声明哪个 activity 是逻辑父级。打开 app &gt; manifests &gt; AndroidManifest.xml 文件，找到 DisplayMessageActivity 的 <code>&lt;activity&gt;</code> 标记，然后将其替换为以下代码：</p>
-<div><pre><code><span><span><span>&lt;</span>activity</span> <span><span>android:</span>name</span><span><span>=</span><span>"</span>.DisplayMessageActivity<span>"</span></span>
+<div data-ext="xml"><pre><code><span><span><span>&lt;</span>activity</span> <span><span>android:</span>name</span><span><span>=</span><span>"</span>.DisplayMessageActivity<span>"</span></span>
           <span><span>android:</span>parentActivityName</span><span><span>=</span><span>"</span>.MainActivity<span>"</span></span><span>></span></span>
     <span>&lt;!-- The meta-data tag is required if you support API level 15 and lower --></span>
     <span><span><span>&lt;</span>meta-data</span>
@@ -1097,13 +1097,13 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 </li>
 </ul>
 <p>下面的例子发送一个 <code>GET</code> 请求，并返回一个 JSON 格式的数据:</p>
-<div><pre><code><span>const</span> jqxhr <span>=</span> $<span>.</span><span>ajax</span><span>(</span><span>"/api/categories"</span><span>,</span> <span>{</span>
+<div data-ext="js"><pre><code><span>const</span> jqxhr <span>=</span> $<span>.</span><span>ajax</span><span>(</span><span>"/api/categories"</span><span>,</span> <span>{</span>
   <span>dataType</span><span>:</span> <span>"json"</span><span>,</span>
 <span>}</span><span>)</span><span>;</span>
 <span>// 请求已经发送了</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><p>不过，如何用回调函数处理返回的数据和出错时的响应呢?</p>
 <p>还记得 Promise 对象吗? jQuery 的 <code>jqXHR</code> 对象类似一个 Promise 对象，我们可以用链式写法来处理各种回调:</p>
-<div><pre><code><span>"use strict"</span><span>;</span>
+<div data-ext="js"><pre><code><span>"use strict"</span><span>;</span>
 
 <span>function</span> <span>ajaxLog</span><span>(</span><span>s</span><span>)</span> <span>{</span>
   <span>const</span> txt <span>=</span> <span>$</span><span>(</span><span>"#test-response-text"</span><span>)</span><span>;</span>
@@ -1126,7 +1126,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
   <span>}</span><span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><h2 id="get" tabindex="-1"> get</h2>
 <p>对常用的 Ajax 操作，jQuery 提供了一些辅助方法。由于 GET 请求最常见，所以 jQuery 提供了 <code>get()</code> 方法，可以这么写:</p>
-<div><pre><code><span>const</span> jqxhr <span>=</span> $<span>.</span><span>get</span><span>(</span><span>"/path/to/resource"</span><span>,</span> <span>{</span>
+<div data-ext="js"><pre><code><span>const</span> jqxhr <span>=</span> $<span>.</span><span>get</span><span>(</span><span>"/path/to/resource"</span><span>,</span> <span>{</span>
   <span>name</span><span>:</span> <span>"Bob Lee"</span><span>,</span>
   <span>check</span><span>:</span> <span>1</span><span>,</span>
 <span>}</span><span>)</span><span>;</span>
@@ -1135,14 +1135,14 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 <p>这样我们就不用关心如何用 URL 编码并构造一个 <code>query string</code> 了。</p>
 <h2 id="post" tabindex="-1"> post</h2>
 <p><code>post()</code> 和 <code>get()</code> 类似，但是传入的第二个参数默认被序列化为 <code>application/x-www-form-urlencoded</code>:</p>
-<div><pre><code><span>const</span> jqxhr <span>=</span> $<span>.</span><span>post</span><span>(</span><span>"/path/to/resource"</span><span>,</span> <span>{</span>
+<div data-ext="js"><pre><code><span>const</span> jqxhr <span>=</span> $<span>.</span><span>post</span><span>(</span><span>"/path/to/resource"</span><span>,</span> <span>{</span>
   <span>name</span><span>:</span> <span>"Bob Lee"</span><span>,</span>
   <span>check</span><span>:</span> <span>1</span><span>,</span>
 <span>}</span><span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><p>实际构造的数据 <code>name=Bob%20Lee&amp;check=1</code> 作为 POST 的 body 被发送。</p>
 <h2 id="getjson" tabindex="-1"> getJSON</h2>
 <p>由于 JSON 用得越来越普遍，所以 jQuery 也提供了 <code>getJSON()</code> 方法来快速通过 GET 获取一个 JSON 对象:</p>
-<div><pre><code><span>const</span> jqxhr <span>=</span> $<span>.</span><span>getJSON</span><span>(</span><span>"/path/to/resource"</span><span>,</span> <span>{</span>
+<div data-ext="js"><pre><code><span>const</span> jqxhr <span>=</span> $<span>.</span><span>getJSON</span><span>(</span><span>"/path/to/resource"</span><span>,</span> <span>{</span>
   <span>name</span><span>:</span> <span>"Bob Lee"</span><span>,</span>
   <span>check</span><span>:</span> <span>1</span><span>,</span>
 <span>}</span><span>)</span><span>.</span><span>done</span><span>(</span><span>function</span> <span>(</span><span>data</span><span>)</span> <span>{</span>
@@ -1175,7 +1175,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
 <p>有了 jQuery，我们就专注于操作 jQuery 对象本身，底层的 DOM 操作由 jQuery 完成就可以了，这样一来，修改 DOM 也大大简化了。</p>
 <h2 id="添加-dom" tabindex="-1"> 添加 DOM</h2>
 <p>要添加新的 DOM 节点，除了通过 jQuery 的 <code>html()</code> 这种暴力方法外，还可以用 <code>append()</code> 方法，例如:</p>
-<div><pre><code><span><span><span>&lt;</span>div</span> <span>id</span><span><span>=</span><span>"</span>test-div<span>"</span></span><span>></span></span>
+<div data-ext="html"><pre><code><span><span><span>&lt;</span>div</span> <span>id</span><span><span>=</span><span>"</span>test-div<span>"</span></span><span>></span></span>
   <span><span><span>&lt;</span>ul</span><span>></span></span>
     <span><span><span>&lt;</span>li</span><span>></span></span><span><span><span>&lt;</span>span</span><span>></span></span>JavaScript<span><span><span>&lt;/</span>span</span><span>></span></span><span><span><span>&lt;/</span>li</span><span>></span></span>
     <span><span><span>&lt;</span>li</span><span>></span></span><span><span><span>&lt;</span>span</span><span>></span></span>Python<span><span><span>&lt;/</span>span</span><span>></span></span><span><span><span>&lt;/</span>li</span><span>></span></span>
@@ -1183,11 +1183,11 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
   <span><span><span>&lt;/</span>ul</span><span>></span></span>
 <span><span><span>&lt;/</span>div</span><span>></span></span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>如何向列表新增一个语言? 首先要拿到 <code>&lt;ul&gt;</code> 节点:</p>
-<div><pre><code><span>const</span> ul <span>=</span> <span>$</span><span>(</span><span>"#test-div>ul"</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code><span>const</span> ul <span>=</span> <span>$</span><span>(</span><span>"#test-div>ul"</span><span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>然后，调用 <code>append()</code> 传入 HTML 片段:</p>
-<div><pre><code>ul<span>.</span><span>append</span><span>(</span><span>"&lt;li>&lt;span>Haskell&lt;/span>&lt;/li>"</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code>ul<span>.</span><span>append</span><span>(</span><span>"&lt;li>&lt;span>Haskell&lt;/span>&lt;/li>"</span><span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>除了接受字符串，<code>append()</code> 还可以传入原始的 DOM 对象，jQuery 对象和函数对象:</p>
-<div><pre><code><span>// 创建DOM对象:</span>
+<div data-ext="js"><pre><code><span>// 创建DOM对象:</span>
 <span>const</span> ps <span>=</span> document<span>.</span><span>createElement</span><span>(</span><span>"li"</span><span>)</span><span>;</span>
 ps<span>.</span>innerHTML <span>=</span> <span>"&lt;span>Pascal&lt;/span>"</span><span>;</span>
 <span>// 添加DOM对象:</span>
@@ -1204,12 +1204,12 @@ ul<span>.</span><span>append</span><span>(</span><span>function</span> <span>(</
 <p><code>append()</code> 把 DOM 添加到最后，<code>prepend()</code> 则把 DOM 添加到最前。</p>
 <p>另外注意，如果要添加的 DOM 节点已经存在于 HTML 文档中，它会首先从文档移除，然后再添加，也就是说，用 <code>append()</code>，您可以移动一个 DOM 节点。</p>
 <p>如果要把新节点插入到指定位置，例如，JavaScript 和 Python 之间，那么，可以先定位到 JavaScript，然后用 <code>after()</code> 方法:</p>
-<div><pre><code><span>const</span> js <span>=</span> <span>$</span><span>(</span><span>"#test-div>ul>li:first-child"</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code><span>const</span> js <span>=</span> <span>$</span><span>(</span><span>"#test-div>ul>li:first-child"</span><span>)</span><span>;</span>
 js<span>.</span><span>after</span><span>(</span><span>"&lt;li>&lt;span>Lua&lt;/span>&lt;/li>"</span><span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div></div></div><p>也就是说，同级节点可以用 <code>after()</code> 或者 <code>before()</code> 方法。</p>
 <h2 id="删除节点" tabindex="-1"> 删除节点</h2>
 <p>要删除 DOM 节点，拿到 jQuery 对象后直接调用 <code>remove()</code> 方法就可以了。如果 jQuery 对象包含若干 DOM 节点，实际上可以一次删除多个 DOM 节点:</p>
-<div><pre><code><span>const</span> li <span>=</span> <span>$</span><span>(</span><span>"#test-div>ul>li"</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code><span>const</span> li <span>=</span> <span>$</span><span>(</span><span>"#test-div>ul>li"</span><span>)</span><span>;</span>
 li<span>.</span><span>remove</span><span>(</span><span>)</span><span>;</span> <span>// 所有&lt;li>全被删除</span>
 </code></pre><div aria-hidden="true"><div></div><div></div></div></div>]]></content:encoded>
     </item>
@@ -1235,32 +1235,32 @@ li<span>.</span><span>remove</span><span>(</span><span>)</span><span>;</span> <s
 <p>回顾一下修改 DOM 的 CSS、文本、设置 HTML 有多么麻烦，而且有的浏览器只有 innerHTML，有的浏览器支持 innerText，有了 jQuery 对象，不需要考虑浏览器差异了，全部统一操作!</p>
 <h2 id="修改-text-和-html" tabindex="-1"> 修改 Text 和 HTML</h2>
 <p>jQuery 对象的 <code>text()</code> 和 <code>html()</code> 方法分别获取节点的文本和原始 HTML 文本，例如，如下的 HTML 结构:</p>
-<div><pre><code><span>&lt;!-- HTML结构 --></span>
+<div data-ext="html"><pre><code><span>&lt;!-- HTML结构 --></span>
 <span><span><span>&lt;</span>ul</span> <span>id</span><span><span>=</span><span>"</span>test-ul<span>"</span></span><span>></span></span>
   <span><span><span>&lt;</span>li</span> <span>class</span><span><span>=</span><span>"</span>js<span>"</span></span><span>></span></span>JavaScript<span><span><span>&lt;/</span>li</span><span>></span></span>
   <span><span><span>&lt;</span>li</span> <span>name</span><span><span>=</span><span>"</span>book<span>"</span></span><span>></span></span>Java <span title="&amp;">&amp;amp;</span> JavaScript<span><span><span>&lt;/</span>li</span><span>></span></span>
 <span><span><span>&lt;/</span>ul</span><span>></span></span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div><p>分别获取文本和 HTML:</p>
-<div><pre><code><span>$</span><span>(</span><span>"#test-ul li[name=book]"</span><span>)</span><span>.</span><span>text</span><span>(</span><span>)</span><span>;</span> <span>// 'Java &amp; JavaScript'</span>
+<div data-ext="js"><pre><code><span>$</span><span>(</span><span>"#test-ul li[name=book]"</span><span>)</span><span>.</span><span>text</span><span>(</span><span>)</span><span>;</span> <span>// 'Java &amp; JavaScript'</span>
 <span>$</span><span>(</span><span>"#test-ul li[name=book]"</span><span>)</span><span>.</span><span>html</span><span>(</span><span>)</span><span>;</span> <span>// 'Java &amp;amp; JavaScript'</span>
 </code></pre><div aria-hidden="true"><div></div><div></div></div></div><p>如何设置文本或 HTML ? jQuery 的 API 设计非常巧妙: 无参数调用 <code>text()</code> 是获取文本，传入参数就变成设置文本，HTML 也是类似操作，自己动手试试:</p>
-<div><pre><code><span>"use strict"</span><span>;</span>
+<div data-ext="js"><pre><code><span>"use strict"</span><span>;</span>
 <span>const</span> j1 <span>=</span> <span>$</span><span>(</span><span>"#test-ul li.js"</span><span>)</span><span>;</span>
 <span>const</span> j2 <span>=</span> <span>$</span><span>(</span><span>"#test-ul li[name=book]"</span><span>)</span><span>;</span>
 
 j1<span>.</span><span>html</span><span>(</span><span>'&lt;span style="color: red">JavaScript&lt;/span>'</span><span>)</span><span>;</span>
 j2<span>.</span><span>text</span><span>(</span><span>"JavaScript &amp; ECMAScript"</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div></div></div><div><pre><code>JavaScript
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div></div></div><div data-ext="md"><pre><code>JavaScript
 Java &amp; JavaScript
 </code></pre><div aria-hidden="true"><div></div><div></div></div></div><p>一个 jQuery 对象可以包含 0 个或任意个 DOM 对象，它的方法实际上会作用在对应的每个 DOM 节点上。在上面的例子中试试:</p>
-<div><pre><code><span>$</span><span>(</span><span>"#test-ul li"</span><span>)</span><span>.</span><span>text</span><span>(</span><span>"JS"</span><span>)</span><span>;</span> <span>// 是不是两个节点都变成了JS?</span>
+<div data-ext="js"><pre><code><span>$</span><span>(</span><span>"#test-ul li"</span><span>)</span><span>.</span><span>text</span><span>(</span><span>"JS"</span><span>)</span><span>;</span> <span>// 是不是两个节点都变成了JS?</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>所以 jQuery 对象的另一个好处是我们可以执行一个操作，作用在对应的一组 DOM 节点上。即使选择器没有返回任何 DOM 节点，调用 jQuery 对象的方法仍然不会报错:</p>
-<div><pre><code><span>// 如果不存在 id 为 not-exist 的节点:</span>
+<div data-ext="js"><pre><code><span>// 如果不存在 id 为 not-exist 的节点:</span>
 <span>$</span><span>(</span><span>"#not-exist"</span><span>)</span><span>.</span><span>text</span><span>(</span><span>"Hello"</span><span>)</span><span>;</span> <span>// 代码不报错，没有节点被设置为'Hello'</span>
 </code></pre><div aria-hidden="true"><div></div><div></div></div></div><p>这意味着 jQuery 帮您免去了许多 if 语句。</p>
 <h2 id="修改-css" tabindex="-1"> 修改 CSS</h2>
 <p>jQuery 对象有“批量操作”的特点，这用于修改 CSS 实在是太方便了。考虑下面的 HTML 结构:</p>
-<div><pre><code><span>&lt;!-- HTML 结构 --></span>
+<div data-ext="html"><pre><code><span>&lt;!-- HTML 结构 --></span>
 <span><span><span>&lt;</span>ul</span> <span>id</span><span><span>=</span><span>"</span>test-css<span>"</span></span><span>></span></span>
   <span><span><span>&lt;</span>li</span> <span>class</span><span><span>=</span><span>"</span>lang dy<span>"</span></span><span>></span></span><span><span><span>&lt;</span>span</span><span>></span></span>JavaScript<span><span><span>&lt;/</span>span</span><span>></span></span><span><span><span>&lt;/</span>li</span><span>></span></span>
   <span><span><span>&lt;</span>li</span> <span>class</span><span><span>=</span><span>"</span>lang<span>"</span></span><span>></span></span><span><span><span>&lt;</span>span</span><span>></span></span>Java<span><span><span>&lt;/</span>span</span><span>></span></span><span><span><span>&lt;/</span>li</span><span>></span></span>
@@ -1269,38 +1269,38 @@ Java &amp; JavaScript
   <span><span><span>&lt;</span>li</span> <span>class</span><span><span>=</span><span>"</span>lang dy<span>"</span></span><span>></span></span><span><span><span>&lt;</span>span</span><span>></span></span>Scheme<span><span><span>&lt;/</span>span</span><span>></span></span><span><span><span>&lt;/</span>li</span><span>></span></span>
 <span><span><span>&lt;/</span>ul</span><span>></span></span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>要高亮显示动态语言，调用 jQuery 对象的 <code>css('name', 'value')</code> 方法，我们用一行语句实现:</p>
-<div><pre><code><span>"use strict"</span><span>;</span>
+<div data-ext="js"><pre><code><span>"use strict"</span><span>;</span>
 
 <span>$</span><span>(</span><span>"#test-css li.dy>span"</span><span>)</span>
   <span>.</span><span>css</span><span>(</span><span>"background-color"</span><span>,</span> <span>"#ffd351"</span><span>)</span>
   <span>.</span><span>css</span><span>(</span><span>"color"</span><span>,</span> <span>"red"</span><span>)</span><span>;</span>
-</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div><div><pre><code>JavaScript
+</code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div><div data-ext="md"><pre><code>JavaScript
 Java
 Python
 Swift
 Scheme
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div><p>注意，jQuery 对象的所有方法都返回一个 jQuery 对象(可能是新的也可能是自身)，这样我们可以进行链式调用，非常方便。</p>
 <p>jQuery 对象的 <code>css()</code> 方法可以这么用:</p>
-<div><pre><code><span>const</span> div <span>=</span> <span>$</span><span>(</span><span>"#test-div"</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code><span>const</span> div <span>=</span> <span>$</span><span>(</span><span>"#test-div"</span><span>)</span><span>;</span>
 div<span>.</span><span>css</span><span>(</span><span>"color"</span><span>)</span><span>;</span> <span>// '#000033', 获取CSS属性</span>
 div<span>.</span><span>css</span><span>(</span><span>"color"</span><span>,</span> <span>"#336699"</span><span>)</span><span>;</span> <span>// 设置CSS属性</span>
 div<span>.</span><span>css</span><span>(</span><span>"color"</span><span>,</span> <span>""</span><span>)</span><span>;</span> <span>// 清除CSS属性</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><p>为了和 JavaScript 保持一致，CSS 属性可以用 <code>'background-color'</code> 和 <code>'backgroundColor'</code> 两种格式。</p>
 <p><code>css()</code> 方法将作用于 DOM 节点的 style 属性，具有最高优先级。如果要修改 class 属性，可以用 jQuery 提供的下列方法:</p>
-<div><pre><code><span>const</span> div <span>=</span> <span>$</span><span>(</span><span>"#test-div"</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code><span>const</span> div <span>=</span> <span>$</span><span>(</span><span>"#test-div"</span><span>)</span><span>;</span>
 div<span>.</span><span>hasClass</span><span>(</span><span>"highlight"</span><span>)</span><span>;</span> <span>// false， class是否包含highlight</span>
 div<span>.</span><span>addClass</span><span>(</span><span>"highlight"</span><span>)</span><span>;</span> <span>// 添加highlight这个class</span>
 div<span>.</span><span>removeClass</span><span>(</span><span>"highlight"</span><span>)</span><span>;</span> <span>// 删除highlight这个class</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><h2 id="显示和隐藏-dom" tabindex="-1"> 显示和隐藏 DOM</h2>
 <p>要隐藏一个 DOM，我们可以设置 CSS 的 <code>display</code> 属性为 <code>none</code>，利用 <code>css()</code> 方法就可以实现。不过，要显示这个 DOM 就需要恢复原有的 <code>display</code> 属性，这就得先记下来原有的 <code>display</code> 属性到底是 <code>block</code> 还是 <code>inline</code> 还是别的值。</p>
 <p>考虑到显示和隐藏 DOM 元素使用非常普遍，jQuery 直接提供 <code>show()</code> 和 <code>hide()</code> 方法，我们不用关心它是如何修改 display 属性的，总之它能正常工作:</p>
-<div><pre><code><span>const</span> a <span>=</span> <span>$</span><span>(</span><span>"a[target=_blank]"</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code><span>const</span> a <span>=</span> <span>$</span><span>(</span><span>"a[target=_blank]"</span><span>)</span><span>;</span>
 a<span>.</span><span>hide</span><span>(</span><span>)</span><span>;</span> <span>// 隐藏</span>
 a<span>.</span><span>show</span><span>(</span><span>)</span><span>;</span> <span>// 显示</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>注意，隐藏 DOM 节点并未改变 DOM 树的结构，它只影响 DOM 节点的显示。这和删除 DOM 节点是不同的。</p>
 <h2 id="获取-dom-信息" tabindex="-1"> 获取 DOM 信息</h2>
 <p>利用 jQuery 对象的若干方法，我们直接可以获取 DOM 的高宽等信息，而无需针对不同浏览器编写特定代码:</p>
-<div><pre><code><span>// 浏览器可视窗口大小:</span>
+<div data-ext="js"><pre><code><span>// 浏览器可视窗口大小:</span>
 <span>$</span><span>(</span>window<span>)</span><span>.</span><span>width</span><span>(</span><span>)</span><span>;</span> <span>// 800</span>
 <span>$</span><span>(</span>window<span>)</span><span>.</span><span>height</span><span>(</span><span>)</span><span>;</span> <span>// 600</span>
 
@@ -1315,7 +1315,7 @@ div<span>.</span><span>height</span><span>(</span><span>)</span><span>;</span> <
 div<span>.</span><span>width</span><span>(</span><span>400</span><span>)</span><span>;</span> <span>// 设置 CSS 属性 width: 400px，是否生效要看 CSS 是否有效</span>
 div<span>.</span><span>height</span><span>(</span><span>"200px"</span><span>)</span><span>;</span> <span>// 设置 CSS 属性 height: 200px，是否生效要看 CSS 是否有效</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p><code>attr()</code> 和 <code>removeAttr()</code> 方法用于操作 DOM 节点的属性:</p>
-<div><pre><code><span>// &lt;div id="test-div" name="Test" start="1">...&lt;/div></span>
+<div data-ext="js"><pre><code><span>// &lt;div id="test-div" name="Test" start="1">...&lt;/div></span>
 <span>const</span> div <span>=</span> <span>$</span><span>(</span><span>"#test-div"</span><span>)</span><span>;</span>
 div<span>.</span><span>attr</span><span>(</span><span>"data"</span><span>)</span><span>;</span> <span>// undefined, 属性不存在</span>
 div<span>.</span><span>attr</span><span>(</span><span>"name"</span><span>)</span><span>;</span> <span>// 'Test'</span>
@@ -1323,20 +1323,20 @@ div<span>.</span><span>attr</span><span>(</span><span>"name"</span><span>,</span
 div<span>.</span><span>removeAttr</span><span>(</span><span>"name"</span><span>)</span><span>;</span> <span>// 删除 name 属性</span>
 div<span>.</span><span>attr</span><span>(</span><span>"name"</span><span>)</span><span>;</span> <span>// undefined</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p><code>prop()</code> 方法和 <code>attr()</code> 类似，但是 HTML5 规定有一种属性在 DOM 节点中可以没有值，只有出现与不出现两种，例如:</p>
-<div><pre><code><span><span><span>&lt;</span>input</span> <span>id</span><span><span>=</span><span>"</span>test-radio<span>"</span></span> <span>type</span><span><span>=</span><span>"</span>radio<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>test<span>"</span></span> <span>checked</span> <span>value</span><span><span>=</span><span>"</span>1<span>"</span></span> <span>/></span></span>
+<div data-ext="html"><pre><code><span><span><span>&lt;</span>input</span> <span>id</span><span><span>=</span><span>"</span>test-radio<span>"</span></span> <span>type</span><span><span>=</span><span>"</span>radio<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>test<span>"</span></span> <span>checked</span> <span>value</span><span><span>=</span><span>"</span>1<span>"</span></span> <span>/></span></span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>等价于:</p>
-<div><pre><code><span><span><span>&lt;</span>input</span> <span>id</span><span><span>=</span><span>"</span>test-radio<span>"</span></span> <span>type</span><span><span>=</span><span>"</span>radio<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>test<span>"</span></span> <span>checked</span><span><span>=</span><span>"</span>checked<span>"</span></span> <span>value</span><span><span>=</span><span>"</span>1<span>"</span></span> <span>/></span></span>
+<div data-ext="html"><pre><code><span><span><span>&lt;</span>input</span> <span>id</span><span><span>=</span><span>"</span>test-radio<span>"</span></span> <span>type</span><span><span>=</span><span>"</span>radio<span>"</span></span> <span>name</span><span><span>=</span><span>"</span>test<span>"</span></span> <span>checked</span><span><span>=</span><span>"</span>checked<span>"</span></span> <span>value</span><span><span>=</span><span>"</span>1<span>"</span></span> <span>/></span></span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p><code>attr()</code> 和 <code>prop()</code> 对于属性 <code>checked</code> 处理有所不同:</p>
-<div><pre><code><span>const</span> radio <span>=</span> <span>$</span><span>(</span><span>"#test-radio"</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code><span>const</span> radio <span>=</span> <span>$</span><span>(</span><span>"#test-radio"</span><span>)</span><span>;</span>
 radio<span>.</span><span>attr</span><span>(</span><span>"checked"</span><span>)</span><span>;</span> <span>// 'checked'</span>
 radio<span>.</span><span>prop</span><span>(</span><span>"checked"</span><span>)</span><span>;</span> <span>// true</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p><code>prop()</code> 返回值更合理一些。不过，用 <code>is()</code> 方法判断更好:</p>
-<div><pre><code><span>const</span> radio <span>=</span> <span>$</span><span>(</span><span>"#test-radio"</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code><span>const</span> radio <span>=</span> <span>$</span><span>(</span><span>"#test-radio"</span><span>)</span><span>;</span>
 radio<span>.</span><span>is</span><span>(</span><span>":checked"</span><span>)</span><span>;</span> <span>// true</span>
 </code></pre><div aria-hidden="true"><div></div><div></div></div></div><p>类似的属性还有 <code>selected</code>，处理时最好用 <code>is(':selected')</code>。</p>
 <h2 id="操作表单" tabindex="-1"> 操作表单</h2>
 <p>对于表单元素，jQuery 对象统一提供 <code>val()</code> 方法获取和设置对应的 <code>value</code> 属性:</p>
-<div><pre><code><span>/*
+<div data-ext="js"><pre><code><span>/*
     &lt;input id="test-input" name="email" value="">
     &lt;select id="test-select" name="city">
         &lt;option value="BJ" selected>Beijing&lt;/option>
@@ -1377,7 +1377,7 @@ textarea<span>.</span><span>val</span><span>(</span><span>"Hi"</span><span>)</sp
 <p>最早大规模使用 Ajax 的就是 Gmail，Gmail 的页面在首次加载后，剩下的所有数据都依赖于 Ajax 来更新。</p>
 <p>用 JavaScript 写一个完整的 Ajax 代码并不复杂，但是需要注意: Ajax 请求是异步执行的，也就是说，要通过回调函数获得响应。</p>
 <p>在现代浏览器上写 Ajax 主要依靠 XMLHttpRequest 对象:</p>
-<div><pre><code><span>"use strict"</span><span>;</span>
+<div data-ext="js"><pre><code><span>"use strict"</span><span>;</span>
 
 <span>const</span> <span>success</span> <span>=</span> <span>(</span><span>text</span><span>)</span> <span>=></span> <span>{</span>
   <span>const</span> textarea <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"#test-response-text"</span><span>)</span><span>;</span>
@@ -1412,7 +1412,7 @@ request<span>.</span><span>send</span><span>(</span><span>)</span><span>;</span>
 
 <span>alert</span><span>(</span><span>"请求已发送，请等待响应..."</span><span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>对于低版本的 IE，需要换一个 ActiveXObject 对象:</p>
-<div><pre><code><span>"use strict"</span><span>;</span>
+<div data-ext="js"><pre><code><span>"use strict"</span><span>;</span>
 
 <span>const</span> <span>success</span> <span>=</span> <span>(</span><span>text</span><span>)</span> <span>=></span> <span>{</span>
   <span>const</span> textarea <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"#test-ie-response-text"</span><span>)</span><span>;</span>
@@ -1447,7 +1447,7 @@ request<span>.</span><span>send</span><span>(</span><span>)</span><span>;</span>
 
 <span>alert</span><span>(</span><span>"请求已发送，请等待响应..."</span><span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>如果您想把标准写法和 IE 写法混在一起，可以这么写:</p>
-<div><pre><code><span>const</span> request<span>;</span>
+<div data-ext="js"><pre><code><span>const</span> request<span>;</span>
 
 <span>if</span> <span>(</span>window<span>.</span>XMLHttpRequest<span>)</span> request <span>=</span> <span>new</span> <span>XMLHttpRequest</span><span>(</span><span>)</span><span>;</span>
 <span>else</span> request <span>=</span> <span>new</span> <span>ActiveXObject</span><span>(</span><span>"Microsoft.XMLHTTP"</span><span>)</span><span>;</span>
@@ -1468,7 +1468,7 @@ request<span>.</span><span>send</span><span>(</span><span>)</span><span>;</span>
 <p>二是通过在同源域名下架设一个代理服务器来转发，JavaScript 负责把请求发送到代理服务器 <code>/proxy?url=https://www.sina.com.cn</code></p>
 <p>代理服务器再把结果返回，这样就遵守了浏览器的同源策略。这种方式麻烦之处在于需要服务器端额外做开发。</p>
 <p>第三种方式称为 JSONP，它有个限制，只能用 GET 请求，并且要求返回 JavaScript。这种方式跨域实际上是利用了浏览器允许跨域引用 JavaScript 资源:</p>
-<div><pre><code><span><span><span>&lt;</span>html</span><span>></span></span>
+<div data-ext="html"><pre><code><span><span><span>&lt;</span>html</span><span>></span></span>
   <span><span><span>&lt;</span>head</span><span>></span></span>
     <span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>https://example.com/abc.js<span>"</span></span><span>></span></span><span></span><span><span><span>&lt;/</span>script</span><span>></span></span>
     ...
@@ -1478,18 +1478,18 @@ request<span>.</span><span>send</span><span>(</span><span>)</span><span>;</span>
   <span><span><span>&lt;/</span>body</span><span>></span></span>
 <span><span><span>&lt;/</span>html</span><span>></span></span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>JSONP 通常以函数调用的形式返回，例如，返回 JavaScript 内容如下:</p>
-<div><pre><code><span>foo</span><span>(</span><span>"data"</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code><span>foo</span><span>(</span><span>"data"</span><span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>这样一来，我们如果在页面中先准备好 <code>foo()</code> 函数，然后给页面动态加一个 <code>&lt;script&gt;</code> 节点，相当于动态读取外域的 JavaScript 资源，最后就等着接收回调了。</p>
 <p>以 163 的股票查询 URL 为例，对于 <code>URL: https://api.money.126.net/data/feed/0000001,1399001?callback=refreshPrice</code>，您将得到如下返回:</p>
-<div><pre><code><span>refreshPrice</span><span>(</span><span>{</span><span>"0000001"</span><span>:</span><span>{</span><span>"code"</span><span>:</span> <span>"0000001"</span><span>,</span> <span>...</span> <span>}</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code><span>refreshPrice</span><span>(</span><span>{</span><span>"0000001"</span><span>:</span><span>{</span><span>"code"</span><span>:</span> <span>"0000001"</span><span>,</span> <span>...</span> <span>}</span><span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>因此我们需要首先在页面中准备好回调函数:</p>
-<div><pre><code><span>const</span> <span>refreshPrice</span> <span>=</span> <span>(</span><span>data</span><span>)</span> <span>=></span> <span>{</span>
+<div data-ext="js"><pre><code><span>const</span> <span>refreshPrice</span> <span>=</span> <span>(</span><span>data</span><span>)</span> <span>=></span> <span>{</span>
   <span>const</span> p <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"#test-jsonp"</span><span>)</span><span>;</span>
 
   p<span>.</span>innerHTML <span>=</span> <span><span>`</span><span>当前价格: </span><span><span>${</span>data<span>[</span><span>"0000001"</span><span>]</span><span>.</span>name<span>}</span></span><span>: </span><span><span>${</span>data<span>[</span><span>"0000001"</span><span>]</span><span>.</span>price<span>}</span></span><span>；</span><span><span>${</span>data<span>[</span><span>"1399001"</span><span>]</span><span>.</span>name<span>}</span></span><span>: </span><span><span>${</span>data<span>[</span><span>"1399001"</span><span>]</span><span>.</span>price<span>}</span></span><span>`</span></span><span>;</span>
 <span>}</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div><p>最后用 <code>getPrice()</code> 函数触发:</p>
-<div><pre><code><span>const</span> <span>getPrice</span> <span>=</span> <span>(</span><span>)</span> <span>=></span> <span>{</span>
+<div data-ext="js"><pre><code><span>const</span> <span>getPrice</span> <span>=</span> <span>(</span><span>)</span> <span>=></span> <span>{</span>
   <span>const</span> js <span>=</span> document<span>.</span><span>createElement</span><span>(</span><span>"script"</span><span>)</span><span>;</span>
   <span>const</span> head <span>=</span> document<span>.</span><span>getElementsByTagName</span><span>(</span><span>"head"</span><span>)</span><span>[</span><span>0</span><span>]</span><span>;</span>
 
@@ -1510,19 +1510,19 @@ request<span>.</span><span>send</span><span>(</span><span>)</span><span>;</span>
 <p>上面这种跨域请求，称之为“简单请求”。简单请求包括 <code>GET</code>、<code>HEAD</code> 和 <code>POST</code> ( POST 的 <code>Content-Type</code> 类型
 仅限 <code>application/x-www-form-urlencoded、multipart/form-data和text/plain</code>)，并且不能出现任何自定义头(例如，X-Custom: 12345)，通常能满足 90% 的需求。</p>
 <p>无论您是否需要用 JavaScript 通过 CORS 跨域请求资源，您都要了解 CORS 的原理。最新的浏览器全面支持 HTML5。在引用外域资源时，除了 JavaScript 和 CSS 外，都要验证 CORS。例如，当您引用了某个第三方 CDN 上的字体文件时:</p>
-<div><pre><code><span>/* CSS */</span>
+<div data-ext="css"><pre><code><span>/* CSS */</span>
 <span><span>@font-face</span></span> <span>{</span>
   <span>font-family</span><span>:</span> <span>"FontAwesome"</span><span>;</span>
   <span>src</span><span>:</span> <span><span>url</span><span>(</span><span>"https://cdn.com/fonts/fontawesome.ttf"</span><span>)</span></span> <span>format</span><span>(</span><span>"truetype"</span><span>)</span><span>;</span>
 <span>}</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div><p>如果该 CDN 服务商未正确设置 <code>Access-Control-Allow-Origin</code>，那么浏览器无法加载字体资源。</p>
 <p>对于 PUT、DELETE 以及其他类型如 <code>application/json</code> 的 POST 请求，在发送 Ajax 请求之前，浏览器会先发送一个 <code>OPTIONS</code> 请求(称为 preflighted 请求)到这个 URL 上，询问目标服务器是否接受:</p>
-<div><pre><code><span><span>OPTIONS</span> <span>/path/to/resource</span> <span>HTTP/1.1</span></span>
+<div data-ext="http"><pre><code><span><span>OPTIONS</span> <span>/path/to/resource</span> <span>HTTP/1.1</span></span>
 <span><span>Host</span><span>:</span> <span>bar.com</span></span>
 <span><span>Origin</span><span>:</span> <span>https://my.com</span></span>
 <span><span>Access-Control-Request-Method</span><span>:</span> <span>POST</span></span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><p>服务器必须响应并明确指出允许的 Method:</p>
-<div><pre><code><span><span>HTTP/1.1</span> <span>200</span> <span>OK</span></span>
+<div data-ext="http"><pre><code><span><span>HTTP/1.1</span> <span>200</span> <span>OK</span></span>
 <span><span>Access-Control-Allow-Origin</span><span>:</span> <span>https://my.com</span></span>
 <span><span>Access-Control-Allow-Methods</span><span>:</span> <span>POST, GET, PUT, OPTIONS</span></span>
 <span><span>Access-Control-Max-Age</span><span>:</span> <span>86400</span></span>
@@ -1574,7 +1574,7 @@ request<span>.</span><span>send</span><span>(</span><span>)</span><span>;</span>
 
 <p>在操作一个 DOM 节点前，我们需要通过各种方式先拿到这个 DOM 节点。最常用的方法是使用 <code>querySelector()</code> 和 <code>querySelectorAll()</code>。</p>
 <p>使用这个 API 需要了解 CSS selector 语法，然后使用条件来获取节点，十分方便:</p>
-<div><pre><code><span>// 通过 querySelector 获取 ID 为 q1 的节点:</span>
+<div data-ext="js"><pre><code><span>// 通过 querySelector 获取 ID 为 q1 的节点:</span>
 <span>const</span> q1 <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"#q1"</span><span>)</span><span>;</span>
 
 <span>// 通过 querySelectorAll 获取 q1 节点内的符合条件的所有节点:</span>
@@ -1585,7 +1585,7 @@ request<span>.</span><span>send</span><span>(</span><span>)</span><span>;</span>
 <p>在历史上，使用的方法是 <code>document.getElementById()</code> 和 <code>document.getElementsByTagName()</code>，以及 CSS 选择器 <code>document.getElementsByClassName()</code>。</p>
 <p>由于 ID 在 HTML 文档中是唯一的，所以 <code>document.getElementById()</code> 可以直接定位唯一的一个 DOM 节点。<code>document.getElementsByTagName()</code> 和 <code>document.getElementsByClassName()</code> 总是返回一组 DOM 节点。要精确地选择 DOM，可以先定位父节点，再从父节点开始选择，以缩小范围。</p>
 <p>例如:</p>
-<div><pre><code><span>// 返回ID为 'test' 的节点:</span>
+<div data-ext="js"><pre><code><span>// 返回ID为 'test' 的节点:</span>
 <span>const</span> test <span>=</span> document<span>.</span><span>getElementById</span><span>(</span><span>"test"</span><span>)</span><span>;</span>
 
 <span>// 先定位ID为'test-table'的节点，再返回其内部所有tr节点:</span>
@@ -1606,7 +1606,7 @@ request<span>.</span><span>send</span><span>(</span><span>)</span><span>;</span>
 <p>拿到一个 DOM 节点后，我们可以对它进行更新。</p>
 <p>可以直接修改节点的文本，方法有两种:</p>
 <p>一种是修改 <code>innerHTML</code> 属性，这个方式非常强大，不但可以修改一个 DOM 节点的文本内容，还可以直接通过 HTML 片段修改 DOM 节点内部的子树:</p>
-<div><pre><code><span>// 获取&lt;p id="p-id">...&lt;/p></span>
+<div data-ext="js"><pre><code><span>// 获取&lt;p id="p-id">...&lt;/p></span>
 <span>const</span> p <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"#p-id"</span><span>)</span><span>;</span>
 <span>// 设置文本为abc:</span>
 p<span>.</span>innerHTML <span>=</span> <span>"ABC"</span><span>;</span> <span>// &lt;p id="p-id">ABC&lt;/p></span>
@@ -1615,7 +1615,7 @@ p<span>.</span>innerHTML <span>=</span> <span>'ABC &lt;span style="color:red">RE
 <span>// &lt;p>...&lt;/p>的内部结构已修改</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>用 <code>innerHTML</code> 时要注意，是否需要写入 HTML。如果写入的字符串是通过网络拿到了，要注意对字符编码来避免 XSS 攻击。</p>
 <p>第二种是修改 <code>innerText</code> 或 <code>textContent</code> 属性，这样可以自动对字符串进行 HTML 编码，保证无法设置任何 HTML 标签:</p>
-<div><pre><code><span>// 获取&lt;p id="p-id">...&lt;/p></span>
+<div data-ext="js"><pre><code><span>// 获取&lt;p id="p-id">...&lt;/p></span>
 <span>const</span> p <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"#p-id"</span><span>)</span><span>;</span>
 <span>// 设置文本:</span>
 p<span>.</span>innerText <span>=</span> <span>'&lt;script>alert("Hi")&lt;/script>'</span><span>;</span>
@@ -1627,7 +1627,7 @@ p<span>.</span>innerText <span>=</span> <span>'&lt;script>alert("Hi")&lt;/script
 <p>IE &lt; 9 不支持 <code>textContent</code>。</p>
 </div>
 <p>修改 CSS 也是经常需要的操作。DOM 节点的 style 属性对应所有的 CSS，可以直接获取或设置。因为 CSS 允许 <code>font-size</code> 这样的名称，但它并非 JavaScript 有效的属性名，所以需要在 JavaScript 中改写为驼峰式命名 <code>fontSize</code>:</p>
-<div><pre><code><span>// 获取&lt;p id="p-id">...&lt;/p></span>
+<div data-ext="js"><pre><code><span>// 获取&lt;p id="p-id">...&lt;/p></span>
 <span>const</span> p <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"#p-id"</span><span>)</span><span>;</span>
 <span>// 设置CSS:</span>
 p<span>.</span>style<span>.</span>color <span>=</span> <span>"#ff0000"</span><span>;</span>
@@ -1638,7 +1638,7 @@ p<span>.</span>style<span>.</span>paddingTop <span>=</span> <span>"2em"</span><s
 <p>如果这个 DOM 节点是空的，例如，<code>&lt;div&gt;&lt;/div&gt;</code>，那么，直接使用 <code>innerHTML = '&lt;span&gt;child&lt;/span&gt;'</code> 就可以修改 DOM 节点的内容，相当于“插入”了新的 DOM 节点。</p>
 <p>如果这个 DOM 节点不是空的，那就不能这么做，因为 <code>innerHTML</code> 会直接替换掉原来的所有子节点。</p>
 <p>有两个办法可以插入新的节点。一个是使用 <code>appendChild</code>，把一个子节点添加到父节点的最后一个子节点。例如:</p>
-<div><pre><code><span>&lt;!-- HTML结构 --></span>
+<div data-ext="html"><pre><code><span>&lt;!-- HTML结构 --></span>
 <span><span><span>&lt;</span>p</span> <span>id</span><span><span>=</span><span>"</span>js<span>"</span></span><span>></span></span>JavaScript<span><span><span>&lt;/</span>p</span><span>></span></span>
 <span><span><span>&lt;</span>div</span> <span>id</span><span><span>=</span><span>"</span>list<span>"</span></span><span>></span></span>
   <span><span><span>&lt;</span>p</span> <span>id</span><span><span>=</span><span>"</span>java<span>"</span></span><span>></span></span>Java<span><span><span>&lt;/</span>p</span><span>></span></span>
@@ -1646,12 +1646,12 @@ p<span>.</span>style<span>.</span>paddingTop <span>=</span> <span>"2em"</span><s
   <span><span><span>&lt;</span>p</span> <span>id</span><span><span>=</span><span>"</span>scheme<span>"</span></span><span>></span></span>Scheme<span><span><span>&lt;/</span>p</span><span>></span></span>
 <span><span><span>&lt;/</span>div</span><span>></span></span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>把 <code>&lt;p id=&quot;js&quot;&gt;JavaScript&lt;/p&gt;</code> 添加到 <code>&lt;div id=&quot;list&quot;&gt;</code> 的最后一项:</p>
-<div><pre><code><span>const</span> js <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"#js"</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code><span>const</span> js <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"#js"</span><span>)</span><span>;</span>
 <span>const</span> list <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"#list"</span><span>)</span><span>;</span>
 
 list<span>.</span><span>appendChild</span><span>(</span>js<span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><p>现在，HTML 结构变成了这样:</p>
-<div><pre><code><span>&lt;!-- HTML结构 --></span>
+<div data-ext="html"><pre><code><span>&lt;!-- HTML结构 --></span>
 <span><span><span>&lt;</span>div</span> <span>id</span><span><span>=</span><span>"</span>list<span>"</span></span><span>></span></span>
   <span><span><span>&lt;</span>p</span> <span>id</span><span><span>=</span><span>"</span>java<span>"</span></span><span>></span></span>Java<span><span><span>&lt;/</span>p</span><span>></span></span>
   <span><span><span>&lt;</span>p</span> <span>id</span><span><span>=</span><span>"</span>python<span>"</span></span><span>></span></span>Python<span><span><span>&lt;/</span>p</span><span>></span></span>
@@ -1660,14 +1660,14 @@ list<span>.</span><span>appendChild</span><span>(</span>js<span>)</span><span>;<
 <span><span><span>&lt;/</span>div</span><span>></span></span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>因为我们插入的 js 节点已经存在于当前的文档树，因此这个节点首先会从原先的位置删除，再插入到新的位置。</p>
 <p>更多的时候我们会从零创建一个新的节点，然后插入到指定位置:</p>
-<div><pre><code><span>const</span> list <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"#list"</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code><span>const</span> list <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"#list"</span><span>)</span><span>;</span>
 <span>const</span> haskell <span>=</span> document<span>.</span><span>createElement</span><span>(</span><span>"p"</span><span>)</span><span>;</span>
 
 haskell<span>.</span>id <span>=</span> <span>"haskell"</span><span>;</span>
 haskell<span>.</span>innerText <span>=</span> <span>"Haskell"</span><span>;</span>
 list<span>.</span><span>appendChild</span><span>(</span>haskell<span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>这样我们就动态添加了一个新的节点:</p>
-<div><pre><code><span>&lt;!-- HTML结构 --></span>
+<div data-ext="html"><pre><code><span>&lt;!-- HTML结构 --></span>
 <span><span><span>&lt;</span>div</span> <span>id</span><span><span>=</span><span>"</span>list<span>"</span></span><span>></span></span>
   <span><span><span>&lt;</span>p</span> <span>id</span><span><span>=</span><span>"</span>java<span>"</span></span><span>></span></span>Java<span><span><span>&lt;/</span>p</span><span>></span></span>
   <span><span><span>&lt;</span>p</span> <span>id</span><span><span>=</span><span>"</span>python<span>"</span></span><span>></span></span>Python<span><span><span>&lt;/</span>p</span><span>></span></span>
@@ -1675,7 +1675,7 @@ list<span>.</span><span>appendChild</span><span>(</span>haskell<span>)</span><sp
   <span><span><span>&lt;</span>p</span> <span>id</span><span><span>=</span><span>"</span>haskell<span>"</span></span><span>></span></span>Haskell<span><span><span>&lt;/</span>p</span><span>></span></span>
 <span><span><span>&lt;/</span>div</span><span>></span></span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>动态创建一个节点然后添加到 DOM 树中，可以实现很多功能。举个例子，下面的代码动态创建了一个 <code>&lt;style&gt;</code> 节点，然后把它添加到 <code>&lt;head&gt;</code> 节点的末尾，这样就动态地给文档添加了新的 CSS 定义:</p>
-<div><pre><code><span>const</span> d <span>=</span> document<span>.</span><span>createElement</span><span>(</span><span>"style"</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code><span>const</span> d <span>=</span> document<span>.</span><span>createElement</span><span>(</span><span>"style"</span><span>)</span><span>;</span>
 
 d<span>.</span><span>setAttribute</span><span>(</span><span>"type"</span><span>,</span> <span>"text/css"</span><span>)</span><span>;</span>
 d<span>.</span>innerHTML <span>=</span> <span>"p { color: red }"</span><span>;</span>
@@ -1684,14 +1684,14 @@ document<span>.</span><span>getElementsByTagName</span><span>(</span><span>"head
 <h3 id="insertbefore" tabindex="-1"> insertBefore</h3>
 <p>如果我们要把子节点插入到指定的位置怎么办? 可以使用 <code>parentElement.insertBefore(newElement, referenceElement);</code>，子节点会插入到 <code>referenceElement</code> 之前。</p>
 <p>还是以上面的 HTML 为例，假定我们要把 <code>Haskell</code> 插入到 <code>Python</code> 之前:</p>
-<div><pre><code><span>&lt;!-- HTML结构 --></span>
+<div data-ext="html"><pre><code><span>&lt;!-- HTML结构 --></span>
 <span><span><span>&lt;</span>div</span> <span>id</span><span><span>=</span><span>"</span>list<span>"</span></span><span>></span></span>
   <span><span><span>&lt;</span>p</span> <span>id</span><span><span>=</span><span>"</span>java<span>"</span></span><span>></span></span>Java<span><span><span>&lt;/</span>p</span><span>></span></span>
   <span><span><span>&lt;</span>p</span> <span>id</span><span><span>=</span><span>"</span>python<span>"</span></span><span>></span></span>Python<span><span><span>&lt;/</span>p</span><span>></span></span>
   <span><span><span>&lt;</span>p</span> <span>id</span><span><span>=</span><span>"</span>scheme<span>"</span></span><span>></span></span>Scheme<span><span><span>&lt;/</span>p</span><span>></span></span>
 <span><span><span>&lt;/</span>div</span><span>></span></span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>可以这么写:</p>
-<div><pre><code><span>const</span> list <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"#list"</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code><span>const</span> list <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"#list"</span><span>)</span><span>;</span>
 <span>const</span> ref <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"#python"</span><span>)</span><span>;</span>
 <span>const</span> haskell <span>=</span> document<span>.</span><span>createElement</span><span>(</span><span>"p"</span><span>)</span><span>;</span>
 
@@ -1699,7 +1699,7 @@ haskell<span>.</span>id <span>=</span> <span>"haskell"</span><span>;</span>
 haskell<span>.</span>innerText <span>=</span> <span>"Haskell"</span><span>;</span>
 list<span>.</span><span>insertBefore</span><span>(</span>haskell<span>,</span> ref<span>)</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>新的 HTML 结构如下:</p>
-<div><pre><code><span>&lt;!-- HTML结构 --></span>
+<div data-ext="html"><pre><code><span>&lt;!-- HTML结构 --></span>
 <span><span><span>&lt;</span>div</span> <span>id</span><span><span>=</span><span>"</span>list<span>"</span></span><span>></span></span>
   <span><span><span>&lt;</span>p</span> <span>id</span><span><span>=</span><span>"</span>java<span>"</span></span><span>></span></span>Java<span><span><span>&lt;/</span>p</span><span>></span></span>
   <span><span><span>&lt;</span>p</span> <span>id</span><span><span>=</span><span>"</span>haskell<span>"</span></span><span>></span></span>Haskell<span><span><span>&lt;/</span>p</span><span>></span></span>
@@ -1707,14 +1707,14 @@ list<span>.</span><span>insertBefore</span><span>(</span>haskell<span>,</span> r
   <span><span><span>&lt;</span>p</span> <span>id</span><span><span>=</span><span>"</span>scheme<span>"</span></span><span>></span></span>Scheme<span><span><span>&lt;/</span>p</span><span>></span></span>
 <span><span><span>&lt;/</span>div</span><span>></span></span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>可见，使用 <code>insertBefore</code> 重点是要拿到一个“参考子节点”的引用。很多时候，需要循环一个父节点的所有子节点，可以通过迭代 <code>children</code> 属性实现:</p>
-<div><pre><code><span>let</span> c<span>;</span>
+<div data-ext="js"><pre><code><span>let</span> c<span>;</span>
 <span>const</span> list <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"#list"</span><span>)</span><span>;</span>
 
 <span>for</span> <span>(</span><span>let</span> i <span>=</span> <span>0</span><span>;</span> i <span>&lt;</span> list<span>.</span>children<span>.</span>length<span>;</span> i<span>++</span><span>)</span> c <span>=</span> list<span>.</span>children<span>[</span>i<span>]</span><span>;</span> <span>// 拿到第i个子节点</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><h2 id="删除-dom" tabindex="-1"> 删除 DOM</h2>
 <p>删除一个 DOM 节点就比插入要容易得多。</p>
 <p>要删除一个节点，首先要获得该节点本身以及它的父节点，然后，调用父节点的 <code>removeChild</code> 把自己删掉:</p>
-<div><pre><code><span>// 拿到待删除节点:</span>
+<div data-ext="js"><pre><code><span>// 拿到待删除节点:</span>
 <span>const</span> self <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"#to-be-removed"</span><span>)</span><span>;</span>
 <span>// 拿到父节点:</span>
 <span>const</span> parent <span>=</span> self<span>.</span>parentElement<span>;</span>
@@ -1728,12 +1728,12 @@ removed <span>===</span> self<span>;</span> <span>// true</span>
 </div>
 <p>当您遍历一个父节点的子节点并进行删除操作时，要注意，<code>children</code> 属性是一个只读属性，并且它在子节点变化时会实时更新。</p>
 <p>例如，对于如下 HTML 结构:</p>
-<div><pre><code><span><span><span>&lt;</span>div</span> <span>id</span><span><span>=</span><span>"</span>parent<span>"</span></span><span>></span></span>
+<div data-ext="html"><pre><code><span><span><span>&lt;</span>div</span> <span>id</span><span><span>=</span><span>"</span>parent<span>"</span></span><span>></span></span>
   <span><span><span>&lt;</span>p</span><span>></span></span>First<span><span><span>&lt;/</span>p</span><span>></span></span>
   <span><span><span>&lt;</span>p</span><span>></span></span>Second<span><span><span>&lt;/</span>p</span><span>></span></span>
 <span><span><span>&lt;/</span>div</span><span>></span></span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><p>当我们用如下代码删除子节点时:</p>
-<div><pre><code><span>const</span> parent <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"#parent"</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code><span>const</span> parent <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>"#parent"</span><span>)</span><span>;</span>
 
 parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>children<span>[</span><span>0</span><span>]</span><span>)</span><span>;</span>
 parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>children<span>[</span><span>1</span><span>]</span><span>)</span><span>;</span> <span>// &lt;-- 浏览器报错</span>
@@ -2652,7 +2652,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <p>提示</p>
 <p>在国内，建议换成淘宝源 <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener noreferrer">https://registry.npm.taobao.org</a></p>
 <p>即执行</p>
-<div><pre><code><span>yarn</span> config <span>set</span> registry https://registry.npm.taobao.org
+<div data-ext="sh"><pre><code><span>yarn</span> config <span>set</span> registry https://registry.npm.taobao.org
 </code></pre><div aria-hidden="true"><div></div></div></div></div>
 </li>
 </ul>
@@ -2668,9 +2668,9 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
       <content:encoded><![CDATA[<h2 id="创建-react-项目" tabindex="-1"> 创建 React 项目</h2>
 <p>使用 <code>create-react-app</code> 工具。</p>
 <p>创建普通模板:</p>
-<div><pre><code>npx create-react-app xxx
+<div data-ext="sh"><pre><code>npx create-react-app xxx
 </code></pre><div aria-hidden="true"><div></div></div></div><p>创建 TS 模板:</p>
-<div><pre><code>npx create-react-app xxx <span>--template</span> typescript
+<div data-ext="sh"><pre><code>npx create-react-app xxx <span>--template</span> typescript
 </code></pre><div aria-hidden="true"><div></div></div></div><h2 id="react-文档" tabindex="-1"> React 文档</h2>
 <ul>
 <li><a href="https://reactjs.org/docs/getting-started.html" target="_blank" rel="noopener noreferrer">官方文档</a></li>
@@ -4186,7 +4186,7 @@ JSON 具有自我描述性，更易理解
 <h2 id="json-对象" tabindex="-1"> JSON 对象</h2>
 <p>JSON 对象在大括号 <code>{}</code> 中书写以 <code>键: 值</code> 对的方式书写，不同键值对之间用 <code>,</code> 分隔。</p>
 <p><strong>例:</strong></p>
-<div><pre><code><span>{</span>
+<div data-ext="json"><pre><code><span>{</span>
   <span>"tag"</span><span>:</span> <span>"text"</span><span>,</span>
   <span>"heading"</span><span>:</span> <span>"校园卡说明"</span><span>,</span>
   <span>"text"</span><span>:</span> <span>"校园卡是东师的金融消费卡"</span>
@@ -4502,37 +4502,37 @@ Markdown 的主要目的是用来作为一种网络内容的写作用语言。
 <h2 id="数据结构介绍" tabindex="-1"> 数据结构介绍</h2>
 <h3 id="对象" tabindex="-1"> 对象</h3>
 <p>对象的一组键值对，使用冒号结构表示。</p>
-<div><pre><code><span>animal</span><span>:</span> pets
+<div data-ext="yml"><pre><code><span>animal</span><span>:</span> pets
 </code></pre><div aria-hidden="true"><div></div></div></div><p>转为 JavaScript 如下。</p>
-<div><pre><code><span>{</span>
+<div data-ext="js"><pre><code><span>{</span>
   <span>animal</span><span>:</span> <span>"pets"</span><span>;</span>
 <span>}</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>Yaml 也允许另一种写法，将所有键值对写成一个行内对象。</p>
-<div><pre><code><span>hash</span><span>:</span> <span>{</span> <span>name</span><span>:</span> Steve<span>,</span> <span>foo</span><span>:</span> bar <span>}</span>
+<div data-ext="yml"><pre><code><span>hash</span><span>:</span> <span>{</span> <span>name</span><span>:</span> Steve<span>,</span> <span>foo</span><span>:</span> bar <span>}</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>转为 JavaScript 如下。</p>
-<div><pre><code><span>{</span> <span>hash</span><span>:</span> <span>{</span> <span>name</span><span>:</span> <span>'Steve'</span><span>,</span> <span>foo</span><span>:</span> <span>'bar'</span> <span>}</span> <span>}</span>
+<div data-ext="js"><pre><code><span>{</span> <span>hash</span><span>:</span> <span>{</span> <span>name</span><span>:</span> <span>'Steve'</span><span>,</span> <span>foo</span><span>:</span> <span>'bar'</span> <span>}</span> <span>}</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><h3 id="数组" tabindex="-1"> 数组</h3>
 <p>一组连词线开头的行，构成一个数组。</p>
-<div><pre><code><span>-</span> Cat
+<div data-ext="yml"><pre><code><span>-</span> Cat
 <span>-</span> Dog
 <span>-</span> Goldfish
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>转为 JavaScript 如下。</p>
-<div><pre><code><span>[</span><span>"Cat"</span><span>,</span> <span>"Dog"</span><span>,</span> <span>"Goldfish"</span><span>]</span><span>;</span>
+<div data-ext="js"><pre><code><span>[</span><span>"Cat"</span><span>,</span> <span>"Dog"</span><span>,</span> <span>"Goldfish"</span><span>]</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>数据结构的子成员是一个数组，则可以在该项下面缩进一个空格。</p>
-<div><pre><code><span>-</span> <span>-</span> Cat
+<div data-ext="yml"><pre><code><span>-</span> <span>-</span> Cat
   <span>-</span> Dog
   <span>-</span> Goldfish
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>转为 JavaScript 如下。</p>
-<div><pre><code><span>[</span><span>[</span><span>"Cat"</span><span>,</span> <span>"Dog"</span><span>,</span> <span>"Goldfish"</span><span>]</span><span>]</span><span>;</span>
+<div data-ext="js"><pre><code><span>[</span><span>[</span><span>"Cat"</span><span>,</span> <span>"Dog"</span><span>,</span> <span>"Goldfish"</span><span>]</span><span>]</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>数组也可以采用行内表示法。</p>
-<div><pre><code><span>animal</span><span>:</span> <span>[</span>Cat<span>,</span> Dog<span>]</span>
+<div data-ext="yml"><pre><code><span>animal</span><span>:</span> <span>[</span>Cat<span>,</span> Dog<span>]</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>转为 JavaScript 如下。</p>
-<div><pre><code><span>{</span>
+<div data-ext="js"><pre><code><span>{</span>
   <span>animal</span><span>:</span> <span>[</span><span>"Cat"</span><span>,</span> <span>"Dog"</span><span>]</span><span>;</span>
 <span>}</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><h3 id="复合结构" tabindex="-1"> 复合结构</h3>
 <p>对象和数组可以结合使用，形成复合结构。</p>
-<div><pre><code><span>languages</span><span>:</span>
+<div data-ext="yml"><pre><code><span>languages</span><span>:</span>
   <span>-</span> Ruby
   <span>-</span> Perl
   <span>-</span> Python
@@ -4543,7 +4543,7 @@ Markdown 的主要目的是用来作为一种网络内容的写作用语言。
   <span>Python</span><span>:</span> python.org
   <span>Perl</span><span>:</span> use.perl.org
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>转为 JavaScript 如下。</p>
-<div><pre><code><span>{</span>
+<div data-ext="yml"><pre><code><span>{</span>
   <span>languages</span><span>:</span> <span>[</span><span>"Ruby"</span><span>,</span> <span>"Perl"</span><span>,</span> <span>"Python"</span><span>]</span><span>,</span>
   <span>websites</span><span>:</span>
     <span>{</span>
@@ -4565,84 +4565,84 @@ Markdown 的主要目的是用来作为一种网络内容的写作用语言。
 <li>日期</li>
 </ul>
 <p>数值直接以字面量的形式表示。</p>
-<div><pre><code><span>number</span><span>:</span> <span>12.30</span>
+<div data-ext="yml"><pre><code><span>number</span><span>:</span> <span>12.30</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>转为 JavaScript 如下。</p>
-<div><pre><code><span>{</span>
+<div data-ext="js"><pre><code><span>{</span>
   <span>number</span><span>:</span> <span>12.3</span><span>;</span>
 <span>}</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>布尔值用 <code>true</code> 和 <code>false</code> 表示。</p>
-<div><pre><code><span>isSet</span><span>:</span> <span>true</span>
+<div data-ext="yml"><pre><code><span>isSet</span><span>:</span> <span>true</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>转为 JavaScript 如下。</p>
-<div><pre><code><span>{</span>
+<div data-ext="js"><pre><code><span>{</span>
   <span>isSet</span><span>:</span> <span>true</span><span>;</span>
 <span>}</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p><code>null</code> 用 <code>~</code> 表示。</p>
-<div><pre><code><span>parent</span><span>:</span> <span>~</span>
+<div data-ext="yml"><pre><code><span>parent</span><span>:</span> <span>~</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>转为 JavaScript 如下。</p>
-<div><pre><code><span>{</span>
+<div data-ext="js"><pre><code><span>{</span>
   <span>parent</span><span>:</span> <span>null</span><span>;</span>
 <span>}</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>时间采用 ISO8601 格式。</p>
-<div><pre><code><span>iso8601</span><span>:</span> <span>2001-12-14t21:59:43.10-05:00</span>
+<div data-ext="yml"><pre><code><span>iso8601</span><span>:</span> <span>2001-12-14t21:59:43.10-05:00</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>转为 JavaScript 如下。</p>
-<div><pre><code><span>{</span>
+<div data-ext="js"><pre><code><span>{</span>
   <span>iso8601</span><span>:</span> <span>new</span> <span>Date</span><span>(</span><span>"2001-12-14t21:59:43.10-05:00"</span><span>)</span><span>;</span>
 <span>}</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>日期采用复合 iso8601 格式的年、月、日表示。</p>
-<div><pre><code><span>date</span><span>:</span> <span>1976-07-31</span>
+<div data-ext="yml"><pre><code><span>date</span><span>:</span> <span>1976-07-31</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>转为 JavaScript 如下。</p>
-<div><pre><code><span>{</span>
+<div data-ext="js"><pre><code><span>{</span>
   <span>date</span><span>:</span> <span>new</span> <span>Date</span><span>(</span><span>"1976-07-31"</span><span>)</span><span>;</span>
 <span>}</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>YAML 允许使用两个感叹号，强制转换数据类型。</p>
-<div><pre><code><span>e</span><span>:</span> <span>!!str</span> <span>123</span>
+<div data-ext="yml"><pre><code><span>e</span><span>:</span> <span>!!str</span> <span>123</span>
 <span>f</span><span>:</span> <span>!!str</span> <span>true</span>
 </code></pre><div aria-hidden="true"><div></div><div></div></div></div><p>转为 JavaScript 如下。</p>
-<div><pre><code><span>{</span> <span>e</span><span>:</span> <span>'123'</span><span>,</span> <span>f</span><span>:</span> <span>'true'</span> <span>}</span>
+<div data-ext="js"><pre><code><span>{</span> <span>e</span><span>:</span> <span>'123'</span><span>,</span> <span>f</span><span>:</span> <span>'true'</span> <span>}</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><h3 id="字符串" tabindex="-1"> 字符串</h3>
 <p>字符串是最常见，也是最复杂的一种数据类型。</p>
 <p>字符串默认不使用引号表示。</p>
-<div><pre><code><span>str</span><span>:</span> 这是一行字符串
+<div data-ext="yml"><pre><code><span>str</span><span>:</span> 这是一行字符串
 </code></pre><div aria-hidden="true"><div></div></div></div><p>转为 JavaScript 如下。</p>
-<div><pre><code><span>{</span>
+<div data-ext="js"><pre><code><span>{</span>
   <span>str</span><span>:</span> <span>"这是一行字符串"</span><span>;</span>
 <span>}</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>如果字符串之中包含空格或特殊字符，需要放在引号之中。</p>
-<div><pre><code><span>str</span><span>:</span> <span>"内容: 字符串"</span>
+<div data-ext="yml"><pre><code><span>str</span><span>:</span> <span>"内容: 字符串"</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>转为 JavaScript 如下。</p>
-<div><pre><code><span>{</span>
+<div data-ext="js"><pre><code><span>{</span>
   <span>str</span><span>:</span> <span>"内容: 字符串"</span><span>;</span>
 <span>}</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>单引号和双引号都可以使用，双引号不会对特殊字符转义。</p>
-<div><pre><code><span>s1</span><span>:</span> <span>'内容\n字符串'</span>
+<div data-ext="yml"><pre><code><span>s1</span><span>:</span> <span>'内容\n字符串'</span>
 <span>s2</span><span>:</span> <span>"内容\n字符串"</span>
 </code></pre><div aria-hidden="true"><div></div><div></div></div></div><p>转为 JavaScript 如下。</p>
-<div><pre><code><span>{</span> <span>s1</span><span>:</span> <span>'内容\\n字符串'</span><span>,</span> <span>s2</span><span>:</span> <span>'内容\n字符串'</span> <span>}</span>
+<div data-ext="js"><pre><code><span>{</span> <span>s1</span><span>:</span> <span>'内容\\n字符串'</span><span>,</span> <span>s2</span><span>:</span> <span>'内容\n字符串'</span> <span>}</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>单引号之中如果还有单引号，必须连续使用两个单引号转义。</p>
-<div><pre><code><span>str</span><span>:</span> <span>"labor's day"</span>
+<div data-ext="yml"><pre><code><span>str</span><span>:</span> <span>"labor's day"</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p>转为 JavaScript 如下。</p>
-<div><pre><code><span>{</span>
+<div data-ext="js"><pre><code><span>{</span>
   <span>str</span><span>:</span> <span>"labor's day"</span><span>;</span>
 <span>}</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>字符串可以写成多行，从第二行开始，必须有一个单空格缩进。换行符会被转为空格。</p>
-<div><pre><code><span>str</span><span>:</span> 这是一段
+<div data-ext="yml"><pre><code><span>str</span><span>:</span> 这是一段
   多行
   字符串
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>转为 JavaScript 如下。</p>
-<div><pre><code><span>{</span>
+<div data-ext="js"><pre><code><span>{</span>
   <span>str</span><span>:</span> <span>"这是一段 多行 字符串"</span><span>;</span>
 <span>}</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div></div></div><p>多行字符串可以使用 <code>|</code> 保留换行符，也可以使用 <code>&gt;</code> 折叠换行。</p>
-<div><pre><code><span>this</span><span>:</span> <span>|</span><span>
+<div data-ext="yml"><pre><code><span>this</span><span>:</span> <span>|</span><span>
   Foo
   Bar</span>
 <span>that</span><span>:</span> <span>></span><span>
   Foo
   Bar</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>转为 JavaScript 代码如下。</p>
-<div><pre><code><span>{</span> <span>this</span><span>:</span> <span>'Foo\nBar\n'</span><span>,</span> <span>that</span><span>:</span> <span>'Foo Bar\n'</span> <span>}</span>
+<div data-ext="js"><pre><code><span>{</span> <span>this</span><span>:</span> <span>'Foo\nBar\n'</span><span>,</span> <span>that</span><span>:</span> <span>'Foo Bar\n'</span> <span>}</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><p><code>+</code> 表示保留文字块末尾的换行，<code>-</code> 表示删除字符串末尾的换行。</p>
-<div><pre><code><span>s1</span><span>:</span> <span>|</span><span>
+<div data-ext="yml"><pre><code><span>s1</span><span>:</span> <span>|</span><span>
   Foo</span>
 
 <span>s2</span><span>:</span> <span>|</span>+
@@ -4651,10 +4651,10 @@ Markdown 的主要目的是用来作为一种网络内容的写作用语言。
 <span>s3</span><span>:</span> <span>|</span><span>-</span>
   Foo
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>转为 JavaScript 代码如下。</p>
-<div><pre><code><span>{</span> <span>s1</span><span>:</span> <span>'Foo\n'</span><span>,</span> <span>s2</span><span>:</span> <span>'Foo\n\n\n'</span><span>,</span> <span>s3</span><span>:</span> <span>'Foo'</span> <span>}</span>
+<div data-ext="js"><pre><code><span>{</span> <span>s1</span><span>:</span> <span>'Foo\n'</span><span>,</span> <span>s2</span><span>:</span> <span>'Foo\n\n\n'</span><span>,</span> <span>s3</span><span>:</span> <span>'Foo'</span> <span>}</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><h2 id="引用" tabindex="-1"> 引用</h2>
 <p>锚点 <code>&amp;</code> 和别名 <code>*</code>，可以用来引用。</p>
-<div><pre><code><span>defaults</span><span>:</span> <span>&amp;defaults</span>
+<div data-ext="yml"><pre><code><span>defaults</span><span>:</span> <span>&amp;defaults</span>
   <span>adapter</span><span>:</span> postgres
   <span>host</span><span>:</span> localhost
 
@@ -4666,7 +4666,7 @@ Markdown 的主要目的是用来作为一种网络内容的写作用语言。
   <span>database</span><span>:</span> myapp_test
   <span>&lt;&lt;</span><span>:</span> <span>*defaults</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>等同于下面的代码。</p>
-<div><pre><code><span>defaults</span><span>:</span>
+<div data-ext="yml"><pre><code><span>defaults</span><span>:</span>
   <span>adapter</span><span>:</span> postgres
   <span>host</span><span>:</span> localhost
 
@@ -4681,21 +4681,21 @@ Markdown 的主要目的是用来作为一种网络内容的写作用语言。
   <span>host</span><span>:</span> localhost
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p><code>&amp;</code> 用来建立锚点(defaults)，<code>&lt;&lt;</code> 表示合并到当前数据，<code>*</code> 用来引用锚点。</p>
 <p>下面是另一个例子。</p>
-<div><pre><code><span>-</span> <span>&amp;showell</span> Steve
+<div data-ext="yml"><pre><code><span>-</span> <span>&amp;showell</span> Steve
 <span>-</span> Clark
 <span>-</span> Brian
 <span>-</span> Oren
 <span>-</span> <span>*showell</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div></div></div><p>转为 JavaScript 代码如下。</p>
-<div><pre><code><span>[</span><span>"Steve"</span><span>,</span> <span>"Clark"</span><span>,</span> <span>"Brian"</span><span>,</span> <span>"Oren"</span><span>,</span> <span>"Steve"</span><span>]</span><span>;</span>
+<div data-ext="js"><pre><code><span>[</span><span>"Steve"</span><span>,</span> <span>"Clark"</span><span>,</span> <span>"Brian"</span><span>,</span> <span>"Oren"</span><span>,</span> <span>"Steve"</span><span>]</span><span>;</span>
 </code></pre><div aria-hidden="true"><div></div></div></div><h2 id="函数和正则表达式的转换" tabindex="-1"> 函数和正则表达式的转换</h2>
 <p>这是 JS-YAML 库特有的功能，可以把函数和正则表达式转为字符串。(官方 yaml 标准里不包含这个部分)</p>
-<div><pre><code><span># example.yml</span>
+<div data-ext="yml"><pre><code><span># example.yml</span>
 
 <span>fn</span><span>:</span> function () <span>{</span> return 1 <span>}</span>
 <span>reg</span><span>:</span> /test/
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div></div></div><p>解析上面的 yml 文件的代码如下。</p>
-<div><pre><code><span>var</span> yaml <span>=</span> <span>require</span><span>(</span><span>"js-yaml"</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code><span>var</span> yaml <span>=</span> <span>require</span><span>(</span><span>"js-yaml"</span><span>)</span><span>;</span>
 <span>var</span> fs <span>=</span> <span>require</span><span>(</span><span>"fs"</span><span>)</span><span>;</span>
 
 <span>try</span> <span>{</span>
@@ -4705,7 +4705,7 @@ Markdown 的主要目的是用来作为一种网络内容的写作用语言。
   console<span>.</span><span>log</span><span>(</span>e<span>)</span><span>;</span>
 <span>}</span>
 </code></pre><div aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>从 JavaScript 对象还原到 yaml 文件的代码如下。</p>
-<div><pre><code><span>var</span> yaml <span>=</span> <span>require</span><span>(</span><span>"js-yaml"</span><span>)</span><span>;</span>
+<div data-ext="js"><pre><code><span>var</span> yaml <span>=</span> <span>require</span><span>(</span><span>"js-yaml"</span><span>)</span><span>;</span>
 <span>var</span> fs <span>=</span> <span>require</span><span>(</span><span>"fs"</span><span>)</span><span>;</span>
 
 <span>var</span> obj <span>=</span> <span>{</span>
