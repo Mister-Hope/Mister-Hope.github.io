@@ -48,12 +48,21 @@ HTML 可以用 ID 属性来设置 ID 选择器，CSS 中 ID 选择器以 `#` 来
 
 以下的样式规则应用于元素属性 `id="para1"`:
 
+::: normal-demo ID 案例
+
+```html
+<p>Mr.Hope is handsome!</p>
+<p id="para1">Mr.Hope is handsome!</p>
+```
+
 ```css
 #para1 {
   text-align: center;
   color: red;
 }
 ```
+
+:::
 
 ::: tip
 
@@ -73,13 +82,28 @@ Class 选择器用于描述一组元素的样式，class 选择器有别于 ID �
 
 Class 选择器在 HTML 中以 class 属性表示, 在 CSS 中，类选择器以句点 (`.`) 显示:
 
-在以下的例子中，所有拥有 center 类的 HTML 元素均为居中。
+在以下的例子中，所有拥有 `center` 类的 HTML 元素均为居中。
+
+::: normal-demo Class 案例
+
+```html
+<p>Mr.Hope is handsome!</p>
+<p class="bold">Mr.Hope is handsome!</p>
+<p class="bold center">Mr.Hope is handsome!</p>
+<p class="center">Mr.Hope is handsome!</p>
+```
 
 ```css
+.bold {
+  font-weight: bold;
+}
+
 .center {
   text-align: center;
 }
 ```
+
+:::
 
 ## 标签选择器
 

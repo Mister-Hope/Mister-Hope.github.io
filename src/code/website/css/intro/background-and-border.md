@@ -58,11 +58,11 @@ span {
 }
 
 .a {
-  background-image: url(http://mrhope.site/assets/img/balloons.jpg);
+  background-image: url(/assets/img/balloons.jpg);
 }
 
 .b {
-  background-image: url(http://mrhope.site/assets/img/star.png);
+  background-image: url(/assets/img/star.png);
 }
 ```
 
@@ -89,7 +89,7 @@ span {
 .box {
   width: 400px;
   height: 200px;
-  background-image: url(http://mrhope.site/assets/img/star.png);
+  background-image: url(/assets/img/star.png);
   background-repeat: no-repeat;
 }
 ```
@@ -122,7 +122,7 @@ span {
 .box {
   width: 400px;
   height: 200px;
-  background-image: url(http://mrhope.site/assets/img/balloons.jpg);
+  background-image: url(/assets/img/balloons.jpg);
   background-repeat: no-repeat;
   background-size: 100px 100px;
 }
@@ -146,7 +146,7 @@ span {
 
 ```css
 .box {
-  background-image: url(http://mrhope.site/assets/img/star.png);
+  background-image: url(/assets/img/star.png);
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -156,7 +156,7 @@ span {
 
 ```css
 .box {
-  background-image: url(http://mrhope.site/assets/img/star.png);
+  background-image: url(/assets/img/star.png);
   background-repeat: no-repeat;
   background-position: 20px 10%;
 }
@@ -166,7 +166,7 @@ span {
 
 ```css
 .box {
-  background-image: url(http://mrhope.site/assets/img/star.png);
+  background-image: url(/assets/img/star.png);
   background-repeat: no-repeat;
   background-position: top 20px;
 }
@@ -176,7 +176,7 @@ span {
 
 ```css
 .box {
-  background-image: url(http://mrhope.site/assets/img/star.png);
+  background-image: url(/assets/img/star.png);
   background-repeat: no-repeat;
   background-position: top 20px right 10px;
 }
@@ -192,7 +192,7 @@ span {
 .box {
   width: 400px;
   height: 200px;
-  background-image: url(http://mrhope.site/assets/img/star.png);
+  background-image: url(/assets/img/star.png);
   background-repeat: no-repeat;
   background-position: top 20px right 10px;
 }

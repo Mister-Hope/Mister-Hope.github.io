@@ -61,7 +61,7 @@ category: HTML
 
 ```html
 <img
-  src="http://mrhope.site/assets/img/dinosaur_small.jpg"
+  src="/assets/img/dinosaur_small.jpg"
   alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"
 />
 ```
@@ -106,7 +106,7 @@ category: HTML
 
 ```html
 <img
-  src="http://mrhope.site/assets/img/dinosaur_small.jpg"
+  src="/assets/img/dinosaur_small.jpg"
   alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
   width="400"
   height="341"
@@ -137,7 +137,7 @@ category: HTML
 
 ```html
 <img
-  src="http://mrhope.site/assets/img/dinosaur_small.jpg"
+  src="/assets/img/dinosaur_small.jpg"
   alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
   width="400"
   height="341"
@@ -168,7 +168,7 @@ HTML5 的 `<figure>` 和 `<figcaption>` 元素为图片提供一个语义容器�
 ```html
 <figure>
   <img
-    src="http://mrhope.site/assets/img/dinosaur_small.jpg"
+    src="/assets/img/dinosaur_small.jpg"
     alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
     width="400"
     height="341"

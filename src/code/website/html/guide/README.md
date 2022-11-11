@@ -186,7 +186,7 @@ An element is:
 
 | 属性  | 描述                                       |
 | ----- | ------------------------------------------ |
-| class | 为 HTML 元素定义一个或多个类名 (classname) |
+| class | 为 HTML 元素定义一个或多个类名 (class name) |
 | id    | 定义元素的唯一 id                          |
 | style | 规定元素的行内样式 (inline style)          |
 | title | 描述了元素的额外信息                       |
