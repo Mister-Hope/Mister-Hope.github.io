@@ -3,7 +3,7 @@
   <id>https://mrhope.site/</id>
   <title>Mr.Hope</title>
   <subtitle>Where there is light, there is hope.</subtitle>
-  <updated>2022-11-11T13:31:37.381Z</updated>
+  <updated>2022-11-20T05:45:29.032Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mrhope.site/atom.xml"/>
   <link rel="alternate" href="https://mrhope.site/"/>
@@ -35,10 +35,10 @@
   <category term="Python"/>
   <category term="TypeScript"/>
   <category term="YAML"/>
+  <category term="Vue"/>
   <category term="CSS"/>
   <category term="Emmet"/>
   <category term="HTML"/>
-  <category term="Vue"/>
   <contributor>
     <name>李欣桐</name>
   </contributor>
@@ -53,6 +53,7 @@
     <id>https://mrhope.site/code/back-end/</id>
     <link href="https://mrhope.site/code/back-end/"/>
     <updated>2022-10-10T05:08:58.000Z</updated>
+    <summary type="html">后端入门 PHP PHP 是一种创建动态交互性站点的强有力的服务器端脚本语言，免费，并且使用非常广泛。PHP (全称 Hypertext Preprocessor，即超文本预处理器)是一种通用开源脚本语言。 PHP 手册: W3School 教程 (http://www.w3school.com.cn/php/index.asp); 菜鸟教程 (htt...</summary>
     <content type="html"><![CDATA[<h2 id="后端入门" tabindex="-1"> 后端入门</h2>
 <h3 id="php" tabindex="-1"> PHP</h3>
 <p>PHP 是一种创建动态交互性站点的强有力的服务器端脚本语言，免费，并且使用非常广泛。PHP (全称 Hypertext Preprocessor，即超文本预处理器)是一种通用开源脚本语言。</p>
@@ -89,8 +90,8 @@
     <id>https://mrhope.site/code/basic/os.html</id>
     <link href="https://mrhope.site/code/basic/os.html"/>
     <updated>2022-10-10T05:08:58.000Z</updated>
-    <summary type="html"><![CDATA[<p>操作系统 (Operating System，OS) 是软件的一部分，它是硬件基础上的第一层软件，是硬件和其它软件沟通的桥梁(或者说接口、中间人、中介等)。</p>
-]]></summary>
+    <summary type="html">操作系统 (Operating System，OS) 是软件的一部分，它是硬件基础上的第一层软件，是硬件和其它软件沟通的桥梁(或者说接口、中间人、中介等)。
+</summary>
     <content type="html"><![CDATA[<p>操作系统 (Operating System，OS) 是软件的一部分，它是硬件基础上的第一层软件，是硬件和其它软件沟通的桥梁(或者说接口、中间人、中介等)。</p>
 
 <p>操作系统会控制其他程序运行，管理系统资源，提供最基本的计算功能，如管理及配置内存、决定系统资源供需的优先次序等，同时还提供一些基本的服务程序，例如:</p>
@@ -124,6 +125,7 @@
     <id>https://mrhope.site/software/git/merge.html</id>
     <link href="https://mrhope.site/software/git/merge.html"/>
     <updated>2022-09-07T17:18:06.000Z</updated>
+    <summary type="html">Squash merge 通过使用 --squash 选项，你可以在合并中将多个 commit 合并为一个。 也就是对于以下的例子 git merge feature 得到的结果为: 而如果 feature 分支意在实现一个完成的特性，两个 commit 只是工作进度实际上并不重要的时候，我们可以通过 git merge --squash featur...</summary>
     <content type="html"><![CDATA[<h2 id="squash-merge" tabindex="-1"> Squash merge</h2>
 <p>通过使用 <code>--squash</code> 选项，你可以在合并中将多个 commit 合并为一个。</p>
 <p>也就是对于以下的例子</p>
@@ -146,12 +148,12 @@
     <id>https://mrhope.site/code/node-js/cjs.html</id>
     <link href="https://mrhope.site/code/node-js/cjs.html"/>
     <updated>2022-06-14T04:47:46.000Z</updated>
-    <summary type="html"><![CDATA[<p>在计算机程序的开发过程中，随着程序代码越写越多，在一个文件里代码就会越来越长，越来越不容易维护。</p>
-<p>为了编写可维护的代码，我们把很多函数分组，分别放到不同的文件里，这样，每个文件包含的代码就相对较少，很多编程语言都采用这种组织代码的方式。在 Node.js 环境中，一个 <code>.js</code> 文件就称之为一个模块(module)。</p>
-<p>使用模块有什么好处?</p>
-<p>最大的好处是大大提高了代码的可维护性。其次，编写代码不必从零开始。当一个模块编写完毕，就可以被其他地方引用。我们在编写程序的时候，也经常引用其他模块，包括 Node.js 内置的模块和来自第三方的模块。</p>
-<p>使用模块还可以避免函数名和变量名冲突。相同名字的函数和变量完全可以分别存在不同的模块中，因此，我们自己在编写模块时，不必考虑名字会与其他模块冲突。</p>
-]]></summary>
+    <summary type="html">在计算机程序的开发过程中，随着程序代码越写越多，在一个文件里代码就会越来越长，越来越不容易维护。
+为了编写可维护的代码，我们把很多函数分组，分别放到不同的文件里，这样，每个文件包含的代码就相对较少，很多编程语言都采用这种组织代码的方式。在 Node.js 环境中，一个 .js 文件就称之为一个模块(module)。
+使用模块有什么好处?
+最大的好处是大大提高了代码的可维护性。其次，编写代码不必从零开始。当一个模块编写完毕，就可以被其他地方引用。我们在编写程序的时候，也经常引用其他模块，包括 Node.js 内置的模块和来自第三方的模块。
+使用模块还可以避免函数名和变量名冲突。相同名字的函数和变量完全可以分别存在不同的模块中，因此，我们自己在编写模块时，不必考虑名字会与其他模块冲突。
+</summary>
     <content type="html"><![CDATA[<p>在计算机程序的开发过程中，随着程序代码越写越多，在一个文件里代码就会越来越长，越来越不容易维护。</p>
 <p>为了编写可维护的代码，我们把很多函数分组，分别放到不同的文件里，这样，每个文件包含的代码就相对较少，很多编程语言都采用这种组织代码的方式。在 Node.js 环境中，一个 <code>.js</code> 文件就称之为一个模块(module)。</p>
 <p>使用模块有什么好处?</p>
@@ -360,8 +362,8 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
     <id>https://mrhope.site/code/mini-app/guide/service/api/</id>
     <link href="https://mrhope.site/code/mini-app/guide/service/api/"/>
     <updated>2022-06-14T04:47:46.000Z</updated>
-    <summary type="html"><![CDATA[<p>小程序开发框架提供丰富的微信原生 API，可以方便的调起微信提供的能力，如获取用户信息，本地存储，支付功能等。详细介绍请参考 <a href="https://developers.weixin.qq.com/miniprogram/dev/api/" target="_blank" rel="noopener noreferrer">API 文档</a>。 <i>Content not supported</i></p>
-]]></summary>
+    <summary type="html">小程序开发框架提供丰富的微信原生 API，可以方便的调起微信提供的能力，如获取用户信息，本地存储，支付功能等。详细介绍请参考 API 文档。 
+</summary>
     <content type="html"><![CDATA[<p>小程序开发框架提供丰富的微信原生 API，可以方便的调起微信提供的能力，如获取用户信息，本地存储，支付功能等。详细介绍请参考 <a href="https://developers.weixin.qq.com/miniprogram/dev/api/" target="_blank" rel="noopener noreferrer">API 文档</a>。 <i>Content not supported</i></p>
 
 <p>通常，在小程序 API 有以下几种类型:</p>
@@ -484,8 +486,8 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
     <id>https://mrhope.site/code/Android/get-started/activity.html</id>
     <link href="https://mrhope.site/code/Android/get-started/activity.html"/>
     <updated>2022-05-28T16:24:21.000Z</updated>
-    <summary type="html"><![CDATA[<p>在本课中，您将向 MainActivity 添加一些代码，以便在用户点按 Send 按钮时启动一个显示消息的新 activity。</p>
-]]></summary>
+    <summary type="html">在本课中，您将向 MainActivity 添加一些代码，以便在用户点按 Send 按钮时启动一个显示消息的新 activity。
+</summary>
     <content type="html"><![CDATA[<p>在本课中，您将向 MainActivity 添加一些代码，以便在用户点按 Send 按钮时启动一个显示消息的新 activity。</p>
 
 <h2 id="响应-send-按钮" tabindex="-1"> 响应“Send”按钮</h2>
@@ -729,6 +731,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
     <id>https://mrhope.site/code/Android/get-started/create.html</id>
     <link href="https://mrhope.site/code/Android/get-started/create.html"/>
     <updated>2022-04-01T16:05:53.000Z</updated>
+    <summary type="html">本课将介绍如何使用 Android Studio 创建新的 Android 项目，并介绍该项目中的一些文件。 如需创建新的 Android 项目，请按以下步骤操作： 1. 安装最新版 Android Studio。 1. 在 Welcome to Android Studio 窗口中，点击 Create New Project。 如果您已打开一个项目，...</summary>
     <content type="html"><![CDATA[<p>本课将介绍如何使用 Android Studio 创建新的 Android 项目，并介绍该项目中的一些文件。</p>
 <p>如需创建新的 Android 项目，请按以下步骤操作：</p>
 <ol>
@@ -809,8 +812,8 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
     <id>https://mrhope.site/code/Android/get-started/interface.html</id>
     <link href="https://mrhope.site/code/Android/get-started/interface.html"/>
     <updated>2022-04-01T16:05:53.000Z</updated>
-    <summary type="html"><![CDATA[<p>在本节课中，您将学习如何使用 Android Studio 布局编辑器创建包含一个文本框和一个按钮的布局。这将为下一课打下基础，下节课将学习如何在点按该按钮时让应用将文本框的内容发送到其他 activity。</p>
-]]></summary>
+    <summary type="html">在本节课中，您将学习如何使用 Android Studio 布局编辑器创建包含一个文本框和一个按钮的布局。这将为下一课打下基础，下节课将学习如何在点按该按钮时让应用将文本框的内容发送到其他 activity。
+</summary>
     <content type="html"><![CDATA[<p>在本节课中，您将学习如何使用 Android Studio 布局编辑器创建包含一个文本框和一个按钮的布局。这将为下一课打下基础，下节课将学习如何在点按该按钮时让应用将文本框的内容发送到其他 activity。</p>
 
 <p>Android 应用的界面 (UI) 以布局和微件的层次结构形式构建而成。布局是 ViewGroup 对象，即控制其子视图在屏幕上的放置方式的容器。微件是 View 对象，即按钮和文本框等界面组件。</p>
@@ -924,9 +927,9 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
     <id>https://mrhope.site/code/Android/get-started/intro.html</id>
     <link href="https://mrhope.site/code/Android/get-started/intro.html"/>
     <updated>2022-04-01T16:05:53.000Z</updated>
-    <summary type="html"><![CDATA[<p>本部分介绍如何构建简单的 Android 应用。首先，您将了解如何通过 Android Studio 创建“Hello, World!”项目并运行它。然后，您将为应用创建一个新界面，该界面会接受用户输入，并切换到应用中的一个新屏幕以显示用户输入内容。</p>
-<p>开始之前，您需要了解有关 Android 应用的两个基本概念：它们如何提供多个入口点，以及它们如何适应不同的设备。</p>
-]]></summary>
+    <summary type="html">本部分介绍如何构建简单的 Android 应用。首先，您将了解如何通过 Android Studio 创建“Hello, World!”项目并运行它。然后，您将为应用创建一个新界面，该界面会接受用户输入，并切换到应用中的一个新屏幕以显示用户输入内容。
+开始之前，您需要了解有关 Android 应用的两个基本概念：它们如何提供多个入口点，以及它们如何适应不同的设备。
+</summary>
     <content type="html"><![CDATA[<p>本部分介绍如何构建简单的 Android 应用。首先，您将了解如何通过 Android Studio 创建“Hello, World!”项目并运行它。然后，您将为应用创建一个新界面，该界面会接受用户输入，并切换到应用中的一个新屏幕以显示用户输入内容。</p>
 <p>开始之前，您需要了解有关 Android 应用的两个基本概念：它们如何提供多个入口点，以及它们如何适应不同的设备。</p>
 
@@ -949,6 +952,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
     <id>https://mrhope.site/code/Android/get-started/run.html</id>
     <link href="https://mrhope.site/code/Android/get-started/run.html"/>
     <updated>2022-04-01T16:05:53.000Z</updated>
+    <summary type="html">在真实设备上运行 按照以下步骤设置设备： 1. 使用一根 USB 线将设备连接到开发机器。如果您是在 Windows 上开发的，则可能需要为设备安装合适的 USB 驱动程序。 1. 执行以下步骤，在开发者选项窗口中启用 USB 调试： 1. 打开设置应用。 1. 如果您的设备使用 Android v8.0 或更高版本，请选择系统。否则，请继续执行下一步...</summary>
     <content type="html"><![CDATA[<h2 id="在真实设备上运行" tabindex="-1"> 在真实设备上运行</h2>
 <p>按照以下步骤设置设备：</p>
 <ol>
@@ -1019,9 +1023,9 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
     <id>https://mrhope.site/code/angular/</id>
     <link href="https://mrhope.site/code/angular/"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
-    <summary type="html"><![CDATA[<p>Angular 是 Google 官方在 2016 年 9 月出品的一款框架。</p>
-<p>框架强制 Typescript，更倾向于大型项目。</p>
-]]></summary>
+    <summary type="html">Angular 是 Google 官方在 2016 年 9 月出品的一款框架。
+框架强制 Typescript，更倾向于大型项目。
+</summary>
     <content type="html"><![CDATA[<p>Angular 是 Google 官方在 2016 年 9 月出品的一款框架。</p>
 <p>框架强制 Typescript，更倾向于大型项目。</p>
 
@@ -1053,6 +1057,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
     <id>https://mrhope.site/software/mysql/</id>
     <link href="https://mrhope.site/software/mysql/"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
+    <summary type="html">目录 介绍 (intro.md); 5.7 版本与 8 的比较 (compare.md);</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li><a href="/software/mysql/intro.html">介绍</a></li>
@@ -1073,11 +1078,11 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
     <id>https://mrhope.site/code/website/jQuery/ajax.html</id>
     <link href="https://mrhope.site/code/website/jQuery/ajax.html"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
-    <summary type="html"><![CDATA[<div>
-<p>章节过时</p>
-<p>目前，一套代码已经可以在多个浏览器上运行良好了，所以 jQuery 的意义并不大。在 Node.js 中，我们使用 <a href="/code/node-js/package/axois.html">axios</a> 来进行请求。</p>
-</div>
-]]></summary>
+    <summary type="html">
+章节过时
+目前，一套代码已经可以在多个浏览器上运行良好了，所以 jQuery 的意义并不大。在 Node.js 中，我们使用 axios 来进行请求。
+
+</summary>
     <content type="html"><![CDATA[<div>
 <p>章节过时</p>
 <p>目前，一套代码已经可以在多个浏览器上运行良好了，所以 jQuery 的意义并不大。在 Node.js 中，我们使用 <a href="/code/node-js/package/axois.html">axios</a> 来进行请求。</p>
@@ -1172,11 +1177,11 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
     <id>https://mrhope.site/code/website/jQuery/modify-dom.html</id>
     <link href="https://mrhope.site/code/website/jQuery/modify-dom.html"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
-    <summary type="html"><![CDATA[<div>
-<p>章节过时</p>
-<p>而且目前浏览器 API 已经基本统一，除非兼容旧版本 IE，否则无需针对不同浏览器写不同的代码。</p>
-</div>
-]]></summary>
+    <summary type="html">
+章节过时
+而且目前浏览器 API 已经基本统一，除非兼容旧版本 IE，否则无需针对不同浏览器写不同的代码。
+
+</summary>
     <content type="html"><![CDATA[<div>
 <p>章节过时</p>
 <p>而且目前浏览器 API 已经基本统一，除非兼容旧版本 IE，否则无需针对不同浏览器写不同的代码。</p>
@@ -1231,11 +1236,11 @@ li<span>.</span><span>remove</span><span>(</span><span>)</span><span>;</span> <s
     <id>https://mrhope.site/code/website/jQuery/operate-dom.html</id>
     <link href="https://mrhope.site/code/website/jQuery/operate-dom.html"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
-    <summary type="html"><![CDATA[<div>
-<p>章节过时</p>
-<p>目前，新型的框架大多遵循 MVVM 逻辑，及把逻辑层的数据绑定到视图层去显示。这种思路下，无需也不应操作 DOM。</p>
-</div>
-]]></summary>
+    <summary type="html">
+章节过时
+目前，新型的框架大多遵循 MVVM 逻辑，及把逻辑层的数据绑定到视图层去显示。这种思路下，无需也不应操作 DOM。
+
+</summary>
     <content type="html"><![CDATA[<div>
 <p>章节过时</p>
 <p>目前，新型的框架大多遵循 MVVM 逻辑，及把逻辑层的数据绑定到视图层去显示。这种思路下，无需也不应操作 DOM。</p>
@@ -1378,8 +1383,8 @@ textarea<span>.</span><span>val</span><span>(</span><span>"Hi"</span><span>)</sp
     <id>https://mrhope.site/code/language/js/browser/ajax.html</id>
     <link href="https://mrhope.site/code/language/js/browser/ajax.html"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
-    <summary type="html"><![CDATA[<p>Ajax 不是 JavaScript 的规范，它只是一个哥们“发明”的缩写: Asynchronous JavaScript and XML，意思就是用 JavaScript 执行异步网络请求。</p>
-]]></summary>
+    <summary type="html">Ajax 不是 JavaScript 的规范，它只是一个哥们“发明”的缩写: Asynchronous JavaScript and XML，意思就是用 JavaScript 执行异步网络请求。
+</summary>
     <content type="html"><![CDATA[<p>Ajax 不是 JavaScript 的规范，它只是一个哥们“发明”的缩写: Asynchronous JavaScript and XML，意思就是用 JavaScript 执行异步网络请求。</p>
 
 <p>如果仔细观察一个 Form 的提交，您就会发现，一旦用户点击 “Submit” 按钮，表单开始提交，浏览器就会刷新页面，然后在新页面里告诉您操作是成功了还是失败了。如果不幸由于网络太慢或者其他原因，就会得到一个 404 页面。</p>
@@ -1549,23 +1554,23 @@ request<span>.</span><span>send</span><span>(</span><span>)</span><span>;</span>
     <id>https://mrhope.site/code/language/js/browser/dom.html</id>
     <link href="https://mrhope.site/code/language/js/browser/dom.html"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
-    <summary type="html"><![CDATA[<p>由于 HTML 文档被浏览器解析后就是一棵 DOM 树，要改变 HTML 的结构，就需要通过 JavaScript 来操作 DOM。</p>
-<p>始终记住 DOM 是一个树形结构。操作一个 DOM 节点实际上就是这么几个操作:</p>
-<ul>
-<li>
-<p>更新: 更新该 DOM 节点的内容，相当于更新了该 DOM 节点表示的 HTML 的内容；</p>
-</li>
-<li>
-<p>遍历: 遍历该 DOM 节点下的子节点，以便进行进一步操作；</p>
-</li>
-<li>
-<p>添加: 在该 DOM 节点下新增一个子节点，相当于动态增加了一个 HTML 节点；</p>
-</li>
-<li>
-<p>删除: 将该节点从 HTML 中删除，相当于删掉了该 DOM 节点的内容以及它包含的所有子节点。</p>
-</li>
-</ul>
-]]></summary>
+    <summary type="html">由于 HTML 文档被浏览器解析后就是一棵 DOM 树，要改变 HTML 的结构，就需要通过 JavaScript 来操作 DOM。
+始终记住 DOM 是一个树形结构。操作一个 DOM 节点实际上就是这么几个操作:
+
+
+更新: 更新该 DOM 节点的内容，相当于更新了该 DOM 节点表示的 HTML 的内容；
+
+
+遍历: 遍历该 DOM 节点下的子节点，以便进行进一步操作；
+
+
+添加: 在该 DOM 节点下新增一个子节点，相当于动态增加了一个 HTML 节点；
+
+
+删除: 将该节点从 HTML 中删除，相当于删掉了该 DOM 节点的内容以及它包含的所有子节点。
+
+
+</summary>
     <content type="html"><![CDATA[<p>由于 HTML 文档被浏览器解析后就是一棵 DOM 树，要改变 HTML 的结构，就需要通过 JavaScript 来操作 DOM。</p>
 <p>始终记住 DOM 是一个树形结构。操作一个 DOM 节点实际上就是这么几个操作:</p>
 <ul>
@@ -1759,6 +1764,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/about/</id>
     <link href="https://mrhope.site/about/"/>
     <updated>2022-04-03T17:06:01.000Z</updated>
+    <summary type="html">@slidestart Mr.Hope 介绍 Mr.Hope 基本信息 性别: 男; 年龄: 24; 婚姻情况: 未婚; 单身: 否; 爱好: 钓鱼、国际象棋、花体英文、羽毛球、编程; 性格比较开朗随和，热爱帮助他人，喜欢平时做一些开源项目。 学历经历 本科东北师范大学就读物理学; 现在在东北师范大学就读理论物理硕士; 暂无特别突出的科研成果; 联系方...</summary>
     <content type="html"><![CDATA[<i>Content not supported</i>]]></content>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
@@ -1767,8 +1773,8 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/</id>
     <link href="https://mrhope.site/code/"/>
     <updated>2022-10-10T05:08:58.000Z</updated>
-    <summary type="html"><![CDATA[<p>此处是 Mr.Hope 存放的一些代码笔记。</p>
-]]></summary>
+    <summary type="html">此处是 Mr.Hope 存放的一些代码笔记。
+</summary>
     <content type="html"><![CDATA[<p>此处是 Mr.Hope 存放的一些代码笔记。</p>
 
 <h2 id="目录" tabindex="-1"> 目录</h2>
@@ -1871,8 +1877,8 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/design/</id>
     <link href="https://mrhope.site/design/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<p>本文列出了一些 UI 设计相关的资源。</p>
-]]></summary>
+    <summary type="html">本文列出了一些 UI 设计相关的资源。
+</summary>
     <content type="html"><![CDATA[<p>本文列出了一些 UI 设计相关的资源。</p>
 
 <h2 id="相关教程" tabindex="-1"> 相关教程</h2>
@@ -1932,9 +1938,9 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/hardware/</id>
     <link href="https://mrhope.site/hardware/"/>
     <updated>2022-02-06T16:01:38.000Z</updated>
-    <summary type="html"><![CDATA[<h1 id="硬件相关" tabindex="-1"> 硬件相关</h1>
-<p>这里是一些常见的硬件相关的问题总结，供访客查阅。</p>
-]]></summary>
+    <summary type="html"># 硬件相关
+这里是一些常见的硬件相关的问题总结，供访客查阅。
+</summary>
     <content type="html"><![CDATA[<h1 id="硬件相关" tabindex="-1"> 硬件相关</h1>
 <p>这里是一些常见的硬件相关的问题总结，供访客查阅。</p>
 
@@ -1946,6 +1952,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/linux/</id>
     <link href="https://mrhope.site/linux/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">Linux 教程 Linux 介绍 (intro/README.md); Linux 介绍 (intro/intro.md); Linux 历史 (intro/history.md); Linux 编写语言 (intro/language.md); Linux 优势 (intro/advantage.md); Linux 桌面环境 (intro/des...</summary>
     <content type="html"><![CDATA[<h2 id="linux-教程" tabindex="-1"> Linux 教程</h2>
 <ul>
 <li>
@@ -2033,6 +2040,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/note/</id>
     <link href="https://mrhope.site/note/"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
+    <summary type="html">这里是 Mr.Hope 的一些随笔，后续被整理进博客中。 四季 介绍 这是我在高一写的散文诗集，最初发表在空间日志上。 后续也写了一些诗补充了进去，其中以 “秋之思” 篇幅最多 近日将其作为少年回忆，整理在博客中。 秋之思 (fall/catalog.md); 冬之语 (winter/note.md); 春之诗 (spring/1.md); 夏之歌 (...</summary>
     <content type="html"><![CDATA[<p>这里是 Mr.Hope 的一些随笔，后续被整理进博客中。</p>
 <h2 id="四季" tabindex="-1"> 四季</h2>
 <div>
@@ -2090,6 +2098,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/physics/</id>
     <link href="https://mrhope.site/physics/"/>
     <updated>2022-02-06T16:01:38.000Z</updated>
+    <summary type="html">目录 电磁学 (electromagnetism/README.md); 光学 (optism/README.md); 热力学与统计物理 (tsp/README.md); 量子力学 (quatum/README.md);</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -2114,6 +2123,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/software/</id>
     <link href="https://mrhope.site/software/"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
+    <summary type="html">代码编辑器 编辑器介绍 (editor.md); 团队协作 开发项目的代码版本管理以及多人协作使用 Git 软件 Git 教程 (git/README.md); GitHub 介绍 (../code/github/README.md); 浏览器 在开发中，调试网页推荐使用 Chrome。 Chrome 介绍 (chrome.md); 后端 Http S...</summary>
     <content type="html"><![CDATA[<h2 id="代码编辑器" tabindex="-1"> 代码编辑器</h2>
 <ul>
 <li><a href="/software/editor.html">编辑器介绍</a></li>
@@ -2166,8 +2176,8 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/basic/</id>
     <link href="https://mrhope.site/code/basic/"/>
     <updated>2022-10-10T05:08:58.000Z</updated>
-    <summary type="html"><![CDATA[<p>这些是一些最为基础的内容，是后来补充进博客中的，供访客查阅。</p>
-]]></summary>
+    <summary type="html">这些是一些最为基础的内容，是后来补充进博客中的，供访客查阅。
+</summary>
     <content type="html"><![CDATA[<p>这些是一些最为基础的内容，是后来补充进博客中的，供访客查阅。</p>
 
 <ul>
@@ -2211,6 +2221,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/github/</id>
     <link href="https://mrhope.site/code/github/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">快速上手 GitHub 介绍 (intro.md); Pull Request (pr.md); 语义化提交 (semantic.md); GitHub Pages (pages.md); 利用 Gitee 加速 GitHub 克隆 (speedup.md); 官方文档 全部文档 (https://docs.github.com/cn/free-pro...</summary>
     <content type="html"><![CDATA[<h2 id="快速上手" tabindex="-1"> 快速上手</h2>
 <ul>
 <li>
@@ -2295,6 +2306,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/</id>
     <link href="https://mrhope.site/code/language/"/>
     <updated>2022-02-06T16:01:38.000Z</updated>
+    <summary type="html">如何学习一门语言 (learning.md); 教程目录 JavaScript 教程 (js/README.md); TypeScript 教程 (typescript/README.md); Python 教程 (python/README.md) (编写中...); Java 教程 (https://www.liaoxuefeng.com/wiki...</summary>
     <content type="html"><![CDATA[<ul>
 <li><a href="/code/language/learning.html">如何学习一门语言</a></li>
 </ul>
@@ -2339,11 +2351,11 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/mini-app/</id>
     <link href="https://mrhope.site/code/mini-app/"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
-    <summary type="html"><![CDATA[<div>
-<p>提示</p>
-<p>在开发小程序之前。应当掌握 <a href="/code/website/html/">HTML</a>、<a href="/code/website/css/">CSS</a>、<a href="/code/language/js/guide/">JavaScript 基础</a> 以及 <a href="/code/language/js/es6/">ES6</a>。</p>
-</div>
-]]></summary>
+    <summary type="html">
+提示
+在开发小程序之前。应当掌握 HTML、CSS、JavaScript 基础 以及 ES6。
+
+</summary>
     <content type="html"><![CDATA[<div>
 <p>提示</p>
 <p>在开发小程序之前。应当掌握 <a href="/code/website/html/">HTML</a>、<a href="/code/website/css/">CSS</a>、<a href="/code/language/js/guide/">JavaScript 基础</a> 以及 <a href="/code/language/js/es6/">ES6</a>。</p>
@@ -2586,8 +2598,8 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/node-js/</id>
     <link href="https://mrhope.site/code/node-js/"/>
     <updated>2022-06-14T04:47:46.000Z</updated>
-    <summary type="html"><![CDATA[<p>Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，拥有大量的模块。Node.js 主要以其丰富并及其容易导入的 Node.js package，以及其方便管理 npm (Node.js Package Manager)闻名。</p>
-]]></summary>
+    <summary type="html">Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，拥有大量的模块。Node.js 主要以其丰富并及其容易导入的 Node.js package，以及其方便管理 npm (Node.js Package Manager)闻名。
+</summary>
     <content type="html"><![CDATA[<p>Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，拥有大量的模块。Node.js 主要以其丰富并及其容易导入的 Node.js package，以及其方便管理 npm (Node.js Package Manager)闻名。</p>
 
 <h2 id="教程目录" tabindex="-1"> 教程目录</h2>
@@ -2674,6 +2686,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/react/</id>
     <link href="https://mrhope.site/code/react/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">创建 React 项目 使用 create-react-app 工具。 创建普通模板: 创建 TS 模板: React 文档 官方文档 (https://reactjs.org/docs/getting-started.html); 中文文档 (https://react.docschina.org/docs/getting-started.html);</summary>
     <content type="html"><![CDATA[<h2 id="创建-react-项目" tabindex="-1"> 创建 React 项目</h2>
 <p>使用 <code>create-react-app</code> 工具。</p>
 <p>创建普通模板:</p>
@@ -2690,126 +2703,11 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <published>2020-05-08T00:00:00.000Z</published>
   </entry>
   <entry>
-    <title type="html">网页入门</title>
-    <id>https://mrhope.site/code/website/</id>
-    <link href="https://mrhope.site/code/website/"/>
-    <updated>2022-09-07T17:18:06.000Z</updated>
-    <summary type="html"><![CDATA[<p>网页需要三件套: <strong>HTML</strong>、<strong>CSS</strong> 和 <strong>JavaScript</strong>。</p>
-<ol>
-<li>HTML 定义了网页的内容</li>
-<li>CSS 描述了网页的样式</li>
-<li>JavaScript 编写网页的行为</li>
-</ol>
-]]></summary>
-    <content type="html"><![CDATA[<p>网页需要三件套: <strong>HTML</strong>、<strong>CSS</strong> 和 <strong>JavaScript</strong>。</p>
-<ol>
-<li>HTML 定义了网页的内容</li>
-<li>CSS 描述了网页的样式</li>
-<li>JavaScript 编写网页的行为</li>
-</ol>
-
-<div>
-<p>提示</p>
-<p>一个大型的网站，很少是直接使用原生代码写的。</p>
-<p>最新的网站大多数都是用三大框架(、、)搭建，并引入 npm 上的 UI 库编写而成。</p>
-<p>稍微老的网站会使用其他框架作为辅助，比如、等。</p>
-</div>
-<div>
-<p>网页标准指定</p>
-<p>互联网网页标准由 W3C 组织制定，它的全称是万维网联盟组织。</p>
-</div>
-<h2 id="html" tabindex="-1"> HTML</h2>
-<p>HTML 指的是超文本标记语言 (Hyper Text Markup Language)，描述了网页的骨架(具体结构)。</p>
-<ul>
-<li><a href="/code/website/html/">HTML 教程</a></li>
-</ul>
-<h2 id="css" tabindex="-1"> CSS</h2>
-<p>CSS 指层叠样式表 (Cascading Style Sheets)，声明了网页的样式(具体布局)。</p>
-<ul>
-<li><a href="/code/website/css/">CSS 教程</a></li>
-</ul>
-<h2 id="emmet" tabindex="-1"> Emmet</h2>
-<p>Emmet 是一种快速输入 HTML 和 CSS 的语法。</p>
-<ul>
-<li><a href="/code/website/emmet/">Emmet 用法介绍</a></li>
-</ul>
-<h2 id="javascript" tabindex="-1"> JavaScript</h2>
-<p>JavaScript 是一种编程语言，声明了网页的交互逻辑。</p>
-<p>JavaScript 是一种轻量级的编程语言，为可插入 HTML 页面的编程代码。所有现代的 HTML 页面都使用 JavaScript。</p>
-<ul>
-<li><a href="/code/website/js.html">JS 教程</a></li>
-</ul>
-<h3 id="typescript" tabindex="-1"> TypeScript</h3>
-<p>TypeScript 是 JavaScript 的一个超集，使得 JS 变成了一种强定义语言。TypeScript 由于其诸多优良特性，目前在前端的份额越来越大。</p>
-<ul>
-<li><a href="/code/language/typescript/">TypeScript 教程</a></li>
-</ul>
-<h2 id="node-js" tabindex="-1"> Node.js</h2>
-<p>在深入了解并进行前端开发后，就避不开 Node。</p>
-<p>Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，拥有大量的模块。Node.js 主要以其丰富并及其容易导入的 Node.js package，以及其方便管理 npm (Node.js Package Manager)闻名。</p>
-<ul>
-<li><a href="/code/node-js/">Node.js 教程</a></li>
-</ul>
-<h2 id="历史前端框架" tabindex="-1"> 历史前端框架</h2>
-<h3 id="jquery" tabindex="-1"> jQuery</h3>
-<p>jQuery 是一个 JavaScript 库，极大地简化了 JavaScript 编程，很容易学习。</p>
-<p>jQuery 的优势在于它能够在互联网发展早期兼容各式各样的浏览器，并轻松的选定与操作 DOM。</p>
-<p>由于 MVVM 的兴起，目前 jQuery 已逐步被前端三大框架所取代。</p>
-<ul>
-<li>
-<p><a href="/code/website/jQuery/">jQuery 教程</a></p>
-</li>
-<li>
-<p><a href="http://www.w3school.com.cn/jquery/index.asp" target="_blank" rel="noopener noreferrer">W3School</a></p>
-</li>
-<li>
-<p><a href="https://www.runoob.com/jquery/jquery-tutorial.html" target="_blank" rel="noopener noreferrer">菜鸟教程</a></p>
-</li>
-</ul>
-<h3 id="bootstrap4" tabindex="-1"> Bootstrap4</h3>
-<p>Bootstrap 是全球最受欢迎的前端组件库，用于开发响应式布局、移动设备优先的 WEB 项目。</p>
-<p>Bootstrap 是一套用于 HTML、CSS 和 JS 开发的开源工具集。利用提供的 Sass 变量和大量 mixin、响应式栅格系统、可扩展的预制组件、基于 jQuery 的强大的插件系统，能够快速为您的想法开发出原型或者构建整个 app 。</p>
-<ul>
-<li>
-<p><a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/" target="_blank" rel="noopener noreferrer">bootstrap 官方文档</a></p>
-</li>
-<li>
-<p><a href="https://v4.bootcss.com/docs/4.0/getting-started/introduction/" target="_blank" rel="noopener noreferrer">bootstrap 4.0 中文文档</a></p>
-</li>
-</ul>
-<h2 id="现代前端框架" tabindex="-1"> 现代前端框架</h2>
-<h3 id="vue" tabindex="-1"> Vue</h3>
-<p>Vue 是一套轻量化的前端渐进式框架框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。</p>
-<p>Vue 与 React、Angular 一起合称前端三大框架。</p>
-<ul>
-<li>
-<p><a href="/code/vue/">Vue 学习教程</a></p>
-</li>
-<li>
-<p><a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener noreferrer">Vue 官方文档</a></p>
-</li>
-</ul>
-<h3 id="react" tabindex="-1"> React</h3>
-<ul>
-<li><a href="/code/react/">React 教程</a></li>
-</ul>
-<h3 id="angular" tabindex="-1"> Angular</h3>
-<ul>
-<li><a href="/code/angular/">Angular 教程</a></li>
-</ul>
-<h2 id="其他文档" tabindex="-1"> 其他文档</h2>
-<ul>
-<li><a href="/code/website/https.html">HTTPS 介绍</a></li>
-</ul>
-]]></content>
-    <category term="前端" scheme=""/>
-    <published>2019-09-01T00:00:00.000Z</published>
-  </entry>
-  <entry>
     <title type="html">Vue.js</title>
     <id>https://mrhope.site/code/vue/</id>
     <link href="https://mrhope.site/code/vue/"/>
     <updated>2022-06-14T04:47:46.000Z</updated>
+    <summary type="html">Vue.js 是世界上主流的前端框架。 官方介绍为：渐近式 JavaScript 框架。一款用于构建 Web 界面，易学易用，性能出色且功能丰富的框架。 Vue.js 教程目录 开发环境安装 (install.md); 起步上手 (get-started.md); Vue 单文件组件说明 (vue.md); Vue 生态 Vue Router Vue ...</summary>
     <content type="html"><![CDATA[<p>Vue.js 是世界上主流的前端框架。</p>
 <p>官方介绍为：渐近式 JavaScript 框架。一款用于构建 Web 界面，易学易用，性能出色且功能丰富的框架。</p>
 <h2 id="vue-js-教程目录" tabindex="-1"> Vue.js 教程目录</h2>
@@ -2943,12 +2841,128 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
+    <title type="html">网页入门</title>
+    <id>https://mrhope.site/code/website/</id>
+    <link href="https://mrhope.site/code/website/"/>
+    <updated>2022-09-07T17:18:06.000Z</updated>
+    <summary type="html">网页需要三件套: HTML、CSS 和 JavaScript。
+
+HTML 定义了网页的内容
+CSS 描述了网页的样式
+JavaScript 编写网页的行为
+
+</summary>
+    <content type="html"><![CDATA[<p>网页需要三件套: <strong>HTML</strong>、<strong>CSS</strong> 和 <strong>JavaScript</strong>。</p>
+<ol>
+<li>HTML 定义了网页的内容</li>
+<li>CSS 描述了网页的样式</li>
+<li>JavaScript 编写网页的行为</li>
+</ol>
+
+<div>
+<p>提示</p>
+<p>一个大型的网站，很少是直接使用原生代码写的。</p>
+<p>最新的网站大多数都是用三大框架(、、)搭建，并引入 npm 上的 UI 库编写而成。</p>
+<p>稍微老的网站会使用其他框架作为辅助，比如、等。</p>
+</div>
+<div>
+<p>网页标准指定</p>
+<p>互联网网页标准由 W3C 组织制定，它的全称是万维网联盟组织。</p>
+</div>
+<h2 id="html" tabindex="-1"> HTML</h2>
+<p>HTML 指的是超文本标记语言 (Hyper Text Markup Language)，描述了网页的骨架(具体结构)。</p>
+<ul>
+<li><a href="/code/website/html/">HTML 教程</a></li>
+</ul>
+<h2 id="css" tabindex="-1"> CSS</h2>
+<p>CSS 指层叠样式表 (Cascading Style Sheets)，声明了网页的样式(具体布局)。</p>
+<ul>
+<li><a href="/code/website/css/">CSS 教程</a></li>
+</ul>
+<h2 id="emmet" tabindex="-1"> Emmet</h2>
+<p>Emmet 是一种快速输入 HTML 和 CSS 的语法。</p>
+<ul>
+<li><a href="/code/website/emmet/">Emmet 用法介绍</a></li>
+</ul>
+<h2 id="javascript" tabindex="-1"> JavaScript</h2>
+<p>JavaScript 是一种编程语言，声明了网页的交互逻辑。</p>
+<p>JavaScript 是一种轻量级的编程语言，为可插入 HTML 页面的编程代码。所有现代的 HTML 页面都使用 JavaScript。</p>
+<ul>
+<li><a href="/code/website/js.html">JS 教程</a></li>
+</ul>
+<h3 id="typescript" tabindex="-1"> TypeScript</h3>
+<p>TypeScript 是 JavaScript 的一个超集，使得 JS 变成了一种强定义语言。TypeScript 由于其诸多优良特性，目前在前端的份额越来越大。</p>
+<ul>
+<li><a href="/code/language/typescript/">TypeScript 教程</a></li>
+</ul>
+<h2 id="node-js" tabindex="-1"> Node.js</h2>
+<p>在深入了解并进行前端开发后，就避不开 Node。</p>
+<p>Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，拥有大量的模块。Node.js 主要以其丰富并及其容易导入的 Node.js package，以及其方便管理 npm (Node.js Package Manager)闻名。</p>
+<ul>
+<li><a href="/code/node-js/">Node.js 教程</a></li>
+</ul>
+<h2 id="历史前端框架" tabindex="-1"> 历史前端框架</h2>
+<h3 id="jquery" tabindex="-1"> jQuery</h3>
+<p>jQuery 是一个 JavaScript 库，极大地简化了 JavaScript 编程，很容易学习。</p>
+<p>jQuery 的优势在于它能够在互联网发展早期兼容各式各样的浏览器，并轻松的选定与操作 DOM。</p>
+<p>由于 MVVM 的兴起，目前 jQuery 已逐步被前端三大框架所取代。</p>
+<ul>
+<li>
+<p><a href="/code/website/jQuery/">jQuery 教程</a></p>
+</li>
+<li>
+<p><a href="http://www.w3school.com.cn/jquery/index.asp" target="_blank" rel="noopener noreferrer">W3School</a></p>
+</li>
+<li>
+<p><a href="https://www.runoob.com/jquery/jquery-tutorial.html" target="_blank" rel="noopener noreferrer">菜鸟教程</a></p>
+</li>
+</ul>
+<h3 id="bootstrap4" tabindex="-1"> Bootstrap4</h3>
+<p>Bootstrap 是全球最受欢迎的前端组件库，用于开发响应式布局、移动设备优先的 WEB 项目。</p>
+<p>Bootstrap 是一套用于 HTML、CSS 和 JS 开发的开源工具集。利用提供的 Sass 变量和大量 mixin、响应式栅格系统、可扩展的预制组件、基于 jQuery 的强大的插件系统，能够快速为您的想法开发出原型或者构建整个 app 。</p>
+<ul>
+<li>
+<p><a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/" target="_blank" rel="noopener noreferrer">bootstrap 官方文档</a></p>
+</li>
+<li>
+<p><a href="https://v4.bootcss.com/docs/4.0/getting-started/introduction/" target="_blank" rel="noopener noreferrer">bootstrap 4.0 中文文档</a></p>
+</li>
+</ul>
+<h2 id="现代前端框架" tabindex="-1"> 现代前端框架</h2>
+<h3 id="vue" tabindex="-1"> Vue</h3>
+<p>Vue 是一套轻量化的前端渐进式框架框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。</p>
+<p>Vue 与 React、Angular 一起合称前端三大框架。</p>
+<ul>
+<li>
+<p><a href="/code/vue/">Vue 学习教程</a></p>
+</li>
+<li>
+<p><a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener noreferrer">Vue 官方文档</a></p>
+</li>
+</ul>
+<h3 id="react" tabindex="-1"> React</h3>
+<ul>
+<li><a href="/code/react/">React 教程</a></li>
+</ul>
+<h3 id="angular" tabindex="-1"> Angular</h3>
+<ul>
+<li><a href="/code/angular/">Angular 教程</a></li>
+</ul>
+<h2 id="其他文档" tabindex="-1"> 其他文档</h2>
+<ul>
+<li><a href="/code/website/https.html">HTTPS 介绍</a></li>
+</ul>
+]]></content>
+    <category term="前端" scheme=""/>
+    <published>2019-09-01T00:00:00.000Z</published>
+  </entry>
+  <entry>
     <title type="html">基础知识</title>
     <id>https://mrhope.site/code/windows/</id>
     <link href="https://mrhope.site/code/windows/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<p>以下是有关于 Windows 10 系统的一些基础知识。</p>
-]]></summary>
+    <summary type="html">以下是有关于 Windows 10 系统的一些基础知识。
+</summary>
     <content type="html"><![CDATA[<p>以下是有关于 Windows 10 系统的一些基础知识。</p>
 
 <ul>
@@ -2977,6 +2991,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/design/articles/</id>
     <link href="https://mrhope.site/design/articles/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">文章列表 格式塔原则 (gestalt-principle.md); 布局中的左和右 (left-or-right.md); 信息流介绍 (infomation-flow.md);</summary>
     <content type="html"><![CDATA[<h2 id="文章列表" tabindex="-1"> 文章列表</h2>
 <ul>
 <li>
@@ -2998,8 +3013,8 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/design/icon/</id>
     <link href="https://mrhope.site/design/icon/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<p>本文介绍了 UI 设计中图标的相关介绍与技巧。</p>
-]]></summary>
+    <summary type="html">本文介绍了 UI 设计中图标的相关介绍与技巧。
+</summary>
     <content type="html"><![CDATA[<p>本文介绍了 UI 设计中图标的相关介绍与技巧。</p>
 
 <h2 id="图标网站" tabindex="-1"> 图标网站</h2>
@@ -3089,6 +3104,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/design/interact/</id>
     <link href="https://mrhope.site/design/interact/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">文章列表 搜索框 (search.md); 文本框 (text-field.md);</summary>
     <content type="html"><![CDATA[<h2 id="文章列表" tabindex="-1"> 文章列表</h2>
 <ul>
 <li>
@@ -3107,6 +3123,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/design/navigation/</id>
     <link href="https://mrhope.site/design/navigation/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">目录 导航设计介绍 (intro.md); 导航栏概述与设计方式 (navbar.md); 导航栏设计技巧 (navbar-design.md); 侧边导航设计 (sidebar-navigate.md); 标签导航设计 (tabbar.md); 标签导航设计技巧 (tabbar-design.md);</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -3137,6 +3154,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/linux/bash/</id>
     <link href="https://mrhope.site/linux/bash/"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
+    <summary type="html">目录 简介 (intro.md); 基本语法 (grammar.md); 模式扩展 (expansion.md); 引号和转义 (quotation.md); 变量 (variable.md); 字符串操作 (string.md); 算术运算 (arithmetic.md); 行操作 (readline.md); 目录堆栈 (stack.md); 脚本...</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -3216,6 +3234,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/linux/command/</id>
     <link href="https://mrhope.site/linux/command/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">目录 命令格式简介 (command.md); 目录相关 (dir.md); 文件相关 (file.md); 其他命令 (other.md); 命令的自动补全 (add.md); 命令的执行 (excu.md); 环境变量 (path.md); 创建链接 (ln.md);</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -3252,6 +3271,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/linux/file/</id>
     <link href="https://mrhope.site/linux/file/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">目录 Linux 文件 (file.md); Linux 目录 (dir.md); 挂载 (mount.md);</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -3273,6 +3293,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/linux/intro/</id>
     <link href="https://mrhope.site/linux/intro/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">Linux 介绍 (intro.md); Linux 历史 (history.md); Linux 编写语言 (language.md); Linux 优势 (advantage.md); Linux 桌面环境 (desktop.md);</summary>
     <content type="html"><![CDATA[<h1 id="linux-简介" tabindex="-1"> Linux 简介</h1>
 <ul>
 <li>
@@ -3300,6 +3321,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/linux/ubuntu/</id>
     <link href="https://mrhope.site/linux/ubuntu/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">管理包 (manage.md); 开发软件 (debug.md); 网络服务器相关 (webserver.md); 语言切换 (lang.md);</summary>
     <content type="html"><![CDATA[<h1 id="ubuntu" tabindex="-1"> ubuntu</h1>
 <ul>
 <li>
@@ -3324,12 +3346,12 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/note/fall/</id>
     <link href="https://mrhope.site/note/fall/"/>
     <updated>2022-02-28T17:19:37.000Z</updated>
-    <summary type="html"><![CDATA[<div>
-<p>介绍</p>
-<p>这是我在高一写的一个散文诗集，最初发表在空间日志上。</p>
-<p>近日将其作为少年回忆，整理在博客中。</p>
-</div>
-]]></summary>
+    <summary type="html">
+介绍
+这是我在高一写的一个散文诗集，最初发表在空间日志上。
+近日将其作为少年回忆，整理在博客中。
+
+</summary>
     <content type="html"><![CDATA[<div>
 <p>介绍</p>
 <p>这是我在高一写的一个散文诗集，最初发表在空间日志上。</p>
@@ -3348,6 +3370,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/note/innenu/</id>
     <link href="https://mrhope.site/note/innenu/"/>
     <updated>2022-07-30T03:43:15.000Z</updated>
+    <summary type="html">简介 in 东师小程序的大部分页面都均由 YAML 文件生成。开发者只需要使用编辑器编辑 YAML，即可增添或修改小程序页面。 YAML YAML 是专门用来写配置文件的语言，非常简洁和强大，其设计目标，就是方便人类读写。 快速上手 1. 为了编写小程序页面配置文件，您需要先学习 YAML 的规则 (./yaml.md)，同时简单浏览一下一款编辑器 V...</summary>
     <content type="html"><![CDATA[<h2 id="简介" tabindex="-1"> 简介</h2>
 <p>in 东师小程序的大部分页面都均由 YAML 文件生成。开发者只需要使用编辑器编辑 YAML，即可增添或修改小程序页面。</p>
 <div>
@@ -3419,6 +3442,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/note/life/</id>
     <link href="https://mrhope.site/note/life/"/>
     <updated>2022-02-28T17:19:37.000Z</updated>
+    <summary type="html">介绍 这是我在高一写的人生感悟，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。 空间相册链接 (https://h5.qzone.qq.com/ugc/share/?sharetag=126FDE98906EB067815B0EEA0F72BEC0&amp;subtype=3&amp;ciphertext=&amp;sid=&amp;blogphoto=&amp;g=&amp;resu...</summary>
     <content type="html"><![CDATA[<div>
 <p>介绍</p>
 <p>这是我在高一写的人生感悟，最初发表在空间日志上。</p>
@@ -3436,6 +3460,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/note/node-js/</id>
     <link href="https://mrhope.site/note/node-js/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">目录 current-path 相关 (current-path.md);</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li><a href="/note/node-js/current-path.html">current-path 相关</a></li>
@@ -3448,12 +3473,12 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/note/poem/</id>
     <link href="https://mrhope.site/note/poem/"/>
     <updated>2022-02-28T17:19:37.000Z</updated>
-    <summary type="html"><![CDATA[<div>
-<p>介绍</p>
-<p>这是我在高一写的一些小的散文诗，最初发表在空间日志上。</p>
-<p>近日将其作为少年回忆，整理在博客中。</p>
-</div>
-]]></summary>
+    <summary type="html">
+介绍
+这是我在高一写的一些小的散文诗，最初发表在空间日志上。
+近日将其作为少年回忆，整理在博客中。
+
+</summary>
     <content type="html"><![CDATA[<div>
 <p>介绍</p>
 <p>这是我在高一写的一些小的散文诗，最初发表在空间日志上。</p>
@@ -3475,12 +3500,12 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/note/spring/</id>
     <link href="https://mrhope.site/note/spring/"/>
     <updated>2022-02-28T17:19:37.000Z</updated>
-    <summary type="html"><![CDATA[<div>
-<p>介绍</p>
-<p>这是我在高一写的第三篇散文诗集，最初发表在空间日志上。</p>
-<p>近日将其作为少年回忆，整理在博客中。</p>
-</div>
-]]></summary>
+    <summary type="html">
+介绍
+这是我在高一写的第三篇散文诗集，最初发表在空间日志上。
+近日将其作为少年回忆，整理在博客中。
+
+</summary>
     <content type="html"><![CDATA[<div>
 <p>介绍</p>
 <p>这是我在高一写的第三篇散文诗集，最初发表在空间日志上。</p>
@@ -3496,12 +3521,12 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/note/summer/</id>
     <link href="https://mrhope.site/note/summer/"/>
     <updated>2022-02-28T17:19:37.000Z</updated>
-    <summary type="html"><![CDATA[<div>
-<p>介绍</p>
-<p>这是我在高一写的第四篇散文诗集，最初发表在空间日志上。</p>
-<p>近日将其作为少年回忆，整理在博客中。</p>
-</div>
-]]></summary>
+    <summary type="html">
+介绍
+这是我在高一写的第四篇散文诗集，最初发表在空间日志上。
+近日将其作为少年回忆，整理在博客中。
+
+</summary>
     <content type="html"><![CDATA[<div>
 <p>介绍</p>
 <p>这是我在高一写的第四篇散文诗集，最初发表在空间日志上。</p>
@@ -3517,12 +3542,12 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/note/winter/</id>
     <link href="https://mrhope.site/note/winter/"/>
     <updated>2022-02-28T17:19:37.000Z</updated>
-    <summary type="html"><![CDATA[<div>
-<p>介绍</p>
-<p>这是我在高一写的第二篇散文诗集，最初发表在空间日志上。</p>
-<p>近日将其作为少年回忆，整理在博客中。</p>
-</div>
-]]></summary>
+    <summary type="html">
+介绍
+这是我在高一写的第二篇散文诗集，最初发表在空间日志上。
+近日将其作为少年回忆，整理在博客中。
+
+</summary>
     <content type="html"><![CDATA[<div>
 <p>介绍</p>
 <p>这是我在高一写的第二篇散文诗集，最初发表在空间日志上。</p>
@@ -3541,6 +3566,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/physics/electromagnetism/</id>
     <link href="https://mrhope.site/physics/electromagnetism/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">目录 第一章 (charpter1.md); 第二章 (charpter2.md);</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -3559,6 +3585,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/physics/optism/</id>
     <link href="https://mrhope.site/physics/optism/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">第一章 (charpter1.md);</summary>
     <content type="html"><![CDATA[<h1 id="光学笔记" tabindex="-1"> 光学笔记</h1>
 <ul>
 <li><a href="/physics/optism/charpter1.html">第一章</a></li>
@@ -3572,6 +3599,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/physics/quatum/</id>
     <link href="https://mrhope.site/physics/quatum/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">第一章 (charpter1.md);</summary>
     <content type="html"><![CDATA[<h1 id="量子力学笔记" tabindex="-1"> 量子力学笔记</h1>
 <ul>
 <li><a href="/physics/quatum/charpter1.html">第一章</a></li>
@@ -3585,6 +3613,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/physics/tsp/</id>
     <link href="https://mrhope.site/physics/tsp/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">目录 定义 (definition.md); 第一章 (charpter1.md); 第二章 (charpter2.md); 第三章 (charpter3.md);</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -3609,8 +3638,8 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/software/comsol/</id>
     <link href="https://mrhope.site/software/comsol/"/>
     <updated>2022-02-07T16:53:33.000Z</updated>
-    <summary type="html"><![CDATA[<p>这里是一些 Comsol 的学习资料整理与学习心得。</p>
-]]></summary>
+    <summary type="html">这里是一些 Comsol 的学习资料整理与学习心得。
+</summary>
     <content type="html"><![CDATA[<p>这里是一些 Comsol 的学习资料整理与学习心得。</p>
 
 <div>
@@ -3707,13 +3736,13 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/software/git/</id>
     <link href="https://mrhope.site/software/git/"/>
     <updated>2022-09-07T17:18:06.000Z</updated>
-    <summary type="html"><![CDATA[<p>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。在开发中分布式文件管理系统，可以便于多人协作开发。</p>
-<div>
-<p>交互式学习</p>
-<p>如果您觉得本文太枯燥，这里有一个 <a href="http://learngitbranching.js.org/" target="_blank" rel="noopener noreferrer">交互式的分支演示与学习网站</a>。您可以在这里领略 Git 的魅力。</p>
-<p>但 Mr.Hope 仍建议您操作完再系统的学习并阅读以下内容。</p>
-</div>
-]]></summary>
+    <summary type="html">Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。在开发中分布式文件管理系统，可以便于多人协作开发。
+
+交互式学习
+如果您觉得本文太枯燥，这里有一个 交互式的分支演示与学习网站。您可以在这里领略 Git 的魅力。
+但 Mr.Hope 仍建议您操作完再系统的学习并阅读以下内容。
+
+</summary>
     <content type="html"><![CDATA[<p>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。在开发中分布式文件管理系统，可以便于多人协作开发。</p>
 <div>
 <p>交互式学习</p>
@@ -3808,6 +3837,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/software/tool/</id>
     <link href="https://mrhope.site/software/tool/"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
+    <summary type="html">目录 PowerToys (power-toys.md): Windows 实用工具合集; PasteEx (https://github.com/huiyadanli/PasteEx): Paste As File 把剪贴板的内容直接粘贴为文件; typora (https://www.typora.io/): 一个页面很漂亮的 Markdown 编...</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -3837,6 +3867,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/software/vscode/</id>
     <link href="https://mrhope.site/software/vscode/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可在您的桌面上运行，并且可用于 Windows，macOS 和 Linux。它具有对 JavaScript，TypeScript 和 Node.js 的内置支持，并具有丰富的其他语言 (例如 C ++，C＃，Java，Python，PHP，Go) 和运行时 (例如 .NET 和...</summary>
     <content type="html"><![CDATA[<p>Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可在您的桌面上运行，并且可用于 Windows，macOS 和 Linux。它具有对 JavaScript，TypeScript 和 Node.js 的内置支持，并具有丰富的其他语言 (例如 C ++，C＃，Java，Python，PHP，Go) 和运行时 (例如 .NET 和 Unity) 扩展的生态系统。由微软出品，因其开源，可扩展和众多插件成为全球最受欢迎的代码编辑器。</p>
 <h2 id="特点" tabindex="-1"> 特点</h2>
 <ul>
@@ -3926,6 +3957,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/github/actions/</id>
     <link href="https://mrhope.site/code/github/actions/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">目录 GitHub Actions 介绍 (intro.md); Workflow 配置 (config.md); 常用 GitHub Action checkout (checkout.md); cache (cache.md); GitHub Pages 部署 (gh-pages-deploy.md); 官方文档 文档地址 (https://doc...</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -3968,11 +4000,11 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/C/</id>
     <link href="https://mrhope.site/code/language/C/"/>
     <updated>2022-02-06T16:01:38.000Z</updated>
-    <summary type="html"><![CDATA[<div>
-<p>提示</p>
-<p>正在完善中...</p>
-</div>
-]]></summary>
+    <summary type="html">
+提示
+正在完善中...
+
+</summary>
     <content type="html"><![CDATA[<div>
 <p>提示</p>
 <p>正在完善中...</p>
@@ -3987,11 +4019,11 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/C++/</id>
     <link href="https://mrhope.site/code/language/C++/"/>
     <updated>2022-02-06T16:01:38.000Z</updated>
-    <summary type="html"><![CDATA[<div>
-<p>提示</p>
-<p>正在完善中...</p>
-</div>
-]]></summary>
+    <summary type="html">
+提示
+正在完善中...
+
+</summary>
     <content type="html"><![CDATA[<div>
 <p>提示</p>
 <p>正在完善中...</p>
@@ -4006,11 +4038,11 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/dart/</id>
     <link href="https://mrhope.site/code/language/dart/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<div>
-<p>提示</p>
-<p>正在完善中...</p>
-</div>
-]]></summary>
+    <summary type="html">
+提示
+正在完善中...
+
+</summary>
     <content type="html"><![CDATA[<div>
 <p>提示</p>
 <p>正在完善中...</p>
@@ -4036,11 +4068,11 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/java/</id>
     <link href="https://mrhope.site/code/language/java/"/>
     <updated>2022-02-06T16:01:38.000Z</updated>
-    <summary type="html"><![CDATA[<div>
-<p>提示</p>
-<p>正在完善中...</p>
-</div>
-]]></summary>
+    <summary type="html">
+提示
+正在完善中...
+
+</summary>
     <content type="html"><![CDATA[<div>
 <p>提示</p>
 <p>正在完善中...</p>
@@ -4055,11 +4087,11 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/js/</id>
     <link href="https://mrhope.site/code/language/js/"/>
     <updated>2022-06-14T04:47:46.000Z</updated>
-    <summary type="html"><![CDATA[<div>
-<p>注</p>
-<p>部分内容参考/来自廖雪峰、阮一峰书籍与博客</p>
-</div>
-]]></summary>
+    <summary type="html">
+注
+部分内容参考/来自廖雪峰、阮一峰书籍与博客
+
+</summary>
     <content type="html"><![CDATA[<div>
 <p>注</p>
 <p>部分内容参考/来自廖雪峰、阮一峰书籍与博客</p>
@@ -4135,25 +4167,25 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/json/</id>
     <link href="https://mrhope.site/code/language/json/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<p>JSON: JavaScript Object Notation(JavaScript 对象表示法)</p>
-<ul>
-<li>
-<p>JSON 是存储和交换文本信息的语法。类似 XML。</p>
-</li>
-<li>
-<p>JSON 比 XML 更小、更快，更易解析。</p>
-</li>
-<li>
-<p>JSON 是轻量级的文本数据交换格式</p>
-</li>
-<li>
-<p>JSON 独立于语言: JSON 使用 JavaScript 语法来描述数据对象，但是 JSON 仍然独立于语言和平台。JSON 解析器和 JSON 库支持许多不同的编程语言。目前非常多的动态(PHP，JSP，.NET)编程语言都支持 JSON。</p>
-</li>
-<li>
-<p>JSON 具有自我描述性，更易理解</p>
-</li>
-</ul>
-]]></summary>
+    <summary type="html">JSON: JavaScript Object Notation(JavaScript 对象表示法)
+
+
+JSON 是存储和交换文本信息的语法。类似 XML。
+
+
+JSON 比 XML 更小、更快，更易解析。
+
+
+JSON 是轻量级的文本数据交换格式
+
+
+JSON 独立于语言: JSON 使用 JavaScript 语法来描述数据对象，但是 JSON 仍然独立于语言和平台。JSON 解析器和 JSON 库支持许多不同的编程语言。目前非常多的动态(PHP，JSP，.NET)编程语言都支持 JSON。
+
+
+JSON 具有自我描述性，更易理解
+
+
+</summary>
     <content type="html"><![CDATA[<p>JSON: JavaScript Object Notation(JavaScript 对象表示法)</p>
 <ul>
 <li>
@@ -4222,9 +4254,9 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/linter/</id>
     <link href="https://mrhope.site/code/language/linter/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<p>linter 用来检查程序的语法错误，并即时标注和指出来 (例如，把声明了但没使用的多余变量指出来，向错误语句添加红色波浪线)，是程序开发的辅助工具。同时，linter 也有统一规范代码书写方式的功能。</p>
-<p>在大型项目中，编码需要统一的风格，比如在 JavaScript 中使用单引号还是双引号包裹字符串，在何时进行折行等。目前各种语言基本都有自己的出色 linter，能够确保相同的使用不同换行方式、缩进、标记代码会最终格式化为相同的输出。</p>
-]]></summary>
+    <summary type="html">linter 用来检查程序的语法错误，并即时标注和指出来 (例如，把声明了但没使用的多余变量指出来，向错误语句添加红色波浪线)，是程序开发的辅助工具。同时，linter 也有统一规范代码书写方式的功能。
+在大型项目中，编码需要统一的风格，比如在 JavaScript 中使用单引号还是双引号包裹字符串，在何时进行折行等。目前各种语言基本都有自己的出色 linter，能够确保相同的使用不同换行方式、缩进、标记代码会最终格式化为相同的输出。
+</summary>
     <content type="html"><![CDATA[<p>linter 用来检查程序的语法错误，并即时标注和指出来 (例如，把声明了但没使用的多余变量指出来，向错误语句添加红色波浪线)，是程序开发的辅助工具。同时，linter 也有统一规范代码书写方式的功能。</p>
 <p>在大型项目中，编码需要统一的风格，比如在 JavaScript 中使用单引号还是双引号包裹字符串，在何时进行折行等。目前各种语言基本都有自己的出色 linter，能够确保相同的使用不同换行方式、缩进、标记代码会最终格式化为相同的输出。</p>
 
@@ -4247,10 +4279,10 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/markdown/</id>
     <link href="https://mrhope.site/code/language/markdown/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<p>Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
-<p>Markdown 的目标是实现「易读易写」。</p>
-<p>Markdown 的主要目的是用来作为一种网络内容的<strong>写作用语言</strong>。</p>
-]]></summary>
+    <summary type="html">Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。
+Markdown 的目标是实现「易读易写」。
+Markdown 的主要目的是用来作为一种网络内容的写作用语言。
+</summary>
     <content type="html"><![CDATA[<p>Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
 <p>Markdown 的目标是实现「易读易写」。</p>
 <p>Markdown 的主要目的是用来作为一种网络内容的<strong>写作用语言</strong>。</p>
@@ -4275,6 +4307,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/php/</id>
     <link href="https://mrhope.site/code/language/php/"/>
     <updated>2022-02-06T16:01:38.000Z</updated>
+    <summary type="html">::: tip 正在完善中... :::</summary>
     <content type="html"><![CDATA[<div>
 <p>提示</p>
 <p>正在完善中...</p>
@@ -4288,11 +4321,11 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/python/</id>
     <link href="https://mrhope.site/code/language/python/"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
-    <summary type="html"><![CDATA[<ul>
-<li>优点: Python 是一种高级语言，它可以用更少的代码量完成相同工作。</li>
-<li>缺点: Python 是一种脚本语言，它的执行效率不是很高。</li>
-</ul>
-]]></summary>
+    <summary type="html">
+优点: Python 是一种高级语言，它可以用更少的代码量完成相同工作。
+缺点: Python 是一种脚本语言，它的执行效率不是很高。
+
+</summary>
     <content type="html"><![CDATA[<ul>
 <li>优点: Python 是一种高级语言，它可以用更少的代码量完成相同工作。</li>
 <li>缺点: Python 是一种脚本语言，它的执行效率不是很高。</li>
@@ -4424,8 +4457,8 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/typescript/</id>
     <link href="https://mrhope.site/code/language/typescript/"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
-    <summary type="html"><![CDATA[<p>TypeScript 是一种由微软开发的自由和开源的编程语言，它是 JavaScript 的一个超集，扩展了 JavaScript 的语法。</p>
-]]></summary>
+    <summary type="html">TypeScript 是一种由微软开发的自由和开源的编程语言，它是 JavaScript 的一个超集，扩展了 JavaScript 的语法。
+</summary>
     <content type="html"><![CDATA[<p>TypeScript 是一种由微软开发的自由和开源的编程语言，它是 JavaScript 的一个超集，扩展了 JavaScript 的语法。</p>
 
 <h2 id="语法特性" tabindex="-1"> 语法特性</h2>
@@ -4503,6 +4536,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/yaml/</id>
     <link href="https://mrhope.site/code/language/yaml/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">编程免不了要写配置文件，怎么写配置也是一门学问。 YAML 是专门用来写配置文件的语言，非常简洁和强大。 yaml 介绍 YAML 语言(发音 /ˈjæməl/ )的设计目标，就是方便人类读写。它实质上是一种通用的数据串行化格式。 YAML 的全称是 YAML Ain’t Markup Language。 它的基本语法规则如下。 大小写敏感; 使用缩进...</summary>
     <content type="html"><![CDATA[<p>编程免不了要写配置文件，怎么写配置也是一门学问。</p>
 <p>YAML 是专门用来写配置文件的语言，非常简洁和强大。</p>
 <h2 id="yaml-介绍" tabindex="-1"> yaml 介绍</h2>
@@ -4754,6 +4788,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/mini-app/framework/</id>
     <link href="https://mrhope.site/code/mini-app/framework/"/>
     <updated>2022-02-06T16:01:38.000Z</updated>
+    <summary type="html">开发框架优点 1. 将界面开发的复杂过程转换为编写简单的 yaml 文件。开发门槛低， 1. 拥有详细的开发文档说明，简单易懂，页面文件自述性高，没有开发基础的人也可以经过简单阅读后看懂页面文件大体描述内容。查看例子点这里 (demo.md) 1. 开发者无需着眼于界面样式或是功能的实现，只需着眼于在 yaml 文件中添加渲染界面所需参数并赋值，即可完...</summary>
     <content type="html"><![CDATA[<h2 id="开发框架优点" tabindex="-1"> 开发框架优点</h2>
 <ol>
 <li>
@@ -4775,6 +4810,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/mini-app/guide/</id>
     <link href="https://mrhope.site/code/mini-app/guide/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">目录 文件结构 (file-structure.md); 运行环境 (env.md); 小程序配置 (config/README.md); 全局配置 (config/app-config.md); 页面配置 (config/page-config.md); sitemap 配置 (config/sitemap-config.md); 小程序框架 (fr...</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -4928,6 +4964,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/mini-app/tools/</id>
     <link href="https://mrhope.site/code/mini-app/tools/"/>
     <updated>2022-02-06T16:01:38.000Z</updated>
+    <summary type="html">工具 工具页面简介 (interface.md); 调试 (debug.md); npm (npm.md); 体验评分 (audit.md);</summary>
     <content type="html"><![CDATA[<h2 id="工具" tabindex="-1"> 工具</h2>
 <ul>
 <li>
@@ -4948,13 +4985,100 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
+    <title type="html">Vue-cli</title>
+    <id>https://mrhope.site/code/vue/cli/</id>
+    <link href="https://mrhope.site/code/vue/cli/"/>
+    <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">目录 Vue Cli 介绍 (intro.md); 快速简单开发 (quick-dev.md); 创建项目 (create.md); 文件处理 (file.md);</summary>
+    <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
+<ul>
+<li>
+<p><a href="/code/vue/cli/intro.html">Vue Cli 介绍</a></p>
+</li>
+<li>
+<p><a href="/code/vue/cli/quick-dev.html">快速简单开发</a></p>
+</li>
+<li>
+<p><a href="/code/vue/cli/create.html">创建项目</a></p>
+</li>
+<li>
+<p><a href="/code/vue/cli/file.html">文件处理</a></p>
+</li>
+</ul>
+]]></content>
+    <category term="Vue" scheme=""/>
+    <published>2022-02-06T16:01:38.000Z</published>
+  </entry>
+  <entry>
+    <title type="html">Vue Router</title>
+    <id>https://mrhope.site/code/vue/router/</id>
+    <link href="https://mrhope.site/code/vue/router/"/>
+    <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">Vue Router 是 Vue 官方出品的路由组件，托管整个 Vue 项目路由。
+</summary>
+    <content type="html"><![CDATA[<p>Vue Router 是 Vue 官方出品的路由组件，托管整个 Vue 项目路由。</p>
+
+<h2 id="目录" tabindex="-1"> 目录</h2>
+<ul>
+<li>
+<p><a href="/code/vue/router/get-started.html">快速上手 Vue Router</a></p>
+</li>
+<li>
+<p><a href="/code/vue/router/demo.html">Router DEMO</a></p>
+</li>
+</ul>
+<h2 id="官方文档" tabindex="-1"> 官方文档</h2>
+<ul>
+<li>
+<p><a href="https://router.vuejs.org/zh/guide/" target="_blank" rel="noopener noreferrer">Vue-Router 指南</a></p>
+</li>
+<li>
+<p><a href="https://router.vuejs.org/zh/api/" target="_blank" rel="noopener noreferrer">Vue-Router API 参考</a></p>
+</li>
+<li>
+<p><a href="https://github.com/vuejs/vue-router" target="_blank" rel="noopener noreferrer">官方仓库</a></p>
+</li>
+</ul>
+]]></content>
+    <category term="Vue" scheme=""/>
+    <published>2022-02-06T16:01:38.000Z</published>
+  </entry>
+  <entry>
+    <title type="html">Vuex</title>
+    <id>https://mrhope.site/code/vue/vuex/</id>
+    <link href="https://mrhope.site/code/vue/vuex/"/>
+    <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">Vuex 是 Vue 官方出品的状态管理组件，是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。
+</summary>
+    <content type="html"><![CDATA[<p>Vuex 是 Vue 官方出品的状态管理组件，是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</p>
+
+<h2 id="目录" tabindex="-1"> 目录</h2>
+<ul>
+<li>
+<p><a href="/code/vue/vuex/get-started.html">快速上手 Vuex</a></p>
+</li>
+<li>
+<p><a href="/code/vue/vuex/demo.html">Vuex 案例</a></p>
+</li>
+</ul>
+<h2 id="官方文档" tabindex="-1"> 官方文档</h2>
+<ul>
+<li><a href="https://v1.vuepress.vuejs.org/zh/guide/" target="_blank" rel="noopener noreferrer">Vuex 教程</a></li>
+<li><a href="https://v1.vuepress.vuejs.org/zh/config/" target="_blank" rel="noopener noreferrer">Vuex 配置</a></li>
+<li><a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer">Vuex repository</a></li>
+</ul>
+]]></content>
+    <category term="Vue" scheme=""/>
+    <published>2022-02-06T16:01:38.000Z</published>
+  </entry>
+  <entry>
     <title type="html">CSS</title>
     <id>https://mrhope.site/code/website/css/</id>
     <link href="https://mrhope.site/code/website/css/"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
-    <summary type="html"><![CDATA[<p>CSS 指层叠样式表 (<strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets)，它负责描述网页元素的具体样式。</p>
-<p>CSS3 是最新的 CSS 标准，被拆分为&quot;模块&quot;。模块包括: 选择器、盒模型、背景和边框、文字特效、2D/3D 转换、动画、多列布局、用户界面。</p>
-]]></summary>
+    <summary type="html">CSS 指层叠样式表 (Cascading Style Sheets)，它负责描述网页元素的具体样式。
+CSS3 是最新的 CSS 标准，被拆分为&amp;quot;模块&amp;quot;。模块包括: 选择器、盒模型、背景和边框、文字特效、2D/3D 转换、动画、多列布局、用户界面。
+</summary>
     <content type="html"><![CDATA[<p>CSS 指层叠样式表 (<strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets)，它负责描述网页元素的具体样式。</p>
 <p>CSS3 是最新的 CSS 标准，被拆分为&quot;模块&quot;。模块包括: 选择器、盒模型、背景和边框、文字特效、2D/3D 转换、动画、多列布局、用户界面。</p>
 
@@ -5045,12 +5169,12 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/website/emmet/</id>
     <link href="https://mrhope.site/code/website/emmet/"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
-    <summary type="html"><![CDATA[<div>
-<p>简介</p>
-<p>所有操作按下 “tab” 键即可瞬间完成</p>
-</div>
-<p>Emmet 是一个快速创建 HTML 和 CSS 的方式，如果您想要成为一个高级 Web 开发者，为了工作效率，您应该掌握 Emmet 语法。</p>
-]]></summary>
+    <summary type="html">
+简介
+所有操作按下 “tab” 键即可瞬间完成
+
+Emmet 是一个快速创建 HTML 和 CSS 的方式，如果您想要成为一个高级 Web 开发者，为了工作效率，您应该掌握 Emmet 语法。
+</summary>
     <content type="html"><![CDATA[<div>
 <p>简介</p>
 <p>所有操作按下 “tab” 键即可瞬间完成</p>
@@ -5076,8 +5200,8 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/website/html/</id>
     <link href="https://mrhope.site/code/website/html/"/>
     <updated>2022-04-06T07:44:02.000Z</updated>
-    <summary type="html"><![CDATA[<p>HTML 指的是超文本标记语言 (Hyper Text Markup Language)，它不是一种编程语言，而是一种标记语言 (markup language)，它使用标记标签来描述网页。HTML5 是 HTML 最新的修订版本。</p>
-]]></summary>
+    <summary type="html">HTML 指的是超文本标记语言 (Hyper Text Markup Language)，它不是一种编程语言，而是一种标记语言 (markup language)，它使用标记标签来描述网页。HTML5 是 HTML 最新的修订版本。
+</summary>
     <content type="html"><![CDATA[<p>HTML 指的是超文本标记语言 (Hyper Text Markup Language)，它不是一种编程语言，而是一种标记语言 (markup language)，它使用标记标签来描述网页。HTML5 是 HTML 最新的修订版本。</p>
 
 <div>
@@ -5151,15 +5275,15 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/website/jQuery/</id>
     <link href="https://mrhope.site/code/website/jQuery/"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
-    <summary type="html"><![CDATA[<p>jQuery 是一款能够方便快捷的操作 DOM，并兼容所有主流浏览器的框架，目前最新版本是 3.5.1。</p>
-<div>
-<p>提示</p>
-<p>由于目前前端应用的愈加复杂，前端开发者大多数转向 MVVM 框架，目前世界比较流行的三大 MVVM 框架是 Vue React Angular。可以说，在 2020 年，<strong>jQuery 已经过时了</strong>!</p>
-<p>不过 jQuery 无论说从代码实现还是从写法上，到今天都是值得借鉴的。</p>
-<p>所以如果您只想简单了解并掌握前端开发，而不是深入地从事相关行业，您可以直接 <a href="/code/vue/">跳过本章节</a>。</p>
-<p>本章节应以理解写法与思路为主，无需刻意记忆。</p>
-</div>
-]]></summary>
+    <summary type="html">jQuery 是一款能够方便快捷的操作 DOM，并兼容所有主流浏览器的框架，目前最新版本是 3.5.1。
+
+提示
+由于目前前端应用的愈加复杂，前端开发者大多数转向 MVVM 框架，目前世界比较流行的三大 MVVM 框架是 Vue React Angular。可以说，在 2020 年，jQuery 已经过时了!
+不过 jQuery 无论说从代码实现还是从写法上，到今天都是值得借鉴的。
+所以如果您只想简单了解并掌握前端开发，而不是深入地从事相关行业，您可以直接 跳过本章节。
+本章节应以理解写法与思路为主，无需刻意记忆。
+
+</summary>
     <content type="html"><![CDATA[<p>jQuery 是一款能够方便快捷的操作 DOM，并兼容所有主流浏览器的框架，目前最新版本是 3.5.1。</p>
 <div>
 <p>提示</p>
@@ -5201,96 +5325,11 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <published>2019-11-02T00:00:00.000Z</published>
   </entry>
   <entry>
-    <title type="html">Vue-cli</title>
-    <id>https://mrhope.site/code/vue/cli/</id>
-    <link href="https://mrhope.site/code/vue/cli/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
-<ul>
-<li>
-<p><a href="/code/vue/cli/intro.html">Vue Cli 介绍</a></p>
-</li>
-<li>
-<p><a href="/code/vue/cli/quick-dev.html">快速简单开发</a></p>
-</li>
-<li>
-<p><a href="/code/vue/cli/create.html">创建项目</a></p>
-</li>
-<li>
-<p><a href="/code/vue/cli/file.html">文件处理</a></p>
-</li>
-</ul>
-]]></content>
-    <category term="Vue" scheme=""/>
-    <published>2022-02-06T16:01:38.000Z</published>
-  </entry>
-  <entry>
-    <title type="html">Vue Router</title>
-    <id>https://mrhope.site/code/vue/router/</id>
-    <link href="https://mrhope.site/code/vue/router/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<p>Vue Router 是 Vue 官方出品的路由组件，托管整个 Vue 项目路由。</p>
-]]></summary>
-    <content type="html"><![CDATA[<p>Vue Router 是 Vue 官方出品的路由组件，托管整个 Vue 项目路由。</p>
-
-<h2 id="目录" tabindex="-1"> 目录</h2>
-<ul>
-<li>
-<p><a href="/code/vue/router/get-started.html">快速上手 Vue Router</a></p>
-</li>
-<li>
-<p><a href="/code/vue/router/demo.html">Router DEMO</a></p>
-</li>
-</ul>
-<h2 id="官方文档" tabindex="-1"> 官方文档</h2>
-<ul>
-<li>
-<p><a href="https://router.vuejs.org/zh/guide/" target="_blank" rel="noopener noreferrer">Vue-Router 指南</a></p>
-</li>
-<li>
-<p><a href="https://router.vuejs.org/zh/api/" target="_blank" rel="noopener noreferrer">Vue-Router API 参考</a></p>
-</li>
-<li>
-<p><a href="https://github.com/vuejs/vue-router" target="_blank" rel="noopener noreferrer">官方仓库</a></p>
-</li>
-</ul>
-]]></content>
-    <category term="Vue" scheme=""/>
-    <published>2022-02-06T16:01:38.000Z</published>
-  </entry>
-  <entry>
-    <title type="html">Vuex</title>
-    <id>https://mrhope.site/code/vue/vuex/</id>
-    <link href="https://mrhope.site/code/vue/vuex/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<p>Vuex 是 Vue 官方出品的状态管理组件，是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</p>
-]]></summary>
-    <content type="html"><![CDATA[<p>Vuex 是 Vue 官方出品的状态管理组件，是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</p>
-
-<h2 id="目录" tabindex="-1"> 目录</h2>
-<ul>
-<li>
-<p><a href="/code/vue/vuex/get-started.html">快速上手 Vuex</a></p>
-</li>
-<li>
-<p><a href="/code/vue/vuex/demo.html">Vuex 案例</a></p>
-</li>
-</ul>
-<h2 id="官方文档" tabindex="-1"> 官方文档</h2>
-<ul>
-<li><a href="https://v1.vuepress.vuejs.org/zh/guide/" target="_blank" rel="noopener noreferrer">Vuex 教程</a></li>
-<li><a href="https://v1.vuepress.vuejs.org/zh/config/" target="_blank" rel="noopener noreferrer">Vuex 配置</a></li>
-<li><a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer">Vuex repository</a></li>
-</ul>
-]]></content>
-    <category term="Vue" scheme=""/>
-    <published>2022-02-06T16:01:38.000Z</published>
-  </entry>
-  <entry>
     <title type="html">几何</title>
     <id>https://mrhope.site/software/comsol/geometry/</id>
     <link href="https://mrhope.site/software/comsol/geometry/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">目录 浏览几何 (view.md); 构建几何 (build.md); 官方文档 视频教程: 入门视频合集: 如何在 COMSOL® 中创建几何结构 (https://cn.comsol.com/video/introductory-video-series-on-how-to-build-geometries-in-comsol); 在 COMSOL...</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -5343,6 +5382,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/software/comsol/mesh/</id>
     <link href="https://mrhope.site/software/comsol/mesh/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">网格基础 网格划分和细化介绍 (intro.md); 内容 剖分方法 物理场控制; 用户控制; 剖分程度 从极粗化到极细化一共九个级别。 其他 可以进行定制。 基础 教程视频: 在 COMSOL Multiphysics^®^ 中为几何模型构建网格 (https://cn.comsol.com/video/building-the-mesh-for-a...</summary>
     <content type="html"><![CDATA[<h2 id="网格基础" tabindex="-1"> 网格基础</h2>
 <ul>
 <li><a href="/software/comsol/mesh/intro.html">网格划分和细化介绍</a></li>
@@ -5411,8 +5451,8 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/software/tool/terminal/</id>
     <link href="https://mrhope.site/software/tool/terminal/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<p>Windows Terminal 是一个面向命令行工具和 shell(如命令提示符、PowerShell 和适用于 Linux 的 Windows 子系统 (WSL))用户的新式终端应用程序。</p>
-]]></summary>
+    <summary type="html">Windows Terminal 是一个面向命令行工具和 shell(如命令提示符、PowerShell 和适用于 Linux 的 Windows 子系统 (WSL))用户的新式终端应用程序。
+</summary>
     <content type="html"><![CDATA[<p>Windows Terminal 是一个面向命令行工具和 shell(如命令提示符、PowerShell 和适用于 Linux 的 Windows 子系统 (WSL))用户的新式终端应用程序。</p>
 
 <p><img src="@source/software/tool/assets/terminal-overview.png" alt="Windows Terminal"></p>
@@ -5464,6 +5504,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/software/vscode/guide/</id>
     <link href="https://mrhope.site/software/vscode/guide/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">基础介绍 (basic.md); 个性化介绍 (customization.md); 扩展介绍 (extension.md); 文件介绍 (file.md); 编辑技巧 (edit.md); 智能补全 (intellisense.md); Git 支持 (git.md); 调试介绍 (debug.md); 任务介绍 (task.md); 命令行介绍 (...</summary>
     <content type="html"><![CDATA[<ul>
 <li>
 <p><a href="/software/vscode/guide/basic.html">基础介绍</a></p>
@@ -5505,6 +5546,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/dart/samples/</id>
     <link href="https://mrhope.site/code/language/dart/samples/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">目录 案例 (samples.md); 概要介绍 (cheatsheet.md); 遍历 (iterable.md);</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -5526,6 +5568,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/js/browser/</id>
     <link href="https://mrhope.site/code/language/js/browser/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">相关文档 浏览器介绍 (intro.md); 浏览器对象 (browser-object.md); 操作 DOM (dom.md); 操作表单 (form.md); 操作文件 (file.md); Ajax (ajax.md); Promise (promise.md); Canvas (canvas.md);</summary>
     <content type="html"><![CDATA[<h2 id="相关文档" tabindex="-1"> 相关文档</h2>
 <ul>
 <li>
@@ -5562,6 +5605,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/js/es6/</id>
     <link href="https://mrhope.site/code/language/js/es6/"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
+    <summary type="html">目录 ECMAScript 6 简介 (intro.md); let 和 const 命令 (let.md); 变量的解构赋值 (destructuring.md); 字符串的扩展 (string.md); 正则的扩展 (regex.md); 数值的扩展 (number.md); 函数的扩展 (function.md); 数组的扩展 (array.md...</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -5665,6 +5709,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/js/function/</id>
     <link href="https://mrhope.site/code/language/js/function/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">基础部分 函数介绍 (intro.md); 函数声明 (declare.md); 函数调用 (call.md); 函数作用域 (scope.md); 解构赋值 (destructuring.md); this 的指向 (this.md); 箭头函数 (arrow-function.md); 进阶 高阶函数 (higher-order-function....</summary>
     <content type="html"><![CDATA[<h2 id="基础部分" tabindex="-1"> 基础部分</h2>
 <ul>
 <li>
@@ -5713,11 +5758,11 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/js/guide/</id>
     <link href="https://mrhope.site/code/language/js/guide/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<div>
-<p>提示</p>
-<p>本部分将带您尽快进入 JavaScript 的世界。</p>
-</div>
-]]></summary>
+    <summary type="html">
+提示
+本部分将带您尽快进入 JavaScript 的世界。
+
+</summary>
     <content type="html"><![CDATA[<div>
 <p>提示</p>
 <p>本部分将带您尽快进入 JavaScript 的世界。</p>
@@ -5785,12 +5830,12 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/js/intro/</id>
     <link href="https://mrhope.site/code/language/js/intro/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<div>
-<p>JavaScript 语言是什么</p>
-<p>JavaScript 是一种轻量级的脚本语言。所谓“脚本语言” (script language)，指的是它不具备开发操作系统的能力，而是只用来编写控制其他大型应用程序(比如浏览器)的“脚本”。</p>
-<p>JavaScript 也是一种嵌入式 (embedded) 语言。它本身提供的核心语法不算很多，只能用来做一些数学和逻辑运算。JavaScript 本身不提供任何与 I/O (输入/输出)相关的 API，都要靠宿主环境(host)提供，所以 JavaScript 只合适嵌入更大型的应用程序环境，去调用宿主环境提供的底层 API。</p>
-</div>
-]]></summary>
+    <summary type="html">
+JavaScript 语言是什么
+JavaScript 是一种轻量级的脚本语言。所谓“脚本语言” (script language)，指的是它不具备开发操作系统的能力，而是只用来编写控制其他大型应用程序(比如浏览器)的“脚本”。
+JavaScript 也是一种嵌入式 (embedded) 语言。它本身提供的核心语法不算很多，只能用来做一些数学和逻辑运算。JavaScript 本身不提供任何与 I/O (输入/输出)相关的 API，都要靠宿主环境(host)提供，所以 JavaScript 只合适嵌入更大型的应用程序环境，去调用宿主环境提供的底层 API。
+
+</summary>
     <content type="html"><![CDATA[<div>
 <p>JavaScript 语言是什么</p>
 <p>JavaScript 是一种轻量级的脚本语言。所谓“脚本语言” (script language)，指的是它不具备开发操作系统的能力，而是只用来编写控制其他大型应用程序(比如浏览器)的“脚本”。</p>
@@ -5905,8 +5950,8 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/js/object/</id>
     <link href="https://mrhope.site/code/language/js/object/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<p>在 JavaScript 的世界里，一切都是对象。</p>
-]]></summary>
+    <summary type="html">在 JavaScript 的世界里，一切都是对象。
+</summary>
     <content type="html"><![CDATA[<p>在 JavaScript 的世界里，一切都是对象。</p>
 
 <h2 id="面向对象编程" tabindex="-1"> 面向对象编程</h2>
@@ -5948,6 +5993,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/js/operators/</id>
     <link href="https://mrhope.site/code/language/js/operators/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">二进制位运算符章节使用较少，无需阅读。 目录 算术运算符 (arithmetic.md); 比较运算符 (comparison.md); 布尔运算符 (boolean.md); 二进制位运算符 (bit.md) ; 其他运算符，运算顺序 (priority.md);</summary>
     <content type="html"><![CDATA[<div>
 <p>提示</p>
 <p>二进制位运算符章节使用较少，无需阅读。</p>
@@ -5979,8 +6025,8 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/js/types/</id>
     <link href="https://mrhope.site/code/language/js/types/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<p>本章节是对数据类型的系统介绍。由于此章节的部分内容已经在 <a href="/code/language/js/guide/">快速上手</a> 涉及，部分内容有重复。</p>
-]]></summary>
+    <summary type="html">本章节是对数据类型的系统介绍。由于此章节的部分内容已经在 快速上手 涉及，部分内容有重复。
+</summary>
     <content type="html"><![CDATA[<p>本章节是对数据类型的系统介绍。由于此章节的部分内容已经在 <a href="/code/language/js/guide/">快速上手</a> 涉及，部分内容有重复。</p>
 
 <h2 id="目录" tabindex="-1"> 目录</h2>
@@ -6019,6 +6065,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/markdown/emoji/</id>
     <link href="https://mrhope.site/code/language/markdown/emoji/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">人物 点击前往 (people.md); 自然 点击前往 (nature.md); 对象 点击前往 (object.md); 地点 点击前往 (place.md); 符号 点击前往 (symbol.md);</summary>
     <content type="html"><![CDATA[<h2 id="人物" tabindex="-1"> 人物</h2>
 <ul>
 <li><a href="/code/language/markdown/emoji/people.html">点击前往</a></li>
@@ -6048,6 +6095,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/python/advance/</id>
     <link href="https://mrhope.site/code/language/python/advance/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">目录 切片 (slice.md); 迭代 (iteration.md); 列表生成式 (list-comprehensions.md); 生成器 (generator.md); 迭代器 (iterator.md);</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -6082,6 +6130,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/python/function/</id>
     <link href="https://mrhope.site/code/language/python/function/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">目录 函数介绍 (intro.md); 函数定义 (define.md); 函数调用 (call.md); 函数参数 (argument.md); 递归调用 (recursive.md);</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -6116,6 +6165,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/python/functional-programming/</id>
     <link href="https://mrhope.site/code/language/python/functional-programming/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">函数是 Python 内建支持的一种封装，我们通过把大段代码拆成函数，通过一层一层的函数调用，就可以把复杂任务分解成简单的任务，这种分解可以称之为面向过程的程序设计。函数就是面向过程的程序设计的基本单元。 而函数式编程(请注意多了一个“式”字)——Functional Programming，虽然也可以归结到面向过程的程序设计，但其思想更接近数学计算。...</summary>
     <content type="html"><![CDATA[<p>函数是 Python 内建支持的一种封装，我们通过把大段代码拆成函数，通过一层一层的函数调用，就可以把复杂任务分解成简单的任务，这种分解可以称之为面向过程的程序设计。函数就是面向过程的程序设计的基本单元。</p>
 <p>而函数式编程(请注意多了一个“式”字)——Functional Programming，虽然也可以归结到面向过程的程序设计，但其思想更接近数学计算。</p>
 <p>我们首先要搞明白计算机(Computer)和计算(Compute)的概念。</p>
@@ -6168,8 +6218,8 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/python/guide/</id>
     <link href="https://mrhope.site/code/language/python/guide/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<p>本章节介绍 Python 的基础语法，帮助您尽快了解 Python 的基础内容</p>
-]]></summary>
+    <summary type="html">本章节介绍 Python 的基础语法，帮助您尽快了解 Python 的基础内容
+</summary>
     <content type="html"><![CDATA[<p>本章节介绍 Python 的基础语法，帮助您尽快了解 Python 的基础内容</p>
 
 <h2 id="目录" tabindex="-1"> 目录</h2>

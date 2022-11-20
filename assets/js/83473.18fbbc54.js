@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[83473],{83473:(a,e,d)=>{d.r(e),d.d(e,{default:()=>t});const n="mindmap",t={id:n,detector:a=>null!==a.match(/^\s*mindmap/),loader:async()=>{const{diagram:a}=await d.e(26413).then(d.bind(d,26413));return{id:n,diagram:a}}}}}]);
