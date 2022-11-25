@@ -30,6 +30,12 @@ export default defineUserConfig({
       description: "Mr.Hope personal blog",
     },
   },
+  
+  markdown: {
+    code: {
+        lineNumbers: 10,
+    },
+  },
 
   theme,
 
