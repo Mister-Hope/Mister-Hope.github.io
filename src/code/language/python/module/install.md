@@ -88,4 +88,4 @@ ImportError: No module named mymodule
 
 这种方法是在运行时修改，运行结束后失效。
 
-第二种方法是设置环境变量 `PYTHONPATH`，该环境变量的内容会被自动添加到模块搜索路径中。设置方式与 [设置 Path 环境变量](../../../windows/add-path.md) 类似。注意只需要添加您自己的搜索路径，Python 自己本身的搜索路径不受影响。
+第二种方法是设置环境变量 `PYTHONPATH`，该环境变量的内容会被自动添加到模块搜索路径中。设置方式与 [设置境变量](../../../windows/env-variable.md) 类似。注意只需要添加您自己的搜索路径，Python 自己本身的搜索路径不受影响。
