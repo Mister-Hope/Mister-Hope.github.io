@@ -6,6 +6,64 @@
   "description": "Where there is light, there is hope.",
   "items": [
     {
+      "title": "环境变量",
+      "url": "https://mrhope.site/code/windows/env-variable.html",
+      "id": "https://mrhope.site/code/windows/env-variable.html",
+      "summary": "以 Windows 10 系统为例，直接在左下角搜索栏中输入“系统变量” 搜索 在弹出的框中点击环境变量 系统变量 如果你需要添加环境变量，直接添加即可。 如果你只是希望添加到 Path，在弹出的新窗口中找到 path，选中并点击编辑 系统变量 点击添加输入想要添加到 path 的路径或者执行文件名即可 系统变量",
+      "content_html": "<p>以 Windows 10 系统为例，直接在左下角搜索栏中输入“系统变量”</p>\n<p><img src=\"@source/code/windows/assets/pathSearch.png\" alt=\"搜索\"></p>\n<p>在弹出的框中点击环境变量</p>\n<p><img src=\"@source/code/windows/assets/path.png\" alt=\"系统变量\"></p>\n<p>如果你需要添加环境变量，直接添加即可。</p>\n<p>如果你只是希望添加到 Path，在弹出的新窗口中找到 path，选中并点击编辑</p>\n<p><img src=\"@source/code/windows/assets/pathDetail.png\" alt=\"系统变量\"></p>\n<p>点击添加输入想要添加到 path 的路径或者执行文件名即可</p>\n<p><img src=\"@source/code/windows/assets/pathAdd.png\" alt=\"系统变量\"></p>\n",
+      "date_published": "2019-09-08T00:00:00.000Z",
+      "date_modified": "2022-12-06T14:18:22.000Z",
+      "authors": [],
+      "tags": [
+        "基础"
+      ]
+    },
+    {
+      "title": "Update Flutter Project Deps",
+      "url": "https://mrhope.site/note/flutter/",
+      "id": "https://mrhope.site/note/flutter/",
+      "summary": "Gradle Versions can be found here: Kotlin Plugin Versions can be found here: Android Gradle Build Tools Google maven repository website (https://maven.google.com/web/index.html)...",
+      "content_html": "<h1 id=\"update-flutter-project-deps\" tabindex=\"-1\"> Update Flutter Project Deps</h1>\n<h2 id=\"gradle\" tabindex=\"-1\"> Gradle</h2>\n<p>Versions can be found here: <a href=\"https://gradle.org/releases/\" target=\"_blank\" rel=\"noopener noreferrer\">https://gradle.org/releases/</a></p>\n<h2 id=\"kotlin-plugin\" tabindex=\"-1\"> Kotlin Plugin</h2>\n<p>Versions can be found here: <a href=\"https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm\" target=\"_blank\" rel=\"noopener noreferrer\">https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm</a></p>\n<h2 id=\"android-gradle-build-tools\" tabindex=\"-1\"> Android Gradle Build Tools</h2>\n<ul>\n<li>\n<p><a href=\"https://maven.google.com/web/index.html\" target=\"_blank\" rel=\"noopener noreferrer\">Google maven repository website</a></p>\n</li>\n<li>\n<p><a href=\"https://developer.android.google.cn/studio/releases/gradle-plugin?hl=zh-cn#updating-plugin\" target=\"_blank\" rel=\"noopener noreferrer\">Related docs</a></p>\n</li>\n</ul>\n",
+      "date_published": "2022-12-06T14:18:22.000Z",
+      "date_modified": "2022-12-06T14:18:22.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "WSA",
+      "url": "https://mrhope.site/note/wsa/",
+      "id": "https://mrhope.site/note/wsa/",
+      "content_html": "",
+      "date_published": "2022-12-06T14:18:22.000Z",
+      "date_modified": "2022-12-06T14:18:22.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "WSL",
+      "url": "https://mrhope.site/note/wsl/",
+      "id": "https://mrhope.site/note/wsl/",
+      "summary": "目前使用的系统是 WSL2。 其中以下操作可能需要在新机器上进行相同操作: Windows 侧 Windows 侧可以在用户目录下创建 .wslconfig 文件，用于配置 WSL2。 WSL 侧 WSL 侧可以通过 /etc/wsl.conf 进行配置。 启用 init.d 支持 在 /etc/wsl.conf 中加入: 生成新的 RSA 密钥 使用...",
+      "content_html": "<p>目前使用的系统是 WSL2。</p>\n<p>其中以下操作可能需要在新机器上进行相同操作:</p>\n<h2 id=\"windows-侧\" tabindex=\"-1\"> Windows 侧</h2>\n<p>Windows 侧可以在用户目录下创建 <code>.wslconfig</code> 文件，用于配置 WSL2。</p>\n<div data-ext=\"conf\"><pre><code>[wsl2]\n# Limits VM memory in WSL 2 to 8 GB\nmemory=8GB\n</code></pre></div><h2 id=\"wsl-侧\" tabindex=\"-1\"> WSL 侧</h2>\n<p>WSL 侧可以通过 <code>/etc/wsl.conf</code> 进行配置。</p>\n<h3 id=\"启用-init-d-支持\" tabindex=\"-1\"> 启用 init.d 支持</h3>\n<p>在 <code>/etc/wsl.conf</code> 中加入:</p>\n<div data-ext=\"conf\"><pre><code>[boot]\nsystemd=true\n</code></pre></div><h3 id=\"生成新的-rsa-密钥\" tabindex=\"-1\"> 生成新的 RSA 密钥</h3>\n<div data-ext=\"sh\"><pre><code>ssh-keygen <span>-t</span> rsa <span>-C</span> <span>\"mister-hope@outlook.com\"</span>\n</code></pre></div><h3 id=\"使用-windows-代理\" tabindex=\"-1\"> 使用 Windows 代理</h3>\n<p>可以在 <code>.bashrc</code> 中加入以下内容:</p>\n<div data-ext=\"sh\"><pre><code><span># add for proxy</span>\n<span>export</span> <span>hostIP</span><span>=</span><span><span>$(</span><span>ip</span> route <span>|</span> <span>grep</span> default <span>|</span> <span>awk</span> <span>'{print $3}'</span><span>)</span></span>\n<span>export</span> <span>socks5Port</span><span>=</span><span>10810</span>\n<span>export</span> <span>httpPort</span><span>=</span><span>10811</span>\n\n<span>alias</span> <span>proxy</span><span>=</span><span>'\n  export HTTPS_PROXY=\"socks5://${hostIP}:${socks5Port}\";\n  export HTTP_PROXY=\"socks5://${hostIP}:${socks5Port}\";\n  export ALL_PROXY=\"socks5://${hostIP}:${socks5Port}\";\n  git config --global http.proxy \"socks5://${hostIP}:${socks5Port}\";\n  git config --global https.proxy \"socks5://${hostIP}:${socks5Port}\";\n  echo -e \"Acquire::http::Proxy \\\"socks5://${hostIP}:${socks5Port}\\\"; \" | sudo tee -a /etc/apt/apt.conf.d/proxy.conf;\n  echo -e \"Acquire::https::Proxy \\\"socks5://${hostIP}:${socks5Port}\\\"; \" | sudo tee -a /etc/apt/apt.conf.d/proxy.conf;\n  if [ -e \"~/.ssh/config\"]; then\n    sed -i \"s/^ProxyCommand \\/usr\\/bin\\/corkscrew .* %h %p$/ProxyCommand \\/usr\\/bin\\/corkscrew ${hostIP} ${httpPort} %h %p/g\" ~/.ssh/config;\n  else\n    echo \"Host github.com\n  User git\n  Port 22\n  Hostname github.com\n  IdentityFile \"~/.ssh/id_rsa\"\n  TCPKeepAlive yes\n  ProxyCommand /usr/bin/corkscrew ${hostIP} ${httpPort} %h %p\n\nHost ssh.github.com\n  User git\n  Port 443\n  Hostname ssh.github.com\n  IdentityFile \"~/.ssh/id_rsa\"\n  TCPKeepAlive yes\n  ProxyCommand /usr/bin/corkscrew ${hostIP} ${httpPort} %h %p\n\"\n'</span>\n<span>alias</span> <span>unproxy</span><span>=</span><span>'\n  unset HTTPS_PROXY;\n  unset HTTP_PROXY;\n  unset ALL_PROXY;\n  git config --global --unset http.proxy;\n  git config --global --unset https.proxy;\n  sudo sed -i -e '</span>/Acquire::http::Proxy/d<span>' /etc/apt/apt.conf.d/proxy.conf;\n  sudo sed -i -e '</span>/Acquire::https::Proxy/d<span>' /etc/apt/apt.conf.d/proxy.conf;\n'</span>\n</code></pre><div aria-hidden=\"true\"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><p>这样就可以快速地使用 proxy 和 unproxy 命令。</p>\n<h3 id=\"安装-nvm-和-node-js\" tabindex=\"-1\"> 安装 nvm 和 Node.js</h3>\n<div data-ext=\"sh\"><pre><code><span>curl</span> -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh <span>|</span> <span>bash</span>\n</code></pre></div><ol>\n<li>\n<p>由于 GitHub 已经遭到封锁，可以考虑安装 V2Ray 给 WSL2 以获得推送代码的能力。</p>\n</li>\n<li>\n<p>更改 Node.js 可以使用的 Old Space 大小:</p>\n<p>在用户目录的 <code>.bashrc</code> 中加入:</p>\n<div data-ext=\"conf\"><pre><code>export NODE_OPTIONS=&quot;--max-old-space-size=8192&quot;\n</code></pre></div></li>\n</ol>\n",
+      "date_published": "2022-12-06T14:18:22.000Z",
+      "date_modified": "2022-12-06T14:18:22.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "Git 代理",
+      "url": "https://mrhope.site/software/git/proxy.html",
+      "id": "https://mrhope.site/software/git/proxy.html",
+      "summary": "由于目前 GitHub 已经在全国大部分范围内被主要运营商进行 DNS 封锁，所以如果需要配合 GitHub 使用 Git，需要进行代理设置。 代理设置 通常情况下，我们可以通过设置环境变量 HTTPPROXY 和 HTTPSPROXY 来进行代理设置。 在 Windows 下，我们可以通过设置环境变量 HTTPPROXY 和 HTTPSPROXY 来...",
+      "content_html": "<p>由于目前 GitHub 已经在全国大部分范围内被主要运营商进行 DNS 封锁，所以如果需要配合 GitHub 使用 Git，需要进行代理设置。</p>\n<h2 id=\"代理设置\" tabindex=\"-1\"> 代理设置</h2>\n<p>通常情况下，我们可以通过设置环境变量 <code>HTTP_PROXY</code> 和 <code>HTTPS_PROXY</code> 来进行代理设置。</p>\n<p>在 Windows 下，我们可以通过设置环境变量 <code>HTTP_PROXY</code> 和 <code>HTTPS_PROXY</code> 来进行代理设置。</p>\n<details><summary>Windows 例子</summary>\n<div data-ext=\"sh\"><pre><code><span>set</span> <span>HTTP_PROXY</span><span>=</span>http://127.0.0.1:1080\n<span>set</span> <span>HTTPS_PROXY</span><span>=</span>http://127.0.0.1:1080\n</code></pre></div></details>\n<details><summary>Linux 例子</summary>\n<div data-ext=\"sh\"><pre><code><span>export</span> <span>HTTP_PROXY</span><span>=</span>http://127.0.0.1:1080\n<span>export</span> <span>HTTPS_PROXY</span><span>=</span>http://127.0.0.1:1080\n</code></pre></div></details>\n<p>上述做法仅对当前终端有效，如果需要永久生效，可以将上述命令添加到系统环境变量 (Windows) 或 <code>~/.bashrc</code> (Linux) 中。</p>\n<div>\n<p>提示</p>\n<p><a href=\"/code/windows/env-variable.html\">Windows 添加环境变量</a></p>\n</div>\n<h2 id=\"ssh-配置\" tabindex=\"-1\"> SSH 配置</h2>\n<p>如果你在使用 22 端口通过 SSH 使用 Git，那么你需要在用户目录下的 <code>.ssh</code> 目录新建 <code>config</code> 文件，并输入以下内容:</p>\n<div data-ext=\"conf\"><pre><code>Host github.com\n  User git\n  Port 22\n  Hostname github.com\n  # 这里在 Windows 下需要替换成实际目录，如 &quot;C:\\Users\\mister-hope\\.ssh\\id_rsa&quot;\n  IdentityFile &quot;~/.ssh/id_rsa&quot;\n  TCPKeepAlive yes\n  # Ubuntu 需要安装 corkscrew\n  ProxyCommand /usr/bin/corkscrew 172.31.16.1 10808 %h %p\n  # Windows 可以改为 Git 安装目录下的 connect，如\n  # ProxyCommand &quot;C:\\Program Files\\Git\\mingw64\\bin\\connect&quot; -S 127.0.0.1:10808 -a none %h %p\n\nHost ssh.github.com\n  User git\n  Port 443\n  Hostname ssh.github.com\n  # 这里在 Windows 下需要替换成实际目录，如 &quot;C:\\Users\\mister-hope\\.ssh\\id_rsa&quot;\n  IdentityFile &quot;~/.ssh/id_rsa&quot;\n  TCPKeepAlive yes\n  # Ubuntu 需要安装 corkscrew\n  ProxyCommand /usr/bin/corkscrew 172.31.16.1 10808 %h %p\n  # Windows 可以改为 Git 安装目录下的 connect，如\n  # ProxyCommand &quot;C:\\Program Files\\Git\\mingw64\\bin\\connect&quot; -S 127.0.0.1:10808 -a none %h %p\n\n</code></pre><div aria-hidden=\"true\"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div><div>\n<p>提示</p>\n<p>如果在 WSL 使用，获取 Windows 的 IP 地址命令为 <code>ip route | grep default | awk '{print $3}'</code>。</p>\n<p>特别注意，如不进行额外配置，每次重启后主机地址都会发生变化。</p>\n</div>\n<p>你可以使用 <code>ssh -T git@github.com</code> 来测试你的代理配置是否有效。</p>\n",
+      "date_published": "2022-12-06T14:18:22.000Z",
+      "date_modified": "2022-12-06T14:18:22.000Z",
+      "authors": [],
+      "tags": [
+        "Git"
+      ]
+    },
+    {
       "title": "后端开发",
       "url": "https://mrhope.site/code/back-end/",
       "id": "https://mrhope.site/code/back-end/",
@@ -440,9 +498,9 @@
       "url": "https://mrhope.site/code/windows/",
       "id": "https://mrhope.site/code/windows/",
       "summary": "以下是有关于 Windows 10 系统的一些基础知识。",
-      "content_html": "<p>以下是有关于 Windows 10 系统的一些基础知识。</p>\n\n<ul>\n<li>\n<p><a href=\"/code/windows/add-path.html\">添加到 path</a></p>\n</li>\n<li>\n<p><a href=\"/code/windows/shortcut-key.html\">Windows 快捷键</a></p>\n</li>\n<li>\n<p><a href=\"/code/windows/hidden-file.html\">显示文件后缀名与隐藏文件</a></p>\n</li>\n<li>\n<p><a href=\"/code/windows/cmd.html\">快速打开 CMD</a></p>\n</li>\n<li>\n<p><a href=\"/code/windows/notepad.html\">记事本的遗留问题</a></p>\n</li>\n</ul>\n",
+      "content_html": "<p>以下是有关于 Windows 10 系统的一些基础知识。</p>\n\n<ul>\n<li>\n<p><a href=\"/code/windows/env-variable.html\">环境变量</a></p>\n</li>\n<li>\n<p><a href=\"/code/windows/shortcut-key.html\">Windows 快捷键</a></p>\n</li>\n<li>\n<p><a href=\"/code/windows/hidden-file.html\">显示文件后缀名与隐藏文件</a></p>\n</li>\n<li>\n<p><a href=\"/code/windows/cmd.html\">快速打开 CMD</a></p>\n</li>\n<li>\n<p><a href=\"/code/windows/notepad.html\">记事本的遗留问题</a></p>\n</li>\n</ul>\n",
       "date_published": "2019-09-07T00:00:00.000Z",
-      "date_modified": "2022-02-06T16:46:58.000Z",
+      "date_modified": "2022-12-06T14:18:22.000Z",
       "authors": [],
       "tags": [
         "基础"
@@ -1243,87 +1301,6 @@
       "authors": [],
       "tags": [
         "JavaScript"
-      ]
-    },
-    {
-      "title": "Emoji 列表",
-      "url": "https://mrhope.site/code/language/markdown/emoji/",
-      "id": "https://mrhope.site/code/language/markdown/emoji/",
-      "summary": "人物 点击前往 (people.md); 自然 点击前往 (nature.md); 对象 点击前往 (object.md); 地点 点击前往 (place.md); 符号 点击前往 (symbol.md);",
-      "content_html": "<h2 id=\"人物\" tabindex=\"-1\"> 人物</h2>\n<ul>\n<li><a href=\"/code/language/markdown/emoji/people.html\">点击前往</a></li>\n</ul>\n<h2 id=\"自然\" tabindex=\"-1\"> 自然</h2>\n<ul>\n<li><a href=\"/code/language/markdown/emoji/nature.html\">点击前往</a></li>\n</ul>\n<h2 id=\"对象\" tabindex=\"-1\"> 对象</h2>\n<ul>\n<li><a href=\"/code/language/markdown/emoji/object.html\">点击前往</a></li>\n</ul>\n<h2 id=\"地点\" tabindex=\"-1\"> 地点</h2>\n<ul>\n<li><a href=\"/code/language/markdown/emoji/place.html\">点击前往</a></li>\n</ul>\n<h2 id=\"符号\" tabindex=\"-1\"> 符号</h2>\n<ul>\n<li><a href=\"/code/language/markdown/emoji/symbol.html\">点击前往</a></li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:46:58.000Z",
-      "authors": [],
-      "tags": [
-        "Markdown"
-      ]
-    },
-    {
-      "title": "Python 高级语法",
-      "url": "https://mrhope.site/code/language/python/advance/",
-      "id": "https://mrhope.site/code/language/python/advance/",
-      "summary": "目录 切片 (slice.md); 迭代 (iteration.md); 列表生成式 (list-comprehensions.md); 生成器 (generator.md); 迭代器 (iterator.md);",
-      "content_html": "<h2 id=\"目录\" tabindex=\"-1\"> 目录</h2>\n<ul>\n<li>\n<p><a href=\"/code/language/python/advance/slice.html\">切片</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/advance/iteration.html\">迭代</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/advance/list-comprehensions.html\">列表生成式</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/advance/generator.html\">生成器</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/advance/iterator.html\">迭代器</a></p>\n</li>\n</ul>\n",
-      "date_published": "2020-05-28T00:00:00.000Z",
-      "date_modified": "2022-02-06T16:46:58.000Z",
-      "authors": [
-        {
-          "name": "廖雪峰"
-        }
-      ],
-      "tags": [
-        "Python"
-      ]
-    },
-    {
-      "title": "函数",
-      "url": "https://mrhope.site/code/language/python/function/",
-      "id": "https://mrhope.site/code/language/python/function/",
-      "summary": "目录 函数介绍 (intro.md); 函数定义 (define.md); 函数调用 (call.md); 函数参数 (argument.md); 递归调用 (recursive.md);",
-      "content_html": "<h2 id=\"目录\" tabindex=\"-1\"> 目录</h2>\n<ul>\n<li>\n<p><a href=\"/code/language/python/function/intro.html\">函数介绍</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/function/define.html\">函数定义</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/function/call.html\">函数调用</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/function/argument.html\">函数参数</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/function/recursive.html\">递归调用</a></p>\n</li>\n</ul>\n",
-      "date_published": "2020-05-25T00:00:00.000Z",
-      "date_modified": "2022-02-06T16:46:58.000Z",
-      "authors": [
-        {
-          "name": "廖雪峰"
-        }
-      ],
-      "tags": [
-        "Python"
-      ]
-    },
-    {
-      "title": "函数式编程",
-      "url": "https://mrhope.site/code/language/python/functional-programming/",
-      "id": "https://mrhope.site/code/language/python/functional-programming/",
-      "summary": "函数是 Python 内建支持的一种封装，我们通过把大段代码拆成函数，通过一层一层的函数调用，就可以把复杂任务分解成简单的任务，这种分解可以称之为面向过程的程序设计。函数就是面向过程的程序设计的基本单元。 而函数式编程(请注意多了一个“式”字)——Functional Programming，虽然也可以归结到面向过程的程序设计，但其思想更接近数学计算。...",
-      "content_html": "<p>函数是 Python 内建支持的一种封装，我们通过把大段代码拆成函数，通过一层一层的函数调用，就可以把复杂任务分解成简单的任务，这种分解可以称之为面向过程的程序设计。函数就是面向过程的程序设计的基本单元。</p>\n<p>而函数式编程(请注意多了一个“式”字)——Functional Programming，虽然也可以归结到面向过程的程序设计，但其思想更接近数学计算。</p>\n<p>我们首先要搞明白计算机(Computer)和计算(Compute)的概念。</p>\n<p>在计算机的层次上，CPU 执行的是加减乘除的指令代码，以及各种条件判断和跳转指令，所以，汇编语言是最贴近计算机的语言。</p>\n<p>而计算则指数学意义上的计算，越是抽象的计算，离计算机硬件越远。</p>\n<p>对应到编程语言，就是越低级的语言，越贴近计算机，抽象程度低，执行效率高，比如 C 语言；越高级的语言，越贴近计算，抽象程度高，执行效率低，比如 Lisp 语言。</p>\n<p>函数式编程就是一种抽象程度很高的编程范式，纯粹的函数式编程语言编写的函数没有变量，因此，任意一个函数，只要输入是确定的，输出就是确定的，这种纯函数我们称之为没有副作用。而允许使用变量的程序设计语言，由于函数内部的变量状态不确定，同样的输入，可能得到不同的输出，因此，这种函数是有副作用的。</p>\n<p>函数式编程的一个特点就是，允许把函数本身作为参数传入另一个函数，还允许返回一个函数!</p>\n<p>Python 对函数式编程提供部分支持。由于 Python 允许使用变量，因此，Python 不是纯函数式编程语言。</p>\n<h2 id=\"目录\" tabindex=\"-1\"> 目录</h2>\n<ul>\n<li>\n<p><a href=\"/code/language/python/functional-programming/high-order-function/intro.html\">高阶函数介绍</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/functional-programming/high-order-function/map-and-reduce.html\">map / reduce</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/functional-programming/high-order-function/filter.html\">filter</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/functional-programming/high-order-function/sorted.html\">sorted</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/functional-programming/return-function.html\">返回函数</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/functional-programming/anonymous-function.html\">匿名函数</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/functional-programming/decorator.html\">装饰器</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/functional-programming/parital-function.html\">偏函数</a></p>\n</li>\n</ul>\n",
-      "date_published": "2020-05-31T00:00:00.000Z",
-      "date_modified": "2022-02-06T16:46:58.000Z",
-      "authors": [
-        {
-          "name": "廖雪峰"
-        }
-      ],
-      "tags": [
-        "Python"
-      ]
-    },
-    {
-      "title": "快速上手",
-      "url": "https://mrhope.site/code/language/python/guide/",
-      "id": "https://mrhope.site/code/language/python/guide/",
-      "summary": "本章节介绍 Python 的基础语法，帮助您尽快了解 Python 的基础内容",
-      "content_html": "<p>本章节介绍 Python 的基础语法，帮助您尽快了解 Python 的基础内容</p>\n\n<h2 id=\"目录\" tabindex=\"-1\"> 目录</h2>\n<ul>\n<li>\n<p><a href=\"/code/language/python/guide/write.html\">第一个 Python 程序</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/guide/io.html\">输入与输出</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/guide/basic.html\">基础语法</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/guide/string.html\">字符串</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/guide/list-and-tuple.html\">List 和 Tuple</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/guide/condition.html\">条件判断</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/guide/loop.html\">循环</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/guide/dict-and-set.html\">Dictionary 和 Set</a></p>\n</li>\n</ul>\n",
-      "date_published": "2020-05-19T00:00:00.000Z",
-      "date_modified": "2022-02-06T16:46:58.000Z",
-      "authors": [
-        {
-          "name": "廖雪峰"
-        }
-      ],
-      "tags": [
-        "Python"
       ]
     }
   ]
