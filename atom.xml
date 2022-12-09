@@ -3,7 +3,7 @@
   <id>https://mrhope.site/</id>
   <title>Mr.Hope</title>
   <subtitle>Where there is light, there is hope.</subtitle>
-  <updated>2022-12-08T06:26:21.553Z</updated>
+  <updated>2022-12-09T07:38:51.379Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mrhope.site/atom.xml"/>
   <link rel="alternate" href="https://mrhope.site/"/>
@@ -53,7 +53,7 @@
     <id>https://mrhope.site/code/windows/env-variable.html</id>
     <link href="https://mrhope.site/code/windows/env-variable.html"/>
     <updated>2022-12-06T14:18:22.000Z</updated>
-    <summary type="html">以 Windows 10 系统为例，直接在左下角搜索栏中输入“系统变量” 搜索 在弹出的框中点击环境变量 系统变量 如果你需要添加环境变量，直接添加即可。 如果你只是希望添加到 Path，在弹出的新窗口中找到 path，选中并点击编辑 系统变量 点击添加输入想要添加到 path 的路径或者执行文件名即可 系统变量</summary>
+    <summary type="html">以 Windows 10 系统为例，直接在左下角搜索栏中输入“系统变量” 在弹出的框中点击环境变量 如果你需要添加环境变量，直接添加即可。 如果你只是希望添加到 Path，在弹出的新窗口中找到 path，选中并点击编辑 点击添加输入想要添加到 path 的路径或者执行文件名即可</summary>
     <content type="html"><![CDATA[<p>以 Windows 10 系统为例，直接在左下角搜索栏中输入“系统变量”</p>
 <p><img src="@source/code/windows/assets/pathSearch.png" alt="搜索"></p>
 <p>在弹出的框中点击环境变量</p>
@@ -72,7 +72,7 @@
     <id>https://mrhope.site/note/flutter/</id>
     <link href="https://mrhope.site/note/flutter/"/>
     <updated>2022-12-06T14:18:22.000Z</updated>
-    <summary type="html">Gradle Versions can be found here: Kotlin Plugin Versions can be found here: Android Gradle Build Tools Google maven repository website (https://maven.google.com/web/index.html)...</summary>
+    <summary type="html">Update Flutter Project Deps Gradle Versions can be found here: https://gradle.org/releases/ Kotlin Plugin Versions can be found here: https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm</summary>
     <content type="html"><![CDATA[<h1 id="update-flutter-project-deps" tabindex="-1"> Update Flutter Project Deps</h1>
 <h2 id="gradle" tabindex="-1"> Gradle</h2>
 <p>Versions can be found here: <a href="https://gradle.org/releases/" target="_blank" rel="noopener noreferrer">https://gradle.org/releases/</a></p>
@@ -102,7 +102,7 @@
     <id>https://mrhope.site/note/wsl/</id>
     <link href="https://mrhope.site/note/wsl/"/>
     <updated>2022-12-06T14:18:22.000Z</updated>
-    <summary type="html">目前使用的系统是 WSL2。 其中以下操作可能需要在新机器上进行相同操作: Windows 侧 Windows 侧可以在用户目录下创建 .wslconfig 文件，用于配置 WSL2。 WSL 侧 WSL 侧可以通过 /etc/wsl.conf 进行配置。 启用 init.d 支持 在 /etc/wsl.conf 中加入: 生成新的 RSA 密钥 使用...</summary>
+    <summary type="html">目前使用的系统是 WSL2。 其中以下操作可能需要在新机器上进行相同操作: Windows 侧 Windows 侧可以在用户目录下创建 .wslconfig 文件，用于配置 WSL2。 [wsl2] # Limits VM memory in WSL 2 to 8 GB memory=8GB WSL 侧</summary>
     <content type="html"><![CDATA[<p>目前使用的系统是 WSL2。</p>
 <p>其中以下操作可能需要在新机器上进行相同操作:</p>
 <h2 id="windows-侧" tabindex="-1"> Windows 侧</h2>
@@ -183,7 +183,7 @@ Host ssh.github.com
     <id>https://mrhope.site/software/git/proxy.html</id>
     <link href="https://mrhope.site/software/git/proxy.html"/>
     <updated>2022-12-06T14:18:22.000Z</updated>
-    <summary type="html">由于目前 GitHub 已经在全国大部分范围内被主要运营商进行 DNS 封锁，所以如果需要配合 GitHub 使用 Git，需要进行代理设置。 代理设置 通常情况下，我们可以通过设置环境变量 HTTPPROXY 和 HTTPSPROXY 来进行代理设置。 在 Windows 下，我们可以通过设置环境变量 HTTPPROXY 和 HTTPSPROXY 来...</summary>
+    <summary type="html">由于目前 GitHub 已经在全国大部分范围内被主要运营商进行 DNS 封锁，所以如果需要配合 GitHub 使用 Git，需要进行代理设置。 代理设置 通常情况下，我们可以通过设置环境变量 HTTP_PROXY 和 HTTPS_PROXY 来进行代理设置。 在 Windows 下，我们可以通过设置环境变量 HTTP_PROXY 和 HTTPS_PROXY 来进行代理设置。 Windows 例子 set HTTP_PROXY=http://127.0.0.1:1080 set HTTPS_PROXY=http://127.0.0.1:1080</summary>
     <content type="html"><![CDATA[<p>由于目前 GitHub 已经在全国大部分范围内被主要运营商进行 DNS 封锁，所以如果需要配合 GitHub 使用 Git，需要进行代理设置。</p>
 <h2 id="代理设置" tabindex="-1"> 代理设置</h2>
 <p>通常情况下，我们可以通过设置环境变量 <code>HTTP_PROXY</code> 和 <code>HTTPS_PROXY</code> 来进行代理设置。</p>
@@ -242,7 +242,7 @@ Host ssh.github.com
     <id>https://mrhope.site/code/back-end/</id>
     <link href="https://mrhope.site/code/back-end/"/>
     <updated>2022-10-10T05:08:58.000Z</updated>
-    <summary type="html">后端入门 PHP PHP 是一种创建动态交互性站点的强有力的服务器端脚本语言，免费，并且使用非常广泛。PHP (全称 Hypertext Preprocessor，即超文本预处理器)是一种通用开源脚本语言。 PHP 手册: W3School 教程 (http://www.w3school.com.cn/php/index.asp); 菜鸟教程 (htt...</summary>
+    <summary type="html">后端入门 PHP PHP 是一种创建动态交互性站点的强有力的服务器端脚本语言，免费，并且使用非常广泛。PHP (全称 Hypertext Preprocessor，即超文本预处理器)是一种通用开源脚本语言。 PHP 手册: W3School 教程 菜鸟教程</summary>
     <content type="html"><![CDATA[<h2 id="后端入门" tabindex="-1"> 后端入门</h2>
 <h3 id="php" tabindex="-1"> PHP</h3>
 <p>PHP 是一种创建动态交互性站点的强有力的服务器端脚本语言，免费，并且使用非常广泛。PHP (全称 Hypertext Preprocessor，即超文本预处理器)是一种通用开源脚本语言。</p>
@@ -313,7 +313,7 @@ Host ssh.github.com
     <id>https://mrhope.site/software/git/merge.html</id>
     <link href="https://mrhope.site/software/git/merge.html"/>
     <updated>2022-09-07T17:18:06.000Z</updated>
-    <summary type="html">Squash merge 通过使用 --squash 选项，你可以在合并中将多个 commit 合并为一个。 也就是对于以下的例子 git merge feature 得到的结果为: 而如果 feature 分支意在实现一个完成的特性，两个 commit 只是工作进度实际上并不重要的时候，我们可以通过 git merge --squash featur...</summary>
+    <summary type="html">Squash merge 通过使用 --squash 选项，你可以在合并中将多个 commit 合并为一个。 也就是对于以下的例子 git merge feature 得到的结果为: 而如果 feature 分支意在实现一个完成的特性，两个 commit 只是工作进度实际上并不重要的时候，我们可以通过 git merge --squash feature 得到: Cherry pick 有些时候，我们可能需要提取其他分支的某个 commit，这个时候我们可以用 cherry pick 进行操作。</summary>
     <content type="html"><![CDATA[<h2 id="squash-merge" tabindex="-1"> Squash merge</h2>
 <p>通过使用 <code>--squash</code> 选项，你可以在合并中将多个 commit 合并为一个。</p>
 <p>也就是对于以下的例子</p>
@@ -912,7 +912,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
     <id>https://mrhope.site/code/Android/get-started/create.html</id>
     <link href="https://mrhope.site/code/Android/get-started/create.html"/>
     <updated>2022-04-01T16:05:53.000Z</updated>
-    <summary type="html">本课将介绍如何使用 Android Studio 创建新的 Android 项目，并介绍该项目中的一些文件。 如需创建新的 Android 项目，请按以下步骤操作： 1. 安装最新版 Android Studio。 1. 在 Welcome to Android Studio 窗口中，点击 Create New Project。 如果您已打开一个项目，...</summary>
+    <summary type="html">本课将介绍如何使用 Android Studio 创建新的 Android 项目，并介绍该项目中的一些文件。 如需创建新的 Android 项目，请按以下步骤操作： 安装最新版 Android Studio。 在 Welcome to Android Studio 窗口中，点击 Create New Project。 如果您已打开一个项目，请依次选择 File &amp;gt; New &amp;gt; New Project。 在 Select a Project Template 窗口中，选择 Empty Activity，然后点击 Next。 在 Configure your project 窗口中，完成以下操作： 在 Name 字段中输入“My First App”。 在 Package name 字段中输入“com.example.myfirstapp”。 如果您想将项目放在其他文件夹中，请更改其 Save 位置。 从 Language 下拉菜单中选择 Java 或 Kotlin。 在 Minimum SDK 字段中选择您希望应用支持的最低 Android 版本。 提示 点击 Help me choose 链接可打开 Android Platform/API Version Distribution 对话框。此对话框会提供有关各 Android 版本在设备间的分布情况的信息。您需要权衡的主要因素是，您想支持的 Android 设备所占的百分比，以及在这些设备所搭载的各个不同版本上维护应用所需的工作量。例如，如果您选择让应用与多个不同 Android 版本兼容，那么维护最旧版本与最新版本之间的兼容性所需的工作量就会增大。 如果您的应用需要旧版库支持，请选中 Use legacy android.support libraries 复选框。 其他选项保持原样。 点击 Finish。</summary>
     <content type="html"><![CDATA[<p>本课将介绍如何使用 Android Studio 创建新的 Android 项目，并介绍该项目中的一些文件。</p>
 <p>如需创建新的 Android 项目，请按以下步骤操作：</p>
 <ol>
@@ -1130,7 +1130,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
     <id>https://mrhope.site/code/Android/get-started/run.html</id>
     <link href="https://mrhope.site/code/Android/get-started/run.html"/>
     <updated>2022-04-01T16:05:53.000Z</updated>
-    <summary type="html">在真实设备上运行 按照以下步骤设置设备： 1. 使用一根 USB 线将设备连接到开发机器。如果您是在 Windows 上开发的，则可能需要为设备安装合适的 USB 驱动程序。 1. 执行以下步骤，在开发者选项窗口中启用 USB 调试： 1. 打开设置应用。 1. 如果您的设备使用 Android v8.0 或更高版本，请选择系统。否则，请继续执行下一步...</summary>
+    <summary type="html">在真实设备上运行 按照以下步骤设置设备： 使用一根 USB 线将设备连接到开发机器。如果您是在 Windows 上开发的，则可能需要为设备安装合适的 USB 驱动程序。 执行以下步骤，在开发者选项窗口中启用 USB 调试： 打开设置应用。 如果您的设备使用 Android v8.0 或更高版本，请选择系统。否则，请继续执行下一步。 滚动到底部，然后选择关于手机。 滚动到底部，然后点按版本号七次。 返回上一屏幕，滚动到底部，然后点按开发者选项。 在开发者选项窗口中，向下滚动以查找并启用 USB 调试。</summary>
     <content type="html"><![CDATA[<h2 id="在真实设备上运行" tabindex="-1"> 在真实设备上运行</h2>
 <p>按照以下步骤设置设备：</p>
 <ol>
@@ -1233,7 +1233,7 @@ module<span>.</span>exports<span>.</span><span>bar</span> <span>=</span> <span>f
     <id>https://mrhope.site/software/mysql/</id>
     <link href="https://mrhope.site/software/mysql/"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
-    <summary type="html">目录 介绍 (intro.md); 5.7 版本与 8 的比较 (compare.md);</summary>
+    <summary type="html">目录 介绍 5.7 版本与 8 的比较</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li><a href="/software/mysql/intro.html">介绍</a></li>
@@ -1907,15 +1907,6 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <published>2019-10-16T00:00:00.000Z</published>
   </entry>
   <entry>
-    <title type="html">Mr.Hope 介绍</title>
-    <id>https://mrhope.site/about/</id>
-    <link href="https://mrhope.site/about/"/>
-    <updated>2022-04-03T17:06:01.000Z</updated>
-    <summary type="html">slidestart Mr.Hope 介绍 Mr.Hope 基本信息 性别: 男; 年龄: 24; 婚姻情况: 未婚; 单身: 否; 爱好: 钓鱼、国际象棋、花体英文、羽毛球、编程; 性格比较开朗随和，热爱帮助他人，喜欢平时做一些开源项目。 学历经历 本科东北师范大学就读物理学; 现在在东北师范大学就读理论物理硕士; 暂无特别突出的科研成果; 联系方式...</summary>
-    <content type="html"><![CDATA[<i>Content not supported</i>]]></content>
-    <published>2022-02-06T16:01:38.000Z</published>
-  </entry>
-  <entry>
     <title type="html">代码笔记</title>
     <id>https://mrhope.site/code/</id>
     <link href="https://mrhope.site/code/"/>
@@ -2019,6 +2010,15 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
+    <title type="html">Mr.Hope 介绍</title>
+    <id>https://mrhope.site/about/</id>
+    <link href="https://mrhope.site/about/"/>
+    <updated>2022-04-03T17:06:01.000Z</updated>
+    <summary type="html">slidestart Mr.Hope 介绍 Mr.Hope 基本信息 性别: 男; 年龄: 24; 婚姻情况: 未婚; 单身: 否; 爱好: 钓鱼、国际象棋、花体英文、羽毛球、编程; 性格比较开朗随和，热爱帮助他人，喜欢平时做一些开源项目。 学历经历 本科东北师范大学就读物理学; 现在在东北师范大学就读理论物理硕士; 暂无特别突出的科研成果; 联系方式...</summary>
+    <content type="html"><![CDATA[<i>Content not supported</i>]]></content>
+    <published>2022-02-06T16:01:38.000Z</published>
+  </entry>
+  <entry>
     <title type="html">UI 设计</title>
     <id>https://mrhope.site/design/</id>
     <link href="https://mrhope.site/design/"/>
@@ -2095,7 +2095,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/linux/</id>
     <link href="https://mrhope.site/linux/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">Linux 教程 Linux 介绍 (intro/README.md); Linux 介绍 (intro/intro.md); Linux 历史 (intro/history.md); Linux 编写语言 (intro/language.md); Linux 优势 (intro/advantage.md); Linux 桌面环境 (intro/des...</summary>
+    <summary type="html">Linux 教程 Linux 介绍 Linux 介绍 Linux 历史 Linux 编写语言 Linux 优势 Linux 桌面环境 Linux 文件 Linux 文件 Linux 目录 挂载 Linux 命令 命令格式简介 目录相关 文件相关 其他命令 命令的自动补全 命令的执行 环境变量 创建链接</summary>
     <content type="html"><![CDATA[<h2 id="linux-教程" tabindex="-1"> Linux 教程</h2>
 <ul>
 <li>
@@ -2183,7 +2183,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/note/</id>
     <link href="https://mrhope.site/note/"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
-    <summary type="html">这里是 Mr.Hope 的一些随笔，后续被整理进博客中。 四季 介绍 这是我在高一写的散文诗集，最初发表在空间日志上。 后续也写了一些诗补充了进去，其中以 “秋之思” 篇幅最多 近日将其作为少年回忆，整理在博客中。 秋之思 (fall/catalog.md); 冬之语 (winter/note.md); 春之诗 (spring/1.md); 夏之歌 (...</summary>
+    <summary type="html">这里是 Mr.Hope 的一些随笔，后续被整理进博客中。 四季 介绍 这是我在高一写的散文诗集，最初发表在空间日志上。 后续也写了一些诗补充了进去，其中以 “秋之思” 篇幅最多 近日将其作为少年回忆，整理在博客中。 秋之思 冬之语 春之诗 夏之歌</summary>
     <content type="html"><![CDATA[<p>这里是 Mr.Hope 的一些随笔，后续被整理进博客中。</p>
 <h2 id="四季" tabindex="-1"> 四季</h2>
 <div>
@@ -2241,7 +2241,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/physics/</id>
     <link href="https://mrhope.site/physics/"/>
     <updated>2022-02-06T16:01:38.000Z</updated>
-    <summary type="html">目录 电磁学 (electromagnetism/README.md); 光学 (optism/README.md); 热力学与统计物理 (tsp/README.md); 量子力学 (quatum/README.md);</summary>
+    <summary type="html">目录 电磁学 光学 热力学与统计物理 量子力学</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -2266,7 +2266,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/software/</id>
     <link href="https://mrhope.site/software/"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
-    <summary type="html">代码编辑器 编辑器介绍 (editor.md); 团队协作 开发项目的代码版本管理以及多人协作使用 Git 软件 Git 教程 (git/README.md); GitHub 介绍 (../code/github/README.md); 浏览器 在开发中，调试网页推荐使用 Chrome。 Chrome 介绍 (chrome.md); 后端 Http S...</summary>
+    <summary type="html">代码编辑器 编辑器介绍 团队协作 开发项目的代码版本管理以及多人协作使用 Git 软件 Git 教程 GitHub 介绍 浏览器</summary>
     <content type="html"><![CDATA[<h2 id="代码编辑器" tabindex="-1"> 代码编辑器</h2>
 <ul>
 <li><a href="/software/editor.html">编辑器介绍</a></li>
@@ -2363,7 +2363,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/github/</id>
     <link href="https://mrhope.site/code/github/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">快速上手 GitHub 介绍 (intro.md); Pull Request (pr.md); 语义化提交 (semantic.md); GitHub Pages (pages.md); 利用 Gitee 加速 GitHub 克隆 (speedup.md); 官方文档 全部文档 (https://docs.github.com/cn/free-pro...</summary>
+    <summary type="html">快速上手 GitHub 介绍 Pull Request 语义化提交 GitHub Pages 利用 Gitee 加速 GitHub 克隆</summary>
     <content type="html"><![CDATA[<h2 id="快速上手" tabindex="-1"> 快速上手</h2>
 <ul>
 <li>
@@ -2448,7 +2448,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/</id>
     <link href="https://mrhope.site/code/language/"/>
     <updated>2022-02-06T16:01:38.000Z</updated>
-    <summary type="html">如何学习一门语言 (learning.md); 教程目录 JavaScript 教程 (js/README.md); TypeScript 教程 (typescript/README.md); Python 教程 (python/README.md) (编写中...); Java 教程 (https://www.liaoxuefeng.com/wiki...</summary>
+    <summary type="html">如何学习一门语言 教程目录 JavaScript 教程 TypeScript 教程 Python 教程 (编写中...) Java 教程(廖雪峰的博客) Markdown 教程 YAML 教程 JSON 教程</summary>
     <content type="html"><![CDATA[<ul>
 <li><a href="/code/language/learning.html">如何学习一门语言</a></li>
 </ul>
@@ -2823,7 +2823,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/react/</id>
     <link href="https://mrhope.site/code/react/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">创建 React 项目 使用 create-react-app 工具。 创建普通模板: 创建 TS 模板: React 文档 官方文档 (https://reactjs.org/docs/getting-started.html); 中文文档 (https://react.docschina.org/docs/getting-started.html);</summary>
+    <summary type="html">创建 React 项目 使用 create-react-app 工具。 创建普通模板: npx create-react-app xxx 创建 TS 模板: npx create-react-app xxx --template typescript</summary>
     <content type="html"><![CDATA[<h2 id="创建-react-项目" tabindex="-1"> 创建 React 项目</h2>
 <p>使用 <code>create-react-app</code> 工具。</p>
 <p>创建普通模板:</p>
@@ -2844,7 +2844,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/vue/</id>
     <link href="https://mrhope.site/code/vue/"/>
     <updated>2022-06-14T04:47:46.000Z</updated>
-    <summary type="html">Vue.js 是世界上主流的前端框架。 官方介绍为：渐近式 JavaScript 框架。一款用于构建 Web 界面，易学易用，性能出色且功能丰富的框架。 Vue.js 教程目录 开发环境安装 (install.md); 起步上手 (get-started.md); Vue 单文件组件说明 (vue.md); Vue 生态 Vue Router Vue ...</summary>
+    <summary type="html">Vue.js 是世界上主流的前端框架。 官方介绍为：渐近式 JavaScript 框架。一款用于构建 Web 界面，易学易用，性能出色且功能丰富的框架。 Vue.js 教程目录 开发环境安装 起步上手 Vue 单文件组件说明</summary>
     <content type="html"><![CDATA[<p>Vue.js 是世界上主流的前端框架。</p>
 <p>官方介绍为：渐近式 JavaScript 框架。一款用于构建 Web 界面，易学易用，性能出色且功能丰富的框架。</p>
 <h2 id="vue-js-教程目录" tabindex="-1"> Vue.js 教程目录</h2>
@@ -3121,7 +3121,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/design/articles/</id>
     <link href="https://mrhope.site/design/articles/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">文章列表 格式塔原则 (gestalt-principle.md); 布局中的左和右 (left-or-right.md); 信息流介绍 (infomation-flow.md);</summary>
+    <summary type="html">文章列表 格式塔原则 布局中的左和右 信息流介绍</summary>
     <content type="html"><![CDATA[<h2 id="文章列表" tabindex="-1"> 文章列表</h2>
 <ul>
 <li>
@@ -3233,7 +3233,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/design/interact/</id>
     <link href="https://mrhope.site/design/interact/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">文章列表 搜索框 (search.md); 文本框 (text-field.md);</summary>
+    <summary type="html">文章列表 搜索框 文本框</summary>
     <content type="html"><![CDATA[<h2 id="文章列表" tabindex="-1"> 文章列表</h2>
 <ul>
 <li>
@@ -3252,7 +3252,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/design/navigation/</id>
     <link href="https://mrhope.site/design/navigation/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">目录 导航设计介绍 (intro.md); 导航栏概述与设计方式 (navbar.md); 导航栏设计技巧 (navbar-design.md); 侧边导航设计 (sidebar-navigate.md); 标签导航设计 (tabbar.md); 标签导航设计技巧 (tabbar-design.md);</summary>
+    <summary type="html">目录 导航设计介绍 导航栏概述与设计方式 导航栏设计技巧 侧边导航设计 标签导航设计 标签导航设计技巧</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -3283,7 +3283,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/linux/bash/</id>
     <link href="https://mrhope.site/linux/bash/"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
-    <summary type="html">目录 简介 (intro.md); 基本语法 (grammar.md); 模式扩展 (expansion.md); 引号和转义 (quotation.md); 变量 (variable.md); 字符串操作 (string.md); 算术运算 (arithmetic.md); 行操作 (readline.md); 目录堆栈 (stack.md); 脚本...</summary>
+    <summary type="html">目录 简介 基本语法 模式扩展 引号和转义 变量 字符串操作 算术运算 行操作 目录堆栈 脚本入门 read 命令 条件判断 循环 函数 数组 set 命令 脚本除错 mktemp 命令，trap 命令 启动环境 命令提示符</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -3363,7 +3363,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/linux/command/</id>
     <link href="https://mrhope.site/linux/command/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">目录 命令格式简介 (command.md); 目录相关 (dir.md); 文件相关 (file.md); 其他命令 (other.md); 命令的自动补全 (add.md); 命令的执行 (excu.md); 环境变量 (path.md); 创建链接 (ln.md);</summary>
+    <summary type="html">目录 命令格式简介 目录相关 文件相关 其他命令 命令的自动补全 命令的执行 环境变量 创建链接</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -3400,7 +3400,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/linux/file/</id>
     <link href="https://mrhope.site/linux/file/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">目录 Linux 文件 (file.md); Linux 目录 (dir.md); 挂载 (mount.md);</summary>
+    <summary type="html">目录 Linux 文件 Linux 目录 挂载</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -3422,7 +3422,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/linux/intro/</id>
     <link href="https://mrhope.site/linux/intro/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">Linux 介绍 (intro.md); Linux 历史 (history.md); Linux 编写语言 (language.md); Linux 优势 (advantage.md); Linux 桌面环境 (desktop.md);</summary>
+    <summary type="html">Linux 简介 Linux 介绍 Linux 历史 Linux 编写语言 Linux 优势 Linux 桌面环境</summary>
     <content type="html"><![CDATA[<h1 id="linux-简介" tabindex="-1"> Linux 简介</h1>
 <ul>
 <li>
@@ -3450,7 +3450,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/linux/ubuntu/</id>
     <link href="https://mrhope.site/linux/ubuntu/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">管理包 (manage.md); 开发软件 (debug.md); 网络服务器相关 (webserver.md); 语言切换 (lang.md);</summary>
+    <summary type="html">ubuntu 管理包 开发软件 网络服务器相关 语言切换</summary>
     <content type="html"><![CDATA[<h1 id="ubuntu" tabindex="-1"> ubuntu</h1>
 <ul>
 <li>
@@ -3494,7 +3494,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/note/innenu/</id>
     <link href="https://mrhope.site/note/innenu/"/>
     <updated>2022-07-30T03:43:15.000Z</updated>
-    <summary type="html">简介 in 东师小程序的大部分页面都均由 YAML 文件生成。开发者只需要使用编辑器编辑 YAML，即可增添或修改小程序页面。 YAML YAML 是专门用来写配置文件的语言，非常简洁和强大，其设计目标，就是方便人类读写。 快速上手 1. 为了编写小程序页面配置文件，您需要先学习 YAML 的规则 (./yaml.md)，同时简单浏览一下一款编辑器 V...</summary>
+    <summary type="html">简介 in 东师小程序的大部分页面都均由 YAML 文件生成。开发者只需要使用编辑器编辑 YAML，即可增添或修改小程序页面。 YAML YAML 是专门用来写配置文件的语言，非常简洁和强大，其设计目标，就是方便人类读写。 快速上手 为了编写小程序页面配置文件，您需要先学习 YAML 的规则，同时简单浏览一下一款编辑器 VSCode 的介绍 掌握上述两个内容之后，您就可以尝试对照 小程序简易参数表 通过 VSCode 编写页面 YAML 文件了，如果您觉得直接上手太难，您可以参阅 交互式教程 来体验一个示例。</summary>
     <content type="html"><![CDATA[<h2 id="简介" tabindex="-1"> 简介</h2>
 <p>in 东师小程序的大部分页面都均由 YAML 文件生成。开发者只需要使用编辑器编辑 YAML，即可增添或修改小程序页面。</p>
 <div>
@@ -3566,7 +3566,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/note/life/</id>
     <link href="https://mrhope.site/note/life/"/>
     <updated>2022-02-28T17:19:37.000Z</updated>
-    <summary type="html">介绍 这是我在高一写的人生感悟，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。 空间相册链接 (https://h5.qzone.qq.com/ugc/share/?sharetag=126FDE98906EB067815B0EEA0F72BEC0&amp;subtype=3&amp;ciphertext=&amp;sid=&amp;blogphoto=&amp;g=&amp;resu...</summary>
+    <summary type="html">介绍 这是我在高一写的人生感悟，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。 空间相册链接</summary>
     <content type="html"><![CDATA[<div>
 <p>介绍</p>
 <p>这是我在高一写的人生感悟，最初发表在空间日志上。</p>
@@ -3584,7 +3584,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/note/node-js/</id>
     <link href="https://mrhope.site/note/node-js/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">目录 current-path 相关 (current-path.md);</summary>
+    <summary type="html">目录 current-path 相关</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li><a href="/note/node-js/current-path.html">current-path 相关</a></li>
@@ -3670,7 +3670,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/physics/electromagnetism/</id>
     <link href="https://mrhope.site/physics/electromagnetism/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">目录 第一章 (charpter1.md); 第二章 (charpter2.md);</summary>
+    <summary type="html">目录 第一章 第二章</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -3689,7 +3689,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/physics/optism/</id>
     <link href="https://mrhope.site/physics/optism/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">第一章 (charpter1.md);</summary>
+    <summary type="html">光学笔记 第一章</summary>
     <content type="html"><![CDATA[<h1 id="光学笔记" tabindex="-1"> 光学笔记</h1>
 <ul>
 <li><a href="/physics/optism/charpter1.html">第一章</a></li>
@@ -3703,7 +3703,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/physics/quatum/</id>
     <link href="https://mrhope.site/physics/quatum/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">第一章 (charpter1.md);</summary>
+    <summary type="html">量子力学笔记 第一章</summary>
     <content type="html"><![CDATA[<h1 id="量子力学笔记" tabindex="-1"> 量子力学笔记</h1>
 <ul>
 <li><a href="/physics/quatum/charpter1.html">第一章</a></li>
@@ -3717,7 +3717,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/physics/tsp/</id>
     <link href="https://mrhope.site/physics/tsp/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">目录 定义 (definition.md); 第一章 (charpter1.md); 第二章 (charpter2.md); 第三章 (charpter3.md);</summary>
+    <summary type="html">目录 定义 第一章 第二章 第三章</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -3934,7 +3934,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/software/tool/</id>
     <link href="https://mrhope.site/software/tool/"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
-    <summary type="html">目录 PowerToys (power-toys.md): Windows 实用工具合集; PasteEx (https://github.com/huiyadanli/PasteEx): Paste As File 把剪贴板的内容直接粘贴为文件; typora (https://www.typora.io/): 一个页面很漂亮的 Markdown 编...</summary>
+    <summary type="html">目录 PowerToys: Windows 实用工具合集 PasteEx: Paste As File 把剪贴板的内容直接粘贴为文件 typora: 一个页面很漂亮的 Markdown 编辑器 Potplayer: 心目中最 NB 的视频播放器，没有之一 Terminal: Windows 终端 PowerShell: Windows 的命令行外壳程序和脚本环境</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -3964,7 +3964,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/software/vscode/</id>
     <link href="https://mrhope.site/software/vscode/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可在您的桌面上运行，并且可用于 Windows，macOS 和 Linux。它具有对 JavaScript，TypeScript 和 Node.js 的内置支持，并具有丰富的其他语言 (例如 C ++，C＃，Java，Python，PHP，Go) 和运行时 (例如 .NET 和...</summary>
+    <summary type="html">Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可在您的桌面上运行，并且可用于 Windows，macOS 和 Linux。它具有对 JavaScript，TypeScript 和 Node.js 的内置支持，并具有丰富的其他语言 (例如 C ++，C＃，Java，Python，PHP，Go) 和运行时 (例如 .NET 和 Unity) 扩展的生态系统。由微软出品，因其开源，可扩展和众多插件成为全球最受欢迎的代码编辑器。 特点 智能代码补全 使用 IntelliSense 可以更智能地编写代码、变量，方法和导入模块的完成。 热门扩展 启用其他语言，主题，调试器，命令等。</summary>
     <content type="html"><![CDATA[<p>Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可在您的桌面上运行，并且可用于 Windows，macOS 和 Linux。它具有对 JavaScript，TypeScript 和 Node.js 的内置支持，并具有丰富的其他语言 (例如 C ++，C＃，Java，Python，PHP，Go) 和运行时 (例如 .NET 和 Unity) 扩展的生态系统。由微软出品，因其开源，可扩展和众多插件成为全球最受欢迎的代码编辑器。</p>
 <h2 id="特点" tabindex="-1"> 特点</h2>
 <ul>
@@ -4054,7 +4054,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/github/actions/</id>
     <link href="https://mrhope.site/code/github/actions/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">目录 GitHub Actions 介绍 (intro.md); Workflow 配置 (config.md); 常用 GitHub Action checkout (checkout.md); cache (cache.md); GitHub Pages 部署 (gh-pages-deploy.md); 官方文档 文档地址 (https://doc...</summary>
+    <summary type="html">目录 GitHub Actions 介绍 Workflow 配置 常用 GitHub Action checkout cache GitHub Pages 部署</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -4109,8 +4109,8 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
   </entry>
   <entry>
     <title type="html">C++ 教程</title>
-    <id>https://mrhope.site/code/language/C++/</id>
-    <link href="https://mrhope.site/code/language/C++/"/>
+    <id>https://mrhope.site/code/language/C__/</id>
+    <link href="https://mrhope.site/code/language/C__/"/>
     <updated>2022-02-06T16:01:38.000Z</updated>
     <summary type="html">提示 正在完善中...</summary>
     <content type="html"><![CDATA[<div>
@@ -4361,7 +4361,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/php/</id>
     <link href="https://mrhope.site/code/language/php/"/>
     <updated>2022-02-06T16:01:38.000Z</updated>
-    <summary type="html">::: tip 正在完善中... :::</summary>
+    <summary type="html">提示 正在完善中...</summary>
     <content type="html"><![CDATA[<div>
 <p>提示</p>
 <p>正在完善中...</p>
@@ -4585,7 +4585,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/yaml/</id>
     <link href="https://mrhope.site/code/language/yaml/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">编程免不了要写配置文件，怎么写配置也是一门学问。 YAML 是专门用来写配置文件的语言，非常简洁和强大。 yaml 介绍 YAML 语言(发音 /ˈjæməl/ )的设计目标，就是方便人类读写。它实质上是一种通用的数据串行化格式。 YAML 的全称是 YAML Ain’t Markup Language。 它的基本语法规则如下。 大小写敏感; 使用缩进...</summary>
+    <summary type="html">编程免不了要写配置文件，怎么写配置也是一门学问。 YAML 是专门用来写配置文件的语言，非常简洁和强大。 yaml 介绍 YAML 语言(发音 /ˈjæməl/ )的设计目标，就是方便人类读写。它实质上是一种通用的数据串行化格式。 YAML 的全称是 YAML Ain’t Markup Language。 它的基本语法规则如下。 大小写敏感 使用缩进表示层级关系 缩进时不允许使用 Tab 键，只允许使用空格。 缩进的空格数目不重要，只要相同层级的元素左侧对齐即可</summary>
     <content type="html"><![CDATA[<p>编程免不了要写配置文件，怎么写配置也是一门学问。</p>
 <p>YAML 是专门用来写配置文件的语言，非常简洁和强大。</p>
 <h2 id="yaml-介绍" tabindex="-1"> yaml 介绍</h2>
@@ -4837,7 +4837,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/mini-app/framework/</id>
     <link href="https://mrhope.site/code/mini-app/framework/"/>
     <updated>2022-02-06T16:01:38.000Z</updated>
-    <summary type="html">开发框架优点 1. 将界面开发的复杂过程转换为编写简单的 yaml 文件。开发门槛低， 1. 拥有详细的开发文档说明，简单易懂，页面文件自述性高，没有开发基础的人也可以经过简单阅读后看懂页面文件大体描述内容。查看例子点这里 (demo.md) 1. 开发者无需着眼于界面样式或是功能的实现，只需着眼于在 yaml 文件中添加渲染界面所需参数并赋值，即可完...</summary>
+    <summary type="html">开发框架优点 将界面开发的复杂过程转换为编写简单的 yaml 文件。开发门槛低， 拥有详细的开发文档说明，简单易懂，页面文件自述性高，没有开发基础的人也可以经过简单阅读后看懂页面文件大体描述内容。查看例子点这里 开发者无需着眼于界面样式或是功能的实现，只需着眼于在 yaml 文件中添加渲染界面所需参数并赋值，即可完成界面编写。开发者只需在开发过程中按照开发说明录入参数，并注意格式即可。</summary>
     <content type="html"><![CDATA[<h2 id="开发框架优点" tabindex="-1"> 开发框架优点</h2>
 <ol>
 <li>
@@ -4859,7 +4859,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/mini-app/guide/</id>
     <link href="https://mrhope.site/code/mini-app/guide/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">目录 文件结构 (file-structure.md); 运行环境 (env.md); 小程序配置 (config/README.md); 全局配置 (config/app-config.md); 页面配置 (config/page-config.md); sitemap 配置 (config/sitemap-config.md); 小程序框架 (fr...</summary>
+    <summary type="html">目录 文件结构 运行环境 小程序配置 全局配置 页面配置 sitemap 配置 小程序框架 框架介绍 场景值 运行环境 运行机制 更新机制 逻辑层 生命周期 路由 注册 App() Page() 运行 模块化 API 视图层 WXML 数据绑定 条件渲染 列表渲染 模板 WXSS WXS 事件 基础组件 动画 WXS WXS 事件 建议双向绑定 获取界面上的节点信息 相应显示区域变化 初始渲染缓存 小程序能力 网络请求 存储 文件系统 调试</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -5013,7 +5013,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/mini-app/tools/</id>
     <link href="https://mrhope.site/code/mini-app/tools/"/>
     <updated>2022-02-06T16:01:38.000Z</updated>
-    <summary type="html">工具 工具页面简介 (interface.md); 调试 (debug.md); npm (npm.md); 体验评分 (audit.md);</summary>
+    <summary type="html">工具 工具页面简介 调试 npm 体验评分</summary>
     <content type="html"><![CDATA[<h2 id="工具" tabindex="-1"> 工具</h2>
 <ul>
 <li>
@@ -5038,7 +5038,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/vue/cli/</id>
     <link href="https://mrhope.site/code/vue/cli/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">目录 Vue Cli 介绍 (intro.md); 快速简单开发 (quick-dev.md); 创建项目 (create.md); 文件处理 (file.md);</summary>
+    <summary type="html">目录 Vue Cli 介绍 快速简单开发 创建项目 文件处理</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -5053,6 +5053,33 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <li>
 <p><a href="/code/vue/cli/file.html">文件处理</a></p>
 </li>
+</ul>
+]]></content>
+    <category term="Vue" scheme=""/>
+    <published>2022-02-06T16:01:38.000Z</published>
+  </entry>
+  <entry>
+    <title type="html">Vuex</title>
+    <id>https://mrhope.site/code/vue/vuex/</id>
+    <link href="https://mrhope.site/code/vue/vuex/"/>
+    <updated>2022-02-06T16:46:58.000Z</updated>
+    <summary type="html">Vuex 是 Vue 官方出品的状态管理组件，是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</summary>
+    <content type="html"><![CDATA[<p>Vuex 是 Vue 官方出品的状态管理组件，是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</p>
+
+<h2 id="目录" tabindex="-1"> 目录</h2>
+<ul>
+<li>
+<p><a href="/code/vue/vuex/get-started.html">快速上手 Vuex</a></p>
+</li>
+<li>
+<p><a href="/code/vue/vuex/demo.html">Vuex 案例</a></p>
+</li>
+</ul>
+<h2 id="官方文档" tabindex="-1"> 官方文档</h2>
+<ul>
+<li><a href="https://v1.vuepress.vuejs.org/zh/guide/" target="_blank" rel="noopener noreferrer">Vuex 教程</a></li>
+<li><a href="https://v1.vuepress.vuejs.org/zh/config/" target="_blank" rel="noopener noreferrer">Vuex 配置</a></li>
+<li><a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer">Vuex repository</a></li>
 </ul>
 ]]></content>
     <category term="Vue" scheme=""/>
@@ -5086,33 +5113,6 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
 <li>
 <p><a href="https://github.com/vuejs/vue-router" target="_blank" rel="noopener noreferrer">官方仓库</a></p>
 </li>
-</ul>
-]]></content>
-    <category term="Vue" scheme=""/>
-    <published>2022-02-06T16:01:38.000Z</published>
-  </entry>
-  <entry>
-    <title type="html">Vuex</title>
-    <id>https://mrhope.site/code/vue/vuex/</id>
-    <link href="https://mrhope.site/code/vue/vuex/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">Vuex 是 Vue 官方出品的状态管理组件，是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</summary>
-    <content type="html"><![CDATA[<p>Vuex 是 Vue 官方出品的状态管理组件，是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</p>
-
-<h2 id="目录" tabindex="-1"> 目录</h2>
-<ul>
-<li>
-<p><a href="/code/vue/vuex/get-started.html">快速上手 Vuex</a></p>
-</li>
-<li>
-<p><a href="/code/vue/vuex/demo.html">Vuex 案例</a></p>
-</li>
-</ul>
-<h2 id="官方文档" tabindex="-1"> 官方文档</h2>
-<ul>
-<li><a href="https://v1.vuepress.vuejs.org/zh/guide/" target="_blank" rel="noopener noreferrer">Vuex 教程</a></li>
-<li><a href="https://v1.vuepress.vuejs.org/zh/config/" target="_blank" rel="noopener noreferrer">Vuex 配置</a></li>
-<li><a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer">Vuex repository</a></li>
 </ul>
 ]]></content>
     <category term="Vue" scheme=""/>
@@ -5360,7 +5360,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/software/comsol/geometry/</id>
     <link href="https://mrhope.site/software/comsol/geometry/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">目录 浏览几何 (view.md); 构建几何 (build.md); 官方文档 视频教程: 入门视频合集: 如何在 COMSOL® 中创建几何结构 (https://cn.comsol.com/video/introductory-video-series-on-how-to-build-geometries-in-comsol); 在 COMSOL...</summary>
+    <summary type="html">目录 浏览几何 构建几何 官方文档 视频教程: 入门视频合集: 如何在 COMSOL® 中创建几何结构 在 COMSOL Multiphysics 中导入几何文件 使用“选择列表”对模型几何实体进行标识 几何定型方法: “形成联合体”与“形成装配”</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -5413,7 +5413,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/software/comsol/mesh/</id>
     <link href="https://mrhope.site/software/comsol/mesh/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">网格基础 网格划分和细化介绍 (intro.md); 内容 剖分方法 物理场控制; 用户控制; 剖分程度 从极粗化到极细化一共九个级别。 其他 可以进行定制。 基础 教程视频: 在 COMSOL Multiphysics^®^ 中为几何模型构建网格 (https://cn.comsol.com/video/building-the-mesh-for-a...</summary>
+    <summary type="html">网格基础 网格划分和细化介绍 内容 剖分方法 物理场控制 用户控制 剖分程度 从极粗化到极细化一共九个级别。 其他 可以进行定制。 基础 教程视频: 在 COMSOL Multiphysics® 中为几何模型构建网格 在 COMSOL Multiphysics® 中剖分网格</summary>
     <content type="html"><![CDATA[<h2 id="网格基础" tabindex="-1"> 网格基础</h2>
 <ul>
 <li><a href="/software/comsol/mesh/intro.html">网格划分和细化介绍</a></li>
@@ -5534,7 +5534,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/software/vscode/guide/</id>
     <link href="https://mrhope.site/software/vscode/guide/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">基础介绍 (basic.md); 个性化介绍 (customization.md); 扩展介绍 (extension.md); 文件介绍 (file.md); 编辑技巧 (edit.md); 智能补全 (intellisense.md); Git 支持 (git.md); 调试介绍 (debug.md); 任务介绍 (task.md); 命令行介绍 (...</summary>
+    <summary type="html">基础介绍 个性化介绍 扩展介绍 文件介绍 编辑技巧 智能补全 Git 支持 调试介绍 任务介绍 命令行介绍</summary>
     <content type="html"><![CDATA[<ul>
 <li>
 <p><a href="/software/vscode/guide/basic.html">基础介绍</a></p>
@@ -5576,7 +5576,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/dart/samples/</id>
     <link href="https://mrhope.site/code/language/dart/samples/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">目录 案例 (samples.md); 概要介绍 (cheatsheet.md); 遍历 (iterable.md);</summary>
+    <summary type="html">目录 案例 概要介绍 遍历</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -5598,7 +5598,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/js/browser/</id>
     <link href="https://mrhope.site/code/language/js/browser/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">相关文档 浏览器介绍 (intro.md); 浏览器对象 (browser-object.md); 操作 DOM (dom.md); 操作表单 (form.md); 操作文件 (file.md); Ajax (ajax.md); Promise (promise.md); Canvas (canvas.md);</summary>
+    <summary type="html">相关文档 浏览器介绍 浏览器对象 操作 DOM 操作表单 操作文件 Ajax Promise Canvas</summary>
     <content type="html"><![CDATA[<h2 id="相关文档" tabindex="-1"> 相关文档</h2>
 <ul>
 <li>
@@ -5635,7 +5635,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/js/es6/</id>
     <link href="https://mrhope.site/code/language/js/es6/"/>
     <updated>2022-02-12T05:50:30.000Z</updated>
-    <summary type="html">目录 ECMAScript 6 简介 (intro.md); let 和 const 命令 (let.md); 变量的解构赋值 (destructuring.md); 字符串的扩展 (string.md); 正则的扩展 (regex.md); 数值的扩展 (number.md); 函数的扩展 (function.md); 数组的扩展 (array.md...</summary>
+    <summary type="html">目录 ECMAScript 6 简介 let 和 const 命令 变量的解构赋值 字符串的扩展 正则的扩展 数值的扩展 函数的扩展 数组的扩展 对象的扩展 Symbol Set 和 Map 数据结构 Proxy Reflect Promise 对象 Iterator 和 for...of 循 Generator 函数的语法 Generator 函数的异步应用 async 函数 Class 的基本语法 Class 的继承 Decorator Module 的语法 Module 的加载实现 编程风格 读懂规格 ArrayBuffer 最新提案 参考链接</summary>
     <content type="html"><![CDATA[<h2 id="目录" tabindex="-1"> 目录</h2>
 <ul>
 <li>
@@ -5739,7 +5739,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/js/function/</id>
     <link href="https://mrhope.site/code/language/js/function/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">基础部分 函数介绍 (intro.md); 函数声明 (declare.md); 函数调用 (call.md); 函数作用域 (scope.md); 解构赋值 (destructuring.md); this 的指向 (this.md); 箭头函数 (arrow-function.md); 进阶 高阶函数 (higher-order-function....</summary>
+    <summary type="html">基础部分 函数介绍 函数声明 函数调用 函数作用域 解构赋值 this 的指向 箭头函数</summary>
     <content type="html"><![CDATA[<h2 id="基础部分" tabindex="-1"> 基础部分</h2>
 <ul>
 <li>
@@ -6013,7 +6013,7 @@ parent<span>.</span><span>removeChild</span><span>(</span>parent<span>.</span>ch
     <id>https://mrhope.site/code/language/js/operators/</id>
     <link href="https://mrhope.site/code/language/js/operators/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html">二进制位运算符章节使用较少，无需阅读。 目录 算术运算符 (arithmetic.md); 比较运算符 (comparison.md); 布尔运算符 (boolean.md); 二进制位运算符 (bit.md) ; 其他运算符，运算顺序 (priority.md);</summary>
+    <summary type="html">提示 二进制位运算符章节使用较少，无需阅读。 目录 算术运算符 比较运算符 布尔运算符 二进制位运算符 其他运算符，运算顺序</summary>
     <content type="html"><![CDATA[<div>
 <p>提示</p>
 <p>二进制位运算符章节使用较少，无需阅读。</p>
