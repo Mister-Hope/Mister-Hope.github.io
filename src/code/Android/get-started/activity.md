@@ -19,7 +19,7 @@ tag:
 
 1. 在 app > java > com.example.myfirstapp > MainActivity 文件中，添加以下 sendMessage() 方法桩：
 
-   ::: code-tabs#anrdoid
+   ::: code-tabs#android
 
    @tab Kotlin
 
@@ -79,7 +79,7 @@ tag:
 
 在 MainActivity 中，添加 EXTRA_MESSAGE 常量和 sendMessage() 代码，如下所示：
 
-::: code-tabs#anrdoid
+::: code-tabs#android
 
 @tab Kotlin
 
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
 
 预计 Android Studio 会再次遇到 Cannot resolve symbol 错误。如需清除这些错误，请按 Alt+Enter（在 Mac 上则按 Option+Return）。您最后应导入以下内容：
 
-::: code-tabs#anrdoid
+::: code-tabs#android
 
 @tab Kotlin
 
@@ -209,7 +209,7 @@ Android Studio 会自动执行下列三项操作：
 
 1. 在 DisplayMessageActivity 中，将以下代码添加到 `onCreate()` 方法中：
 
-   ::: code-tabs#anrdoid
+   ::: code-tabs#android
 
    @tab Kotlin
 
@@ -250,7 +250,7 @@ Android Studio 会自动执行下列三项操作：
 
 1. 按 `Alt + Enter`（在 Mac 上则按 `Option + Return`）导入其他所需的类：
 
-   ::: code-tabs#anrdoid
+   ::: code-tabs#android
 
    @tab Kotlin
 

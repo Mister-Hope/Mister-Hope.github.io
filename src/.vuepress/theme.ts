@@ -1,7 +1,7 @@
 import { hopeTheme } from "vuepress-theme-hope";
 
 import { enNavbarConfig, zhNavbarConfig } from "./navbar.js";
-import { enSidebarConfig, zhSidebarConig } from "./sidebar/index.js";
+import { enSidebarConfig, zhSidebarConfig } from "./sidebar/index.js";
 
 export default hopeTheme({
   hostname: "https://mrhope.site",
@@ -25,7 +25,7 @@ export default hopeTheme({
   locales: {
     "/": {
       navbar: zhNavbarConfig,
-      sidebar: zhSidebarConig,
+      sidebar: zhSidebarConfig,
 
       blog: {
         description: "VuePress 项目成员，前端开发者，理论物理硕士在读",
@@ -89,7 +89,7 @@ export default hopeTheme({
       presentation: true,
       sub: true,
       sup: true,
-      vpre: true,
+      vPre: true,
     },
 
     pwa: {

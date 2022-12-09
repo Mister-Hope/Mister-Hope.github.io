@@ -21,7 +21,7 @@ category: JavaScript
 
 ```js
 const f = document.querySelector("#test-file-upload");
-const filename = f.value; // 'C:\fakepath\test.png'
+const filename = f.value; // 'C:\fake-path\test.png'
 
 if (
   !filename ||

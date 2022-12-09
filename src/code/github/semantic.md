@@ -14,7 +14,7 @@ category: GitHub
 
 当一个仓库所有的 commit 信息都是用标准的 semantic 格式时，用户可以很方便的理解每一个 commit 的作用。
 
-同时，senmantic 支持直接将某个提交或 PR 与特定 issue 链接，并自动关闭或引用这些 issue。
+同时，semantic 支持直接将某个提交或 PR 与特定 issue 链接，并自动关闭或引用这些 issue。
 
 通过一些第三方工具，大家可以基于这些备注信息进行过滤查找，更新日志生成等操作。
 
@@ -42,7 +42,7 @@ commit 的类型。
 - `docs`: documentation, 仅仅修改了文档，如 `README.md`
 - `style`: style, 仅仅是对格式进行修改，如逗号、缩进、空格等，不改变代码逻辑
 - `refactor`: refactor, 代码重构，一般更改了源文件或测试文件，但没有新增功能或修复 bug
-- `perf`: preformance, 优化相关，如提升性能、用户体验等
+- `perf`: performance, 优化相关，如提升性能、用户体验等
 - `test`: test, 测试用例，包括单元测试，集成测试
 - `chore`: chore, 对于库的其他内容的改变，一般不涉及到源文件或测试文件，比如更改 CI 设置，提升仓库以来等
 - `revert`: 版本回滚
