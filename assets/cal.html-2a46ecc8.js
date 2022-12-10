@@ -1,0 +1,2 @@
+import{ac as a,M as e,N as c,ae as s}from"./framework-6fc096bd.js";const t={},n=s(`<h1 id="cal" tabindex="-1"><a class="header-anchor" href="#cal" aria-hidden="true">#</a> cal</h1><p><code>cal</code> 命令显示本月的日历。</p><div class="language-bash" data-ext="sh"><pre class="language-bash"><code><span class="token function">cal</span>
+</code></pre></div>`,3),l=[n];function o(d,r){return e(),c("div",null,l)}const _=a(t,[["render",o],["__file","cal.html.vue"]]);export{_ as default};
