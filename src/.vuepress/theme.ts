@@ -83,7 +83,7 @@ export default hopeTheme({
       demo: true,
       flowchart: true,
       footnote: true,
-      imageMark: true,
+      imgMark: true,
       katex: true,
       mermaid: true,
       presentation: true,
