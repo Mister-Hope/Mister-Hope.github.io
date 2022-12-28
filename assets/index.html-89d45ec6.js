@@ -1,1 +1,0 @@
-import{ac as t,F as c,G as s,D as e}from"./framework-541b0f59.js";const n={},o=e("div",{class:"custom-container tip"},[e("p",{class:"custom-container-title"},"提示"),e("p",null,"正在完善中...")],-1),a=[o];function _(i,l){return c(),s("div",null,a)}const d=t(n,[["render",_],["__file","index.html.vue"]]);export{d as default};
