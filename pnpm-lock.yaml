@@ -5,7 +5,7 @@ specifiers:
   '@vuepress/client': 2.0.0-beta.60
   '@vuepress/plugin-docsearch': 2.0.0-beta.60
   cross-env: 7.0.3
-  markdownlint-cli: 0.32.2
+  markdownlint-cli: 0.33.0
   prettier: 2.8.1
   sass-loader: 13.2.0
   vue: 3.2.45
@@ -25,7 +25,7 @@ dependencies:
 
 devDependencies:
   cross-env: 7.0.3
-  markdownlint-cli: 0.32.2
+  markdownlint-cli: 0.33.0
   prettier: 2.8.1
 
 packages:
@@ -4496,7 +4496,7 @@ packages:
   /filelist/1.0.4:
     resolution: {integrity: sha512-w1cEuf3S+DrLCQL7ET6kz+gmlJdbq9J7yXCSjK/OZCPA+qEN1WyF4ZAf0YYJa4/shHJra2t/d/r8SV4Ji+x+8Q==}
     dependencies:
-      minimatch: 5.1.0
+      minimatch: 5.1.2
     dev: false
 
   /fill-range/7.0.1:
@@ -4681,7 +4681,7 @@ packages:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 5.1.0
+      minimatch: 5.1.2
       once: 1.4.0
     dev: true
 
@@ -4696,7 +4696,7 @@ packages:
     dependencies:
       dir-glob: 3.0.1
       fast-glob: 3.2.12
-      ignore: 5.2.0
+      ignore: 5.2.4
       merge2: 1.4.1
       slash: 4.0.0
     dev: false
@@ -4933,8 +4933,8 @@ packages:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
     dev: false
 
-  /ignore/5.2.0:
-    resolution: {integrity: sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==}
+  /ignore/5.2.4:
+    resolution: {integrity: sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==}
     engines: {node: '>= 4'}
 
   /immutable/4.1.0:
@@ -5263,8 +5263,8 @@ packages:
     hasBin: true
     dev: false
 
-  /jsonc-parser/3.1.0:
-    resolution: {integrity: sha512-DRf0QjnNeCUds3xTjKlQQ3DpJD51GvDjJfnxUVWg6PZTo2otSm+slzNAxU/35hF8/oJIKoG9slq30JYOsF2azg==}
+  /jsonc-parser/3.2.0:
+    resolution: {integrity: sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==}
     dev: true
 
   /jsonfile/6.1.0:
@@ -5444,31 +5444,25 @@ packages:
       mdurl: 1.0.1
       uc.micro: 1.0.6
 
-  /markdownlint-cli/0.32.2:
-    resolution: {integrity: sha512-xmJT1rGueUgT4yGNwk6D0oqQr90UJ7nMyakXtqjgswAkEhYYqjHew9RY8wDbOmh2R270IWjuKSeZzHDEGPAUkQ==}
+  /markdownlint-cli/0.33.0:
+    resolution: {integrity: sha512-zMK1oHpjYkhjO+94+ngARiBBrRDEUMzooDHBAHtmEIJ9oYddd9l3chCReY2mPlecwH7gflQp1ApilTo+o0zopQ==}
     engines: {node: '>=14'}
     hasBin: true
     dependencies:
       commander: 9.4.1
       get-stdin: 9.0.0
       glob: 8.0.3
-      ignore: 5.2.0
+      ignore: 5.2.4
       js-yaml: 4.1.0
-      jsonc-parser: 3.1.0
-      markdownlint: 0.26.2
-      markdownlint-rule-helpers: 0.17.2
-      minimatch: 5.1.0
+      jsonc-parser: 3.2.0
+      markdownlint: 0.27.0
+      minimatch: 5.1.2
       run-con: 1.2.11
     dev: true
 
-  /markdownlint-rule-helpers/0.17.2:
-    resolution: {integrity: sha512-XaeoW2NYSlWxMCZM2B3H7YTG6nlaLfkEZWMBhr4hSPlq9MuY2sy83+Xr89jXOqZMZYjvi5nBCGoFh7hHoPKZmA==}
-    engines: {node: '>=12'}
-    dev: true
-
-  /markdownlint/0.26.2:
-    resolution: {integrity: sha512-2Am42YX2Ex5SQhRq35HxYWDfz1NLEOZWWN25nqd2h3AHRKsGRE+Qg1gt1++exW792eXTrR4jCNHfShfWk9Nz8w==}
-    engines: {node: '>=14'}
+  /markdownlint/0.27.0:
+    resolution: {integrity: sha512-HtfVr/hzJJmE0C198F99JLaeada+646B5SaG2pVoEakLFI6iRGsvMqrnnrflq8hm1zQgwskEgqSnhDW11JBp0w==}
+    engines: {node: '>=14.18.0'}
     dependencies:
       markdown-it: 13.0.1
     dev: true
@@ -5607,8 +5601,8 @@ packages:
       brace-expansion: 1.1.11
     dev: false
 
-  /minimatch/5.1.0:
-    resolution: {integrity: sha512-9TPBGGak4nHfGZsPBohm9AWg6NoT7QTCehS3BIJABslyZbzxfV78QM2Y6+i741OPZIafFAaiiEMh5OyIrJPgtg==}
+  /minimatch/5.1.2:
+    resolution: {integrity: sha512-bNH9mmM9qsJ2X4r2Nat1B//1dJVcn3+iBLa3IgqJ7EbGaDNepL9QSHOxN4ng33s52VMMhhIfgCYDk3C4ZmlDAg==}
     engines: {node: '>=10'}
     dependencies:
       brace-expansion: 2.0.1
