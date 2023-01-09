@@ -27,6 +27,8 @@ export default hopeTheme({
       navbar: zhNavbarConfig,
       sidebar: zhSidebarConfig,
 
+      footer: '主题使用 <a href="https://theme-hope.vuejs.press/zh/">vuepress-theme-hope</a> | <a href="https://mrhope.site/about/site.html" target="_blank">关于网站</a>',
+
       blog: {
         description: "VuePress 项目成员，前端开发者，理论物理硕士在读",
         intro: "/about/",
@@ -46,6 +48,8 @@ export default hopeTheme({
     "/en/": {
       navbar: enNavbarConfig,
       sidebar: enSidebarConfig,
+
+      footer: 'Theme by <a href="https://theme-hope.vuejs.press">vuepress-theme-hope</a>',
 
       blog: {
         description:
@@ -145,12 +149,6 @@ export default hopeTheme({
                 purpose: "maskable",
                 type: "image/png",
               },
-              {
-                src: "/assets/icon/category-monochrome.png",
-                sizes: "192x192",
-                purpose: "monochrome",
-                type: "image/png",
-              },
             ],
             url: "/category/",
             description: "文章分类分组",
@@ -163,12 +161,6 @@ export default hopeTheme({
                 src: "/assets/icon/tag-maskable.png",
                 sizes: "192x192",
                 purpose: "maskable",
-                type: "image/png",
-              },
-              {
-                src: "/assets/icon/tag-monochrome.png",
-                sizes: "192x192",
-                purpose: "monochrome",
                 type: "image/png",
               },
             ],
@@ -185,12 +177,6 @@ export default hopeTheme({
                 purpose: "maskable",
                 type: "image/png",
               },
-              {
-                src: "/assets/icon/timeline-monochrome.png",
-                sizes: "192x192",
-                purpose: "monochrome",
-                type: "image/png",
-              },
             ],
             url: "/timeline/",
             description: "时间线文章列表",
@@ -203,12 +189,6 @@ export default hopeTheme({
                 src: "/assets/icon/about-maskable.png",
                 sizes: "192x192",
                 purpose: "maskable",
-                type: "image/png",
-              },
-              {
-                src: "/assets/icon/about-monochrome.png",
-                sizes: "192x192",
-                purpose: "monochrome",
                 type: "image/png",
               },
             ],
