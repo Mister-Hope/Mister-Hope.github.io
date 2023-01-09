@@ -6,8 +6,8 @@
     <link>https://mrhope.site/</link>
     <description>Where there is light, there is hope.</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 09 Jan 2023 03:12:18 GMT</pubDate>
-    <lastBuildDate>Mon, 09 Jan 2023 03:12:18 GMT</lastBuildDate>
+    <pubDate>Mon, 09 Jan 2023 12:13:07 GMT</pubDate>
+    <lastBuildDate>Mon, 09 Jan 2023 12:13:07 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>基础</category>
@@ -22,8 +22,8 @@
     <category>JavaScript</category>
     <category>设计</category>
     <category>Linux</category>
-    <category>随笔</category>
     <category>物理</category>
+    <category>随笔</category>
     <category>GitHub</category>
     <category>教程</category>
     <category>软件</category>
@@ -59,6 +59,65 @@
 <p></p>
 <p>点击添加输入想要添加到 path 的路径或者执行文件名即可</p>
 <p></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Git 代理</title>
+      <link>https://mrhope.site/software/git/proxy.html</link>
+      <guid>https://mrhope.site/software/git/proxy.html</guid>
+      <source url="https://mrhope.site/rss.xml">Git 代理</source>
+      <description>由于目前 GitHub 已经在全国大部分范围内被主要运营商进行 DNS 封锁，所以如果需要配合 GitHub 使用 Git，需要进行代理设置。 代理设置 通常情况下，我们可以通过设置环境变量 HTTP_PROXY 和 HTTPS_PROXY 来进行代理设置。 在 Windows 下，我们可以通过设置环境变量 HTTP_PROXY 和 HTTPS_PROXY 来进行代理设置。 Windows 例子 set HTTP_PROXY=http://127.0.0.1:1080 set HTTPS_PROXY=http://127.0.0.1:1080</description>
+      <category>Git</category>
+      <pubDate>Tue, 06 Dec 2022 14:18:22 GMT</pubDate>
+      <content:encoded><![CDATA[<p>由于目前 GitHub 已经在全国大部分范围内被主要运营商进行 DNS 封锁，所以如果需要配合 GitHub 使用 Git，需要进行代理设置。</p>
+<h2> 代理设置</h2>
+<p>通常情况下，我们可以通过设置环境变量 <code>HTTP_PROXY</code> 和 <code>HTTPS_PROXY</code> 来进行代理设置。</p>
+<p>在 Windows 下，我们可以通过设置环境变量 <code>HTTP_PROXY</code> 和 <code>HTTPS_PROXY</code> 来进行代理设置。</p>
+<details class="hint-container details"><summary>Windows 例子</summary>
+<div class="language-bash" data-ext="sh"><pre class="language-bash"><code><span class="token builtin class-name">set</span> <span class="token assign-left variable">HTTP_PROXY</span><span class="token operator">=</span>http://127.0.0.1:1080
+<span class="token builtin class-name">set</span> <span class="token assign-left variable">HTTPS_PROXY</span><span class="token operator">=</span>http://127.0.0.1:1080
+</code></pre></div></details>
+<details class="hint-container details"><summary>Linux 例子</summary>
+<div class="language-bash" data-ext="sh"><pre class="language-bash"><code><span class="token builtin class-name">export</span> <span class="token assign-left variable">HTTP_PROXY</span><span class="token operator">=</span>http://127.0.0.1:1080
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">HTTPS_PROXY</span><span class="token operator">=</span>http://127.0.0.1:1080
+</code></pre></div></details>
+<p>上述做法仅对当前终端有效，如果需要永久生效，可以将上述命令添加到系统环境变量 (Windows) 或 <code>~/.bashrc</code> (Linux) 中。</p>
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p><a href="/code/windows/env-variable.html" target="blank">Windows 添加环境变量</a></p>
+</div>
+<h2> SSH 配置</h2>
+<p>如果你在使用 22 端口通过 SSH 使用 Git，那么你需要在用户目录下的 <code>.ssh</code> 目录新建 <code>config</code> 文件，并输入以下内容:</p>
+<div class="language-conf line-numbers-mode" data-ext="conf"><pre class="language-conf"><code>Host github.com
+  User git
+  Port 22
+  Hostname github.com
+  # 这里在 Windows 下需要替换成实际目录，如 "C:\Users\mister-hope\.ssh\id_rsa"
+  IdentityFile "~/.ssh/id_rsa"
+  TCPKeepAlive yes
+  # Ubuntu 需要安装 corkscrew
+  ProxyCommand /usr/bin/corkscrew 172.31.16.1 10808 %h %p
+  # Windows 可以改为 Git 安装目录下的 connect，如
+  # ProxyCommand "C:\Program Files\Git\mingw64\bin\connect" -S 127.0.0.1:10808 -a none %h %p
+
+Host ssh.github.com
+  User git
+  Port 443
+  Hostname ssh.github.com
+  # 这里在 Windows 下需要替换成实际目录，如 "C:\Users\mister-hope\.ssh\id_rsa"
+  IdentityFile "~/.ssh/id_rsa"
+  TCPKeepAlive yes
+  # Ubuntu 需要安装 corkscrew
+  ProxyCommand /usr/bin/corkscrew 172.31.16.1 10808 %h %p
+  # Windows 可以改为 Git 安装目录下的 connect，如
+  # ProxyCommand "C:\Program Files\Git\mingw64\bin\connect" -S 127.0.0.1:10808 -a none %h %p
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>如果在 WSL 使用，获取 Windows 的 IP 地址命令为 <code>ip route | grep default | awk '{print $3}'</code>。</p>
+<p>特别注意，如不进行额外配置，每次重启后主机地址都会发生变化。</p>
+</div>
+<p>你可以使用 <code>ssh -T git@github.com</code> 来测试你的代理配置是否有效。</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -170,65 +229,6 @@ Host ssh.github.com
 <div class="language-conf" data-ext="conf"><pre class="language-conf"><code>export NODE_OPTIONS="--max-old-space-size=8192"
 </code></pre></div></li>
 </ol>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Git 代理</title>
-      <link>https://mrhope.site/software/git/proxy.html</link>
-      <guid>https://mrhope.site/software/git/proxy.html</guid>
-      <source url="https://mrhope.site/rss.xml">Git 代理</source>
-      <description>由于目前 GitHub 已经在全国大部分范围内被主要运营商进行 DNS 封锁，所以如果需要配合 GitHub 使用 Git，需要进行代理设置。 代理设置 通常情况下，我们可以通过设置环境变量 HTTP_PROXY 和 HTTPS_PROXY 来进行代理设置。 在 Windows 下，我们可以通过设置环境变量 HTTP_PROXY 和 HTTPS_PROXY 来进行代理设置。 Windows 例子 set HTTP_PROXY=http://127.0.0.1:1080 set HTTPS_PROXY=http://127.0.0.1:1080</description>
-      <category>Git</category>
-      <pubDate>Tue, 06 Dec 2022 14:18:22 GMT</pubDate>
-      <content:encoded><![CDATA[<p>由于目前 GitHub 已经在全国大部分范围内被主要运营商进行 DNS 封锁，所以如果需要配合 GitHub 使用 Git，需要进行代理设置。</p>
-<h2> 代理设置</h2>
-<p>通常情况下，我们可以通过设置环境变量 <code>HTTP_PROXY</code> 和 <code>HTTPS_PROXY</code> 来进行代理设置。</p>
-<p>在 Windows 下，我们可以通过设置环境变量 <code>HTTP_PROXY</code> 和 <code>HTTPS_PROXY</code> 来进行代理设置。</p>
-<details class="hint-container details"><summary>Windows 例子</summary>
-<div class="language-bash" data-ext="sh"><pre class="language-bash"><code><span class="token builtin class-name">set</span> <span class="token assign-left variable">HTTP_PROXY</span><span class="token operator">=</span>http://127.0.0.1:1080
-<span class="token builtin class-name">set</span> <span class="token assign-left variable">HTTPS_PROXY</span><span class="token operator">=</span>http://127.0.0.1:1080
-</code></pre></div></details>
-<details class="hint-container details"><summary>Linux 例子</summary>
-<div class="language-bash" data-ext="sh"><pre class="language-bash"><code><span class="token builtin class-name">export</span> <span class="token assign-left variable">HTTP_PROXY</span><span class="token operator">=</span>http://127.0.0.1:1080
-<span class="token builtin class-name">export</span> <span class="token assign-left variable">HTTPS_PROXY</span><span class="token operator">=</span>http://127.0.0.1:1080
-</code></pre></div></details>
-<p>上述做法仅对当前终端有效，如果需要永久生效，可以将上述命令添加到系统环境变量 (Windows) 或 <code>~/.bashrc</code> (Linux) 中。</p>
-<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p><a href="/code/windows/env-variable.html" target="blank">Windows 添加环境变量</a></p>
-</div>
-<h2> SSH 配置</h2>
-<p>如果你在使用 22 端口通过 SSH 使用 Git，那么你需要在用户目录下的 <code>.ssh</code> 目录新建 <code>config</code> 文件，并输入以下内容:</p>
-<div class="language-conf line-numbers-mode" data-ext="conf"><pre class="language-conf"><code>Host github.com
-  User git
-  Port 22
-  Hostname github.com
-  # 这里在 Windows 下需要替换成实际目录，如 "C:\Users\mister-hope\.ssh\id_rsa"
-  IdentityFile "~/.ssh/id_rsa"
-  TCPKeepAlive yes
-  # Ubuntu 需要安装 corkscrew
-  ProxyCommand /usr/bin/corkscrew 172.31.16.1 10808 %h %p
-  # Windows 可以改为 Git 安装目录下的 connect，如
-  # ProxyCommand "C:\Program Files\Git\mingw64\bin\connect" -S 127.0.0.1:10808 -a none %h %p
-
-Host ssh.github.com
-  User git
-  Port 443
-  Hostname ssh.github.com
-  # 这里在 Windows 下需要替换成实际目录，如 "C:\Users\mister-hope\.ssh\id_rsa"
-  IdentityFile "~/.ssh/id_rsa"
-  TCPKeepAlive yes
-  # Ubuntu 需要安装 corkscrew
-  ProxyCommand /usr/bin/corkscrew 172.31.16.1 10808 %h %p
-  # Windows 可以改为 Git 安装目录下的 connect，如
-  # ProxyCommand "C:\Program Files\Git\mingw64\bin\connect" -S 127.0.0.1:10808 -a none %h %p
-
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p>如果在 WSL 使用，获取 Windows 的 IP 地址命令为 <code>ip route | grep default | awk '{print $3}'</code>。</p>
-<p>特别注意，如不进行额外配置，每次重启后主机地址都会发生变化。</p>
-</div>
-<p>你可以使用 <code>ssh -T git@github.com</code> 来测试你的代理配置是否有效。</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -623,15 +623,6 @@ Host ssh.github.com
 ]]></content:encoded>
     </item>
     <item>
-      <title>Mr.Hope 介绍</title>
-      <link>https://mrhope.site/about/</link>
-      <guid>https://mrhope.site/about/</guid>
-      <source url="https://mrhope.site/rss.xml">Mr.Hope 介绍</source>
-      <description>slidestart Mr.Hope 介绍 Mr.Hope 基本信息 性别: 男; 年龄: 24; 婚姻情况: 未婚; 单身: 否; 爱好: 钓鱼、国际象棋、花体英文、羽毛球、编程; 性格比较开朗随和，热爱帮助他人，喜欢平时做一些开源项目。 学历经历 本科东北师范大学就读物理学; 现在在东北师范大学就读理论物理硕士; 暂无特别突出的科研成果; 联系方式...</description>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
-      <enclosure url="https://mrhope.site/logo.svg" type="image/svg+xml"/>
-    </item>
-    <item>
       <title>代码笔记</title>
       <link>https://mrhope.site/code/</link>
       <guid>https://mrhope.site/code/</guid>
@@ -640,6 +631,15 @@ Host ssh.github.com
       <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
       <content:encoded><![CDATA[<p>此处是 Mr.Hope 存放的一些代码笔记。</p>
 ]]></content:encoded>
+    </item>
+    <item>
+      <title>Mr.Hope 介绍</title>
+      <link>https://mrhope.site/about/</link>
+      <guid>https://mrhope.site/about/</guid>
+      <source url="https://mrhope.site/rss.xml">Mr.Hope 介绍</source>
+      <description>slidestart Mr.Hope 介绍 Mr.Hope 基本信息 性别: 男; 年龄: 24; 婚姻情况: 未婚; 单身: 否; 爱好: 钓鱼、国际象棋、花体英文、羽毛球、编程; 性格比较开朗随和，热爱帮助他人，喜欢平时做一些开源项目。 学历经历 本科东北师范大学就读物理学; 现在在东北师范大学就读理论物理硕士; 暂无特别突出的科研成果; 联系方式...</description>
+      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <enclosure url="https://mrhope.site/logo.svg" type="image/svg+xml"/>
     </item>
     <item>
       <title>UI 设计</title>
@@ -752,64 +752,6 @@ Host ssh.github.com
 ]]></content:encoded>
     </item>
     <item>
-      <title>Mr.Hope 的随笔</title>
-      <link>https://mrhope.site/note/</link>
-      <guid>https://mrhope.site/note/</guid>
-      <source url="https://mrhope.site/rss.xml">Mr.Hope 的随笔</source>
-      <description>这里是 Mr.Hope 的一些随笔，后续被整理进博客中。 四季 介绍 这是我在高一写的散文诗集，最初发表在空间日志上。 后续也写了一些诗补充了进去，其中以 “秋之思” 篇幅最多 近日将其作为少年回忆，整理在博客中。 秋之思 冬之语 春之诗 夏之歌</description>
-      <category>随笔</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
-      <content:encoded><![CDATA[<p>这里是 Mr.Hope 的一些随笔，后续被整理进博客中。</p>
-<h2> 四季</h2>
-<div class="hint-container tip">
-<p class="hint-container-title">介绍</p>
-<p>这是我在高一写的散文诗集，最初发表在空间日志上。</p>
-<p>后续也写了一些诗补充了进去，其中以 “秋之思” 篇幅最多</p>
-<p>近日将其作为少年回忆，整理在博客中。</p>
-</div>
-<ul>
-<li>
-<p><a href="/note/fall/catalog.html" target="blank">秋之思</a></p>
-</li>
-<li>
-<p><a href="/note/winter/note.html" target="blank">冬之语</a></p>
-</li>
-<li>
-<p><a href="/note/spring/1.html" target="blank">春之诗</a></p>
-</li>
-<li>
-<p><a href="/note/summer/1.html" target="blank">夏之歌</a></p>
-</li>
-</ul>
-<div class="hint-container tip">
-<p class="hint-container-title">其他方式</p>
-<p>也可查看 <a href="https://user.qzone.qq.com/1178522294" target="_blank" rel="noopener noreferrer">空间相册</a></p>
-</div>
-<h2> 笑谈人生</h2>
-<div class="hint-container tip">
-<p class="hint-container-title">介绍</p>
-<p>这是我在高一写的人生感悟，最初发表在空间日志上。</p>
-<p>近日将其作为少年回忆，整理在博客中。</p>
-</div>
-<ul>
-<li><a href="/note/life/" target="blank">点击前往</a></li>
-</ul>
-<h2> 轻言细语</h2>
-<div class="hint-container tip">
-<p class="hint-container-title">介绍</p>
-<p>这是我在高一写的一些小的散文诗，最初发表在空间日志上。</p>
-<p>近日将其作为少年回忆，整理在博客中。</p>
-</div>
-<ul>
-<li><a href="/note/poem/" target="blank">点击前往</a></li>
-</ul>
-<h2> Node.js 相关</h2>
-<ul>
-<li><a href="/note/node-js/current-path.html" target="blank">current-path 相关</a></li>
-</ul>
-]]></content:encoded>
-    </item>
-    <item>
       <title>物理笔记</title>
       <link>https://mrhope.site/physics/</link>
       <guid>https://mrhope.site/physics/</guid>
@@ -885,6 +827,64 @@ Host ssh.github.com
 <p>软件中的 code playground 可以在线运行大部分代码，大家在手机上就可以进行练习与尝试。</p>
 <h2> Adobe 软件</h2>
 <p>Adobe 全系软件的获取，请见 <a href="https://www.weibo.com/vposy" target="_blank" rel="noopener noreferrer">VPosy 的微博</a> 的置顶帖。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Mr.Hope 的随笔</title>
+      <link>https://mrhope.site/note/</link>
+      <guid>https://mrhope.site/note/</guid>
+      <source url="https://mrhope.site/rss.xml">Mr.Hope 的随笔</source>
+      <description>这里是 Mr.Hope 的一些随笔，后续被整理进博客中。 四季 介绍 这是我在高一写的散文诗集，最初发表在空间日志上。 后续也写了一些诗补充了进去，其中以 “秋之思” 篇幅最多 近日将其作为少年回忆，整理在博客中。 秋之思 冬之语 春之诗 夏之歌</description>
+      <category>随笔</category>
+      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <content:encoded><![CDATA[<p>这里是 Mr.Hope 的一些随笔，后续被整理进博客中。</p>
+<h2> 四季</h2>
+<div class="hint-container tip">
+<p class="hint-container-title">介绍</p>
+<p>这是我在高一写的散文诗集，最初发表在空间日志上。</p>
+<p>后续也写了一些诗补充了进去，其中以 “秋之思” 篇幅最多</p>
+<p>近日将其作为少年回忆，整理在博客中。</p>
+</div>
+<ul>
+<li>
+<p><a href="/note/fall/catalog.html" target="blank">秋之思</a></p>
+</li>
+<li>
+<p><a href="/note/winter/note.html" target="blank">冬之语</a></p>
+</li>
+<li>
+<p><a href="/note/spring/1.html" target="blank">春之诗</a></p>
+</li>
+<li>
+<p><a href="/note/summer/1.html" target="blank">夏之歌</a></p>
+</li>
+</ul>
+<div class="hint-container tip">
+<p class="hint-container-title">其他方式</p>
+<p>也可查看 <a href="https://user.qzone.qq.com/1178522294" target="_blank" rel="noopener noreferrer">空间相册</a></p>
+</div>
+<h2> 笑谈人生</h2>
+<div class="hint-container tip">
+<p class="hint-container-title">介绍</p>
+<p>这是我在高一写的人生感悟，最初发表在空间日志上。</p>
+<p>近日将其作为少年回忆，整理在博客中。</p>
+</div>
+<ul>
+<li><a href="/note/life/" target="blank">点击前往</a></li>
+</ul>
+<h2> 轻言细语</h2>
+<div class="hint-container tip">
+<p class="hint-container-title">介绍</p>
+<p>这是我在高一写的一些小的散文诗，最初发表在空间日志上。</p>
+<p>近日将其作为少年回忆，整理在博客中。</p>
+</div>
+<ul>
+<li><a href="/note/poem/" target="blank">点击前往</a></li>
+</ul>
+<h2> Node.js 相关</h2>
+<ul>
+<li><a href="/note/node-js/current-path.html" target="blank">current-path 相关</a></li>
+</ul>
 ]]></content:encoded>
     </item>
     <item>
@@ -1509,184 +1509,6 @@ Host ssh.github.com
 ]]></content:encoded>
     </item>
     <item>
-      <title>秋之思</title>
-      <link>https://mrhope.site/note/fall/</link>
-      <guid>https://mrhope.site/note/fall/</guid>
-      <source url="https://mrhope.site/rss.xml">秋之思</source>
-      <description>介绍 这是我在高一写的一个散文诗集，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。</description>
-      <category>随笔</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
-      <content:encoded><![CDATA[<div class="hint-container tip">
-<p class="hint-container-title">介绍</p>
-<p>这是我在高一写的一个散文诗集，最初发表在空间日志上。</p>
-<p>近日将其作为少年回忆，整理在博客中。</p>
-</div>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>in东师小程序贡献指南</title>
-      <link>https://mrhope.site/note/innenu/</link>
-      <guid>https://mrhope.site/note/innenu/</guid>
-      <source url="https://mrhope.site/rss.xml">in东师小程序贡献指南</source>
-      <description>简介 in 东师小程序的大部分页面都均由 YAML 文件生成。开发者只需要使用编辑器编辑 YAML，即可增添或修改小程序页面。 YAML YAML 是专门用来写配置文件的语言，非常简洁和强大，其设计目标，就是方便人类读写。 快速上手 为了编写小程序页面配置文件，您需要先学习 YAML 的规则，同时简单浏览一下一款编辑器 VSCode 的介绍 掌握上述两个内容之后，您就可以尝试对照 小程序简易参数表 通过 VSCode 编写页面 YAML 文件了，如果您觉得直接上手太难，您可以参阅 交互式教程 来体验一个示例。</description>
-      <category>小程序</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 简介</h2>
-<p>in 东师小程序的大部分页面都均由 YAML 文件生成。开发者只需要使用编辑器编辑 YAML，即可增添或修改小程序页面。</p>
-<div class="hint-container info">
-<p class="hint-container-title">YAML</p>
-<p>YAML 是专门用来写配置文件的语言，非常简洁和强大，其设计目标，就是方便人类读写。</p>
-</div>
-<h2> 快速上手</h2>
-<ol>
-<li>为了编写小程序页面配置文件，您需要先学习 <a href="/note/innenu/yaml.html" target="blank">YAML 的规则</a>，同时简单浏览一下一款编辑器 <a href="/software/vscode/simple.html" target="blank">VSCode 的介绍</a></li>
-<li>掌握上述两个内容之后，您就可以尝试对照 <a href="/note/innenu/tag-list.html" target="blank">小程序简易参数表</a> 通过 VSCode 编写页面 YAML 文件了，如果您觉得直接上手太难，您可以参阅 <a href="/note/innenu/get-started.html" target="blank">交互式教程</a> 来体验一个示例。</li>
-</ol>
-<div class="hint-container tip">
-<p class="hint-container-title">更多参考</p>
-<p>所有的小程序页面都在 <a href="https://github.com/Hope-Studio/innenu-res/blob/main/res/" target="_blank" rel="noopener noreferrer">https://github.com/Hope-Studio/innenu-res/blob/main/res/</a> 下，您可以尽情的进行参考。</p>
-</div>
-<h2> 开发注意事项</h2>
-<p>下面是开发中需要注意的一些问题。</p>
-<h3> 文件命名</h3>
-<p>由于小程序的访问是通过网址进行的，需要避免中文。页面 YAML 和媒体文件的文件名，请遵守以下命名规则:</p>
-<ol>
-<li>文件名只包含英文与数字和 <code>-</code>，不要包含特殊符号、空格或者中文字符。由多个单词组成的文件名建议使用 <code>-</code> 链接。如 <code>厚普公益学校</code> 可以表示为 <code>hope-good-school</code>。</li>
-<li>尽可能使用简短的单词，必要时可缩写，比如使用 <code>intro</code> <code>desc</code> <code>guide</code> 而不是 <code>introduction</code> <code>description</code>，<code>handbook</code>。</li>
-<li>表达相同或相近内容的多个媒体文件用 "短词组+编号" 的形式即可，不要试图用很长的文字命名。</li>
-</ol>
-<h3> 文本排版</h3>
-<ol>
-<li>中文和英文之间最好使用空格隔开</li>
-<li>尽量使用英文的括号</li>
-</ol>
-<h3> 注意高亮</h3>
-<p>如果您在使用 VSCode 进行编辑，您可能会注意到，数字和布尔值、字符串、对象的键名使用三种不同的颜色进行高亮。</p>
-<p>如果您编写的文件出现“红色波浪线”，或您编写的内容的高亮颜色，和其类型不符，那么说明您编写的格式出现了错误。</p>
-<h3> 图片压缩</h3>
-<p>图片在拍摄需使用 <a href="https://squoosh.app/" target="_blank" rel="noopener noreferrer">Squoosh</a> 进行压缩。</p>
-<ul>
-<li>含有透明区域的图片需要压缩至 Brower PNG 格式</li>
-<li>Gif 无需压缩</li>
-<li>其他图片压缩到 MozJpeg</li>
-</ul>
-<p>不含有文字、不需要细节的图片保持 4 万左右分辨率即可，如果图片使用后置摄像机拍摄，即 12 万或 20 万像素，压缩时可酌情考虑 50%缩放。</p>
-<h3> 文件转码</h3>
-<p>由于 QQ 小程序对 2003 版本 Office 格式支持极差，即 <code>.doc</code> <code>.xls</code> <code>.ppt</code>。如遇到此类文件，请尝试用 Office 打开，并转换为最新版格式 (<code>docx</code>、<code>xlsx</code>、<code>pptx</code>)。具体方式为 “文件” - “信息” - “转换”。</p>
-<h3> 媒体文件存放</h3>
-<p>由于 YAML 是纯文本文件，所有的图片、文件等需单独列出，并在对应的配置项处填入对应的网址。</p>
-<p>如:</p>
-<ul>
-<li><strong>img</strong> 组件的 <code>src</code></li>
-<li><strong>doc</strong> 组件的 <code>url</code></li>
-</ul>
-<p>in 东师服务器文件结构如下:</p>
-<ul>
-<li>文件存放在 <code>https://mp.innenu.com/file/</code> 下</li>
-<li>图片存放在 <code>https://mp.innenu.com/img/</code> 下</li>
-<li>页面 YAML 存放在 <code>https://mp.innenu.com/res/</code> 下</li>
-<li>图标存放在 <code>https://mp.innenu.com/res/icon/</code> 下</li>
-</ul>
-<div class="hint-container info">
-<p class="hint-container-title">相关信息</p>
-<p>关于完整的服务器文件结构，请访问 <a href="https://github.com/Hope-Studio/innenu-res" target="_blank" rel="noopener noreferrer">https://github.com/Hope-Studio/innenu-res</a></p>
-</div>
-<h3> 点位获取</h3>
-<p>如需获取地理点位，请使用 <a href="https://lbs.qq.com/getPoint/" target="_blank" rel="noopener noreferrer">腾讯地图选点工具</a>。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>笑谈人生</title>
-      <link>https://mrhope.site/note/life/</link>
-      <guid>https://mrhope.site/note/life/</guid>
-      <source url="https://mrhope.site/rss.xml">笑谈人生</source>
-      <description>介绍 这是我在高一写的人生感悟，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。 空间相册链接</description>
-      <category>随笔</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
-      <content:encoded><![CDATA[<div class="hint-container tip">
-<p class="hint-container-title">介绍</p>
-<p>这是我在高一写的人生感悟，最初发表在空间日志上。</p>
-<p>近日将其作为少年回忆，整理在博客中。</p>
-</div>
-<ul>
-<li><a href="https://h5.qzone.qq.com/ugc/share/?sharetag=126FDE98906EB067815B0EEA0F72BEC0&amp;subtype=3&amp;ciphertext=&amp;sid=&amp;blog_photo=&amp;g=&amp;res_uin=1178522294&amp;cellid=V10JYlHT49u8Sd&amp;subid=&amp;bp1=&amp;bp2=&amp;bp7=&amp;appid=4&amp;g_f=2000000103" target="_blank" rel="noopener noreferrer"><strong>空间相册链接</strong></a></li>
-</ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>NodeJS</title>
-      <link>https://mrhope.site/note/node-js/</link>
-      <guid>https://mrhope.site/note/node-js/</guid>
-      <source url="https://mrhope.site/rss.xml">NodeJS</source>
-      <description>目录 current-path 相关</description>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 目录</h2>
-<ul>
-<li><a href="/note/node-js/current-path.html" target="blank">current-path 相关</a></li>
-</ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>轻言细语</title>
-      <link>https://mrhope.site/note/poem/</link>
-      <guid>https://mrhope.site/note/poem/</guid>
-      <source url="https://mrhope.site/rss.xml">轻言细语</source>
-      <description>介绍 这是我在高一写的一些小的散文诗，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。</description>
-      <category>随笔</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
-      <content:encoded><![CDATA[<div class="hint-container tip">
-<p class="hint-container-title">介绍</p>
-<p>这是我在高一写的一些小的散文诗，最初发表在空间日志上。</p>
-<p>近日将其作为少年回忆，整理在博客中。</p>
-</div>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>春之诗</title>
-      <link>https://mrhope.site/note/spring/</link>
-      <guid>https://mrhope.site/note/spring/</guid>
-      <source url="https://mrhope.site/rss.xml">春之诗</source>
-      <description>介绍 这是我在高一写的第三篇散文诗集，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。</description>
-      <category>随笔</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
-      <content:encoded><![CDATA[<div class="hint-container tip">
-<p class="hint-container-title">介绍</p>
-<p>这是我在高一写的第三篇散文诗集，最初发表在空间日志上。</p>
-<p>近日将其作为少年回忆，整理在博客中。</p>
-</div>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>夏之歌</title>
-      <link>https://mrhope.site/note/summer/</link>
-      <guid>https://mrhope.site/note/summer/</guid>
-      <source url="https://mrhope.site/rss.xml">夏之歌</source>
-      <description>介绍 这是我在高一写的第四篇散文诗集，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。</description>
-      <category>随笔</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
-      <content:encoded><![CDATA[<div class="hint-container tip">
-<p class="hint-container-title">介绍</p>
-<p>这是我在高一写的第四篇散文诗集，最初发表在空间日志上。</p>
-<p>近日将其作为少年回忆，整理在博客中。</p>
-</div>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>冬之语</title>
-      <link>https://mrhope.site/note/winter/</link>
-      <guid>https://mrhope.site/note/winter/</guid>
-      <source url="https://mrhope.site/rss.xml">冬之语</source>
-      <description>介绍 这是我在高一写的第二篇散文诗集，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。</description>
-      <category>随笔</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
-      <content:encoded><![CDATA[<div class="hint-container tip">
-<p class="hint-container-title">介绍</p>
-<p>这是我在高一写的第二篇散文诗集，最初发表在空间日志上。</p>
-<p>近日将其作为少年回忆，整理在博客中。</p>
-</div>
-]]></content:encoded>
-    </item>
-    <item>
       <title>电磁学笔记</title>
       <link>https://mrhope.site/physics/electromagnetism/</link>
       <guid>https://mrhope.site/physics/electromagnetism/</guid>
@@ -1903,6 +1725,184 @@ Host ssh.github.com
 <p><a href="https://code.visualstudio.com/docs/getstarted/introvideos" target="_blank" rel="noopener noreferrer">官方视频</a></p>
 </li>
 </ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>秋之思</title>
+      <link>https://mrhope.site/note/fall/</link>
+      <guid>https://mrhope.site/note/fall/</guid>
+      <source url="https://mrhope.site/rss.xml">秋之思</source>
+      <description>介绍 这是我在高一写的一个散文诗集，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。</description>
+      <category>随笔</category>
+      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <content:encoded><![CDATA[<div class="hint-container tip">
+<p class="hint-container-title">介绍</p>
+<p>这是我在高一写的一个散文诗集，最初发表在空间日志上。</p>
+<p>近日将其作为少年回忆，整理在博客中。</p>
+</div>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>in东师小程序贡献指南</title>
+      <link>https://mrhope.site/note/innenu/</link>
+      <guid>https://mrhope.site/note/innenu/</guid>
+      <source url="https://mrhope.site/rss.xml">in东师小程序贡献指南</source>
+      <description>简介 in 东师小程序的大部分页面都均由 YAML 文件生成。开发者只需要使用编辑器编辑 YAML，即可增添或修改小程序页面。 YAML YAML 是专门用来写配置文件的语言，非常简洁和强大，其设计目标，就是方便人类读写。 快速上手 为了编写小程序页面配置文件，您需要先学习 YAML 的规则，同时简单浏览一下一款编辑器 VSCode 的介绍 掌握上述两个内容之后，您就可以尝试对照 小程序简易参数表 通过 VSCode 编写页面 YAML 文件了，如果您觉得直接上手太难，您可以参阅 交互式教程 来体验一个示例。</description>
+      <category>小程序</category>
+      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 简介</h2>
+<p>in 东师小程序的大部分页面都均由 YAML 文件生成。开发者只需要使用编辑器编辑 YAML，即可增添或修改小程序页面。</p>
+<div class="hint-container info">
+<p class="hint-container-title">YAML</p>
+<p>YAML 是专门用来写配置文件的语言，非常简洁和强大，其设计目标，就是方便人类读写。</p>
+</div>
+<h2> 快速上手</h2>
+<ol>
+<li>为了编写小程序页面配置文件，您需要先学习 <a href="/note/innenu/yaml.html" target="blank">YAML 的规则</a>，同时简单浏览一下一款编辑器 <a href="/software/vscode/simple.html" target="blank">VSCode 的介绍</a></li>
+<li>掌握上述两个内容之后，您就可以尝试对照 <a href="/note/innenu/tag-list.html" target="blank">小程序简易参数表</a> 通过 VSCode 编写页面 YAML 文件了，如果您觉得直接上手太难，您可以参阅 <a href="/note/innenu/get-started.html" target="blank">交互式教程</a> 来体验一个示例。</li>
+</ol>
+<div class="hint-container tip">
+<p class="hint-container-title">更多参考</p>
+<p>所有的小程序页面都在 <a href="https://github.com/Hope-Studio/innenu-res/blob/main/res/" target="_blank" rel="noopener noreferrer">https://github.com/Hope-Studio/innenu-res/blob/main/res/</a> 下，您可以尽情的进行参考。</p>
+</div>
+<h2> 开发注意事项</h2>
+<p>下面是开发中需要注意的一些问题。</p>
+<h3> 文件命名</h3>
+<p>由于小程序的访问是通过网址进行的，需要避免中文。页面 YAML 和媒体文件的文件名，请遵守以下命名规则:</p>
+<ol>
+<li>文件名只包含英文与数字和 <code>-</code>，不要包含特殊符号、空格或者中文字符。由多个单词组成的文件名建议使用 <code>-</code> 链接。如 <code>厚普公益学校</code> 可以表示为 <code>hope-good-school</code>。</li>
+<li>尽可能使用简短的单词，必要时可缩写，比如使用 <code>intro</code> <code>desc</code> <code>guide</code> 而不是 <code>introduction</code> <code>description</code>，<code>handbook</code>。</li>
+<li>表达相同或相近内容的多个媒体文件用 "短词组+编号" 的形式即可，不要试图用很长的文字命名。</li>
+</ol>
+<h3> 文本排版</h3>
+<ol>
+<li>中文和英文之间最好使用空格隔开</li>
+<li>尽量使用英文的括号</li>
+</ol>
+<h3> 注意高亮</h3>
+<p>如果您在使用 VSCode 进行编辑，您可能会注意到，数字和布尔值、字符串、对象的键名使用三种不同的颜色进行高亮。</p>
+<p>如果您编写的文件出现“红色波浪线”，或您编写的内容的高亮颜色，和其类型不符，那么说明您编写的格式出现了错误。</p>
+<h3> 图片压缩</h3>
+<p>图片在拍摄需使用 <a href="https://squoosh.app/" target="_blank" rel="noopener noreferrer">Squoosh</a> 进行压缩。</p>
+<ul>
+<li>含有透明区域的图片需要压缩至 Brower PNG 格式</li>
+<li>Gif 无需压缩</li>
+<li>其他图片压缩到 MozJpeg</li>
+</ul>
+<p>不含有文字、不需要细节的图片保持 4 万左右分辨率即可，如果图片使用后置摄像机拍摄，即 12 万或 20 万像素，压缩时可酌情考虑 50%缩放。</p>
+<h3> 文件转码</h3>
+<p>由于 QQ 小程序对 2003 版本 Office 格式支持极差，即 <code>.doc</code> <code>.xls</code> <code>.ppt</code>。如遇到此类文件，请尝试用 Office 打开，并转换为最新版格式 (<code>docx</code>、<code>xlsx</code>、<code>pptx</code>)。具体方式为 “文件” - “信息” - “转换”。</p>
+<h3> 媒体文件存放</h3>
+<p>由于 YAML 是纯文本文件，所有的图片、文件等需单独列出，并在对应的配置项处填入对应的网址。</p>
+<p>如:</p>
+<ul>
+<li><strong>img</strong> 组件的 <code>src</code></li>
+<li><strong>doc</strong> 组件的 <code>url</code></li>
+</ul>
+<p>in 东师服务器文件结构如下:</p>
+<ul>
+<li>文件存放在 <code>https://mp.innenu.com/file/</code> 下</li>
+<li>图片存放在 <code>https://mp.innenu.com/img/</code> 下</li>
+<li>页面 YAML 存放在 <code>https://mp.innenu.com/res/</code> 下</li>
+<li>图标存放在 <code>https://mp.innenu.com/res/icon/</code> 下</li>
+</ul>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
+<p>关于完整的服务器文件结构，请访问 <a href="https://github.com/Hope-Studio/innenu-res" target="_blank" rel="noopener noreferrer">https://github.com/Hope-Studio/innenu-res</a></p>
+</div>
+<h3> 点位获取</h3>
+<p>如需获取地理点位，请使用 <a href="https://lbs.qq.com/getPoint/" target="_blank" rel="noopener noreferrer">腾讯地图选点工具</a>。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>笑谈人生</title>
+      <link>https://mrhope.site/note/life/</link>
+      <guid>https://mrhope.site/note/life/</guid>
+      <source url="https://mrhope.site/rss.xml">笑谈人生</source>
+      <description>介绍 这是我在高一写的人生感悟，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。 空间相册链接</description>
+      <category>随笔</category>
+      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <content:encoded><![CDATA[<div class="hint-container tip">
+<p class="hint-container-title">介绍</p>
+<p>这是我在高一写的人生感悟，最初发表在空间日志上。</p>
+<p>近日将其作为少年回忆，整理在博客中。</p>
+</div>
+<ul>
+<li><a href="https://h5.qzone.qq.com/ugc/share/?sharetag=126FDE98906EB067815B0EEA0F72BEC0&amp;subtype=3&amp;ciphertext=&amp;sid=&amp;blog_photo=&amp;g=&amp;res_uin=1178522294&amp;cellid=V10JYlHT49u8Sd&amp;subid=&amp;bp1=&amp;bp2=&amp;bp7=&amp;appid=4&amp;g_f=2000000103" target="_blank" rel="noopener noreferrer"><strong>空间相册链接</strong></a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>NodeJS</title>
+      <link>https://mrhope.site/note/node-js/</link>
+      <guid>https://mrhope.site/note/node-js/</guid>
+      <source url="https://mrhope.site/rss.xml">NodeJS</source>
+      <description>目录 current-path 相关</description>
+      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 目录</h2>
+<ul>
+<li><a href="/note/node-js/current-path.html" target="blank">current-path 相关</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>轻言细语</title>
+      <link>https://mrhope.site/note/poem/</link>
+      <guid>https://mrhope.site/note/poem/</guid>
+      <source url="https://mrhope.site/rss.xml">轻言细语</source>
+      <description>介绍 这是我在高一写的一些小的散文诗，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。</description>
+      <category>随笔</category>
+      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <content:encoded><![CDATA[<div class="hint-container tip">
+<p class="hint-container-title">介绍</p>
+<p>这是我在高一写的一些小的散文诗，最初发表在空间日志上。</p>
+<p>近日将其作为少年回忆，整理在博客中。</p>
+</div>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>春之诗</title>
+      <link>https://mrhope.site/note/spring/</link>
+      <guid>https://mrhope.site/note/spring/</guid>
+      <source url="https://mrhope.site/rss.xml">春之诗</source>
+      <description>介绍 这是我在高一写的第三篇散文诗集，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。</description>
+      <category>随笔</category>
+      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <content:encoded><![CDATA[<div class="hint-container tip">
+<p class="hint-container-title">介绍</p>
+<p>这是我在高一写的第三篇散文诗集，最初发表在空间日志上。</p>
+<p>近日将其作为少年回忆，整理在博客中。</p>
+</div>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>夏之歌</title>
+      <link>https://mrhope.site/note/summer/</link>
+      <guid>https://mrhope.site/note/summer/</guid>
+      <source url="https://mrhope.site/rss.xml">夏之歌</source>
+      <description>介绍 这是我在高一写的第四篇散文诗集，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。</description>
+      <category>随笔</category>
+      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <content:encoded><![CDATA[<div class="hint-container tip">
+<p class="hint-container-title">介绍</p>
+<p>这是我在高一写的第四篇散文诗集，最初发表在空间日志上。</p>
+<p>近日将其作为少年回忆，整理在博客中。</p>
+</div>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>冬之语</title>
+      <link>https://mrhope.site/note/winter/</link>
+      <guid>https://mrhope.site/note/winter/</guid>
+      <source url="https://mrhope.site/rss.xml">冬之语</source>
+      <description>介绍 这是我在高一写的第二篇散文诗集，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。</description>
+      <category>随笔</category>
+      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <content:encoded><![CDATA[<div class="hint-container tip">
+<p class="hint-container-title">介绍</p>
+<p>这是我在高一写的第二篇散文诗集，最初发表在空间日志上。</p>
+<p>近日将其作为少年回忆，整理在博客中。</p>
+</div>
 ]]></content:encoded>
     </item>
     <item>
