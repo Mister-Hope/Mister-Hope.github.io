@@ -19,19 +19,6 @@
       ]
     },
     {
-      "title": "Git 代理",
-      "url": "https://mrhope.site/software/git/proxy.html",
-      "id": "https://mrhope.site/software/git/proxy.html",
-      "summary": "由于目前 GitHub 已经在全国大部分范围内被主要运营商进行 DNS 封锁，所以如果需要配合 GitHub 使用 Git，需要进行代理设置。 代理设置 通常情况下，我们可以通过设置环境变量 HTTP_PROXY 和 HTTPS_PROXY 来进行代理设置。 在 Windows 下，我们可以通过设置环境变量 HTTP_PROXY 和 HTTPS_PROXY 来进行代理设置。 Windows 例子 set HTTP_PROXY=http://127.0.0.1:1080 set HTTPS_PROXY=http://127.0.0.1:1080",
-      "content_html": "<p>由于目前 GitHub 已经在全国大部分范围内被主要运营商进行 DNS 封锁，所以如果需要配合 GitHub 使用 Git，需要进行代理设置。</p>\n<h2> 代理设置</h2>\n<p>通常情况下，我们可以通过设置环境变量 <code>HTTP_PROXY</code> 和 <code>HTTPS_PROXY</code> 来进行代理设置。</p>\n<p>在 Windows 下，我们可以通过设置环境变量 <code>HTTP_PROXY</code> 和 <code>HTTPS_PROXY</code> 来进行代理设置。</p>\n<details class=\"hint-container details\"><summary>Windows 例子</summary>\n<div class=\"language-bash\" data-ext=\"sh\"><pre class=\"language-bash\"><code><span class=\"token builtin class-name\">set</span> <span class=\"token assign-left variable\">HTTP_PROXY</span><span class=\"token operator\">=</span>http://127.0.0.1:1080\n<span class=\"token builtin class-name\">set</span> <span class=\"token assign-left variable\">HTTPS_PROXY</span><span class=\"token operator\">=</span>http://127.0.0.1:1080\n</code></pre></div></details>\n<details class=\"hint-container details\"><summary>Linux 例子</summary>\n<div class=\"language-bash\" data-ext=\"sh\"><pre class=\"language-bash\"><code><span class=\"token builtin class-name\">export</span> <span class=\"token assign-left variable\">HTTP_PROXY</span><span class=\"token operator\">=</span>http://127.0.0.1:1080\n<span class=\"token builtin class-name\">export</span> <span class=\"token assign-left variable\">HTTPS_PROXY</span><span class=\"token operator\">=</span>http://127.0.0.1:1080\n</code></pre></div></details>\n<p>上述做法仅对当前终端有效，如果需要永久生效，可以将上述命令添加到系统环境变量 (Windows) 或 <code>~/.bashrc</code> (Linux) 中。</p>\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">提示</p>\n<p><a href=\"/code/windows/env-variable.html\" target=\"blank\">Windows 添加环境变量</a></p>\n</div>\n<h2> SSH 配置</h2>\n<p>如果你在使用 22 端口通过 SSH 使用 Git，那么你需要在用户目录下的 <code>.ssh</code> 目录新建 <code>config</code> 文件，并输入以下内容:</p>\n<div class=\"language-conf line-numbers-mode\" data-ext=\"conf\"><pre class=\"language-conf\"><code>Host github.com\n  User git\n  Port 22\n  Hostname github.com\n  # 这里在 Windows 下需要替换成实际目录，如 \"C:\\Users\\mister-hope\\.ssh\\id_rsa\"\n  IdentityFile \"~/.ssh/id_rsa\"\n  TCPKeepAlive yes\n  # Ubuntu 需要安装 corkscrew\n  ProxyCommand /usr/bin/corkscrew 172.31.16.1 10808 %h %p\n  # Windows 可以改为 Git 安装目录下的 connect，如\n  # ProxyCommand \"C:\\Program Files\\Git\\mingw64\\bin\\connect\" -S 127.0.0.1:10808 -a none %h %p\n\nHost ssh.github.com\n  User git\n  Port 443\n  Hostname ssh.github.com\n  # 这里在 Windows 下需要替换成实际目录，如 \"C:\\Users\\mister-hope\\.ssh\\id_rsa\"\n  IdentityFile \"~/.ssh/id_rsa\"\n  TCPKeepAlive yes\n  # Ubuntu 需要安装 corkscrew\n  ProxyCommand /usr/bin/corkscrew 172.31.16.1 10808 %h %p\n  # Windows 可以改为 Git 安装目录下的 connect，如\n  # ProxyCommand \"C:\\Program Files\\Git\\mingw64\\bin\\connect\" -S 127.0.0.1:10808 -a none %h %p\n\n</code></pre><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><div class=\"hint-container tip\">\n<p class=\"hint-container-title\">提示</p>\n<p>如果在 WSL 使用，获取 Windows 的 IP 地址命令为 <code>ip route | grep default | awk '{print $3}'</code>。</p>\n<p>特别注意，如不进行额外配置，每次重启后主机地址都会发生变化。</p>\n</div>\n<p>你可以使用 <code>ssh -T git@github.com</code> 来测试你的代理配置是否有效。</p>\n",
-      "date_published": "2022-12-06T14:18:22.000Z",
-      "date_modified": "2022-12-06T14:18:22.000Z",
-      "authors": [],
-      "tags": [
-        "Git"
-      ]
-    },
-    {
       "title": "Update Flutter Project Deps",
       "url": "https://mrhope.site/note/flutter/",
       "id": "https://mrhope.site/note/flutter/",
@@ -62,6 +49,19 @@
       "date_modified": "2022-12-06T14:18:22.000Z",
       "authors": [],
       "tags": []
+    },
+    {
+      "title": "Git 代理",
+      "url": "https://mrhope.site/software/git/proxy.html",
+      "id": "https://mrhope.site/software/git/proxy.html",
+      "summary": "由于目前 GitHub 已经在全国大部分范围内被主要运营商进行 DNS 封锁，所以如果需要配合 GitHub 使用 Git，需要进行代理设置。 代理设置 通常情况下，我们可以通过设置环境变量 HTTP_PROXY 和 HTTPS_PROXY 来进行代理设置。 在 Windows 下，我们可以通过设置环境变量 HTTP_PROXY 和 HTTPS_PROXY 来进行代理设置。 Windows 例子 set HTTP_PROXY=http://127.0.0.1:1080 set HTTPS_PROXY=http://127.0.0.1:1080",
+      "content_html": "<p>由于目前 GitHub 已经在全国大部分范围内被主要运营商进行 DNS 封锁，所以如果需要配合 GitHub 使用 Git，需要进行代理设置。</p>\n<h2> 代理设置</h2>\n<p>通常情况下，我们可以通过设置环境变量 <code>HTTP_PROXY</code> 和 <code>HTTPS_PROXY</code> 来进行代理设置。</p>\n<p>在 Windows 下，我们可以通过设置环境变量 <code>HTTP_PROXY</code> 和 <code>HTTPS_PROXY</code> 来进行代理设置。</p>\n<details class=\"hint-container details\"><summary>Windows 例子</summary>\n<div class=\"language-bash\" data-ext=\"sh\"><pre class=\"language-bash\"><code><span class=\"token builtin class-name\">set</span> <span class=\"token assign-left variable\">HTTP_PROXY</span><span class=\"token operator\">=</span>http://127.0.0.1:1080\n<span class=\"token builtin class-name\">set</span> <span class=\"token assign-left variable\">HTTPS_PROXY</span><span class=\"token operator\">=</span>http://127.0.0.1:1080\n</code></pre></div></details>\n<details class=\"hint-container details\"><summary>Linux 例子</summary>\n<div class=\"language-bash\" data-ext=\"sh\"><pre class=\"language-bash\"><code><span class=\"token builtin class-name\">export</span> <span class=\"token assign-left variable\">HTTP_PROXY</span><span class=\"token operator\">=</span>http://127.0.0.1:1080\n<span class=\"token builtin class-name\">export</span> <span class=\"token assign-left variable\">HTTPS_PROXY</span><span class=\"token operator\">=</span>http://127.0.0.1:1080\n</code></pre></div></details>\n<p>上述做法仅对当前终端有效，如果需要永久生效，可以将上述命令添加到系统环境变量 (Windows) 或 <code>~/.bashrc</code> (Linux) 中。</p>\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">提示</p>\n<p><a href=\"/code/windows/env-variable.html\" target=\"blank\">Windows 添加环境变量</a></p>\n</div>\n<h2> SSH 配置</h2>\n<p>如果你在使用 22 端口通过 SSH 使用 Git，那么你需要在用户目录下的 <code>.ssh</code> 目录新建 <code>config</code> 文件，并输入以下内容:</p>\n<div class=\"language-conf line-numbers-mode\" data-ext=\"conf\"><pre class=\"language-conf\"><code>Host github.com\n  User git\n  Port 22\n  Hostname github.com\n  # 这里在 Windows 下需要替换成实际目录，如 \"C:\\Users\\mister-hope\\.ssh\\id_rsa\"\n  IdentityFile \"~/.ssh/id_rsa\"\n  TCPKeepAlive yes\n  # Ubuntu 需要安装 corkscrew\n  ProxyCommand /usr/bin/corkscrew 172.31.16.1 10808 %h %p\n  # Windows 可以改为 Git 安装目录下的 connect，如\n  # ProxyCommand \"C:\\Program Files\\Git\\mingw64\\bin\\connect\" -S 127.0.0.1:10808 -a none %h %p\n\nHost ssh.github.com\n  User git\n  Port 443\n  Hostname ssh.github.com\n  # 这里在 Windows 下需要替换成实际目录，如 \"C:\\Users\\mister-hope\\.ssh\\id_rsa\"\n  IdentityFile \"~/.ssh/id_rsa\"\n  TCPKeepAlive yes\n  # Ubuntu 需要安装 corkscrew\n  ProxyCommand /usr/bin/corkscrew 172.31.16.1 10808 %h %p\n  # Windows 可以改为 Git 安装目录下的 connect，如\n  # ProxyCommand \"C:\\Program Files\\Git\\mingw64\\bin\\connect\" -S 127.0.0.1:10808 -a none %h %p\n\n</code></pre><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><div class=\"hint-container tip\">\n<p class=\"hint-container-title\">提示</p>\n<p>如果在 WSL 使用，获取 Windows 的 IP 地址命令为 <code>ip route | grep default | awk '{print $3}'</code>。</p>\n<p>特别注意，如不进行额外配置，每次重启后主机地址都会发生变化。</p>\n</div>\n<p>你可以使用 <code>ssh -T git@github.com</code> 来测试你的代理配置是否有效。</p>\n",
+      "date_published": "2022-12-06T14:18:22.000Z",
+      "date_modified": "2022-12-06T14:18:22.000Z",
+      "authors": [],
+      "tags": [
+        "Git"
+      ]
     },
     {
       "title": "后端开发",
@@ -292,17 +292,6 @@
       ]
     },
     {
-      "title": "代码笔记",
-      "url": "https://mrhope.site/code/",
-      "id": "https://mrhope.site/code/",
-      "summary": "此处是 Mr.Hope 存放的一些代码笔记。",
-      "content_html": "<p>此处是 Mr.Hope 存放的一些代码笔记。</p>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-10-10T05:08:58.000Z",
-      "authors": [],
-      "tags": []
-    },
-    {
       "title": "Mr.Hope 介绍",
       "url": "https://mrhope.site/about/",
       "id": "https://mrhope.site/about/",
@@ -311,6 +300,17 @@
       "image": "https://mrhope.site/logo.svg",
       "date_published": "2022-02-06T16:01:38.000Z",
       "date_modified": "2022-04-03T17:06:01.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "代码笔记",
+      "url": "https://mrhope.site/code/",
+      "id": "https://mrhope.site/code/",
+      "summary": "此处是 Mr.Hope 存放的一些代码笔记。",
+      "content_html": "<p>此处是 Mr.Hope 存放的一些代码笔记。</p>\n",
+      "date_published": "2022-02-06T16:01:38.000Z",
+      "date_modified": "2022-10-10T05:08:58.000Z",
       "authors": [],
       "tags": []
     },
@@ -352,6 +352,19 @@
       ]
     },
     {
+      "title": "Mr.Hope 的随笔",
+      "url": "https://mrhope.site/note/",
+      "id": "https://mrhope.site/note/",
+      "summary": "这里是 Mr.Hope 的一些随笔，后续被整理进博客中。 四季 介绍 这是我在高一写的散文诗集，最初发表在空间日志上。 后续也写了一些诗补充了进去，其中以 “秋之思” 篇幅最多 近日将其作为少年回忆，整理在博客中。 秋之思 冬之语 春之诗 夏之歌",
+      "content_html": "<p>这里是 Mr.Hope 的一些随笔，后续被整理进博客中。</p>\n<h2> 四季</h2>\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">介绍</p>\n<p>这是我在高一写的散文诗集，最初发表在空间日志上。</p>\n<p>后续也写了一些诗补充了进去，其中以 “秋之思” 篇幅最多</p>\n<p>近日将其作为少年回忆，整理在博客中。</p>\n</div>\n<ul>\n<li>\n<p><a href=\"/note/fall/catalog.html\" target=\"blank\">秋之思</a></p>\n</li>\n<li>\n<p><a href=\"/note/winter/note.html\" target=\"blank\">冬之语</a></p>\n</li>\n<li>\n<p><a href=\"/note/spring/1.html\" target=\"blank\">春之诗</a></p>\n</li>\n<li>\n<p><a href=\"/note/summer/1.html\" target=\"blank\">夏之歌</a></p>\n</li>\n</ul>\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">其他方式</p>\n<p>也可查看 <a href=\"https://user.qzone.qq.com/1178522294\" target=\"_blank\" rel=\"noopener noreferrer\">空间相册</a></p>\n</div>\n<h2> 笑谈人生</h2>\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">介绍</p>\n<p>这是我在高一写的人生感悟，最初发表在空间日志上。</p>\n<p>近日将其作为少年回忆，整理在博客中。</p>\n</div>\n<ul>\n<li><a href=\"/note/life/\" target=\"blank\">点击前往</a></li>\n</ul>\n<h2> 轻言细语</h2>\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">介绍</p>\n<p>这是我在高一写的一些小的散文诗，最初发表在空间日志上。</p>\n<p>近日将其作为少年回忆，整理在博客中。</p>\n</div>\n<ul>\n<li><a href=\"/note/poem/\" target=\"blank\">点击前往</a></li>\n</ul>\n<h2> Node.js 相关</h2>\n<ul>\n<li><a href=\"/note/node-js/current-path.html\" target=\"blank\">current-path 相关</a></li>\n</ul>\n",
+      "date_published": "2022-02-06T16:01:38.000Z",
+      "date_modified": "2022-02-12T05:50:30.000Z",
+      "authors": [],
+      "tags": [
+        "随笔"
+      ]
+    },
+    {
       "title": "物理笔记",
       "url": "https://mrhope.site/physics/",
       "id": "https://mrhope.site/physics/",
@@ -374,19 +387,6 @@
       "date_modified": "2022-12-10T06:04:20.000Z",
       "authors": [],
       "tags": []
-    },
-    {
-      "title": "Mr.Hope 的随笔",
-      "url": "https://mrhope.site/note/",
-      "id": "https://mrhope.site/note/",
-      "summary": "这里是 Mr.Hope 的一些随笔，后续被整理进博客中。 四季 介绍 这是我在高一写的散文诗集，最初发表在空间日志上。 后续也写了一些诗补充了进去，其中以 “秋之思” 篇幅最多 近日将其作为少年回忆，整理在博客中。 秋之思 冬之语 春之诗 夏之歌",
-      "content_html": "<p>这里是 Mr.Hope 的一些随笔，后续被整理进博客中。</p>\n<h2> 四季</h2>\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">介绍</p>\n<p>这是我在高一写的散文诗集，最初发表在空间日志上。</p>\n<p>后续也写了一些诗补充了进去，其中以 “秋之思” 篇幅最多</p>\n<p>近日将其作为少年回忆，整理在博客中。</p>\n</div>\n<ul>\n<li>\n<p><a href=\"/note/fall/catalog.html\" target=\"blank\">秋之思</a></p>\n</li>\n<li>\n<p><a href=\"/note/winter/note.html\" target=\"blank\">冬之语</a></p>\n</li>\n<li>\n<p><a href=\"/note/spring/1.html\" target=\"blank\">春之诗</a></p>\n</li>\n<li>\n<p><a href=\"/note/summer/1.html\" target=\"blank\">夏之歌</a></p>\n</li>\n</ul>\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">其他方式</p>\n<p>也可查看 <a href=\"https://user.qzone.qq.com/1178522294\" target=\"_blank\" rel=\"noopener noreferrer\">空间相册</a></p>\n</div>\n<h2> 笑谈人生</h2>\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">介绍</p>\n<p>这是我在高一写的人生感悟，最初发表在空间日志上。</p>\n<p>近日将其作为少年回忆，整理在博客中。</p>\n</div>\n<ul>\n<li><a href=\"/note/life/\" target=\"blank\">点击前往</a></li>\n</ul>\n<h2> 轻言细语</h2>\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">介绍</p>\n<p>这是我在高一写的一些小的散文诗，最初发表在空间日志上。</p>\n<p>近日将其作为少年回忆，整理在博客中。</p>\n</div>\n<ul>\n<li><a href=\"/note/poem/\" target=\"blank\">点击前往</a></li>\n</ul>\n<h2> Node.js 相关</h2>\n<ul>\n<li><a href=\"/note/node-js/current-path.html\" target=\"blank\">current-path 相关</a></li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-12T05:50:30.000Z",
-      "authors": [],
-      "tags": [
-        "随笔"
-      ]
     },
     {
       "title": "基础介绍",
@@ -628,108 +628,6 @@
       ]
     },
     {
-      "title": "电磁学笔记",
-      "url": "https://mrhope.site/physics/electromagnetism/",
-      "id": "https://mrhope.site/physics/electromagnetism/",
-      "summary": "目录 第一章 第二章",
-      "content_html": "<h2> 目录</h2>\n<ul>\n<li>\n<p><a href=\"/physics/electromagnetism/charpter1.html\" target=\"blank\">第一章</a></p>\n</li>\n<li>\n<p><a href=\"/physics/electromagnetism/charpter2.html\" target=\"blank\">第二章</a></p>\n</li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:46:58.000Z",
-      "authors": [],
-      "tags": [
-        "物理"
-      ]
-    },
-    {
-      "title": "光学笔记",
-      "url": "https://mrhope.site/physics/optism/",
-      "id": "https://mrhope.site/physics/optism/",
-      "summary": "光学笔记 第一章",
-      "content_html": "<h1> 光学笔记</h1>\n<ul>\n<li><a href=\"/physics/optism/charpter1.html\" target=\"blank\">第一章</a></li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:46:58.000Z",
-      "authors": [],
-      "tags": [
-        "物理"
-      ]
-    },
-    {
-      "title": "量子力学笔记",
-      "url": "https://mrhope.site/physics/quatum/",
-      "id": "https://mrhope.site/physics/quatum/",
-      "summary": "量子力学笔记 第一章",
-      "content_html": "<h1> 量子力学笔记</h1>\n<ul>\n<li><a href=\"/physics/quatum/charpter1.html\" target=\"blank\">第一章</a></li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:46:58.000Z",
-      "authors": [],
-      "tags": [
-        "物理"
-      ]
-    },
-    {
-      "title": "热力学与统计物理笔记",
-      "url": "https://mrhope.site/physics/tsp/",
-      "id": "https://mrhope.site/physics/tsp/",
-      "summary": "目录 定义 第一章 第二章 第三章",
-      "content_html": "<h2> 目录</h2>\n<ul>\n<li>\n<p><a href=\"/physics/tsp/definition.html\" target=\"blank\">定义</a></p>\n</li>\n<li>\n<p><a href=\"/physics/tsp/charpter1.html\" target=\"blank\">第一章</a></p>\n</li>\n<li>\n<p><a href=\"/physics/tsp/charpter2.html\" target=\"blank\">第二章</a></p>\n</li>\n<li>\n<p><a href=\"/physics/tsp/charpter3.html\" target=\"blank\">第三章</a></p>\n</li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:46:58.000Z",
-      "authors": [],
-      "tags": [
-        "物理"
-      ]
-    },
-    {
-      "title": "COMSOL",
-      "url": "https://mrhope.site/software/comsol/",
-      "id": "https://mrhope.site/software/comsol/",
-      "summary": "这里是一些 Comsol 的学习资料整理与学习心得。",
-      "content_html": "<p>这里是一些 Comsol 的学习资料整理与学习心得。</p>\n",
-      "date_published": "2020-05-29T00:00:00.000Z",
-      "date_modified": "2022-02-07T16:53:33.000Z",
-      "authors": [],
-      "tags": [
-        "软件"
-      ]
-    },
-    {
-      "title": "Git",
-      "url": "https://mrhope.site/software/git/",
-      "id": "https://mrhope.site/software/git/",
-      "summary": "Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。在开发中分布式文件管理系统，可以便于多人协作开发。 交互式学习 如果您觉得本文太枯燥，这里有一个 交互式的分支演示与学习网站。您可以在这里领略 Git 的魅力。 但 Mr.Hope 仍建议您操作完再系统的学习并阅读以下内容。",
-      "content_html": "<p>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。在开发中分布式文件管理系统，可以便于多人协作开发。</p>\n<div class=\"hint-container info\">\n<p class=\"hint-container-title\">交互式学习</p>\n<p>如果您觉得本文太枯燥，这里有一个 <a href=\"http://learngitbranching.js.org/\" target=\"_blank\" rel=\"noopener noreferrer\">交互式的分支演示与学习网站</a>。您可以在这里领略 Git 的魅力。</p>\n<p>但 Mr.Hope 仍建议您操作完再系统的学习并阅读以下内容。</p>\n</div>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-09-07T17:18:06.000Z",
-      "authors": [],
-      "tags": [
-        "Git"
-      ]
-    },
-    {
-      "title": "工具软件",
-      "url": "https://mrhope.site/software/tool/",
-      "id": "https://mrhope.site/software/tool/",
-      "summary": "目录 PowerToys: Windows 实用工具合集 PasteEx: Paste As File 把剪贴板的内容直接粘贴为文件 typora: 一个页面很漂亮的 Markdown 编辑器 Potplayer: 心目中最 NB 的视频播放器，没有之一 Terminal: Windows 终端 PowerShell: Windows 的命令行外壳程序和脚本环境",
-      "content_html": "<h2> 目录</h2>\n<ul>\n<li>\n<p><a href=\"/software/tool/power-toys.html\" target=\"blank\">PowerToys</a>: Windows 实用工具合集</p>\n</li>\n<li>\n<p><a href=\"https://github.com/huiyadanli/PasteEx\" target=\"_blank\" rel=\"noopener noreferrer\">PasteEx</a>: Paste As File 把剪贴板的内容直接粘贴为文件</p>\n</li>\n<li>\n<p><a href=\"https://www.typora.io/\" target=\"_blank\" rel=\"noopener noreferrer\">typora</a>: 一个页面很漂亮的 Markdown 编辑器</p>\n</li>\n<li>\n<p><a href=\"https://potplayer.daum.net/?lang=zh_CN\" target=\"_blank\" rel=\"noopener noreferrer\">Potplayer</a>: 心目中最 NB 的视频播放器，没有之一</p>\n</li>\n<li>\n<p><a href=\"/software/tool/terminal/\" target=\"blank\">Terminal</a>: Windows 终端</p>\n</li>\n<li>\n<p><a href=\"/software/tool/powershell.html\" target=\"blank\">PowerShell</a>: Windows 的命令行外壳程序和脚本环境</p>\n</li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-12T05:50:30.000Z",
-      "authors": [],
-      "tags": []
-    },
-    {
-      "title": "VS Code",
-      "url": "https://mrhope.site/software/vscode/",
-      "id": "https://mrhope.site/software/vscode/",
-      "summary": "Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可在您的桌面上运行，并且可用于 Windows，macOS 和 Linux。它具有对 JavaScript，TypeScript 和 Node.js 的内置支持，并具有丰富的其他语言 (例如 C ++，C＃，Java，Python，PHP，Go) 和运行时 (例如 .NET 和 Unity) 扩展的生态系统。由微软出品，因其开源，可扩展和众多插件成为全球最受欢迎的代码编辑器。 特点 智能代码补全 使用 IntelliSense 可以更智能地编写代码、变量，方法和导入模块的完成。 热门扩展 启用其他语言，主题，调试器，命令等。",
-      "content_html": "<p>Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可在您的桌面上运行，并且可用于 Windows，macOS 和 Linux。它具有对 JavaScript，TypeScript 和 Node.js 的内置支持，并具有丰富的其他语言 (例如 C ++，C＃，Java，Python，PHP，Go) 和运行时 (例如 .NET 和 Unity) 扩展的生态系统。由微软出品，因其开源，可扩展和众多插件成为全球最受欢迎的代码编辑器。</p>\n<h2> 特点</h2>\n<ul>\n<li>\n<p>智能代码补全</p>\n<p>使用 IntelliSense 可以更智能地编写代码、变量，方法和导入模块的完成。</p>\n</li>\n<li>\n<p>热门扩展</p>\n<p>启用其他语言，主题，调试器，命令等。</p>\n</li>\n</ul>\n<h2> 目录</h2>\n<ul>\n<li>\n<p><a href=\"/software/vscode/install.html\" target=\"blank\">安装</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/get-started.html\" target=\"blank\">快速上手</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/\" target=\"blank\">指南</a></p>\n<ul>\n<li>\n<p><a href=\"/software/vscode/guide/basic.html\" target=\"blank\">基础介绍</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/customization.html\" target=\"blank\">个性化介绍</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/extension.html\" target=\"blank\">扩展介绍</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/file.html\" target=\"blank\">文件介绍</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/edit.html\" target=\"blank\">编辑技巧</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/intellisense.html\" target=\"blank\">智能补全</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/git.html\" target=\"blank\">Git 支持</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/debug.html\" target=\"blank\">调试介绍</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/task.html\" target=\"blank\">任务介绍</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/command.html\" target=\"blank\">命令行介绍</a></p>\n</li>\n</ul>\n</li>\n<li>\n<p><a href=\"/software/vscode/ui.html\" target=\"blank\">VS Code 用户界面</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/shortcut-key.html\" target=\"blank\">VS Code 快捷键</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/settings.html\" target=\"blank\">VS Code 设置</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/extension.html\" target=\"blank\">VS Code 推荐扩展</a></p>\n</li>\n</ul>\n<h2> 官方文档</h2>\n<ul>\n<li>\n<p><a href=\"https://code.visualstudio.com/\" target=\"_blank\" rel=\"noopener noreferrer\">VS Code 官网</a></p>\n</li>\n<li>\n<p><a href=\"https://code.visualstudio.com/docs\" target=\"_blank\" rel=\"noopener noreferrer\">官方文档</a></p>\n</li>\n<li>\n<p><a href=\"https://code.visualstudio.com/docs/getstarted/introvideos\" target=\"_blank\" rel=\"noopener noreferrer\">官方视频</a></p>\n</li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:46:58.000Z",
-      "authors": [],
-      "tags": [
-        "VS Code"
-      ]
-    },
-    {
       "title": "秋之思",
       "url": "https://mrhope.site/note/fall/",
       "id": "https://mrhope.site/note/fall/",
@@ -829,6 +727,108 @@
       "authors": [],
       "tags": [
         "随笔"
+      ]
+    },
+    {
+      "title": "电磁学笔记",
+      "url": "https://mrhope.site/physics/electromagnetism/",
+      "id": "https://mrhope.site/physics/electromagnetism/",
+      "summary": "目录 第一章 第二章",
+      "content_html": "<h2> 目录</h2>\n<ul>\n<li>\n<p><a href=\"/physics/electromagnetism/charpter1.html\" target=\"blank\">第一章</a></p>\n</li>\n<li>\n<p><a href=\"/physics/electromagnetism/charpter2.html\" target=\"blank\">第二章</a></p>\n</li>\n</ul>\n",
+      "date_published": "2022-02-06T16:01:38.000Z",
+      "date_modified": "2022-02-06T16:46:58.000Z",
+      "authors": [],
+      "tags": [
+        "物理"
+      ]
+    },
+    {
+      "title": "光学笔记",
+      "url": "https://mrhope.site/physics/optism/",
+      "id": "https://mrhope.site/physics/optism/",
+      "summary": "光学笔记 第一章",
+      "content_html": "<h1> 光学笔记</h1>\n<ul>\n<li><a href=\"/physics/optism/charpter1.html\" target=\"blank\">第一章</a></li>\n</ul>\n",
+      "date_published": "2022-02-06T16:01:38.000Z",
+      "date_modified": "2022-02-06T16:46:58.000Z",
+      "authors": [],
+      "tags": [
+        "物理"
+      ]
+    },
+    {
+      "title": "量子力学笔记",
+      "url": "https://mrhope.site/physics/quatum/",
+      "id": "https://mrhope.site/physics/quatum/",
+      "summary": "量子力学笔记 第一章",
+      "content_html": "<h1> 量子力学笔记</h1>\n<ul>\n<li><a href=\"/physics/quatum/charpter1.html\" target=\"blank\">第一章</a></li>\n</ul>\n",
+      "date_published": "2022-02-06T16:01:38.000Z",
+      "date_modified": "2022-02-06T16:46:58.000Z",
+      "authors": [],
+      "tags": [
+        "物理"
+      ]
+    },
+    {
+      "title": "热力学与统计物理笔记",
+      "url": "https://mrhope.site/physics/tsp/",
+      "id": "https://mrhope.site/physics/tsp/",
+      "summary": "目录 定义 第一章 第二章 第三章",
+      "content_html": "<h2> 目录</h2>\n<ul>\n<li>\n<p><a href=\"/physics/tsp/definition.html\" target=\"blank\">定义</a></p>\n</li>\n<li>\n<p><a href=\"/physics/tsp/charpter1.html\" target=\"blank\">第一章</a></p>\n</li>\n<li>\n<p><a href=\"/physics/tsp/charpter2.html\" target=\"blank\">第二章</a></p>\n</li>\n<li>\n<p><a href=\"/physics/tsp/charpter3.html\" target=\"blank\">第三章</a></p>\n</li>\n</ul>\n",
+      "date_published": "2022-02-06T16:01:38.000Z",
+      "date_modified": "2022-02-06T16:46:58.000Z",
+      "authors": [],
+      "tags": [
+        "物理"
+      ]
+    },
+    {
+      "title": "COMSOL",
+      "url": "https://mrhope.site/software/comsol/",
+      "id": "https://mrhope.site/software/comsol/",
+      "summary": "这里是一些 Comsol 的学习资料整理与学习心得。",
+      "content_html": "<p>这里是一些 Comsol 的学习资料整理与学习心得。</p>\n",
+      "date_published": "2020-05-29T00:00:00.000Z",
+      "date_modified": "2022-02-07T16:53:33.000Z",
+      "authors": [],
+      "tags": [
+        "软件"
+      ]
+    },
+    {
+      "title": "Git",
+      "url": "https://mrhope.site/software/git/",
+      "id": "https://mrhope.site/software/git/",
+      "summary": "Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。在开发中分布式文件管理系统，可以便于多人协作开发。 交互式学习 如果您觉得本文太枯燥，这里有一个 交互式的分支演示与学习网站。您可以在这里领略 Git 的魅力。 但 Mr.Hope 仍建议您操作完再系统的学习并阅读以下内容。",
+      "content_html": "<p>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。在开发中分布式文件管理系统，可以便于多人协作开发。</p>\n<div class=\"hint-container info\">\n<p class=\"hint-container-title\">交互式学习</p>\n<p>如果您觉得本文太枯燥，这里有一个 <a href=\"http://learngitbranching.js.org/\" target=\"_blank\" rel=\"noopener noreferrer\">交互式的分支演示与学习网站</a>。您可以在这里领略 Git 的魅力。</p>\n<p>但 Mr.Hope 仍建议您操作完再系统的学习并阅读以下内容。</p>\n</div>\n",
+      "date_published": "2022-02-06T16:01:38.000Z",
+      "date_modified": "2022-09-07T17:18:06.000Z",
+      "authors": [],
+      "tags": [
+        "Git"
+      ]
+    },
+    {
+      "title": "工具软件",
+      "url": "https://mrhope.site/software/tool/",
+      "id": "https://mrhope.site/software/tool/",
+      "summary": "目录 PowerToys: Windows 实用工具合集 PasteEx: Paste As File 把剪贴板的内容直接粘贴为文件 typora: 一个页面很漂亮的 Markdown 编辑器 Potplayer: 心目中最 NB 的视频播放器，没有之一 Terminal: Windows 终端 PowerShell: Windows 的命令行外壳程序和脚本环境",
+      "content_html": "<h2> 目录</h2>\n<ul>\n<li>\n<p><a href=\"/software/tool/power-toys.html\" target=\"blank\">PowerToys</a>: Windows 实用工具合集</p>\n</li>\n<li>\n<p><a href=\"https://github.com/huiyadanli/PasteEx\" target=\"_blank\" rel=\"noopener noreferrer\">PasteEx</a>: Paste As File 把剪贴板的内容直接粘贴为文件</p>\n</li>\n<li>\n<p><a href=\"https://www.typora.io/\" target=\"_blank\" rel=\"noopener noreferrer\">typora</a>: 一个页面很漂亮的 Markdown 编辑器</p>\n</li>\n<li>\n<p><a href=\"https://potplayer.daum.net/?lang=zh_CN\" target=\"_blank\" rel=\"noopener noreferrer\">Potplayer</a>: 心目中最 NB 的视频播放器，没有之一</p>\n</li>\n<li>\n<p><a href=\"/software/tool/terminal/\" target=\"blank\">Terminal</a>: Windows 终端</p>\n</li>\n<li>\n<p><a href=\"/software/tool/powershell.html\" target=\"blank\">PowerShell</a>: Windows 的命令行外壳程序和脚本环境</p>\n</li>\n</ul>\n",
+      "date_published": "2022-02-06T16:01:38.000Z",
+      "date_modified": "2022-02-12T05:50:30.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "VS Code",
+      "url": "https://mrhope.site/software/vscode/",
+      "id": "https://mrhope.site/software/vscode/",
+      "summary": "Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可在您的桌面上运行，并且可用于 Windows，macOS 和 Linux。它具有对 JavaScript，TypeScript 和 Node.js 的内置支持，并具有丰富的其他语言 (例如 C ++，C＃，Java，Python，PHP，Go) 和运行时 (例如 .NET 和 Unity) 扩展的生态系统。由微软出品，因其开源，可扩展和众多插件成为全球最受欢迎的代码编辑器。 特点 智能代码补全 使用 IntelliSense 可以更智能地编写代码、变量，方法和导入模块的完成。 热门扩展 启用其他语言，主题，调试器，命令等。",
+      "content_html": "<p>Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可在您的桌面上运行，并且可用于 Windows，macOS 和 Linux。它具有对 JavaScript，TypeScript 和 Node.js 的内置支持，并具有丰富的其他语言 (例如 C ++，C＃，Java，Python，PHP，Go) 和运行时 (例如 .NET 和 Unity) 扩展的生态系统。由微软出品，因其开源，可扩展和众多插件成为全球最受欢迎的代码编辑器。</p>\n<h2> 特点</h2>\n<ul>\n<li>\n<p>智能代码补全</p>\n<p>使用 IntelliSense 可以更智能地编写代码、变量，方法和导入模块的完成。</p>\n</li>\n<li>\n<p>热门扩展</p>\n<p>启用其他语言，主题，调试器，命令等。</p>\n</li>\n</ul>\n<h2> 目录</h2>\n<ul>\n<li>\n<p><a href=\"/software/vscode/install.html\" target=\"blank\">安装</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/get-started.html\" target=\"blank\">快速上手</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/\" target=\"blank\">指南</a></p>\n<ul>\n<li>\n<p><a href=\"/software/vscode/guide/basic.html\" target=\"blank\">基础介绍</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/customization.html\" target=\"blank\">个性化介绍</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/extension.html\" target=\"blank\">扩展介绍</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/file.html\" target=\"blank\">文件介绍</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/edit.html\" target=\"blank\">编辑技巧</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/intellisense.html\" target=\"blank\">智能补全</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/git.html\" target=\"blank\">Git 支持</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/debug.html\" target=\"blank\">调试介绍</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/task.html\" target=\"blank\">任务介绍</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/command.html\" target=\"blank\">命令行介绍</a></p>\n</li>\n</ul>\n</li>\n<li>\n<p><a href=\"/software/vscode/ui.html\" target=\"blank\">VS Code 用户界面</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/shortcut-key.html\" target=\"blank\">VS Code 快捷键</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/settings.html\" target=\"blank\">VS Code 设置</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/extension.html\" target=\"blank\">VS Code 推荐扩展</a></p>\n</li>\n</ul>\n<h2> 官方文档</h2>\n<ul>\n<li>\n<p><a href=\"https://code.visualstudio.com/\" target=\"_blank\" rel=\"noopener noreferrer\">VS Code 官网</a></p>\n</li>\n<li>\n<p><a href=\"https://code.visualstudio.com/docs\" target=\"_blank\" rel=\"noopener noreferrer\">官方文档</a></p>\n</li>\n<li>\n<p><a href=\"https://code.visualstudio.com/docs/getstarted/introvideos\" target=\"_blank\" rel=\"noopener noreferrer\">官方视频</a></p>\n</li>\n</ul>\n",
+      "date_published": "2022-02-06T16:01:38.000Z",
+      "date_modified": "2022-02-06T16:46:58.000Z",
+      "authors": [],
+      "tags": [
+        "VS Code"
       ]
     },
     {
