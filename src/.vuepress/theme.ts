@@ -11,6 +11,8 @@ export default hopeTheme({
     url: "https://mrhope.site",
   },
 
+  favicon: "/favicon.ico",
+
   iconAssets: "//at.alicdn.com/t/font_2410206_vuzkjonf4s9.css",
   iconPrefix: "iconfont icon-",
 
@@ -27,7 +29,10 @@ export default hopeTheme({
       navbar: zhNavbarConfig,
       sidebar: zhSidebarConfig,
 
-      footer: '主题使用 <a href="https://theme-hope.vuejs.press/zh/">vuepress-theme-hope</a> | <a href="https://mrhope.site/about/site.html" target="_blank">关于网站</a>',
+      footer:
+        '主题使用 <a href="https://theme-hope.vuejs.press/zh/">vuepress-theme-hope</a> | <a href="https://mrhope.site/about/site.html" target="_blank">关于网站</a>',
+
+      copyright: "MIT 协议",
 
       blog: {
         description: "VuePress 项目成员，前端开发者，理论物理硕士在读",
@@ -49,7 +54,10 @@ export default hopeTheme({
       navbar: enNavbarConfig,
       sidebar: enSidebarConfig,
 
-      footer: 'Theme by <a href="https://theme-hope.vuejs.press">vuepress-theme-hope</a>',
+      footer:
+        'Theme by <a href="https://theme-hope.vuejs.press">vuepress-theme-hope</a>',
+
+      copyright: "MIT License",
 
       blog: {
         description:
@@ -68,7 +76,9 @@ export default hopeTheme({
   copyright: "Copyright © 2019-present Mr.Hope",
 
   plugins: {
-    blog: true,
+    blog: {
+      excerptLength: 0,
+    },
 
     comment: {
       provider: "Waline",
@@ -97,7 +107,6 @@ export default hopeTheme({
     },
 
     pwa: {
-      favicon: "/favicon.ico",
       themeColor: "#5c92d1",
       cacheHTML: false,
       maxSize: 3072,
