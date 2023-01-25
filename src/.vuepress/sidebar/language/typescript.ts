@@ -29,7 +29,7 @@ export const typescript = arraySidebar([
   {
     text: "TS 进阶教程",
     icon: "typescript",
-    collapsable: true,
+    collapsible: true,
     prefix: "advanced/",
     children: [
       "",
@@ -47,7 +47,7 @@ export const typescript = arraySidebar([
   {
     text: "TS 工程",
     icon: "typescript",
-    collapsable: true,
+    collapsible: true,
     prefix: "engineering/",
     children: ["", "lint"],
   },
