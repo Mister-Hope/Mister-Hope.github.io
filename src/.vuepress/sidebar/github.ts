@@ -19,7 +19,7 @@ export const github = arraySidebar([
       {
         text: "常见 Actions",
         icon: "actions",
-        collapsable: true,
+        collapsible: true,
         children: ["checkout", "cache", "gh-pages-deploy"],
       },
     ],

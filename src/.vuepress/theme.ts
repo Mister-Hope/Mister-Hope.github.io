@@ -30,7 +30,7 @@ export default hopeTheme({
       sidebar: zhSidebarConfig,
 
       footer:
-        '主题使用 <a href="https://theme-hope.vuejs.press/zh/">vuepress-theme-hope</a> | <a href="https://mrhope.site/about/site.html" target="_blank">关于网站</a>',
+        '主题使用 <a href="https://theme-hope.vuejs.press/zh/">VuePress Theme Hope</a> | <a href="https://mrhope.site/about/site.html" target="_blank">关于网站</a>',
 
       copyright: "MIT 协议",
 

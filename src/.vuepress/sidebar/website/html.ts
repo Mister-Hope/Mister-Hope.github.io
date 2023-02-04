@@ -29,7 +29,7 @@ export const html = arraySidebar([
   {
     text: "定义",
     icon: "info",
-    collapsable: true,
+    collapsible: true,
     prefix: "definition/",
     children: ["uri", "url", "seo", "mime"],
   },
