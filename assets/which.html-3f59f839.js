@@ -1,0 +1,3 @@
+import{_ as e,X as c,Y as a,a3 as n}from"./framework-e3372978.js";const s={},h=n(`<h1 id="which" tabindex="-1"><a class="header-anchor" href="#which" aria-hidden="true">#</a> which</h1><p><code>which</code> 命令根据 <code>PATH</code> 环境变量指定的顺序，返回最早发现某个命令的位置。即不指定路径时，实际执行的命令的完整路径。</p><div class="language-bash" data-ext="sh"><pre class="language-bash"><code>$ <span class="token function">which</span> <span class="token function">node</span>
+/usr/bin/node
+</code></pre></div>`,3),o=[h];function t(i,d){return c(),a("div",null,o)}const l=e(s,[["render",t],["__file","which.html.vue"]]);export{l as default};
