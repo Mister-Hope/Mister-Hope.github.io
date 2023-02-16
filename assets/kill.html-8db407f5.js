@@ -1,2 +1,0 @@
-import{_ as e,X as a,Y as l,a3 as s}from"./framework-e3372978.js";const c={},t=s(`<h1 id="kill" tabindex="-1"><a class="header-anchor" href="#kill" aria-hidden="true">#</a> kill</h1><p><code>kill</code> 命令用户终止指定进程。</p><div class="language-bash" data-ext="sh"><pre class="language-bash"><code><span class="token function">kill</span> PID
-</code></pre></div>`,3),n=[t];function i(o,d){return a(),l("div",null,n)}const _=e(c,[["render",i],["__file","kill.html.vue"]]);export{_ as default};
