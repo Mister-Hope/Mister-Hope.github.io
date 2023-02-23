@@ -2,20 +2,20 @@
 home: true
 layout: Blog
 icon: home
-title: 主页
+title: Home
 heroImage: /logo.svg
-heroText: 𝓜𝓻. 𝓗𝓸𝓹𝓮
+heroText: My Blog
 heroFullScreen: true
 tagline: Where there is light, there is hope
 projects:
   - name: vuepress
-    desc: 基于 Vue 的静态文档构建器
-    link: https://v2.vuepress.vuejs.org/zh/
+    desc: 基于 Vue Static document builder
+    link: https://v2.vuepress.vuejs.org/en/
     icon: /assets/img/vuepress.png
 
   - name: vuepress-theme-hope
     desc: 一个功能强大的 Vuepress 主题✨
-    link: https://vuepress-theme-hope.github.io/v2/zh/
+    link: https://vuepress-theme-hope.github.io/v2/en/
     icon: /assets/img/vuepress-hope-logo.svg
 
   - name: Waline
@@ -30,7 +30,7 @@ projects:
 
   - name: vuepress-plugin-md-enhance
     desc: Vuepress Markdown 增强插件
-    link: https://vuepress-theme-hope.github.io/v2/md-enhance/zh/
+    link: https://vuepress-theme-hope.github.io/v2/md-enhance/en/
     icon: /assets/img/vuepress-hope-logo.svg
 
   - name: "bycrypt-ts"
