@@ -19,7 +19,7 @@ import { comsol, software, vscode } from "./software/index.js";
 import { vue } from "./vue.js";
 import { css, html, jquery, website } from "./website/index.js";
 
-export const zhSidebarConig = sidebar({
+export const zhSidebarConfig = sidebar({
   "/software/vscode/": vscode,
 
   "/software/git/": "structure",

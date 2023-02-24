@@ -25,6 +25,7 @@ tag:
   "editor.formatOnSave": true,
   "editor.guides.bracketPairs": true,
   "editor.inlineSuggest.enabled": true,
+  "explorer.incrementalNaming": "smart",
   "editor.mouseWheelZoom": true,
   "editor.rulers": [80],
   "editor.quickSuggestions": {
@@ -78,7 +79,6 @@ tag:
   "workbench.activityBar.visible": true,
   "workbench.colorTheme": "One Dark Pro",
   "workbench.commandPalette.preserveInput": true,
-  "workbench.enableExperiments": false,
   "workbench.editor.scrollToSwitchTabs": true,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
@@ -125,7 +125,10 @@ tag:
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.enableBell": true,
   "terminal.integrated.defaultProfile.windows": "PowerShell",
-  "terminal.integrated.defaultProfile.linux": "/bin/bash",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.env.linux": {
+    "NODE_OPTIONS": "--max_old_space_size=4096"
+  },
   "terminal.integrated.env.windows": {
     "NODE_OPTIONS": "--max_old_space_size=4096"
   },
@@ -141,7 +144,7 @@ tag:
   "terminal.integrated.smoothScrolling": true,
   "terminal.integrated.tabs.enabled": true,
   // git
-  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.ignoreTrimWhitespace": true,
   "diffEditor.renderSideBySide": true,
   "git.autofetch": true,
   "git.confirmSync": false,
@@ -156,10 +159,7 @@ tag:
   "npm-intellisense.packageSubfoldersIntellisense": true,
   "npm-intellisense.scanDevDependencies": true,
   "npm-intellisense.showBuildInLibs": true,
-  // 远程连接
-  "remote.SSH.remotePlatform": {
-    "codeserver": "linux"
-  },
+
   // 特定格式文件设置
   "[cpp]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
@@ -238,16 +238,18 @@ tag:
 
   // c++ 设置
   "C_Cpp.default.cppStandard": "c++23",
+  // 需要根据自己情况设置
+  "C_Cpp.default.includePath": [
+    // "C:/Program Files/mingw-w64/lib/gcc/x86_64-w64-mingw32/8.1.0/include",
+    // "C:/Program Files/mingw-w64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed",
+    // "C:/Program Files/mingw-w64/x86_64-w64-mingw32/include"
+  ],
   "C_Cpp.clang_format_fallbackStyle": "Google",
 
   // dart
   "dart.debugSdkLibraries": false,
   "dart.openDevTools": "flutter",
-
-  // java
   "java.jdt.ls.java.home": "c:\\Program Files\\Java\\jdk-18.0.1",
-
-  // python
   "python.languageServer": "Pylance",
 
   // css颜色提示配置
@@ -292,11 +294,13 @@ tag:
   "gitlens.gitCommands.closeOnFocusOut": true,
   "gitlens.views.repositories.branches.layout": "list",
   "gitlens.advanced.messages": {
+    "suppressCommitNotFoundWarning": true,
     "suppressRebaseSwitchToTextWarning": true
   },
 
   // markdown 设置
   "markdown.extension.orderedList.marker": "one",
+  "markdown.validate.enabled": true,
   "markdown.extension.print.imgToBase64": true,
 
   // markdownlint 设置
@@ -317,7 +321,8 @@ tag:
     }
   },
 
-  "markdown-pdf.executablePath": "C:/Users/zhang/AppData/Local/Google/Chrome/Application/chrome.exe",
+  // 根据自己情况设置
+  "markdown-pdf.executablePath": "C:/Users/mister-hope/AppData/Local/Google/Chrome/Application/chrome.exe",
 
   // XML工具设置
   "xmlTools.enforcePrettySelfClosingTagOnFormat": true,
@@ -342,184 +347,15 @@ tag:
     "test",
     "__tests__"
   ],
+  "projectManager.git.baseFolders": ["C:/Projects/"],
   // TODO Highlight 配置
   "todohighlight.keywords": ["WARNING: "],
-  // leetcode
-  "leetcode.hint.commentDescription": false,
-  "leetcode.hint.commandShortcut": false,
-  "leetcode.hint.configWebviewMarkdown": false,
-  "leetcode.hint.setDefaultLanguage": false,
-  "leetcode.enableStatusBar": false,
-  "leetcode.endpoint": "leetcode",
-  "leetcode.showDescription": "In Webview",
-  "leetcode.workspaceFolder": "C:/Users/zhang/.leetcode",
+
   // stylelint 设置
   "stylelint.packageManager": "pnpm",
   // Java
   "redhat.telemetry.enabled": false,
-  // latex
-  "latex-workshop.view.pdf.viewer": "tab",
-  "latex-workshop.latex.tools": [
-    {
-      "name": "xelatex",
-      "command": "xelatex",
-      "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "%DOCFILE%"
-      ],
-      "env": {}
-    },
-    {
-      "name": "latexmk (xelatex)",
-      "command": "latexmk",
-      "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "-xelatex",
-        "-outdir=%OUTDIR%",
-        "%DOCFILE%"
-      ],
-      "env": {}
-    },
-    {
-      "name": "latexmk (xelatex) with bibtex",
-      "command": "latexmk",
-      "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "-bibtex",
-        "-xelatex",
-        "-outdir=%OUTDIR%",
-        "%DOCFILE%"
-      ],
-      "env": {}
-    },
-    {
-      "name": "latexmk",
-      "command": "latexmk",
-      "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "-pdf",
-        "-outdir=%OUTDIR%",
-        "%DOCFILE%"
-      ],
-      "env": {}
-    },
-    {
-      "name": "lualatexmk",
-      "command": "latexmk",
-      "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "-lualatex",
-        "-outdir=%OUTDIR%",
-        "%DOCFILE%"
-      ],
-      "env": {}
-    },
-    {
-      "name": "latexmk_rconly",
-      "command": "latexmk",
-      "args": ["%DOCFILE%"],
-      "env": {}
-    },
-    {
-      "name": "pdflatex",
-      "command": "pdflatex",
-      "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "%DODOCFILEC%"
-      ],
-      "env": {}
-    },
-    {
-      "name": "bibtex",
-      "command": "bibtex",
-      "args": ["%DOCFILE%"],
-      "env": {}
-    },
-    {
-      "name": "rnw2tex",
-      "command": "Rscript",
-      "args": [
-        "-e",
-        "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
-      ],
-      "env": {}
-    },
-    {
-      "name": "jnw2tex",
-      "command": "julia",
-      "args": ["-e", "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"],
-      "env": {}
-    },
-    {
-      "name": "jnw2texmintex",
-      "command": "julia",
-      "args": [
-        "-e",
-        "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
-      ],
-      "env": {}
-    },
-    {
-      "name": "tectonic",
-      "command": "tectonic",
-      "args": ["--synctex", "--keep-logs", "%DOC%.tex"],
-      "env": {}
-    }
-  ],
-  "latex-workshop.latex.recipes": [
-    {
-      "name": "xelatex",
-      "tools": ["xelatex"]
-    },
-    {
-      "name": "latexmk 🔃",
-      "tools": ["latexmk"]
-    },
-    {
-      "name": "latexmk (xelatex)",
-      "tools": ["latexmk (xelatex)"]
-    },
-    {
-      "name": "latexmk (xelatex) with bibtex",
-      "tools": ["latexmk (xelatex) with bibtex"]
-    },
-    {
-      "name": "latexmk (latexmkrc)",
-      "tools": ["latexmk_rconly"]
-    },
-    {
-      "name": "latexmk (lualatex)",
-      "tools": ["lualatexmk"]
-    },
-    {
-      "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
-      "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
-    },
-    {
-      "name": "Compile Rnw files",
-      "tools": ["rnw2tex", "latexmk"]
-    },
-    {
-      "name": "Compile Jnw files",
-      "tools": ["jnw2tex", "latexmk"]
-    },
-    {
-      "name": "tectonic",
-      "tools": ["tectonic"]
-    }
-  ],
+
   // github copilot
   "github.copilot.enable": {
     "*": true,

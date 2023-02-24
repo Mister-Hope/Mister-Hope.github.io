@@ -5,7 +5,7 @@ export const design = arraySidebar([
   {
     text: "图标",
     icon: "discover",
-    collapsable: false,
+    collapsible: false,
     prefix: "icon/",
     children: [
       "",
@@ -25,7 +25,7 @@ export const design = arraySidebar([
   {
     text: "导航",
     icon: "navigate",
-    collapsable: false,
+    collapsible: false,
     prefix: "navigation/",
     children: [
       "intro",
@@ -39,7 +39,7 @@ export const design = arraySidebar([
   {
     text: "交互",
     icon: "interact",
-    collapsable: false,
+    collapsible: false,
     prefix: "interact/",
     children: ["", "search", "text-field"],
   },

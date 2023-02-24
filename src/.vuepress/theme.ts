@@ -1,7 +1,7 @@
 import { hopeTheme } from "vuepress-theme-hope";
 
 import { enNavbarConfig, zhNavbarConfig } from "./navbar.js";
-import { enSidebarConfig, zhSidebarConig } from "./sidebar/index.js";
+import { enSidebarConfig, zhSidebarConfig } from "./sidebar/index.js";
 
 export default hopeTheme({
   hostname: "https://mrhope.site",
@@ -10,6 +10,8 @@ export default hopeTheme({
     name: "Mr.Hope",
     url: "https://mrhope.site",
   },
+
+  favicon: "/favicon.ico",
 
   iconAssets: "//at.alicdn.com/t/font_2410206_vuzkjonf4s9.css",
   iconPrefix: "iconfont icon-",
@@ -25,7 +27,12 @@ export default hopeTheme({
   locales: {
     "/": {
       navbar: zhNavbarConfig,
-      sidebar: zhSidebarConig,
+      sidebar: zhSidebarConfig,
+
+      footer:
+        '主题使用 <a href="https://theme-hope.vuejs.press/zh/">VuePress Theme Hope</a> | <a href="https://mrhope.site/about/site.html" target="_blank">关于网站</a>',
+
+      copyright: "MIT 协议",
 
       blog: {
         description: "VuePress 项目成员，前端开发者，理论物理硕士在读",
@@ -47,6 +54,11 @@ export default hopeTheme({
       navbar: enNavbarConfig,
       sidebar: enSidebarConfig,
 
+      footer:
+        'Theme by <a href="https://theme-hope.vuejs.press">vuepress-theme-hope</a>',
+
+      copyright: "MIT License",
+
       blog: {
         description:
           "VuePress project member, front-end developer, studying for a master's degree in theoretical physics",
@@ -64,7 +76,9 @@ export default hopeTheme({
   copyright: "Copyright © 2019-present Mr.Hope",
 
   plugins: {
-    blog: true,
+    blog: {
+      excerptLength: 0,
+    },
 
     comment: {
       provider: "Waline",
@@ -83,17 +97,16 @@ export default hopeTheme({
       demo: true,
       flowchart: true,
       footnote: true,
-      imageMark: true,
+      imgMark: true,
       katex: true,
       mermaid: true,
       presentation: true,
       sub: true,
       sup: true,
-      vpre: true,
+      vPre: true,
     },
 
     pwa: {
-      favicon: "/favicon.ico",
       themeColor: "#5c92d1",
       cacheHTML: false,
       maxSize: 3072,
@@ -145,12 +158,6 @@ export default hopeTheme({
                 purpose: "maskable",
                 type: "image/png",
               },
-              {
-                src: "/assets/icon/category-monochrome.png",
-                sizes: "192x192",
-                purpose: "monochrome",
-                type: "image/png",
-              },
             ],
             url: "/category/",
             description: "文章分类分组",
@@ -163,12 +170,6 @@ export default hopeTheme({
                 src: "/assets/icon/tag-maskable.png",
                 sizes: "192x192",
                 purpose: "maskable",
-                type: "image/png",
-              },
-              {
-                src: "/assets/icon/tag-monochrome.png",
-                sizes: "192x192",
-                purpose: "monochrome",
                 type: "image/png",
               },
             ],
@@ -185,12 +186,6 @@ export default hopeTheme({
                 purpose: "maskable",
                 type: "image/png",
               },
-              {
-                src: "/assets/icon/timeline-monochrome.png",
-                sizes: "192x192",
-                purpose: "monochrome",
-                type: "image/png",
-              },
             ],
             url: "/timeline/",
             description: "时间线文章列表",
@@ -203,12 +198,6 @@ export default hopeTheme({
                 src: "/assets/icon/about-maskable.png",
                 sizes: "192x192",
                 purpose: "maskable",
-                type: "image/png",
-              },
-              {
-                src: "/assets/icon/about-monochrome.png",
-                sizes: "192x192",
-                purpose: "monochrome",
                 type: "image/png",
               },
             ],

@@ -6,7 +6,7 @@ export const note = arraySidebar([
     text: "秋之思",
     icon: "autumn",
     prefix: "fall/",
-    collapsable: true,
+    collapsible: true,
     children: [
       "",
       "catalog",
@@ -49,7 +49,7 @@ export const note = arraySidebar([
     text: "冬之语",
     icon: "snow",
     prefix: "winter/",
-    collapsable: true,
+    collapsible: true,
     children: [
       "",
       "note",
@@ -73,21 +73,21 @@ export const note = arraySidebar([
     text: "春之诗",
     icon: "flower",
     prefix: "spring/",
-    collapsable: true,
+    collapsible: true,
     children: ["", "catalog", "1", "2", "3"],
   },
   {
     text: "夏之歌",
     icon: "leaf",
     prefix: "summer/",
-    collapsable: true,
+    collapsible: true,
     children: ["", "1", "2", "3"],
   },
   {
     text: "笑谈人生",
     icon: "form",
     prefix: "life/",
-    collapsable: true,
+    collapsible: true,
     children: [
       "",
       "1",
@@ -118,7 +118,7 @@ export const note = arraySidebar([
     text: "轻言细语",
     icon: "like",
     prefix: "poem/",
-    collapsable: true,
+    collapsible: true,
     children: [
       "",
       "1",

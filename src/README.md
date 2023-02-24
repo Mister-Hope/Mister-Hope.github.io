@@ -1,19 +1,21 @@
 ---
 home: true
-layout: Blog
+layout: BlogHome
 icon: home
 title: Home
 heroImage: /logo.svg
 heroText: My Blog
 heroFullScreen: true
 tagline: Where there is light, there is hope
+# Special thank to @mo7
+bgImage: http://file.mo7.cc/api/public/bz
+heroFullScreen: true
 projects:
   - name: vuepress
     desc: 基于 Vue Static document builder
     link: https://v2.vuepress.vuejs.org/en/
-    icon: /assets/img/vuepress.png
 
-  - name: vuepress-theme-hope
+  - name: VuePress Theme Hope
     desc: 一个功能强大的 Vuepress 主题✨
     link: https://vuepress-theme-hope.github.io/v2/en/
     icon: /assets/img/vuepress-hope-logo.svg
@@ -23,19 +25,24 @@ projects:
     link: https://waline.js.org/
     icon: https://waline.js.org/logo.png
 
-  - name: in东师
-    desc: 60万字的东师攻略，全方位的东师生活介绍，东师新生们的最佳入学指南❤
+  - name: markdown-it plugins
+    desc: 使用 TS 编写的强大 markdown-it 插件
+    link: https://mdit-plugins.mrhope.site/zh/
+    icon: https://mdit-plugins.mrhope.site/logo.svg
+
+  - name: in 东师
+    desc: 80 万字的东师攻略，全方位的东师生活介绍，东师新生们的最佳入学指南❤
     link: https://github.com/Hope-Studio/inNENU-miniapp
     icon: /assets/img/inNENU.png
 
   - name: vuepress-plugin-md-enhance
     desc: Vuepress Markdown 增强插件
-    link: https://vuepress-theme-hope.github.io/v2/md-enhance/en/
-    icon: /assets/img/vuepress-hope-logo.svg
+    link: https://plugin-md-enhance.vuejs.press/zh/
+    icon: https://plugin-md-enhance.vuejs.press/logo.svg
 
-  - name: "bycrypt-ts"
+  - name: bcrypt-ts
     icon: project
-    desc: Bycrypt written in typescript
+    desc: Bcrypt written in typescript
     link: https://github.com/Mister-Hope/bcrypt-ts
 
   - name: "@mr-hope/gulp-sass"

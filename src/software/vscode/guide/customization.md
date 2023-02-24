@@ -127,8 +127,8 @@ Mr.Hope 个人推荐 `One Dark Pro` 主题和 `Material Icon Theme` 文件图标
 
   ```json
   "files.exclude": {
-      "somefolder/": true,
-      "somefile": true
+      "some-folder/": true,
+      "some-file": true
   }
   ```
 
@@ -136,8 +136,8 @@ Mr.Hope 个人推荐 `One Dark Pro` 主题和 `Material Icon Theme` 文件图标
 
   ```json
   "search.exclude": {
-      "someFolder/": true,
-      "somefile": true
+      "some-folder/": true,
+      "some-file": true
   }
   ```
 
@@ -148,7 +148,7 @@ Mr.Hope 个人推荐 `One Dark Pro` 主题和 `Material Icon Theme` 文件图标
 您可以通过语言标识符来确定只需要特定语言的设置的范围。您可以在 [语言标识符](https://code.visualstudio.com/docs/languages/identifiers) 参考中找到常用语言 ID 的列表。
 
 ```json
-"[languageid]": {
+"[language-id]": {
 
 }
 ```

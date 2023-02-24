@@ -5,7 +5,7 @@ export const css = arraySidebar([
   {
     text: "快速上手",
     icon: "creative",
-    collapsable: false,
+    collapsible: false,
     prefix: "guide/",
     children: [
       "",
@@ -20,7 +20,7 @@ export const css = arraySidebar([
   {
     text: "CSS 介绍",
     icon: "info",
-    collapsable: false,
+    collapsible: false,
     prefix: "intro/",
     children: [
       "selector",
@@ -38,7 +38,7 @@ export const css = arraySidebar([
   {
     text: "CSS 布局",
     icon: "layout",
-    collapsable: false,
+    collapsible: false,
     prefix: "layout/",
     children: ["intro", "flow", "float", "flex", "exercise", "grid"],
   },

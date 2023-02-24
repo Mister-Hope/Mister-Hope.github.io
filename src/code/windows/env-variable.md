@@ -1,5 +1,5 @@
 ---
-title: 环境变量的添加
+title: 环境变量
 icon: shell
 date: 2019-09-08
 category: 基础
@@ -15,7 +15,9 @@ tag:
 
 ![系统变量](./assets/path.png)
 
-在弹出的新窗口中找到 path，选中并点击编辑
+如果你需要添加环境变量，直接添加即可。
+
+如果你只是希望添加到 Path，在弹出的新窗口中找到 path，选中并点击编辑
 
 ![系统变量](./assets/pathDetail.png)
 

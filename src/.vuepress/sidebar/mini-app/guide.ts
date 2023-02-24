@@ -46,7 +46,7 @@ export const guide = arraySidebar([
       {
         text: "WXML",
         icon: "code",
-        collapsable: true,
+        collapsible: true,
         children: [
           "wxml",
           "data-bind",

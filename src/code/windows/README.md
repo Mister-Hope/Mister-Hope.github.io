@@ -11,7 +11,7 @@ tag:
 
 <!-- more -->
 
-- [添加到 path](add-path.md)
+- [环境变量](env-variable.md)
 
 - [Windows 快捷键](shortcut-key.md)
 
