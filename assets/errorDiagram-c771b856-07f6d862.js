@@ -1,1 +1,0 @@
-import{r}from"./errorRenderer-11917bdc-03fe838a.js";import"./transform-49cadac7.js";import"./utils-3cbdbddf-32493294.js";import"./setupGraphViewbox-e1099da8-0b41caab.js";import"./commonDb-7528607a-e660faf1.js";const t=()=>"",e=t,m={db:{clear:()=>{}},styles:e,renderer:r,parser:{parser:{yy:{}},parse:()=>{}},init:()=>{}};export{m as diagram};
