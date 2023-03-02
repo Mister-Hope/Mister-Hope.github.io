@@ -60,10 +60,11 @@ cd ~
 mkdir <仓库名>
 ```
 
-进入文件夹，使用
+进入 <部署文件夹>，比如 `/var/www` 使用
 
 ```sh
-git init --separate-git-dir=. <部署位置>
+cd <部署文件夹>
+git init --separate-git-dir=/home/git/<仓库名>
 ```
 
 这会将 git 库保持在 `/home/git/<仓库名>` 下，同时将工作区设置到部署文件夹中。
@@ -71,15 +72,15 @@ git init --separate-git-dir=. <部署位置>
 接下来执行:
 
 ```sh
-git config receive.denyCurrentBranch ignore
 git config --global --add safe.directory <部署文件夹>
+git config receive.denyCurrentBranch ignore
 ```
 
 ::: note
 
-Git 默认拒绝外部对当前分支的推送操作，因为这可能会覆盖或变更工作区文件。所以我们需要显式通知 Git 不要拒绝当前分支的推送操作。
+在新版本 Git 中，考虑到安全因素，Git 会在检出时检测项目文件夹是否属于其他组成员，如果检测到会默认拒绝相关操作以防止其他用于获取到本不应该获取到的代码信息。因为部署文件夹的所有者通常不会是 git，所以我们需要标记对应的部署文件夹“安全”。
 
-另外在新版本 Git 中，考虑到安全因素，Git 会在检出时检测项目文件夹是否属于其他组成员，如果检测到会默认拒绝相关操作以防止其他用于获取到本不应该获取到的代码信息。因为部署文件夹的所有者通常不会是 git，所以我们需要标记对应的部署文件夹“安全”。
+另外Git 默认拒绝外部对当前分支的推送操作，因为这可能会覆盖或变更工作区文件。所以我们需要显式通知 Git 不要拒绝当前分支的推送操作。
 
 :::
 
@@ -196,3 +197,42 @@ jobs:
           git push -f git@<your domain>:<deploy dir> gh-pages
           ssh git@<your domain> "cd <deploy dir> && git reset --hard HEAD"
 ```
+
+### 容易遇到的问题
+
+如果失败，去看一下 action run log 
+
+
+第一个问题：
+```sh
+error: remote unpack failed: unable to create temporary object directory
+```
+
+权限不足，注意查看 部署目录的权限设置
+
+第二个问题：
+
+```sh
+fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions
+```
+
+解决办法：
+
+```sh
+git commit --allow-empty -n -m "Initial commit."
+```
+
+运行成功后，还需去 <部署文件夹> 切换分支，此时处在 main 分支， <部署文件夹> 还是一片空白
+```sh
+git branch
+git checkout gh-pages
+```
+
+
+
+
+
+
+
+
