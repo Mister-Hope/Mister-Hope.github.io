@@ -16,7 +16,7 @@ projects:
     icon: /assets/img/vuepress.png
 
   - name: VuePress Theme Hope
-    desc: A vuepress theme with tons of features✨
+    desc: A VuePress theme with tons of features✨
     link: https://theme-hope.vuejs.press/
     icon: https://theme-hope.vuejs.press/logo.svg
 
@@ -51,7 +51,7 @@ projects:
     link: https://github.com/Mister-Hope/gulp-sass
 
   - name: mptool
-    desc: Light, effective miniapp framwork
+    desc: Light, effective mini-app framework
     link: https://github.com/miniapp-tool/mptool
     icon: https://miniapp-tool.github.io/logo.png
 ---

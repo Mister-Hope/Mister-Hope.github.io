@@ -16,7 +16,7 @@ projects:
     icon: /assets/img/vuepress.png
 
   - name: VuePress Theme Hope
-    desc: 一个功能强大的 Vuepress 主题✨
+    desc: 一个功能强大的 VuePress 主题✨
     link: https://theme-hope.vuejs.press/zh/
     icon: https://theme-hope.vuejs.press/logo.svg
 
@@ -36,7 +36,7 @@ projects:
     icon: /assets/img/inNENU.png
 
   - name: vuepress-plugin-md-enhance
-    desc: Vuepress Markdown 增强插件
+    desc: VuePress Markdown 增强插件
     link: https://plugin-md-enhance.vuejs.press/zh/
     icon: https://plugin-md-enhance.vuejs.press/logo.svg
 
