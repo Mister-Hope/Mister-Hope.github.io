@@ -1,0 +1,2 @@
+import{_ as l,X as a,Y as e,a3 as s}from"./framework-a91f7991.js";const c={},t=s(`<h1 id="killall" tabindex="-1"><a class="header-anchor" href="#killall" aria-hidden="true">#</a> killall</h1><p><code>killall</code> 命令终止给定名字的一系列相关进程。</p><div class="language-bash" data-ext="sh"><pre class="language-bash"><code><span class="token function">killall</span> processname
+</code></pre></div>`,3),n=[t];function o(i,r){return a(),e("div",null,n)}const _=l(c,[["render",o],["__file","killall.html.vue"]]);export{_ as default};
