@@ -98,7 +98,7 @@ export default hopeTheme({
       flowchart: true,
       footnote: true,
       imgMark: true,
-      katex: true,
+      mathjax: true,
       mermaid: true,
       presentation: true,
       sub: true,
