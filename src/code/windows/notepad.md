@@ -4,6 +4,7 @@ icon: warn
 date: 2019-09-07
 tag:
   - Win10
+index: false
 ---
 
 在编写代码的时候，临时的软件选择需要注意。

@@ -5,6 +5,7 @@ category: GitHub
 tag:
   - Git
   - deploy
+order: 8
 ---
 
 本文介绍如何利用 Git 和 GitHub Action，自动部署代码到服务器。

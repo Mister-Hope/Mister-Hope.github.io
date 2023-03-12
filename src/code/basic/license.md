@@ -3,7 +3,7 @@ title: 开源协议
 icon: license
 date: 2019-12-27
 category: 基础
-next: ../../website/
+order: 9
 ---
 
 开源软件在追求“自由”的同时，不能牺牲程序员的利益，否则将会影响程序员的创造激情，因此世界上现在有 60 多种被开源促进组织 (Open Source Initiative) 认可的开源许可协议来保证开源工作者的权益。

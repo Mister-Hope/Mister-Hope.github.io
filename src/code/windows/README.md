@@ -11,12 +11,4 @@ tag:
 
 <!-- more -->
 
-- [环境变量](env-variable.md)
-
-- [Windows 快捷键](shortcut-key.md)
-
-- [显示文件后缀名与隐藏文件](hidden-file.md)
-
-- [快速打开 CMD](cmd.md)
-
-- [记事本的遗留问题](notepad.md)
+<AutoCatalog />

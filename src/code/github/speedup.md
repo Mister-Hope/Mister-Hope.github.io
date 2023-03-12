@@ -3,6 +3,7 @@ title: 加速 GitHub 克隆
 icon: speed
 date: 2021-02-18
 category: GitHub
+order: 5
 ---
 
 由于天朝墙的存在，GitHub 的访问速度在大部分国内地区都很慢。如果需要克隆体积比较大的项目，可能需要很长时间，也很大概率会在中途因为网络波动、终端问题导致克隆失败。

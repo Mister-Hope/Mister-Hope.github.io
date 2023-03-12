@@ -3,6 +3,7 @@ title: 计算机编码介绍
 icon: number
 date: 2019-12-27
 category: 基础
+order: 4
 ---
 
 计算机，不能直接存储文字，存储的是编码。

@@ -11,22 +11,4 @@ star: true
 
 <!-- more -->
 
-- [计算机](computer.md)
-
-- [操作系统](os.md)
-
-- [文件扩展名](file-extension.md)
-
-- [文件编码](encoding.md)
-
-- [路径](path.md)
-
-- [Glob 模式介绍](glob.md)
-
-- [开发简介](debug.md)
-
-- [持续集成](ci.md)
-
-- [许可介绍](license.md)
-
-- [开源与免费](open-source-and-free.md)
+<AutoCatalog />

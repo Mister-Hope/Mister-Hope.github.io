@@ -6,6 +6,7 @@ category: 基础
 tag:
   - 快捷键
   - Win10
+order: 1
 ---
 
 熟练掌握各种 Windows 快捷键，能够更加高效的使用 Windows。

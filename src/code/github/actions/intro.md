@@ -6,6 +6,7 @@ category: GitHub
 tag:
   - action
   - 介绍
+order: 1
 ---
 
 在 GitHub Actions 的仓库中自动化、自定义和执行软件开发工作流程。

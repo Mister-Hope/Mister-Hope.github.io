@@ -5,6 +5,7 @@ date: 2020-09-15
 category: 基础
 tag:
   - Win10
+order: 3
 ---
 
 显示文件后缀名与隐藏文件

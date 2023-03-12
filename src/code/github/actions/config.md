@@ -6,6 +6,7 @@ category: GitHub
 tag:
   - action
   - workflow
+order: 2
 ---
 
 GitHub Actions 的配置文件叫做 `workflow` 文件，存放在代码仓库的 `.github/workflows` 目录。

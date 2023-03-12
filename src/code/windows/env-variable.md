@@ -5,6 +5,7 @@ date: 2019-09-08
 category: 基础
 tag:
   - Win10
+order: 2
 ---
 
 以 Windows 10 系统为例，直接在左下角搜索栏中输入“系统变量”

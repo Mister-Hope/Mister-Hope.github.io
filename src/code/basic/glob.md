@@ -4,6 +4,7 @@ icon: regexp
 author: 陈慧玲
 date: 2021-02-18
 category: 基础
+order: 6
 ---
 
 本文介绍 Glob 匹配。

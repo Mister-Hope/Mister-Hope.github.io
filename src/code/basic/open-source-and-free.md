@@ -3,6 +3,8 @@ title: 开源与免费
 icon: compare
 date: 2020-06-05
 category: 基础
+order: 10
+next: ../website/
 ---
 
 开源软件和免费软件是两个概念:

@@ -2,6 +2,7 @@
 title: 语义化提交
 icon: semantic
 category: GitHub
+order: 3
 ---
 
 ## Semantic

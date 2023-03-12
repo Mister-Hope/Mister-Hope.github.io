@@ -7,15 +7,7 @@ category: GitHub
 
 ## 快速上手
 
-- [GitHub 介绍](intro.md)
-
-- [Pull Request](pr.md)
-
-- [语义化提交](semantic.md)
-
-- [GitHub Pages](pages.md)
-
-- [利用 Gitee 加速 GitHub 克隆](speedup.md)
+<AutoCatalog />
 
 ## 官方文档
 

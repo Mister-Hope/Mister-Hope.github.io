@@ -3,6 +3,7 @@ title: 持续集成
 icon: ci
 date: 2021-02-18
 category: 基础
+order: 8
 ---
 
 持续集成 (Continuous Integration) 指的是，频繁地 (一天多次) 将代码集成到主干，每次集成都通过自动化的构建 (包括编译，发布，自动化测试) 来验证，从而尽早地发现集成错误。

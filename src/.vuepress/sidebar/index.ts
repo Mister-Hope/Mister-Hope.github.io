@@ -1,8 +1,6 @@
 import { sidebar } from "vuepress-theme-hope";
-import { basic } from "./basic.js";
 import { code } from "./code.js";
 import { design } from "./design.js";
-import { github } from "./github.js";
 import {
   dart,
   javascript,
@@ -38,14 +36,7 @@ export const zhSidebarConfig = sidebar({
 
   "/design/": design,
 
-  "/code/windows/": [
-    "",
-    "shortcut-key",
-    "hidden-file",
-    "add-path",
-    "cmd",
-    "notepad",
-  ],
+  "/code/windows/": "structure",
 
   "/code/website/jquery/": jquery,
 
@@ -73,9 +64,9 @@ export const zhSidebarConfig = sidebar({
 
   "/code/language/": language,
 
-  "/code/github/": github,
+  "/code/github/": "structure",
 
-  "/code/basic/": basic,
+  "/code/basic/": "structure",
 
   "/code/Android/": ["", "intro", "base", "resource"],
 

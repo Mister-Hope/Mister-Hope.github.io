@@ -3,6 +3,7 @@ title: GitHub Pages
 icon: page
 date: 2021-02-20
 category: GitHub
+order: 4
 ---
 
 GitHub Pages 是静态站点托管服务，可直接从 GitHub 上的存储库中获取 HTML，CSS 和 JavaScript 文件，还可以选择在构建过程中运行这些文件并发布网站。

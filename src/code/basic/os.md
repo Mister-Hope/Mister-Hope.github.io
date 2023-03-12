@@ -3,6 +3,7 @@ title: 操作系统
 icon: OS
 date: 2019-12-26
 category: 基础
+order: 2
 ---
 
 操作系统 (Operating System，OS) 是软件的一部分，它是硬件基础上的第一层软件，是硬件和其它软件沟通的桥梁(或者说接口、中间人、中介等)。
