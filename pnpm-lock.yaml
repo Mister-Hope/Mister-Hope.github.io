@@ -17,8 +17,8 @@ dependencies:
     specifier: 3.2.47
     version: 3.2.47
   vuepress-theme-hope:
-    specifier: 2.0.0-beta.194
-    version: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+    specifier: 2.0.0-beta.195
+    version: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
   vuepress-vite:
     specifier: 2.0.0-beta.61
     version: 2.0.0-beta.61(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vue@3.2.47)
@@ -463,7 +463,7 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
     dependencies:
-      '@babel/types': 7.21.2
+      '@babel/types': 7.21.3
     dev: false
 
   /@babel/parser@7.21.3:
@@ -1315,15 +1315,6 @@ packages:
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  /@babel/types@7.21.2:
-    resolution: {integrity: sha512-3wRZSs7jiFaB8AjxiiD+VqN5DTG2iRvJGQ+qYFrs/654lg6kGTQWIOFjlBo5RaXuAZjBmP3+OQH4dmhqiiyYxw==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/helper-string-parser': 7.19.4
-      '@babel/helper-validator-identifier': 7.19.1
-      to-fast-properties: 2.0.0
     dev: false
 
   /@babel/types@7.21.3:
@@ -2215,7 +2206,7 @@ packages:
   /@vue/reactivity-transform@3.2.47:
     resolution: {integrity: sha512-m8lGXw8rdnPVVIdIFhf0LeQ/ixyHkH5plYuS83yop5n7ggVJU+z5v0zecwEnX7fa7HNLBhh2qngJJkxpwEEmYA==}
     dependencies:
-      '@babel/parser': 7.21.2
+      '@babel/parser': 7.21.3
       '@vue/compiler-core': 3.2.47
       '@vue/shared': 3.2.47
       estree-walker: 2.0.2
@@ -2471,7 +2462,7 @@ packages:
     dependencies:
       '@vuepress/core': 2.0.0-beta.61
       '@vuepress/utils': 2.0.0-beta.61
-      execa: 7.1.0
+      execa: 7.1.1
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -4305,21 +4296,6 @@ packages:
       onetime: 5.1.2
       signal-exit: 3.0.7
       strip-final-newline: 2.0.0
-    dev: false
-
-  /execa@7.1.0:
-    resolution: {integrity: sha512-T6nIJO3LHxUZ6ahVRaxXz9WLEruXLqdcluA+UuTptXmLM7nDAn9lx9IfkxPyzEL21583qSt4RmL44pO71EHaJQ==}
-    engines: {node: ^14.18.0 || ^16.14.0 || >=18.0.0}
-    dependencies:
-      cross-spawn: 7.0.3
-      get-stream: 6.0.1
-      human-signals: 4.3.0
-      is-stream: 3.0.0
-      merge-stream: 2.0.0
-      npm-run-path: 5.1.0
-      onetime: 6.0.0
-      signal-exit: 3.0.7
-      strip-final-newline: 3.0.0
     dev: false
 
   /execa@7.1.1:
@@ -7226,8 +7202,8 @@ packages:
       '@vue/shared': 3.2.47
     dev: false
 
-  /vuepress-plugin-auto-catalog@2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
-    resolution: {integrity: sha512-Rgb9OPmRkty9f44shn0qfcU1afUg5OBVCfDm81mgi4yLRVATdgG8Kc77PhkS5EvHR1uCyAj2FA0phaqqKxBx4w==}
+  /vuepress-plugin-auto-catalog@2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
+    resolution: {integrity: sha512-9AScdf1FLJXtLJwaj5nhq789xrfWuMJoRNgu6brc7lOZpJ1z7y4wRbEUb7nGCv+8nwoakdwKx65ai278Iv3Cyg==}
     engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
     peerDependencies:
       '@vuepress/client': 2.0.0-beta.61
@@ -7260,9 +7236,9 @@ packages:
       sass-loader: 13.2.1
       vue: 3.2.47
       vue-router: 4.1.6(vue@3.2.47)
-      vuepress-plugin-components: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-plugin-sass-palette: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-shared: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-components: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-sass-palette: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-shared: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
       vuepress-vite: 2.0.0-beta.61(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vue@3.2.47)
       vuepress-webpack: 2.0.0-beta.61(vue@3.2.47)
     transitivePeerDependencies:
@@ -7270,8 +7246,8 @@ packages:
       - supports-color
     dev: false
 
-  /vuepress-plugin-blog2@2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
-    resolution: {integrity: sha512-mkjU1RpV5Pq0UjXsf+gUk737I4Crr7rOBS4ZVe3zE7EwdRuVTaP3mRGwPGsDdrDbo90zLEZzyK2Lirn9uzwPFA==}
+  /vuepress-plugin-blog2@2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
+    resolution: {integrity: sha512-qM6ggGNvA+KZizvCGkWuwXDvAKE3qMB4CNWq2XkpXz8WIldcWbUAuHTn3tq/WzhJJcyM11BP6vbAtLF31JXwKw==}
     engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
     peerDependencies:
       '@vuepress/client': 2.0.0-beta.61
@@ -7297,7 +7273,7 @@ packages:
       chokidar: 3.5.3
       vue: 3.2.47
       vue-router: 4.1.6(vue@3.2.47)
-      vuepress-shared: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-shared: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
       vuepress-vite: 2.0.0-beta.61(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vue@3.2.47)
       vuepress-webpack: 2.0.0-beta.61(vue@3.2.47)
     transitivePeerDependencies:
@@ -7305,8 +7281,8 @@ packages:
       - supports-color
     dev: false
 
-  /vuepress-plugin-comment2@2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
-    resolution: {integrity: sha512-CHhAjXEcDiP2C5PKNrzSCrAuK97UwS183GhV489y8e/GvTV/41EQPdoWrSomoL5/Vr5wMD/zoUMB1/O3agcZyA==}
+  /vuepress-plugin-comment2@2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
+    resolution: {integrity: sha512-UcOYutliFE5iufijVexkBBhq4G2HJHN+zQywjtMMmmKHazUXU8kVISQaArVEtcJXrtooRY5Gy9h7arI2OKs5zA==}
     engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
     peerDependencies:
       '@vuepress/client': 2.0.0-beta.61
@@ -7340,8 +7316,8 @@ packages:
       twikoo: 1.6.10
       vue: 3.2.47
       vue-router: 4.1.6(vue@3.2.47)
-      vuepress-plugin-sass-palette: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-shared: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-sass-palette: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-shared: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
       vuepress-vite: 2.0.0-beta.61(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vue@3.2.47)
       vuepress-webpack: 2.0.0-beta.61(vue@3.2.47)
     transitivePeerDependencies:
@@ -7349,8 +7325,8 @@ packages:
       - supports-color
     dev: false
 
-  /vuepress-plugin-components@2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
-    resolution: {integrity: sha512-x3MdeAYWpwlO1YEfft0fPifZ1tFCKriD8vAGlixiAxwXu0DJFvNx/gyOgsEufN/pR+L6ruENp1bnWyWaN9R1UA==}
+  /vuepress-plugin-components@2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
+    resolution: {integrity: sha512-rRS0bXhyu7pFGk/xI4FzDrAoZgyLNfKRZiKUawaZCB4pfb6wHCjxIhIv3vsIbyjPhMLf9HFVlhoa7sPivRqO0Q==}
     engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
     peerDependencies:
       '@vuepress/client': 2.0.0-beta.61
@@ -7391,9 +7367,9 @@ packages:
       sass-loader: 13.2.1
       vue: 3.2.47
       vue-router: 4.1.6(vue@3.2.47)
-      vuepress-plugin-reading-time2: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-plugin-sass-palette: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-shared: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-reading-time2: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-sass-palette: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-shared: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
       vuepress-vite: 2.0.0-beta.61(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vue@3.2.47)
       vuepress-webpack: 2.0.0-beta.61(vue@3.2.47)
     transitivePeerDependencies:
@@ -7401,8 +7377,8 @@ packages:
       - supports-color
     dev: false
 
-  /vuepress-plugin-copy-code2@2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
-    resolution: {integrity: sha512-u8dXb5ugf3+LPq1+MMF+ABaG2dl9qxO4ikqV55UjuFzMj69t6dX+uguTfnDKY5s1UsieFBnOXB12cF4LIyDKsQ==}
+  /vuepress-plugin-copy-code2@2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
+    resolution: {integrity: sha512-QkO68oBpXk+vHRSt0MGlH3f7mwtdkPoFnoQMfnGrDjp+pZrLJAupXYVIh/RVJ+APssSd9nR0d6KIf+PRm/CMeg==}
     engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
     peerDependencies:
       '@vuepress/client': 2.0.0-beta.61
@@ -7434,8 +7410,8 @@ packages:
       sass-loader: 13.2.1
       vue: 3.2.47
       vue-router: 4.1.6(vue@3.2.47)
-      vuepress-plugin-sass-palette: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-shared: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-sass-palette: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-shared: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
       vuepress-vite: 2.0.0-beta.61(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vue@3.2.47)
       vuepress-webpack: 2.0.0-beta.61(vue@3.2.47)
     transitivePeerDependencies:
@@ -7443,8 +7419,8 @@ packages:
       - supports-color
     dev: false
 
-  /vuepress-plugin-copyright2@2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
-    resolution: {integrity: sha512-BRFsAQuPEEH98Te4LGaSotUz3lsiAAdoc+SXnnyKD9B0Ylgy3IRfSskVwQ/Dw9yV5+4M3EIDbd9TdZLFO/62kQ==}
+  /vuepress-plugin-copyright2@2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
+    resolution: {integrity: sha512-QMTJ2PeBVQGfGa5b3OBUjAMVyy2+rM6UkNDm7jjd8YR++mt+7e60tWgVGSlFBxv4BELyNPelRs5EChoI4KQJZg==}
     engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
     peerDependencies:
       '@vuepress/client': 2.0.0-beta.61
@@ -7469,7 +7445,7 @@ packages:
       '@vueuse/core': 9.13.0(vue@3.2.47)
       vue: 3.2.47
       vue-router: 4.1.6(vue@3.2.47)
-      vuepress-shared: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-shared: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
       vuepress-vite: 2.0.0-beta.61(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vue@3.2.47)
       vuepress-webpack: 2.0.0-beta.61(vue@3.2.47)
     transitivePeerDependencies:
@@ -7477,8 +7453,8 @@ packages:
       - supports-color
     dev: false
 
-  /vuepress-plugin-feed2@2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
-    resolution: {integrity: sha512-K60/vyPACV0SpjwQgBnJIdgT7X3GcusPvvmlA8d0a2v2ZF3N4YYStBfItPhzYsw1BIhS4zrg05cW39oaMhr4qQ==}
+  /vuepress-plugin-feed2@2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
+    resolution: {integrity: sha512-fFuF69dR6BzlaKojQ+eZsO0SENQAFWtosJB49VlTVC/dcJpIubO+vH+vYFezNR+YEdDAxkrj4Ze0aYXs7ge+AQ==}
     engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
     peerDependencies:
       vuepress: 2.0.0-beta.61
@@ -7495,7 +7471,7 @@ packages:
       '@vuepress/shared': 2.0.0-beta.61
       '@vuepress/utils': 2.0.0-beta.61
       cheerio: 1.0.0-rc.12
-      vuepress-shared: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-shared: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
       vuepress-vite: 2.0.0-beta.61(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vue@3.2.47)
       vuepress-webpack: 2.0.0-beta.61(vue@3.2.47)
       xml-js: 1.6.11
@@ -7505,8 +7481,8 @@ packages:
       - supports-color
     dev: false
 
-  /vuepress-plugin-md-enhance@2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
-    resolution: {integrity: sha512-yhBQEBbTAPXMyNgxCgFE1KFcXnABiQDH0CgZfl5AFW0lKctUMA/d2tq5mZYySAhF078FcIViphufpmawGZDL/g==}
+  /vuepress-plugin-md-enhance@2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
+    resolution: {integrity: sha512-gMcrah3pXexM3PmPF8MYb/rY/HDyyt9MTgS8ta3GdcpsO/E9w4lbDeDehvuNmfe2g/EPZBsYgskTCeIG5JRy/w==}
     engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
     peerDependencies:
       '@vuepress/client': 2.0.0-beta.61
@@ -7567,8 +7543,8 @@ packages:
       sass-loader: 13.2.1
       vue: 3.2.47
       vue-router: 4.1.6(vue@3.2.47)
-      vuepress-plugin-sass-palette: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-shared: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-sass-palette: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-shared: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
       vuepress-vite: 2.0.0-beta.61(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vue@3.2.47)
       vuepress-webpack: 2.0.0-beta.61(vue@3.2.47)
     transitivePeerDependencies:
@@ -7576,8 +7552,8 @@ packages:
       - supports-color
     dev: false
 
-  /vuepress-plugin-photo-swipe@2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
-    resolution: {integrity: sha512-tDZKhcv/sBOxEnTVyZVL6MDwuEYpJ6X9FO68gF2wNwtWjYgtyBfN7uagMV5SmAxgb1C4rZKk6/ZrsFWUcBc+qg==}
+  /vuepress-plugin-photo-swipe@2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
+    resolution: {integrity: sha512-oTduPHrhpaGIXa/bkLhTZPLexsc88Q4JAmGutBWcQjC7ED7o90PsjpBDXXPlJ9cpqEn6dcmwPc+gQ5aOuJ5otg==}
     engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
     peerDependencies:
       '@vuepress/client': 2.0.0-beta.61
@@ -7609,8 +7585,8 @@ packages:
       sass-loader: 13.2.1
       vue: 3.2.47
       vue-router: 4.1.6(vue@3.2.47)
-      vuepress-plugin-sass-palette: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-shared: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-sass-palette: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-shared: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
       vuepress-vite: 2.0.0-beta.61(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vue@3.2.47)
       vuepress-webpack: 2.0.0-beta.61(vue@3.2.47)
     transitivePeerDependencies:
@@ -7618,8 +7594,8 @@ packages:
       - supports-color
     dev: false
 
-  /vuepress-plugin-pwa2@2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
-    resolution: {integrity: sha512-izTEjkPQ8c4Q/Blktky9VXQbq5Bvi7hQcTN+1EzHIKqOMNgq3rts/BdRl+E22SigSgslES3kgje6MVKaIPM/Mw==}
+  /vuepress-plugin-pwa2@2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
+    resolution: {integrity: sha512-yzXvs/1Z+nGXnnfN0ya1M/pVQe36AwjEtL/7pwadBL8ts7UCn1ZQ0BvZQLIYObCMHtQrIJaNPg1PB/XhCZfa6Q==}
     engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
     peerDependencies:
       '@vuepress/client': 2.0.0-beta.61
@@ -7652,8 +7628,8 @@ packages:
       sass-loader: 13.2.1
       vue: 3.2.47
       vue-router: 4.1.6(vue@3.2.47)
-      vuepress-plugin-sass-palette: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-shared: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-sass-palette: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-shared: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
       vuepress-vite: 2.0.0-beta.61(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vue@3.2.47)
       vuepress-webpack: 2.0.0-beta.61(vue@3.2.47)
       workbox-build: 6.5.4
@@ -7663,8 +7639,8 @@ packages:
       - supports-color
     dev: false
 
-  /vuepress-plugin-reading-time2@2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
-    resolution: {integrity: sha512-spRaGJI7w0rZXsllU0NRjB/w+qXa1MWk2ZMh98RITquCDvo0HDo8zMHlnlVwEmzhXig9xW9urL1YA2H+sTOQjw==}
+  /vuepress-plugin-reading-time2@2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
+    resolution: {integrity: sha512-Bd9NJqnLsGMUh5mJQhQvMq4pGrxLOnecOBD0lRG2+Wkx6bY3XT6iOExwBdAo3PPM1SAV7CdteOrCjOO51Mtifw==}
     engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
     peerDependencies:
       vuepress: 2.0.0-beta.61
@@ -7680,7 +7656,7 @@ packages:
       vuepress-webpack:
         optional: true
     dependencies:
-      vuepress-shared: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-shared: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
       vuepress-vite: 2.0.0-beta.61(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vue@3.2.47)
       vuepress-webpack: 2.0.0-beta.61(vue@3.2.47)
     transitivePeerDependencies:
@@ -7689,8 +7665,8 @@ packages:
       - supports-color
     dev: false
 
-  /vuepress-plugin-rtl@2.0.0-beta.194(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
-    resolution: {integrity: sha512-+oLM9uZfxbzW+C8iInGuh/eMpb7uM8o1V9CToTsXEC6ctk4LA66uIctdxGzJKYwZZ70GY3LRhqI6Prf786Zhlg==}
+  /vuepress-plugin-rtl@2.0.0-beta.195(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
+    resolution: {integrity: sha512-NUcY+1iGUX9JugEbjnHjUUOAtQrhS03i3M4gGjVSdcSfCcBS5qACB3RktH3Zcq63PORJxzNKOVQ33+nv3TAHOw==}
     engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
     peerDependencies:
       vuepress: 2.0.0-beta.61
@@ -7708,7 +7684,7 @@ packages:
       '@vuepress/shared': 2.0.0-beta.61
       '@vuepress/utils': 2.0.0-beta.61
       vue: 3.2.47
-      vuepress-shared: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-shared: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
       vuepress-vite: 2.0.0-beta.61(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vue@3.2.47)
       vuepress-webpack: 2.0.0-beta.61(vue@3.2.47)
     transitivePeerDependencies:
@@ -7716,8 +7692,8 @@ packages:
       - supports-color
     dev: false
 
-  /vuepress-plugin-sass-palette@2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
-    resolution: {integrity: sha512-eYwuLLxJj3Q6UgVW98a8B/VsLWINQhfd3itgl8cLLnbTLFWgJpn0KmDEgOY1Xac602ixYiUGU32asjgkLMVZCQ==}
+  /vuepress-plugin-sass-palette@2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
+    resolution: {integrity: sha512-kQHOujzQvdn/0mKE0inmfaeHaNETb0Cbc6wo7UC+mifDVBw6iNO0zH+Vf18+0pi7JUDncXKBe4l5cm70TyjmKQ==}
     engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
     peerDependencies:
       sass-loader: ^13.2.0
@@ -7741,7 +7717,7 @@ packages:
       chokidar: 3.5.3
       sass: 1.59.3
       sass-loader: 13.2.1
-      vuepress-shared: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-shared: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
       vuepress-vite: 2.0.0-beta.61(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vue@3.2.47)
       vuepress-webpack: 2.0.0-beta.61(vue@3.2.47)
     transitivePeerDependencies:
@@ -7750,8 +7726,8 @@ packages:
       - supports-color
     dev: false
 
-  /vuepress-plugin-seo2@2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
-    resolution: {integrity: sha512-y5yshVeDg4DP1osLth4V/4o9esstl7KzBR35pzxn7OBXHI+AZElWXDfZKVPyLFNc4kkAEstSzjY+G69s3uFccg==}
+  /vuepress-plugin-seo2@2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
+    resolution: {integrity: sha512-iEKTg/lq8PnPvODplwRbewzx6H8xDeSTXDs7LYRhKa/BQ8ONNgPZQHETuf8bkEGico0wnoQWT5uckbGYFtY+UQ==}
     engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
     peerDependencies:
       vuepress: 2.0.0-beta.61
@@ -7767,7 +7743,7 @@ packages:
     dependencies:
       '@vuepress/shared': 2.0.0-beta.61
       '@vuepress/utils': 2.0.0-beta.61
-      vuepress-shared: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-shared: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
       vuepress-vite: 2.0.0-beta.61(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vue@3.2.47)
       vuepress-webpack: 2.0.0-beta.61(vue@3.2.47)
     transitivePeerDependencies:
@@ -7776,8 +7752,8 @@ packages:
       - supports-color
     dev: false
 
-  /vuepress-plugin-sitemap2@2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
-    resolution: {integrity: sha512-Hhn8nF9ri3y24/Z0tpnTpxDsCUG0fuI0OHbhgX+JZAdXpf9OCOdqNWJHSDmEKmpK81tiikCKVjKIGpRTBk3B3A==}
+  /vuepress-plugin-sitemap2@2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
+    resolution: {integrity: sha512-8rXirZCdejv14mDFmMfSkw5WKlXDSlzOt+FSoLmXSdu5XZ03DXd1e63LRKHkUTdFBqJKTasavfzw2IpaVH41Pw==}
     engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
     peerDependencies:
       vuepress: 2.0.0-beta.61
@@ -7796,7 +7772,7 @@ packages:
       '@vuepress/shared': 2.0.0-beta.61
       '@vuepress/utils': 2.0.0-beta.61
       sitemap: 7.1.1
-      vuepress-shared: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-shared: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
       vuepress-vite: 2.0.0-beta.61(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vue@3.2.47)
       vuepress-webpack: 2.0.0-beta.61(vue@3.2.47)
     transitivePeerDependencies:
@@ -7805,8 +7781,8 @@ packages:
       - supports-color
     dev: false
 
-  /vuepress-shared@2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
-    resolution: {integrity: sha512-Ag/XI+EmqtrP6E46kItBD5Q2b+8s22RYjGQsOv2deTEHxOJHgs2/d5usOiCcaJY3IFh9jLJBUD8tBPCe5/mhgw==}
+  /vuepress-shared@2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
+    resolution: {integrity: sha512-G4TqvnydcQ4hOqAoQEyYQu58b7ZZ8MhX+9GgPDpIJ1XfP4GKkbQiw9iIHFfDjAaH7i1ds1vdj1HbbZ95BeKuhg==}
     engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
     peerDependencies:
       '@vuepress/client': 2.0.0-beta.61
@@ -7843,8 +7819,8 @@ packages:
       - supports-color
     dev: false
 
-  /vuepress-theme-hope@2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
-    resolution: {integrity: sha512-sSiACloxTsO/+aWfaFUMuhiTCY0dJCkzSUo8PtinJ+fgRUwS+TUoQr8nZ58xgl2Z9kvvhn0swPixTNBinjoHBA==}
+  /vuepress-theme-hope@2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61):
+    resolution: {integrity: sha512-RPnlmlMA+ZPxeM63zkHqQYHlFaW5xrB0+Iht9uUkxasklsIC85m+UwnLmJIs9EBHaSgZoz5Z6dfF8i7ncNwHYw==}
     engines: {node: ^14.18.0 || >=16.0.0, npm: '>=8', pnpm: '>=7'}
     peerDependencies:
       '@vuepress/client': 2.0.0-beta.61
@@ -7934,22 +7910,22 @@ packages:
       sass-loader: 13.2.1
       vue: 3.2.47
       vue-router: 4.1.6(vue@3.2.47)
-      vuepress-plugin-auto-catalog: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-plugin-blog2: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-plugin-comment2: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-plugin-components: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-plugin-copy-code2: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-plugin-copyright2: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-plugin-feed2: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-plugin-md-enhance: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-plugin-photo-swipe: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-plugin-pwa2: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-plugin-reading-time2: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-plugin-rtl: 2.0.0-beta.194(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-plugin-sass-palette: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-plugin-seo2: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-plugin-sitemap2: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
-      vuepress-shared: 2.0.0-beta.194(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-auto-catalog: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-blog2: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-comment2: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-components: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-copy-code2: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-copyright2: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-feed2: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-md-enhance: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-photo-swipe: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-pwa2: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-reading-time2: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-rtl: 2.0.0-beta.195(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-sass-palette: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-seo2: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-plugin-sitemap2: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
+      vuepress-shared: 2.0.0-beta.195(@vuepress/client@2.0.0-beta.61)(vuepress-vite@2.0.0-beta.61)(vuepress-webpack@2.0.0-beta.61)
       vuepress-vite: 2.0.0-beta.61(@vuepress/client@2.0.0-beta.61)(sass-loader@13.2.1)(vue@3.2.47)
       vuepress-webpack: 2.0.0-beta.61(vue@3.2.47)
     transitivePeerDependencies:
