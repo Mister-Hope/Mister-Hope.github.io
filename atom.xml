@@ -4,18 +4,19 @@
   <title>Mr.Hope</title>
   <subtitle>Where there is light, there is hope.</subtitle>
   <icon>https://mrhope.site/favicon.ico</icon>
-  <rights>MIT 协议</rights>
-  <updated>2023-03-23T14:43:10.787Z</updated>
+  <rights>基于 MIT 协议，© 2019-至今 Mr.Hope</rights>
+  <updated>2023-03-24T09:56:18.795Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mrhope.site/atom.xml"/>
   <link rel="alternate" href="https://mrhope.site/"/>
+  <category term="Android"/>
+  <category term="快速上手"/>
+  <category term="HTML"/>
   <category term="基础"/>
   <category term="Git"/>
   <category term="后端"/>
   <category term="Node.js"/>
   <category term="小程序"/>
-  <category term="Android"/>
-  <category term="快速上手"/>
   <category term="前端"/>
   <category term="jQuery"/>
   <category term="JavaScript"/>
@@ -40,7 +41,9 @@
   <category term="Vue"/>
   <category term="CSS"/>
   <category term="Emmet"/>
-  <category term="HTML"/>
+  <contributor>
+    <name>小灰</name>
+  </contributor>
   <contributor>
     <name>李欣桐</name>
   </contributor>
@@ -50,6 +53,1026 @@
   <contributor>
     <name>廖雪峰</name>
   </contributor>
+  <entry>
+    <title type="text">应用基础知识</title>
+    <id>https://mrhope.site/code/android/base.html</id>
+    <link href="https://mrhope.site/code/android/base.html"/>
+    <updated>2023-03-24T09:43:26.000Z</updated>
+    <summary type="html"><![CDATA[<p>本章包含了一些关于 Android 开发的基础内容。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>本章包含了一些关于 Android 开发的基础内容。</p>
+<!-- more -->
+<p>您可以使用 Kotlin、Java 和 C++ 语言编写 Android 应用。Android SDK 工具会将您的代码连同任何数据和资源文件编译成一个 APK(Android 软件包)，即带有 <code>.apk</code> 后缀的归档文件。一个 APK 文件包含 Android 应用的所有内容，它也是 Android 设备用来安装应用的文件。</p>
+<p>每个 Android 应用都处于各自的安全沙盒中，并受以下 Android 安全功能的保护:</p>
+<ul>
+<li>
+<p>Android 操作系统是一种多用户 Linux 系统，其中的每个应用都是一个不同的用户；
+默认情况下，系统会为每个应用分配一个唯一的 Linux 用户 ID(该 ID 仅由系统使用，应用并不知晓)。系统会为应用中的所有文件设置权限，使得只有分配给该应用的用户 ID 才能访问这些文件；</p>
+</li>
+<li>
+<p>每个进程都拥有自己的虚拟机 (VM)，因此应用代码独立于其他应用而运行。</p>
+</li>
+<li>
+<p>默认情况下，每个应用都在其自己的 Linux 进程内运行。Android 系统会在需要执行任何应用组件时启动该进程，然后当不再需要该进程或系统必须为其他应用恢复内存时，其便会关闭该进程。</p>
+</li>
+</ul>
+<p>Android 系统实现了最小权限原则。换言之，默认情况下，每个应用只能访问执行其工作所需的组件，而不能访问其他组件。这样便能创建非常安全的环境，在此环境中，应用无法访问其未获得权限的系统部分。不过，应用仍可通过一些途径与其他应用共享数据以及访问系统服务:</p>
+<ul>
+<li>
+<p>可以安排两个应用共享同一 Linux 用户 ID，在此情况下，二者便能访问彼此的文件。为节省系统资源，也可安排拥有相同用户 ID 的应用在同一 Linux 进程中运行，并共享同一 VM。应用还必须使用相同的证书进行签名。</p>
+</li>
+<li>
+<p>应用可以请求访问设备数据(如用户的联系人、短信消息、可装载存储装置(SD 卡)、相机、蓝牙等)的权限。用户必须明确授予这些权限。如需了解详细信息，请参阅使用系统权限。</p>
+</li>
+</ul>
+<h2> 应用组件</h2>
+<p>应用组件是 Android 应用的基本构建块。每个组件都是一个入口点，系统或用户可通过该入口点进入您的应用。有些组件会依赖于其他组件。</p>
+<p>共有四种不同的应用组件类型:</p>
+<ul>
+<li>Activity</li>
+<li>服务</li>
+<li>广播接收器</li>
+<li>内容提供程序</li>
+</ul>
+<p>每种类型都有不同的用途和生命周期，后者会定义如何创建和销毁组件。</p>
+<h3> Activity</h3>
+<p>Activity 是与用户交互的入口点。它表示拥有界面的单个屏幕。例如，电子邮件应用可能有一个显示新电子邮件列表的 Activity、一个用于撰写电子邮件的 Activity 以及一个用于阅读电子邮件的 Activity。尽管这些 Activity 通过协作在电子邮件应用中形成一种紧密结合的用户体验，但每个 Activity 都独立于其他 Activity 而存在。因此，其他应用可以启动其中任何一个 Activity(如果电子邮件应用允许)。例如，相机应用可以启动电子邮件应用内用于撰写新电子邮件的 Activity，以便用户共享图片。Activity 有助于完成系统和应用程序之间的以下重要交互:</p>
+<ul>
+<li>
+<p>追踪用户当前关心的内容(屏幕上显示的内容)，以确保系统继续运行托管 Activity 的进程。</p>
+</li>
+<li>
+<p>了解先前使用的进程包含用户可能返回的内容(已停止的 Activity)，从而更优先保留这些进程。</p>
+</li>
+<li>
+<p>帮助应用处理终止其进程的情况，以便用户可以返回已恢复其先前状态的 Activity。</p>
+</li>
+<li>
+<p>提供一种途径，让应用实现彼此之间的用户流，并让系统协调这些用户流。(此处最经典的示例是共享。)</p>
+</li>
+</ul>
+<p>您需将 Activity 作为 Activity 类的子类来实现。如需了解有关 Activity 类的更多信息，请参阅 Activity 开发者指南。</p>
+<h2> 服务</h2>
+<p>服务是一个通用入口点，用于因各种原因使应用在后台保持运行状态。它是一种在后台运行的组件，用于执行长时间运行的操作或为远程进程执行作业。服务不提供界面。例如，当用户使用其他应用时，服务可能会在后台播放音乐或通过网络获取数据，但这不会阻断用户与 Activity 的交互。诸如 Activity 等其他组件可以启动服务，使该服务运行或绑定到该服务，以便与其进行交互。事实上，有两种截然不同的语义服务可以告知系统如何管理应用: 已启动服务会告知系统使其运行至工作完毕。此类工作可以是在后台同步一些数据，或者在用户离开应用后继续播放音乐。在后台同步数据或播放音乐也代表了两种不同类型的已启动服务，而这些服务可以修改系统处理它们的方式:</p>
+<ul>
+<li>
+<p>音乐播放是用户可直接感知的服务，因此，应用会向用户发送通知，表明其希望成为前台，从而告诉系统此消息；在此情况下，系统明白它应尽全力维持该服务进程运行，因为进程消失会令用户感到不快。</p>
+</li>
+<li>
+<p>通常，用户不会意识到常规后台服务正处于运行状态，因此系统可以更自由地管理其进程。如果系统需要使用 RAM 来处理用户更迫切关注的内容，则其可能允许终止服务(然后在稍后的某个时刻重启服务)。</p>
+</li>
+</ul>
+<p>绑定服务之所以能运行，原因是某些其他应用(或系统)已表示希望使用该服务。从根本上讲，这是为另一个进程提供 API 的服务。因此，系统会知晓这些进程之间存在依赖关系，所以如果进程 A 绑定到进程 B 中的服务，系统便知道自己需使进程 B(及其服务)为进程 A 保持运行状态。此外，如果进程 A 是用户关心的内容，系统随即也知道将进程 B 视为用户关心的内容。由于存在灵活性(无论好坏)，服务已成为非常有用的构建块，并且可实现各种高级系统概念。动态壁纸、通知侦听器、屏幕保护程序、输入方法、无障碍功能服务以及众多其他核心系统功能均可构建为在其运行时由应用实现、系统绑定的服务。</p>
+<p>您需将服务作为 Service 的子类来实现。如需了解有关 Service 类的更多信息，请参阅服务开发者指南。</p>
+<h2> 广播接收器</h2>
+<p>借助广播接收器组件，系统能够在常规用户流之外向应用传递事件，从而允许应用响应系统范围内的广播通知。由于广播接收器是另一个明确定义的应用入口，因此系统甚至可以向当前未运行的应用传递广播。例如，应用可通过调度提醒来发布通知，以告知用户即将发生的事件。而且，通过将该提醒传递给应用的广播接收器，应用在提醒响起之前即无需继续运行。许多广播均由系统发起，例如，通知屏幕已关闭、电池电量不足或已拍摄照片的广播。应用也可发起广播，例如，通知其他应用某些数据已下载至设备，并且可供其使用。尽管广播接收器不会显示界面，但其可以创建状态栏通知，在发生广播事件时提醒用户。但广播接收器更常见的用途只是作为通向其他组件的通道，旨在执行极少量的工作。例如，它可能会根据带 JobScheduler 的事件调度 JobService 来执行某项工作
+广播接收器作为 BroadcastReceiver 的子类实现，并且每条广播都作为 Intent 对象进行传递。如需了解详细信息，请参阅 BroadcastReceiver 类。</p>
+<h2> 内容提供程序</h2>
+<p>内容提供程序管理一组共享的应用数据，您可以将这些数据存储在文件系统、SQLite 数据库、网络中或者您的应用可访问的任何其他持久化存储位置。其他应用可通过内容提供程序查询或修改数据(如果内容提供程序允许)。例如，Android 系统可提供管理用户联系人信息的内容提供程序。因此，任何拥有适当权限的应用均可查询内容提供程序(如 <code>ContactsContract.Data</code>)，以读取和写入特定人员的相关信息。我们很容易将内容提供程序看作数据库上的抽象，因为其内置的大量 API 和支持时常适用于这一情况。但从系统设计的角度看，二者的核心目的不同。对系统而言，内容提供程序是应用的入口点，用于发布由 URI 架构识别的已命名数据项。因此，应用可以决定如何将其包含的数据映射到 URI 命名空间，进而将这些 URI 分发给其他实体。反之，这些实体也可使用分发的 URI 来访问数据。在管理应用的过程中，系统可以执行以下特殊操作:</p>
+<ul>
+<li>
+<p>分配 URI 无需应用保持运行状态，因此 URI 可在其所属的应用退出后继续保留。当系统必须从相应的 URI 检索应用数据时，系统只需确保所属应用仍处于运行状态。</p>
+</li>
+<li>
+<p>这些 URI 还会提供重要的细粒度安全模型。例如，应用可将其所拥有图像的 URI 放到剪贴板上，但将其内容提供程序锁定，以便其他应用程序无法随意访问它。当第二个应用尝试访问剪贴板上的 URI 时，系统可允许该应用通过临时的 URI 授权来访问数据，这样便只能访问 URI 后面的数据，而非第二个应用中的其他任何内容。</p>
+</li>
+</ul>
+<p>内容提供程序也适用于读取和写入您的应用不共享的私有数据。</p>
+<p>内容提供程序作为 ContentProvider 的子类实现，并且其必须实现一组标准 API，以便其他应用能够执行事务。如需了解详细信息，请参阅内容提供程序开发者指南。</p>
+<hr>
+<p>Android 系统设计的独特之处在于，任何应用都可启动其他应用的组件。例如，当您想让用户使用设备相机拍摄照片时，另一个应用可能也可执行该操作，因而您的应用便可使用该应用，而非自行产生一个 Activity 来拍摄照片。您无需加入甚至链接到该相机应用的代码。只需启动拍摄照片的相机应用中的 Activity 即可。完成拍摄时，系统甚至会将照片返回您的应用，以便您使用。对用户而言，这就如同相机是您应用的一部分。</p>
+<p>当系统启动某个组件时，它会启动该应用的进程(如果尚未运行)，并实例化该组件所需的类。例如，如果您的应用启动相机应用中拍摄照片的 Activity，则该 Activity 会在属于相机应用的进程(而非您的应用进程)中运行。因此，与大多数其他系统上的应用不同，Android 应用并没有单个入口点(即没有 main() 函数)。</p>
+<p>由于系统在单独的进程中运行每个应用，且其文件权限会限制对其他应用的访问，因此您的应用无法直接启动其他应用中的组件，但 Android 系统可以。如要启动其他应用中的组件，请向系统传递一条消息，说明启动特定组件的 Intent。系统随后便会为您启动该组件。</p>
+<h2> 启动组件</h2>
+<p>在四种组件类型中，有三种(Activity、服务和广播接收器)均通过异步消息 Intent 进行启动。Intent 会在运行时对各个组件进行互相绑定。您可以将 Intent 视为从其他组件(无论该组件是属于您的应用还是其他应用)请求操作的信使。</p>
+<p>您需使用 Intent 对象创建 Intent，该对象通过定义消息来启动特定组件(显式 Intent)或特定的组件类型(隐式 Intent)。</p>
+<p>对于 Activity 和服务，Intent 会定义要执行的操作(例如，查看或发送某内容)，并且可指定待操作数据的 URI，以及正在启动的组件可能需要了解的信息。例如，Intent 可能会传达对 Activity 的请求，以便显示图像或打开网页。在某些情况下，您可以通过启动 Activity 来接收结果，这样 Activity 还会返回 Intent 中的结果。例如，您可以发出一个 Intent，让用户选取某位联系人并将其返回给您。返回 Intent 包含指向所选联系人的 URI。</p>
+<p>对于广播接收器，Intent 只会定义待广播的通知。例如，指示设备电池电量不足的广播只包含指示“电池电量不足”的已知操作字符串。</p>
+<p>与 Activity、服务和广播接收器不同，内容提供程序并非由 Intent 启动。相反，它们会在成为 ContentResolver 的请求目标时启动。内容解析程序会通过内容提供程序处理所有直接事务，因此通过提供程序执行事务的组件便无需执行事务，而是改为在 ContentResolver 对象上调用方法。这会在内容提供程序与请求信息的组件之间留出一个抽象层(以确保安全)。</p>
+<p>每种组件都有不同的启动方法:</p>
+<ul>
+<li>
+<p>如要启动 Activity，您可以向 startActivity() 或 startActivityForResult() 传递 Intent(当您想让 Activity 返回结果时)，或者为其安排新任务。</p>
+</li>
+<li>
+<p>在 Android 5.0(API 级别 21)及更高版本中，您可以使用 JobScheduler 类来调度操作。对于早期 Android 版本，您可以通过向 startService() 传递 Intent 来启动服务(或对执行中的服务下达新指令)。您也可通过向将 bindService() 传递 Intent 来绑定到该服务。</p>
+</li>
+<li>
+<p>您可以通过向 <code>sendBroadcast()</code>、<code>sendOrderedBroadcast()</code> 或 <code>sendStickyBroadcast()</code> 等方法传递 Intent 来发起广播。</p>
+</li>
+<li>
+<p>您可以通过在 ContentResolver 上调用 <code>query()</code>，对内容提供程序执行查询。</p>
+</li>
+</ul>
+<p>如需了解有关 Intent 用法的详细信息，请参阅 Intent 和 Intent 过滤器文档。以下文档将为您详细介绍如何启动特定组件: Activity、服务、BroadcastReceiver 和内容提供程序。</p>
+<h2> 清单文件</h2>
+<p>在 Android 系统启动应用组件之前，系统必须通过读取应用的清单文件 (AndroidManifest.xml) 确认组件存在。您的应用必须在此文件中声明其所有组件，该文件必须位于应用项目目录的根目录中。</p>
+<p>除了声明应用的组件外，清单文件还有许多其他作用，如:</p>
+<ul>
+<li>
+<p>确定应用需要的任何用户权限，如互联网访问权限或对用户联系人的读取权限。</p>
+</li>
+<li>
+<p>根据应用使用的 API，声明应用所需的最低 API 级别。</p>
+</li>
+<li>
+<p>声明应用使用或需要的硬件和软件功能，如相机、蓝牙服务或多点触摸屏幕。</p>
+</li>
+<li>
+<p>声明应用需要链接的 API 库(Android 框架 API 除外)，如 Google 地图库。</p>
+</li>
+</ul>
+<h3> 声明组件</h3>
+<p>清单文件的主要任务是告知系统应用组件的相关信息。例如，清单文件可按如下所示声明 Activity:</p>
+<div class="language-xml" data-ext="xml"></div><p>在 <code>&lt;application&gt;</code> 元素中，android:icon 属性指向标识应用的图标所对应的资源。</p>
+<p>在 <code>&lt;activity&gt;</code> 元素中，android:name 属性指定 Activity 子类的完全限定类名，<code>android:label</code> 属性指定用作 Activity 的用户可见标签的字符串。</p>
+<p>您必须使用以下元素声明所有应用组件:</p>
+<ul>
+<li>
+<p>Activity 的 <code>&lt;activity&gt;</code> 元素。</p>
+</li>
+<li>
+<p>服务的 <code>&lt;service&gt;</code> 元素。</p>
+</li>
+<li>
+<p>广播接收器的 <code>&lt;receiver&gt;</code> 元素。</p>
+</li>
+<li>
+<p>内容提供程序的 <code>&lt;provider&gt;</code> 元素。</p>
+</li>
+</ul>
+<p>如果未在清单文件中声明源代码中包含的 Activity、服务和内容提供程序，则这些组件对系统不可见，因此也永远不会运行。不过，您可以 BroadcastReceiver 对象的形式，在清单中声明或在代码中动态创建广播接收器；以及通过调用 <code>registerReceiver()</code>，在系统中注册广播接收器。</p>
+<p>如需详细了解如何为您的应用构建清单文件，请参阅 AndroidManifest.xml 文件文档。</p>
+<h3> 声明组件功能</h3>
+<p>如上文启动组件中所述，您可以使用 Intent 来启动 Activity、服务和广播接收器。您可以通过在 Intent 中显式命名目标组件(使用组件类名)来使用 Intent。您还可使用隐式 Intent，通过它来描述要执行的操作类型和待操作数据(可选)。借助隐式 Intent，系统能够在设备上找到可执行该操作的组件，并启动该组件。如果有多个组件可以执行 Intent 所描述的操作，则由用户选择使用哪一个组件。</p>
+<div class="hint-container danger">
+<p class="hint-container-title">警告</p>
+<p>如果您使用 Intent 来启动 Service，请使用显式 Intent 来确保应用的安全性。使用隐式 Intent 启动服务存在安全隐患，因为您无法确定哪些服务将响应 Intent，且用户无法看到哪些服务已启动。从 Android 5.0 (API 级别 21) 开始，如果使用隐式 Intent 调用 <code>bindService()</code>，系统会抛出异常。请勿为您的服务声明 Intent 过滤器。</p>
+</div>
+<p>通过将收到的 Intent 与设备上其他应用的清单文件中提供的 Intent 过滤器进行比较，系统便可识别能响应 Intent 的组件。</p>
+<p>在应用的清单文件中声明 Activity 时，您可以选择性地加入声明 Activity 功能的 Intent 过滤器，以便响应来自其他应用的 Intent。您可以将 <code>&lt;intent-filter&gt;</code> 元素作为组件声明元素的子项进行添加，从而为您的组件声明 Intent 过滤器。</p>
+<p>例如，如果您构建的电子邮件应用包含用于撰写新电子邮件的 Activity，则可通过声明 Intent 过滤器来响应 “send” Intent(目的是发送新电子邮件)，如下方示例所示:</p>
+<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果另一个应用创建包含 <code>ACTION_SEND</code> 操作的 Intent 并将其传递到 <code>startActivity()</code>，则系统可能会启动您的 Activity，以便用户能够草拟并发送电子邮件。</p>
+<p>如需了解有关创建 Intent 过滤器的详细信息，请参阅 Intent 和 Intent 过滤器文档。</p>
+<h3> 声明应用要求</h3>
+<p>Android 设备多种多样，但并非所有设备都提供相同的特性和功能。以防将您的应用安装在缺少应用所需特性的设备上，您必须通过在清单文件中声明设备和软件要求，为该应用支持的设备类型明确定义一个配置文件。其中的大多数声明只是为了提供信息，系统并不会读取它们，但 Google Play 等外部服务会读取它们，以便在用户通过其设备搜索应用时为用户提供过滤功能。</p>
+<p>例如，如果您的应用需要相机功能，并使用 Android 2.1 (API 级别 7) 中引入的 API，您必须在清单文件中声明以下要求，如下方示例所示</p>
+<div class="language-xml" data-ext="xml"></div><p>通过示例中所述的声明，没有相机且 Android 版本低于 2.1 的设备将无法从 Google Play 安装您的应用。不过，您可以声明您的应用使用相机，但并不要求必须使用。在此情况下，您的应用必须将 required 属性设置为 false，并在运行时检查设备是否拥有相机，然后根据需要停用任何相机功能。</p>
+<p>如需详细了解如何管理应用与不同设备的兼容性，请参阅设备兼容性文档。</p>
+<h2> 应用资源</h2>
+<p>Android 应用并非仅包含代码，它还需要与源代码分离的资源，如图像、音频文件以及任何与应用的视觉呈现有关的内容。例如，您可以通过 XML 文件定义 Activity 界面的动画、菜单、样式、颜色和布局。借助应用资源，您无需修改代码即可轻松更新应用的各种特性。通过提供备用资源集，您可以针对各种设备配置(如不同的语言和屏幕尺寸)优化您的应用。</p>
+<p>对于您在 Android 项目中加入的每一项资源，SDK 构建工具均会定义唯一的整型 ID，您可以利用此 ID 来引用资源，这些资源或来自应用代码，或来自 XML 中定义的其他资源。例如，如果您的应用包含名为 <code>logo.png</code> 的图像文件(保存在 <code>res/drawable/</code> 目录中)，则 SDK 工具会生成名为 <code>R.drawable.logo</code> 的资源 ID。此 ID 映射到应用特定的整型数，您可以利用它来引用该图像，并将其插入您的界面。</p>
+<p>如果提供与源代码分离的资源，则其中最重要的一个优点在于，您可以提供适用于不同设备配置的备用资源。例如，通过在 XML 中定义界面字符串，您可以将字符串翻译为其他语言，并将这些字符串保存在单独的文件中。然后，Android 系统会根据向资源目录名称追加的语言限定符 (如为法语字符串值追加 <code>res/values-fr/</code>) 和用户的语言设置，对您的界面应用相应的语言字符串。</p>
+<p>Android 支持许多不同的备用资源限定符。限定符是资源目录名称中加入的短字符串，用于定义这些资源适用的设备配置。例如，您应根据设备的屏幕方向和尺寸为 Activity 创建不同的布局。当设备屏幕为纵向(长型)时，您可能想要一种垂直排列按钮的布局；但当屏幕为横向(宽型)时，可以按水平方向排列按钮。如要根据方向更改布局，您可以定义两种不同的布局，然后对每个布局的目录名称应用相应的限定符。然后，系统会根据当前设备方向自动应用相应的布局。</p>
+<p>如需详细了解可以在应用中加入的不同资源类型以及如何针对不同设备配置创建备用资源，请阅读提供资源。如要详细了解最佳做法和设计生产质量的稳健应用，请参阅应用架构指南。</p>
+]]></content>
+    <category term="Android"/>
+    <published>2020-04-08T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">应用资源概览</title>
+    <id>https://mrhope.site/code/android/resource.html</id>
+    <link href="https://mrhope.site/code/android/resource.html"/>
+    <updated>2023-03-24T09:43:26.000Z</updated>
+    <summary type="html"><![CDATA[<p>资源是指代码使用的附加文件和静态内容，例如位图、布局定义、界面字符串、动画说明等。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>资源是指代码使用的附加文件和静态内容，例如位图、布局定义、界面字符串、动画说明等。</p>
+<!-- more -->
+<p>您应始终外部化应用资源(例如图像和代码中的字符串)，以便单独对其进行维护。此外，您还应为特定设备配置提供备用资源，方法是将其进行分组并放入专门命名的资源目录中。在运行时，Android 会根据当前配置使用合适的资源。例如，您可能需根据屏幕尺寸提供不同的界面布局，或根据语言设置提供不同的字符串。</p>
+<p>外部化应用资源后，您便可使用在项目 R 类中生成的资源 ID 来访问这些资源。本文档会介绍如何对 Android 项目中的资源进行分组，如何为特定的设备配置提供备用资源，以及如何从您的应用代码或其他 XML 文件访问这些资源。</p>
+<h2> 分组资源类型</h2>
+<p>您应将各类资源放入项目 <code>res/</code> 目录的特定子目录中。例如，以下是一个简单项目的文件层次结构:</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如此示例所示，<code>res/</code> 目录包含所有资源(在子目录中): 一个图像资源、两个布局资源、启动器图标的 <code>mipmap/</code> 目录以及一个字符串资源文件。资源目录名称非常重要，具体说明请见表 1。</p>
+<p>表 1. 项目 <code>res/</code> 目录中支持的资源目录。</p>
+<table>
+<thead>
+<tr>
+<th>目录</th>
+<th>资源类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>animator/</td>
+<td>用于定义属性动画的 XML 文件。</td>
+</tr>
+<tr>
+<td>anim/</td>
+<td>用于定义渐变动画的 XML 文件。(属性动画也可保存在此目录中，但为了区分这两种类型，属性动画首选 animator/ 目录。)</td>
+</tr>
+<tr>
+<td>color/</td>
+<td>用于定义颜色状态列表的 XML 文件。请参阅颜色状态列表资源</td>
+</tr>
+<tr>
+<td>drawable/</td>
+<td>位图文件(.png、.9.png、.jpg、.gif)或编译为以下可绘制对象资源子类型的 XML 文件: <br>位图文件<br>九宫格(可调整大小的位图)<br>状态列表<br>形状<br>动画可绘制对象<br>其他可绘制对象<br>请参阅 Drawable 资源。</td>
+</tr>
+<tr>
+<td>mipmap/</td>
+<td>适用于不同启动器图标密度的可绘制对象文件。如需了解有关使用 mipmap/ 文件夹管理启动器图标的详细信息，请参阅管理项目概览。</td>
+</tr>
+<tr>
+<td>layout/</td>
+<td>用于定义用户界面布局的 XML 文件。请参阅布局资源。</td>
+</tr>
+<tr>
+<td>menu/</td>
+<td>用于定义应用菜单(如选项菜单、上下文菜单或子菜单)的 XML 文件。请参阅菜单资源。</td>
+</tr>
+<tr>
+<td>raw/</td>
+<td>需以原始形式保存的任意文件。如要使用原始 InputStream 打开这些资源，请使用资源 ID(即 <code>R.raw.filename</code>)调用 <code>Resources.openRawResource()</code>。<br>但是，如需访问原始文件名和文件层次结构，则可以考虑将某些资源保存在 <code>assets/</code> 目录(而非 <code>res/raw/</code>)下。<code>assets/</code> 中的文件没有资源 ID，因此您只能使用 AssetManager 读取这些文件。</td>
+</tr>
+<tr>
+<td>values/</td>
+<td>包含字符串、整型数和颜色等简单值的 XML 文件。<br>其他 <code>res/</code> 子目录中的 XML 资源文件会根据 XML 文件名定义单个资源，而 <code>values/</code> 目录中的文件可描述多个资源。对于此目录中的文件，<code>&lt;resources&gt;</code> 元素的每个子元素均会定义一个资源。例如，<code>&lt;string&gt;</code> 元素会创建 R.string 资源，<code>&lt;color&gt;</code> 元素会创建 R.color 资源。<br>由于每个资源均使用自己的 XML 元素进行定义，因此您可以随意命名文件，并在某个文件中放入不同的资源类型。但是，您可能需要将独特的资源类型放在不同的文件中，使其一目了然。例如，对于可在此目录中创建的资源，下面给出了相应的文件名约定: <br>arrays.xml: 资源数组(类型数组)。<br>colors.xml: 颜色值。<br>dimens.xml: 尺寸值。<br>strings.xml: 字符串值。<br>styles.xml: 样式。<br>请参阅字符串资源、样式资源和更多资源类型。</td>
+</tr>
+<tr>
+<td>xml/</td>
+<td>可在运行时通过调用 Resources.getXML() 读取的任意 XML 文件。各种 XML 配置文件(如可搜索配置)都必须保存在此处。</td>
+</tr>
+<tr>
+<td>font/</td>
+<td>带有扩展名的字体文件(如 .ttf、.otf 或 .ttc)，或包含 <code>&lt;font-family&gt;</code> 元素的 XML 文件。如需详细了解作为资源的字体，请参阅 XML 中的字体。</td>
+</tr>
+</tbody>
+</table>
+<div class="hint-container danger">
+<p class="hint-container-title">警告</p>
+<p>切勿将资源文件直接保存在 <code>res/</code> 目录内，因为这样会造成编译错误。</p>
+</div>
+]]></content>
+    <category term="Android"/>
+    <published>2020-04-09T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">启动另一个 activity</title>
+    <id>https://mrhope.site/code/android/get-started/activity.html</id>
+    <link href="https://mrhope.site/code/android/get-started/activity.html"/>
+    <updated>2023-03-24T09:43:26.000Z</updated>
+    <summary type="html"><![CDATA[<p>在本课中，您将向 MainActivity 添加一些代码，以便在用户点按 Send 按钮时启动一个显示消息的新 activity。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>在本课中，您将向 MainActivity 添加一些代码，以便在用户点按 Send 按钮时启动一个显示消息的新 activity。</p>
+<!-- more -->
+<h2> 响应“Send”按钮</h2>
+<p>您可按照以下步骤，向 MainActivity 类添加一个在用户点按 Send 按钮时调用的方法：</p>
+<ol>
+<li>
+<p>在 app &gt; java &gt; com.example.myfirstapp &gt; MainActivity 文件中，添加以下 sendMessage() 方法桩：</p>
+
+<p>您可能会看到一条错误，因为 Android Studio 无法解析用作方法参数的 View 类。若要清除错误，请点击 View 声明，将光标置于其上，然后按 <code>Alt + Enter</code>（在 Mac 上则按 <code>Option + Enter</code>）进行快速修复。如果出现一个菜单，请选择 Import class。</p>
+</li>
+<li>
+<p>返回到 activity_main.xml 文件，并从该按钮调用此方法:</p>
+<ol>
+<li>选择布局编辑器中的相应按钮。</li>
+<li>在 Attributes 窗口中，找到 onClick 属性，并从其下拉列表中选择 <code>sendMessage [MainActivity]</code>。</li>
+</ol>
+<p>现在，当用户点按该按钮时，系统将调用 <code>sendMessage()</code> 方法。</p>
+<p>请注意此方法中提供的详细信息。系统需要这些信息来识别此方法是否与 android:onClick 属性兼容。具体来说，此方法具有以下特性：</p>
+<ol>
+<li>公开。</li>
+<li>返回值为空，或在 Kotlin 中为隐式 Unit。</li>
+<li>View 是唯一的参数。这是您在第 1 步结束时点击的 View 对象。</li>
+</ol>
+</li>
+<li>
+<p>接下来，填写此方法，以读取文本字段的内容，并将该文本传递给另一个 activity。</p>
+</li>
+</ol>
+<h2> 构建一个 intent</h2>
+<p><code>Intent</code> 是在相互独立的组件（如两个 activity）之间提供运行时绑定功能的对象。Intent 表示应用执行某项操作的意图。您可以使用 intent 执行多种任务，但在本课中，您的 intent 将用于启动另一个 activity。</p>
+<p>在 MainActivity 中，添加 EXTRA_MESSAGE 常量和 sendMessage() 代码，如下所示：</p>
+
+<p>预计 Android Studio 会再次遇到 Cannot resolve symbol 错误。如需清除这些错误，请按 Alt+Enter（在 Mac 上则按 Option+Return）。您最后应导入以下内容：</p>
+
+<p>DisplayMessageActivity 仍有错误，但没有关系。您将在下一部分中修复该错误。</p>
+<p>sendMessage() 将发生以下情况：</p>
+<ul>
+<li>
+<p>Intent 构造函数会获取两个参数：Context 和 Class。</p>
+<p>首先使用 Context 参数，因为 Activity 类是 Context 的子类。</p>
+<p>在本例中，系统将 Intent, 传递到的应用组件的 Class 参数是要启动的 activity。</p>
+</li>
+<li>
+<p>putExtra() 方法将 EditText 的值添加到 intent。Intent 能够以称为“extra”的键值对形式携带数据类型。</p>
+<p>您的键是一个公共常量 EXTRA_MESSAGE，因为下一个 activity 将使用该键检索文本值。为 intent extra 定义键时，最好使用应用的软件包名称作为前缀。这样可以确保这些键是独一无二的，这在您的应用需要与其他应用进行交互时会很重要。</p>
+</li>
+<li>
+<p>startActivity() 方法将启动一个由 Intent 指定的 DisplayMessageActivity 实例。接下来，您需要创建该类。</p>
+</li>
+</ul>
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>导航架构组件允许您使用导航编辑器将一个 activity 与另一个 activity 相关联。建立这种关联后，您可以利用 API 在用户触发关联的操作（例如，用户点击某个按钮时）时启动第二个 activity。如需了解详情，请参阅导航。</p>
+</div>
+<h2> 创建第二个 activity</h2>
+<p>若要创建第二个 activity，请按以下步骤操作：</p>
+<ol>
+<li>在 Project 窗口中，右键点击 app 文件夹，然后依次选择 New &gt; Activity &gt; Empty Activity。</li>
+<li>在 Configure Activity 窗口中，输入“DisplayMessageActivity”作为 Activity Name。将所有其他属性保留为默认设置，然后点击 Finish。</li>
+</ol>
+<p>Android Studio 会自动执行下列三项操作：</p>
+<ol>
+<li>创建 DisplayMessageActivity 文件。</li>
+<li>创建 DisplayMessageActivity 文件对应的布局文件 activity_display_message.xml。</li>
+<li>在 AndroidManifest.xml 中添加所需的 <code>&lt;activity&gt;</code> 元素。</li>
+</ol>
+<p>如果您运行应用并点按第一个 activity 上的按钮，将启动第二个 activity，但它为空。这是因为第二个 activity 使用模板提供的空布局。</p>
+<h2> 添加文本视图</h2>
+<p>新 activity 包含一个空白布局文件。请按以下步骤操作，在显示消息的位置添加一个文本视图：</p>
+<ol>
+<li>打开 app &gt; res &gt; layout &gt; activity_display_message.xml 文件。</li>
+<li>点击工具栏中的 Enable Autoconnection to Parent 。系统将启用 Autoconnect。参见图 1。</li>
+<li>在 Palette 面板中，点击 Text，将 TextView 拖动到布局中，然后将其放置在靠近布局顶部中心的位置，使其贴靠到出现的垂直线上。Autoconnect 将添加左侧和右侧约束条件，以便将该视图放置在水平中心位置。</li>
+<li>再创建一个从文本视图顶部到布局顶部的约束条件，使该视图如图 1 中所示。</li>
+</ol>
+<p>或者，您可以对文本样式进行一些调整，方法是在 Attributes 窗口的 Common Attributes 面板中展开 textAppearance，然后更改 textSize 和 textColor 等属性。</p>
+<h2> 显示消息</h2>
+<p>在此步骤中，您将修改第二个 activity 以显示第一个 activity 传递的消息。</p>
+<ol>
+<li>
+<p>在 DisplayMessageActivity 中，将以下代码添加到 <code>onCreate()</code> 方法中：</p>
+
+</li>
+<li>
+<p>按 <code>Alt + Enter</code>（在 Mac 上则按 <code>Option + Return</code>）导入其他所需的类：</p>
+
+</li>
+</ol>
+<h2> 添加向上导航功能</h2>
+<p>在您的应用中，不是主入口点的每个屏幕（所有不是主屏幕的屏幕）都必须提供导航功能，以便将用户引导至应用层次结构中的逻辑父级屏幕。为此，请在应用栏中添加向上按钮。</p>
+<p>若要添加向上按钮，您需要在 <code>AndroidManifest.xml</code> 文件中声明哪个 activity 是逻辑父级。打开 app &gt; manifests &gt; AndroidManifest.xml 文件，找到 DisplayMessageActivity 的 <code>&lt;activity&gt;</code> 标记，然后将其替换为以下代码：</p>
+<div class="language-xml" data-ext="xml"></div><p>Android 系统现在会自动向应用栏添加向上按钮。</p>
+<h2> 运行应用</h2>
+<p>点击工具栏中的 Apply Changes 以运行应用。当应用打开后，在文本字段中输入一条消息，点按 Send 即会看到该消息显示在第二个 activity 中。</p>
+]]></content>
+    <category term="Android"/>
+    <category term="快速上手"/>
+    <published>2022-04-01T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">创建项目</title>
+    <id>https://mrhope.site/code/android/get-started/create.html</id>
+    <link href="https://mrhope.site/code/android/get-started/create.html"/>
+    <updated>2023-03-24T09:43:26.000Z</updated>
+    <summary type="html"><![CDATA[<p>本课将介绍如何使用 Android Studio 创建新的 Android 项目，并介绍该项目中的一些文件。</p>
+<p>如需创建新的 Android 项目，请按以下步骤操作：</p>
+<ol>
+<li>
+<p>安装最新版 Android Studio。</p>
+</li>
+<li>
+<p>在 Welcome to Android Studio 窗口中，点击 Create New Project。</p>
+<p>如果您已打开一个项目，请依次选择 File &gt; New &gt; New Project。</p>
+</li>
+<li>
+<p>在 Select a Project Template 窗口中，选择 Empty Activity，然后点击 Next。</p>
+</li>
+<li>
+<p>在 Configure your project 窗口中，完成以下操作：</p>
+<ul>
+<li>
+<p>在 Name 字段中输入“My First App”。</p>
+</li>
+<li>
+<p>在 Package name 字段中输入“com.example.myfirstapp”。</p>
+</li>
+<li>
+<p>如果您想将项目放在其他文件夹中，请更改其 Save 位置。</p>
+</li>
+<li>
+<p>从 Language 下拉菜单中选择 Java 或 Kotlin。</p>
+</li>
+<li>
+<p>在 Minimum SDK 字段中选择您希望应用支持的最低 Android 版本。</p>
+</li>
+</ul>
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>点击 Help me choose 链接可打开 Android Platform/API Version Distribution 对话框。此对话框会提供有关各 Android 版本在设备间的分布情况的信息。您需要权衡的主要因素是，您想支持的 Android 设备所占的百分比，以及在这些设备所搭载的各个不同版本上维护应用所需的工作量。例如，如果您选择让应用与多个不同 Android 版本兼容，那么维护最旧版本与最新版本之间的兼容性所需的工作量就会增大。</p>
+</div>
+<ul>
+<li>
+<p>如果您的应用需要旧版库支持，请选中 Use legacy android.support libraries 复选框。</p>
+</li>
+<li>
+<p>其他选项保持原样。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>点击 Finish。</p>
+</li>
+</ol>]]></summary>
+    <content type="html"><![CDATA[<p>本课将介绍如何使用 Android Studio 创建新的 Android 项目，并介绍该项目中的一些文件。</p>
+<p>如需创建新的 Android 项目，请按以下步骤操作：</p>
+<ol>
+<li>
+<p>安装最新版 Android Studio。</p>
+</li>
+<li>
+<p>在 Welcome to Android Studio 窗口中，点击 Create New Project。</p>
+<p>如果您已打开一个项目，请依次选择 File &gt; New &gt; New Project。</p>
+</li>
+<li>
+<p>在 Select a Project Template 窗口中，选择 Empty Activity，然后点击 Next。</p>
+</li>
+<li>
+<p>在 Configure your project 窗口中，完成以下操作：</p>
+<ul>
+<li>
+<p>在 Name 字段中输入“My First App”。</p>
+</li>
+<li>
+<p>在 Package name 字段中输入“com.example.myfirstapp”。</p>
+</li>
+<li>
+<p>如果您想将项目放在其他文件夹中，请更改其 Save 位置。</p>
+</li>
+<li>
+<p>从 Language 下拉菜单中选择 Java 或 Kotlin。</p>
+</li>
+<li>
+<p>在 Minimum SDK 字段中选择您希望应用支持的最低 Android 版本。</p>
+</li>
+</ul>
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>点击 Help me choose 链接可打开 Android Platform/API Version Distribution 对话框。此对话框会提供有关各 Android 版本在设备间的分布情况的信息。您需要权衡的主要因素是，您想支持的 Android 设备所占的百分比，以及在这些设备所搭载的各个不同版本上维护应用所需的工作量。例如，如果您选择让应用与多个不同 Android 版本兼容，那么维护最旧版本与最新版本之间的兼容性所需的工作量就会增大。</p>
+</div>
+<ul>
+<li>
+<p>如果您的应用需要旧版库支持，请选中 Use legacy android.support libraries 复选框。</p>
+</li>
+<li>
+<p>其他选项保持原样。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>点击 Finish。</p>
+</li>
+</ol>
+<p>经过一段时间的处理后，Android Studio 主窗口会出现。</p>
+<p>下面花一点时间了解一下最重要的文件。</p>
+<p>首先，确保已打开 Project 窗口（依次选择 View &gt; Tool Windows &gt; Project），并从该窗口顶部的下拉列表中选择 Android 视图。随后，您可以看到以下文件：</p>
+<ul>
+<li>
+<p>app &gt; java &gt; com.example.myfirstapp &gt; MainActivity</p>
+<p>这是主 activity。它是应用的入口点。当您构建和运行应用时，系统会启动此 Activity 的实例并加载其布局。</p>
+</li>
+<li>
+<p>app &gt; res &gt; layout &gt; activity_main.xml</p>
+<p>此 XML 文件定义了 activity 界面 (UI) 的布局。它包含一个 TextView 元素，其中具有“Hello, World!”文本</p>
+</li>
+<li>
+<p>app &gt; manifests &gt; AndroidManifest.xml</p>
+<p>清单文件描述了应用的基本特性并定义了每个应用组件。</p>
+</li>
+<li>
+<p>Gradle Scripts &gt; build.gradle</p>
+<p>有两个使用此名称的文件：一个针对项目“Project: My First App”，另一个针对应用模块“Module: My_First_App.app”。每个模块均有自己的 build.gradle 文件，但此项目当前仅有一个模块。使用每个模块的 build.gradle 文件控制 Gradle 插件构建应用的方式。如需详细了解此文件，请参阅配置 build。</p>
+</li>
+</ul>
+]]></content>
+    <category term="Android"/>
+    <category term="快速上手"/>
+    <published>2022-04-01T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">构建简单的界面</title>
+    <id>https://mrhope.site/code/android/get-started/interface.html</id>
+    <link href="https://mrhope.site/code/android/get-started/interface.html"/>
+    <updated>2023-03-24T09:43:26.000Z</updated>
+    <summary type="html"><![CDATA[<p>在本节课中，您将学习如何使用 Android Studio 布局编辑器创建包含一个文本框和一个按钮的布局。这将为下一课打下基础，下节课将学习如何在点按该按钮时让应用将文本框的内容发送到其他 activity。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>在本节课中，您将学习如何使用 Android Studio 布局编辑器创建包含一个文本框和一个按钮的布局。这将为下一课打下基础，下节课将学习如何在点按该按钮时让应用将文本框的内容发送到其他 activity。</p>
+<!-- more -->
+<p>Android 应用的界面 (UI) 以布局和微件的层次结构形式构建而成。布局是 ViewGroup 对象，即控制其子视图在屏幕上的放置方式的容器。微件是 View 对象，即按钮和文本框等界面组件。</p>
+<p></p>
+<p>Android 提供了 ViewGroup 和 View 类的 XML 词汇表，因此界面的大部分内容都在 XML 文件中定义。不过，本节课将向您介绍如何使用 Android Studio 的布局编辑器创建布局，而不是教您编写 XML 代码。布局编辑器会在您拖放视图构建布局时为您编写 XML 代码。</p>
+<h2> 打开布局编辑器</h2>
+<p>首先，请按照以下步骤设置工作区：</p>
+<ol>
+<li>在 Project 窗口中，依次打开 app &gt; res &gt; layout &gt; activity_main.xml。</li>
+<li>若要给布局编辑器留出空间，请隐藏 Project 窗口。为此，请依次选择 View &gt; Tool Windows &gt; Project，或直接点击 Android Studio 屏幕左侧的 Project。</li>
+<li>如果您的编辑器显示 XML 源代码，请点击窗口右上角的 Design 标签页。</li>
+<li>点击 (Select Design Surface)，然后选择 Blueprint。</li>
+<li>点击布局编辑器工具栏中的 (View Options)，并确保选中 Show All Constraints。</li>
+<li>确保 Autoconnect 处于关闭状态。当 Autoconnect 处于关闭状态时，工具栏中的提示会显示 (Enable Autoconnection to Parent)。</li>
+<li>点击工具栏中的 (Default Margins)，然后选择 16。如果需要，您可以稍后调整每个视图的外边距。</li>
+<li>点击工具栏中的 (Device for Preview)，然后选择 5.5, 1440 × 2560, 560 dpi (Pixel XL)。</li>
+</ol>
+<p>您的布局编辑器现在如下图所示。</p>
+<p></p>
+<p>左下方的 Component Tree 面板显示布局的视图层次结构。在本例中，根视图是 ConstraintLayout，它仅包含一个 TextView 对象。</p>
+<p>ConstraintLayout 是一种布局，它根据同级视图和父布局的约束条件定义每个视图的位置。这样一来，使用扁平视图层次结构既可以创建简单布局，又可以创建复杂布局。这种布局无需嵌套布局。嵌套布局是布局内的布局（如图 2 所示），会增加绘制界面所需的时间。</p>
+<p>例如，您可以声明以下布局，如下图所示：</p>
+<ul>
+<li>视图 A 距离父布局顶部 16 dp。</li>
+<li>视图 A 距离父布局左侧 16 dp。</li>
+<li>视图 B 距离视图 A 右侧 16 dp。</li>
+<li>视图 B 与视图 A 顶部对齐。</li>
+</ul>
+<p></p>
+<h2> 添加文本框</h2>
+<p>请按照下面的步骤添加文本框：</p>
+<ol>
+<li>首先，您需要移除布局中已有的内容。在 Component Tree 面板中点击 TextView，然后按 Delete 键。</li>
+<li>在 Palette 面板中，点击 Text 以显示可用的文本控件。</li>
+<li>将 Plain Text 拖动到设计编辑器中，并将其放在靠近布局顶部的位置。这是一个接受纯文本输入的 EditText 微件。</li>
+<li>点击设计编辑器中的视图。现在，您可以在每个角上看到调整视图大小的正方形手柄，并在每个边上看到圆形约束锚点。为了更好地控制，您可能需要放大编辑器。为此，请使用布局编辑器工具栏中的 Zoom 按钮。</li>
+<li>点击并按住顶边上的锚点，将其向上拖动，直至其贴靠到布局顶部，然后将其释放。这是一个约束条件：它会将视图约束在已设置的默认外边距内。在本例中，您将其设置为距离布局顶部 16 dp。</li>
+<li>使用相同的过程创建一个从视图左侧到布局左侧的约束条件。</li>
+</ol>
+<h2> 添加按钮</h2>
+<ol>
+<li>在 Palette 面板中，点击 Buttons。</li>
+<li>将 Button 微件拖到设计编辑器中，并将其放在靠近右侧的位置。</li>
+<li>创建一个从按钮左侧到文本框右侧的约束条件。</li>
+<li>如需按水平对齐约束视图，请创建一个文本基线之间的约束条件。为此，请右键点击按钮，然后选择 Show Baseline 在布局编辑器中显示基准操作。基线锚点显示在按钮内部。点击并按住此锚点，然后将其拖动到相邻文本框中显示的基线锚点上。</li>
+</ol>
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>您还可以根据顶边或底边实现水平对齐。但按钮的图片周围有内边距，因此如果以这种方式对齐，那么它们看上去是没有对齐的。</p>
+</div>
+<h2> 更改界面字符串</h2>
+<p>若要预览界面，请点击工具栏中的 (Select Design Surface)，然后选择 Design。请注意，文本输入和按钮标签应设置为默认值。</p>
+<p>若要更改界面字符串，请按以下步骤操作：</p>
+<ol>
+<li>
+<p>打开 Project 窗口，然后打开 app &gt; res &gt; values &gt; strings.xml。</p>
+<p>这是一个字符串资源文件，您可在此文件中指定所有界面字符串。您可以利用该文件在一个位置管理所有界面字符串，使字符串的查找、更新和本地化变得更加容易。</p>
+</li>
+<li>
+<p>点击窗口顶部的 Open editor。此时将打开 Translations Editor，它提供了一个可以添加和修改默认字符串的简单界面。它还有助于让所有已翻译的字符串井然有序。</p>
+</li>
+<li>
+<p>点击 (Add Key) 可以创建一个新字符串作为文本框的“提示文本”。此时会打开如图 7 所示的窗口。</p>
+<p>在 Add Key 对话框中，完成以下步骤：</p>
+<ul>
+<li>在 Key 字段中输入“edit_message”。</li>
+<li>在 Default Value 字段中输入“Enter a message”。</li>
+<li>点击 OK。</li>
+</ul>
+</li>
+<li>
+<p>再添加一个名为“button_send”且值为“Send”的键。</p>
+</li>
+</ol>
+<p>现在，您可以为每个视图设置这些字符串。若要返回布局文件，请点击标签页栏中的 activity_main.xml。然后，添加字符串，如下所示：</p>
+<ol>
+<li>点击布局中的文本框。如果右侧还未显示 Attributes 窗口，请点击右侧边栏上的 Attributes。</li>
+<li>找到 text 属性（当前设为“Name”）并删除相应的值。</li>
+<li>找到 hint 属性，然后点击文本框右侧的 (Pick a Resource)。在显示的对话框中，双击列表中的 edit_message。</li>
+<li>点击布局中的按钮，找到其 text 属性（当前设为“Button”）。然后点击 (Pick a Resource)，并选择 button_send。</li>
+</ol>
+<h2> 让文本框大小可灵活调整</h2>
+<p>若要创建一个适应不同屏幕尺寸的布局，您需要让文本框拉伸以填充去除按钮和外边距后剩余的所有水平空间。</p>
+<p>继续操作之前，请点击工具栏中的 (Select Design Surface)，然后选择 Blueprint。</p>
+<p>若要让文本框大小可灵活调整，请按以下步骤操作：</p>
+<ol>
+<li>
+<p>选择两个视图。若要执行此操作，请点击一个视图，在按住 Shift 键的同时点击另一个视图，然后右键点击任一视图并依次选择 Chains &gt; Create Horizontal Chain。布局随即显示出来，如图 8 所示。</p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
+<p>链是两个或多个视图之间的双向约束条件，可让您采用一致的方式安排链接的视图。</p>
+</div>
+</li>
+<li>
+<p>选择按钮并打开 Attributes 窗口。然后使用 Constraint Widget 将右外边距设为 16 dp。
+点击文本框以查看其属性。然后，点击宽度指示器两次，确保将其设置为锯齿状线 (Match Constraints)，如图 9 中的标注 1 所示。</p>
+</li>
+<li>
+<p>“Match constraints”表示宽度将延长以符合水平约束条件和外边距的定义。因此，文本框将拉伸以填充去除按钮和所有外边距后剩余的水平空间。</p>
+</li>
+</ol>
+<h2> 运行应用</h2>
+<p>如果已在上一课中将您的应用安装到设备上，只需点击工具栏中的 (Apply Changes)，即可使用新布局更新应用。或者点击 Run 'app' 以安装并运行应用。</p>
+]]></content>
+    <category term="Android"/>
+    <category term="快速上手"/>
+    <published>2022-04-01T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">基础知识</title>
+    <id>https://mrhope.site/code/android/get-started/intro.html</id>
+    <link href="https://mrhope.site/code/android/get-started/intro.html"/>
+    <updated>2023-03-24T09:43:26.000Z</updated>
+    <summary type="html"><![CDATA[<p>本部分介绍如何构建简单的 Android 应用。首先，您将了解如何通过 Android Studio 创建“Hello, World!”项目并运行它。然后，您将为应用创建一个新界面，该界面会接受用户输入，并切换到应用中的一个新屏幕以显示用户输入内容。</p>
+<p>开始之前，您需要了解有关 Android 应用的两个基本概念：它们如何提供多个入口点，以及它们如何适应不同的设备。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>本部分介绍如何构建简单的 Android 应用。首先，您将了解如何通过 Android Studio 创建“Hello, World!”项目并运行它。然后，您将为应用创建一个新界面，该界面会接受用户输入，并切换到应用中的一个新屏幕以显示用户输入内容。</p>
+<p>开始之前，您需要了解有关 Android 应用的两个基本概念：它们如何提供多个入口点，以及它们如何适应不同的设备。</p>
+<!-- more -->
+<h2> 应用提供多个入口点</h2>
+<p>Android 应用都是将各种可单独调用的组件加以组合构建而成。例如，activity 是提供界面 (UI) 的一种应用组件。</p>
+<p>“主”activity 在用户点按您的应用图标时启动。您还可以将用户从其他位置（例如，从通知中，甚至从其他应用中）引导至某个 activity。</p>
+<p>其他组件（如 WorkManager）可使应用能够在没有界面的情况下执行后台任务。</p>
+<p>构建您的首个应用后，请参阅 [应用基础知识][] 来详细了解其他应用组件。</p>
+<h2> 应用可适应不同的设备</h2>
+<p>Android 允许您为不同的设备提供不同的资源。例如，您可以针对不同的屏幕尺寸创建不同的布局。系统会根据当前设备的屏幕尺寸确定要使用的布局。</p>
+<p>如果应用的任何功能需要使用特定的硬件（例如摄像头），您可以在运行时查询该设备是否具有该硬件，如果没有，则停用相应的功能。您可以指定应用需要使用特定的硬件，这样，Google Play 就不会允许在没有这些硬件的设备上安装应用。</p>
+<p>构建您的首个应用后，请参阅 [设备兼容性概览][] 来详细了解设备配置。</p>
+]]></content>
+    <category term="Android"/>
+    <category term="快速上手"/>
+    <published>2022-04-01T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">运行应用</title>
+    <id>https://mrhope.site/code/android/get-started/run.html</id>
+    <link href="https://mrhope.site/code/android/get-started/run.html"/>
+    <updated>2023-03-24T09:43:26.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 在真实设备上运行</h2>
+<p>按照以下步骤设置设备：</p>
+<ol>
+<li>
+<p>使用一根 USB 线将设备连接到开发机器。如果您是在 Windows 上开发的，则可能需要为设备安装合适的 USB 驱动程序。</p>
+</li>
+<li>
+<p>执行以下步骤，在开发者选项窗口中启用 USB 调试：</p>
+<ol>
+<li>
+<p>打开设置应用。</p>
+</li>
+<li>
+<p>如果您的设备使用 Android v8.0 或更高版本，请选择系统。否则，请继续执行下一步。</p>
+</li>
+<li>
+<p>滚动到底部，然后选择关于手机。</p>
+</li>
+<li>
+<p>滚动到底部，然后点按版本号七次。</p>
+</li>
+<li>
+<p>返回上一屏幕，滚动到底部，然后点按开发者选项。</p>
+</li>
+<li>
+<p>在开发者选项窗口中，向下滚动以查找并启用 USB 调试。</p>
+</li>
+</ol>
+</li>
+</ol>]]></summary>
+    <content type="html"><![CDATA[<h2> 在真实设备上运行</h2>
+<p>按照以下步骤设置设备：</p>
+<ol>
+<li>
+<p>使用一根 USB 线将设备连接到开发机器。如果您是在 Windows 上开发的，则可能需要为设备安装合适的 USB 驱动程序。</p>
+</li>
+<li>
+<p>执行以下步骤，在开发者选项窗口中启用 USB 调试：</p>
+<ol>
+<li>
+<p>打开设置应用。</p>
+</li>
+<li>
+<p>如果您的设备使用 Android v8.0 或更高版本，请选择系统。否则，请继续执行下一步。</p>
+</li>
+<li>
+<p>滚动到底部，然后选择关于手机。</p>
+</li>
+<li>
+<p>滚动到底部，然后点按版本号七次。</p>
+</li>
+<li>
+<p>返回上一屏幕，滚动到底部，然后点按开发者选项。</p>
+</li>
+<li>
+<p>在开发者选项窗口中，向下滚动以查找并启用 USB 调试。</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>按照以下步骤操作，在设备上运行应用：</p>
+<ol>
+<li>
+<p>在 Android Studio 中，从工具栏中的运行/调试配置下拉菜单中选择您的应用。</p>
+</li>
+<li>
+<p>在工具栏中，从目标设备下拉菜单中选择要用来运行应用的设备。</p>
+</li>
+<li>
+<p>点击 Run 。</p>
+<p>Android Studio 会在已连接的设备上安装您的应用并启动它。您现在会看到设备上的应用中显示了“Hello, World!”。</p>
+</li>
+</ol>
+<h2> 在模拟器上运行</h2>
+<p>按照以下步骤操作，在模拟器上运行应用：</p>
+<ol>
+<li>
+<p>在 Android Studio 中创建一个 Android 虚拟设备 (AVD)，模拟器可以使用该设备安装和运行您的应用。</p>
+</li>
+<li>
+<p>在工具栏中，从运行/调试配置下拉菜单中选择您的应用。</p>
+</li>
+<li>
+<p>从目标设备下拉菜单中，选择要用来运行应用的 AVD。</p>
+</li>
+<li>
+<p>点击 Run 图标 。</p>
+<p>Android Studio 会在 AVD 上安装应用并启动模拟器。您现在会看到应用中显示了“Hello, World!”。</p>
+</li>
+</ol>
+]]></content>
+    <category term="Android"/>
+    <category term="快速上手"/>
+    <published>2022-04-01T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">定义</title>
+    <id>https://mrhope.site/code/website/definition/</id>
+    <link href="https://mrhope.site/code/website/definition/"/>
+    <updated>2023-03-24T09:43:26.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 定义列表</h2>
+<ul>
+<li>
+<p><a href="/code/website/definition/uri.html" target="blank">URI 统一资源标识符</a></p>
+</li>
+<li>
+<p><a href="/code/website/definition/url.html" target="blank">URL 统一资源定位符</a></p>
+</li>
+<li>
+<p><a href="/code/website/definition/seo.html" target="blank">SEO 搜索引擎优化</a></p>
+</li>
+<li>
+<p><a href="/code/website/definition/mime.html" target="blank">MIME Type 媒体类型</a></p>
+</li>
+</ul>]]></summary>
+    <content type="html"><![CDATA[<h2> 定义列表</h2>
+<ul>
+<li>
+<p><a href="/code/website/definition/uri.html" target="blank">URI 统一资源标识符</a></p>
+</li>
+<li>
+<p><a href="/code/website/definition/url.html" target="blank">URL 统一资源定位符</a></p>
+</li>
+<li>
+<p><a href="/code/website/definition/seo.html" target="blank">SEO 搜索引擎优化</a></p>
+</li>
+<li>
+<p><a href="/code/website/definition/mime.html" target="blank">MIME Type 媒体类型</a></p>
+</li>
+</ul>
+]]></content>
+    <category term="HTML"/>
+    <published>2019-09-02T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Http 与 Https 介绍</title>
+    <id>https://mrhope.site/code/website/definition/https.html</id>
+    <link href="https://mrhope.site/code/website/definition/https.html"/>
+    <updated>2023-03-24T09:43:26.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 什么是 HTTP 协议</h2>
+<p>HTTP 协议全称 Hyper Text Transfer Protocol，翻译过来就是超文本传输协议，位于 TCP/IP 四层模型当中的应用层。</p>
+<p></p>
+<p>HTTP 协议通过 <strong>请求/响应</strong> 的方式，在客户端和服务端之间进行通信。</p>
+<p></p>
+<p>这一切看起来很美好，但是 HTTP 协议有一个致命的缺点: <strong>不够安全</strong>。</p>
+<p>HTTP 协议的信息传输完全以明文方式，不做任何加密，相当于是在网络上“裸奔”。这样会导致什么问题呢? 让我们打一个比方:</p>]]></summary>
+    <content type="html"><![CDATA[<h2> 什么是 HTTP 协议</h2>
+<p>HTTP 协议全称 Hyper Text Transfer Protocol，翻译过来就是超文本传输协议，位于 TCP/IP 四层模型当中的应用层。</p>
+<p></p>
+<p>HTTP 协议通过 <strong>请求/响应</strong> 的方式，在客户端和服务端之间进行通信。</p>
+<p></p>
+<p>这一切看起来很美好，但是 HTTP 协议有一个致命的缺点: <strong>不够安全</strong>。</p>
+<p>HTTP 协议的信息传输完全以明文方式，不做任何加密，相当于是在网络上“裸奔”。这样会导致什么问题呢? 让我们打一个比方:</p>
+<p>小灰是客户端，小灰的同事小红是服务端，有一天小灰试图给小红发送请求。</p>
+<p></p>
+<p>但是，由于传输信息是明文，这个信息有可能被某个中间人恶意截获甚至篡改。这种行为叫做<strong>中间人攻击</strong>。</p>
+<p></p>
+<p></p>
+<p></p>
+<p>如何进行加密呢?</p>
+<p>小灰和小红可以事先约定一种<strong>对称加密</strong>方式，并且约定一个随机生成的密钥。后续的通信中，信息发送方都使用密钥对信息加密，而信息接收方通过同样的密钥对信息解密。</p>
+<p></p>
+<p></p>
+<p>这样做是不是就绝对安全了呢? 并不是。</p>
+<p>虽然我们在后续的通信中对明文进行了加密，但是第一次约定加密方式和密钥的通信仍然是明文，如果第一次通信就已经被拦截了，那么密钥就会泄露给中间人，中间人仍然可以解密后续所有的通信内容。</p>
+<p></p>
+<p>这可怎么办呢? 别担心，我们可以使用<strong>非对称加密</strong>，为密钥的传输做一层额外的保护。</p>
+<p>非对称加密的一组秘钥对中，包含一个公钥和一个私钥。明文既可以用公钥加密，用私钥解密；也可以用私钥加密，用公钥解密。</p>
+<p>在小灰和小红建立通信的时候，小红首先把自己的公钥 Key1 发给小灰:</p>
+<p></p>
+<p>收到小红的公钥以后，小灰自己生成一个用于对称加密的密钥 Key2，并且用刚才接收的公钥 Key1 对 Key2 进行加密(这里有点绕)，发送给小红:</p>
+<p></p>
+<p>小红利用自己非对称加密的私钥，解开了公钥 Key1 的加密，获得了 Key2 的内容。从此以后，两人就可以利用 Key2 进行对称加密的通信了。</p>
+<p></p>
+<p>在通信过程中，即使中间人在一开始就截获了公钥 Key1，由于不知道私钥是什么，也无从解密。</p>
+<p></p>
+<p></p>
+<p>是什么坏主意呢? 中间人虽然不知道小红的私钥是什么，但是在截获了小红的公钥 Key1 之后，却可以偷天换日，自己另外生成一对公钥私钥，把自己的公钥 Key3 发送给小灰。</p>
+<p></p>
+<p>小灰不知道公钥被偷偷换过，以为 Key3 就是小红的公钥。于是按照先前的流程，用 Key3 加密了自己生成的对称加密密钥 Key2，发送给小红。</p>
+<p>这一次通信再次被中间人截获，中间人先用自己的私钥解开了 Key3 的加密，获得 Key2，然后再用当初小红发来的 Key1 重新加密，再发给小红。</p>
+<p></p>
+<p>这样一来，两个人后续的通信尽管用 Key2 做了对称加密，但是中间人已经掌握了 Key2，所以可以轻松进行解密。</p>
+<p></p>
+<p></p>
+<p>是什么解决方案呢? 难道再把公钥进行一次加密吗? 这样只会陷入鸡生蛋蛋生鸡，永无止境的困局。</p>
+<p>这时候，我们有必要引入第三方，一个权威的证书颁发机构(CA)来解决。</p>
+<p>到底什么是证书呢? 证书包含如下信息:</p>
+<p></p>
+<p>为了便于说明，我们这里做了简化，只列出了一些关键信息。至于这些证书信息的用处，我们看看具体的通信流程就能够弄明白了。</p>
+<p>流程如下:</p>
+<ol>
+<li>
+<p>作为服务端的小红，首先把自己的公钥发给证书颁发机构，向证书颁发机构申请证书。</p>
+<p></p>
+</li>
+<li>
+<p>证书颁发机构自己也有一对公钥私钥。机构利用自己的私钥来加密 Key1，并且通过服务端网址等信息生成一个证书签名，证书签名同样经过机构的私钥加密。证书制作完成后，机构把证书发送给了服务端小红。</p>
+<p></p>
+</li>
+<li>
+<p>当小灰向小红请求通信的时候，小红不再直接返回自己的公钥，而是把自己申请的证书返回给小灰。</p>
+<p></p>
+</li>
+<li>
+<p>小灰收到证书以后，要做的第一件事情是验证证书的真伪。需要说明的是，各大浏览器和操作系统已经维护了所有权威证书机构的名称和公钥。所以小灰只需要知道是</p>
+<p>哪个机构颁布的证书，就可以从本地找到对应的机构公钥，解密出证书签名。</p>
+<p>接下来，小灰按照同样的签名规则，自己也生成一个证书签名，如果两个签名一致，说明证书是有效的。</p>
+<p>验证成功后，小灰就可以放心地再次利用机构公钥，解密出服务端小红的公钥 Key1。</p>
+<p></p>
+</li>
+<li>
+<p>像之前一样，小灰生成自己的对称加密密钥 Key2，并且用服务端公钥 Key1 加密 Key2，发送给小红。</p>
+<p></p>
+</li>
+<li>
+<p>最后，小红用自己的私钥解开加密，得到对称加密密钥 Key2。于是两人开始用 Key2 进行对称加密的通信。</p>
+<p></p>
+</li>
+</ol>
+<p>在这样的流程下，我们不妨想一想，中间人是否还具有使坏的空间呢?</p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
+<p>最新推出的 TLS 协议，是 SSL 3.0 协议的升级版，和 SSL 协议的大体原理是相同的。</p>
+</div>
+]]></content>
+    <author>
+      <name>小灰</name>
+    </author>
+    <contributor>
+      <name>小灰</name>
+    </contributor>
+    <published>2019-11-03T00:00:00.000Z</published>
+    <rights>本文转载自&amp;lt;a href=&amp;quot;https://zhuanlan.zhihu.com/p/57142784&amp;quot;&amp;gt;小灰的知乎专栏&amp;lt;/a&amp;gt;</rights>
+  </entry>
+  <entry>
+    <title type="text">MIME type</title>
+    <id>https://mrhope.site/code/website/definition/mime.html</id>
+    <link href="https://mrhope.site/code/website/definition/mime.html"/>
+    <updated>2023-03-24T09:43:26.000Z</updated>
+    <summary type="html"><![CDATA[<p>MIME type，即媒体类型(media type) (有时是“内容类型(content type)”) 是指示文件类型的字符串，与文件一起发送。</p>
+<p>例如，一个声音文件可能被标记为 <code>audio/ogg</code> ，一个图像文件可能是 <code>image/png</code>。</p>
+<p>它与传统 Windows 上的文件扩展名有相同目的。</p>
+]]></summary>
+    <content type="html"><![CDATA[<p>MIME type，即媒体类型(media type) (有时是“内容类型(content type)”) 是指示文件类型的字符串，与文件一起发送。</p>
+<p>例如，一个声音文件可能被标记为 <code>audio/ogg</code> ，一个图像文件可能是 <code>image/png</code>。</p>
+<p>它与传统 Windows 上的文件扩展名有相同目的。</p>
+]]></content>
+    <category term="HTML"/>
+    <published>2019-09-02T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">SEO</title>
+    <id>https://mrhope.site/code/website/definition/seo.html</id>
+    <link href="https://mrhope.site/code/website/definition/seo.html"/>
+    <updated>2023-03-24T09:43:26.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 简介</h2>
+<p>搜索引擎优化 (<strong>S</strong>earch <strong>E</strong>ngine <strong>O</strong>ptimization)，是一种透过了解搜索引擎的运作规则来调整网站，以及提高目的网站在有关搜索引擎内排名的方式。由于不少研究发现，搜索引擎的用户往往只会留意搜索结果最前面的几个条目，所以不少网站都希望透过各种形式来影响搜索引擎的排序，让自己的网站可以有优秀的搜索排名。</p>
+<p>所谓“针对搜索引擎作最优化的处理”，是指为了要让网站更容易被搜索引擎接受。搜索引擎会将网站彼此间的内容做一些相关性的资料比对，然后再由浏览器将这些内容以最快速且接近最完整的方式，呈现给搜索者。搜索引擎优化就是通过搜索引擎的规则进行优化，为用户打造更好的用户体验，最终的目的就是做好用户体验。</p>]]></summary>
+    <content type="html"><![CDATA[<h2> 简介</h2>
+<p>搜索引擎优化 (<strong>S</strong>earch <strong>E</strong>ngine <strong>O</strong>ptimization)，是一种透过了解搜索引擎的运作规则来调整网站，以及提高目的网站在有关搜索引擎内排名的方式。由于不少研究发现，搜索引擎的用户往往只会留意搜索结果最前面的几个条目，所以不少网站都希望透过各种形式来影响搜索引擎的排序，让自己的网站可以有优秀的搜索排名。</p>
+<p>所谓“针对搜索引擎作最优化的处理”，是指为了要让网站更容易被搜索引擎接受。搜索引擎会将网站彼此间的内容做一些相关性的资料比对，然后再由浏览器将这些内容以最快速且接近最完整的方式，呈现给搜索者。搜索引擎优化就是通过搜索引擎的规则进行优化，为用户打造更好的用户体验，最终的目的就是做好用户体验。</p>
+<h2> 相关文档</h2>
+<ul>
+<li>
+<p><a href="https://schema.org/" target="_blank" rel="noopener noreferrer">Schema Org</a></p>
+<ul>
+<li>
+<p><a href="https://schema.org/docs/gs.html" target="_blank" rel="noopener noreferrer">快速上手</a></p>
+</li>
+<li>
+<p><a href="https://schema.org/docs/full.html" target="_blank" rel="noopener noreferrer">全部的 Schema 列表</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://ogp.me/" target="_blank" rel="noopener noreferrer">开放内容协议 OGP</a> (<strong>O</strong>pen <strong>G</strong>raph <strong>Pr</strong>otocal)</p>
+</li>
+<li>
+<p><a href="https://developers.google.com/search/docs/" target="_blank" rel="noopener noreferrer">Google 搜索指南</a></p>
+<ul>
+<li><a href="https://developers.google.com/search/docs/guides/get-started" target="_blank" rel="noopener noreferrer">快速上手</a></li>
+</ul>
+</li>
+</ul>
+<h2> 相关工具</h2>
+<ul>
+<li>
+<p><a href="https://developers.google.com/search" target="_blank" rel="noopener noreferrer">Google 搜索中心</a></p>
+</li>
+<li>
+<p><a href="https://search.google.com/search-console/" target="_blank" rel="noopener noreferrer">Google Search Console</a></p>
+<p>Search Console 是 Google 推出的一款免费工具，可帮助开发者、网站所有者和搜索引擎优化专家了解其网站在 Google 搜索上的表现。</p>
+</li>
+<li>
+<p><a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener noreferrer">Google 富媒体测试工具</a></p>
+</li>
+</ul>
+]]></content>
+    <category term="HTML"/>
+    <published>2019-09-02T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">URI</title>
+    <id>https://mrhope.site/code/website/definition/uri.html</id>
+    <link href="https://mrhope.site/code/website/definition/uri.html"/>
+    <updated>2023-03-24T09:43:26.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 简介</h2>
+<p><strong>统一资源标识符</strong>(英语: Uniform Resource Identifier，缩写: URI)在电脑术语中是一个用于标识某一互联网资源名称的字符串。</p>
+<p>该种标识允许用户对网络中(一般指万维网)的资源通过特定的协议进行交互操作。URI 的最常见的形式是统一资源定位符(URL)，经常指定为非正式的网址。更罕见的用法是统一资源名称(URN)，其目的是通过提供一种途径。用于在特定的名字空间资源的标识，以补充网址。</p>
+<h2> 与 URL 和 URN 的关系</h2>
+<h3> URN</h3>
+<p><strong>统一资源名称</strong>(英语: Uniform Resource Name，缩写: URN)是统一资源标识(URI)的历史名字，它使用 <code>urn:</code> 作为 URI scheme。</p>]]></summary>
+    <content type="html"><![CDATA[<h2> 简介</h2>
+<p><strong>统一资源标识符</strong>(英语: Uniform Resource Identifier，缩写: URI)在电脑术语中是一个用于标识某一互联网资源名称的字符串。</p>
+<p>该种标识允许用户对网络中(一般指万维网)的资源通过特定的协议进行交互操作。URI 的最常见的形式是统一资源定位符(URL)，经常指定为非正式的网址。更罕见的用法是统一资源名称(URN)，其目的是通过提供一种途径。用于在特定的名字空间资源的标识，以补充网址。</p>
+<h2> 与 URL 和 URN 的关系</h2>
+<h3> URN</h3>
+<p><strong>统一资源名称</strong>(英语: Uniform Resource Name，缩写: URN)是统一资源标识(URI)的历史名字，它使用 <code>urn:</code> 作为 URI scheme。</p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
+<p>更多详情请见 <a href="https://zh.wikipedia.org/wiki/%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E5%90%8D" target="_blank" rel="noopener noreferrer">维基百科</a></p>
+</div>
+<h3> URL</h3>
+<p><strong>统一资源定位符</strong>(英语: Uniform Resource Locator，缩写: URL；或称统一资源定位器、定位地址、URL 地址，俗称网页地址或简称网址)是因特网上标准的资源的地址(Address)，如同在网络上的门牌。</p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
+<p>更多详情请见 <a href="/code/website/definition/url.html" target="blank">URL</a></p>
+</div>
+<h3> 关系</h3>
+<p></p>
+<p>URL(定位符)和 URN(名称)方案属于 URI 的子类，URI 可以为 URL 或 URN 两者之一或同时是 URI 和 URN。技术上讲，URL 和 URN 属于资源 ID；但是，人们往往无法将某种方案归类于两者中的某一个: 所有的 URI 都可被作为名称看待，而某些方案同时体现了两者中的不同部分。
+URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(URN)如同一个人的名称，而统一资源定位符(URL)代表一个人的住址。换言之，URN 定义某事物的身份，而 URL 提供查找该事物的方法。</p>
+<div class="hint-container tip">
+<p class="hint-container-title">例子</p>
+<p>用于标识唯一书目的 ISBN 系统是一个典型的 URN 使用范例。例如，ISBN <code>0-486-27557-4</code> 无二义性地标识出莎士比亚的戏剧《罗密欧与朱丽叶》的某一特定版本。为获得该资源并阅读该书，人们需要它的位置，也就是一个 URL 地址。在类 Unix 操作系统中，一个典型的 URL 地址可能是一个文件目录，例如 <code>file:///home/username/RomeoAndJuliet.pdf</code>。该 URL 标识出存储于本地硬盘中的电子书文件。因此，URL 和 URN 有着互补的作用。</p>
+</div>
+<h3> 技术观点</h3>
+<p>URL 是一种 URI，它标识一个互联网资源，并指定对其进行操作或获取该资源的方法。可能通过对主要访问手段的描述，也可能通过网络“位置”进行标识。例如，<a href="http://www.wikipedia.org/" target="_blank" rel="noopener noreferrer">http://www.wikipedia.org/</a> 这个 URL，标识一个特定资源(首页)并表示该资源的某种形式(例如以编码字符表示的，首页的 HTML 代码)是可以通过 HTTP 协议从 <code>www.wikipedia.org</code> 这个网络主机获得的。URN 是基于某名字空间通过名称指定资源的 URI。人们可以通过 URN 来指出某个资源，而无需指出其位置和获得方式。资源无需是基于互联网的。例如，URN <code>urn:ISBN 0-395-36341-1</code> 指定标识系统(即国际标准书号 ISBN)和某资源在该系统中的唯一表示的 URI。它可以允许人们在不指出其位置和获得方式的情况下谈论这本书。</p>
+<p>技术刊物，特别是 IETF 和 W3C 发布的标准中，通常不再使用“URL”这一术语，因为很少需要区别 URL 和 URI。但是，在非技术文献和万维网软件中，URL 这一术语仍被广泛使用。此外，术语“网址”(没有正式定义)在非技术文献中时常作为 URL 或 URI 的同义词出现，虽然往往其指代的只是“http”和“https”协议。</p>
+<h2> 文法格式</h2>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content>
+    <category term="HTML"/>
+    <published>2019-09-02T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">URL</title>
+    <id>https://mrhope.site/code/website/definition/url.html</id>
+    <link href="https://mrhope.site/code/website/definition/url.html"/>
+    <updated>2023-03-24T09:43:26.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 简介</h2>
+<p><strong>统一资源定位符</strong>(英语: Uniform Resource Locator，缩写: URL；或称统一资源定位器、定位地址、URL 地址，俗称网页地址或简称网址)是因特网上标准的资源的地址(Address)，如同在网络上的门牌。</p>
+<p>统一资源定位符的标准格式如下:</p>
+<div class="language-text" data-ext="text"><pre class="language-text"><code>[协议类型]://[服务器地址]:[端口号]/[资源层级UNIX文件路径][文件名]?[查询]#[片段ID]
+</code></pre></div>]]></summary>
+    <content type="html"><![CDATA[<h2> 简介</h2>
+<p><strong>统一资源定位符</strong>(英语: Uniform Resource Locator，缩写: URL；或称统一资源定位器、定位地址、URL 地址，俗称网页地址或简称网址)是因特网上标准的资源的地址(Address)，如同在网络上的门牌。</p>
+<p>统一资源定位符的标准格式如下:</p>
+<div class="language-text" data-ext="text"></div><p>统一资源定位符的完整格式如下:</p>
+<div class="language-text" data-ext="text"></div><div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
+<p>更多详情请见 <a href="https://zh.wikipedia.org/wiki/%E7%BB%9F%E4%B8%80%E8%B5%84%E6%BA%90%E5%AE%9A%E4%BD%8D%E7%AC%A6" target="_blank" rel="noopener noreferrer">维基百科</a></p>
+</div>
+<h2> 绝对 URL 和相对 URL</h2>
+<p>您可能会在网络上遇到两个术语，绝对 URL 和相对 URL(或者称为，绝对链接和相对链接):</p>
+<h3> 绝对 URL</h3>
+<p>指向由其在 Web 上的绝对位置定义的位置，包括 protocol(协议) 和 domain name(域名)。</p>
+<div class="hint-container tip">
+<p class="hint-container-title">例子</p>
+<p>如果 index.html 页面上传到 projects 这一个目录。并且 projects 目录位于 web 服务站点的根目录，web 站点的域名为 <code>http://www.example.com</code>，那么这个页面就可以通过 <code>http://www.example.com/projects/index.html</code> 访问(或者通过 <code>http://www.example.com/projects/</code> 来访问，因为在没有指定特定的 URL 的情况下，大多数 web 服务会默认访问加载 <code>index.html</code> 这类页面)</p>
+</div>
+<p>不管绝对 URL 在哪里使用，它总是指向确定的相同位置。</p>
+<h3> 相对 URL</h3>
+<p>指向与您链接的文件相关的位置，更像我们在前面一节中所看到的位置。例如，如果我们想从示例文件链接 <code>http://www.example.com/projects/index.html</code> 转到相同目录下的一个 PDF 文件，URL 就是文件名 URL(如: <code>project-brief.pdf</code>)。如果 PDF 文件能够在 projects 的子目录 pdfs 中访问到，相对路径就是 <code>pdfs/project-brief.pdf</code>(对应的绝对 URL 是 <code>http://www.example.com/projects/pdfs/project-brief.pdf</code>)</p>
+<p>一个相对 URL 将指向不同的位置，这取决于它所在的文件所在的位置——例如，如果我们把 index.html 文件从 projects 目录移动到 Web 站点的根目录(最高级别，而不是任何目录中)，里面的 <code>pdfs/project-brief.pdf</code> 相对 URL 将会指向 <code>http://www.example.com/pdfs/project-brief.pdf</code>，而不是 <code>http://www.example.com/projects/pdfs/project-brief.pdf</code></p>
+<p>当然，project-brief.pdf 文件和 pdfs 文件夹的位置不会因为您移动了 <code>index.html</code> 文件而突然发生变化——这将使您的链接指向错误的位置，因此如果单击它，它将无法工作。您得小心点!</p>
+]]></content>
+    <category term="HTML"/>
+    <published>2019-09-02T00:00:00.000Z</published>
+  </entry>
   <entry>
     <title type="text">环境变量</title>
     <id>https://mrhope.site/code/windows/env-variable.html</id>
@@ -492,481 +1515,6 @@ memory=8GB
     <published>2022-05-04T19:02:05.000Z</published>
   </entry>
   <entry>
-    <title type="text">启动另一个 activity</title>
-    <id>https://mrhope.site/code/Android/get-started/activity.html</id>
-    <link href="https://mrhope.site/code/Android/get-started/activity.html"/>
-    <updated>2022-12-09T17:12:58.000Z</updated>
-    <summary type="html"><![CDATA[<p>在本课中，您将向 MainActivity 添加一些代码，以便在用户点按 Send 按钮时启动一个显示消息的新 activity。</p>
-]]></summary>
-    <content type="html"><![CDATA[<p>在本课中，您将向 MainActivity 添加一些代码，以便在用户点按 Send 按钮时启动一个显示消息的新 activity。</p>
-<!-- more -->
-<h2> 响应“Send”按钮</h2>
-<p>您可按照以下步骤，向 MainActivity 类添加一个在用户点按 Send 按钮时调用的方法：</p>
-<ol>
-<li>
-<p>在 app &gt; java &gt; com.example.myfirstapp &gt; MainActivity 文件中，添加以下 sendMessage() 方法桩：</p>
-
-<p>您可能会看到一条错误，因为 Android Studio 无法解析用作方法参数的 View 类。若要清除错误，请点击 View 声明，将光标置于其上，然后按 <code>Alt + Enter</code>（在 Mac 上则按 <code>Option + Enter</code>）进行快速修复。如果出现一个菜单，请选择 Import class。</p>
-</li>
-<li>
-<p>返回到 activity_main.xml 文件，并从该按钮调用此方法:</p>
-<ol>
-<li>选择布局编辑器中的相应按钮。</li>
-<li>在 Attributes 窗口中，找到 onClick 属性，并从其下拉列表中选择 <code>sendMessage [MainActivity]</code>。</li>
-</ol>
-<p>现在，当用户点按该按钮时，系统将调用 <code>sendMessage()</code> 方法。</p>
-<p>请注意此方法中提供的详细信息。系统需要这些信息来识别此方法是否与 android:onClick 属性兼容。具体来说，此方法具有以下特性：</p>
-<ol>
-<li>公开。</li>
-<li>返回值为空，或在 Kotlin 中为隐式 Unit。</li>
-<li>View 是唯一的参数。这是您在第 1 步结束时点击的 View 对象。</li>
-</ol>
-</li>
-<li>
-<p>接下来，填写此方法，以读取文本字段的内容，并将该文本传递给另一个 activity。</p>
-</li>
-</ol>
-<h2> 构建一个 intent</h2>
-<p><code>Intent</code> 是在相互独立的组件（如两个 activity）之间提供运行时绑定功能的对象。Intent 表示应用执行某项操作的意图。您可以使用 intent 执行多种任务，但在本课中，您的 intent 将用于启动另一个 activity。</p>
-<p>在 MainActivity 中，添加 EXTRA_MESSAGE 常量和 sendMessage() 代码，如下所示：</p>
-
-<p>预计 Android Studio 会再次遇到 Cannot resolve symbol 错误。如需清除这些错误，请按 Alt+Enter（在 Mac 上则按 Option+Return）。您最后应导入以下内容：</p>
-
-<p>DisplayMessageActivity 仍有错误，但没有关系。您将在下一部分中修复该错误。</p>
-<p>sendMessage() 将发生以下情况：</p>
-<ul>
-<li>
-<p>Intent 构造函数会获取两个参数：Context 和 Class。</p>
-<p>首先使用 Context 参数，因为 Activity 类是 Context 的子类。</p>
-<p>在本例中，系统将 Intent, 传递到的应用组件的 Class 参数是要启动的 activity。</p>
-</li>
-<li>
-<p>putExtra() 方法将 EditText 的值添加到 intent。Intent 能够以称为“extra”的键值对形式携带数据类型。</p>
-<p>您的键是一个公共常量 EXTRA_MESSAGE，因为下一个 activity 将使用该键检索文本值。为 intent extra 定义键时，最好使用应用的软件包名称作为前缀。这样可以确保这些键是独一无二的，这在您的应用需要与其他应用进行交互时会很重要。</p>
-</li>
-<li>
-<p>startActivity() 方法将启动一个由 Intent 指定的 DisplayMessageActivity 实例。接下来，您需要创建该类。</p>
-</li>
-</ul>
-<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p>导航架构组件允许您使用导航编辑器将一个 activity 与另一个 activity 相关联。建立这种关联后，您可以利用 API 在用户触发关联的操作（例如，用户点击某个按钮时）时启动第二个 activity。如需了解详情，请参阅导航。</p>
-</div>
-<h2> 创建第二个 activity</h2>
-<p>若要创建第二个 activity，请按以下步骤操作：</p>
-<ol>
-<li>在 Project 窗口中，右键点击 app 文件夹，然后依次选择 New &gt; Activity &gt; Empty Activity。</li>
-<li>在 Configure Activity 窗口中，输入“DisplayMessageActivity”作为 Activity Name。将所有其他属性保留为默认设置，然后点击 Finish。</li>
-</ol>
-<p>Android Studio 会自动执行下列三项操作：</p>
-<ol>
-<li>创建 DisplayMessageActivity 文件。</li>
-<li>创建 DisplayMessageActivity 文件对应的布局文件 activity_display_message.xml。</li>
-<li>在 AndroidManifest.xml 中添加所需的 <code>&lt;activity&gt;</code> 元素。</li>
-</ol>
-<p>如果您运行应用并点按第一个 activity 上的按钮，将启动第二个 activity，但它为空。这是因为第二个 activity 使用模板提供的空布局。</p>
-<h2> 添加文本视图</h2>
-<p>新 activity 包含一个空白布局文件。请按以下步骤操作，在显示消息的位置添加一个文本视图：</p>
-<ol>
-<li>打开 app &gt; res &gt; layout &gt; activity_display_message.xml 文件。</li>
-<li>点击工具栏中的 Enable Autoconnection to Parent 。系统将启用 Autoconnect。参见图 1。</li>
-<li>在 Palette 面板中，点击 Text，将 TextView 拖动到布局中，然后将其放置在靠近布局顶部中心的位置，使其贴靠到出现的垂直线上。Autoconnect 将添加左侧和右侧约束条件，以便将该视图放置在水平中心位置。</li>
-<li>再创建一个从文本视图顶部到布局顶部的约束条件，使该视图如图 1 中所示。</li>
-</ol>
-<p>或者，您可以对文本样式进行一些调整，方法是在 Attributes 窗口的 Common Attributes 面板中展开 textAppearance，然后更改 textSize 和 textColor 等属性。</p>
-<h2> 显示消息</h2>
-<p>在此步骤中，您将修改第二个 activity 以显示第一个 activity 传递的消息。</p>
-<ol>
-<li>
-<p>在 DisplayMessageActivity 中，将以下代码添加到 <code>onCreate()</code> 方法中：</p>
-
-</li>
-<li>
-<p>按 <code>Alt + Enter</code>（在 Mac 上则按 <code>Option + Return</code>）导入其他所需的类：</p>
-
-</li>
-</ol>
-<h2> 添加向上导航功能</h2>
-<p>在您的应用中，不是主入口点的每个屏幕（所有不是主屏幕的屏幕）都必须提供导航功能，以便将用户引导至应用层次结构中的逻辑父级屏幕。为此，请在应用栏中添加向上按钮。</p>
-<p>若要添加向上按钮，您需要在 <code>AndroidManifest.xml</code> 文件中声明哪个 activity 是逻辑父级。打开 app &gt; manifests &gt; AndroidManifest.xml 文件，找到 DisplayMessageActivity 的 <code>&lt;activity&gt;</code> 标记，然后将其替换为以下代码：</p>
-<div class="language-xml" data-ext="xml"></div><p>Android 系统现在会自动向应用栏添加向上按钮。</p>
-<h2> 运行应用</h2>
-<p>点击工具栏中的 Apply Changes 以运行应用。当应用打开后，在文本字段中输入一条消息，点按 Send 即会看到该消息显示在第二个 activity 中。</p>
-]]></content>
-    <category term="Android"/>
-    <category term="快速上手"/>
-    <published>2022-04-01T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">创建项目</title>
-    <id>https://mrhope.site/code/Android/get-started/create.html</id>
-    <link href="https://mrhope.site/code/Android/get-started/create.html"/>
-    <updated>2022-04-01T16:05:53.000Z</updated>
-    <summary type="html"><![CDATA[<p>本课将介绍如何使用 Android Studio 创建新的 Android 项目，并介绍该项目中的一些文件。</p>
-<p>如需创建新的 Android 项目，请按以下步骤操作：</p>
-<ol>
-<li>
-<p>安装最新版 Android Studio。</p>
-</li>
-<li>
-<p>在 Welcome to Android Studio 窗口中，点击 Create New Project。</p>
-<p>如果您已打开一个项目，请依次选择 File &gt; New &gt; New Project。</p>
-</li>
-<li>
-<p>在 Select a Project Template 窗口中，选择 Empty Activity，然后点击 Next。</p>
-</li>
-<li>
-<p>在 Configure your project 窗口中，完成以下操作：</p>
-<ul>
-<li>
-<p>在 Name 字段中输入“My First App”。</p>
-</li>
-<li>
-<p>在 Package name 字段中输入“com.example.myfirstapp”。</p>
-</li>
-<li>
-<p>如果您想将项目放在其他文件夹中，请更改其 Save 位置。</p>
-</li>
-<li>
-<p>从 Language 下拉菜单中选择 Java 或 Kotlin。</p>
-</li>
-<li>
-<p>在 Minimum SDK 字段中选择您希望应用支持的最低 Android 版本。</p>
-</li>
-</ul>
-<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p>点击 Help me choose 链接可打开 Android Platform/API Version Distribution 对话框。此对话框会提供有关各 Android 版本在设备间的分布情况的信息。您需要权衡的主要因素是，您想支持的 Android 设备所占的百分比，以及在这些设备所搭载的各个不同版本上维护应用所需的工作量。例如，如果您选择让应用与多个不同 Android 版本兼容，那么维护最旧版本与最新版本之间的兼容性所需的工作量就会增大。</p>
-</div>
-<ul>
-<li>
-<p>如果您的应用需要旧版库支持，请选中 Use legacy android.support libraries 复选框。</p>
-</li>
-<li>
-<p>其他选项保持原样。</p>
-</li>
-</ul>
-</li>
-<li>
-<p>点击 Finish。</p>
-</li>
-</ol>]]></summary>
-    <content type="html"><![CDATA[<p>本课将介绍如何使用 Android Studio 创建新的 Android 项目，并介绍该项目中的一些文件。</p>
-<p>如需创建新的 Android 项目，请按以下步骤操作：</p>
-<ol>
-<li>
-<p>安装最新版 Android Studio。</p>
-</li>
-<li>
-<p>在 Welcome to Android Studio 窗口中，点击 Create New Project。</p>
-<p>如果您已打开一个项目，请依次选择 File &gt; New &gt; New Project。</p>
-</li>
-<li>
-<p>在 Select a Project Template 窗口中，选择 Empty Activity，然后点击 Next。</p>
-</li>
-<li>
-<p>在 Configure your project 窗口中，完成以下操作：</p>
-<ul>
-<li>
-<p>在 Name 字段中输入“My First App”。</p>
-</li>
-<li>
-<p>在 Package name 字段中输入“com.example.myfirstapp”。</p>
-</li>
-<li>
-<p>如果您想将项目放在其他文件夹中，请更改其 Save 位置。</p>
-</li>
-<li>
-<p>从 Language 下拉菜单中选择 Java 或 Kotlin。</p>
-</li>
-<li>
-<p>在 Minimum SDK 字段中选择您希望应用支持的最低 Android 版本。</p>
-</li>
-</ul>
-<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p>点击 Help me choose 链接可打开 Android Platform/API Version Distribution 对话框。此对话框会提供有关各 Android 版本在设备间的分布情况的信息。您需要权衡的主要因素是，您想支持的 Android 设备所占的百分比，以及在这些设备所搭载的各个不同版本上维护应用所需的工作量。例如，如果您选择让应用与多个不同 Android 版本兼容，那么维护最旧版本与最新版本之间的兼容性所需的工作量就会增大。</p>
-</div>
-<ul>
-<li>
-<p>如果您的应用需要旧版库支持，请选中 Use legacy android.support libraries 复选框。</p>
-</li>
-<li>
-<p>其他选项保持原样。</p>
-</li>
-</ul>
-</li>
-<li>
-<p>点击 Finish。</p>
-</li>
-</ol>
-<p>经过一段时间的处理后，Android Studio 主窗口会出现。</p>
-<p>下面花一点时间了解一下最重要的文件。</p>
-<p>首先，确保已打开 Project 窗口（依次选择 View &gt; Tool Windows &gt; Project），并从该窗口顶部的下拉列表中选择 Android 视图。随后，您可以看到以下文件：</p>
-<ul>
-<li>
-<p>app &gt; java &gt; com.example.myfirstapp &gt; MainActivity</p>
-<p>这是主 activity。它是应用的入口点。当您构建和运行应用时，系统会启动此 Activity 的实例并加载其布局。</p>
-</li>
-<li>
-<p>app &gt; res &gt; layout &gt; activity_main.xml</p>
-<p>此 XML 文件定义了 activity 界面 (UI) 的布局。它包含一个 TextView 元素，其中具有“Hello, World!”文本</p>
-</li>
-<li>
-<p>app &gt; manifests &gt; AndroidManifest.xml</p>
-<p>清单文件描述了应用的基本特性并定义了每个应用组件。</p>
-</li>
-<li>
-<p>Gradle Scripts &gt; build.gradle</p>
-<p>有两个使用此名称的文件：一个针对项目“Project: My First App”，另一个针对应用模块“Module: My_First_App.app”。每个模块均有自己的 build.gradle 文件，但此项目当前仅有一个模块。使用每个模块的 build.gradle 文件控制 Gradle 插件构建应用的方式。如需详细了解此文件，请参阅配置 build。</p>
-</li>
-</ul>
-]]></content>
-    <category term="Android"/>
-    <category term="快速上手"/>
-    <published>2022-04-01T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">构建简单的界面</title>
-    <id>https://mrhope.site/code/Android/get-started/interface.html</id>
-    <link href="https://mrhope.site/code/Android/get-started/interface.html"/>
-    <updated>2022-04-01T16:05:53.000Z</updated>
-    <summary type="html"><![CDATA[<p>在本节课中，您将学习如何使用 Android Studio 布局编辑器创建包含一个文本框和一个按钮的布局。这将为下一课打下基础，下节课将学习如何在点按该按钮时让应用将文本框的内容发送到其他 activity。</p>
-]]></summary>
-    <content type="html"><![CDATA[<p>在本节课中，您将学习如何使用 Android Studio 布局编辑器创建包含一个文本框和一个按钮的布局。这将为下一课打下基础，下节课将学习如何在点按该按钮时让应用将文本框的内容发送到其他 activity。</p>
-<!-- more -->
-<p>Android 应用的界面 (UI) 以布局和微件的层次结构形式构建而成。布局是 ViewGroup 对象，即控制其子视图在屏幕上的放置方式的容器。微件是 View 对象，即按钮和文本框等界面组件。</p>
-<p></p>
-<p>Android 提供了 ViewGroup 和 View 类的 XML 词汇表，因此界面的大部分内容都在 XML 文件中定义。不过，本节课将向您介绍如何使用 Android Studio 的布局编辑器创建布局，而不是教您编写 XML 代码。布局编辑器会在您拖放视图构建布局时为您编写 XML 代码。</p>
-<h2> 打开布局编辑器</h2>
-<p>首先，请按照以下步骤设置工作区：</p>
-<ol>
-<li>在 Project 窗口中，依次打开 app &gt; res &gt; layout &gt; activity_main.xml。</li>
-<li>若要给布局编辑器留出空间，请隐藏 Project 窗口。为此，请依次选择 View &gt; Tool Windows &gt; Project，或直接点击 Android Studio 屏幕左侧的 Project。</li>
-<li>如果您的编辑器显示 XML 源代码，请点击窗口右上角的 Design 标签页。</li>
-<li>点击 (Select Design Surface)，然后选择 Blueprint。</li>
-<li>点击布局编辑器工具栏中的 (View Options)，并确保选中 Show All Constraints。</li>
-<li>确保 Autoconnect 处于关闭状态。当 Autoconnect 处于关闭状态时，工具栏中的提示会显示 (Enable Autoconnection to Parent)。</li>
-<li>点击工具栏中的 (Default Margins)，然后选择 16。如果需要，您可以稍后调整每个视图的外边距。</li>
-<li>点击工具栏中的 (Device for Preview)，然后选择 5.5, 1440 × 2560, 560 dpi (Pixel XL)。</li>
-</ol>
-<p>您的布局编辑器现在如下图所示。</p>
-<p></p>
-<p>左下方的 Component Tree 面板显示布局的视图层次结构。在本例中，根视图是 ConstraintLayout，它仅包含一个 TextView 对象。</p>
-<p>ConstraintLayout 是一种布局，它根据同级视图和父布局的约束条件定义每个视图的位置。这样一来，使用扁平视图层次结构既可以创建简单布局，又可以创建复杂布局。这种布局无需嵌套布局。嵌套布局是布局内的布局（如图 2 所示），会增加绘制界面所需的时间。</p>
-<p>例如，您可以声明以下布局，如下图所示：</p>
-<ul>
-<li>视图 A 距离父布局顶部 16 dp。</li>
-<li>视图 A 距离父布局左侧 16 dp。</li>
-<li>视图 B 距离视图 A 右侧 16 dp。</li>
-<li>视图 B 与视图 A 顶部对齐。</li>
-</ul>
-<p></p>
-<h2> 添加文本框</h2>
-<p>请按照下面的步骤添加文本框：</p>
-<ol>
-<li>首先，您需要移除布局中已有的内容。在 Component Tree 面板中点击 TextView，然后按 Delete 键。</li>
-<li>在 Palette 面板中，点击 Text 以显示可用的文本控件。</li>
-<li>将 Plain Text 拖动到设计编辑器中，并将其放在靠近布局顶部的位置。这是一个接受纯文本输入的 EditText 微件。</li>
-<li>点击设计编辑器中的视图。现在，您可以在每个角上看到调整视图大小的正方形手柄，并在每个边上看到圆形约束锚点。为了更好地控制，您可能需要放大编辑器。为此，请使用布局编辑器工具栏中的 Zoom 按钮。</li>
-<li>点击并按住顶边上的锚点，将其向上拖动，直至其贴靠到布局顶部，然后将其释放。这是一个约束条件：它会将视图约束在已设置的默认外边距内。在本例中，您将其设置为距离布局顶部 16 dp。</li>
-<li>使用相同的过程创建一个从视图左侧到布局左侧的约束条件。</li>
-</ol>
-<h2> 添加按钮</h2>
-<ol>
-<li>在 Palette 面板中，点击 Buttons。</li>
-<li>将 Button 微件拖到设计编辑器中，并将其放在靠近右侧的位置。</li>
-<li>创建一个从按钮左侧到文本框右侧的约束条件。</li>
-<li>如需按水平对齐约束视图，请创建一个文本基线之间的约束条件。为此，请右键点击按钮，然后选择 Show Baseline 在布局编辑器中显示基准操作。基线锚点显示在按钮内部。点击并按住此锚点，然后将其拖动到相邻文本框中显示的基线锚点上。</li>
-</ol>
-<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p>您还可以根据顶边或底边实现水平对齐。但按钮的图片周围有内边距，因此如果以这种方式对齐，那么它们看上去是没有对齐的。</p>
-</div>
-<h2> 更改界面字符串</h2>
-<p>若要预览界面，请点击工具栏中的 (Select Design Surface)，然后选择 Design。请注意，文本输入和按钮标签应设置为默认值。</p>
-<p>若要更改界面字符串，请按以下步骤操作：</p>
-<ol>
-<li>
-<p>打开 Project 窗口，然后打开 app &gt; res &gt; values &gt; strings.xml。</p>
-<p>这是一个字符串资源文件，您可在此文件中指定所有界面字符串。您可以利用该文件在一个位置管理所有界面字符串，使字符串的查找、更新和本地化变得更加容易。</p>
-</li>
-<li>
-<p>点击窗口顶部的 Open editor。此时将打开 Translations Editor，它提供了一个可以添加和修改默认字符串的简单界面。它还有助于让所有已翻译的字符串井然有序。</p>
-</li>
-<li>
-<p>点击 (Add Key) 可以创建一个新字符串作为文本框的“提示文本”。此时会打开如图 7 所示的窗口。</p>
-<p>在 Add Key 对话框中，完成以下步骤：</p>
-<ul>
-<li>在 Key 字段中输入“edit_message”。</li>
-<li>在 Default Value 字段中输入“Enter a message”。</li>
-<li>点击 OK。</li>
-</ul>
-</li>
-<li>
-<p>再添加一个名为“button_send”且值为“Send”的键。</p>
-</li>
-</ol>
-<p>现在，您可以为每个视图设置这些字符串。若要返回布局文件，请点击标签页栏中的 activity_main.xml。然后，添加字符串，如下所示：</p>
-<ol>
-<li>点击布局中的文本框。如果右侧还未显示 Attributes 窗口，请点击右侧边栏上的 Attributes。</li>
-<li>找到 text 属性（当前设为“Name”）并删除相应的值。</li>
-<li>找到 hint 属性，然后点击文本框右侧的 (Pick a Resource)。在显示的对话框中，双击列表中的 edit_message。</li>
-<li>点击布局中的按钮，找到其 text 属性（当前设为“Button”）。然后点击 (Pick a Resource)，并选择 button_send。</li>
-</ol>
-<h2> 让文本框大小可灵活调整</h2>
-<p>若要创建一个适应不同屏幕尺寸的布局，您需要让文本框拉伸以填充去除按钮和外边距后剩余的所有水平空间。</p>
-<p>继续操作之前，请点击工具栏中的 (Select Design Surface)，然后选择 Blueprint。</p>
-<p>若要让文本框大小可灵活调整，请按以下步骤操作：</p>
-<ol>
-<li>
-<p>选择两个视图。若要执行此操作，请点击一个视图，在按住 Shift 键的同时点击另一个视图，然后右键点击任一视图并依次选择 Chains &gt; Create Horizontal Chain。布局随即显示出来，如图 8 所示。</p>
-<div class="hint-container info">
-<p class="hint-container-title">相关信息</p>
-<p>链是两个或多个视图之间的双向约束条件，可让您采用一致的方式安排链接的视图。</p>
-</div>
-</li>
-<li>
-<p>选择按钮并打开 Attributes 窗口。然后使用 Constraint Widget 将右外边距设为 16 dp。
-点击文本框以查看其属性。然后，点击宽度指示器两次，确保将其设置为锯齿状线 (Match Constraints)，如图 9 中的标注 1 所示。</p>
-</li>
-<li>
-<p>“Match constraints”表示宽度将延长以符合水平约束条件和外边距的定义。因此，文本框将拉伸以填充去除按钮和所有外边距后剩余的水平空间。</p>
-</li>
-</ol>
-<h2> 运行应用</h2>
-<p>如果已在上一课中将您的应用安装到设备上，只需点击工具栏中的 (Apply Changes)，即可使用新布局更新应用。或者点击 Run 'app' 以安装并运行应用。</p>
-]]></content>
-    <category term="Android"/>
-    <category term="快速上手"/>
-    <published>2022-04-01T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">基础知识</title>
-    <id>https://mrhope.site/code/Android/get-started/intro.html</id>
-    <link href="https://mrhope.site/code/Android/get-started/intro.html"/>
-    <updated>2022-04-01T16:05:53.000Z</updated>
-    <summary type="html"><![CDATA[<p>本部分介绍如何构建简单的 Android 应用。首先，您将了解如何通过 Android Studio 创建“Hello, World!”项目并运行它。然后，您将为应用创建一个新界面，该界面会接受用户输入，并切换到应用中的一个新屏幕以显示用户输入内容。</p>
-<p>开始之前，您需要了解有关 Android 应用的两个基本概念：它们如何提供多个入口点，以及它们如何适应不同的设备。</p>
-]]></summary>
-    <content type="html"><![CDATA[<p>本部分介绍如何构建简单的 Android 应用。首先，您将了解如何通过 Android Studio 创建“Hello, World!”项目并运行它。然后，您将为应用创建一个新界面，该界面会接受用户输入，并切换到应用中的一个新屏幕以显示用户输入内容。</p>
-<p>开始之前，您需要了解有关 Android 应用的两个基本概念：它们如何提供多个入口点，以及它们如何适应不同的设备。</p>
-<!-- more -->
-<h2> 应用提供多个入口点</h2>
-<p>Android 应用都是将各种可单独调用的组件加以组合构建而成。例如，activity 是提供界面 (UI) 的一种应用组件。</p>
-<p>“主”activity 在用户点按您的应用图标时启动。您还可以将用户从其他位置（例如，从通知中，甚至从其他应用中）引导至某个 activity。</p>
-<p>其他组件（如 WorkManager）可使应用能够在没有界面的情况下执行后台任务。</p>
-<p>构建您的首个应用后，请参阅 [应用基础知识][] 来详细了解其他应用组件。</p>
-<h2> 应用可适应不同的设备</h2>
-<p>Android 允许您为不同的设备提供不同的资源。例如，您可以针对不同的屏幕尺寸创建不同的布局。系统会根据当前设备的屏幕尺寸确定要使用的布局。</p>
-<p>如果应用的任何功能需要使用特定的硬件（例如摄像头），您可以在运行时查询该设备是否具有该硬件，如果没有，则停用相应的功能。您可以指定应用需要使用特定的硬件，这样，Google Play 就不会允许在没有这些硬件的设备上安装应用。</p>
-<p>构建您的首个应用后，请参阅 [设备兼容性概览][] 来详细了解设备配置。</p>
-]]></content>
-    <category term="Android"/>
-    <category term="快速上手"/>
-    <published>2022-04-01T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">运行应用</title>
-    <id>https://mrhope.site/code/Android/get-started/run.html</id>
-    <link href="https://mrhope.site/code/Android/get-started/run.html"/>
-    <updated>2022-04-01T16:05:53.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 在真实设备上运行</h2>
-<p>按照以下步骤设置设备：</p>
-<ol>
-<li>
-<p>使用一根 USB 线将设备连接到开发机器。如果您是在 Windows 上开发的，则可能需要为设备安装合适的 USB 驱动程序。</p>
-</li>
-<li>
-<p>执行以下步骤，在开发者选项窗口中启用 USB 调试：</p>
-<ol>
-<li>
-<p>打开设置应用。</p>
-</li>
-<li>
-<p>如果您的设备使用 Android v8.0 或更高版本，请选择系统。否则，请继续执行下一步。</p>
-</li>
-<li>
-<p>滚动到底部，然后选择关于手机。</p>
-</li>
-<li>
-<p>滚动到底部，然后点按版本号七次。</p>
-</li>
-<li>
-<p>返回上一屏幕，滚动到底部，然后点按开发者选项。</p>
-</li>
-<li>
-<p>在开发者选项窗口中，向下滚动以查找并启用 USB 调试。</p>
-</li>
-</ol>
-</li>
-</ol>]]></summary>
-    <content type="html"><![CDATA[<h2> 在真实设备上运行</h2>
-<p>按照以下步骤设置设备：</p>
-<ol>
-<li>
-<p>使用一根 USB 线将设备连接到开发机器。如果您是在 Windows 上开发的，则可能需要为设备安装合适的 USB 驱动程序。</p>
-</li>
-<li>
-<p>执行以下步骤，在开发者选项窗口中启用 USB 调试：</p>
-<ol>
-<li>
-<p>打开设置应用。</p>
-</li>
-<li>
-<p>如果您的设备使用 Android v8.0 或更高版本，请选择系统。否则，请继续执行下一步。</p>
-</li>
-<li>
-<p>滚动到底部，然后选择关于手机。</p>
-</li>
-<li>
-<p>滚动到底部，然后点按版本号七次。</p>
-</li>
-<li>
-<p>返回上一屏幕，滚动到底部，然后点按开发者选项。</p>
-</li>
-<li>
-<p>在开发者选项窗口中，向下滚动以查找并启用 USB 调试。</p>
-</li>
-</ol>
-</li>
-</ol>
-<p>按照以下步骤操作，在设备上运行应用：</p>
-<ol>
-<li>
-<p>在 Android Studio 中，从工具栏中的运行/调试配置下拉菜单中选择您的应用。</p>
-</li>
-<li>
-<p>在工具栏中，从目标设备下拉菜单中选择要用来运行应用的设备。</p>
-</li>
-<li>
-<p>点击 Run 。</p>
-<p>Android Studio 会在已连接的设备上安装您的应用并启动它。您现在会看到设备上的应用中显示了“Hello, World!”。</p>
-</li>
-</ol>
-<h2> 在模拟器上运行</h2>
-<p>按照以下步骤操作，在模拟器上运行应用：</p>
-<ol>
-<li>
-<p>在 Android Studio 中创建一个 Android 虚拟设备 (AVD)，模拟器可以使用该设备安装和运行您的应用。</p>
-</li>
-<li>
-<p>在工具栏中，从运行/调试配置下拉菜单中选择您的应用。</p>
-</li>
-<li>
-<p>从目标设备下拉菜单中，选择要用来运行应用的 AVD。</p>
-</li>
-<li>
-<p>点击 Run 图标 。</p>
-<p>Android Studio 会在 AVD 上安装应用并启动模拟器。您现在会看到应用中显示了“Hello, World!”。</p>
-</li>
-</ol>
-]]></content>
-    <category term="Android"/>
-    <category term="快速上手"/>
-    <published>2022-04-01T00:00:00.000Z</published>
-  </entry>
-  <entry>
     <title type="text">Angular</title>
     <id>https://mrhope.site/code/angular/</id>
     <link href="https://mrhope.site/code/angular/"/>
@@ -1331,15 +1879,15 @@ memory=8GB
     <title type="text">Mr.Hope 介绍</title>
     <id>https://mrhope.site/about/</id>
     <link href="https://mrhope.site/about/"/>
-    <updated>2022-04-03T17:06:01.000Z</updated>
-    <summary type="text">slidestart Mr.Hope 介绍 Mr.Hope 基本信息 性别: 男; 年龄: 24; 婚姻情况: 未婚; 单身: 否; 爱好: 钓鱼、国际象棋、花体英文、羽毛球、编程; 性格比较开朗随和，热爱帮助他人，喜欢平时做一些开源项目。 学历经历 本科东北师范大学就读物理学; 现在在东北师范大学就读理论物理硕士; 暂无特别突出的科研成果; 联系方式...</summary>
+    <updated>2023-03-24T09:43:26.000Z</updated>
+    <summary type="text">slidestart 基本信息 性别: 男; 年龄: 25; 婚姻情况: 未婚; 单身: 否; 爱好: 钓鱼、国际象棋、花体英文、羽毛球、编程; 性格比较开朗随和，热爱帮助他人，喜欢平时写一些开源项目。 学历经历 本科东北师范大学就读物理学; 现在在东北师范大学就读理论物理硕士; 暂无特别突出的科研成果; 联系方式 你可以通过我的 QQ 1178522...</summary>
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
     <title type="text">代码笔记</title>
     <id>https://mrhope.site/code/</id>
     <link href="https://mrhope.site/code/"/>
-    <updated>2022-10-10T05:08:58.000Z</updated>
+    <updated>2023-03-24T09:43:26.000Z</updated>
     <summary type="html"><![CDATA[<p>此处是 Mr.Hope 存放的一些代码笔记。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>此处是 Mr.Hope 存放的一些代码笔记。</p>
@@ -1401,7 +1949,7 @@ memory=8GB
 </ul>
 <h3> APP</h3>
 <ul>
-<li><a href="/code/Android/" target="blank">Android 开发</a></li>
+<li><a href="/code/android/" target="blank">Android 开发</a></li>
 </ul>
 <h3> 后端开发</h3>
 <ul>
@@ -2155,7 +2703,7 @@ memory=8GB
 <ul>
 <li>
 <p><a href="https://github.com/wechat-miniprogram/miniprogram-demo" target="_blank" rel="noopener noreferrer">小程序实例源码</a></p>
-<p><img src="https://res.wx.qq.com/wxdoc/dist/assets/img/demo.ef5c5bef.jpg" alt="小程序示例二维码"></p>
+<p><img src="https://res.wx.qq.com/wxdoc/dist/assets/img/demo.ef5c5bef.jpg" alt="小程序示例二维码" loading="lazy"></p>
 </li>
 </ul>
 <h2> 官方文档</h2>
@@ -2462,7 +3010,7 @@ memory=8GB
     <title type="text">网页入门</title>
     <id>https://mrhope.site/code/website/</id>
     <link href="https://mrhope.site/code/website/"/>
-    <updated>2022-09-07T17:18:06.000Z</updated>
+    <updated>2023-03-24T09:43:26.000Z</updated>
     <summary type="html"><![CDATA[<p>网页需要三件套: <strong>HTML</strong>、<strong>CSS</strong> 和 <strong>JavaScript</strong>。</p>
 <ol>
 <li>HTML 定义了网页的内容</li>
@@ -2480,8 +3028,8 @@ memory=8GB
 <div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>一个大型的网站，很少是直接使用原生代码写的。</p>
-<p>最新的网站大多数都是用三大框架(<a href="#Angular"><strong>Angular</strong></a>、<a href="#React"><strong>React</strong></a>、<a href="#Vue"><strong>Vue</strong></a>)搭建，并引入 npm 上的 UI 库编写而成。</p>
-<p>稍微老的网站会使用其他框架作为辅助，比如<a href="#Bootstrap4"><strong>Bootstrap</strong></a>、<a href="#jQuery"><strong>jQuery</strong></a>等。</p>
+<p>最新的网站大多数都是用知名框架 (<a href="#angular"><strong>Angular</strong></a>、<a href="#react"><strong>React</strong></a>、<a href="#vue"><strong>Vue</strong></a>) 搭建，并引入 npm 上的 UI 库编写而成。</p>
+<p>稍微老的网站会使用其他框架作为辅助，比如 <a href="#bootstrap4"><strong>Bootstrap</strong></a>、<a href="#jquery"><strong>jQuery</strong></a> 等。</p>
 </div>
 <div class="hint-container info">
 <p class="hint-container-title">网页标准指定</p>
@@ -2519,6 +3067,25 @@ memory=8GB
 <ul>
 <li><a href="/code/node-js/" target="blank">Node.js 教程</a></li>
 </ul>
+<h2> 现代前端框架</h2>
+<h3> Vue</h3>
+<p>Vue 是一套轻量化的前端渐进式框架框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。</p>
+<ul>
+<li>
+<p><a href="/code/vue/" target="blank">Vue 学习教程</a></p>
+</li>
+<li>
+<p><a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener noreferrer">Vue 官方文档</a></p>
+</li>
+</ul>
+<h3> React</h3>
+<ul>
+<li><a href="/code/react/" target="blank">React 教程</a></li>
+</ul>
+<h3> Angular</h3>
+<ul>
+<li><a href="/code/angular/" target="blank">Angular 教程</a></li>
+</ul>
 <h2> 历史前端框架</h2>
 <h3> jQuery</h3>
 <p>jQuery 是一个 JavaScript 库，极大地简化了 JavaScript 编程，很容易学习。</p>
@@ -2546,29 +3113,13 @@ memory=8GB
 <p><a href="https://v4.bootcss.com/docs/4.0/getting-started/introduction/" target="_blank" rel="noopener noreferrer">bootstrap 4.0 中文文档</a></p>
 </li>
 </ul>
-<h2> 现代前端框架</h2>
-<h3> Vue</h3>
-<p>Vue 是一套轻量化的前端渐进式框架框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。</p>
-<p>Vue 与 React、Angular 一起合称前端三大框架。</p>
+<h2> 定义列表</h2>
 <ul>
-<li>
-<p><a href="/code/vue/" target="blank">Vue 学习教程</a></p>
-</li>
-<li>
-<p><a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener noreferrer">Vue 官方文档</a></p>
-</li>
-</ul>
-<h3> React</h3>
-<ul>
-<li><a href="/code/react/" target="blank">React 教程</a></li>
-</ul>
-<h3> Angular</h3>
-<ul>
-<li><a href="/code/angular/" target="blank">Angular 教程</a></li>
-</ul>
-<h2> 其他文档</h2>
-<ul>
-<li><a href="/code/website/https.html" target="blank">HTTPS 介绍</a></li>
+<li><a href="/code/website/definition/uri.html" target="blank">URI 统一资源标识符</a></li>
+<li><a href="/code/website/definition/url.html" target="blank">URL 统一资源定位符</a></li>
+<li><a href="/code/website/definition/seo.html" target="blank">SEO 搜索引擎优化</a></li>
+<li><a href="/code/website/definition/mime.html" target="blank">MIME Type 媒体类型</a></li>
+<li><a href="/code/website/definition/https.html" target="blank">HTTPS 介绍</a></li>
 </ul>
 ]]></content>
     <category term="前端"/>
@@ -5110,7 +5661,7 @@ memory=8GB
     <title type="text">HTML</title>
     <id>https://mrhope.site/code/website/html/</id>
     <link href="https://mrhope.site/code/website/html/"/>
-    <updated>2022-04-06T07:44:02.000Z</updated>
+    <updated>2023-03-24T09:43:26.000Z</updated>
     <summary type="html"><![CDATA[<p>HTML 指的是超文本标记语言 (Hyper Text Markup Language)，它不是一种编程语言，而是一种标记语言 (markup language)，它使用标记标签来描述网页。HTML5 是 HTML 最新的修订版本。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>HTML 指的是超文本标记语言 (Hyper Text Markup Language)，它不是一种编程语言，而是一种标记语言 (markup language)，它使用标记标签来描述网页。HTML5 是 HTML 最新的修订版本。</p>
@@ -5137,13 +5688,6 @@ memory=8GB
 <li><a href="/code/website/html/intro/embed.html" target="blank">嵌入</a></li>
 <li><a href="/code/website/html/intro/format.html" target="blank">格式化文档</a></li>
 <li><a href="/code/website/html/intro/layout.html" target="blank">网站布局</a></li>
-</ul>
-<h2> 定义列表</h2>
-<ul>
-<li><a href="/code/website/html/definition/uri.html" target="blank">URI 统一资源标识符</a></li>
-<li><a href="/code/website/html/definition/url.html" target="blank">URL 统一资源定位符</a></li>
-<li><a href="/code/website/html/definition/seo.html" target="blank">SEO 搜索引擎优化</a></li>
-<li><a href="/code/website/html/definition/mime.html" target="blank">MIME Type 媒体类型</a></li>
 </ul>
 <h2> HTML 参考</h2>
 <ul>
@@ -5562,658 +6106,5 @@ memory=8GB
 ]]></content>
     <category term="dart"/>
     <published>2020-05-30T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">浏览器</title>
-    <id>https://mrhope.site/code/language/js/browser/</id>
-    <link href="https://mrhope.site/code/language/js/browser/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 相关文档</h2>
-<ul>
-<li>
-<p><a href="/code/language/js/browser/intro.html" target="blank">浏览器介绍</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/browser/browser-object.html" target="blank">浏览器对象</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/browser/dom.html" target="blank">操作 DOM</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/browser/form.html" target="blank">操作表单</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/browser/file.html" target="blank">操作文件</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/browser/ajax.html" target="blank">Ajax</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/browser/promise.html" target="blank">Promise</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/browser/canvas.html" target="blank">Canvas</a></p>
-</li>
-</ul>]]></summary>
-    <content type="html"><![CDATA[<h2> 相关文档</h2>
-<ul>
-<li>
-<p><a href="/code/language/js/browser/intro.html" target="blank">浏览器介绍</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/browser/browser-object.html" target="blank">浏览器对象</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/browser/dom.html" target="blank">操作 DOM</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/browser/form.html" target="blank">操作表单</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/browser/file.html" target="blank">操作文件</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/browser/ajax.html" target="blank">Ajax</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/browser/promise.html" target="blank">Promise</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/browser/canvas.html" target="blank">Canvas</a></p>
-</li>
-</ul>
-]]></content>
-    <category term="JavaScript"/>
-    <published>2019-10-15T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">es6 入门</title>
-    <id>https://mrhope.site/code/language/js/es6/</id>
-    <link href="https://mrhope.site/code/language/js/es6/"/>
-    <updated>2022-02-12T05:50:30.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 目录</h2>
-<ul>
-<li>
-<p><a href="/code/language/js/es6/intro.html" target="blank">ECMAScript 6 简介</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/let.html" target="blank">let 和 const 命令</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/destructuring.html" target="blank">变量的解构赋值</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/string.html" target="blank">字符串的扩展</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/regex.html" target="blank">正则的扩展</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/number.html" target="blank">数值的扩展</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/function.html" target="blank">函数的扩展</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/array.html" target="blank">数组的扩展</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/object.html" target="blank">对象的扩展</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/symbol.html" target="blank">Symbol</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/set-map.html" target="blank">Set 和 Map 数据结构</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/proxy.html" target="blank">Proxy</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/reflect.html" target="blank">Reflect</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/promise.html" target="blank">Promise 对象</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/iterator.html" target="blank">Iterator 和 for...of 循</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/generator.html" target="blank">Generator 函数的语法</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/generator-async.html" target="blank">Generator 函数的异步应用</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/async.html" target="blank">async 函数</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/class.html" target="blank">Class 的基本语法</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/class-extends.html" target="blank">Class 的继承</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/decorator.html" target="blank">Decorator</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/module.html" target="blank">Module 的语法</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/module-loader.html" target="blank">Module 的加载实现</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/style.html" target="blank">编程风格</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/spec.html" target="blank">读懂规格</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/arraybuffer.html" target="blank">ArrayBuffer</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/proposals.html" target="blank">最新提案</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/reference.html" target="blank">参考链接</a></p>
-</li>
-</ul>]]></summary>
-    <content type="html"><![CDATA[<h2> 目录</h2>
-<ul>
-<li>
-<p><a href="/code/language/js/es6/intro.html" target="blank">ECMAScript 6 简介</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/let.html" target="blank">let 和 const 命令</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/destructuring.html" target="blank">变量的解构赋值</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/string.html" target="blank">字符串的扩展</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/regex.html" target="blank">正则的扩展</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/number.html" target="blank">数值的扩展</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/function.html" target="blank">函数的扩展</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/array.html" target="blank">数组的扩展</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/object.html" target="blank">对象的扩展</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/symbol.html" target="blank">Symbol</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/set-map.html" target="blank">Set 和 Map 数据结构</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/proxy.html" target="blank">Proxy</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/reflect.html" target="blank">Reflect</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/promise.html" target="blank">Promise 对象</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/iterator.html" target="blank">Iterator 和 for...of 循</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/generator.html" target="blank">Generator 函数的语法</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/generator-async.html" target="blank">Generator 函数的异步应用</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/async.html" target="blank">async 函数</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/class.html" target="blank">Class 的基本语法</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/class-extends.html" target="blank">Class 的继承</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/decorator.html" target="blank">Decorator</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/module.html" target="blank">Module 的语法</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/module-loader.html" target="blank">Module 的加载实现</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/style.html" target="blank">编程风格</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/spec.html" target="blank">读懂规格</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/arraybuffer.html" target="blank">ArrayBuffer</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/proposals.html" target="blank">最新提案</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/es6/reference.html" target="blank">参考链接</a></p>
-</li>
-</ul>
-]]></content>
-    <author>
-      <name>阮一峰</name>
-    </author>
-    <category term="JavaScript"/>
-    <contributor>
-      <name>阮一峰</name>
-    </contributor>
-    <published>2019-10-20T00:00:00.000Z</published>
-    <rights>此部分博客采用 &amp;lt;a href=&amp;quot;http://creativecommons.org/licenses/by-nc/4.0/&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;“保持署名—非商用”创意共享4.0许可证&amp;lt;/a&amp;gt;</rights>
-  </entry>
-  <entry>
-    <title type="text">函数</title>
-    <id>https://mrhope.site/code/language/js/function/</id>
-    <link href="https://mrhope.site/code/language/js/function/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 基础部分</h2>
-<ul>
-<li>
-<p><a href="/code/language/js/function/intro.html" target="blank">函数介绍</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/declare.html" target="blank">函数声明</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/call.html" target="blank">函数调用</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/scope.html" target="blank">函数作用域</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/destructuring.html" target="blank">解构赋值</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/this.html" target="blank">this 的指向</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/arrow-function.html" target="blank">箭头函数</a></p>
-</li>
-</ul>]]></summary>
-    <content type="html"><![CDATA[<h2> 基础部分</h2>
-<ul>
-<li>
-<p><a href="/code/language/js/function/intro.html" target="blank">函数介绍</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/declare.html" target="blank">函数声明</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/call.html" target="blank">函数调用</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/scope.html" target="blank">函数作用域</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/destructuring.html" target="blank">解构赋值</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/this.html" target="blank">this 的指向</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/arrow-function.html" target="blank">箭头函数</a></p>
-</li>
-</ul>
-<h2> 进阶</h2>
-<ul>
-<li>
-<p><a href="/code/language/js/function/higher-order-function.html" target="blank">高阶函数</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/map-and-reduce.html" target="blank">map reduce 与 sort</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/closure.html" target="blank">闭包</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/function/generator.html" target="blank">generator</a></p>
-</li>
-</ul>
-]]></content>
-    <category term="JavaScript"/>
-    <published>2019-10-01T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">快速上手</title>
-    <id>https://mrhope.site/code/language/js/guide/</id>
-    <link href="https://mrhope.site/code/language/js/guide/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p>本部分将带您尽快进入 JavaScript 的世界。</p>
-</div>
-]]></summary>
-    <content type="html"><![CDATA[<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p>本部分将带您尽快进入 JavaScript 的世界。</p>
-</div>
-<!-- more -->
-<h2> 教程目录</h2>
-<ul>
-<li>
-<p><a href="/code/language/js/guide/get-started.html" target="blank">上手 JavaScript</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/guide/grammar.html" target="blank">基本语法</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/guide/data-structure.html" target="blank">数据类型</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/guide/variable.html" target="blank">变量</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/guide/boolean.html" target="blank">布尔值简介</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/guide/condition.html" target="blank">条件判断</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/guide/loop.html" target="blank">循环</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/guide/string.html" target="blank">字符串简介</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/guide/array.html" target="blank">数组简介</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/guide/object.html" target="blank">对象简介</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/guide/function.html" target="blank">函数简介</a></p>
-</li>
-</ul>
-<h2> 练习</h2>
-<ul>
-<li><a href="/code/language/js/guide/exercise.html" target="blank">练手</a></li>
-</ul>
-<h2> 初步进阶</h2>
-<ul>
-<li>
-<p><a href="/code/language/js/guide/map-and-set.html" target="blank">Map&amp;Set</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/guide/iterable.html" target="blank">Iterable</a></p>
-</li>
-</ul>
-<h2> 参考链接</h2>
-<ul>
-<li>Axel Rauschmayer, <a href="http://www.2ality.com/2011/10/javascript-overview.html" target="_blank" rel="noopener noreferrer">A quick overview of JavaScript</a></li>
-</ul>
-]]></content>
-    <category term="JavaScript"/>
-    <published>2019-09-14T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">JavaScript 简介</title>
-    <id>https://mrhope.site/code/language/js/intro/</id>
-    <link href="https://mrhope.site/code/language/js/intro/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<div class="hint-container info">
-<p class="hint-container-title">JavaScript 语言是什么</p>
-<p>JavaScript 是一种轻量级的脚本语言。所谓“脚本语言” (script language)，指的是它不具备开发操作系统的能力，而是只用来编写控制其他大型应用程序(比如浏览器)的“脚本”。</p>
-<p>JavaScript 也是一种嵌入式 (embedded) 语言。它本身提供的核心语法不算很多，只能用来做一些数学和逻辑运算。JavaScript 本身不提供任何与 I/O (输入/输出)相关的 API，都要靠宿主环境(host)提供，所以 JavaScript 只合适嵌入更大型的应用程序环境，去调用宿主环境提供的底层 API。</p>
-</div>
-]]></summary>
-    <content type="html"><![CDATA[<div class="hint-container info">
-<p class="hint-container-title">JavaScript 语言是什么</p>
-<p>JavaScript 是一种轻量级的脚本语言。所谓“脚本语言” (script language)，指的是它不具备开发操作系统的能力，而是只用来编写控制其他大型应用程序(比如浏览器)的“脚本”。</p>
-<p>JavaScript 也是一种嵌入式 (embedded) 语言。它本身提供的核心语法不算很多，只能用来做一些数学和逻辑运算。JavaScript 本身不提供任何与 I/O (输入/输出)相关的 API，都要靠宿主环境(host)提供，所以 JavaScript 只合适嵌入更大型的应用程序环境，去调用宿主环境提供的底层 API。</p>
-</div>
-<!-- more -->
-<h2> JavaScript 简介</h2>
-<p>目前，已经嵌入 JavaScript 的宿主环境有多种，最常见的环境就是浏览器，另外还有服务器环境，也就是 Node.js 项目。</p>
-<p>从语法角度看，JavaScript 语言是一种“对象模型”语言。各种宿主环境通过这个模型，描述自己的功能和操作接口，从而通过 JavaScript 控制这些功能。但是，JavaScript 并不是纯粹的“面向对象语言”，还支持其他编程范式(比如函数式编程)。这导致几乎任何一个问题，JavaScript 都有多种解决方法。在根据本博客学习 JavaScript 的过程中，您会诧异于 JavaScript 语法的灵活性。</p>
-<p>JavaScript 的核心语法部分相当精简，只包括两个部分: 基本的语法构造(比如操作符、控制结构、语句)和标准库(就是一系列具有各种功能的对象比如 <code>Array</code>、<code>Date</code>、<code>Math</code> 等)。除此之外，各种宿主环境提供额外的 API(即只能在该环境使用的接口)，以便 JavaScript 调用。以浏览器为例，它提供的额外 API 可以分成三大类。</p>
-<ul>
-<li>浏览器控制类: 操作浏览器</li>
-<li>DOM 类: 操作网页的各种元素</li>
-<li>Web 类: 实现互联网的各种功能</li>
-</ul>
-<p>如果宿主环境是服务器，则会提供各种操作系统的 API，比如文件操作 API、网络通信 API 等等。这些您都可以在 Node.js 环境中找到。</p>
-<h2> 学习 JavaScript 的原因</h2>
-<p>JavaScript 语言有一些显著特点，使得它非常值得学习。它既适合作为学习编程的入门语言，也适合当作日常开发的工作语言。它是目前最有希望、前途最光明的计算机语言之一。</p>
-<h3> 操控浏览器的能力</h3>
-<p>JavaScript 的发明目的，就是作为浏览器的内置脚本语言，为网页开发者提供操控浏览器的能力。它是目前唯一一种通用的浏览器脚本语言，所有浏览器都支持。它可以让网页呈现各种特殊效果，为用户提供良好的互动体验。</p>
-<p>目前，全世界几乎所有网页都使用 JavaScript。如果不用，网站的易用性和使用效率将大打折扣，无法成为操作便利、对用户友好的网站。</p>
-<p>对于一个互联网开发者来说，如果您想提供漂亮的网页、令用户满意的上网体验、各种基于浏览器的便捷功能、前后端之间紧密高效的联系，JavaScript 是必不可少的工具。</p>
-<h3> 广泛的使用领域</h3>
-<p>近年来，JavaScript 的使用范围，慢慢超越了浏览器，正在向通用的系统语言发展。</p>
-<ol>
-<li>
-<p>浏览器的平台化</p>
-<p>随着 HTML5 的出现，浏览器本身的功能越来越强，不再仅仅能浏览网页，而是越来越像一个平台，JavaScript 因此得以调用许多系统功能，比如操作本地文件、操作图片、调用摄像头和麦克风等等。这使得 JavaScript 可以完成许多以前无法想象的事情。</p>
-</li>
-<li>
-<p>Node.js</p>
-<p>Node.js 项目使得 JavaScript 可以用于开发服务器端的大型项目，网站的前后端都用 JavaScript 开发已经成为了现实。有些嵌入式平台 (Raspberry Pi) 能够安装 Node，于是 JavaScript 就能为这些平台开发应用程序。</p>
-</li>
-<li>
-<p>数据库操作</p>
-<p>JavaScript 甚至也可以用来操作数据库。NoSQL 数据库这个概念，本身就是在 JSON(JavaScript Object Notation)格式的基础上诞生的，大部分 NoSQL 数据库允许 JavaScript 直接操作。基于 SQL 语言的开源数据库 PostgreSQL 支持 JavaScript 作为操作语言，可以部分取代 SQL 查询语言。</p>
-</li>
-<li>
-<p>移动平台开发</p>
-<p>JavaScript 也正在成为手机应用的开发语言。一般来说，安卓平台使用 Java 语言开发，iOS 平台使用 Objective-C 或 Swift 语言开发。许多人正在努力，让 JavaScript 成为各个平台的通用开发语言。</p>
-<p>PhoneGap 项目就是将 JavaScript 和 HTML5 打包在一个容器之中，使得它能同时在 iOS 和安卓上运行。Facebook 公司的 React Native 项目则是将 JavaScript 写的组件，编译成原生组件，从而使它们具备优秀的性能。</p>
-<p>Mozilla 基金会的手机操作系统 Firefox OS，更是直接将 JavaScript 作为操作系统的平台语言，但是很可惜这个项目没有成功。</p>
-</li>
-<li>
-<p>内嵌脚本语言</p>
-<p>越来越多的应用程序，将 JavaScript 作为内嵌的脚本语言，比如 Adobe 公司的著名 PDF 阅读器 Acrobat、Linux 桌面环境 GNOME 3。</p>
-</li>
-<li>
-<p>跨平台的桌面应用程序</p>
-<p>Chromium OS、Windows 8 等操作系统直接支持 JavaScript 编写应用程序。Mozilla 的 Open Web Apps 项目、Google 的 <a href="http://developer.chrome.com/apps/about_apps" target="_blank" rel="noopener noreferrer">Chrome App 项目</a>、GitHub 的 <a href="http://electron.atom.io/" target="_blank" rel="noopener noreferrer">Electron 项目</a>、以及 <a href="http://tidesdk.multipart.net/docs/user-dev/generated/" target="_blank" rel="noopener noreferrer">TideSDK 项目</a>，都可以用来编写运行于 Windows、macOS 和 Android 等多个桌面平台的程序，不依赖浏览器。</p>
-</li>
-<li>
-<p>小结</p>
-<p>可以预期，JavaScript 最终将能让您只用一种语言，就开发出适应不同平台(包括桌面端、服务器端、手机端)的程序。早在 2013 年 9 月的<a href="http://adambard.com/blog/top-github-languages-for-2013-so-far/" target="_blank" rel="noopener noreferrer">统计</a>之中，JavaScript 就是当年 GitHub 上使用量排名第一的语言。</p>
-<p>著名程序员 Jeff Atwood 甚至提出了一条 <a href="http://www.codinghorror.com/blog/2007/07/the-principle-of-least-power.html" target="_blank" rel="noopener noreferrer">“Atwood 定律”</a>:</p>
-</li>
-</ol>
-<blockquote>
-<p>“所有可以用 JavaScript 编写的程序，最终都会出现 JavaScript 的版本。”(Any application that can be written in JavaScript will eventually be written in JavaScript.)</p>
-</blockquote>
-<h3> 易学性</h3>
-<p>相比学习其他语言，学习 JavaScript 有一些有利条件。</p>
-<ol>
-<li>
-<p>学习环境无处不在</p>
-<p>只要有浏览器，就能运行 JavaScript 程序；只要有文本编辑器，就能编写 JavaScript 程序。这意味着，几乎所有电脑都原生提供 JavaScript 学习环境，不用另行安装复杂的 IDE(集成开发环境)和编译器。</p>
-</li>
-<li>
-<p>简单性</p>
-<p>相比其他脚本语言(比如 Python 或 Ruby)，JavaScript 的语法相对简单一些，本身的语法特性并不是特别多。而且，那些语法中的复杂部分，也不是必需要学会。您完全可以只用简单命令，完成大部分的操作。</p>
-</li>
-<li>
-<p>与主流语言的相似性</p>
-<p>JavaScript 的语法很类似 C/C++ 和 Java，如果学过这些语言(事实上大多数学校都教)，JavaScript 的入门会非常容易。</p>
-</li>
-</ol>
-<p>必须说明的是，虽然核心语法不难，但是 JavaScript 的复杂性体现在另外两个方面。</p>
-<p>首先，它涉及大量的外部 API。JavaScript 要发挥作用，必须与其他组件配合，这些外部组件五花八门，数量极其庞大，几乎涉及网络应用的各个方面，掌握它们绝非易事。</p>
-<p>其次，JavaScript 语言有一些设计缺陷。某些地方相当不合理，另一些地方则会出现怪异的运行结果。学习 JavaScript，很大一部分时间是用来搞清楚哪些地方有陷阱。Douglas Crockford 写过一本有名的书，名字就叫<a href="http://javascript.crockford.com/" target="_blank" rel="noopener noreferrer">《JavaScript: The Good Parts》</a>，言下之意就是这门语言不好的地方很多，必须写一本书才能讲清楚。另外一些程序员则感到，为了更合理地编写 JavaScript 程序，就不能用 JavaScript 来写，而必须发明新的语言，比如 CoffeeScript、TypeScript、Dart 这些新语言的发明目的，多多少少都有这个因素。</p>
-<p>尽管如此，目前看来，JavaScript 的地位还是无法动摇。加之，语言标准的快速进化，使得 JavaScript 功能日益增强，而语法缺陷和怪异之处得到了弥补。所以，JavaScript 还是值得学习，况且它的入门真的不难。</p>
-<h3> 强大的性能</h3>
-<p>JavaScript 的性能优势体现在以下方面。</p>
-<ul>
-<li>
-<p>灵活的语法，表达力强</p>
-<p>JavaScript 既支持类似 C 语言清晰的过程式编程，也支持灵活的函数式编程，可以用来写并发处理(concurrent)。这些语法特性已经被证明非常强大，可以用于许多场合，尤其适用异步编程。</p>
-<p>JavaScript 的所有值都是对象，这为程序员提供了灵活性和便利性。因为您可以很方便地、按照需要随时创造数据结构，不用进行麻烦的预定义。</p>
-<p>JavaScript 的标准还在快速进化中，并不断合理化，添加更适用的语法特性。</p>
-</li>
-<li>
-<p>支持编译运行。</p>
-<p>JavaScript 语言本身，虽然是一种解释型语言，但是在现代浏览器中，JavaScript 都是编译后运行。程序会被高度优化，运行效率接近二进制程序。而且，JavaScript 引擎正在快速发展，性能将越来越好。</p>
-<p>此外，还有一种 WebAssembly 格式，它是 JavaScript 引擎的中间码格式，全部都是二进制代码。由于跳过了编译步骤，可以达到接近原生二进制代码的运行速度。各种语言(主要是 C 和 C++)通过编译成 WebAssembly，就可以在浏览器里面运行。</p>
-</li>
-<li>
-<p>事件驱动和非阻塞式设计。</p>
-<p>JavaScript 程序可以采用事件驱动 (event-driven) 和非阻塞式 (non-blocking) 设计，在服务器端适合高并发环境，普通的硬件就可以承受很大的访问量。</p>
-</li>
-</ul>
-<h3> 开放性</h3>
-<p>JavaScript 是一种开放的语言。它的标准 ECMA-262 是 ISO 国际标准，写得非常详尽明确；该标准的主要实现(比如 V8 和 SpiderMonkey 引擎)都是开放的，而且质量很高。这保证了这门语言不属于任何公司或个人，不存在版权和专利的问题。</p>
-<p>语言标准由 TC39 委员会负责制定，该委员会的运作是透明的，所有讨论都是开放的，会议记录都会对外公布。</p>
-<p>不同公司的 JavaScript 运行环境，兼容性很好，程序不做调整或只做很小的调整，就能在所有浏览器上运行。</p>
-<h3> 社区支持和就业机会</h3>
-<p>全世界程序员都在使用 JavaScript，它有着极大的社区、广泛的文献和图书、丰富的代码资源。绝大部分您需要用到的功能，都有多个开源函数库可供选用。</p>
-]]></content>
-    <category term="JavaScript"/>
-    <published>2019-09-13T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">对象</title>
-    <id>https://mrhope.site/code/language/js/object/</id>
-    <link href="https://mrhope.site/code/language/js/object/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<p>在 JavaScript 的世界里，一切都是对象。</p>
-]]></summary>
-    <content type="html"><![CDATA[<p>在 JavaScript 的世界里，一切都是对象。</p>
-<!-- more -->
-<h2> 面向对象编程</h2>
-<ul>
-<li>
-<p><a href="/code/language/js/object/intro.html" target="blank">对象及原型介绍</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/object/create.html" target="blank">创建对象</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/object/extend.html" target="blank">原型继承</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/object/class.html" target="blank">class 继承</a></p>
-</li>
-</ul>
-<h2> 其他标准对象</h2>
-<ul>
-<li>
-<p><a href="/code/language/js/object/wrap.html" target="blank">包装对象</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/object/date.html" target="blank">Date 对象</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/object/regExp.html" target="blank">正则表达</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/object/JSON.html" target="blank">JSON</a></p>
-</li>
-</ul>
-]]></content>
-    <category term="JavaScript"/>
-    <published>2019-10-08T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">运算符</title>
-    <id>https://mrhope.site/code/language/js/operators/</id>
-    <link href="https://mrhope.site/code/language/js/operators/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p>二进制位运算符章节使用较少，无需阅读。</p>
-</div>
-<h2> 目录</h2>
-<ul>
-<li>
-<p><a href="/code/language/js/operators/arithmetic.html" target="blank">算术运算符</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/operators/comparison.html" target="blank">比较运算符</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/operators/boolean.html" target="blank">布尔运算符</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/operators/bit.html" target="blank">二进制位运算符</a> </p>
-</li>
-<li>
-<p><a href="/code/language/js/operators/priority.html" target="blank">其他运算符，运算顺序</a></p>
-</li>
-</ul>]]></summary>
-    <content type="html"><![CDATA[<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p>二进制位运算符章节使用较少，无需阅读。</p>
-</div>
-<h2> 目录</h2>
-<ul>
-<li>
-<p><a href="/code/language/js/operators/arithmetic.html" target="blank">算术运算符</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/operators/comparison.html" target="blank">比较运算符</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/operators/boolean.html" target="blank">布尔运算符</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/operators/bit.html" target="blank">二进制位运算符</a> </p>
-</li>
-<li>
-<p><a href="/code/language/js/operators/priority.html" target="blank">其他运算符，运算顺序</a></p>
-</li>
-</ul>
-]]></content>
-    <category term="JavaScript"/>
-    <published>2019-09-26T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">数据类型</title>
-    <id>https://mrhope.site/code/language/js/types/</id>
-    <link href="https://mrhope.site/code/language/js/types/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<p>本章节是对数据类型的系统介绍。由于此章节的部分内容已经在 <a href="/code/language/js/guide/" target="blank">快速上手</a> 涉及，部分内容有重复。</p>
-]]></summary>
-    <content type="html"><![CDATA[<p>本章节是对数据类型的系统介绍。由于此章节的部分内容已经在 <a href="/code/language/js/guide/" target="blank">快速上手</a> 涉及，部分内容有重复。</p>
-<!-- more -->
-<h2> 目录</h2>
-<ul>
-<li>
-<p><a href="/code/language/js/types/general.html" target="blank">概述</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/types/boolean.html" target="blank">布尔值</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/types/number.html" target="blank">数值</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/types/string.html" target="blank">字符串</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/types/null-undefined.html" target="blank">null 和 undefined</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/types/object.html" target="blank">对象</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/types/function.html" target="blank">函数</a></p>
-</li>
-<li>
-<p><a href="/code/language/js/types/array.html" target="blank">数组</a></p>
-</li>
-</ul>
-]]></content>
-    <category term="JavaScript"/>
-    <published>2019-09-20T00:00:00.000Z</published>
   </entry>
 </feed>
