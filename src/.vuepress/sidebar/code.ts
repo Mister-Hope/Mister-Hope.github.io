@@ -34,6 +34,6 @@ export const code = arraySidebar([
       "linter/",
     ],
   },
-  "Android/",
+  "android/",
   "back-end/",
 ]);

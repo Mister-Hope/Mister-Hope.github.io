@@ -21,9 +21,9 @@ star: true
 
 一个大型的网站，很少是直接使用原生代码写的。
 
-最新的网站大多数都是用三大框架([**Angular**](#Angular)、[**React**](#React)、[**Vue**](#Vue))搭建，并引入 npm 上的 UI 库编写而成。
+最新的网站大多数都是用知名框架 ([**Angular**](#angular)、[**React**](#react)、[**Vue**](#vue)) 搭建，并引入 npm 上的 UI 库编写而成。
 
-稍微老的网站会使用其他框架作为辅助，比如[**Bootstrap**](#Bootstrap4)、[**jQuery**](#jQuery)等。
+稍微老的网站会使用其他框架作为辅助，比如 [**Bootstrap**](#bootstrap4)、[**jQuery**](#jquery) 等。
 
 :::
 
@@ -73,6 +73,24 @@ Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，
 
 - [Node.js 教程](../node-js/README.md)
 
+## 现代前端框架
+
+### Vue
+
+Vue 是一套轻量化的前端渐进式框架框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。
+
+- [Vue 学习教程](../vue/README.md)
+
+- [Vue 官方文档](https://cn.vuejs.org/v2/guide/)
+
+### React
+
+- [React 教程](../react/README.md)
+
+### Angular
+
+- [Angular 教程](../angular/README.md)
+
 ## 历史前端框架
 
 ### jQuery
@@ -98,26 +116,10 @@ Bootstrap 是一套用于 HTML、CSS 和 JS 开发的开源工具集。利用提
 
 - [bootstrap 4.0 中文文档](https://v4.bootcss.com/docs/4.0/getting-started/introduction/)
 
-## 现代前端框架
+## 定义列表
 
-### Vue
-
-Vue 是一套轻量化的前端渐进式框架框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。
-
-Vue 与 React、Angular 一起合称前端三大框架。
-
-- [Vue 学习教程](../vue/README.md)
-
-- [Vue 官方文档](https://cn.vuejs.org/v2/guide/)
-
-### React
-
-- [React 教程](../react/README.md)
-
-### Angular
-
-- [Angular 教程](../angular/README.md)
-
-## 其他文档
-
-- [HTTPS 介绍](https.md)
+- [URI 统一资源标识符](definition/uri.md)
+- [URL 统一资源定位符](definition/url.md)
+- [SEO 搜索引擎优化](definition/seo.md)
+- [MIME Type 媒体类型](definition/mime.md)
+- [HTTPS 介绍](definition/https.md)

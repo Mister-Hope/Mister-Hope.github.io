@@ -50,7 +50,7 @@ breadcrumb: false
 
 ### APP
 
-- [Android 开发](Android/README.md)
+- [Android 开发](android/README.md)
 
 ### 后端开发
 

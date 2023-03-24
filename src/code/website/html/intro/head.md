@@ -3,6 +3,7 @@ title: head 标签
 icon: heading
 date: 2019-09-02
 category: HTML
+order: 2
 ---
 
 在页面加载完成的时候，标签 `<head>` 里的内容，是不会在页面中显示出来的。
@@ -81,7 +82,7 @@ HTML 头部是包含在 `<head>` 元素里面的内容。不像 `<body>` 元素�
 
 ::: info
 
-关于 SEO 详情，请见 [定义 → SEO](../definition/seo.md)
+关于 SEO 详情，请见 [定义 → SEO](../../definition/seo.md)。
 
 :::
 

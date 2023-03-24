@@ -12,21 +12,15 @@ star: true
 
 <!-- .element: class="r-fit-text" -->
 
-## Mr.Hope 介绍
-
-![Mr.Hope](/logo.svg)
-
----
-
 ## 基本信息
 
 - 性别: 男
-- 年龄: 24
+- 年龄: 25
 - 婚姻情况: 未婚
 - 单身: 否
 - 爱好: 钓鱼、国际象棋、花体英文、羽毛球、编程
 
-性格比较开朗随和，热爱帮助他人，喜欢平时做一些开源项目。
+性格比较开朗随和，热爱帮助他人，喜欢平时写一些开源项目。
 
 ---
 
@@ -42,6 +36,6 @@ star: true
 
 你可以通过我的 QQ 1178522294 联系我。
 
-当然如果你想，你也可以通过邮箱 mister-hope@outlook.com 发函。
+当然如果你想，你也可以通过邮箱 [mister-hope@outlook.com](mailto:mister-hope@outlook.com) 发函。
 
 @slideend

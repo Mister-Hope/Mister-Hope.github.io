@@ -37,13 +37,6 @@ HTML 指的是超文本标记语言 (Hyper Text Markup Language)，它不是一�
 - [格式化文档](intro/format.md)
 - [网站布局](intro/layout.md)
 
-## 定义列表
-
-- [URI 统一资源标识符](definition/uri.md)
-- [URL 统一资源定位符](definition/url.md)
-- [SEO 搜索引擎优化](definition/seo.md)
-- [MIME Type 媒体类型](definition/mime.md)
-
 ## HTML 参考
 
 - [MDN 教程](https://developer.mozilla.org/zh-CN/docs/learn/HTML)

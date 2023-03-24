@@ -72,7 +72,7 @@ MySQL Community Server 是开源免费的，这也是我们通常用的 MySQL �
 
 1. 重启 mysql 即可正常使用
 
-   ```SQL
+   ```sql
    net stop mysql
    net start mysql
    ```
@@ -98,7 +98,7 @@ MySQL Community Server 是开源免费的，这也是我们通常用的 MySQL �
 
 ## 几个基本的数据库操作命令
 
-```SQL
+```sql
 mysql -h 服务器主机地址 -u 用户名 -p 用户密码 连接数据库
 
 update user set password=password('123456')where user='root'; 修改密码
@@ -311,7 +311,7 @@ exit; 退出 Mysql
    | name   | char     | 20       | 否       |             |                |        |
    | sex    | int      | 4        | 否       |             |                | 0      |
 
-   ```SQL
+   ```sql
    mysql> create table MyClass(
        -> id int(4) not null primary key auto_increment,
        -> name char(20) not null,

@@ -12,5 +12,4 @@ export const website = arraySidebar([
   },
   "js",
   "jQuery/",
-  "https",
 ]);

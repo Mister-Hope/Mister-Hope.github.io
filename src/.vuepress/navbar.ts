@@ -3,23 +3,6 @@ import { navbar } from "vuepress-theme-hope";
 export const zhNavbarConfig = navbar([
   "/",
   {
-    text: "随笔",
-    icon: "note",
-    prefix: "/note/",
-    children: [
-      { text: "随笔", link: "", icon: "note", activeMatch: "^/note/$" },
-      {
-        text: "诗集: 四季",
-        children: ["spring/", "summer/", "fall/", "winter/"],
-      },
-      {
-        text: "其他作品",
-        children: ["life/", "poem/"],
-      },
-      "node-js/",
-    ],
-  },
-  {
     text: "代码笔记",
     icon: "code",
     children: [
@@ -37,6 +20,23 @@ export const zhNavbarConfig = navbar([
         text: "后端运维",
         children: ["/linux/"],
       },
+    ],
+  },
+  {
+    text: "随笔",
+    icon: "note",
+    prefix: "/note/",
+    children: [
+      { text: "随笔", link: "", icon: "note", activeMatch: "^/note/$" },
+      {
+        text: "诗集: 四季",
+        children: ["spring/", "summer/", "fall/", "winter/"],
+      },
+      {
+        text: "其他作品",
+        children: ["life/", "poem/"],
+      },
+      "node-js/",
     ],
   },
   {
