@@ -27,7 +27,7 @@ projects:
 
   - name: markdown-it plugins
     desc: 使用 TS 编写的强大 markdown-it 插件
-    link: https://mdit-plugins.mrhope.site/zh/
+    link: https://mdit-plugins.github.io/zh/
     icon: https://mdit-plugins.mrhope.site/logo.svg
 
   - name: in 东师

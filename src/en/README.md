@@ -27,7 +27,7 @@ projects:
 
   - name: markdown-it plugins
     desc: Powerful markdown-it plugins written in typescript
-    link: https://mdit-plugins.mrhope.site/
+    link: https://mdit-plugins.github.io/
     icon: https://mdit-plugins.mrhope.site/logo.svg
 
   - name: in NENU
