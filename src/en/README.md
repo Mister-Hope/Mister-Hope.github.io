@@ -12,7 +12,7 @@ heroFullScreen: true
 projects:
   - name: VuePress
     desc: Vue-powered Static Site Generator
-    link: https://v2.vuepress.vuejs.org/
+    link: https://vuejs.press/
     icon: /assets/img/vuepress.png
 
   - name: VuePress Theme Hope

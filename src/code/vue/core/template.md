@@ -167,7 +167,7 @@ const objectOfAttrs = {
 <p v-if="seen">Now you see me</p>
 ```
 
-这里，v-if 指令会基于表达式 seen 的值的真假来移除/插入该 <p> 元素。
+这里，v-if 指令会基于表达式 seen 的值的真假来移除/插入该 `<p>` 元素。
 
 ### 参数 Arguments
 

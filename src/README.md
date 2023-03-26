@@ -12,7 +12,7 @@ heroFullScreen: true
 projects:
   - name: VuePress
     desc: 基于 Vue 的静态文档构建器
-    link: https://v2.vuepress.vuejs.org/zh/
+    link: https://vuejs.press/zh/
     icon: /assets/img/vuepress.png
 
   - name: VuePress Theme Hope
@@ -42,7 +42,7 @@ projects:
 
   - name: bcrypt-ts
     icon: project
-    desc: Bcrypt written in typescript
+    desc: Bcrypt written in TypeScript
     link: https://github.com/Mister-Hope/bcrypt-ts
 
   - name: "@mr-hope/gulp-sass"
