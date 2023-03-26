@@ -8,8 +8,6 @@ tag:
   - 对比
 ---
 
-Vue-cli 提供的 vue 单文件语法与小程序基本相似，甚至可以说小程序是改变自 Vue 与 React 框架的。
-
 <!-- more -->
 
 ## 优缺点比较
@@ -166,4 +164,4 @@ Vue 在标签名属性用 `v-bind:prop="Javascript表达式"` 的写法、其简
 
 #### Vue 组件生命周期
 
-![Vue组件生命周期](https://cn.vuejs.org/images/lifecycle.png)
+[Vue 组件生命周期](https://cn.vuejs.org/guide/essentials/lifecycle.html)

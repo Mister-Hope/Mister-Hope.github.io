@@ -4,27 +4,21 @@ export const vue = arraySidebar([
   {
     text: "Vue.js",
     icon: "vue",
-    children: ["", "install", "get-started", "vue", "component", "compare"],
+    children: [
+      "",
+      "core/install",
+      "core/get-started",
+      "core/app",
+      "core/template",
+      "core/sfc",
+      "compare",
+    ],
   },
   {
     text: "Vue Router",
     icon: "router",
     link: "router/",
     prefix: "router/",
-    children: ["get-started", "demo"],
-  },
-  {
-    text: "Vue Cli",
-    icon: "vue",
-    link: "cli/",
-    prefix: "cli/",
-    children: ["intro", "quick-dev", "create", "file"],
-  },
-  {
-    text: "Vuex",
-    icon: "state",
-    link: "vuex/",
-    prefix: "vuex/",
-    children: ["get-started", "demo"],
+    children: ["", "get-started"],
   },
 ]);

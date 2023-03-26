@@ -5,6 +5,7 @@ category: Vue
 tag:
   - 快速上手
   - 基础
+order: 2
 ---
 
 ## Vue.js 是什么
@@ -46,8 +47,14 @@ tag:
 
 ::: warning
 
-请注意 `vue-cli` 已经过时，不建议在新项目中使用。
+`vue-cli` 已经过时，不建议在新项目中使用，请使用 `vite`
 
-另外 Mr.Hope **不推荐** 新手直接使用 `vite` 或者 `webpack` 之类的 Bundler 进行上手，尤其是在您还不熟悉基于 Node.js 的构建工具时。
+:::
+
+::: warning
+
+Mr.Hope **不推荐** 新手直接使用 `vite` 或者 `webpack` 之类的 Bundler 进行上手，尤其是在您不熟悉基于 Node.js 的构建工具的情况下。
+
+请使用 CDN 的方式引入 Vue，并充分熟悉 Vue 的基础知识后再引入 Bundler。
 
 :::

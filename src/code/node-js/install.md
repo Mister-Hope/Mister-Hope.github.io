@@ -15,7 +15,7 @@ tag:
 
 ## 安装 Node.js
 
-目前 Node.js 的 LTS 版本是 16.15.1。首先，从 Node.js 官网下载对应平台的安装程序。点击 LTS 版本的下载按钮。
+目前 Node.js 的 LTS 版本是 18.15.0。首先，从 Node.js 官网下载对应平台的安装程序。点击**长期维护版**的下载按钮。
 
 - [Node.js 官网](https://nodejs.org/zh-cn/)
 
@@ -25,11 +25,11 @@ tag:
 
   在安装过程中，无需勾选 "Automatically install the necessary tools"。选中此项会在电脑中安装 VS 等日常开发使用不到的软件。
 
-  安装完成后，在 Windows 环境下，请打开命令提示符，然后输入 `node -v` ，如果安装正常，您应该看到 `v16.15.1` 这样的输出:
+  安装完成后，在 Windows 环境下，请打开命令提示符，然后输入 `node -v` ，如果安装正常，您应该看到 `v18.15.0` 这样的输出:
 
   ```bash
   C:\Users\IEUser>node -v
-  v16.15.1
+  v18.15.0
   ```
 
   继续在命令提示符输入 node，此刻您将进入 Node.js 的交互环境。在交互环境下，您可以输入任意 JavaScript 语句，例如 `100 + 200`，回车后将得到输出结果。
@@ -40,7 +40,7 @@ tag:
 
   ```sh
   $ node -v
-  v16.15.1
+  v18.15.0
   ```
 
 ## npm
@@ -57,7 +57,7 @@ npm 是 Node.js 的包管理工具(package manager)。
 
 ```bash
 C:\>npm -v
-8.12.1
+9.6.0
 ```
 
 > 如果版本号太小，说明 npm 版本较低，请使用此命令升级到最新版本: `npm i -g npm`。
@@ -99,7 +99,7 @@ npm install <foo>  add the <foo> dependency to your project
 npm config set registry https://registry.npmmirror.com/
 ```
 
-::: warning
+::: danger
 
 `https://registry.npm.taobao.org/` 是老的淘宝源地址，现已停止维护，请不要使用!!!
 
@@ -119,16 +119,16 @@ Mr.Hope 推荐使用 pnpm 进行包管理，因为它使用硬链接索引包文
 corepack enable
 ```
 
-这样每个项目会自动应用根目录 package.json 中的 `packageManager` 选项。比如设置 `"packageManager": "pnpm@7.2.1"` 的时候，会自动下载并使用 `pnpm@7.2.1`。
+这样每个项目会自动应用根目录 package.json 中的 `packageManager` 选项。比如设置 `"packageManager": "pnpm@7.30.3"` 的时候，会自动下载并使用 `pnpm@7.30.3`。
 
 ::: info 设置全局的 packageManager
 
 你可以使用 `corepack prepare packageManager@semver` 来全局准备一个 packageManager 版本，并使用 `--activate` 选新娘 全局激活。
 
-比如以下命令下载 `pnpm@7.2.1` 并将其作为默认的全局包管理器:
+比如以下命令下载 `pnpm@7.30.3` 并将其作为默认的全局包管理器:
 
 ```bash
-corepack prepare pnpm@7.2.1 --activate
+corepack prepare pnpm@7.30.3 --activate
 ```
 
 :::

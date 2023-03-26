@@ -11,225 +11,58 @@ tag:
 
 Vue Router 是 Vue 官方出品的路由组件，托管整个 Vue 项目路由。
 
-## 配置文件说明
+## Route 属性
 
-配置文件会引入 Node.js 模块 `vue-router`，并配置信息，最终向外暴露一个添加了配置信息的 `Router对象`。
-
-在日常开发中，我们只需要关注默认暴露对象的 `route` 属性。(其他属性已经在下方用注释简要说明)
-
-在 inNENU Website 项目中，其配置文件位于 `src/routes` 文件夹下，名称为 `router.ts`。
-
-### Route 属性
-
-在 inNENU Website 中，route 属性由同文件夹下的 `route.ts` 导入。
-
-route 属性是一个数组，其每一个元素是一个对象，对象会包含 `path`，`component` 两个必填属性与 `meta` 和 `name` 两个可选属性。
+在日常开发中，我们主要关注选项中的 `routes` 属性。`routes` 属性是一个数组，其每一个元素是一个对象，对象会包含 `path`，`component` 两个必填属性与 `meta` 和 `name` 两个可选属性。
 
 - `path`: 填入需要配置的网站页面的 `url`
 
 - `conponent`: 导入需要显示的 Vue 文件组件
 
-- `name`(可选): 指定该组件与 `url` 的别名
+- `name` (可选): 指定该组件与 `url` 的别名
 
-- `meta`(可选): 该属性可以填入该界面的额外信息(比如 `title`、`author` 等)
+- `meta` (可选): 该属性可以填入该界面的额外信息 (比如 `title`、`author` 等)
 
 也就是说，Vue 项目网站能够访问到的地址都能够被 `route` 数组中的某个元素的 `path` 值所匹配，此时页面展示的是该元素 `component` 属性对应的 vue 文件视图。
 
 当希望在 Vue 项目中添加新的界面的时候，只需制作好其组件文件，并在 `route` 数组中添加新项，指定的带设定 `url` 路径为响应 vue 文件即可。
 
----
+## 载入 Router
 
-下面是目前项目中使用的 Vue-router 配置文件—— `router.ts` 文件
-
-```ts
-/*
- * @Author: Mr.Hope
- * @LastEditors: Mr.Hope
- * @Description: router配置文件
- * @Date: 2019-02-26 23:43:23
- * @LastEditTime: 2019-05-05 14:35:43
- */
-
-import Vue from "vue";
-import Router from "vue-router";
-import routes from "./route";
-
-Vue.use(Router); // 使用官方Router
-
-// tslint:disable-next-line: no-var-requires
-Vue.use(require("vue-wechat-title")); // 启用wechat客户端内对title属性的支持。
-
-/**
- * @description: 暴露Router对象
- * @param {router} router配置
- * @return: router对象
- */
-export default new Router({
-  // 设置路由配置
-  routes,
-
-  // 使用html5的history API
-  mode: "history",
-
-  // 设置根目录为环境变量BASE_URL
-  base: process.env.BASE_URL,
-
-  /**
-   * 保存滚动位置
-   *
-   * @param to 新页面route对象
-   * @param from 旧页面route对象
-   * @param savedPosition 上次保存的滚动位置
-   * @returns 返回网页滚动位置
-   */
-  scrollBehavior: (to, from, savedPosition) => savedPosition || { x: 0, y: 0 },
-});
-```
-
-下面是目前项目中使用的路由配置文件—— `route.ts` 文件:
+通过调用 app.use(router)，我们会触发第一次导航且可以在任意组件中以 this.$router 的形式访问它，并且以 this.$route 的形式访问当前路由：
 
 ```ts
-/*
- * @Author: Mr.Hope
- * @LastEditors: Mr.Hope
- * @Description: 路由配置文件
- * @Date: 2019-03-25 12:27:33
- * @LastEditTime: 2019-05-05 14:40:14
- */
-import Main from "@/views/Main.vue";
-import Page404 from "@/views/Page404.vue";
+// 1. 定义路由组件.
+// 也可以从其他文件导入
+const Home = { template: "<div>Home</div>" };
+const About = { template: "<div>About</div>" };
 
-const route = [
-  {
-    path: "/",
-    alias: "/index.html",
-    name: "main",
-    component: Main,
-  },
-  {
-    path: "/handbook",
-    name: "handbook",
-    meta: { title: "东师攻略" },
-    // 使用 import 来进行异步调用实现懒加载，打包时，webpack 会识别 webpackChunkName 注释，将相同的一起打包一同执行懒加载
-    component: () =>
-      import(/* webpackChunkName: "handbook" */ "@/views/Handbook.vue"),
-  },
-  {
-    path: "/page/:path",
-    alias: "/handbook/:path",
-    props: true,
-    meta: { title: "东师指南" },
-    component: () => import(/* webpackChunkName: "page" */ "@/views/Page.vue"),
-  },
-  {
-    path: "/lecture",
-    name: "lecture",
-    meta: { title: "讲座信息" },
-    component: () =>
-      import(/* webpackChunkName: "handbook" */ "@/views/Lecture.vue"),
-  },
-  {
-    path: "/lecture/:school",
-    name: "lectureDetail",
-    meta: { title: "讲座信息" },
-    component: () =>
-      import(/* webpackChunkName: "handbook" */ "@/views/Lecture.vue"),
-  },
-  {
-    path: "/tool/calendar",
-    name: "calendar",
-    meta: { title: "东师校历" },
-    component: () =>
-      import(/* webpackChunkName: "calendar" */ "@/views/tools/Calendar.vue"),
-  },
-  {
-    path: "/tool/calendar/:time",
-    name: "calendarDetail",
-    meta: { title: "校历详情" },
-    component: () =>
-      import(
-        /* webpackChunkName: "calendar" */ "@/views/tools/CalendarDetail.vue"
-      ),
-  },
-  {
-    path: "/tool/schoolGzh",
-    name: "schoolGzh",
-    meta: { title: "学院矩阵" },
-    component: () =>
-      import(/* webpackChunkName: "tool" */ "@/views/tools/SchoolGzh.vue"),
-  },
-  {
-    path: "/tool/NetCharge",
-    name: "NetCharge",
-    meta: { title: "网费充值" },
-    component: () =>
-      import(/* webpackChunkName: "tool" */ "@/views/tools/NetCharge.vue"),
-  },
-  {
-    path: "/scence",
-    name: "scence",
-    meta: { title: "东师风貌" },
-    component: () =>
-      import(/* webpackChunkName: "scence" */ "@/views/scence/Scence.vue"),
-  },
-  {
-    path: "/scence/benbu",
-    name: "benbuScence",
-    meta: { title: "本部风貌" },
-    component: () =>
-      import(/* webpackChunkName: "scence" */ "@/views/scence/Benbu.vue"),
-  },
-  {
-    path: "/scence/jingyue",
-    name: "jingyueScence",
-    meta: { title: "净月风貌" },
-    component: () =>
-      import(/* webpackChunkName: "scence" */ "@/views/scence/Jingyue.vue"),
-  },
-  {
-    path: "/intro/studentUnion",
-    name: "su",
-    meta: { title: "校学生会简介" },
-    component: () =>
-      import(/* webpackChunkName: "about" */ "@/views/about/SU.vue"),
-  },
-  {
-    path: "/intro/department",
-    name: "department",
-    meta: { title: "校学生会部门简介" },
-    component: () =>
-      import(/* webpackChunkName: "about" */ "@/views/about/Department.vue"),
-  },
-  {
-    path: "/about",
-    name: "about",
-    meta: { title: "关于我们" },
-    component: () =>
-      import(/* webpackChunkName: "about" */ "@/views/about/About.vue"),
-  },
-  {
-    path: "/about/Mr-Hope",
-    name: "mrhope",
-    meta: { title: "Mr.Hope简介" },
-    component: () =>
-      import(/* webpackChunkName: "about" */ "@/views/about/MrHope.vue"),
-  },
-  {
-    path: "/about/question",
-    name: "question",
-    meta: { title: "其他问题" },
-    component: () =>
-      import(/* webpackChunkName: "about" */ "@/views/about/Question.vue"),
-  },
-  {
-    path: "*",
-    name: "404",
-    meta: { title: "未找到界面" },
-    component: Page404,
-  },
+// 2. 定义一些路由
+// 每个路由都需要映射到一个组件。
+// 我们后面再讨论嵌套路由。
+const routes = [
+  { path: "/", component: Home },
+  { path: "/about", component: About },
 ];
 
-export default route;
+// 3. 创建路由实例并传递 `routes` 配置
+// 你可以在这里输入更多的配置，但我们在这里
+// 暂时保持简单
+const router = VueRouter.createRouter({
+  // 4. 内部提供了 history 模式的实现。为了简单起见，我们在这里使用 hash 模式。
+  history: VueRouter.createWebHashHistory(),
+  routes, // `routes: routes` 的缩写
+});
+
+// 5. 创建并挂载根实例
+const app = Vue.createApp({});
+//确保 _use_ 路由实例使
+//整个应用支持路由。
+app.use(router);
+
+app.mount("#app");
+
+// 现在，应用已经启动了！
 ```
 
 ## 导航
@@ -302,23 +135,4 @@ export default route;
   router.go(100);
   ```
 
-在使用 Vue-cli 构建的项目中，在组件内部访问 `this.$router` 即是路由管理器对象。
-
-如:
-
-```xml
-<template>
-  <h1 @click='navigate'>张伯望很帅</h1>
-</template>
-<script>
-  export default{
-    methods:{
-      navigate(){
-        this.$router.push('/zhang/is/handsome');
-        }
-    }
-  }
-</script>
-```
-
-编程式导航对动态导航是十分有用的，比如需要根据不同人的名字导航到不同界面，这个时候就可以通过在 js 中进行字符串处理，再使用 `router.push` 函数导航到相应界面。
+编程式导航对动态导航是十分有用的，比如需要根据不同人的名字导航到不同界面，这个时候就可以动态生成路由，再使用 `router.push` 函数导航到相应界面。
