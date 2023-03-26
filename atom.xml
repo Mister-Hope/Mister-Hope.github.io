@@ -5,10 +5,11 @@
   <subtitle>Where there is light, there is hope.</subtitle>
   <icon>https://mrhope.site/favicon.ico</icon>
   <rights>基于 MIT 协议，© 2019-至今 Mr.Hope</rights>
-  <updated>2023-03-24T15:04:51.206Z</updated>
+  <updated>2023-03-26T09:09:47.879Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mrhope.site/atom.xml"/>
   <link rel="alternate" href="https://mrhope.site/"/>
+  <category term="Vue"/>
   <category term="Android"/>
   <category term="快速上手"/>
   <category term="HTML"/>
@@ -38,7 +39,6 @@
   <category term="Python"/>
   <category term="TypeScript"/>
   <category term="YAML"/>
-  <category term="Vue"/>
   <category term="CSS"/>
   <category term="Emmet"/>
   <contributor>
@@ -53,6 +53,356 @@
   <contributor>
     <name>廖雪峰</name>
   </contributor>
+  <entry>
+    <title type="text">创建 Vue 应用</title>
+    <id>https://mrhope.site/code/vue/core/app.html</id>
+    <link href="https://mrhope.site/code/vue/core/app.html"/>
+    <updated>2023-03-26T08:23:30.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 应用实例</h2>
+<p>每个 Vue 应用都是通过 <code>createApp</code> 函数创建一个新的<strong>应用实例</strong>：</p>
+<div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createApp <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"vue"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">createApp</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token comment">/* 根组件选项 */</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div>]]></summary>
+    <content type="html"><![CDATA[<h2> 应用实例</h2>
+<p>每个 Vue 应用都是通过 <code>createApp</code> 函数创建一个新的<strong>应用实例</strong>：</p>
+<div class="language-javascript" data-ext="js"></div><h2> 根组件</h2>
+<p>我们传入 <code>createApp</code> 的对象实际上是一个组件，每个应用都需要一个“根组件”，其他组件将作为其子组件。</p>
+<p>如果你使用的是单文件组件，我们可以直接从另一个文件中导入根组件。</p>
+<div class="language-javascript" data-ext="js"></div><p>虽然许多示例只需要一个组件，但大多数真实的应用都是由一棵嵌套的、可重用的组件树组成的。例如，一个待办事项 (Todos) 应用的组件树可能是这样的：</p>
+<div class="language-text" data-ext="text"></div><h2> 挂载应用</h2>
+<p>应用实例必须在调用了 <code>.mount()</code> 方法后才会渲染出来。该方法接收一个“容器”参数，可以是一个实际的 DOM 元素或是一个 CSS 选择器字符串：</p>
+<div class="language-html" data-ext="html"></div><div class="language-javascript" data-ext="js"></div><p>应用根组件的内容将会被渲染在容器元素里面。容器元素自己将不会被视为应用的一部分。</p>
+<p><code>.mount()</code> 方法应该始终在整个应用配置和资源注册完成后被调用。同时请注意，不同于其他资源注册方法，它的返回值是根组件实例而非应用实例。</p>
+<h3> DOM 中的根组件模板</h3>
+<p>当在未采用构建流程的情况下使用 Vue 时，我们可以在挂载容器中直接书写根组件模板：</p>
+<div class="language-html" data-ext="html"></div><div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>当根组件没有设置 <code>template</code> 选项时，Vue 将自动使用容器的 <code>innerHTML</code> 作为模板。</p>
+</div>
+<h2> 应用配置</h2>
+<p>应用实例会暴露一个 <code>.config</code> 对象允许我们配置一些应用级的选项，例如定义一个应用级的错误处理器，用来捕获所有子组件上的错误：</p>
+<div class="language-javascript" data-ext="js"></div><p>应用实例还提供了一些方法来注册应用范围内可用的资源，例如注册一个组件：</p>
+<div class="language-javascript" data-ext="js"></div><p>这使得 <code>TodoDeleteButton</code> 在应用的任何地方都是可用的。</p>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
+<p>确保在挂载应用实例之前完成所有应用配置！</p>
+</div>
+<h2> 多个应用实例</h2>
+<p>应用实例并不只限于一个。<code>createApp</code> API 允许你在同一个页面中创建多个共存的 Vue 应用，而且每个应用都拥有自己的用于配置和全局资源的作用域。</p>
+<div class="language-javascript" data-ext="js"></div><p>如果你正在使用 Vue 来增强服务端渲染 HTML，并且只想要 Vue 去控制一个大型页面中特殊的一小部分，应避免将一个单独的 Vue 应用实例挂载到整个页面上，而是应该创建多个小的应用实例，将它们分别挂载到所需的元素上去。</p>
+]]></content>
+    <published>2023-03-26T08:23:30.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">快速上手 Vue.js</title>
+    <id>https://mrhope.site/code/vue/core/get-started.html</id>
+    <link href="https://mrhope.site/code/vue/core/get-started.html"/>
+    <updated>2023-03-26T08:23:30.000Z</updated>
+    <summary type="html"><![CDATA[<h2> Vue.js 是什么</h2>
+<h2> 起步</h2>
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>您应当已了解关于 HTML、CSS 和 JavaScript 的中级知识。</p>
+</div>
+<p><a href="https://cn.vuejs.org/guide/quick-start.html" target="_blank" rel="noopener noreferrer">安装</a></p>
+<p>尝试 Vue.js 最简单的方法是使用 <a href="https://sfc.vuejs.org/" target="_blank" rel="noopener noreferrer">SFC Playground</a>。您可以在浏览器新标签页中打开它，跟着例子自己进行一些尝试。</p>]]></summary>
+    <content type="html"><![CDATA[<h2> Vue.js 是什么</h2>
+<h2> 起步</h2>
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>您应当已了解关于 HTML、CSS 和 JavaScript 的中级知识。</p>
+</div>
+<p><a href="https://cn.vuejs.org/guide/quick-start.html" target="_blank" rel="noopener noreferrer">安装</a></p>
+<p>尝试 Vue.js 最简单的方法是使用 <a href="https://sfc.vuejs.org/" target="_blank" rel="noopener noreferrer">SFC Playground</a>。您可以在浏览器新标签页中打开它，跟着例子自己进行一些尝试。</p>
+<p>当然，由于大多数浏览器都支持 ES Module，你可以直接导入 Vue:</p>
+<div class="language-html line-numbers-mode" data-ext="html"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container warning">
+<p class="hint-container-title">注意</p>
+<p><code>vue-cli</code> 已经过时，不建议在新项目中使用，请使用 <code>vite</code></p>
+</div>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
+<p>Mr.Hope <strong>不推荐</strong> 新手直接使用 <code>vite</code> 或者 <code>webpack</code> 之类的 Bundler 进行上手，尤其是在您不熟悉基于 Node.js 的构建工具的情况下。</p>
+<p>请使用 CDN 的方式引入 Vue，并充分熟悉 Vue 的基础知识后再引入 Bundler。</p>
+</div>
+]]></content>
+    <category term="Vue"/>
+    <published>2023-03-26T08:23:30.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">开发环境安装</title>
+    <id>https://mrhope.site/code/vue/core/install.html</id>
+    <link href="https://mrhope.site/code/vue/core/install.html"/>
+    <updated>2023-03-26T08:23:30.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 环境准备</h2>
+<h3> VS Code 安装</h3>
+<ul>
+<li><a href="/software/vscode/install.html" target="blank">安装 VS Code</a></li>
+</ul>
+<h4> 开发指南</h4>
+<ol>
+<li>
+<p>使用 VS Code 打开项目文件夹。</p>
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>请打开 VS Code 选择菜单栏中的 “文件-打开文件夹”，或在文件夹上 “右键——使用 VS Code 打开” 或在文件夹内部空白处 “右键——使用 VS Code 打开”。</p>
+</div>
+</li>
+<li>
+<p>打开终端(快捷键 <code>Ctrl + `</code> )。</p>
+</li>
+<li>
+<p>在终端中输入相关指令即可执行相关功能。</p>
+</li>
+</ol>]]></summary>
+    <content type="html"><![CDATA[<h2> 环境准备</h2>
+<h3> VS Code 安装</h3>
+<ul>
+<li><a href="/software/vscode/install.html" target="blank">安装 VS Code</a></li>
+</ul>
+<h4> 开发指南</h4>
+<ol>
+<li>
+<p>使用 VS Code 打开项目文件夹。</p>
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>请打开 VS Code 选择菜单栏中的 “文件-打开文件夹”，或在文件夹上 “右键——使用 VS Code 打开” 或在文件夹内部空白处 “右键——使用 VS Code 打开”。</p>
+</div>
+</li>
+<li>
+<p>打开终端(快捷键 <code>Ctrl + `</code> )。</p>
+</li>
+<li>
+<p>在终端中输入相关指令即可执行相关功能。</p>
+</li>
+</ol>
+<h3> Git 安装</h3>
+<ul>
+<li><a href="/software/git/install.html" target="blank">安装 Git</a></li>
+</ul>
+<h3> Node.js 环境安装</h3>
+<p>请先安装 Node.js 并将 npm 与 Node.js 添加至 path。</p>
+<ul>
+<li>
+<p><a href="/code/node-js/install.html" target="blank">安装 Node.js</a></p>
+</li>
+<li>
+<p><a href="/code/windows/env-variable.html" target="blank">添加到 path</a></p>
+</li>
+</ul>
+<h2> 开发工具安装</h2>
+<p>Vue 官方提供的浏览器插件 Vue.js devtools 可以更好的帮助开发。</p>
+<ul>
+<li>用 Chrome 通过代理打开 <a href="https://chrome.google.com/webstore/detail/nhdogjmejiglipccpnnnanhbledajbpd" target="_blank" rel="noopener noreferrer">Vue.js devtools 网址</a>，安装 Vue.js devtools 开发工具</li>
+<li>使用 Edge 打开 <a href="https://microsoftedge.microsoft.com/addons/detail/vuejs-devtools/olofadcdnkkjdfgjcmjaadnlehnnihnl?hl=zh-CN" target="_blank" rel="noopener noreferrer">Vue.js devtools 网址</a>，安装 Vue.js devtools 开发工具</li>
+</ul>
+]]></content>
+    <category term="Vue"/>
+    <published>2023-03-26T08:23:30.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">Vue 单文件组件</title>
+    <id>https://mrhope.site/code/vue/core/sfc.html</id>
+    <link href="https://mrhope.site/code/vue/core/sfc.html"/>
+    <updated>2023-03-26T08:23:30.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 介绍</h2>
+<p>Vue 的单文件组件 (即 <code>*.vue</code> 文件，简称 <strong>SFC</strong>) 是一种特殊的文件格式，使我们能够将一个 Vue 组件的模板、逻辑与样式封装在单个文件中。下面是一个单文件组件的示例：</p>
+<div class="language-vue line-numbers-mode" data-ext="vue"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">greeting</span><span class="token operator">:</span> <span class="token string">"Hello World!"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>greeting<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>{{ greeting }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token selector">.greeting</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
+    <content type="html"><![CDATA[<h2> 介绍</h2>
+<p>Vue 的单文件组件 (即 <code>*.vue</code> 文件，简称 <strong>SFC</strong>) 是一种特殊的文件格式，使我们能够将一个 Vue 组件的模板、逻辑与样式封装在单个文件中。下面是一个单文件组件的示例：</p>
+<div class="language-vue line-numbers-mode" data-ext="vue"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如你所见，Vue 的单文件组件是 HTML、CSS 和 JavaScript 三种元素的自然延伸。<code>&lt;template&gt;</code>、<code>&lt;script&gt;</code> 和 <code>&lt;style&gt;</code> 三个块在同一个文件中封装、组合了组件的视图、逻辑和样式。</p>
+<h2> 总览</h2>
+<h2> 总览 {#overview}</h2>
+<p>一个 Vue 单文件组件 (SFC)，通常使用 <code>*.vue</code> 作为文件扩展名，它是一种使用了类似 HTML 语法的自定义文件格式，用于定义 Vue 组件。一个 Vue 单文件组件在语法上是兼容 HTML 的。</p>
+<p>每一个 <code>*.vue</code> 文件都由三种顶层语块构成：<code>&lt;template&gt;</code>、<code>&lt;script&gt;</code> 和 <code>&lt;style&gt;</code>，以及一些其他的自定义块：</p>
+<div class="language-vue line-numbers-mode" data-ext="vue"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 相应语言块 {#language-blocks}</h2>
+<h3> <code>&lt;template&gt;</code> {#template}</h3>
+<ul>
+<li>
+<p>每个 <code>*.vue</code> 文件最多可以包含一个顶层 <code>&lt;template&gt;</code> 块。</p>
+</li>
+<li>
+<p>语块包裹的内容将会被提取、传递给 <code>@vue/compiler-dom</code>，预编译为 JavaScript 渲染函数，并附在导出的组件上作为其 <code>render</code> 选项。</p>
+</li>
+</ul>
+<h3> <code>&lt;script&gt;</code> {#script}</h3>
+<ul>
+<li>
+<p>每个 <code>*.vue</code> 文件最多可以包含一个 <code>&lt;script&gt;</code> 块。(使用 <a href="/api/sfc-script-setup.html" target="blank"><code>&lt;script setup&gt;</code></a> 的情况除外)</p>
+</li>
+<li>
+<p>这个脚本代码块将作为 ES 模块执行。</p>
+</li>
+<li>
+<p><strong>默认导出</strong>应该是 Vue 的组件选项对象，可以是一个对象字面量或是 <a href="/api/general.html#definecomponent" target="blank">defineComponent</a> 函数的返回值。</p>
+</li>
+</ul>
+<h3> <code>&lt;script setup&gt;</code> {#script-setup}</h3>
+<ul>
+<li>
+<p>每个 <code>*.vue</code> 文件最多可以包含一个 <code>&lt;script setup&gt;</code>。(不包括一般的 <code>&lt;script&gt;</code>)</p>
+</li>
+<li>
+<p>这个脚本块将被预处理为组件的 <code>setup()</code> 函数，这意味着它将<strong>为每一个组件实例</strong>都执行。<code>&lt;script setup&gt;</code> 中的顶层绑定都将自动暴露给模板。要了解更多细节，请看 <a href="/api/sfc-script-setup"><code>&lt;script setup&gt;</code> 的专门文档</a>。</p>
+</li>
+</ul>
+<h3> <code>&lt;style&gt;</code> {#style}</h3>
+<ul>
+<li>
+<p>每个 <code>*.vue</code> 文件可以包含多个 <code>&lt;style&gt;</code> 标签。</p>
+</li>
+<li>
+<p>一个 <code>&lt;style&gt;</code> 标签可以使用 <code>scoped</code> 或 <code>module</code> attribute (查看 <a href="/api/sfc-css-features">SFC 样式功能</a>了解更多细节) 来帮助封装当前组件的样式。使用了不同封装模式的多个 <code>&lt;style&gt;</code> 标签可以被混合入同一个组件。</p>
+</li>
+</ul>
+<h3> 自定义块 {#custom-blocks}</h3>
+<p>在一个 <code>*.vue</code> 文件中可以为任何项目特定需求使用额外的自定义块。举个例子，一个用作写文档的 <code>&lt;docs&gt;</code> 块。这里是一些自定义块的真实用例：</p>
+<ul>
+<li><a href="https://gridsome.org/docs/querying-data/" target="_blank" rel="noopener noreferrer">Gridsome：<code>&lt;page-query&gt;</code></a></li>
+<li><a href="https://github.com/wheatjs/vite-plugin-vue-gql" target="_blank" rel="noopener noreferrer">vite-plugin-vue-gql：<code>&lt;gql&gt;</code></a></li>
+<li><a href="https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n#i18n-custom-block" target="_blank" rel="noopener noreferrer">vue-i18n：<code>&lt;i18n&gt;</code></a></li>
+</ul>
+<p>自定义块的处理需要依赖工具链。如果你想要在构建中集成你的自定义语块，请参见<a href="/guide/scaling-up/tooling.html#sfc-custom-block-integrations" target="blank">相关工具链指南</a>获取更多细节。</p>
+<h2> 自动名称推导 {#automatic-name-inference}</h2>
+<p>SFC 在以下场景中会根据<strong>文件名</strong>自动推导其组件名：</p>
+<ul>
+<li>开发警告信息格式</li>
+<li>DevTools 审阅</li>
+<li>递归组件自引用。例如一个名为 <code>FooBar.vue</code> 的组件可以在模板中通过 <code>&lt;FooBar/&gt;</code> 引用自己。(同名情况下) 这比明确注册/导入的组件优先级低。</li>
+</ul>
+<h2> 预处理器 {#pre-processors}</h2>
+<p>代码块可以使用 <code>lang</code> 这个 attribute 来声明预处理器语言，最常见的用例就是对 <code>&lt;script&gt;</code> 块使用 TypeScript：</p>
+<div class="language-vue-html" data-ext="vue-html"></div><p><code>lang</code> 在任意块上都能使用，比如我们可以在 <code>&lt;style&gt;</code> 标签上使用 <a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer">SASS</a> 或是 <code>&lt;template&gt;</code> 上使用 <a href="https://pugjs.org/api/getting-started.html" target="_blank" rel="noopener noreferrer">Pug</a>：</p>
+<div class="language-vue-html line-numbers-mode" data-ext="vue-html"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>注意对各种不同的预处理的集成会导致工具链的不同，你应该查看相应的工具链文档了解细节：</p>
+<ul>
+<li><a href="https://vitejs.dev/guide/features.html#css-pre-processors" target="_blank" rel="noopener noreferrer">Vite</a></li>
+<li><a href="https://cli.vuejs.org/guide/css.html#pre-processors" target="_blank" rel="noopener noreferrer">Vue CLI</a></li>
+<li><a href="https://vue-loader.vuejs.org/guide/pre-processors.html#using-pre-processors" target="_blank" rel="noopener noreferrer">webpack + vue-loader</a></li>
+</ul>
+<h2> Src 导入 {#src-imports}</h2>
+<p>如果你更喜欢将 <code>*.vue</code> 组件分散到多个文件中，可以为一个语块使用 <code>src</code> 这个 attribute 来导入一个外部文件：</p>
+<div class="language-vue" data-ext="vue"></div><p>请注意 <code>src</code> 导入和 Webpack 的模块请求遵循相同的路径解析规则，这意味着：</p>
+<ul>
+<li>相对路径需要以 <code>./</code> 开头</li>
+<li>你也可以从 npm 依赖中导入资源</li>
+</ul>
+<div class="language-vue" data-ext="vue"></div><p><code>src</code> 导入对自定义语块也同样适用：</p>
+<div class="language-vue" data-ext="vue"></div><h2> 注释 {#comments}</h2>
+<p>在每一个语块中你都可以按照相应语言 (HTML、CSS、JavaScript 和 Pug 等等) 的语法书写注释。对于顶层注释，请使用 HTML 的注释语法 <code>&lt;!-- comment contents here --&gt;</code></p>
+]]></content>
+    <category term="Vue"/>
+    <published>2023-03-26T08:23:30.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">模板语法</title>
+    <id>https://mrhope.site/code/vue/core/template.html</id>
+    <link href="https://mrhope.site/code/vue/core/template.html"/>
+    <updated>2023-03-26T09:00:26.000Z</updated>
+    <summary type="html"><![CDATA[<p>Vue 使用一种基于 HTML 的模板语法，使我们能够声明式地将其组件实例的数据绑定到呈现的 DOM 上。所有的 Vue 模板都是语法层面合法的 HTML，可以被符合规范的浏览器和 HTML 解析器解析。</p>
+<p>在底层机制中，Vue 会将模板编译成高度优化的 JavaScript 代码。结合响应式系统，当应用状态变更时，Vue 能够智能地推导出需要重新渲染的组件的最少数量，并应用最少的 DOM 操作。</p>
+<p>如果你对虚拟 DOM 的概念比较熟悉，并且偏好直接使用 JavaScript，你也可以结合可选的 JSX 支持直接手写渲染函数而不采用模板。但请注意，这将不会享受到和模板同等级别的编译时优化。</p>]]></summary>
+    <content type="html"><![CDATA[<p>Vue 使用一种基于 HTML 的模板语法，使我们能够声明式地将其组件实例的数据绑定到呈现的 DOM 上。所有的 Vue 模板都是语法层面合法的 HTML，可以被符合规范的浏览器和 HTML 解析器解析。</p>
+<p>在底层机制中，Vue 会将模板编译成高度优化的 JavaScript 代码。结合响应式系统，当应用状态变更时，Vue 能够智能地推导出需要重新渲染的组件的最少数量，并应用最少的 DOM 操作。</p>
+<p>如果你对虚拟 DOM 的概念比较熟悉，并且偏好直接使用 JavaScript，你也可以结合可选的 JSX 支持直接手写渲染函数而不采用模板。但请注意，这将不会享受到和模板同等级别的编译时优化。</p>
+<h2> 文本插值</h2>
+<p>最基本的数据绑定形式是文本插值，它使用的是“Mustache”语法 (即双大括号)：</p>
+<div class="language-template" data-ext="template"></div><p>双大括号标签会被替换为相应组件实例中 <code>msg</code> 属性的值。同时每次 <code>msg</code> 属性更改时它也会同步更新。</p>
+<h2> 原始 HTML</h2>
+<p>双大括号会将数据解释为纯文本，而不是 HTML。若想插入 HTML，你需要使用 <code>v-html</code> 指令：</p>
+<div class="language-template" data-ext="template"></div><p>Using text interpolation: {{ rawHtml }}</p>
+<p>Using v-html directive: <span v-html="rawHtml"></span></p>
+<p>这里我们遇到了一个新的概念。这里看到的 <code>v-html</code> attribute 被称为一个指令。指令由 <code>v-</code> 作为前缀，表明它们是一些由 Vue 提供的特殊 attribute，你可能已经猜到了，它们将为渲染的 DOM 应用特殊的响应式行为。这里我们做的事情简单来说就是：在当前组件实例上，将此元素的 innerHTML 与 <code>rawHtml</code> 属性保持同步。</p>
+<p><code>span</code> 的内容将会被替换为 <code>rawHtml</code> 属性的值，插值为纯 HTML——数据绑定将会被忽略。</p>
+<div class="hint-container note">
+<p class="hint-container-title">注</p>
+<p>你不能使用 <code>v-html</code> 来拼接组合模板，因为 Vue 不是一个基于字符串的模板引擎。在使用 Vue 时，应当使用组件作为 UI 重用和组合的基本单元。</p>
+</div>
+<div class="hint-container warning">
+<p class="hint-container-title">安全警告</p>
+<p>在网站上动态渲染任意 HTML 是非常危险的，因为这非常容易造成 XSS 漏洞。请仅在内容安全可信时再使用 <code>v-html</code>，并且永远不要使用用户提供的 HTML 内容。</p>
+</div>
+<h2> Attribute 绑定</h2>
+<p>双大括号不能在 HTML attributes 中使用。想要响应式地绑定一个 attribute，应该使用 <code>v-bind</code> 指令：</p>
+<div class="language-template" data-ext="template"></div><p><code>v-bind</code> 指令指示 Vue 将元素的 <code>id</code> attribute 与组件的 <code>dynamicId</code> 属性保持一致。如果绑定的值是 <code>null</code> 或者 <code>undefined</code>，那么该 attribute 将会从渲染的元素上移除。</p>
+<h3> 简写</h3>
+<p>因为 <code>v-bind</code> 非常常用，我们提供了特定的简写语法：</p>
+<div class="language-template" data-ext="template"></div><p>开头为 <code>:</code> 的 attribute 可能和一般的 HTML attribute 看起来不太一样，但它的确是合法的 attribute 名称字符，并且所有支持 Vue 的浏览器都能正确解析它。此外，他们不会出现在最终渲染的 DOM 中。简写语法是可选的，但相信在你了解了它更多的用处后，你应该会更喜欢它。</p>
+<p>接下来的指引中，我们都将在示例中使用简写语法，因为这是在实际开发中更常见的用法。</p>
+<h3> 布尔型 Attribute</h3>
+<p>布尔型 attribute 依据 true / false 值来决定 attribute 是否应该存在于该元素上。disabled 就是最常见的例子之一。</p>
+<p><code>v-bind</code> 在这种场景下的行为略有不同：</p>
+<div class="language-template" data-ext="template"></div><p>当 <code>isButtonDisabled</code> 为真值或一个空字符串 (即 <code>&lt;button disabled=""&gt;</code>) 时，元素会包含这个 <code>disabled</code> attribute。而当其为其他假值时 attribute 将被忽略。</p>
+<h3> 动态绑定多个值</h3>
+<p>如果你有像这样的一个包含多个 attribute 的 JavaScript 对象：</p>
+<div class="language-javascript" data-ext="js"></div><p>通过不带参数的 <code>v-bind</code>，你可以将它们绑定到单个元素上：</p>
+<div class="language-template" data-ext="template"></div><h2> 使用 JavaScript 表达式</h2>
+<p>至此，我们仅在模板中绑定了一些简单的属性名。但是 Vue 实际上在所有的数据绑定中都支持完整的 JavaScript 表达式：</p>
+<div class="language-template" data-ext="template"></div><p>这些表达式都会被作为 JavaScript ，以当前组件实例为作用域解析执行。</p>
+<p>在 Vue 模板内，JavaScript 表达式可以被使用在如下场景上：</p>
+<ul>
+<li>在文本插值中 (双大括号)</li>
+<li>在任何 Vue 指令 (以 v- 开头的特殊 attribute) attribute 的值中</li>
+</ul>
+<h3> 仅支持表达式</h3>
+<p>每个绑定仅支持单一表达式，也就是一段能够被求值的 JavaScript 代码。一个简单的判断方法是是否可以合法地写在 return 后面。</p>
+<p>因此，下面的例子都是无效的：</p>
+<div class="language-template" data-ext="template"></div><h3> 调用函数</h3>
+<p>可以在绑定的表达式中使用一个组件暴露的方法：</p>
+<div class="language-template" data-ext="template"></div><div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>绑定在表达式中的方法在组件每次更新时都会被重新调用，因此不应该产生任何副作用，比如改变数据或触发异步操作。</p>
+</div>
+<h3> 受限的全局访问</h3>
+<p>模板中的表达式将被沙盒化，仅能够访问到有限的全局对象列表。该列表中会暴露常用的内置全局对象，比如 <code>Math</code> 和 <code>Date</code>。</p>
+<p>没有显式包含在列表中的全局对象将不能在模板内表达式中访问，例如用户附加在 window 上的属性。然而，你也可以自行在 <code>app.config.globalProperties</code> 上显式地添加它们，供所有的 Vue 表达式使用。</p>
+<h2> 指令 Directives</h2>
+<p>指令是带有 <code>v-</code> 前缀的特殊 attribute。Vue 提供了许多内置指令，包括上面我们所介绍的 <code>v-bind</code> 和 <code>v-html</code>。</p>
+<p>指令 attribute 的期望值为一个 JavaScript 表达式 (除了少数几个例外，即之后要讨论到的 <code>v-for</code>、<code>v-on</code> 和 <code>v-slot</code>)。一个指令的任务是在其表达式的值变化时响应式地更新 DOM。以 <code>v-if</code> 为例：</p>
+<div class="language-template" data-ext="template"></div><p>这里，v-if 指令会基于表达式 seen 的值的真假来移除/插入该 <code>&lt;p&gt;</code> 元素。</p>
+<h3> 参数 Arguments</h3>
+<p>某些指令会需要一个“参数”，在指令名后通过一个冒号隔开做标识。例如用 <code>v-bind</code> 指令来响应式地更新一个 HTML attribute：</p>
+<div class="language-template" data-ext="template"></div><p>这里 href 就是一个参数，它告诉 <code>v-bind</code> 指令将表达式 url 的值绑定到元素的 <code>href</code> attribute 上。在简写中，参数前的一切 (例如 <code>v-bind:</code>) 都会被缩略为一个 <code>:</code> 字符。</p>
+<p>另一个例子是 <code>v-on</code> 指令，它将监听 DOM 事件：</p>
+<div class="language-template" data-ext="template"></div><p>这里的参数是要监听的事件名称：<code>click</code>。<code>v-on</code> 有一个相应的缩写，即 <code>@</code> 字符。</p>
+<h3> 动态参数</h3>
+<p>同样在指令参数上也可以使用一个 JavaScript 表达式，需要包含在一对方括号内：</p>
+<div class="language-template" data-ext="template"></div><p>这里的 <code>attributeName</code> 会作为一个 JavaScript 表达式被动态执行，计算得到的值会被用作最终的参数。举例来说，如果你的组件实例有一个数据属性 <code>attributeName</code>，其值为 <code>"href"</code>，那么这个绑定就等价于 <code>v-bind:href</code>。</p>
+<p>相似地，你还可以将一个函数绑定到动态的事件名称上：</p>
+<div class="language-template" data-ext="template"></div><p>在此示例中，当 <code>eventName</code> 的值是 <code>"focus"</code> 时，<code>v-on:[eventName]</code> 就等价于 <code>v-on:focus</code>。</p>
+<h3> 动态参数值的限制</h3>
+<p>动态参数中表达式的值应当是一个字符串，或者是 null。特殊值 null 意为显式移除该绑定。其他非字符串的值会触发警告。</p>
+<h3> 动态参数语法的限制</h3>
+<p>动态参数表达式因为某些字符的缘故有一些语法限制，比如空格和引号，在 HTML attribute 名称中都是不合法的。例如下面的示例：</p>
+<div class="language-template" data-ext="template"></div><p>如果你需要传入一个复杂的动态参数，我们推荐使用计算属性替换复杂的表达式，也是 Vue 最基础的概念之一。</p>
+<p>当使用 DOM 内嵌模板 (直接写在 HTML 文件里的模板) 时，我们需要避免在名称中使用大写字母，因为浏览器会强制将其转换为小写：</p>
+<div class="language-template" data-ext="template"></div><p>上面的例子将会在 DOM 内嵌模板中被转换为 <code>:[someattr]</code>。如果你的组件拥有 “someAttr” 属性而非 “someattr”，这段代码将不会工作。单文件组件内的模板不受此限制。</p>
+<h3> 修饰符 Modifiers</h3>
+<p>修饰符是以点开头的特殊后缀，表明指令需要以一些特殊的方式被绑定。例如 <code>.prevent</code> 修饰符会告知 <code>v-on</code> 指令对触发的事件调用 <code>event.preventDefault()</code>：</p>
+<div class="language-template" data-ext="template"></div>]]></content>
+    <published>2023-03-26T08:23:30.000Z</published>
+  </entry>
   <entry>
     <title type="text">应用基础知识</title>
     <id>https://mrhope.site/code/android/base.html</id>
@@ -2859,66 +3209,47 @@ memory=8GB
     <title type="text">Vue.js</title>
     <id>https://mrhope.site/code/vue/</id>
     <link href="https://mrhope.site/code/vue/"/>
-    <updated>2022-06-14T04:47:46.000Z</updated>
-    <summary type="html"><![CDATA[<p>Vue.js 是世界上主流的前端框架。</p>
-<p>官方介绍为：渐近式 JavaScript 框架。一款用于构建 Web 界面，易学易用，性能出色且功能丰富的框架。</p>
+    <updated>2023-03-26T08:23:30.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 简介</h2>
+<p>Vue (发音为 /vjuː/，类似 view) 是一款用于构建用户界面的 JavaScript 框架。它基于标准 HTML、CSS 和 JavaScript 构建，并提供了一套声明式的、组件化的编程模型，帮助你高效地开发用户界面。无论是简单还是复杂的界面，Vue 都可以胜任。</p>
+<h2> 渐进式框架</h2>
+<p>Vue 是一个框架，也是一个生态。其功能覆盖了大部分前端开发常见的需求。但 Web 世界是十分多样化的，不同的开发者在 Web 上构建的东西可能在形式和规模上会有很大的不同。考虑到这一点，Vue 的设计非常注重灵活性和“可以被逐步集成”这个特点。根据你的需求场景，你可以用不同的方式使用 Vue：</p>]]></summary>
+    <content type="html"><![CDATA[<h2> 简介</h2>
+<p>Vue (发音为 /vjuː/，类似 view) 是一款用于构建用户界面的 JavaScript 框架。它基于标准 HTML、CSS 和 JavaScript 构建，并提供了一套声明式的、组件化的编程模型，帮助你高效地开发用户界面。无论是简单还是复杂的界面，Vue 都可以胜任。</p>
+<h2> 渐进式框架</h2>
+<p>Vue 是一个框架，也是一个生态。其功能覆盖了大部分前端开发常见的需求。但 Web 世界是十分多样化的，不同的开发者在 Web 上构建的东西可能在形式和规模上会有很大的不同。考虑到这一点，Vue 的设计非常注重灵活性和“可以被逐步集成”这个特点。根据你的需求场景，你可以用不同的方式使用 Vue：</p>
+<ul>
+<li>无需构建步骤，渐进式增强静态的 HTML</li>
+<li>在任何页面中作为 Web Components 嵌入</li>
+<li>单页应用 (SPA)</li>
+<li>全栈 / 服务端渲染 (SSR)</li>
+<li>Jamstack / 静态站点生成 (SSG)</li>
+<li>开发桌面端、移动端、WebGL，甚至是命令行终端中的界面</li>
+</ul>
 <h2> Vue.js 教程目录</h2>
 <ul>
 <li>
-<p><a href="/code/vue/install.html" target="blank">开发环境安装</a></p>
+<p><a href="/code/vue/core/install.html" target="blank">开发环境安装</a></p>
 </li>
 <li>
-<p><a href="/code/vue/get-started.html" target="blank">起步上手</a></p>
+<p><a href="/code/vue/core/get-started.html" target="blank">起步上手</a></p>
 </li>
 <li>
-<p><a href="/code/vue/vue.html" target="blank">Vue 单文件组件说明</a></p>
-</li>
-</ul>]]></summary>
-    <content type="html"><![CDATA[<p>Vue.js 是世界上主流的前端框架。</p>
-<p>官方介绍为：渐近式 JavaScript 框架。一款用于构建 Web 界面，易学易用，性能出色且功能丰富的框架。</p>
-<h2> Vue.js 教程目录</h2>
-<ul>
-<li>
-<p><a href="/code/vue/install.html" target="blank">开发环境安装</a></p>
+<p><a href="/code/vue/core/app.html" target="blank">创建 Vue 应用</a></p>
 </li>
 <li>
-<p><a href="/code/vue/get-started.html" target="blank">起步上手</a></p>
+<p><a href="/code/vue/core/template.html" target="blank">模板语法</a></p>
 </li>
 <li>
-<p><a href="/code/vue/vue.html" target="blank">Vue 单文件组件说明</a></p>
+<p><a href="/code/vue/core/sfc.html" target="blank">Vue 单文件组件说明</a></p>
 </li>
 </ul>
 <h2> Vue 生态</h2>
 <h3> Vue Router</h3>
 <ul>
-<li>
-<p><a href="/code/vue/router/" target="blank">Vue Router 讲解</a></p>
-</li>
-<li>
-<p><a href="/code/vue/router/demo.html" target="blank">Vue Router Demo</a></p>
-</li>
+<li><a href="/code/vue/router/" target="blank">Vue Router 概述</a></li>
 </ul>
-<h3> Vuex</h3>
-<ul>
-<li>
-<p><a href="/code/vue/vuex/" target="blank">Vuex 讲解</a></p>
-</li>
-<li>
-<p><a href="/code/vue/vuex/demo.html" target="blank">Vuex Demo</a></p>
-</li>
-</ul>
-<h3> Vue Cli</h3>
-<ul>
-<li>
-<p><a href="/code/vue/cli/intro.html" target="blank">Vue Cli 介绍</a></p>
-</li>
-<li>
-<p><a href="/code/vue/cli/quick-dev.html" target="blank">使用 Vue Cli 进行快速开发</a></p>
-</li>
-<li>
-<p><a href="/code/vue/cli/file.html" target="blank">Vue Cli 文件处理</a></p>
-</li>
-</ul>
+<!-- TODO: Add pinia and vite -->
 <h3> 其他 Vue 生态</h3>
 <ul>
 <li><a href="https://vuepress-theme-hope.github.io/basic/vuepress/" target="_blank" rel="noopener noreferrer">VuePress</a>: 静态站点生成器；</li>
@@ -2928,19 +3259,10 @@ memory=8GB
 <h2> 官方文档</h2>
 <ul>
 <li>
-<p><a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener noreferrer">Vue.js 介绍</a></p>
+<p><a href="https://cn.vuejs.org/guide/introduction.html" target="_blank" rel="noopener noreferrer">Vue.js 介绍</a></p>
 </li>
 <li>
-<p><a href="https://cn.vuejs.org/v2/api/" target="_blank" rel="noopener noreferrer">Vue.js API</a></p>
-</li>
-</ul>
-<hr>
-<ul>
-<li>
-<p><a href="https://cli.vuejs.org/zh/guide/cli-service.html" target="_blank" rel="noopener noreferrer">Vue CLI 3 介绍</a></p>
-</li>
-<li>
-<p><a href="https://cli.vuejs.org/zh/config/" target="_blank" rel="noopener noreferrer">Vue CLI 3 配置</a></p>
+<p><a href="https://cn.vuejs.org/api/" target="_blank" rel="noopener noreferrer">Vue.js API</a></p>
 </li>
 </ul>
 <hr>
@@ -2949,58 +3271,12 @@ memory=8GB
 <p><a href="https://router.vuejs.org/zh/guide/#html" target="_blank" rel="noopener noreferrer">Vue Router 介绍</a></p>
 </li>
 <li>
-<p><a href="https://cli.vuejs.org/zh/config/" target="_blank" rel="noopener noreferrer">Vue Router 配置</a></p>
-</li>
-</ul>
-<hr>
-<ul>
-<li>
-<p><a href="https://vuex.vuejs.org/zh/" target="_blank" rel="noopener noreferrer">Vuex 介绍</a></p>
-</li>
-<li>
-<p><a href="https://vuex.vuejs.org/zh/api/" target="_blank" rel="noopener noreferrer">Vuex 配置</a></p>
+<p><a href="https://router.vuejs.org/zh/api/" target="_blank" rel="noopener noreferrer">Vue Router API</a></p>
 </li>
 </ul>
 <h2> 其他文档</h2>
 <ul>
-<li>
-<p><a href="/code/vue/component.html" target="blank">各组件使用说明</a></p>
-</li>
-<li>
-<p><a href="/code/vue/compare.html" target="blank">Vue 与小程序的异同</a></p>
-</li>
-<li>
-<p>VueConf 视频</p>
-<ul>
-<li>
-<p><a href="https://www.yuque.com/vueconf/2019/qg1yms" target="_blank" rel="noopener noreferrer">Vue Beyond Vue Loader</a></p>
-</li>
-<li>
-<p><a href="https://www.yuque.com/vueconf/2019/gwn1z0" target="_blank" rel="noopener noreferrer">尤雨溪演讲视频</a></p>
-</li>
-</ul>
-</li>
-<li>
-<p><a href="https://mrhope.site/file/vue/VueConf2019SH_Evan.pdf" target="_blank" rel="noopener noreferrer">尤雨溪演讲 PPT</a></p>
-</li>
-<li>
-<p><a href="https://mrhope.site/file/vue/intro-to-vuepres-1.x.pdf" target="_blank" rel="noopener noreferrer">VuePress 介绍</a></p>
-</li>
-<li>
-<p><a href="https://mrhope.site/file/vue/Vue%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95.pdf" target="_blank" rel="noopener noreferrer">Vue 单元测试</a></p>
-</li>
-<li>
-<p><a href="https://mrhope.site/file/vue/%E4%BD%BF%E7%94%A8Vue%E5%AE%9E%E7%8E%B00%E4%BB%A3%E7%A0%81%E4%BA%A4%E4%BA%92-winter.pdf" target="_blank" rel="noopener noreferrer">使用 Vue 实现 0 代码交互</a></p>
-</li>
-<li>
-<p><a href="https://mrhope.site/file/vue/Vue%20%E5%BC%80%E5%8F%91%20ECharts%20%E8%B8%A9%E5%9D%91%E6%8C%87%E5%8D%97.pdf" target="_blank" rel="noopener noreferrer">Echart 与 Vue</a></p>
-</li>
-<li>
-<p><a href="https://mrhope.site/file/vue/Vue%20Beyond%20Vue%20Loader.pdf" target="_blank" rel="noopener noreferrer">Vue Loader</a></p>
-</li>
-<li>
-<p><a href="https://mrhope.site/file/vue/Mars%E6%A1%86%E6%9E%B6%E5%88%86%E4%BA%AB-vueconf.pdf" target="_blank" rel="noopener noreferrer">基于 Vue 的多端框架</a></p>
-</li>
+<li><a href="/code/vue/compare.html" target="blank">Vue 与小程序的异同</a></li>
 </ul>
 ]]></content>
     <category term="基础"/>
@@ -5433,61 +5709,17 @@ memory=8GB
     <published>2022-02-06T16:01:38.000Z</published>
   </entry>
   <entry>
-    <title type="text">Vue-cli</title>
-    <id>https://mrhope.site/code/vue/cli/</id>
-    <link href="https://mrhope.site/code/vue/cli/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 目录</h2>
-<ul>
-<li>
-<p><a href="/code/vue/cli/intro.html" target="blank">Vue Cli 介绍</a></p>
-</li>
-<li>
-<p><a href="/code/vue/cli/quick-dev.html" target="blank">快速简单开发</a></p>
-</li>
-<li>
-<p><a href="/code/vue/cli/create.html" target="blank">创建项目</a></p>
-</li>
-<li>
-<p><a href="/code/vue/cli/file.html" target="blank">文件处理</a></p>
-</li>
-</ul>]]></summary>
-    <content type="html"><![CDATA[<h2> 目录</h2>
-<ul>
-<li>
-<p><a href="/code/vue/cli/intro.html" target="blank">Vue Cli 介绍</a></p>
-</li>
-<li>
-<p><a href="/code/vue/cli/quick-dev.html" target="blank">快速简单开发</a></p>
-</li>
-<li>
-<p><a href="/code/vue/cli/create.html" target="blank">创建项目</a></p>
-</li>
-<li>
-<p><a href="/code/vue/cli/file.html" target="blank">文件处理</a></p>
-</li>
-</ul>
-]]></content>
-    <category term="Vue"/>
-    <published>2022-02-06T16:01:38.000Z</published>
-  </entry>
-  <entry>
     <title type="text">Vue Router</title>
     <id>https://mrhope.site/code/vue/router/</id>
     <link href="https://mrhope.site/code/vue/router/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
+    <updated>2023-03-26T08:23:30.000Z</updated>
     <summary type="html"><![CDATA[<p>Vue Router 是 Vue 官方出品的路由组件，托管整个 Vue 项目路由。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>Vue Router 是 Vue 官方出品的路由组件，托管整个 Vue 项目路由。</p>
 <!-- more -->
 <h2> 目录</h2>
 <ul>
-<li>
-<p><a href="/code/vue/router/get-started.html" target="blank">快速上手 Vue Router</a></p>
-</li>
-<li>
-<p><a href="/code/vue/router/demo.html" target="blank">Router DEMO</a></p>
-</li>
+<li><a href="/code/vue/router/get-started.html" target="blank">快速上手 Vue Router</a></li>
 </ul>
 <h2> 官方文档</h2>
 <ul>
@@ -5500,34 +5732,6 @@ memory=8GB
 <li>
 <p><a href="https://github.com/vuejs/vue-router" target="_blank" rel="noopener noreferrer">官方仓库</a></p>
 </li>
-</ul>
-]]></content>
-    <category term="Vue"/>
-    <published>2022-02-06T16:01:38.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">Vuex</title>
-    <id>https://mrhope.site/code/vue/vuex/</id>
-    <link href="https://mrhope.site/code/vue/vuex/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<p>Vuex 是 Vue 官方出品的状态管理组件，是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</p>
-]]></summary>
-    <content type="html"><![CDATA[<p>Vuex 是 Vue 官方出品的状态管理组件，是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</p>
-<!-- more -->
-<h2> 目录</h2>
-<ul>
-<li>
-<p><a href="/code/vue/vuex/get-started.html" target="blank">快速上手 Vuex</a></p>
-</li>
-<li>
-<p><a href="/code/vue/vuex/demo.html" target="blank">Vuex 案例</a></p>
-</li>
-</ul>
-<h2> 官方文档</h2>
-<ul>
-<li><a href="https://v1.vuepress.vuejs.org/zh/guide/" target="_blank" rel="noopener noreferrer">Vuex 教程</a></li>
-<li><a href="https://v1.vuepress.vuejs.org/zh/config/" target="_blank" rel="noopener noreferrer">Vuex 配置</a></li>
-<li><a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener noreferrer">Vuex repository</a></li>
 </ul>
 ]]></content>
     <category term="Vue"/>
@@ -5947,164 +6151,5 @@ memory=8GB
 ]]></content>
     <category term="软件"/>
     <published>2020-06-02T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">Windows Terminal</title>
-    <id>https://mrhope.site/software/tool/terminal/</id>
-    <link href="https://mrhope.site/software/tool/terminal/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<p>Windows Terminal 是一个面向命令行工具和 shell(如命令提示符、PowerShell 和适用于 Linux 的 Windows 子系统 (WSL))用户的新式终端应用程序。</p>
-]]></summary>
-    <content type="html"><![CDATA[<p>Windows Terminal 是一个面向命令行工具和 shell(如命令提示符、PowerShell 和适用于 Linux 的 Windows 子系统 (WSL))用户的新式终端应用程序。</p>
-<!-- more -->
-<p></p>
-<h2> 特点</h2>
-<ul>
-<li>
-<p>多选项卡与窗格</p>
-<p>可以同时运行多个终端并自由布局与切换</p>
-</li>
-<li>
-<p>自定义方案和配置</p>
-<p>可在 Windows Terminal 中使用多种自定义命令，获得更加自然的体验。 如果不喜欢特定的键盘快捷方式，可以将其更改为您喜欢的方式。</p>
-</li>
-<li>
-<p>强大的可配置主题</p>
-<p>可以自由配置 Windows Terminal 的配色方案</p>
-<p>可以在 Windows Terminal 窗口中显示背景图像和 GIF</p>
-</li>
-<li>
-<p>扩展性，支持连接众多平台</p>
-<p>任何具有命令行接口的应用程序都可以在 Windows Terminal 中运行。 这包括从 PowerShell 和命令提示符到 Azure Cloud Shell 和任何 WSL 分发 (如 Ubuntu 或 Oh-My-Zsh) 的所有应用程序。</p>
-</li>
-<li>
-<p>Unicode 和 UTF-8 字符支持</p>
-<p>Windows Terminal 可以显示 Unicode 和 UTF-8 字符，如各种语言的表情符号和字符。</p>
-</li>
-<li>
-<p>GPU 加速文本呈现引擎</p>
-<p>Windows Terminal 使用 GPU 来呈现其文本，从而提供比默认 Windows 命令行体验更好的性能。</p>
-</li>
-<li>
-<p>开源</p>
-</li>
-</ul>
-<h2> 教程</h2>
-<ul>
-<li><a href="/software/tool/terminal/get-started.html" target="blank">快速上手</a></li>
-<li><a href="/software/tool/terminal/settings.html" target="blank">自定义设置</a></li>
-</ul>
-<h2> 官方文档</h2>
-<ul>
-<li><a href="https://aka.ms/terminal-documentation" target="_blank" rel="noopener noreferrer">官方文档</a></li>
-</ul>
-]]></content>
-    <published>2021-01-27T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">VS Code 指南</title>
-    <id>https://mrhope.site/software/vscode/guide/</id>
-    <link href="https://mrhope.site/software/vscode/guide/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<ul>
-<li>
-<p><a href="/software/vscode/guide/basic.html" target="blank">基础介绍</a></p>
-</li>
-<li>
-<p><a href="/software/vscode/guide/customization.html" target="blank">个性化介绍</a></p>
-</li>
-<li>
-<p><a href="/software/vscode/guide/extension.html" target="blank">扩展介绍</a></p>
-</li>
-<li>
-<p><a href="/software/vscode/guide/file.html" target="blank">文件介绍</a></p>
-</li>
-<li>
-<p><a href="/software/vscode/guide/edit.html" target="blank">编辑技巧</a></p>
-</li>
-<li>
-<p><a href="/software/vscode/guide/intellisense.html" target="blank">智能补全</a></p>
-</li>
-<li>
-<p><a href="/software/vscode/guide/git.html" target="blank">Git 支持</a></p>
-</li>
-<li>
-<p><a href="/software/vscode/guide/debug.html" target="blank">调试介绍</a></p>
-</li>
-<li>
-<p><a href="/software/vscode/guide/task.html" target="blank">任务介绍</a></p>
-</li>
-<li>
-<p><a href="/software/vscode/guide/command.html" target="blank">命令行介绍</a></p>
-</li>
-</ul>]]></summary>
-    <content type="html"><![CDATA[<ul>
-<li>
-<p><a href="/software/vscode/guide/basic.html" target="blank">基础介绍</a></p>
-</li>
-<li>
-<p><a href="/software/vscode/guide/customization.html" target="blank">个性化介绍</a></p>
-</li>
-<li>
-<p><a href="/software/vscode/guide/extension.html" target="blank">扩展介绍</a></p>
-</li>
-<li>
-<p><a href="/software/vscode/guide/file.html" target="blank">文件介绍</a></p>
-</li>
-<li>
-<p><a href="/software/vscode/guide/edit.html" target="blank">编辑技巧</a></p>
-</li>
-<li>
-<p><a href="/software/vscode/guide/intellisense.html" target="blank">智能补全</a></p>
-</li>
-<li>
-<p><a href="/software/vscode/guide/git.html" target="blank">Git 支持</a></p>
-</li>
-<li>
-<p><a href="/software/vscode/guide/debug.html" target="blank">调试介绍</a></p>
-</li>
-<li>
-<p><a href="/software/vscode/guide/task.html" target="blank">任务介绍</a></p>
-</li>
-<li>
-<p><a href="/software/vscode/guide/command.html" target="blank">命令行介绍</a></p>
-</li>
-</ul>
-]]></content>
-    <category term="VS Code"/>
-    <published>2022-02-06T16:01:38.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">dart 快速入门</title>
-    <id>https://mrhope.site/code/language/dart/samples/</id>
-    <link href="https://mrhope.site/code/language/dart/samples/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 目录</h2>
-<ul>
-<li>
-<p><a href="/code/language/dart/samples/samples.html" target="blank">案例</a></p>
-</li>
-<li>
-<p><a href="/code/language/dart/samples/cheatsheet.html" target="blank">概要介绍</a></p>
-</li>
-<li>
-<p><a href="/code/language/dart/samples/iterable.html" target="blank">遍历</a></p>
-</li>
-</ul>]]></summary>
-    <content type="html"><![CDATA[<h2> 目录</h2>
-<ul>
-<li>
-<p><a href="/code/language/dart/samples/samples.html" target="blank">案例</a></p>
-</li>
-<li>
-<p><a href="/code/language/dart/samples/cheatsheet.html" target="blank">概要介绍</a></p>
-</li>
-<li>
-<p><a href="/code/language/dart/samples/iterable.html" target="blank">遍历</a></p>
-</li>
-</ul>
-]]></content>
-    <category term="dart"/>
-    <published>2020-05-30T00:00:00.000Z</published>
   </entry>
 </feed>
