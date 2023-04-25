@@ -1,0 +1,1 @@
+import{_ as t,Y as s,Z as n,a0 as e}from"./framework-a21c41b6.js";const o="/assets/hidden-file-8a453abe.png",_={},l=e("p",null,"显示文件后缀名与隐藏文件",-1),a=e("p",null,[e("img",{src:o,alt:"如何显示隐藏的文件与文件夹",loading:"lazy"})],-1),c=[l,a];function i(d,r){return s(),n("div",null,c)}const h=t(_,[["render",i],["__file","hidden-file.html.vue"]]);export{h as default};
