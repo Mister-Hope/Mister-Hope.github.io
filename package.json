@@ -26,26 +26,22 @@
     "personal-blog"
   ],
   "dependencies": {
-    "@vuepress/cli": "2.0.0-beta.61",
-    "@vuepress/client": "2.0.0-beta.61",
-    "@vuepress/plugin-docsearch": "2.0.0-beta.61",
+    "@vuepress/cli": "2.0.0-beta.62",
+    "@vuepress/client": "2.0.0-beta.62",
+    "@vuepress/plugin-docsearch": "2.0.0-beta.62",
     "sass-loader": "13.2.2",
-    "vue": "3.2.47",
-    "vuepress-theme-hope": "2.0.0-beta.209",
-    "vuepress-vite": "2.0.0-beta.61",
-    "vuepress-webpack": "2.0.0-beta.61"
+    "vue": "3.3.2",
+    "vuepress-theme-hope": "2.0.0-beta.211",
+    "vuepress-vite": "2.0.0-beta.62",
+    "vuepress-webpack": "2.0.0-beta.62"
   },
   "devDependencies": {
     "cross-env": "7.0.3",
     "markdownlint-cli": "0.34.0",
     "prettier": "2.8.8"
   },
-  "packageManager": "pnpm@8.5.0",
+  "packageManager": "pnpm@8.5.1",
   "pnpm": {
-    "override": {
-      "vite": "4.3.1",
-      "vue": "3.0.0-beta.1"
-    },
     "peerDependencyRules": {
       "ignoreMissing": [
         "@algolia/client-search",
