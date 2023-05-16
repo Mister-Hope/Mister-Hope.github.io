@@ -1,1 +1,0 @@
-import{_ as t,Y as n,Z as a,a2 as c,a0 as e}from"./framework-a21c41b6.js";const o={},s=e("div",{class:"hint-container tip"},[e("p",{class:"hint-container-title"},"提示"),e("p",null,"正在完善中...")],-1);function r(i,l){return n(),a("div",null,[s,c(" more ")])}const d=t(o,[["render",r],["__file","index.html.vue"]]);export{d as default};

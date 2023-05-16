@@ -1,1 +1,0 @@
-import{_ as o,Y as t,Z as a,a2 as n,$ as s,a0 as c,F as r}from"./framework-a21c41b6.js";const _={},l=c("p",null,"以下是有关于 Windows 10 系统的一些基础知识。",-1);function d(m,i){const e=r("AutoCatalog");return t(),a("div",null,[l,n(" more "),s(e)])}const f=o(_,[["render",d],["__file","index.html.vue"]]);export{f as default};
