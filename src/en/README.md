@@ -7,7 +7,7 @@ heroImage: /logo.svg
 heroText: 𝓜𝓻. 𝓗𝓸𝓹𝓮
 tagline: Where there is light, there is hope
 # Special thank to @mo7
-bgImage: http://file.mo7.cc/api/public/bz
+bgImage: https://file.mo7.cc/api/public/bz
 heroFullScreen: true
 projects:
   - name: VuePress
