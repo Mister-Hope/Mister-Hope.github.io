@@ -1,1 +1,0 @@
-import{_ as o}from"./plugin-vue_export-helper-c27b6911.js";import{r as t,o as n,c as a,e as c,a as r,b as s}from"./app-024c3053.js";const _={},l=s("p",null,"以下是有关于 Windows 10 系统的一些基础知识。",-1);function m(d,i){const e=t("AutoCatalog");return n(),a("div",null,[l,c(" more "),r(e)])}const u=o(_,[["render",m],["__file","index.html.vue"]]);export{u as default};
