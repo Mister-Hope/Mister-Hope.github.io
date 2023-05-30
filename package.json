@@ -29,9 +29,9 @@
     "@vuepress/cli": "2.0.0-beta.62",
     "@vuepress/client": "2.0.0-beta.62",
     "@vuepress/plugin-docsearch": "2.0.0-beta.62",
-    "sass-loader": "13.3.0",
+    "sass-loader": "13.3.1",
     "vue": "3.3.4",
-    "vuepress-theme-hope": "2.0.0-beta.215",
+    "vuepress-theme-hope": "2.0.0-beta.216",
     "vuepress-vite": "2.0.0-beta.62",
     "vuepress-webpack": "2.0.0-beta.62"
   },
@@ -40,16 +40,5 @@
     "markdownlint-cli": "0.34.0",
     "prettier": "2.8.8"
   },
-  "packageManager": "pnpm@8.5.1",
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "@algolia/client-search",
-        "@types/react",
-        "react",
-        "react-dom",
-        "webpack"
-      ]
-    }
-  }
+  "packageManager": "pnpm@8.6.0"
 }
