@@ -6,6 +6,14 @@ title: 主页
 heroImage: /logo.svg
 heroText: 𝓜𝓻. 𝓗𝓸𝓹𝓮
 tagline: Where there is light, there is hope
+head:
+  - - meta
+    - name: baidu-site-verification
+      content: codeva-sKKGEe5DI8
+  - - meta
+    - name: baidu-site-verification
+      content: codeva-K0eh4YtP4t
+
 # Special thank to @mo7
 bgImage: https://file.mo7.cc/api/public/bz
 heroFullScreen: true
