@@ -5,11 +5,11 @@ import { enSidebarConfig, zhSidebarConfig } from "./sidebar/index.js";
 
 export default hopeTheme(
   {
-    hostname: "https://mrhope.site",
+    hostname: "https://mister-hope.com",
 
     author: {
       name: "Mr.Hope",
-      url: "https://mrhope.site",
+      url: "https://mister-hope.com",
     },
 
     favicon: "/favicon.ico",
@@ -30,7 +30,7 @@ export default hopeTheme(
         sidebar: zhSidebarConfig,
 
         footer:
-          '主题使用 <a href="https://theme-hope.vuejs.press/zh/">VuePress Theme Hope</a> | <a href="https://mrhope.site/about/site.html" target="_blank">关于网站</a>',
+          '主题使用 <a href="https://theme-hope.vuejs.press/zh/">VuePress Theme Hope</a> | <a href="https://mister-hope.com/about/site.html" target="_blank">关于网站</a>',
 
         copyright: "基于 MIT 协议，© 2019-至今 Mr.Hope",
 
@@ -87,7 +87,7 @@ export default hopeTheme(
 
       comment: {
         provider: "Waline",
-        serverURL: "https://comment.mrhope.site",
+        serverURL: "https://comment.mister-hope.com",
       },
 
       feed: {

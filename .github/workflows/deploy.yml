@@ -52,12 +52,12 @@ jobs:
           mkdir -p ~/.ssh/
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan mrhope.site >> ~/.ssh/known_hosts
+          ssh-keyscan mister-hope.com >> ~/.ssh/known_hosts
           git config --global user.name 'Mr.Hope'
           git config --global user.email 'mister-hope@outlook.com'
 
       - name: Deploy
         run: |
-          ssh git@mrhope.site "git config --global --add safe.directory /www/wwwroot/mrhope"
-          git push -f git@mrhope.site:/www/wwwroot/mrhope gh-pages
-          ssh git@mrhope.site "cd /www/wwwroot/mrhope && git reset --hard HEAD"
+          ssh git@mister-hope.com "git config --global --add safe.directory /www/wwwroot/mrhope"
+          git push -f git@mister-hope.com:/www/wwwroot/mrhope gh-pages
+          ssh git@mister-hope.com "cd /www/wwwroot/mrhope && git reset --hard HEAD"

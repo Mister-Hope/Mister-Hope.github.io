@@ -28,7 +28,7 @@ projects:
   - name: markdown-it plugins
     desc: Powerful markdown-it plugins written in typescript
     link: https://mdit-plugins.github.io/
-    icon: https://mdit-plugins.mrhope.site/logo.svg
+    icon: https://mdit-plugins.github.io/logo.svg
 
   - name: in NENU
     desc: 800,000+ words NENU guide, a comprehensive introduction to NENU life, the best admission guide for NENU freshmen❤

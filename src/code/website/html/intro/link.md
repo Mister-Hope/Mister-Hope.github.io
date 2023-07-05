@@ -69,7 +69,7 @@ title 属性旨在包含关于链接的补充有用信息，例如页面包含�
 
 ## 统一资源定位符 (URL)
 
-统一资源定位符(英文: Uniform Resource Locator，简写: URL)是一个定义了在网络上的位置的一个文本字符串。例如我的博客主页定位在 `https://mrhope.site`.
+统一资源定位符(英文: Uniform Resource Locator，简写: URL)是一个定义了在网络上的位置的一个文本字符串。例如我的博客主页定位在 `https://mister-hope.com`.
 
 URL 使用路径查找文件。路径指定文件系统中您感兴趣的文件所在的位置。
 

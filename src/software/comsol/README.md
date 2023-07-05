@@ -50,11 +50,11 @@ tag:
 
 ## 文档
 
-- [COMSOL 新手指南](https://mrhope.site/file/comsol/IntroductionToCOMSOLMultiphysics.zh_CN.pdf)
+- [COMSOL 新手指南](https://mister-hope.com/file/comsol/IntroductionToCOMSOLMultiphysics.zh_CN.pdf)
 
-- [COMSOL App 开发器简介](https://mrhope.site/file/comsol/App开发器简介.pdf)
+- [COMSOL App 开发器简介](https://mister-hope.com/file/comsol/App开发器简介.pdf)
 
-- [COMSOL Multiphysics 应用程序编程指南](https://mrhope.site/file/comsol/ApplicationProgrammingGuide.zh_CN.pdf)
+- [COMSOL Multiphysics 应用程序编程指南](https://mister-hope.com/file/comsol/ApplicationProgrammingGuide.zh_CN.pdf)
 
 - [COMSOL 多物理场仿真百科](http://cn.comsol.com/multiphysics/)
 

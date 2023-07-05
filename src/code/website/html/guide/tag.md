@@ -71,7 +71,7 @@ HTML 链接是通过标签 `<a>` 来定义的。
 ::: normal-demo HTML 链接
 
 ```html
-<a href="https://mrhope.site">这是一个链接</a>
+<a href="https://mister-hope.com">这是一个链接</a>
 ```
 
 :::
