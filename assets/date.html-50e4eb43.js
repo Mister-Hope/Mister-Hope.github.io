@@ -1,2 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper-c27b6911.js";import{o as a,c as t,f as c}from"./app-15fc2902.js";const s={},d=c(`<h1 id="date" tabindex="-1"><a class="header-anchor" href="#date" aria-hidden="true">#</a> date</h1><p><code>date</code> 命令显示当前的日期和时间。</p><div class="language-bash" data-ext="sh"><pre class="language-bash"><code><span class="token function">date</span>
-</code></pre></div>`,3),o=[d];function n(r,i){return a(),t("div",null,o)}const h=e(s,[["render",n],["__file","date.html.vue"]]);export{h as default};
