@@ -1,1 +1,0 @@
-import{_ as o}from"./plugin-vue_export-helper-c27b6911.js";import{r as t,o as a,c as n,e as c,a as r,b as s}from"./app-721f5af7.js";const _={},l=s("p",null,"这些是一些最为基础的内容，是后来补充进博客中的，供访客查阅。",-1);function m(d,i){const e=t("AutoCatalog");return a(),n("div",null,[l,c(" more "),r(e)])}const u=o(_,[["render",m],["__file","index.html.vue"]]);export{u as default};
