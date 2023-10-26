@@ -32,7 +32,7 @@ projects:
 
   - name: in NENU
     desc: 800,000+ words NENU guide, a comprehensive introduction to NENU life, the best admission guide for NENU freshmen❤
-    link: https://github.com/Hope-Studio/inNENU-miniapp
+    link: https://innenu.com
     icon: /assets/img/inNENU.png
 
   - name: vuepress-plugin-md-enhance

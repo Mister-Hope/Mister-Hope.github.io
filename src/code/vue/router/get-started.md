@@ -29,7 +29,7 @@ Vue Router 是 Vue 官方出品的路由组件，托管整个 Vue 项目路由�
 
 ## 载入 Router
 
-通过调用 app.use(router)，我们会触发第一次导航且可以在任意组件中以 this.$router 的形式访问它，并且以 this.$route 的形式访问当前路由：
+通过调用 `app.use(router)`，我们会触发第一次导航且可以在任意组件中以 `this.$router` 的形式访问它，并且以 `this.$route` 的形式访问当前路由：
 
 ```ts
 // 1. 定义路由组件.

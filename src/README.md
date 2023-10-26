@@ -33,15 +33,15 @@ projects:
     link: https://waline.js.org/
     icon: https://waline.js.org/logo.png
 
+  - name: in 东师
+    desc: 80 万字的东师攻略，全方位的东师生活介绍，东师新生们的最佳入学指南❤
+    link: https://innenu.com
+    icon: /assets/img/inNENU.png
+
   - name: markdown-it plugins
     desc: 使用 TS 编写的强大 markdown-it 插件
     link: https://mdit-plugins.github.io/zh/
     icon: https://mdit-plugins.github.io/logo.svg
-
-  - name: in 东师
-    desc: 80 万字的东师攻略，全方位的东师生活介绍，东师新生们的最佳入学指南❤
-    link: https://github.com/Hope-Studio/inNENU-miniapp
-    icon: /assets/img/inNENU.png
 
   - name: vuepress-plugin-md-enhance
     desc: VuePress Markdown 增强插件
