@@ -1,0 +1,3 @@
+import{_ as e}from"./plugin-vue_export-helper-c27b6911.js";import{o as s,c as a,d as n}from"./app-4e4d2326.js";const o={},r=n(`<h1 id="whereis" tabindex="-1"><a class="header-anchor" href="#whereis" aria-hidden="true">#</a> whereis</h1><p><code>whereis</code> 用来显示某个命令的位置。如果有多个程序符合条件，会全部列出。</p><div class="language-bash" data-ext="sh"><pre class="language-bash"><code>$ <span class="token function">whereis</span> <span class="token function">node</span>
+/usr/bin/node /usr/sbin/node
+</code></pre></div>`,3),c=[r];function t(i,d){return s(),a("div",null,c)}const _=e(o,[["render",t],["__file","whereis.html.vue"]]);export{_ as default};
