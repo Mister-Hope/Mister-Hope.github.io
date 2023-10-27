@@ -107,7 +107,7 @@ export default hopeTheme(
         imgSize: true,
         mathjax: true,
         mermaid: true,
-        revealjs: true,
+        revealJs: true,
         sub: true,
         sup: true,
         vPre: true,
