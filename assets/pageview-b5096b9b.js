@@ -1,0 +1,1 @@
+import{_ as t}from"./app-12aa3950.js";const o=async()=>{try{const{pageviewCount:e}=await t(()=>import("./app-12aa3950.js").then(r=>r.M),[]);return e({serverURL:"https://comment.mister-hope.com"})}catch{console.error("@waline/client is not installed!");return}};export{o as updatePageview};
