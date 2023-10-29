@@ -13,3 +13,9 @@ timeline: false
 
 ![微信](./assets/wechat-light.jpg#light)
 ![微信](./assets/wechat-dark.jpg#dark)
+
+::: tip
+
+如果您希望您的名字出现在相关项目捐赠者名单中，请在捐赠时备注您**捐赠的项目**。(因为我的项目有点多)
+
+:::
