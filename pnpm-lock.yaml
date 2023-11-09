@@ -27,8 +27,8 @@ dependencies:
     specifier: 10.6.0
     version: 10.6.0
   reveal.js:
-    specifier: 4.6.1
-    version: 4.6.1
+    specifier: 5.0.2
+    version: 5.0.2
   sass-loader:
     specifier: 13.3.2
     version: 13.3.2(webpack@5.89.0)
@@ -37,7 +37,7 @@ dependencies:
     version: 3.3.7
   vuepress-theme-hope:
     specifier: 2.0.0-beta.242
-    version: 2.0.0-beta.242(@waline/client@2.15.8)(flowchart.ts@1.0.1)(mathjax-full@3.2.2)(mermaid@10.6.0)(reveal.js@4.6.1)(sass-loader@13.3.2)(vuepress-vite@2.0.0-beta.67)(vuepress-webpack@2.0.0-beta.67)
+    version: 2.0.0-beta.242(@waline/client@2.15.8)(flowchart.ts@1.0.1)(mathjax-full@3.2.2)(mermaid@10.6.0)(reveal.js@5.0.2)(sass-loader@13.3.2)(vuepress-vite@2.0.0-beta.67)(vuepress-webpack@2.0.0-beta.67)
   vuepress-vite:
     specifier: 2.0.0-beta.67
     version: 2.0.0-beta.67(@vuepress/client@2.0.0-beta.67)(sass-loader@13.3.2)(vue@3.3.7)
@@ -6752,9 +6752,9 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: false
 
-  /reveal.js@4.6.1:
-    resolution: {integrity: sha512-1CW0auaXNPmwmvQ7TwpszwVxMi2Xr5cTS3J3EBC/HHgbPF32Dn7aiu/LKWDOGjMbaDwKQiGmfqcoGQ74HUHCMw==}
-    engines: {node: '>=10.0.0'}
+  /reveal.js@5.0.2:
+    resolution: {integrity: sha512-G5dhsr/2wormdrYPtZBfRamvnPrHc/8TtYVH3EpIzfMyKSiTprFwn61nFZbcmeK4iKKdLq2MMiiMNqlRmkBU4A==}
+    engines: {node: '>=18.0.0'}
     dev: false
 
   /rimraf@3.0.2:
@@ -7988,7 +7988,7 @@ packages:
       - typescript
     dev: false
 
-  /vuepress-plugin-md-enhance@2.0.0-beta.242(flowchart.ts@1.0.1)(mathjax-full@3.2.2)(mermaid@10.6.0)(reveal.js@4.6.1)(sass-loader@13.3.2)(vuepress-vite@2.0.0-beta.67)(vuepress-webpack@2.0.0-beta.67):
+  /vuepress-plugin-md-enhance@2.0.0-beta.242(flowchart.ts@1.0.1)(mathjax-full@3.2.2)(mermaid@10.6.0)(reveal.js@5.0.2)(sass-loader@13.3.2)(vuepress-vite@2.0.0-beta.67)(vuepress-webpack@2.0.0-beta.67):
     resolution: {integrity: sha512-fUjVw8vo0kas5ABCSbaNgqFm9xwVWyzpMKMfXJCjxV09icqu1jsyXR/V5fu3ivMi12UvsPxZikmLRQsRYvyB7w==}
     engines: {node: '>=18.16.0', npm: '>=8', pnpm: '>=7'}
     peerDependencies:
@@ -8062,7 +8062,7 @@ packages:
       markdown-it: 13.0.2
       mathjax-full: 3.2.2
       mermaid: 10.6.0
-      reveal.js: 4.6.1
+      reveal.js: 5.0.2
       sass-loader: 13.3.2(webpack@5.89.0)
       vue: 3.3.7
       vue-router: 4.2.5(vue@3.3.7)
@@ -8326,7 +8326,7 @@ packages:
       - typescript
     dev: false
 
-  /vuepress-theme-hope@2.0.0-beta.242(@waline/client@2.15.8)(flowchart.ts@1.0.1)(mathjax-full@3.2.2)(mermaid@10.6.0)(reveal.js@4.6.1)(sass-loader@13.3.2)(vuepress-vite@2.0.0-beta.67)(vuepress-webpack@2.0.0-beta.67):
+  /vuepress-theme-hope@2.0.0-beta.242(@waline/client@2.15.8)(flowchart.ts@1.0.1)(mathjax-full@3.2.2)(mermaid@10.6.0)(reveal.js@5.0.2)(sass-loader@13.3.2)(vuepress-vite@2.0.0-beta.67)(vuepress-webpack@2.0.0-beta.67):
     resolution: {integrity: sha512-o9ttIg0fUETktIMgaLOXYHUv6ldRTGe/5kwDa1/cK2S5C9JO/jDyA+Ezx6sdOj/ZCCsECYetFWO4x825nmURUw==}
     engines: {node: '>=18.16.0', npm: '>=8', pnpm: '>=7'}
     peerDependencies:
@@ -8372,7 +8372,7 @@ packages:
       vuepress-plugin-copy-code2: 2.0.0-beta.242(sass-loader@13.3.2)(vuepress-vite@2.0.0-beta.67)(vuepress-webpack@2.0.0-beta.67)
       vuepress-plugin-copyright2: 2.0.0-beta.242(vuepress-vite@2.0.0-beta.67)(vuepress-webpack@2.0.0-beta.67)
       vuepress-plugin-feed2: 2.0.0-beta.242(vuepress-vite@2.0.0-beta.67)(vuepress-webpack@2.0.0-beta.67)
-      vuepress-plugin-md-enhance: 2.0.0-beta.242(flowchart.ts@1.0.1)(mathjax-full@3.2.2)(mermaid@10.6.0)(reveal.js@4.6.1)(sass-loader@13.3.2)(vuepress-vite@2.0.0-beta.67)(vuepress-webpack@2.0.0-beta.67)
+      vuepress-plugin-md-enhance: 2.0.0-beta.242(flowchart.ts@1.0.1)(mathjax-full@3.2.2)(mermaid@10.6.0)(reveal.js@5.0.2)(sass-loader@13.3.2)(vuepress-vite@2.0.0-beta.67)(vuepress-webpack@2.0.0-beta.67)
       vuepress-plugin-photo-swipe: 2.0.0-beta.242(sass-loader@13.3.2)(vuepress-vite@2.0.0-beta.67)(vuepress-webpack@2.0.0-beta.67)
       vuepress-plugin-pwa2: 2.0.0-beta.242(sass-loader@13.3.2)(vuepress-vite@2.0.0-beta.67)(vuepress-webpack@2.0.0-beta.67)
       vuepress-plugin-reading-time2: 2.0.0-beta.242(vuepress-vite@2.0.0-beta.67)(vuepress-webpack@2.0.0-beta.67)
