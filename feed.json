@@ -12,8 +12,8 @@
       "id": "https://mister-hope.com/code/vue/core/app.html",
       "summary": "应用实例 每个 Vue 应用都是通过 createApp 函数创建一个新的应用实例： 根组件 我们传入 createApp 的对象实际上是一个组件，每个应用都需要一个“根组件”，其他组件将作为其子组件。 如果你使用的是单文件组件，我们可以直接从另一个文件中导入根组件。 虽然许多示例只需要一个组件，但大多数真实的应用都是由一棵嵌套的、可重用的组件树组成的...",
       "content_html": "<h2> 应用实例</h2>\n<p>每个 Vue 应用都是通过 <code>createApp</code> 函数创建一个新的<strong>应用实例</strong>：</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><h2> 根组件</h2>\n<p>我们传入 <code>createApp</code> 的对象实际上是一个组件，每个应用都需要一个“根组件”，其他组件将作为其子组件。</p>\n<p>如果你使用的是单文件组件，我们可以直接从另一个文件中导入根组件。</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>虽然许多示例只需要一个组件，但大多数真实的应用都是由一棵嵌套的、可重用的组件树组成的。例如，一个待办事项 (Todos) 应用的组件树可能是这样的：</p>\n<div class=\"language-text\" data-ext=\"text\"></div><h2> 挂载应用</h2>\n<p>应用实例必须在调用了 <code>.mount()</code> 方法后才会渲染出来。该方法接收一个“容器”参数，可以是一个实际的 DOM 元素或是一个 CSS 选择器字符串：</p>\n<div class=\"language-html\" data-ext=\"html\"></div><div class=\"language-javascript\" data-ext=\"js\"></div><p>应用根组件的内容将会被渲染在容器元素里面。容器元素自己将不会被视为应用的一部分。</p>\n<p><code>.mount()</code> 方法应该始终在整个应用配置和资源注册完成后被调用。同时请注意，不同于其他资源注册方法，它的返回值是根组件实例而非应用实例。</p>\n<h3> DOM 中的根组件模板</h3>\n<p>当在未采用构建流程的情况下使用 Vue 时，我们可以在挂载容器中直接书写根组件模板：</p>\n<div class=\"language-html\" data-ext=\"html\"></div><div class=\"language-javascript line-numbers-mode\" data-ext=\"js\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><div class=\"hint-container tip\">\n<p class=\"hint-container-title\">提示</p>\n<p>当根组件没有设置 <code>template</code> 选项时，Vue 将自动使用容器的 <code>innerHTML</code> 作为模板。</p>\n</div>\n<h2> 应用配置</h2>\n<p>应用实例会暴露一个 <code>.config</code> 对象允许我们配置一些应用级的选项，例如定义一个应用级的错误处理器，用来捕获所有子组件上的错误：</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>应用实例还提供了一些方法来注册应用范围内可用的资源，例如注册一个组件：</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>这使得 <code>TodoDeleteButton</code> 在应用的任何地方都是可用的。</p>\n<div class=\"hint-container warning\">\n<p class=\"hint-container-title\">注意</p>\n<p>确保在挂载应用实例之前完成所有应用配置！</p>\n</div>\n<h2> 多个应用实例</h2>\n<p>应用实例并不只限于一个。<code>createApp</code> API 允许你在同一个页面中创建多个共存的 Vue 应用，而且每个应用都拥有自己的用于配置和全局资源的作用域。</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>如果你正在使用 Vue 来增强服务端渲染 HTML，并且只想要 Vue 去控制一个大型页面中特殊的一小部分，应避免将一个单独的 Vue 应用实例挂载到整个页面上，而是应该创建多个小的应用实例，将它们分别挂载到所需的元素上去。</p>\n",
-      "date_published": "2023-03-26T08:23:30.000Z",
-      "date_modified": "2023-03-26T08:23:30.000Z",
+      "date_published": "2023-02-26T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": []
     },
@@ -23,8 +23,8 @@
       "id": "https://mister-hope.com/code/vue/core/get-started.html",
       "summary": "Vue.js 是什么 起步 您应当已了解关于 HTML、CSS 和 JavaScript 的中级知识。 安装 (https://cn.vuejs.org/guide/quick-start.html) 尝试 Vue.js 最简单的方法是使用 SFC Playground (https://sfc.vuejs.org/)。您可以在浏览器新标签页中打开它，...",
       "content_html": "<h2> Vue.js 是什么</h2>\n<h2> 起步</h2>\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">提示</p>\n<p>您应当已了解关于 HTML、CSS 和 JavaScript 的中级知识。</p>\n</div>\n<p><a href=\"https://cn.vuejs.org/guide/quick-start.html\" target=\"_blank\" rel=\"noopener noreferrer\">安装</a></p>\n<p>尝试 Vue.js 最简单的方法是使用 <a href=\"https://sfc.vuejs.org/\" target=\"_blank\" rel=\"noopener noreferrer\">SFC Playground</a>。您可以在浏览器新标签页中打开它，跟着例子自己进行一些尝试。</p>\n<p>当然，由于大多数浏览器都支持 ES Module，你可以直接导入 Vue:</p>\n<div class=\"language-html line-numbers-mode\" data-ext=\"html\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><div class=\"hint-container warning\">\n<p class=\"hint-container-title\">注意</p>\n<p><code>vue-cli</code> 已经过时，不建议在新项目中使用，请使用 <code>vite</code></p>\n</div>\n<div class=\"hint-container warning\">\n<p class=\"hint-container-title\">注意</p>\n<p>Mr.Hope <strong>不推荐</strong> 新手直接使用 <code>vite</code> 或者 <code>webpack</code> 之类的 Bundler 进行上手，尤其是在您不熟悉基于 Node.js 的构建工具的情况下。</p>\n<p>请使用 CDN 的方式引入 Vue，并充分熟悉 Vue 的基础知识后再引入 Bundler。</p>\n</div>\n",
-      "date_published": "2023-03-26T08:23:30.000Z",
-      "date_modified": "2023-03-26T08:23:30.000Z",
+      "date_published": "2023-02-26T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "Vue"
@@ -36,8 +36,8 @@
       "id": "https://mister-hope.com/code/vue/core/install.html",
       "summary": "环境准备 VS Code 安装 安装 VS Code (../../../software/vscode/install.md); 开发指南 1. 使用 VS Code 打开项目文件夹。 请打开 VS Code 选择菜单栏中的 “文件-打开文件夹”，或在文件夹上 “右键——使用 VS Code 打开” 或在文件夹内部空白处 “右键——使用 VS Cod...",
       "content_html": "<h2> 环境准备</h2>\n<h3> VS Code 安装</h3>\n<ul>\n<li><a href=\"/software/vscode/install.html\" target=\"blank\">安装 VS Code</a></li>\n</ul>\n<h4> 开发指南</h4>\n<ol>\n<li>\n<p>使用 VS Code 打开项目文件夹。</p>\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">提示</p>\n<p>请打开 VS Code 选择菜单栏中的 “文件-打开文件夹”，或在文件夹上 “右键——使用 VS Code 打开” 或在文件夹内部空白处 “右键——使用 VS Code 打开”。</p>\n</div>\n</li>\n<li>\n<p>打开终端(快捷键 <code>Ctrl + `</code> )。</p>\n</li>\n<li>\n<p>在终端中输入相关指令即可执行相关功能。</p>\n</li>\n</ol>\n<h3> Git 安装</h3>\n<ul>\n<li><a href=\"/software/git/install.html\" target=\"blank\">安装 Git</a></li>\n</ul>\n<h3> Node.js 环境安装</h3>\n<p>请先安装 Node.js 并将 npm 与 Node.js 添加至 path。</p>\n<ul>\n<li>\n<p><a href=\"/code/node-js/install.html\" target=\"blank\">安装 Node.js</a></p>\n</li>\n<li>\n<p><a href=\"/code/windows/env-variable.html\" target=\"blank\">添加到 path</a></p>\n</li>\n</ul>\n<h2> 开发工具安装</h2>\n<p>Vue 官方提供的浏览器插件 Vue.js devtools 可以更好的帮助开发。</p>\n<ul>\n<li>用 Chrome 通过代理打开 <a href=\"https://chrome.google.com/webstore/detail/nhdogjmejiglipccpnnnanhbledajbpd\" target=\"_blank\" rel=\"noopener noreferrer\">Vue.js devtools 网址</a>，安装 Vue.js devtools 开发工具</li>\n<li>使用 Edge 打开 <a href=\"https://microsoftedge.microsoft.com/addons/detail/vuejs-devtools/olofadcdnkkjdfgjcmjaadnlehnnihnl?hl=zh-CN\" target=\"_blank\" rel=\"noopener noreferrer\">Vue.js devtools 网址</a>，安装 Vue.js devtools 开发工具</li>\n</ul>\n",
-      "date_published": "2023-03-26T08:23:30.000Z",
-      "date_modified": "2023-03-26T08:23:30.000Z",
+      "date_published": "2023-02-26T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "Vue"
@@ -49,8 +49,8 @@
       "id": "https://mister-hope.com/code/vue/core/sfc.html",
       "summary": "介绍 Vue 的单文件组件 (即 .vue 文件，简称 *SFC**) 是一种特殊的文件格式，使我们能够将一个 Vue 组件的模板、逻辑与样式封装在单个文件中。下面是一个单文件组件的示例： 如你所见，Vue 的单文件组件是 HTML、CSS 和 JavaScript 三种元素的自然延伸。、`` 和 三个块在同一个文件中封装、组合了组件的视图、逻辑和样式...",
       "content_html": "<h2> 介绍</h2>\n<p>Vue 的单文件组件 (即 <code>*.vue</code> 文件，简称 <strong>SFC</strong>) 是一种特殊的文件格式，使我们能够将一个 Vue 组件的模板、逻辑与样式封装在单个文件中。下面是一个单文件组件的示例：</p>\n<div class=\"language-vue line-numbers-mode\" data-ext=\"vue\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p>如你所见，Vue 的单文件组件是 HTML、CSS 和 JavaScript 三种元素的自然延伸。<code>&lt;template&gt;</code>、<code>&lt;script&gt;</code> 和 <code>&lt;style&gt;</code> 三个块在同一个文件中封装、组合了组件的视图、逻辑和样式。</p>\n<h2> 总览</h2>\n<h2> 总览 {#overview}</h2>\n<p>一个 Vue 单文件组件 (SFC)，通常使用 <code>*.vue</code> 作为文件扩展名，它是一种使用了类似 HTML 语法的自定义文件格式，用于定义 Vue 组件。一个 Vue 单文件组件在语法上是兼容 HTML 的。</p>\n<p>每一个 <code>*.vue</code> 文件都由三种顶层语块构成：<code>&lt;template&gt;</code>、<code>&lt;script&gt;</code> 和 <code>&lt;style&gt;</code>，以及一些其他的自定义块：</p>\n<div class=\"language-vue line-numbers-mode\" data-ext=\"vue\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><h2> 相应语言块 {#language-blocks}</h2>\n<h3> <code>&lt;template&gt;</code> {#template}</h3>\n<ul>\n<li>\n<p>每个 <code>*.vue</code> 文件最多可以包含一个顶层 <code>&lt;template&gt;</code> 块。</p>\n</li>\n<li>\n<p>语块包裹的内容将会被提取、传递给 <code>@vue/compiler-dom</code>，预编译为 JavaScript 渲染函数，并附在导出的组件上作为其 <code>render</code> 选项。</p>\n</li>\n</ul>\n<h3> <code>&lt;script&gt;</code> {#script}</h3>\n<ul>\n<li>\n<p>每个 <code>*.vue</code> 文件最多可以包含一个 <code>&lt;script&gt;</code> 块。(使用 <a href=\"/api/sfc-script-setup.html\" target=\"blank\"><code>&lt;script setup&gt;</code></a> 的情况除外)</p>\n</li>\n<li>\n<p>这个脚本代码块将作为 ES 模块执行。</p>\n</li>\n<li>\n<p><strong>默认导出</strong>应该是 Vue 的组件选项对象，可以是一个对象字面量或是 <a href=\"/api/general.html#definecomponent\" target=\"blank\">defineComponent</a> 函数的返回值。</p>\n</li>\n</ul>\n<h3> <code>&lt;script setup&gt;</code> {#script-setup}</h3>\n<ul>\n<li>\n<p>每个 <code>*.vue</code> 文件最多可以包含一个 <code>&lt;script setup&gt;</code>。(不包括一般的 <code>&lt;script&gt;</code>)</p>\n</li>\n<li>\n<p>这个脚本块将被预处理为组件的 <code>setup()</code> 函数，这意味着它将<strong>为每一个组件实例</strong>都执行。<code>&lt;script setup&gt;</code> 中的顶层绑定都将自动暴露给模板。要了解更多细节，请看 <a href=\"/api/sfc-script-setup\"><code>&lt;script setup&gt;</code> 的专门文档</a>。</p>\n</li>\n</ul>\n<h3> <code>&lt;style&gt;</code> {#style}</h3>\n<ul>\n<li>\n<p>每个 <code>*.vue</code> 文件可以包含多个 <code>&lt;style&gt;</code> 标签。</p>\n</li>\n<li>\n<p>一个 <code>&lt;style&gt;</code> 标签可以使用 <code>scoped</code> 或 <code>module</code> attribute (查看 <a href=\"/api/sfc-css-features\">SFC 样式功能</a>了解更多细节) 来帮助封装当前组件的样式。使用了不同封装模式的多个 <code>&lt;style&gt;</code> 标签可以被混合入同一个组件。</p>\n</li>\n</ul>\n<h3> 自定义块 {#custom-blocks}</h3>\n<p>在一个 <code>*.vue</code> 文件中可以为任何项目特定需求使用额外的自定义块。举个例子，一个用作写文档的 <code>&lt;docs&gt;</code> 块。这里是一些自定义块的真实用例：</p>\n<ul>\n<li><a href=\"https://gridsome.org/docs/querying-data/\" target=\"_blank\" rel=\"noopener noreferrer\">Gridsome：<code>&lt;page-query&gt;</code></a></li>\n<li><a href=\"https://github.com/wheatjs/vite-plugin-vue-gql\" target=\"_blank\" rel=\"noopener noreferrer\">vite-plugin-vue-gql：<code>&lt;gql&gt;</code></a></li>\n<li><a href=\"https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n#i18n-custom-block\" target=\"_blank\" rel=\"noopener noreferrer\">vue-i18n：<code>&lt;i18n&gt;</code></a></li>\n</ul>\n<p>自定义块的处理需要依赖工具链。如果你想要在构建中集成你的自定义语块，请参见<a href=\"/guide/scaling-up/tooling.html#sfc-custom-block-integrations\" target=\"blank\">相关工具链指南</a>获取更多细节。</p>\n<h2> 自动名称推导 {#automatic-name-inference}</h2>\n<p>SFC 在以下场景中会根据<strong>文件名</strong>自动推导其组件名：</p>\n<ul>\n<li>开发警告信息格式</li>\n<li>DevTools 审阅</li>\n<li>递归组件自引用。例如一个名为 <code>FooBar.vue</code> 的组件可以在模板中通过 <code>&lt;FooBar/&gt;</code> 引用自己。(同名情况下) 这比明确注册/导入的组件优先级低。</li>\n</ul>\n<h2> 预处理器 {#pre-processors}</h2>\n<p>代码块可以使用 <code>lang</code> 这个 attribute 来声明预处理器语言，最常见的用例就是对 <code>&lt;script&gt;</code> 块使用 TypeScript：</p>\n<div class=\"language-vue-html\" data-ext=\"vue-html\"></div><p><code>lang</code> 在任意块上都能使用，比如我们可以在 <code>&lt;style&gt;</code> 标签上使用 <a href=\"https://sass-lang.com/\" target=\"_blank\" rel=\"noopener noreferrer\">SASS</a> 或是 <code>&lt;template&gt;</code> 上使用 <a href=\"https://pugjs.org/api/getting-started.html\" target=\"_blank\" rel=\"noopener noreferrer\">Pug</a>：</p>\n<div class=\"language-vue-html line-numbers-mode\" data-ext=\"vue-html\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p>注意对各种不同的预处理的集成会导致工具链的不同，你应该查看相应的工具链文档了解细节：</p>\n<ul>\n<li><a href=\"https://vitejs.dev/guide/features.html#css-pre-processors\" target=\"_blank\" rel=\"noopener noreferrer\">Vite</a></li>\n<li><a href=\"https://cli.vuejs.org/guide/css.html#pre-processors\" target=\"_blank\" rel=\"noopener noreferrer\">Vue CLI</a></li>\n<li><a href=\"https://vue-loader.vuejs.org/guide/pre-processors.html#using-pre-processors\" target=\"_blank\" rel=\"noopener noreferrer\">webpack + vue-loader</a></li>\n</ul>\n<h2> Src 导入 {#src-imports}</h2>\n<p>如果你更喜欢将 <code>*.vue</code> 组件分散到多个文件中，可以为一个语块使用 <code>src</code> 这个 attribute 来导入一个外部文件：</p>\n<div class=\"language-vue\" data-ext=\"vue\"></div><p>请注意 <code>src</code> 导入和 Webpack 的模块请求遵循相同的路径解析规则，这意味着：</p>\n<ul>\n<li>相对路径需要以 <code>./</code> 开头</li>\n<li>你也可以从 npm 依赖中导入资源</li>\n</ul>\n<div class=\"language-vue\" data-ext=\"vue\"></div><p><code>src</code> 导入对自定义语块也同样适用：</p>\n<div class=\"language-vue\" data-ext=\"vue\"></div><h2> 注释 {#comments}</h2>\n<p>在每一个语块中你都可以按照相应语言 (HTML、CSS、JavaScript 和 Pug 等等) 的语法书写注释。对于顶层注释，请使用 HTML 的注释语法 <code>&lt;!-- comment contents here --&gt;</code></p>\n",
-      "date_published": "2023-03-26T08:23:30.000Z",
-      "date_modified": "2023-03-26T08:23:30.000Z",
+      "date_published": "2023-02-26T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "Vue"
@@ -62,8 +62,8 @@
       "id": "https://mister-hope.com/code/vue/core/template.html",
       "summary": "Vue 使用一种基于 HTML 的模板语法，使我们能够声明式地将其组件实例的数据绑定到呈现的 DOM 上。所有的 Vue 模板都是语法层面合法的 HTML，可以被符合规范的浏览器和 HTML 解析器解析。 在底层机制中，Vue 会将模板编译成高度优化的 JavaScript 代码。结合响应式系统，当应用状态变更时，Vue 能够智能地推导出需要重新渲染的...",
       "content_html": "<p>Vue 使用一种基于 HTML 的模板语法，使我们能够声明式地将其组件实例的数据绑定到呈现的 DOM 上。所有的 Vue 模板都是语法层面合法的 HTML，可以被符合规范的浏览器和 HTML 解析器解析。</p>\n<p>在底层机制中，Vue 会将模板编译成高度优化的 JavaScript 代码。结合响应式系统，当应用状态变更时，Vue 能够智能地推导出需要重新渲染的组件的最少数量，并应用最少的 DOM 操作。</p>\n<p>如果你对虚拟 DOM 的概念比较熟悉，并且偏好直接使用 JavaScript，你也可以结合可选的 JSX 支持直接手写渲染函数而不采用模板。但请注意，这将不会享受到和模板同等级别的编译时优化。</p>\n<h2> 文本插值</h2>\n<p>最基本的数据绑定形式是文本插值，它使用的是“Mustache”语法 (即双大括号)：</p>\n<div class=\"language-template\" data-ext=\"template\"></div><p>双大括号标签会被替换为相应组件实例中 <code>msg</code> 属性的值。同时每次 <code>msg</code> 属性更改时它也会同步更新。</p>\n<h2> 原始 HTML</h2>\n<p>双大括号会将数据解释为纯文本，而不是 HTML。若想插入 HTML，你需要使用 <code>v-html</code> 指令：</p>\n<div class=\"language-template\" data-ext=\"template\"></div><p>Using text interpolation: {{ rawHtml }}</p>\n<p>Using v-html directive: <span v-html=\"rawHtml\"></span></p>\n<p>这里我们遇到了一个新的概念。这里看到的 <code>v-html</code> attribute 被称为一个指令。指令由 <code>v-</code> 作为前缀，表明它们是一些由 Vue 提供的特殊 attribute，你可能已经猜到了，它们将为渲染的 DOM 应用特殊的响应式行为。这里我们做的事情简单来说就是：在当前组件实例上，将此元素的 innerHTML 与 <code>rawHtml</code> 属性保持同步。</p>\n<p><code>span</code> 的内容将会被替换为 <code>rawHtml</code> 属性的值，插值为纯 HTML——数据绑定将会被忽略。</p>\n<div class=\"hint-container note\">\n<p class=\"hint-container-title\">注</p>\n<p>你不能使用 <code>v-html</code> 来拼接组合模板，因为 Vue 不是一个基于字符串的模板引擎。在使用 Vue 时，应当使用组件作为 UI 重用和组合的基本单元。</p>\n</div>\n<div class=\"hint-container warning\">\n<p class=\"hint-container-title\">安全警告</p>\n<p>在网站上动态渲染任意 HTML 是非常危险的，因为这非常容易造成 XSS 漏洞。请仅在内容安全可信时再使用 <code>v-html</code>，并且永远不要使用用户提供的 HTML 内容。</p>\n</div>\n<h2> Attribute 绑定</h2>\n<p>双大括号不能在 HTML attributes 中使用。想要响应式地绑定一个 attribute，应该使用 <code>v-bind</code> 指令：</p>\n<div class=\"language-template\" data-ext=\"template\"></div><p><code>v-bind</code> 指令指示 Vue 将元素的 <code>id</code> attribute 与组件的 <code>dynamicId</code> 属性保持一致。如果绑定的值是 <code>null</code> 或者 <code>undefined</code>，那么该 attribute 将会从渲染的元素上移除。</p>\n<h3> 简写</h3>\n<p>因为 <code>v-bind</code> 非常常用，我们提供了特定的简写语法：</p>\n<div class=\"language-template\" data-ext=\"template\"></div><p>开头为 <code>:</code> 的 attribute 可能和一般的 HTML attribute 看起来不太一样，但它的确是合法的 attribute 名称字符，并且所有支持 Vue 的浏览器都能正确解析它。此外，他们不会出现在最终渲染的 DOM 中。简写语法是可选的，但相信在你了解了它更多的用处后，你应该会更喜欢它。</p>\n<p>接下来的指引中，我们都将在示例中使用简写语法，因为这是在实际开发中更常见的用法。</p>\n<h3> 布尔型 Attribute</h3>\n<p>布尔型 attribute 依据 true / false 值来决定 attribute 是否应该存在于该元素上。disabled 就是最常见的例子之一。</p>\n<p><code>v-bind</code> 在这种场景下的行为略有不同：</p>\n<div class=\"language-template\" data-ext=\"template\"></div><p>当 <code>isButtonDisabled</code> 为真值或一个空字符串 (即 <code>&lt;button disabled=\"\"&gt;</code>) 时，元素会包含这个 <code>disabled</code> attribute。而当其为其他假值时 attribute 将被忽略。</p>\n<h3> 动态绑定多个值</h3>\n<p>如果你有像这样的一个包含多个 attribute 的 JavaScript 对象：</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>通过不带参数的 <code>v-bind</code>，你可以将它们绑定到单个元素上：</p>\n<div class=\"language-template\" data-ext=\"template\"></div><h2> 使用 JavaScript 表达式</h2>\n<p>至此，我们仅在模板中绑定了一些简单的属性名。但是 Vue 实际上在所有的数据绑定中都支持完整的 JavaScript 表达式：</p>\n<div class=\"language-template\" data-ext=\"template\"></div><p>这些表达式都会被作为 JavaScript ，以当前组件实例为作用域解析执行。</p>\n<p>在 Vue 模板内，JavaScript 表达式可以被使用在如下场景上：</p>\n<ul>\n<li>在文本插值中 (双大括号)</li>\n<li>在任何 Vue 指令 (以 v- 开头的特殊 attribute) attribute 的值中</li>\n</ul>\n<h3> 仅支持表达式</h3>\n<p>每个绑定仅支持单一表达式，也就是一段能够被求值的 JavaScript 代码。一个简单的判断方法是是否可以合法地写在 return 后面。</p>\n<p>因此，下面的例子都是无效的：</p>\n<div class=\"language-template\" data-ext=\"template\"></div><h3> 调用函数</h3>\n<p>可以在绑定的表达式中使用一个组件暴露的方法：</p>\n<div class=\"language-template\" data-ext=\"template\"></div><div class=\"hint-container tip\">\n<p class=\"hint-container-title\">提示</p>\n<p>绑定在表达式中的方法在组件每次更新时都会被重新调用，因此不应该产生任何副作用，比如改变数据或触发异步操作。</p>\n</div>\n<h3> 受限的全局访问</h3>\n<p>模板中的表达式将被沙盒化，仅能够访问到有限的全局对象列表。该列表中会暴露常用的内置全局对象，比如 <code>Math</code> 和 <code>Date</code>。</p>\n<p>没有显式包含在列表中的全局对象将不能在模板内表达式中访问，例如用户附加在 window 上的属性。然而，你也可以自行在 <code>app.config.globalProperties</code> 上显式地添加它们，供所有的 Vue 表达式使用。</p>\n<h2> 指令 Directives</h2>\n<p>指令是带有 <code>v-</code> 前缀的特殊 attribute。Vue 提供了许多内置指令，包括上面我们所介绍的 <code>v-bind</code> 和 <code>v-html</code>。</p>\n<p>指令 attribute 的期望值为一个 JavaScript 表达式 (除了少数几个例外，即之后要讨论到的 <code>v-for</code>、<code>v-on</code> 和 <code>v-slot</code>)。一个指令的任务是在其表达式的值变化时响应式地更新 DOM。以 <code>v-if</code> 为例：</p>\n<div class=\"language-template\" data-ext=\"template\"></div><p>这里，v-if 指令会基于表达式 seen 的值的真假来移除/插入该 <code>&lt;p&gt;</code> 元素。</p>\n<h3> 参数 Arguments</h3>\n<p>某些指令会需要一个“参数”，在指令名后通过一个冒号隔开做标识。例如用 <code>v-bind</code> 指令来响应式地更新一个 HTML attribute：</p>\n<div class=\"language-template\" data-ext=\"template\"></div><p>这里 href 就是一个参数，它告诉 <code>v-bind</code> 指令将表达式 url 的值绑定到元素的 <code>href</code> attribute 上。在简写中，参数前的一切 (例如 <code>v-bind:</code>) 都会被缩略为一个 <code>:</code> 字符。</p>\n<p>另一个例子是 <code>v-on</code> 指令，它将监听 DOM 事件：</p>\n<div class=\"language-template\" data-ext=\"template\"></div><p>这里的参数是要监听的事件名称：<code>click</code>。<code>v-on</code> 有一个相应的缩写，即 <code>@</code> 字符。</p>\n<h3> 动态参数</h3>\n<p>同样在指令参数上也可以使用一个 JavaScript 表达式，需要包含在一对方括号内：</p>\n<div class=\"language-template\" data-ext=\"template\"></div><p>这里的 <code>attributeName</code> 会作为一个 JavaScript 表达式被动态执行，计算得到的值会被用作最终的参数。举例来说，如果你的组件实例有一个数据属性 <code>attributeName</code>，其值为 <code>\"href\"</code>，那么这个绑定就等价于 <code>v-bind:href</code>。</p>\n<p>相似地，你还可以将一个函数绑定到动态的事件名称上：</p>\n<div class=\"language-template\" data-ext=\"template\"></div><p>在此示例中，当 <code>eventName</code> 的值是 <code>\"focus\"</code> 时，<code>v-on:[eventName]</code> 就等价于 <code>v-on:focus</code>。</p>\n<h3> 动态参数值的限制</h3>\n<p>动态参数中表达式的值应当是一个字符串，或者是 null。特殊值 null 意为显式移除该绑定。其他非字符串的值会触发警告。</p>\n<h3> 动态参数语法的限制</h3>\n<p>动态参数表达式因为某些字符的缘故有一些语法限制，比如空格和引号，在 HTML attribute 名称中都是不合法的。例如下面的示例：</p>\n<div class=\"language-template\" data-ext=\"template\"></div><p>如果你需要传入一个复杂的动态参数，我们推荐使用计算属性替换复杂的表达式，也是 Vue 最基础的概念之一。</p>\n<p>当使用 DOM 内嵌模板 (直接写在 HTML 文件里的模板) 时，我们需要避免在名称中使用大写字母，因为浏览器会强制将其转换为小写：</p>\n<div class=\"language-template\" data-ext=\"template\"></div><p>上面的例子将会在 DOM 内嵌模板中被转换为 <code>:[someattr]</code>。如果你的组件拥有 “someAttr” 属性而非 “someattr”，这段代码将不会工作。单文件组件内的模板不受此限制。</p>\n<h3> 修饰符 Modifiers</h3>\n<p>修饰符是以点开头的特殊后缀，表明指令需要以一些特殊的方式被绑定。例如 <code>.prevent</code> 修饰符会告知 <code>v-on</code> 指令对触发的事件调用 <code>event.preventDefault()</code>：</p>\n<div class=\"language-template\" data-ext=\"template\"></div>",
-      "date_published": "2023-03-26T08:23:30.000Z",
-      "date_modified": "2023-03-26T09:00:26.000Z",
+      "date_published": "2023-02-26T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": []
     },
@@ -257,23 +257,12 @@
       ]
     },
     {
-      "title": "Update Flutter Project Deps",
-      "url": "https://mister-hope.com/note/flutter/",
-      "id": "https://mister-hope.com/note/flutter/",
-      "summary": "Gradle Versions can be found here: Kotlin Plugin Versions can be found here: Android Gradle Build Tools Google maven repository website (https://maven.google.com/web/index.html)...",
-      "content_html": "<h1> Update Flutter Project Deps</h1>\n<h2> Gradle</h2>\n<p>Versions can be found here: <a href=\"https://gradle.org/releases/\" target=\"_blank\" rel=\"noopener noreferrer\">https://gradle.org/releases/</a></p>\n<h2> Kotlin Plugin</h2>\n<p>Versions can be found here: <a href=\"https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm\" target=\"_blank\" rel=\"noopener noreferrer\">https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm</a></p>\n<h2> Android Gradle Build Tools</h2>\n<ul>\n<li>\n<p><a href=\"https://maven.google.com/web/index.html\" target=\"_blank\" rel=\"noopener noreferrer\">Google maven repository website</a></p>\n</li>\n<li>\n<p><a href=\"https://developer.android.google.cn/studio/releases/gradle-plugin?hl=zh-cn#updating-plugin\" target=\"_blank\" rel=\"noopener noreferrer\">Related docs</a></p>\n</li>\n</ul>\n",
-      "date_published": "2022-12-06T14:18:22.000Z",
-      "date_modified": "2022-12-06T14:18:22.000Z",
-      "authors": [],
-      "tags": []
-    },
-    {
       "title": "WSA",
       "url": "https://mister-hope.com/note/wsa/",
       "id": "https://mister-hope.com/note/wsa/",
       "content_html": "",
-      "date_published": "2022-12-06T14:18:22.000Z",
-      "date_modified": "2022-12-06T14:18:22.000Z",
+      "date_published": "2022-11-06T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": []
     },
@@ -283,8 +272,8 @@
       "id": "https://mister-hope.com/note/wsl/",
       "summary": "目前使用的系统是 WSL2。 其中以下操作可能需要在新机器上进行相同操作: Windows 侧 Windows 侧可以在用户目录下创建 .wslconfig 文件，用于配置 WSL2。 WSL 侧 WSL 侧可以通过 /etc/wsl.conf 进行配置。 启用 init.d 支持 在 /etc/wsl.conf 中加入: 生成新的 RSA 密钥 使用...",
       "content_html": "<p>目前使用的系统是 WSL2。</p>\n<p>其中以下操作可能需要在新机器上进行相同操作:</p>\n<h2> Windows 侧</h2>\n<p>Windows 侧可以在用户目录下创建 <code>.wslconfig</code> 文件，用于配置 WSL2。</p>\n<div class=\"language-conf\" data-ext=\"conf\"></div><h2> WSL 侧</h2>\n<p>WSL 侧可以通过 <code>/etc/wsl.conf</code> 进行配置。</p>\n<h3> 启用 init.d 支持</h3>\n<p>在 <code>/etc/wsl.conf</code> 中加入:</p>\n<div class=\"language-conf\" data-ext=\"conf\"></div><h3> 生成新的 RSA 密钥</h3>\n<div class=\"language-bash\" data-ext=\"sh\"></div><h3> 使用 Windows 代理</h3>\n<p>可以在 <code>.bashrc</code> 中加入以下内容:</p>\n<div class=\"language-bash line-numbers-mode\" data-ext=\"sh\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p>这样就可以快速地使用 proxy 和 unproxy 命令。</p>\n<h3> 安装 nvm 和 Node.js</h3>\n<div class=\"language-bash\" data-ext=\"sh\"></div><ol>\n<li>\n<p>由于 GitHub 已经遭到封锁，可以考虑安装 V2Ray 给 WSL2 以获得推送代码的能力。</p>\n</li>\n<li>\n<p>更改 Node.js 可以使用的 Old Space 大小:</p>\n<p>在用户目录的 <code>.bashrc</code> 中加入:</p>\n<div class=\"language-conf\" data-ext=\"conf\"></div></li>\n</ol>\n",
-      "date_published": "2022-12-06T14:18:22.000Z",
-      "date_modified": "2022-12-06T14:18:22.000Z",
+      "date_published": "2022-11-06T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": []
     },
@@ -294,8 +283,8 @@
       "id": "https://mister-hope.com/software/git/proxy.html",
       "summary": "由于目前 GitHub 已经在全国大部分范围内被主要运营商进行 DNS 封锁，所以如果需要配合 GitHub 使用 Git，需要进行代理设置。 代理设置 通常情况下，我们可以通过设置环境变量 HTTPPROXY 和 HTTPSPROXY 来进行代理设置。 在 Windows 下，我们可以通过设置环境变量 HTTPPROXY 和 HTTPSPROXY 来...",
       "content_html": "<p>由于目前 GitHub 已经在全国大部分范围内被主要运营商进行 DNS 封锁，所以如果需要配合 GitHub 使用 Git，需要进行代理设置。</p>\n<h2> 代理设置</h2>\n<p>通常情况下，我们可以通过设置环境变量 <code>HTTP_PROXY</code> 和 <code>HTTPS_PROXY</code> 来进行代理设置。</p>\n<p>在 Windows 下，我们可以通过设置环境变量 <code>HTTP_PROXY</code> 和 <code>HTTPS_PROXY</code> 来进行代理设置。</p>\n<details class=\"hint-container details\"><summary>Windows 例子</summary>\n<div class=\"language-bash\" data-ext=\"sh\"></div></details>\n<details class=\"hint-container details\"><summary>Linux 例子</summary>\n<div class=\"language-bash\" data-ext=\"sh\"></div></details>\n<p>上述做法仅对当前终端有效，如果需要永久生效，可以将上述命令添加到系统环境变量 (Windows) 或 <code>~/.bashrc</code> (Linux) 中。</p>\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">提示</p>\n<p><a href=\"/code/windows/env-variable.html\" target=\"blank\">Windows 添加环境变量</a></p>\n</div>\n<h2> SSH 配置</h2>\n<p>如果你在使用 22 端口通过 SSH 使用 Git，那么你需要在用户目录下的 <code>.ssh</code> 目录新建 <code>config</code> 文件，并输入以下内容:</p>\n<div class=\"language-conf line-numbers-mode\" data-ext=\"conf\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><div class=\"hint-container tip\">\n<p class=\"hint-container-title\">提示</p>\n<p>如果在 WSL 使用，获取 Windows 的 IP 地址命令为 <code>ip route | grep default | awk '{print $3}'</code>。</p>\n<p>特别注意，如不进行额外配置，每次重启后主机地址都会发生变化。</p>\n</div>\n<p>你可以使用 <code>ssh -T git@github.com</code> 来测试你的代理配置是否有效。</p>\n",
-      "date_published": "2022-12-06T14:18:22.000Z",
-      "date_modified": "2022-12-06T14:18:22.000Z",
+      "date_published": "2022-11-06T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "Git"
@@ -333,8 +322,8 @@
       "id": "https://mister-hope.com/software/git/merge.html",
       "summary": "Squash merge 通过使用 --squash 选项，你可以在合并中将多个 commit 合并为一个。 也就是对于以下的例子 git merge feature 得到的结果为: 而如果 feature 分支意在实现一个完成的特性，两个 commit 只是工作进度实际上并不重要的时候，我们可以通过 git merge --squash featur...",
       "content_html": "<h2> Squash merge</h2>\n<p>通过使用 <code>--squash</code> 选项，你可以在合并中将多个 commit 合并为一个。</p>\n<p>也就是对于以下的例子</p>\n<p><code>git merge feature</code> 得到的结果为:</p>\n<p>而如果 <code>feature</code> 分支意在实现一个完成的特性，两个 commit 只是工作进度实际上并不重要的时候，我们可以通过 <code>git merge --squash feature</code> 得到:</p>\n<h2> Cherry pick</h2>\n<p>有些时候，我们可能需要提取其他分支的某个 commit，这个时候我们可以用 cherry pick 进行操作。</p>\n<p>在这种情况下，我们可以回到 main 分支，执行 <code>git cherry-pick &lt;commit id&gt;</code> 来挑拣某个提交，当然，你可以一并在命令中提交挑拣多个 commit。</p>\n<ul>\n<li><code>git cherry-pick &lt;commit id 1&gt; &lt;commit id 2&gt;</code> 表示挑拣 commit id 1 和 commit id 2</li>\n<li><code>git cherry-pick &lt;commit id 1&gt;...&lt;commit id 2&gt;</code> 表示挑拣 commit id 1 与 commit id 2 之间 (包括两者) 的所有提交</li>\n<li><code>git cherry-pick &lt;branch&gt;</code> 表示挑拣该分支最新的提交</li>\n</ul>\n",
-      "date_published": "2022-09-07T17:18:06.000Z",
-      "date_modified": "2022-09-07T17:18:06.000Z",
+      "date_published": "2022-08-08T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "Git"
@@ -346,8 +335,8 @@
       "id": "https://mister-hope.com/code/node-js/cjs.html",
       "summary": "在计算机程序的开发过程中，随着程序代码越写越多，在一个文件里代码就会越来越长，越来越不容易维护。 为了编写可维护的代码，我们把很多函数分组，分别放到不同的文件里，这样，每个文件包含的代码就相对较少，很多编程语言都采用这种组织代码的方式。在 Node.js 环境中，一个 .js 文件就称之为一个模块(module)。 使用模块有什么好处? 最大的好处是大大提高了代码的可维护性。其次，编写代码不必从零开始。当一个模块编写完毕，就可以被其他地方引用。我们在编写程序的时候，也经常引用其他模块，包括 Node.js 内置的模块和来自第三方的模块。 使用模块还可以避免函数名和变量名冲突。相同名字的函数和变量完全可以分别存在不同的模块中，因此，我们自己在编写模块时，不必考虑名字会与其他模块冲突。",
       "content_html": "<p>在计算机程序的开发过程中，随着程序代码越写越多，在一个文件里代码就会越来越长，越来越不容易维护。</p>\n<p>为了编写可维护的代码，我们把很多函数分组，分别放到不同的文件里，这样，每个文件包含的代码就相对较少，很多编程语言都采用这种组织代码的方式。在 Node.js 环境中，一个 <code>.js</code> 文件就称之为一个模块(module)。</p>\n<p>使用模块有什么好处?</p>\n<p>最大的好处是大大提高了代码的可维护性。其次，编写代码不必从零开始。当一个模块编写完毕，就可以被其他地方引用。我们在编写程序的时候，也经常引用其他模块，包括 Node.js 内置的模块和来自第三方的模块。</p>\n<p>使用模块还可以避免函数名和变量名冲突。相同名字的函数和变量完全可以分别存在不同的模块中，因此，我们自己在编写模块时，不必考虑名字会与其他模块冲突。</p>\n<!-- more -->\n<p>在上一节，我们编写了一个 hello.js 文件，这个 hello.js 文件就是一个模块，模块的名字就是文件名(去掉.js 后缀)，所以 hello.js 文件就是名为 hello 的模块。</p>\n<p>我们把 hello.js 改造一下，创建一个函数，这样我们就可以在其他地方调用这个函数:</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>函数 <code>greet()</code> 是我们在 hello 模块中定义的，您可能注意到最后一行是一个奇怪的赋值语句，它的意思是，把函数 <code>greet</code> 作为模块的输出暴露出去，这样其他模块就可以使用 <code>greet</code> 函数了。</p>\n<p>问题是其他模块怎么使用 hello 模块的这个 <code>greet</code> 函数呢? 我们再编写一个 <code>main.js</code> 文件，调用 <code>hello</code> 模块的 <code>greet</code> 函数:</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>注意到引入 <code>hello</code> 模块用 Node.js 提供的 <code>require</code> 函数:</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>引入的模块作为变量保存在 <code>greet</code> 变量中，那 greet 变量到底是什么东西? 其实变量 <code>greet</code> 就是在 <code>hello.js</code> 中我们用 <code>module.exports = greet;</code> 输出的 <code>greet</code> 函数。所以，<code>main.js</code> 就成功地引用了 <code>hello.js</code> 模块中定义的 <code>greet()</code> 函数，接下来就可以直接使用它了。</p>\n<p>在使用 <code>require()</code> 引入模块的时候，请注意模块的相对路径。因为 main.js 和 hello.js 位于同一个目录，所以我们用了当前目录.:</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>如果只写模块名:</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>则 Node.js 会依次在内置模块、全局模块和当前模块下查找 hello.js，您很可能会得到一个错误:</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>遇到这个错误，您要检查:</p>\n<ul>\n<li>模块名是否写对了；</li>\n<li>模块文件是否存在；</li>\n<li>相对路径是否写对了。</li>\n</ul>\n<h2> CommonJS 规范</h2>\n<p>这种模块加载机制被称为 <code>CommonJS</code> 规范。在这个规范下，每个 <code>.js</code> 文件都是一个模块，它们内部各自使用的变量名和函数名都互不冲突，例如，<code>hello.js</code> 和 <code>main.js</code> 都申明了全局变量 <code>const s = 'xxx'</code>，但互不影响。</p>\n<p>一个模块想要对外暴露变量(函数也是变量)，可以用 <code>module.exports = variable;</code>，一个模块要引用其他模块暴露的变量，用 <code>const ref = require('module_name');</code> 就拿到了引用模块的变量。</p>\n<h2> 总结</h2>\n<p>要在模块中对外输出变量，用:</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>输出的变量可以是任意对象、函数、数组等等。</p>\n<p>要引入其他模块输出的对象，用:</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>引入的对象具体是什么，取决于引入模块输出的对象。</p>\n<h2> 深入了解模块原理</h2>\n<p>如果您想详细地了解<strong>CommonJS</strong>的模块实现原理，请继续往下阅读。如果不想了解，请结束阅读。</p>\n<p>当我们编写 JavaScript 代码时，我们可以申明全局变量:</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>在浏览器中，大量使用全局变量可不好。如果您在 <code>a.js</code> 中使用了全局变量 s，那么，在 <code>b.js</code> 中也使用全局变量 s，将造成冲突，<code>b.js</code> 中对 s 赋值会改变 <code>a.js</code> 的运行逻辑。</p>\n<p>也就是说，JavaScript 语言本身并没有一种模块机制来保证不同模块可以使用相同的变量名。</p>\n<p>那 Node.js 是如何实现这一点的?</p>\n<p>其实要实现“模块”这个功能，并不需要语法层面的支持。Node.js 也并不会增加任何 JavaScript 语法。实现“模块”功能的奥妙就在于 JavaScript 是一种函数式编程语言，它支持闭包。如果我们把一段 JavaScript 代码用一个函数包装起来，这段代码的所有“全局”变量就变成了函数内部的局部变量。</p>\n<p>请注意我们编写的 <code>hello.js</code> 代码是这样的:</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>Node.js 加载了 hello.js 后，它可以把代码包装一下，变成这样执行:</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>这样一来，原来的全局变量 <code>s</code> 现在变成了匿名函数内部的局部变量。如果 Node.js 继续加载其他模块，这些模块中定义的“全局”变量 <code>s</code> 也互不干扰。</p>\n<p>所以，Node.js 利用 JavaScript 的函数式编程的特性，轻而易举地实现了模块的隔离。</p>\n<p>但是，模块的输出 <code>module.exports</code> 怎么实现?</p>\n<p>这个也很容易实现，Node.js 可以先准备一个对象 <code>module</code>:</p>\n<div class=\"language-javascript line-numbers-mode\" data-ext=\"js\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p>可见，变量 module 是 Node.js 在加载 js 文件前准备的一个变量，并将其传入加载函数，我们在 <code>hello.js</code> 中可以直接使用变量 <code>module</code> 原因就在于它实际上是函数的一个参数:</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>通过把参数 <code>module</code> 传递给 <code>load()</code> 函数，<code>hello.js</code> 就顺利地把一个变量传递给了 Node.js 执行环境，Node.js 会把 module 变量保存到某个地方。</p>\n<p>由于 Node.js 保存了所有导入的 module，当我们用 <code>require()</code> 获取 module 时，Node.js 找到对应的 module，把这个 module 的 <code>exports</code> 变量返回，这样，另一个模块就顺利拿到了模块的输出:</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>以上是 Node.js 实现 JavaScript 模块的一个简单的原理介绍。</p>\n<h2> module.exports vs exports</h2>\n<p>很多时候，您会看到，在 Node.js 环境中，有两种方法可以在一个模块中输出变量:</p>\n<p>方法一: 对 module.exports 赋值:</p>\n<div class=\"language-javascript line-numbers-mode\" data-ext=\"js\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p>方法二: 直接使用 exports:</p>\n<div class=\"language-javascript line-numbers-mode\" data-ext=\"js\"><div class=\"line-numbers\" aria-hidden=\"true\"><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div><div class=\"line-number\"></div></div></div><p>但是您不可以直接对 exports 赋值:</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>如果您对上面的写法感到十分困惑，不要着急，我们来分析 Node.js 的加载机制:</p>\n<p>首先，Node.js 会把整个待加载的 hello.js 文件放入一个包装函数 load 中执行。在执行这个 load()函数前，Node.js 准备好了 module 变量:</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p><code>load()</code> 函数最终返回 <code>module.exports</code>:</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>也就是说，默认情况下，Node.js 准备的 <code>exports</code> 变量和 <code>module.exports</code> 变量实际上是同一个变量，并且初始化为空对象 <code>{}</code>，于是，我们可以写:</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>也可以写:</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>换句话说，Node.js 默认给您准备了一个空对象 <code>{}</code>，这样您可以直接往里面加东西。</p>\n<p>但是，如果我们要输出的是一个函数或数组，那么，只能给 <code>module.exports</code> 赋值:</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>给 <code>exports</code> 赋值是无效的，因为赋值后，<code>module.exports</code> 仍然是空对象 <code>{}</code>。</p>\n<h2> 结论</h2>\n<p>如果要输出一个键值对象 <code>{}</code>，可以利用 <code>exports</code> 这个已存在的空对象 <code>{}</code>，并继续在上面添加新的键值；</p>\n<p>如果要输出一个函数或数组，必须直接对 <code>module.exports</code> 对象赋值。</p>\n<p>所以我们可以得出结论: 直接对 <code>module.export</code>s 赋值，可以应对任何情况:</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>或者:</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><p>最终，我们强烈建议使用 <code>module.exports = xxx</code> 的方式来输出模块变量，这样，您只需要记忆一种方法。</p>\n",
-      "date_published": "2022-06-14T04:47:46.000Z",
-      "date_modified": "2022-06-14T04:47:46.000Z",
+      "date_published": "2022-05-14T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "Node.js"
@@ -359,8 +348,8 @@
       "id": "https://mister-hope.com/code/mini-app/guide/service/api/",
       "summary": "小程序开发框架提供丰富的微信原生 API，可以方便的调起微信提供的能力，如获取用户信息，本地存储，支付功能等。详细介绍请参考 API 文档。",
       "content_html": "<p>小程序开发框架提供丰富的微信原生 API，可以方便的调起微信提供的能力，如获取用户信息，本地存储，支付功能等。详细介绍请参考 <a href=\"https://developers.weixin.qq.com/miniprogram/dev/api/\" target=\"_blank\" rel=\"noopener noreferrer\">API 文档</a>。 </p>\n<!-- more -->\n<p>通常，在小程序 API 有以下几种类型:</p>\n<h2> 事件监听 API</h2>\n<p>我们约定，以 on 开头的 API 用来监听某个事件是否触发，如: <code>wx.onSocketOpen</code>, <code>wx.onCompassChange</code> 等。</p>\n<p>这类 API 接受一个回调函数作为参数，当事件触发时会调用这个回调函数，并将相关数据以参数形式传入。</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><h2> 同步 API</h2>\n<p>我们约定，以 <code>Sync</code> 结尾的 API 都是同步 API， 如 <code>wx.setStorageSync</code>，<code>wx.getSystemInfoSync</code> 等。此外，也有一些其他的同步 API，如 <code>wx.createWorker</code>, <code>wx.getBackgroundAudioManager</code> 等，详情参见 API 文档中的说明。</p>\n<p>同步 API 的执行结果可以通过函数返回值直接获取，如果执行出错会抛出异常。</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><h2> 异步 API</h2>\n<p>大多数 API 都是异步 API，如 <code>wx.request</code>，<code>wx.login</code> 等。这类 API 接口通常都接受一个 <code>Object</code> 类型的参数，这个参数都支持按需指定以下字段来接收接口调用结果:</p>\n<h3> Object 参数说明</h3>\n<table>\n<thead>\n<tr>\n<th>参数名</th>\n<th>类型</th>\n<th>必填</th>\n<th>说明</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>success</td>\n<td>function</td>\n<td>否</td>\n<td>接口调用成功的回调函数</td>\n</tr>\n<tr>\n<td>fail</td>\n<td>function</td>\n<td>否</td>\n<td>接口调用失败的回调函数</td>\n</tr>\n<tr>\n<td>complete</td>\n<td>function</td>\n<td>否</td>\n<td>接口调用结束的回调函数(调用成功、失败都会执行)</td>\n</tr>\n<tr>\n<td>其他</td>\n<td>Any</td>\n<td>-</td>\n<td>接口定义的其他参数</td>\n</tr>\n</tbody>\n</table>\n<h3> 回调函数的参数</h3>\n<p><code>success</code>, <code>fail</code>, <code>complete</code> 函数调用时会传入一个 <code>Object</code> 类型参数，包含以下字段:</p>\n<table>\n<thead>\n<tr>\n<th>属性</th>\n<th>类型</th>\n<th>说明</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>errMsg</td>\n<td>string</td>\n<td>错误信息，如果调用成功返回 <code>${apiName}:ok</code></td>\n</tr>\n<tr>\n<td>errCode</td>\n<td>number</td>\n<td>错误码，仅部分 API 支持，具体含义请参考对应 API 文档，成功时为 0。</td>\n</tr>\n<tr>\n<td>其他</td>\n<td>Any</td>\n<td>接口返回的其他数据</td>\n</tr>\n</tbody>\n</table>\n<p>异步 API 的执行结果需要通过 <code>Object</code> 类型的参数中传入的对应回调函数获取。部分异步 API 也会有返回值，可以用来实现更丰富的功能，如 <code>wx.request</code>, <code>wx.connectSocke</code>t` 等。</p>\n<div class=\"language-javascript\" data-ext=\"js\"></div><div class=\"hint-container warning\">\n<p class=\"hint-container-title\">注意</p>\n<p>异步函数会在异步动作进行完之后，触发对应设置好的回调函数，所以此时的函数执行已经脱离了正常 js 的执行上下文。</p>\n<p>如果对上面的话不理解，请务必查阅<strong>什么是同步/异步函数</strong>。</p>\n</div>\n<h2> 常见 API</h2>\n<ul>\n<li>\n<p><a href=\"/code/mini-app/guide/service/api/route.html\" target=\"blank\">路由</a></p>\n</li>\n<li>\n<p><a href=\"/code/mini-app/guide/service/api/storage.html\" target=\"blank\">数据缓存</a></p>\n</li>\n<li>\n<p><a href=\"/code/mini-app/guide/service/api/interact.html\" target=\"blank\">交互</a></p>\n</li>\n<li>\n<p><a href=\"/code/mini-app/guide/service/api/network.html\" target=\"blank\">网络</a></p>\n</li>\n<li>\n<p><a href=\"/code/mini-app/guide/service/api/system.html\" target=\"blank\">系统信息</a></p>\n</li>\n</ul>\n",
-      "date_published": "2022-05-04T19:02:05.000Z",
-      "date_modified": "2022-06-14T04:47:46.000Z",
+      "date_published": "2022-04-05T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "小程序"
@@ -385,8 +374,8 @@
       "id": "https://mister-hope.com/software/mysql/",
       "summary": "目录 介绍 (intro.md); 5.7 版本与 8 的比较 (compare.md);",
       "content_html": "<h2> 目录</h2>\n<ul>\n<li><a href=\"/software/mysql/intro.html\" target=\"blank\">介绍</a></li>\n<li><a href=\"/software/mysql/compare.html\" target=\"blank\">5.7 版本与 8 的比较</a></li>\n</ul>\n",
-      "date_published": "2022-02-12T05:50:30.000Z",
-      "date_modified": "2022-02-12T05:50:30.000Z",
+      "date_published": "2022-01-12T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [
         {
           "name": "李欣桐"
@@ -465,8 +454,8 @@
       "id": "https://mister-hope.com/about/",
       "summary": "slidestart 基本信息 性别: 男; 年龄: 25; 婚姻情况: 未婚; 单身: 否; 爱好: 钓鱼、国际象棋、花体英文、羽毛球、编程; 性格比较开朗随和，热爱帮助他人，喜欢平时写一些开源项目。 学历经历 本科东北师范大学就读物理学; 现在在东北师范大学就读理论物理硕士; 暂无特别突出的科研成果; 联系方式 你可以通过我的 QQ 1178522...",
       "content_html": "",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2023-03-24T09:43:26.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": []
     },
@@ -489,19 +478,8 @@
       "id": "https://mister-hope.com/code/",
       "summary": "此处是 Mr.Hope 存放的一些代码笔记。",
       "content_html": "<p>此处是 Mr.Hope 存放的一些代码笔记。</p>\n<!-- more -->\n<h2> 目录</h2>\n<h3> 基础</h3>\n<ul>\n<li>\n<p><a href=\"/code/basic/\" target=\"blank\">基础知识</a></p>\n</li>\n<li>\n<p><a href=\"/code/windows/\" target=\"blank\">Windows 基础</a></p>\n</li>\n<li>\n<p><a href=\"/code/github/\" target=\"blank\">GitHub 介绍</a></p>\n</li>\n</ul>\n<h3> 前端开发</h3>\n<ul>\n<li>\n<p><a href=\"/code/website/\" target=\"blank\">网站相关</a></p>\n</li>\n<li>\n<p><a href=\"/code/vue/\" target=\"blank\">Vue 相关</a></p>\n</li>\n<li>\n<p><a href=\"/code/mini-app/\" target=\"blank\">小程序教程</a></p>\n</li>\n<li>\n<p><a href=\"/code/node-js/\" target=\"blank\">Node.js</a></p>\n</li>\n</ul>\n<h3> 代码学习</h3>\n<ul>\n<li>\n<p><a href=\"/code/language/\" target=\"blank\">代码学习</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/learning.html\" target=\"blank\">如何学习一门语言</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/js/\" target=\"blank\">JavaScript 教程</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/typescript/\" target=\"blank\">TypeScript 教程</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/\" target=\"blank\">Python 教程</a> (编写中...)</p>\n</li>\n<li>\n<p><a href=\"/code/language/markdown/\" target=\"blank\">Markdown 教程</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/yaml/\" target=\"blank\">YAML 教程</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/json/\" target=\"blank\">JSON 教程</a></p>\n</li>\n</ul>\n<h3> APP</h3>\n<ul>\n<li><a href=\"/code/android/\" target=\"blank\">Android 开发</a></li>\n</ul>\n<h3> 后端开发</h3>\n<ul>\n<li><a href=\"/code/back-end/\" target=\"blank\">后端开发</a></li>\n</ul>\n<h3> 代码学习网站</h3>\n<h3> 优质网站</h3>\n<ul>\n<li>\n<p><a href=\"https://wangdoc.com/\" target=\"_blank\" rel=\"noopener noreferrer\">网道</a></p>\n</li>\n<li>\n<p><a href=\"https://www.liaoxuefeng.com/\" target=\"_blank\" rel=\"noopener noreferrer\">廖雪峰的网站</a></p>\n</li>\n<li>\n<p><a href=\"https://developer.mozilla.org/zh-CN/\" target=\"_blank\" rel=\"noopener noreferrer\">MDN</a></p>\n<div class=\"hint-container info\">\n<p class=\"hint-container-title\">相关信息</p>\n<p>MDN 的中文文档翻译很差，大多都是机翻，十分建议直接阅读英文文档。</p>\n</div>\n</li>\n</ul>\n<h3> 杂牌网站</h3>\n<ul>\n<li>\n<p><a href=\"https://www.runoob.com/\" target=\"_blank\" rel=\"noopener noreferrer\">菜鸟教程</a> </p>\n</li>\n<li>\n<p><a href=\"https://www.w3cschool.cn\" target=\"_blank\" rel=\"noopener noreferrer\">w3cschool</a> </p>\n</li>\n<li>\n<p><a href=\"http://www.w3school.com.cn/\" target=\"_blank\" rel=\"noopener noreferrer\">w3school</a> </p>\n</li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2023-03-24T09:43:26.000Z",
-      "authors": [],
-      "tags": []
-    },
-    {
-      "title": "硬件相关",
-      "url": "https://mister-hope.com/hardware/",
-      "id": "https://mister-hope.com/hardware/",
-      "summary": "硬件相关 这里是一些常见的硬件相关的问题总结，供访客查阅。",
-      "content_html": "<h1> 硬件相关</h1>\n<p>这里是一些常见的硬件相关的问题总结，供访客查阅。</p>\n<!-- more -->\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:01:38.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": []
     },
@@ -524,8 +502,8 @@
       "id": "https://mister-hope.com/note/",
       "summary": "这里是 Mr.Hope 的一些随笔，后续被整理进博客中。 四季 介绍 这是我在高一写的散文诗集，最初发表在空间日志上。 后续也写了一些诗补充了进去，其中以 “秋之思” 篇幅最多 近日将其作为少年回忆，整理在博客中。 秋之思 (fall/catalog.md); 冬之语 (winter/note.md); 春之诗 (spring/1.md); 夏之歌 (...",
       "content_html": "<p>这里是 Mr.Hope 的一些随笔，后续被整理进博客中。</p>\n<h2> 四季</h2>\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">介绍</p>\n<p>这是我在高一写的散文诗集，最初发表在空间日志上。</p>\n<p>后续也写了一些诗补充了进去，其中以 “秋之思” 篇幅最多</p>\n<p>近日将其作为少年回忆，整理在博客中。</p>\n</div>\n<ul>\n<li>\n<p><a href=\"/note/fall/catalog.html\" target=\"blank\">秋之思</a></p>\n</li>\n<li>\n<p><a href=\"/note/winter/note.html\" target=\"blank\">冬之语</a></p>\n</li>\n<li>\n<p><a href=\"/note/spring/1.html\" target=\"blank\">春之诗</a></p>\n</li>\n<li>\n<p><a href=\"/note/summer/1.html\" target=\"blank\">夏之歌</a></p>\n</li>\n</ul>\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">其他方式</p>\n<p>也可查看 <a href=\"https://user.qzone.qq.com/1178522294\" target=\"_blank\" rel=\"noopener noreferrer\">空间相册</a></p>\n</div>\n<h2> 笑谈人生</h2>\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">介绍</p>\n<p>这是我在高一写的人生感悟，最初发表在空间日志上。</p>\n<p>近日将其作为少年回忆，整理在博客中。</p>\n</div>\n<ul>\n<li><a href=\"/note/life/\" target=\"blank\">点击前往</a></li>\n</ul>\n<h2> 轻言细语</h2>\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">介绍</p>\n<p>这是我在高一写的一些小的散文诗，最初发表在空间日志上。</p>\n<p>近日将其作为少年回忆，整理在博客中。</p>\n</div>\n<ul>\n<li><a href=\"/note/poem/\" target=\"blank\">点击前往</a></li>\n</ul>\n<h2> Node.js 相关</h2>\n<ul>\n<li><a href=\"/note/node-js/current-path.html\" target=\"blank\">current-path 相关</a></li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-12T05:50:30.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "随笔"
@@ -537,8 +515,8 @@
       "id": "https://mister-hope.com/physics/",
       "summary": "目录 电磁学 (electromagnetism/README.md); 光学 (optism/README.md); 热力学与统计物理 (tsp/README.md); 量子力学 (quatum/README.md);",
       "content_html": "<h2> 目录</h2>\n<ul>\n<li>\n<p><a href=\"/physics/electromagnetism/\" target=\"blank\">电磁学</a></p>\n</li>\n<li>\n<p><a href=\"/physics/optism/\" target=\"blank\">光学</a></p>\n</li>\n<li>\n<p><a href=\"/physics/tsp/\" target=\"blank\">热力学与统计物理</a></p>\n</li>\n<li>\n<p><a href=\"/physics/quatum/\" target=\"blank\">量子力学</a></p>\n</li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:01:38.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "物理"
@@ -550,8 +528,8 @@
       "id": "https://mister-hope.com/software/",
       "summary": "代码编辑器 编辑器介绍 (editor.md); 团队协作 开发项目的代码版本管理以及多人协作使用 Git 软件 Git 教程 (git/README.md); GitHub 介绍 (../code/github/README.md); 浏览器 在开发中，调试网页推荐使用 Chrome。 Chrome 介绍 (chrome.md); 后端 Http S...",
       "content_html": "<h2> 代码编辑器</h2>\n<ul>\n<li><a href=\"/software/editor.html\" target=\"blank\">编辑器介绍</a></li>\n</ul>\n<h2> 团队协作</h2>\n<p>开发项目的代码版本管理以及多人协作使用 Git 软件</p>\n<ul>\n<li>\n<p><a href=\"/software/git/\" target=\"blank\">Git 教程</a></p>\n</li>\n<li>\n<p><a href=\"/code/github/\" target=\"blank\">GitHub 介绍</a></p>\n</li>\n</ul>\n<h2> 浏览器</h2>\n<p>在开发中，调试网页推荐使用 Chrome。</p>\n<ul>\n<li><a href=\"/software/chrome.html\" target=\"blank\">Chrome 介绍</a></li>\n</ul>\n<h2> 后端</h2>\n<h3> Http Server</h3>\n<p>网站已经停止使用 Apache Lounge 编译的 httpd Apache。目前迁移到更加轻量，并发性能更好的 Nginx 上。</p>\n<ul>\n<li>\n<p><a href=\"/software/apache.html\" target=\"blank\">Apache</a> </p>\n</li>\n<li>\n<p><a href=\"/software/nginx.html\" target=\"blank\">Nginx</a></p>\n</li>\n</ul>\n<h3> 抓包与 API 调试</h3>\n<ul>\n<li><a href=\"/software/postman.html\" target=\"blank\">Postman</a></li>\n</ul>\n<h2> 工具软件</h2>\n<ul>\n<li><a href=\"/software/tool/\" target=\"blank\">查看详情</a></li>\n</ul>\n<h2> 手机 APP</h2>\n<h3> soloLearn</h3>\n<p>一个代码在线学习社区，只有英文版。由于代码语义贴近英文原生逻辑，十分建议在编辑代码时 “think in English”。</p>\n<p>软件中的 code playground 可以在线运行大部分代码，大家在手机上就可以进行练习与尝试。</p>\n<h2> Adobe 软件</h2>\n<p>Adobe 全系软件的获取，请见 <a href=\"https://www.weibo.com/vposy\" target=\"_blank\" rel=\"noopener noreferrer\">VPosy 的微博</a> 的置顶帖。</p>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-12-10T06:04:20.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": []
     },
@@ -639,8 +617,8 @@
       "id": "https://mister-hope.com/code/language/",
       "summary": "如何学习一门语言 (learning.md); 教程目录 JavaScript 教程 (js/README.md); TypeScript 教程 (typescript/README.md); Python 教程 (python/README.md) (编写中...); Java 教程 (https://www.liaoxuefeng.com/wiki...",
       "content_html": "<ul>\n<li><a href=\"/code/language/learning.html\" target=\"blank\">如何学习一门语言</a></li>\n</ul>\n<h2> 教程目录</h2>\n<ul>\n<li>\n<p><a href=\"/code/language/js/\" target=\"blank\">JavaScript 教程</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/typescript/\" target=\"blank\">TypeScript 教程</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/python/\" target=\"blank\">Python 教程</a> (编写中...)</p>\n</li>\n<li>\n<p><a href=\"https://www.liaoxuefeng.com/wiki/1252599548343744\" target=\"_blank\" rel=\"noopener noreferrer\">Java 教程</a>(廖雪峰的博客)</p>\n</li>\n<li>\n<p><a href=\"/code/language/markdown/\" target=\"blank\">Markdown 教程</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/yaml/\" target=\"blank\">YAML 教程</a></p>\n</li>\n<li>\n<p><a href=\"/code/language/json/\" target=\"blank\">JSON 教程</a></p>\n</li>\n</ul>\n<h2> Linter</h2>\n<ul>\n<li><a href=\"/code/language/linter/\" target=\"blank\">Linter 介绍</a></li>\n</ul>\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">提示</p>\n<p>C 、C++、Java、PHP 正在编写中...</p>\n</div>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:01:38.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "教程"
@@ -666,8 +644,8 @@
       "id": "https://mister-hope.com/code/node-js/",
       "summary": "Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，拥有大量的模块。Node.js 主要以其丰富并及其容易导入的 Node.js package，以及其方便管理 npm (Node.js Package Manager)闻名。",
       "content_html": "<p>Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，拥有大量的模块。Node.js 主要以其丰富并及其容易导入的 Node.js package，以及其方便管理 npm (Node.js Package Manager)闻名。</p>\n<!-- more -->\n<h2> 教程目录</h2>\n<ul>\n<li>\n<p><a href=\"/code/node-js/intro.html\" target=\"blank\">Node.js 介绍</a></p>\n</li>\n<li>\n<p><a href=\"/code/node-js/install.html\" target=\"blank\">Node.js 与 npm 安装</a></p>\n</li>\n<li>\n<p><a href=\"/code/node-js/environment.html\" target=\"blank\">Node.js 环境</a></p>\n</li>\n<li>\n<p><a href=\"/code/node-js/program.html\" target=\"blank\">编程</a></p>\n</li>\n<li>\n<p><a href=\"/code/node-js/cjs.html\" target=\"blank\">Node.js CJS 模块</a></p>\n</li>\n</ul>\n<p>以上，就是 Node.js 的简易介绍，系统学习可以查看下方的详细教程。</p>\n<h2> 初学者教程</h2>\n<ul>\n<li>\n<p><a href=\"https://www.nodebeginner.org/index-zh-cn.html\" target=\"_blank\" rel=\"noopener noreferrer\">Node.js 入门</a></p>\n</li>\n<li>\n<p><a href=\"https://www.w3cschool.cn/nodejs/\" target=\"_blank\" rel=\"noopener noreferrer\">W3CSchool</a></p>\n</li>\n</ul>\n<h2> 官方文档</h2>\n<ul>\n<li><a href=\"https://nodejs.org/dist/latest-v14.x/docs/api/\" target=\"_blank\" rel=\"noopener noreferrer\">地址</a></li>\n</ul>\n<h2> Yarn</h2>\n<p>快速、可靠、安全的依赖管理工具。</p>\n<ul>\n<li>\n<p>Yarn 缓存了每个下载过的包，所以再次使用时无需重复下载。同时利用并行下载以最大化资源利用率，因此安装速度更快。</p>\n</li>\n<li>\n<p>在执行代码之前，Yarn 会通过算法校验每个安装包的完整性。</p>\n</li>\n<li>\n<p>使用详细、简洁的锁文件格式和明确的安装算法，Yarn 能够保证在不同系统上无差异的工作。</p>\n</li>\n<li>\n<p><a href=\"https://www.yarnpkg.com/zh-Hans/docs/install#windows-stable\" target=\"_blank\" rel=\"noopener noreferrer\">下载地址</a></p>\n</li>\n<li>\n<p><a href=\"https://www.yarnpkg.com/zh-Hans/docs\" target=\"_blank\" rel=\"noopener noreferrer\">官方文档</a></p>\n</li>\n</ul>\n<h3> 命令</h3>\n<ul>\n<li>\n<p><code>yarn install</code>: 执行安装</p>\n</li>\n<li>\n<p><code>yarn upgrade</code>: 执行升级</p>\n</li>\n<li>\n<p><code>yarn add &lt;package&gt;</code>: 添加一个包</p>\n</li>\n<li>\n<p><code>yarn config set cache-folder &lt;path&gt;</code>: 更改缓存文件夹</p>\n</li>\n<li>\n<p><code>yarn config set registry &lt;registry&gt;</code>: 更改源</p>\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">提示</p>\n<p>在国内，建议换成淘宝源 <a href=\"https://registry.npm.taobao.org\" target=\"_blank\" rel=\"noopener noreferrer\">https://registry.npm.taobao.org</a></p>\n<p>即执行</p>\n<div class=\"language-bash\" data-ext=\"sh\"></div></div>\n</li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-06-14T04:47:46.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "Node.js"
@@ -692,8 +670,8 @@
       "id": "https://mister-hope.com/code/vue/",
       "summary": "简介 Vue (发音为 /vjuː/，类似 view) 是一款用于构建用户界面的 JavaScript 框架。它基于标准 HTML、CSS 和 JavaScript 构建，并提供了一套声明式的、组件化的编程模型，帮助你高效地开发用户界面。无论是简单还是复杂的界面，Vue 都可以胜任。 渐进式框架 Vue 是一个框架，也是一个生态。其功能覆盖了大部分前端...",
       "content_html": "<h2> 简介</h2>\n<p>Vue (发音为 /vjuː/，类似 view) 是一款用于构建用户界面的 JavaScript 框架。它基于标准 HTML、CSS 和 JavaScript 构建，并提供了一套声明式的、组件化的编程模型，帮助你高效地开发用户界面。无论是简单还是复杂的界面，Vue 都可以胜任。</p>\n<h2> 渐进式框架</h2>\n<p>Vue 是一个框架，也是一个生态。其功能覆盖了大部分前端开发常见的需求。但 Web 世界是十分多样化的，不同的开发者在 Web 上构建的东西可能在形式和规模上会有很大的不同。考虑到这一点，Vue 的设计非常注重灵活性和“可以被逐步集成”这个特点。根据你的需求场景，你可以用不同的方式使用 Vue：</p>\n<ul>\n<li>无需构建步骤，渐进式增强静态的 HTML</li>\n<li>在任何页面中作为 Web Components 嵌入</li>\n<li>单页应用 (SPA)</li>\n<li>全栈 / 服务端渲染 (SSR)</li>\n<li>Jamstack / 静态站点生成 (SSG)</li>\n<li>开发桌面端、移动端、WebGL，甚至是命令行终端中的界面</li>\n</ul>\n<h2> Vue.js 教程目录</h2>\n<ul>\n<li>\n<p><a href=\"/code/vue/core/install.html\" target=\"blank\">开发环境安装</a></p>\n</li>\n<li>\n<p><a href=\"/code/vue/core/get-started.html\" target=\"blank\">起步上手</a></p>\n</li>\n<li>\n<p><a href=\"/code/vue/core/app.html\" target=\"blank\">创建 Vue 应用</a></p>\n</li>\n<li>\n<p><a href=\"/code/vue/core/template.html\" target=\"blank\">模板语法</a></p>\n</li>\n<li>\n<p><a href=\"/code/vue/core/sfc.html\" target=\"blank\">Vue 单文件组件说明</a></p>\n</li>\n</ul>\n<h2> Vue 生态</h2>\n<h3> Vue Router</h3>\n<ul>\n<li><a href=\"/code/vue/router/\" target=\"blank\">Vue Router 概述</a></li>\n</ul>\n<!-- TODO: Add pinia and vite -->\n<h3> 其他 Vue 生态</h3>\n<ul>\n<li><a href=\"https://vuepress-theme-hope.github.io/basic/vuepress/\" target=\"_blank\" rel=\"noopener noreferrer\">VuePress</a>: 静态站点生成器；</li>\n<li><a href=\"https://vue.ant.design/docs/vue/introduce-cn/\" target=\"_blank\" rel=\"noopener noreferrer\">Ant Design Vue</a>: 阿里的一套 UI 组件库；</li>\n<li><a href=\"https://bootstrap-vue.js.org/\" target=\"_blank\" rel=\"noopener noreferrer\">BootstrapVue</a></li>\n</ul>\n<h2> 官方文档</h2>\n<ul>\n<li>\n<p><a href=\"https://cn.vuejs.org/guide/introduction.html\" target=\"_blank\" rel=\"noopener noreferrer\">Vue.js 介绍</a></p>\n</li>\n<li>\n<p><a href=\"https://cn.vuejs.org/api/\" target=\"_blank\" rel=\"noopener noreferrer\">Vue.js API</a></p>\n</li>\n</ul>\n<hr>\n<ul>\n<li>\n<p><a href=\"https://router.vuejs.org/zh/guide/#html\" target=\"_blank\" rel=\"noopener noreferrer\">Vue Router 介绍</a></p>\n</li>\n<li>\n<p><a href=\"https://router.vuejs.org/zh/api/\" target=\"_blank\" rel=\"noopener noreferrer\">Vue Router API</a></p>\n</li>\n</ul>\n<h2> 其他文档</h2>\n<ul>\n<li><a href=\"/code/vue/compare.html\" target=\"blank\">Vue 与小程序的异同</a></li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2023-03-26T08:23:30.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "基础"
@@ -731,8 +709,8 @@
       "id": "https://mister-hope.com/linux/bash/",
       "summary": "目录 简介 (intro.md); 基本语法 (grammar.md); 模式扩展 (expansion.md); 引号和转义 (quotation.md); 变量 (variable.md); 字符串操作 (string.md); 算术运算 (arithmetic.md); 行操作 (readline.md); 目录堆栈 (stack.md); 脚本...",
       "content_html": "<h2> 目录</h2>\n<ul>\n<li>\n<p><a href=\"/linux/bash/intro.html\" target=\"blank\">简介</a></p>\n</li>\n<li>\n<p><a href=\"/linux/bash/grammar.html\" target=\"blank\">基本语法</a></p>\n</li>\n<li>\n<p><a href=\"/linux/bash/expansion.html\" target=\"blank\">模式扩展</a></p>\n</li>\n<li>\n<p><a href=\"/linux/bash/quotation.html\" target=\"blank\">引号和转义</a></p>\n</li>\n<li>\n<p><a href=\"/linux/bash/variable.html\" target=\"blank\">变量</a></p>\n</li>\n<li>\n<p><a href=\"/linux/bash/string.html\" target=\"blank\">字符串操作</a></p>\n</li>\n<li>\n<p><a href=\"/linux/bash/arithmetic.html\" target=\"blank\">算术运算</a></p>\n</li>\n<li>\n<p><a href=\"/linux/bash/readline.html\" target=\"blank\">行操作</a></p>\n</li>\n<li>\n<p><a href=\"/linux/bash/stack.html\" target=\"blank\">目录堆栈</a></p>\n</li>\n<li>\n<p><a href=\"/linux/bash/script.html\" target=\"blank\">脚本入门</a></p>\n</li>\n<li>\n<p><a href=\"/linux/bash/read.html\" target=\"blank\">read 命令</a></p>\n</li>\n<li>\n<p><a href=\"/linux/bash/condition.html\" target=\"blank\">条件判断</a></p>\n</li>\n<li>\n<p><a href=\"/linux/bash/loop.html\" target=\"blank\">循环</a></p>\n</li>\n<li>\n<p><a href=\"/linux/bash/function.html\" target=\"blank\">函数</a></p>\n</li>\n<li>\n<p><a href=\"/linux/bash/array.html\" target=\"blank\">数组</a></p>\n</li>\n<li>\n<p><a href=\"/linux/bash/set.html\" target=\"blank\">set 命令</a></p>\n</li>\n<li>\n<p><a href=\"/linux/bash/debug.html\" target=\"blank\">脚本除错</a></p>\n</li>\n<li>\n<p><a href=\"/linux/bash/mktemp.html\" target=\"blank\">mktemp 命令，trap 命令</a></p>\n</li>\n<li>\n<p><a href=\"/linux/bash/startup.html\" target=\"blank\">启动环境</a></p>\n</li>\n<li>\n<p><a href=\"/linux/bash/prompt.html\" target=\"blank\">命令提示符</a></p>\n</li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-12T05:50:30.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [
         {
           "name": "阮一峰"
@@ -800,8 +778,8 @@
       "id": "https://mister-hope.com/note/fall/",
       "summary": "介绍 这是我在高一写的一个散文诗集，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。",
       "content_html": "<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">介绍</p>\n<p>这是我在高一写的一个散文诗集，最初发表在空间日志上。</p>\n<p>近日将其作为少年回忆，整理在博客中。</p>\n</div>\n<!-- more -->\n<ul>\n<li><a href=\"https://h5.qzone.qq.com/ugc/share/?sharetag=7C43C7A8C547ED48D9D15448BEECAF99&amp;subtype=3&amp;ciphertext=&amp;sid=&amp;blog_photo=&amp;g=&amp;res_uin=1178522294&amp;cellid=V10JYlHT4Y23uM&amp;subid=&amp;bp1=&amp;bp2=&amp;bp7=&amp;appid=4&amp;g_f=2000000103\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>空间相册链接</strong></a></li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-28T17:19:37.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "随笔"
@@ -813,8 +791,8 @@
       "id": "https://mister-hope.com/note/life/",
       "summary": "介绍 这是我在高一写的人生感悟，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。 空间相册链接 (https://h5.qzone.qq.com/ugc/share/?sharetag=126FDE98906EB067815B0EEA0F72BEC0&subtype=3&ciphertext=&sid=&blogphoto=&g=&resu...",
       "content_html": "<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">介绍</p>\n<p>这是我在高一写的人生感悟，最初发表在空间日志上。</p>\n<p>近日将其作为少年回忆，整理在博客中。</p>\n</div>\n<ul>\n<li><a href=\"https://h5.qzone.qq.com/ugc/share/?sharetag=126FDE98906EB067815B0EEA0F72BEC0&amp;subtype=3&amp;ciphertext=&amp;sid=&amp;blog_photo=&amp;g=&amp;res_uin=1178522294&amp;cellid=V10JYlHT49u8Sd&amp;subid=&amp;bp1=&amp;bp2=&amp;bp7=&amp;appid=4&amp;g_f=2000000103\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>空间相册链接</strong></a></li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-28T17:19:37.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "随笔"
@@ -826,8 +804,8 @@
       "id": "https://mister-hope.com/note/node-js/",
       "summary": "目录 current-path 相关 (current-path.md);",
       "content_html": "<h2> 目录</h2>\n<ul>\n<li><a href=\"/note/node-js/current-path.html\" target=\"blank\">current-path 相关</a></li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:46:58.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": []
     },
@@ -837,8 +815,8 @@
       "id": "https://mister-hope.com/note/poem/",
       "summary": "介绍 这是我在高一写的一些小的散文诗，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。",
       "content_html": "<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">介绍</p>\n<p>这是我在高一写的一些小的散文诗，最初发表在空间日志上。</p>\n<p>近日将其作为少年回忆，整理在博客中。</p>\n</div>\n<!-- more -->\n<ul>\n<li><a href=\"https://h5.qzone.qq.com/ugc/share/?sharetag=38F7D93E6B85A1E5BE96A0C93F17652D&amp;subtype=3&amp;ciphertext=&amp;sid=&amp;blog_photo=&amp;g=&amp;res_uin=1178522294&amp;cellid=V10JYlHT29nRn4&amp;subid=&amp;bp1=&amp;bp2=&amp;bp7=&amp;appid=4&amp;g_f=2000000103\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>空间相册链接</strong></a></li>\n</ul>\n<blockquote>\n<p>由 赵婧一 摘抄</p>\n</blockquote>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-28T17:19:37.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "随笔"
@@ -850,8 +828,8 @@
       "id": "https://mister-hope.com/note/spring/",
       "summary": "介绍 这是我在高一写的第三篇散文诗集，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。",
       "content_html": "<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">介绍</p>\n<p>这是我在高一写的第三篇散文诗集，最初发表在空间日志上。</p>\n<p>近日将其作为少年回忆，整理在博客中。</p>\n</div>\n<!-- more -->\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-28T17:19:37.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "随笔"
@@ -863,8 +841,8 @@
       "id": "https://mister-hope.com/note/summer/",
       "summary": "介绍 这是我在高一写的第四篇散文诗集，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。",
       "content_html": "<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">介绍</p>\n<p>这是我在高一写的第四篇散文诗集，最初发表在空间日志上。</p>\n<p>近日将其作为少年回忆，整理在博客中。</p>\n</div>\n<!-- more -->\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-28T17:19:37.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "随笔"
@@ -876,8 +854,8 @@
       "id": "https://mister-hope.com/note/winter/",
       "summary": "介绍 这是我在高一写的第二篇散文诗集，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。",
       "content_html": "<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">介绍</p>\n<p>这是我在高一写的第二篇散文诗集，最初发表在空间日志上。</p>\n<p>近日将其作为少年回忆，整理在博客中。</p>\n</div>\n<!-- more -->\n<ul>\n<li><a href=\"https://h5.qzone.qq.com/ugc/share/?sharetag=2AC65F349EEC4F95F047C3685529CF9E&amp;subtype=3&amp;ciphertext=&amp;sid=&amp;blog_photo=&amp;g=&amp;res_uin=1178522294&amp;cellid=V10JYlHT0dBJbe&amp;subid=&amp;bp1=&amp;bp2=&amp;bp7=&amp;appid=4&amp;g_f=2000000103\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>空间相册链接</strong></a></li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-28T17:19:37.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "随笔"
@@ -889,8 +867,8 @@
       "id": "https://mister-hope.com/physics/electromagnetism/",
       "summary": "目录 第一章 (charpter1.md); 第二章 (charpter2.md);",
       "content_html": "<h2> 目录</h2>\n<ul>\n<li>\n<p><a href=\"/physics/electromagnetism/charpter1.html\" target=\"blank\">第一章</a></p>\n</li>\n<li>\n<p><a href=\"/physics/electromagnetism/charpter2.html\" target=\"blank\">第二章</a></p>\n</li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:46:58.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "物理"
@@ -902,8 +880,8 @@
       "id": "https://mister-hope.com/physics/optism/",
       "summary": "第一章 (charpter1.md);",
       "content_html": "<h1> 光学笔记</h1>\n<ul>\n<li><a href=\"/physics/optism/charpter1.html\" target=\"blank\">第一章</a></li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:46:58.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "物理"
@@ -915,8 +893,8 @@
       "id": "https://mister-hope.com/physics/quatum/",
       "summary": "第一章 (charpter1.md);",
       "content_html": "<h1> 量子力学笔记</h1>\n<ul>\n<li><a href=\"/physics/quatum/charpter1.html\" target=\"blank\">第一章</a></li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:46:58.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "物理"
@@ -928,8 +906,8 @@
       "id": "https://mister-hope.com/physics/tsp/",
       "summary": "目录 定义 (definition.md); 第一章 (charpter1.md); 第二章 (charpter2.md); 第三章 (charpter3.md);",
       "content_html": "<h2> 目录</h2>\n<ul>\n<li>\n<p><a href=\"/physics/tsp/definition.html\" target=\"blank\">定义</a></p>\n</li>\n<li>\n<p><a href=\"/physics/tsp/charpter1.html\" target=\"blank\">第一章</a></p>\n</li>\n<li>\n<p><a href=\"/physics/tsp/charpter2.html\" target=\"blank\">第二章</a></p>\n</li>\n<li>\n<p><a href=\"/physics/tsp/charpter3.html\" target=\"blank\">第三章</a></p>\n</li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:46:58.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "物理"
@@ -954,8 +932,8 @@
       "id": "https://mister-hope.com/software/git/",
       "summary": "Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。在开发中分布式文件管理系统，可以便于多人协作开发。 交互式学习 如果您觉得本文太枯燥，这里有一个 交互式的分支演示与学习网站。您可以在这里领略 Git 的魅力。 但 Mr.Hope 仍建议您操作完再系统的学习并阅读以下内容。",
       "content_html": "<p>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。在开发中分布式文件管理系统，可以便于多人协作开发。</p>\n<div class=\"hint-container info\">\n<p class=\"hint-container-title\">交互式学习</p>\n<p>如果您觉得本文太枯燥，这里有一个 <a href=\"http://learngitbranching.js.org/\" target=\"_blank\" rel=\"noopener noreferrer\">交互式的分支演示与学习网站</a>。您可以在这里领略 Git 的魅力。</p>\n<p>但 Mr.Hope 仍建议您操作完再系统的学习并阅读以下内容。</p>\n</div>\n<!-- more -->\n<h2> Git 安装</h2>\n<ul>\n<li><a href=\"/software/git/install.html\" target=\"blank\">安装教程</a></li>\n</ul>\n<h2> Git 教程</h2>\n<ul>\n<li>\n<p><a href=\"/software/git/intro.html\" target=\"blank\">Git 介绍</a></p>\n</li>\n<li>\n<p><a href=\"/software/git/create-repo.html\" target=\"blank\">创建版本库</a></p>\n</li>\n<li>\n<p><a href=\"/software/git/status.html\" target=\"blank\">纵向查看</a></p>\n</li>\n<li>\n<p><a href=\"/software/git/recall.html\" target=\"blank\">撤销操作</a></p>\n</li>\n<li>\n<p><a href=\"/software/git/reset.html\" target=\"blank\">版本回退</a></p>\n</li>\n<li>\n<p><a href=\"/software/git/working-directory.html\" target=\"blank\">工作区和暂存区</a></p>\n</li>\n<li>\n<p><a href=\"/software/git/change.html\" target=\"blank\">修改管理</a></p>\n</li>\n<li>\n<p><a href=\"/software/git/remote.html\" target=\"blank\">远程仓库</a></p>\n</li>\n<li>\n<p><a href=\"/software/git/branch.html\" target=\"blank\">分支管理</a></p>\n</li>\n<li>\n<p><a href=\"/software/git/tag.html\" target=\"blank\">标签管理</a></p>\n</li>\n<li>\n<p><a href=\"/software/git/ignore.html\" target=\"blank\">忽略特殊文件</a></p>\n</li>\n</ul>\n<h2> 深入 Git</h2>\n<ul>\n<li>\n<p><a href=\"/software/git/working.html\" target=\"blank\">Git 原理</a></p>\n</li>\n<li>\n<p><a href=\"/software/git/custom.html\" target=\"blank\">自定义 Git</a></p>\n</li>\n<li>\n<p><a href=\"/software/git/gitLFS.html\" target=\"blank\">大文件管理存储</a></p>\n</li>\n<li>\n<p><a href=\"/software/git/server.html\" target=\"blank\">搭建 Git 服务器</a></p>\n</li>\n<li>\n<p><a href=\"/software/git/merge.html\" target=\"blank\">高级合并</a></p>\n</li>\n</ul>\n<h2> 扩展阅读</h2>\n<ul>\n<li>\n<p><a href=\"https://git-scm.com/doc\" target=\"_blank\" rel=\"noopener noreferrer\">官方文档</a></p>\n</li>\n<li>\n<p><a href=\"https://mister-hope.com/file/git/gitCheatSheet.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Git-cheatSheet</a> (PDF)</p>\n</li>\n<li>\n<p><a href=\"https://mister-hope.com/file/git/progit_v2.1.45.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Pro Git</a> (PDF)</p>\n</li>\n</ul>\n<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">TODO</p>\n<ol>\n<li>完善分支合并部分，加入更多命令介绍。如 <code>cherry-pick</code> <code>squash-merge</code>。</li>\n<li>介绍 Git Hook</li>\n</ol>\n</div>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2023-07-05T07:16:41.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "Git"
@@ -967,8 +945,8 @@
       "id": "https://mister-hope.com/software/tool/",
       "summary": "目录 PowerToys (power-toys.md): Windows 实用工具合集; PasteEx (https://github.com/huiyadanli/PasteEx): Paste As File 把剪贴板的内容直接粘贴为文件; typora (https://www.typora.io/): 一个页面很漂亮的 Markdown 编...",
       "content_html": "<h2> 目录</h2>\n<ul>\n<li>\n<p><a href=\"/software/tool/power-toys.html\" target=\"blank\">PowerToys</a>: Windows 实用工具合集</p>\n</li>\n<li>\n<p><a href=\"https://github.com/huiyadanli/PasteEx\" target=\"_blank\" rel=\"noopener noreferrer\">PasteEx</a>: Paste As File 把剪贴板的内容直接粘贴为文件</p>\n</li>\n<li>\n<p><a href=\"https://www.typora.io/\" target=\"_blank\" rel=\"noopener noreferrer\">typora</a>: 一个页面很漂亮的 Markdown 编辑器</p>\n</li>\n<li>\n<p><a href=\"https://potplayer.daum.net/?lang=zh_CN\" target=\"_blank\" rel=\"noopener noreferrer\">Potplayer</a>: 心目中最 NB 的视频播放器，没有之一</p>\n</li>\n<li>\n<p><a href=\"/software/tool/terminal/\" target=\"blank\">Terminal</a>: Windows 终端</p>\n</li>\n<li>\n<p><a href=\"/software/tool/powershell.html\" target=\"blank\">PowerShell</a>: Windows 的命令行外壳程序和脚本环境</p>\n</li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-12T05:50:30.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": []
     },
@@ -978,8 +956,8 @@
       "id": "https://mister-hope.com/software/vscode/",
       "summary": "Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可在您的桌面上运行，并且可用于 Windows，macOS 和 Linux。它具有对 JavaScript，TypeScript 和 Node.js 的内置支持，并具有丰富的其他语言 (例如 C ++，C＃，Java，Python，PHP，Go) 和运行时 (例如 .NET 和...",
       "content_html": "<p>Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可在您的桌面上运行，并且可用于 Windows，macOS 和 Linux。它具有对 JavaScript，TypeScript 和 Node.js 的内置支持，并具有丰富的其他语言 (例如 C ++，C＃，Java，Python，PHP，Go) 和运行时 (例如 .NET 和 Unity) 扩展的生态系统。由微软出品，因其开源，可扩展和众多插件成为全球最受欢迎的代码编辑器。</p>\n<h2> 特点</h2>\n<ul>\n<li>\n<p>智能代码补全</p>\n<p>使用 IntelliSense 可以更智能地编写代码、变量，方法和导入模块的完成。</p>\n</li>\n<li>\n<p>热门扩展</p>\n<p>启用其他语言，主题，调试器，命令等。</p>\n</li>\n</ul>\n<h2> 目录</h2>\n<ul>\n<li>\n<p><a href=\"/software/vscode/install.html\" target=\"blank\">安装</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/get-started.html\" target=\"blank\">快速上手</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/\" target=\"blank\">指南</a></p>\n<ul>\n<li>\n<p><a href=\"/software/vscode/guide/basic.html\" target=\"blank\">基础介绍</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/customization.html\" target=\"blank\">个性化介绍</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/extension.html\" target=\"blank\">扩展介绍</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/file.html\" target=\"blank\">文件介绍</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/edit.html\" target=\"blank\">编辑技巧</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/intellisense.html\" target=\"blank\">智能补全</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/git.html\" target=\"blank\">Git 支持</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/debug.html\" target=\"blank\">调试介绍</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/task.html\" target=\"blank\">任务介绍</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/guide/command.html\" target=\"blank\">命令行介绍</a></p>\n</li>\n</ul>\n</li>\n<li>\n<p><a href=\"/software/vscode/ui.html\" target=\"blank\">VS Code 用户界面</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/shortcut-key.html\" target=\"blank\">VS Code 快捷键</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/settings.html\" target=\"blank\">VS Code 设置</a></p>\n</li>\n<li>\n<p><a href=\"/software/vscode/extension.html\" target=\"blank\">VS Code 推荐扩展</a></p>\n</li>\n</ul>\n<h2> 官方文档</h2>\n<ul>\n<li>\n<p><a href=\"https://code.visualstudio.com/\" target=\"_blank\" rel=\"noopener noreferrer\">VS Code 官网</a></p>\n</li>\n<li>\n<p><a href=\"https://code.visualstudio.com/docs\" target=\"_blank\" rel=\"noopener noreferrer\">官方文档</a></p>\n</li>\n<li>\n<p><a href=\"https://code.visualstudio.com/docs/getstarted/introvideos\" target=\"_blank\" rel=\"noopener noreferrer\">官方视频</a></p>\n</li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:46:58.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "VS Code"
@@ -1004,8 +982,8 @@
       "id": "https://mister-hope.com/code/language/C/",
       "summary": "提示 正在完善中...",
       "content_html": "<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">提示</p>\n<p>正在完善中...</p>\n</div>\n<!-- more -->\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:01:38.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "C"
@@ -1017,8 +995,8 @@
       "id": "https://mister-hope.com/code/language/C__/",
       "summary": "提示 正在完善中...",
       "content_html": "<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">提示</p>\n<p>正在完善中...</p>\n</div>\n<!-- more -->\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:01:38.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "C++"
@@ -1043,8 +1021,8 @@
       "id": "https://mister-hope.com/code/language/java/",
       "summary": "提示 正在完善中...",
       "content_html": "<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">提示</p>\n<p>正在完善中...</p>\n</div>\n<!-- more -->\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:01:38.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "Java"
@@ -1093,8 +1071,8 @@
       "id": "https://mister-hope.com/code/language/markdown/",
       "summary": "Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。 Markdown 的目标是实现「易读易写」。 Markdown 的主要目的是用来作为一种网络内容的写作用语言。",
       "content_html": "<p>Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>\n<p>Markdown 的目标是实现「易读易写」。</p>\n<p>Markdown 的主要目的是用来作为一种网络内容的<strong>写作用语言</strong>。</p>\n<!-- more -->\n<h2> 目录</h2>\n<ul>\n<li><a href=\"/code/language/markdown/intro.html\" target=\"blank\">简介</a></li>\n<li><a href=\"/code/language/markdown/block.html\" target=\"blank\">块元素</a></li>\n<li><a href=\"/code/language/markdown/inline.html\" target=\"blank\">行内元素</a></li>\n<li><a href=\"/code/language/markdown/extend.html\" target=\"blank\">扩展与其他内容</a></li>\n</ul>\n<h2> Markdown 效果演示</h2>\n<ul>\n<li><a href=\"/code/language/markdown/demo.html\" target=\"blank\">查看详情</a></li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:46:58.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "Markdown"
@@ -1106,8 +1084,8 @@
       "id": "https://mister-hope.com/code/language/php/",
       "summary": "::: tip 正在完善中... :::",
       "content_html": "<div class=\"hint-container tip\">\n<p class=\"hint-container-title\">提示</p>\n<p>正在完善中...</p>\n</div>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:01:38.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "PHP"
@@ -1136,8 +1114,8 @@
       "id": "https://mister-hope.com/code/language/typescript/",
       "summary": "TypeScript 是一种由微软开发的自由和开源的编程语言，它是 JavaScript 的一个超集，扩展了 JavaScript 的语法。",
       "content_html": "<p>TypeScript 是一种由微软开发的自由和开源的编程语言，它是 JavaScript 的一个超集，扩展了 JavaScript 的语法。</p>\n<!-- more -->\n<h2> 语法特性</h2>\n<ul>\n<li>类 Classes</li>\n<li>接口 Interfaces</li>\n<li>模块 Modules</li>\n<li>类型注解 Type annotations</li>\n<li>编译时类型检查 Compile time type checking</li>\n<li>Arrow 函数 (类似 C# 的 Lambda 表达式)</li>\n</ul>\n<blockquote>\n<p>更多内容可以参考: 下方目录。</p>\n</blockquote>\n<h2> 目录</h2>\n<ul>\n<li>\n<p><a href=\"/code/language/typescript/intro/\" target=\"blank\">简介</a></p>\n<ul>\n<li><a href=\"/code/language/typescript/intro/what-is-typescript.html\" target=\"blank\">什么是 TypeScript</a></li>\n<li><a href=\"/code/language/typescript/intro/get-typescript.html\" target=\"blank\">安装 TypeScript</a></li>\n<li><a href=\"/code/language/typescript/intro/hello-typescript.html\" target=\"blank\">Hello TypeScript</a></li>\n</ul>\n</li>\n<li>\n<p><a href=\"/code/language/typescript/basics/\" target=\"blank\">基础</a></p>\n<ul>\n<li><a href=\"/code/language/typescript/basics/primitive-data-types.html\" target=\"blank\">原始数据类型</a></li>\n<li><a href=\"/code/language/typescript/basics/any.html\" target=\"blank\">任意值</a></li>\n<li><a href=\"/code/language/typescript/basics/type-inference.html\" target=\"blank\">类型推论</a></li>\n<li><a href=\"/code/language/typescript/basics/union-types.html\" target=\"blank\">联合类型</a></li>\n<li><a href=\"/code/language/typescript/basics/type-of-object-interfaces.html\" target=\"blank\">对象的类型——接口</a></li>\n<li><a href=\"/code/language/typescript/basics/type-of-array.html\" target=\"blank\">数组的类型</a></li>\n<li><a href=\"/code/language/typescript/basics/type-of-function.html\" target=\"blank\">函数的类型</a></li>\n<li><a href=\"/code/language/typescript/basics/type-assertion.html\" target=\"blank\">类型断言</a></li>\n<li><a href=\"/code/language/typescript/basics/declaration-files.html\" target=\"blank\">声明文件</a></li>\n<li><a href=\"/code/language/typescript/basics/built-in-objects.html\" target=\"blank\">内置对象</a></li>\n</ul>\n</li>\n<li>\n<p><a href=\"/code/language/typescript/advanced/\" target=\"blank\">进阶</a></p>\n<ul>\n<li><a href=\"/code/language/typescript/advanced/type-aliases.html\" target=\"blank\">类型别名</a></li>\n<li><a href=\"/code/language/typescript/advanced/string-literal-types.html\" target=\"blank\">字符串字面量类型</a></li>\n<li><a href=\"/code/language/typescript/advanced/tuple.html\" target=\"blank\">元组</a></li>\n<li><a href=\"/code/language/typescript/advanced/enum.html\" target=\"blank\">枚举</a></li>\n<li><a href=\"/code/language/typescript/advanced/class.html\" target=\"blank\">类</a></li>\n<li><a href=\"/code/language/typescript/advanced/class-and-interfaces.html\" target=\"blank\">类与接口</a></li>\n<li><a href=\"/code/language/typescript/advanced/generics.html\" target=\"blank\">泛型</a></li>\n<li><a href=\"/code/language/typescript/advanced/declaration-merging.html\" target=\"blank\">声明合并</a></li>\n<li><a href=\"/code/language/typescript/advanced/further-reading.html\" target=\"blank\">扩展阅读</a></li>\n</ul>\n</li>\n<li>\n<p><a href=\"/code/language/typescript/engineering/\" target=\"blank\">工程</a></p>\n<ul>\n<li><a href=\"/code/language/typescript/engineering/lint.html\" target=\"blank\">代码检查</a></li>\n</ul>\n</li>\n</ul>\n<h2> JavaScript 与 TypeScript 的区别</h2>\n<p>TypeScript 是 JavaScript 的超集，扩展了 JavaScript 的语法，因此现有的 JavaScript 代码可与 TypeScript 一起工作无需任何修改，TypeScript 通过类型注解提供编译时的静态类型检查。</p>\n<p>TypeScript 可处理已有的 JavaScript 代码，并只对其中的 TypeScript 代码进行编译。</p>\n<h2> TypeScript 官网文档</h2>\n<ul>\n<li><a href=\"http://www.typescriptlang.org/docs/home.html\" target=\"_blank\" rel=\"noopener noreferrer\">点击查看官网</a></li>\n<li><a href=\"https://www.tslang.cn/docs/home.html\" target=\"_blank\" rel=\"noopener noreferrer\">点击查看第三方中文文档</a></li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-12T05:50:30.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "TypeScript"
@@ -1162,8 +1140,8 @@
       "id": "https://mister-hope.com/code/mini-app/framework/",
       "summary": "开发框架优点 1. 将界面开发的复杂过程转换为编写简单的 yaml 文件。开发门槛低， 1. 拥有详细的开发文档说明，简单易懂，页面文件自述性高，没有开发基础的人也可以经过简单阅读后看懂页面文件大体描述内容。查看例子点这里 (demo.md) 1. 开发者无需着眼于界面样式或是功能的实现，只需着眼于在 yaml 文件中添加渲染界面所需参数并赋值，即可完...",
       "content_html": "<h2> 开发框架优点</h2>\n<ol>\n<li>\n<p>将界面开发的复杂过程转换为编写简单的 yaml 文件。开发门槛低，</p>\n</li>\n<li>\n<p>拥有详细的开发文档说明，简单易懂，页面文件自述性高，没有开发基础的人也可以经过简单阅读后看懂页面文件大体描述内容。<a href=\"/code/mini-app/framework/demo.html\" target=\"blank\">查看例子点这里</a></p>\n</li>\n<li>\n<p>开发者无需着眼于界面样式或是功能的实现，只需着眼于在 yaml 文件中添加渲染界面所需参数并赋值，即可完成界面编写。开发者只需在开发过程中按照开发说明录入参数，并注意格式即可。</p>\n</li>\n</ol>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:01:38.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "小程序"
@@ -1188,8 +1166,8 @@
       "id": "https://mister-hope.com/code/mini-app/tools/",
       "summary": "工具 工具页面简介 (interface.md); 调试 (debug.md); npm (npm.md); 体验评分 (audit.md);",
       "content_html": "<h2> 工具</h2>\n<ul>\n<li>\n<p><a href=\"/code/mini-app/tools/interface.html\" target=\"blank\">工具页面简介</a></p>\n</li>\n<li>\n<p><a href=\"/code/mini-app/tools/debug.html\" target=\"blank\">调试</a></p>\n</li>\n<li>\n<p><a href=\"/code/mini-app/tools/npm.html\" target=\"blank\">npm</a></p>\n</li>\n<li>\n<p><a href=\"/code/mini-app/tools/audit.html\" target=\"blank\">体验评分</a></p>\n</li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2022-02-06T16:01:38.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "小程序"
@@ -1201,8 +1179,8 @@
       "id": "https://mister-hope.com/code/vue/router/",
       "summary": "Vue Router 是 Vue 官方出品的路由组件，托管整个 Vue 项目路由。",
       "content_html": "<p>Vue Router 是 Vue 官方出品的路由组件，托管整个 Vue 项目路由。</p>\n<!-- more -->\n<h2> 目录</h2>\n<ul>\n<li><a href=\"/code/vue/router/get-started.html\" target=\"blank\">快速上手 Vue Router</a></li>\n</ul>\n<h2> 官方文档</h2>\n<ul>\n<li>\n<p><a href=\"https://router.vuejs.org/zh/guide/\" target=\"_blank\" rel=\"noopener noreferrer\">Vue-Router 指南</a></p>\n</li>\n<li>\n<p><a href=\"https://router.vuejs.org/zh/api/\" target=\"_blank\" rel=\"noopener noreferrer\">Vue-Router API 参考</a></p>\n</li>\n<li>\n<p><a href=\"https://github.com/vuejs/vue-router\" target=\"_blank\" rel=\"noopener noreferrer\">官方仓库</a></p>\n</li>\n</ul>\n",
-      "date_published": "2022-02-06T16:01:38.000Z",
-      "date_modified": "2023-03-26T08:23:30.000Z",
+      "date_published": "2022-01-07T00:00:00.000Z",
+      "date_modified": "2023-11-15T16:10:32.000Z",
       "authors": [],
       "tags": [
         "Vue"

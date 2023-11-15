@@ -5,7 +5,7 @@
   <subtitle>Where there is light, there is hope.</subtitle>
   <icon>https://mister-hope.com/favicon.ico</icon>
   <rights>基于 MIT 协议，© 2019-至今 Mr.Hope</rights>
-  <updated>2023-11-11T09:47:02.270Z</updated>
+  <updated>2023-11-15T16:17:30.997Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mister-hope.com/atom.xml"/>
   <link rel="alternate" href="https://mister-hope.com/"/>
@@ -57,7 +57,7 @@
     <title type="text">创建 Vue 应用</title>
     <id>https://mister-hope.com/code/vue/core/app.html</id>
     <link href="https://mister-hope.com/code/vue/core/app.html"/>
-    <updated>2023-03-26T08:23:30.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<h2> 应用实例</h2>
 <p>每个 Vue 应用都是通过 <code>createApp</code> 函数创建一个新的<strong>应用实例</strong>：</p>
 <div class="language-javascript" data-ext="js"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createApp <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"vue"</span><span class="token punctuation">;</span>
@@ -94,13 +94,13 @@
 <p>应用实例并不只限于一个。<code>createApp</code> API 允许你在同一个页面中创建多个共存的 Vue 应用，而且每个应用都拥有自己的用于配置和全局资源的作用域。</p>
 <div class="language-javascript" data-ext="js"></div><p>如果你正在使用 Vue 来增强服务端渲染 HTML，并且只想要 Vue 去控制一个大型页面中特殊的一小部分，应避免将一个单独的 Vue 应用实例挂载到整个页面上，而是应该创建多个小的应用实例，将它们分别挂载到所需的元素上去。</p>
 ]]></content>
-    <published>2023-03-26T08:23:30.000Z</published>
+    <published>2023-02-26T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">快速上手 Vue.js</title>
     <id>https://mister-hope.com/code/vue/core/get-started.html</id>
     <link href="https://mister-hope.com/code/vue/core/get-started.html"/>
-    <updated>2023-03-26T08:23:30.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<h2> Vue.js 是什么</h2>
 <h2> 起步</h2>
 <div class="hint-container tip">
@@ -129,13 +129,13 @@
 </div>
 ]]></content>
     <category term="Vue"/>
-    <published>2023-03-26T08:23:30.000Z</published>
+    <published>2023-02-26T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">开发环境安装</title>
     <id>https://mister-hope.com/code/vue/core/install.html</id>
     <link href="https://mister-hope.com/code/vue/core/install.html"/>
-    <updated>2023-03-26T08:23:30.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<h2> 环境准备</h2>
 <h3> VS Code 安装</h3>
 <ul>
@@ -200,13 +200,13 @@
 </ul>
 ]]></content>
     <category term="Vue"/>
-    <published>2023-03-26T08:23:30.000Z</published>
+    <published>2023-02-26T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">Vue 单文件组件</title>
     <id>https://mister-hope.com/code/vue/core/sfc.html</id>
     <link href="https://mister-hope.com/code/vue/core/sfc.html"/>
-    <updated>2023-03-26T08:23:30.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<h2> 介绍</h2>
 <p>Vue 的单文件组件 (即 <code>*.vue</code> 文件，简称 <strong>SFC</strong>) 是一种特殊的文件格式，使我们能够将一个 Vue 组件的模板、逻辑与样式封装在单个文件中。下面是一个单文件组件的示例：</p>
 <div class="language-vue line-numbers-mode" data-ext="vue"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
@@ -313,13 +313,13 @@
 <p>在每一个语块中你都可以按照相应语言 (HTML、CSS、JavaScript 和 Pug 等等) 的语法书写注释。对于顶层注释，请使用 HTML 的注释语法 <code>&lt;!-- comment contents here --&gt;</code></p>
 ]]></content>
     <category term="Vue"/>
-    <published>2023-03-26T08:23:30.000Z</published>
+    <published>2023-02-26T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">模板语法</title>
     <id>https://mister-hope.com/code/vue/core/template.html</id>
     <link href="https://mister-hope.com/code/vue/core/template.html"/>
-    <updated>2023-03-26T09:00:26.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<p>Vue 使用一种基于 HTML 的模板语法，使我们能够声明式地将其组件实例的数据绑定到呈现的 DOM 上。所有的 Vue 模板都是语法层面合法的 HTML，可以被符合规范的浏览器和 HTML 解析器解析。</p>
 <p>在底层机制中，Vue 会将模板编译成高度优化的 JavaScript 代码。结合响应式系统，当应用状态变更时，Vue 能够智能地推导出需要重新渲染的组件的最少数量，并应用最少的 DOM 操作。</p>
 <p>如果你对虚拟 DOM 的概念比较熟悉，并且偏好直接使用 JavaScript，你也可以结合可选的 JSX 支持直接手写渲染函数而不采用模板。但请注意，这将不会享受到和模板同等级别的编译时优化。</p>]]></summary>
@@ -401,7 +401,7 @@
 <h3> 修饰符 Modifiers</h3>
 <p>修饰符是以点开头的特殊后缀，表明指令需要以一些特殊的方式被绑定。例如 <code>.prevent</code> 修饰符会告知 <code>v-on</code> 指令对触发的事件调用 <code>event.preventDefault()</code>：</p>
 <div class="language-template" data-ext="template"></div>]]></content>
-    <published>2023-03-26T08:23:30.000Z</published>
+    <published>2023-02-26T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">应用基础知识</title>
@@ -1452,44 +1452,17 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
     <published>2019-09-08T00:00:00.000Z</published>
   </entry>
   <entry>
-    <title type="text">Update Flutter Project Deps</title>
-    <id>https://mister-hope.com/note/flutter/</id>
-    <link href="https://mister-hope.com/note/flutter/"/>
-    <updated>2022-12-06T14:18:22.000Z</updated>
-    <summary type="html"><![CDATA[<h1> Update Flutter Project Deps</h1>
-<h2> Gradle</h2>
-<p>Versions can be found here: <a href="https://gradle.org/releases/" target="_blank" rel="noopener noreferrer">https://gradle.org/releases/</a></p>
-<h2> Kotlin Plugin</h2>
-<p>Versions can be found here: <a href="https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm" target="_blank" rel="noopener noreferrer">https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm</a></p>]]></summary>
-    <content type="html"><![CDATA[<h1> Update Flutter Project Deps</h1>
-<h2> Gradle</h2>
-<p>Versions can be found here: <a href="https://gradle.org/releases/" target="_blank" rel="noopener noreferrer">https://gradle.org/releases/</a></p>
-<h2> Kotlin Plugin</h2>
-<p>Versions can be found here: <a href="https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm" target="_blank" rel="noopener noreferrer">https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm</a></p>
-<h2> Android Gradle Build Tools</h2>
-<ul>
-<li>
-<p><a href="https://maven.google.com/web/index.html" target="_blank" rel="noopener noreferrer">Google maven repository website</a></p>
-</li>
-<li>
-<p><a href="https://developer.android.google.cn/studio/releases/gradle-plugin?hl=zh-cn#updating-plugin" target="_blank" rel="noopener noreferrer">Related docs</a></p>
-</li>
-</ul>
-]]></content>
-    <published>2022-12-06T14:18:22.000Z</published>
-  </entry>
-  <entry>
     <title type="text">WSA</title>
     <id>https://mister-hope.com/note/wsa/</id>
     <link href="https://mister-hope.com/note/wsa/"/>
-    <updated>2022-12-06T14:18:22.000Z</updated>
-    <published>2022-12-06T14:18:22.000Z</published>
+    <updated>2023-11-15T16:10:32.000Z</updated>
+    <published>2022-11-06T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">WSL</title>
     <id>https://mister-hope.com/note/wsl/</id>
     <link href="https://mister-hope.com/note/wsl/"/>
-    <updated>2022-12-06T14:18:22.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<p>目前使用的系统是 WSL2。</p>
 <p>其中以下操作可能需要在新机器上进行相同操作:</p>
 <h2> Windows 侧</h2>
@@ -1521,13 +1494,13 @@ memory=8GB
 <div class="language-conf" data-ext="conf"></div></li>
 </ol>
 ]]></content>
-    <published>2022-12-06T14:18:22.000Z</published>
+    <published>2022-11-06T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">Git 代理</title>
     <id>https://mister-hope.com/software/git/proxy.html</id>
     <link href="https://mister-hope.com/software/git/proxy.html"/>
-    <updated>2022-12-06T14:18:22.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<p>由于目前 GitHub 已经在全国大部分范围内被主要运营商进行 DNS 封锁，所以如果需要配合 GitHub 使用 Git，需要进行代理设置。</p>
 <h2> 代理设置</h2>
 <p>通常情况下，我们可以通过设置环境变量 <code>HTTP_PROXY</code> 和 <code>HTTPS_PROXY</code> 来进行代理设置。</p>
@@ -1559,7 +1532,7 @@ memory=8GB
 <p>你可以使用 <code>ssh -T git@github.com</code> 来测试你的代理配置是否有效。</p>
 ]]></content>
     <category term="Git"/>
-    <published>2022-12-06T14:18:22.000Z</published>
+    <published>2022-11-06T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">后端开发</title>
@@ -1648,7 +1621,7 @@ memory=8GB
     <title type="text">高级合并</title>
     <id>https://mister-hope.com/software/git/merge.html</id>
     <link href="https://mister-hope.com/software/git/merge.html"/>
-    <updated>2022-09-07T17:18:06.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<h2> Squash merge</h2>
 <p>通过使用 <code>--squash</code> 选项，你可以在合并中将多个 commit 合并为一个。</p>
 <p>也就是对于以下的例子</p>
@@ -1671,13 +1644,13 @@ memory=8GB
 </ul>
 ]]></content>
     <category term="Git"/>
-    <published>2022-09-07T17:18:06.000Z</published>
+    <published>2022-08-08T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">模块</title>
     <id>https://mister-hope.com/code/node-js/cjs.html</id>
     <link href="https://mister-hope.com/code/node-js/cjs.html"/>
-    <updated>2022-06-14T04:47:46.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<p>在计算机程序的开发过程中，随着程序代码越写越多，在一个文件里代码就会越来越长，越来越不容易维护。</p>
 <p>为了编写可维护的代码，我们把很多函数分组，分别放到不同的文件里，这样，每个文件包含的代码就相对较少，很多编程语言都采用这种组织代码的方式。在 Node.js 环境中，一个 <code>.js</code> 文件就称之为一个模块(module)。</p>
 <p>使用模块有什么好处?</p>
@@ -1751,13 +1724,13 @@ memory=8GB
 <div class="language-javascript" data-ext="js"></div><p>最终，我们强烈建议使用 <code>module.exports = xxx</code> 的方式来输出模块变量，这样，您只需要记忆一种方法。</p>
 ]]></content>
     <category term="Node.js"/>
-    <published>2022-06-14T04:47:46.000Z</published>
+    <published>2022-05-14T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">API</title>
     <id>https://mister-hope.com/code/mini-app/guide/service/api/</id>
     <link href="https://mister-hope.com/code/mini-app/guide/service/api/"/>
-    <updated>2022-06-14T04:47:46.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<p>小程序开发框架提供丰富的微信原生 API，可以方便的调起微信提供的能力，如获取用户信息，本地存储，支付功能等。详细介绍请参考 <a href="https://developers.weixin.qq.com/miniprogram/dev/api/" target="_blank" rel="noopener noreferrer">API 文档</a>。 </p>
 ]]></summary>
     <content type="html"><![CDATA[<p>小程序开发框架提供丰富的微信原生 API，可以方便的调起微信提供的能力，如获取用户信息，本地存储，支付功能等。详细介绍请参考 <a href="https://developers.weixin.qq.com/miniprogram/dev/api/" target="_blank" rel="noopener noreferrer">API 文档</a>。 </p>
@@ -1862,7 +1835,7 @@ memory=8GB
 </ul>
 ]]></content>
     <category term="小程序"/>
-    <published>2022-05-04T19:02:05.000Z</published>
+    <published>2022-04-05T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">Angular</title>
@@ -1902,7 +1875,7 @@ memory=8GB
     <title type="text">MySQL</title>
     <id>https://mister-hope.com/software/mysql/</id>
     <link href="https://mister-hope.com/software/mysql/"/>
-    <updated>2022-02-12T05:50:30.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<h2> 目录</h2>
 <ul>
 <li><a href="/software/mysql/intro.html" target="blank">介绍</a></li>
@@ -1921,7 +1894,7 @@ memory=8GB
     <contributor>
       <name>李欣桐</name>
     </contributor>
-    <published>2022-02-12T05:50:30.000Z</published>
+    <published>2022-01-12T00:00:00.000Z</published>
     <rights>Copyright by 李欣桐</rights>
   </entry>
   <entry>
@@ -2229,9 +2202,9 @@ memory=8GB
     <title type="text">Mr.Hope 介绍</title>
     <id>https://mister-hope.com/about/</id>
     <link href="https://mister-hope.com/about/"/>
-    <updated>2023-03-24T09:43:26.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="text">slidestart 基本信息 性别: 男; 年龄: 25; 婚姻情况: 未婚; 单身: 否; 爱好: 钓鱼、国际象棋、花体英文、羽毛球、编程; 性格比较开朗随和，热爱帮助他人，喜欢平时写一些开源项目。 学历经历 本科东北师范大学就读物理学; 现在在东北师范大学就读理论物理硕士; 暂无特别突出的科研成果; 联系方式 你可以通过我的 QQ 1178522...</summary>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">UI 设计</title>
@@ -2298,7 +2271,7 @@ memory=8GB
     <title type="text">代码笔记</title>
     <id>https://mister-hope.com/code/</id>
     <link href="https://mister-hope.com/code/"/>
-    <updated>2023-03-24T09:43:26.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<p>此处是 Mr.Hope 存放的一些代码笔记。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>此处是 Mr.Hope 存放的一些代码笔记。</p>
@@ -2396,21 +2369,7 @@ memory=8GB
 </li>
 </ul>
 ]]></content>
-    <published>2022-02-06T16:01:38.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">硬件相关</title>
-    <id>https://mister-hope.com/hardware/</id>
-    <link href="https://mister-hope.com/hardware/"/>
-    <updated>2022-02-06T16:01:38.000Z</updated>
-    <summary type="html"><![CDATA[<h1> 硬件相关</h1>
-<p>这里是一些常见的硬件相关的问题总结，供访客查阅。</p>
-]]></summary>
-    <content type="html"><![CDATA[<h1> 硬件相关</h1>
-<p>这里是一些常见的硬件相关的问题总结，供访客查阅。</p>
-<!-- more -->
-]]></content>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">Linux</title>
@@ -2569,7 +2528,7 @@ memory=8GB
     <title type="text">Mr.Hope 的随笔</title>
     <id>https://mister-hope.com/note/</id>
     <link href="https://mister-hope.com/note/"/>
-    <updated>2022-02-12T05:50:30.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<p>这里是 Mr.Hope 的一些随笔，后续被整理进博客中。</p>
 <h2> 四季</h2>
 <div class="hint-container tip">
@@ -2642,13 +2601,13 @@ memory=8GB
 </ul>
 ]]></content>
     <category term="随笔"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">物理笔记</title>
     <id>https://mister-hope.com/physics/</id>
     <link href="https://mister-hope.com/physics/"/>
-    <updated>2022-02-06T16:01:38.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<h2> 目录</h2>
 <ul>
 <li>
@@ -2681,13 +2640,13 @@ memory=8GB
 </ul>
 ]]></content>
     <category term="物理"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">软件教程</title>
     <id>https://mister-hope.com/software/</id>
     <link href="https://mister-hope.com/software/"/>
-    <updated>2022-12-10T06:04:20.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<h2> 代码编辑器</h2>
 <ul>
 <li><a href="/software/editor.html" target="blank">编辑器介绍</a></li>
@@ -2748,7 +2707,7 @@ memory=8GB
 <h2> Adobe 软件</h2>
 <p>Adobe 全系软件的获取，请见 <a href="https://www.weibo.com/vposy" target="_blank" rel="noopener noreferrer">VPosy 的微博</a> 的置顶帖。</p>
 ]]></content>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">设计文章</title>
@@ -2982,7 +2941,7 @@ memory=8GB
     <title type="text">代码学习教程</title>
     <id>https://mister-hope.com/code/language/</id>
     <link href="https://mister-hope.com/code/language/"/>
-    <updated>2022-02-06T16:01:38.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<ul>
 <li><a href="/code/language/learning.html" target="blank">如何学习一门语言</a></li>
 </ul>
@@ -3047,7 +3006,7 @@ memory=8GB
 </div>
 ]]></content>
     <category term="教程"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">小程序</title>
@@ -3300,7 +3259,7 @@ memory=8GB
     <title type="text">Node.js</title>
     <id>https://mister-hope.com/code/node-js/</id>
     <link href="https://mister-hope.com/code/node-js/"/>
-    <updated>2022-06-14T04:47:46.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<p>Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，拥有大量的模块。Node.js 主要以其丰富并及其容易导入的 Node.js package，以及其方便管理 npm (Node.js Package Manager)闻名。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，拥有大量的模块。Node.js 主要以其丰富并及其容易导入的 Node.js package，以及其方便管理 npm (Node.js Package Manager)闻名。</p>
@@ -3381,7 +3340,7 @@ memory=8GB
 </ul>
 ]]></content>
     <category term="Node.js"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">React</title>
@@ -3412,7 +3371,7 @@ memory=8GB
     <title type="text">Vue.js</title>
     <id>https://mister-hope.com/code/vue/</id>
     <link href="https://mister-hope.com/code/vue/"/>
-    <updated>2023-03-26T08:23:30.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<h2> 简介</h2>
 <p>Vue (发音为 /vjuː/，类似 view) 是一款用于构建用户界面的 JavaScript 框架。它基于标准 HTML、CSS 和 JavaScript 构建，并提供了一套声明式的、组件化的编程模型，帮助你高效地开发用户界面。无论是简单还是复杂的界面，Vue 都可以胜任。</p>
 <h2> 渐进式框架</h2>
@@ -3483,7 +3442,7 @@ memory=8GB
 </ul>
 ]]></content>
     <category term="基础"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">网页入门</title>
@@ -3621,7 +3580,7 @@ memory=8GB
     <title type="text">Bash 教程</title>
     <id>https://mister-hope.com/linux/bash/</id>
     <link href="https://mister-hope.com/linux/bash/"/>
-    <updated>2022-02-12T05:50:30.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<h2> 目录</h2>
 <ul>
 <li>
@@ -3756,7 +3715,7 @@ memory=8GB
     <contributor>
       <name>阮一峰</name>
     </contributor>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
     <rights>本教程采用&amp;lt;a href=&amp;quot;https://creativecommons.org/licenses/by-sa/3.0/deed.zh&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot; target=&amp;quot;_blank&amp;quot;&amp;gt;知识共享 署名-相同方式共享 3.0协议&amp;lt;/a&amp;gt;</rights>
   </entry>
   <entry>
@@ -3944,7 +3903,7 @@ memory=8GB
     <title type="text">秋之思</title>
     <id>https://mister-hope.com/note/fall/</id>
     <link href="https://mister-hope.com/note/fall/"/>
-    <updated>2022-02-28T17:19:37.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">介绍</p>
 <p>这是我在高一写的一个散文诗集，最初发表在空间日志上。</p>
@@ -3962,13 +3921,13 @@ memory=8GB
 </ul>
 ]]></content>
     <category term="随笔"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">笑谈人生</title>
     <id>https://mister-hope.com/note/life/</id>
     <link href="https://mister-hope.com/note/life/"/>
-    <updated>2022-02-28T17:19:37.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">介绍</p>
 <p>这是我在高一写的人生感悟，最初发表在空间日志上。</p>
@@ -3987,13 +3946,13 @@ memory=8GB
 </ul>
 ]]></content>
     <category term="随笔"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">NodeJS</title>
     <id>https://mister-hope.com/note/node-js/</id>
     <link href="https://mister-hope.com/note/node-js/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<h2> 目录</h2>
 <ul>
 <li><a href="/note/node-js/current-path.html" target="blank">current-path 相关</a></li>
@@ -4004,13 +3963,13 @@ memory=8GB
 <li><a href="/note/node-js/current-path.html" target="blank">current-path 相关</a></li>
 </ul>
 ]]></content>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">轻言细语</title>
     <id>https://mister-hope.com/note/poem/</id>
     <link href="https://mister-hope.com/note/poem/"/>
-    <updated>2022-02-28T17:19:37.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">介绍</p>
 <p>这是我在高一写的一些小的散文诗，最初发表在空间日志上。</p>
@@ -4031,13 +3990,13 @@ memory=8GB
 </blockquote>
 ]]></content>
     <category term="随笔"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">春之诗</title>
     <id>https://mister-hope.com/note/spring/</id>
     <link href="https://mister-hope.com/note/spring/"/>
-    <updated>2022-02-28T17:19:37.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">介绍</p>
 <p>这是我在高一写的第三篇散文诗集，最初发表在空间日志上。</p>
@@ -4052,13 +4011,13 @@ memory=8GB
 <!-- more -->
 ]]></content>
     <category term="随笔"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">夏之歌</title>
     <id>https://mister-hope.com/note/summer/</id>
     <link href="https://mister-hope.com/note/summer/"/>
-    <updated>2022-02-28T17:19:37.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">介绍</p>
 <p>这是我在高一写的第四篇散文诗集，最初发表在空间日志上。</p>
@@ -4073,13 +4032,13 @@ memory=8GB
 <!-- more -->
 ]]></content>
     <category term="随笔"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">冬之语</title>
     <id>https://mister-hope.com/note/winter/</id>
     <link href="https://mister-hope.com/note/winter/"/>
-    <updated>2022-02-28T17:19:37.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">介绍</p>
 <p>这是我在高一写的第二篇散文诗集，最初发表在空间日志上。</p>
@@ -4097,13 +4056,13 @@ memory=8GB
 </ul>
 ]]></content>
     <category term="随笔"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">电磁学笔记</title>
     <id>https://mister-hope.com/physics/electromagnetism/</id>
     <link href="https://mister-hope.com/physics/electromagnetism/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<h2> 目录</h2>
 <ul>
 <li>
@@ -4125,13 +4084,13 @@ memory=8GB
 </ul>
 ]]></content>
     <category term="物理"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">光学笔记</title>
     <id>https://mister-hope.com/physics/optism/</id>
     <link href="https://mister-hope.com/physics/optism/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<h1> 光学笔记</h1>
 <ul>
 <li><a href="/physics/optism/charpter1.html" target="blank">第一章</a></li>
@@ -4143,13 +4102,13 @@ memory=8GB
 </ul>
 ]]></content>
     <category term="物理"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">量子力学笔记</title>
     <id>https://mister-hope.com/physics/quatum/</id>
     <link href="https://mister-hope.com/physics/quatum/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<h1> 量子力学笔记</h1>
 <ul>
 <li><a href="/physics/quatum/charpter1.html" target="blank">第一章</a></li>
@@ -4161,13 +4120,13 @@ memory=8GB
 </ul>
 ]]></content>
     <category term="物理"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">热力学与统计物理笔记</title>
     <id>https://mister-hope.com/physics/tsp/</id>
     <link href="https://mister-hope.com/physics/tsp/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<h2> 目录</h2>
 <ul>
 <li>
@@ -4200,7 +4159,7 @@ memory=8GB
 </ul>
 ]]></content>
     <category term="物理"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">COMSOL</title>
@@ -4304,7 +4263,7 @@ memory=8GB
     <title type="text">Git</title>
     <id>https://mister-hope.com/software/git/</id>
     <link href="https://mister-hope.com/software/git/"/>
-    <updated>2023-07-05T07:16:41.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<p>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。在开发中分布式文件管理系统，可以便于多人协作开发。</p>
 <div class="hint-container info">
 <p class="hint-container-title">交互式学习</p>
@@ -4398,14 +4357,14 @@ memory=8GB
 </div>
 ]]></content>
     <category term="Git"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
     <rights>Copyright by 廖雪峰 Edited by Mr.Hope</rights>
   </entry>
   <entry>
     <title type="text">工具软件</title>
     <id>https://mister-hope.com/software/tool/</id>
     <link href="https://mister-hope.com/software/tool/"/>
-    <updated>2022-02-12T05:50:30.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<h2> 目录</h2>
 <ul>
 <li>
@@ -4449,13 +4408,13 @@ memory=8GB
 </li>
 </ul>
 ]]></content>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">VS Code</title>
     <id>https://mister-hope.com/software/vscode/</id>
     <link href="https://mister-hope.com/software/vscode/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<p>Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可在您的桌面上运行，并且可用于 Windows，macOS 和 Linux。它具有对 JavaScript，TypeScript 和 Node.js 的内置支持，并具有丰富的其他语言 (例如 C ++，C＃，Java，Python，PHP，Go) 和运行时 (例如 .NET 和 Unity) 扩展的生态系统。由微软出品，因其开源，可扩展和众多插件成为全球最受欢迎的代码编辑器。</p>
 <h2> 特点</h2>
 <ul>
@@ -4550,7 +4509,7 @@ memory=8GB
 </ul>
 ]]></content>
     <category term="VS Code"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">GitHub Actions</title>
@@ -4619,7 +4578,7 @@ memory=8GB
     <title type="text">C 语言教程</title>
     <id>https://mister-hope.com/code/language/C/</id>
     <link href="https://mister-hope.com/code/language/C/"/>
-    <updated>2022-02-06T16:01:38.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>正在完善中...</p>
@@ -4632,13 +4591,13 @@ memory=8GB
 <!-- more -->
 ]]></content>
     <category term="C"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">C++ 教程</title>
     <id>https://mister-hope.com/code/language/C__/</id>
     <link href="https://mister-hope.com/code/language/C__/"/>
-    <updated>2022-02-06T16:01:38.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>正在完善中...</p>
@@ -4651,7 +4610,7 @@ memory=8GB
 <!-- more -->
 ]]></content>
     <category term="C++"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">Dart 教程</title>
@@ -4687,7 +4646,7 @@ memory=8GB
     <title type="text">Java 教程</title>
     <id>https://mister-hope.com/code/language/java/</id>
     <link href="https://mister-hope.com/code/language/java/"/>
-    <updated>2022-02-06T16:01:38.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>正在完善中...</p>
@@ -4700,7 +4659,7 @@ memory=8GB
 <!-- more -->
 ]]></content>
     <category term="Java"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">JavaScript 教程</title>
@@ -4893,7 +4852,7 @@ memory=8GB
     <title type="text">Markdown</title>
     <id>https://mister-hope.com/code/language/markdown/</id>
     <link href="https://mister-hope.com/code/language/markdown/"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<p>Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
 <p>Markdown 的目标是实现「易读易写」。</p>
 <p>Markdown 的主要目的是用来作为一种网络内容的<strong>写作用语言</strong>。</p>
@@ -4915,13 +4874,13 @@ memory=8GB
 </ul>
 ]]></content>
     <category term="Markdown"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">PHP 语言教程</title>
     <id>https://mister-hope.com/code/language/php/</id>
     <link href="https://mister-hope.com/code/language/php/"/>
-    <updated>2022-02-06T16:01:38.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>正在完善中...</p>
@@ -4933,7 +4892,7 @@ memory=8GB
 </div>
 ]]></content>
     <category term="PHP"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">Python 语言教程</title>
@@ -5075,7 +5034,7 @@ memory=8GB
     <title type="text">TypeScript 教程</title>
     <id>https://mister-hope.com/code/language/typescript/</id>
     <link href="https://mister-hope.com/code/language/typescript/"/>
-    <updated>2022-02-12T05:50:30.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<p>TypeScript 是一种由微软开发的自由和开源的编程语言，它是 JavaScript 的一个超集，扩展了 JavaScript 的语法。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>TypeScript 是一种由微软开发的自由和开源的编程语言，它是 JavaScript 的一个超集，扩展了 JavaScript 的语法。</p>
@@ -5148,7 +5107,7 @@ memory=8GB
 </ul>
 ]]></content>
     <category term="TypeScript"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">YAML 教程</title>
@@ -5261,7 +5220,7 @@ memory=8GB
     <title type="text">小程序框架说明</title>
     <id>https://mister-hope.com/code/mini-app/framework/</id>
     <link href="https://mister-hope.com/code/mini-app/framework/"/>
-    <updated>2022-02-06T16:01:38.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<h2> 开发框架优点</h2>
 <ol>
 <li>
@@ -5288,7 +5247,7 @@ memory=8GB
 </ol>
 ]]></content>
     <category term="小程序"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">小程序指南</title>
@@ -5591,7 +5550,7 @@ memory=8GB
     <title type="text">工具使用</title>
     <id>https://mister-hope.com/code/mini-app/tools/</id>
     <link href="https://mister-hope.com/code/mini-app/tools/"/>
-    <updated>2022-02-06T16:01:38.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<h2> 工具</h2>
 <ul>
 <li>
@@ -5624,13 +5583,13 @@ memory=8GB
 </ul>
 ]]></content>
     <category term="小程序"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">Vue Router</title>
     <id>https://mister-hope.com/code/vue/router/</id>
     <link href="https://mister-hope.com/code/vue/router/"/>
-    <updated>2023-03-26T08:23:30.000Z</updated>
+    <updated>2023-11-15T16:10:32.000Z</updated>
     <summary type="html"><![CDATA[<p>Vue Router 是 Vue 官方出品的路由组件，托管整个 Vue 项目路由。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>Vue Router 是 Vue 官方出品的路由组件，托管整个 Vue 项目路由。</p>
@@ -5653,7 +5612,7 @@ memory=8GB
 </ul>
 ]]></content>
     <category term="Vue"/>
-    <published>2022-02-06T16:01:38.000Z</published>
+    <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">CSS</title>

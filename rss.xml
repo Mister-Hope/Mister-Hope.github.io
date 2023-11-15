@@ -6,8 +6,8 @@
     <link>https://mister-hope.com/</link>
     <description>Where there is light, there is hope.</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 11 Nov 2023 09:47:02 GMT</pubDate>
-    <lastBuildDate>Sat, 11 Nov 2023 09:47:02 GMT</lastBuildDate>
+    <pubDate>Wed, 15 Nov 2023 16:17:30 GMT</pubDate>
+    <lastBuildDate>Wed, 15 Nov 2023 16:17:30 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>基于 MIT 协议，© 2019-至今 Mr.Hope</copyright>
@@ -49,7 +49,7 @@
       <guid>https://mister-hope.com/code/vue/core/app.html</guid>
       <source url="https://mister-hope.com/rss.xml">创建 Vue 应用</source>
       <description>应用实例 每个 Vue 应用都是通过 createApp 函数创建一个新的应用实例： 根组件 我们传入 createApp 的对象实际上是一个组件，每个应用都需要一个“根组件”，其他组件将作为其子组件。 如果你使用的是单文件组件，我们可以直接从另一个文件中导入根组件。 虽然许多示例只需要一个组件，但大多数真实的应用都是由一棵嵌套的、可重用的组件树组成的...</description>
-      <pubDate>Sun, 26 Mar 2023 08:23:30 GMT</pubDate>
+      <pubDate>Sun, 26 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 应用实例</h2>
 <p>每个 Vue 应用都是通过 <code>createApp</code> 函数创建一个新的<strong>应用实例</strong>：</p>
 <div class="language-javascript" data-ext="js"></div><h2> 根组件</h2>
@@ -86,7 +86,7 @@
       <source url="https://mister-hope.com/rss.xml">快速上手 Vue.js</source>
       <description>Vue.js 是什么 起步 您应当已了解关于 HTML、CSS 和 JavaScript 的中级知识。 安装 (https://cn.vuejs.org/guide/quick-start.html) 尝试 Vue.js 最简单的方法是使用 SFC Playground (https://sfc.vuejs.org/)。您可以在浏览器新标签页中打开它，...</description>
       <category>Vue</category>
-      <pubDate>Sun, 26 Mar 2023 08:23:30 GMT</pubDate>
+      <pubDate>Sun, 26 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> Vue.js 是什么</h2>
 <h2> 起步</h2>
 <div class="hint-container tip">
@@ -114,7 +114,7 @@
       <source url="https://mister-hope.com/rss.xml">开发环境安装</source>
       <description>环境准备 VS Code 安装 安装 VS Code (../../../software/vscode/install.md); 开发指南 1. 使用 VS Code 打开项目文件夹。 请打开 VS Code 选择菜单栏中的 “文件-打开文件夹”，或在文件夹上 “右键——使用 VS Code 打开” 或在文件夹内部空白处 “右键——使用 VS Cod...</description>
       <category>Vue</category>
-      <pubDate>Sun, 26 Mar 2023 08:23:30 GMT</pubDate>
+      <pubDate>Sun, 26 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 环境准备</h2>
 <h3> VS Code 安装</h3>
 <ul>
@@ -165,7 +165,7 @@
       <source url="https://mister-hope.com/rss.xml">Vue 单文件组件</source>
       <description>介绍 Vue 的单文件组件 (即 .vue 文件，简称 *SFC**) 是一种特殊的文件格式，使我们能够将一个 Vue 组件的模板、逻辑与样式封装在单个文件中。下面是一个单文件组件的示例： 如你所见，Vue 的单文件组件是 HTML、CSS 和 JavaScript 三种元素的自然延伸。、`` 和 三个块在同一个文件中封装、组合了组件的视图、逻辑和样式...</description>
       <category>Vue</category>
-      <pubDate>Sun, 26 Mar 2023 08:23:30 GMT</pubDate>
+      <pubDate>Sun, 26 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 介绍</h2>
 <p>Vue 的单文件组件 (即 <code>*.vue</code> 文件，简称 <strong>SFC</strong>) 是一种特殊的文件格式，使我们能够将一个 Vue 组件的模板、逻辑与样式封装在单个文件中。下面是一个单文件组件的示例：</p>
 <div class="language-vue line-numbers-mode" data-ext="vue"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如你所见，Vue 的单文件组件是 HTML、CSS 和 JavaScript 三种元素的自然延伸。<code>&lt;template&gt;</code>、<code>&lt;script&gt;</code> 和 <code>&lt;style&gt;</code> 三个块在同一个文件中封装、组合了组件的视图、逻辑和样式。</p>
@@ -255,7 +255,7 @@
       <guid>https://mister-hope.com/code/vue/core/template.html</guid>
       <source url="https://mister-hope.com/rss.xml">模板语法</source>
       <description>Vue 使用一种基于 HTML 的模板语法，使我们能够声明式地将其组件实例的数据绑定到呈现的 DOM 上。所有的 Vue 模板都是语法层面合法的 HTML，可以被符合规范的浏览器和 HTML 解析器解析。 在底层机制中，Vue 会将模板编译成高度优化的 JavaScript 代码。结合响应式系统，当应用状态变更时，Vue 能够智能地推导出需要重新渲染的...</description>
-      <pubDate>Sun, 26 Mar 2023 08:23:30 GMT</pubDate>
+      <pubDate>Sun, 26 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>Vue 使用一种基于 HTML 的模板语法，使我们能够声明式地将其组件实例的数据绑定到呈现的 DOM 上。所有的 Vue 模板都是语法层面合法的 HTML，可以被符合规范的浏览器和 HTML 解析器解析。</p>
 <p>在底层机制中，Vue 会将模板编译成高度优化的 JavaScript 代码。结合响应式系统，当应用状态变更时，Vue 能够智能地推导出需要重新渲染的组件的最少数量，并应用最少的 DOM 操作。</p>
 <p>如果你对虚拟 DOM 的概念比较熟悉，并且偏好直接使用 JavaScript，你也可以结合可选的 JSX 支持直接手写渲染函数而不采用模板。但请注意，这将不会享受到和模板同等级别的编译时优化。</p>
@@ -1251,34 +1251,11 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
 ]]></content:encoded>
     </item>
     <item>
-      <title>Update Flutter Project Deps</title>
-      <link>https://mister-hope.com/note/flutter/</link>
-      <guid>https://mister-hope.com/note/flutter/</guid>
-      <source url="https://mister-hope.com/rss.xml">Update Flutter Project Deps</source>
-      <description>Gradle Versions can be found here: Kotlin Plugin Versions can be found here: Android Gradle Build Tools Google maven repository website (https://maven.google.com/web/index.html)...</description>
-      <pubDate>Tue, 06 Dec 2022 14:18:22 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> Update Flutter Project Deps</h1>
-<h2> Gradle</h2>
-<p>Versions can be found here: <a href="https://gradle.org/releases/" target="_blank" rel="noopener noreferrer">https://gradle.org/releases/</a></p>
-<h2> Kotlin Plugin</h2>
-<p>Versions can be found here: <a href="https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm" target="_blank" rel="noopener noreferrer">https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm</a></p>
-<h2> Android Gradle Build Tools</h2>
-<ul>
-<li>
-<p><a href="https://maven.google.com/web/index.html" target="_blank" rel="noopener noreferrer">Google maven repository website</a></p>
-</li>
-<li>
-<p><a href="https://developer.android.google.cn/studio/releases/gradle-plugin?hl=zh-cn#updating-plugin" target="_blank" rel="noopener noreferrer">Related docs</a></p>
-</li>
-</ul>
-]]></content:encoded>
-    </item>
-    <item>
       <title>WSA</title>
       <link>https://mister-hope.com/note/wsa/</link>
       <guid>https://mister-hope.com/note/wsa/</guid>
       <source url="https://mister-hope.com/rss.xml">WSA</source>
-      <pubDate>Tue, 06 Dec 2022 14:18:22 GMT</pubDate>
+      <pubDate>Sun, 06 Nov 2022 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>WSL</title>
@@ -1286,7 +1263,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <guid>https://mister-hope.com/note/wsl/</guid>
       <source url="https://mister-hope.com/rss.xml">WSL</source>
       <description>目前使用的系统是 WSL2。 其中以下操作可能需要在新机器上进行相同操作: Windows 侧 Windows 侧可以在用户目录下创建 .wslconfig 文件，用于配置 WSL2。 WSL 侧 WSL 侧可以通过 /etc/wsl.conf 进行配置。 启用 init.d 支持 在 /etc/wsl.conf 中加入: 生成新的 RSA 密钥 使用...</description>
-      <pubDate>Tue, 06 Dec 2022 14:18:22 GMT</pubDate>
+      <pubDate>Sun, 06 Nov 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>目前使用的系统是 WSL2。</p>
 <p>其中以下操作可能需要在新机器上进行相同操作:</p>
 <h2> Windows 侧</h2>
@@ -1318,7 +1295,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">Git 代理</source>
       <description>由于目前 GitHub 已经在全国大部分范围内被主要运营商进行 DNS 封锁，所以如果需要配合 GitHub 使用 Git，需要进行代理设置。 代理设置 通常情况下，我们可以通过设置环境变量 HTTPPROXY 和 HTTPSPROXY 来进行代理设置。 在 Windows 下，我们可以通过设置环境变量 HTTPPROXY 和 HTTPSPROXY 来...</description>
       <category>Git</category>
-      <pubDate>Tue, 06 Dec 2022 14:18:22 GMT</pubDate>
+      <pubDate>Sun, 06 Nov 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>由于目前 GitHub 已经在全国大部分范围内被主要运营商进行 DNS 封锁，所以如果需要配合 GitHub 使用 Git，需要进行代理设置。</p>
 <h2> 代理设置</h2>
 <p>通常情况下，我们可以通过设置环境变量 <code>HTTP_PROXY</code> 和 <code>HTTPS_PROXY</code> 来进行代理设置。</p>
@@ -1420,7 +1397,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">高级合并</source>
       <description>Squash merge 通过使用 --squash 选项，你可以在合并中将多个 commit 合并为一个。 也就是对于以下的例子 git merge feature 得到的结果为: 而如果 feature 分支意在实现一个完成的特性，两个 commit 只是工作进度实际上并不重要的时候，我们可以通过 git merge --squash featur...</description>
       <category>Git</category>
-      <pubDate>Wed, 07 Sep 2022 17:18:06 GMT</pubDate>
+      <pubDate>Mon, 08 Aug 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> Squash merge</h2>
 <p>通过使用 <code>--squash</code> 选项，你可以在合并中将多个 commit 合并为一个。</p>
 <p>也就是对于以下的例子</p>
@@ -1443,7 +1420,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">模块</source>
       <description>在计算机程序的开发过程中，随着程序代码越写越多，在一个文件里代码就会越来越长，越来越不容易维护。 为了编写可维护的代码，我们把很多函数分组，分别放到不同的文件里，这样，每个文件包含的代码就相对较少，很多编程语言都采用这种组织代码的方式。在 Node.js 环境中，一个 .js 文件就称之为一个模块(module)。 使用模块有什么好处? 最大的好处是大大提高了代码的可维护性。其次，编写代码不必从零开始。当一个模块编写完毕，就可以被其他地方引用。我们在编写程序的时候，也经常引用其他模块，包括 Node.js 内置的模块和来自第三方的模块。 使用模块还可以避免函数名和变量名冲突。相同名字的函数和变量完全可以分别存在不同的模块中，因此，我们自己在编写模块时，不必考虑名字会与其他模块冲突。</description>
       <category>Node.js</category>
-      <pubDate>Tue, 14 Jun 2022 04:47:46 GMT</pubDate>
+      <pubDate>Sat, 14 May 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>在计算机程序的开发过程中，随着程序代码越写越多，在一个文件里代码就会越来越长，越来越不容易维护。</p>
 <p>为了编写可维护的代码，我们把很多函数分组，分别放到不同的文件里，这样，每个文件包含的代码就相对较少，很多编程语言都采用这种组织代码的方式。在 Node.js 环境中，一个 <code>.js</code> 文件就称之为一个模块(module)。</p>
 <p>使用模块有什么好处?</p>
@@ -1518,7 +1495,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">API</source>
       <description>小程序开发框架提供丰富的微信原生 API，可以方便的调起微信提供的能力，如获取用户信息，本地存储，支付功能等。详细介绍请参考 API 文档。</description>
       <category>小程序</category>
-      <pubDate>Wed, 04 May 2022 19:02:05 GMT</pubDate>
+      <pubDate>Tue, 05 Apr 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>小程序开发框架提供丰富的微信原生 API，可以方便的调起微信提供的能力，如获取用户信息，本地存储，支付功能等。详细介绍请参考 <a href="https://developers.weixin.qq.com/miniprogram/dev/api/" target="_blank" rel="noopener noreferrer">API 文档</a>。 </p>
 <!-- more -->
 <p>通常，在小程序 API 有以下几种类型:</p>
@@ -1659,7 +1636,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <guid>https://mister-hope.com/software/mysql/</guid>
       <source url="https://mister-hope.com/rss.xml">MySQL</source>
       <description>目录 介绍 (intro.md); 5.7 版本与 8 的比较 (compare.md);</description>
-      <pubDate>Sat, 12 Feb 2022 05:50:30 GMT</pubDate>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 目录</h2>
 <ul>
 <li><a href="/software/mysql/intro.html" target="blank">介绍</a></li>
@@ -1945,7 +1922,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <guid>https://mister-hope.com/about/</guid>
       <source url="https://mister-hope.com/rss.xml">Mr.Hope 介绍</source>
       <description>slidestart 基本信息 性别: 男; 年龄: 25; 婚姻情况: 未婚; 单身: 否; 爱好: 钓鱼、国际象棋、花体英文、羽毛球、编程; 性格比较开朗随和，热爱帮助他人，喜欢平时写一些开源项目。 学历经历 本科东北师范大学就读物理学; 现在在东北师范大学就读理论物理硕士; 暂无特别突出的科研成果; 联系方式 你可以通过我的 QQ 1178522...</description>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>UI 设计</title>
@@ -2013,7 +1990,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <guid>https://mister-hope.com/code/</guid>
       <source url="https://mister-hope.com/rss.xml">代码笔记</source>
       <description>此处是 Mr.Hope 存放的一些代码笔记。</description>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>此处是 Mr.Hope 存放的一些代码笔记。</p>
 <!-- more -->
 <h2> 目录</h2>
@@ -2111,18 +2088,6 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
 ]]></content:encoded>
     </item>
     <item>
-      <title>硬件相关</title>
-      <link>https://mister-hope.com/hardware/</link>
-      <guid>https://mister-hope.com/hardware/</guid>
-      <source url="https://mister-hope.com/rss.xml">硬件相关</source>
-      <description>硬件相关 这里是一些常见的硬件相关的问题总结，供访客查阅。</description>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 硬件相关</h1>
-<p>这里是一些常见的硬件相关的问题总结，供访客查阅。</p>
-<!-- more -->
-]]></content:encoded>
-    </item>
-    <item>
       <title>Linux</title>
       <link>https://mister-hope.com/linux/</link>
       <guid>https://mister-hope.com/linux/</guid>
@@ -2217,7 +2182,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">Mr.Hope 的随笔</source>
       <description>这里是 Mr.Hope 的一些随笔，后续被整理进博客中。 四季 介绍 这是我在高一写的散文诗集，最初发表在空间日志上。 后续也写了一些诗补充了进去，其中以 “秋之思” 篇幅最多 近日将其作为少年回忆，整理在博客中。 秋之思 (fall/catalog.md); 冬之语 (winter/note.md); 春之诗 (spring/1.md); 夏之歌 (...</description>
       <category>随笔</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>这里是 Mr.Hope 的一些随笔，后续被整理进博客中。</p>
 <h2> 四季</h2>
 <div class="hint-container tip">
@@ -2275,7 +2240,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">物理笔记</source>
       <description>目录 电磁学 (electromagnetism/README.md); 光学 (optism/README.md); 热力学与统计物理 (tsp/README.md); 量子力学 (quatum/README.md);</description>
       <category>物理</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 目录</h2>
 <ul>
 <li>
@@ -2299,7 +2264,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <guid>https://mister-hope.com/software/</guid>
       <source url="https://mister-hope.com/rss.xml">软件教程</source>
       <description>代码编辑器 编辑器介绍 (editor.md); 团队协作 开发项目的代码版本管理以及多人协作使用 Git 软件 Git 教程 (git/README.md); GitHub 介绍 (../code/github/README.md); 浏览器 在开发中，调试网页推荐使用 Chrome。 Chrome 介绍 (chrome.md); 后端 Http S...</description>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 代码编辑器</h2>
 <ul>
 <li><a href="/software/editor.html" target="blank">编辑器介绍</a></li>
@@ -2538,7 +2503,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">代码学习教程</source>
       <description>如何学习一门语言 (learning.md); 教程目录 JavaScript 教程 (js/README.md); TypeScript 教程 (typescript/README.md); Python 教程 (python/README.md) (编写中...); Java 教程 (https://www.liaoxuefeng.com/wiki...</description>
       <category>教程</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<ul>
 <li><a href="/code/language/learning.html" target="blank">如何学习一门语言</a></li>
 </ul>
@@ -2827,7 +2792,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">Node.js</source>
       <description>Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，拥有大量的模块。Node.js 主要以其丰富并及其容易导入的 Node.js package，以及其方便管理 npm (Node.js Package Manager)闻名。</description>
       <category>Node.js</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，拥有大量的模块。Node.js 主要以其丰富并及其容易导入的 Node.js package，以及其方便管理 npm (Node.js Package Manager)闻名。</p>
 <!-- more -->
 <h2> 教程目录</h2>
@@ -2932,7 +2897,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">Vue.js</source>
       <description>简介 Vue (发音为 /vjuː/，类似 view) 是一款用于构建用户界面的 JavaScript 框架。它基于标准 HTML、CSS 和 JavaScript 构建，并提供了一套声明式的、组件化的编程模型，帮助你高效地开发用户界面。无论是简单还是复杂的界面，Vue 都可以胜任。 渐进式框架 Vue 是一个框架，也是一个生态。其功能覆盖了大部分前端...</description>
       <category>基础</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 简介</h2>
 <p>Vue (发音为 /vjuː/，类似 view) 是一款用于构建用户界面的 JavaScript 框架。它基于标准 HTML、CSS 和 JavaScript 构建，并提供了一套声明式的、组件化的编程模型，帮助你高效地开发用户界面。无论是简单还是复杂的界面，Vue 都可以胜任。</p>
 <h2> 渐进式框架</h2>
@@ -3131,7 +3096,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">Bash 教程</source>
       <description>目录 简介 (intro.md); 基本语法 (grammar.md); 模式扩展 (expansion.md); 引号和转义 (quotation.md); 变量 (variable.md); 字符串操作 (string.md); 算术运算 (arithmetic.md); 行操作 (readline.md); 目录堆栈 (stack.md); 脚本...</description>
       <category>Linux</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 目录</h2>
 <ul>
 <li>
@@ -3316,7 +3281,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">秋之思</source>
       <description>介绍 这是我在高一写的一个散文诗集，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。</description>
       <category>随笔</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">介绍</p>
 <p>这是我在高一写的一个散文诗集，最初发表在空间日志上。</p>
@@ -3335,7 +3300,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">笑谈人生</source>
       <description>介绍 这是我在高一写的人生感悟，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。 空间相册链接 (https://h5.qzone.qq.com/ugc/share/?sharetag=126FDE98906EB067815B0EEA0F72BEC0&amp;subtype=3&amp;ciphertext=&amp;sid=&amp;blogphoto=&amp;g=&amp;resu...</description>
       <category>随笔</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">介绍</p>
 <p>这是我在高一写的人生感悟，最初发表在空间日志上。</p>
@@ -3352,7 +3317,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <guid>https://mister-hope.com/note/node-js/</guid>
       <source url="https://mister-hope.com/rss.xml">NodeJS</source>
       <description>目录 current-path 相关 (current-path.md);</description>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 目录</h2>
 <ul>
 <li><a href="/note/node-js/current-path.html" target="blank">current-path 相关</a></li>
@@ -3366,7 +3331,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">轻言细语</source>
       <description>介绍 这是我在高一写的一些小的散文诗，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。</description>
       <category>随笔</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">介绍</p>
 <p>这是我在高一写的一些小的散文诗，最初发表在空间日志上。</p>
@@ -3388,7 +3353,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">春之诗</source>
       <description>介绍 这是我在高一写的第三篇散文诗集，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。</description>
       <category>随笔</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">介绍</p>
 <p>这是我在高一写的第三篇散文诗集，最初发表在空间日志上。</p>
@@ -3404,7 +3369,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">夏之歌</source>
       <description>介绍 这是我在高一写的第四篇散文诗集，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。</description>
       <category>随笔</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">介绍</p>
 <p>这是我在高一写的第四篇散文诗集，最初发表在空间日志上。</p>
@@ -3420,7 +3385,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">冬之语</source>
       <description>介绍 这是我在高一写的第二篇散文诗集，最初发表在空间日志上。 近日将其作为少年回忆，整理在博客中。</description>
       <category>随笔</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">介绍</p>
 <p>这是我在高一写的第二篇散文诗集，最初发表在空间日志上。</p>
@@ -3439,7 +3404,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">电磁学笔记</source>
       <description>目录 第一章 (charpter1.md); 第二章 (charpter2.md);</description>
       <category>物理</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 目录</h2>
 <ul>
 <li>
@@ -3458,7 +3423,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">光学笔记</source>
       <description>第一章 (charpter1.md);</description>
       <category>物理</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 光学笔记</h1>
 <ul>
 <li><a href="/physics/optism/charpter1.html" target="blank">第一章</a></li>
@@ -3472,7 +3437,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">量子力学笔记</source>
       <description>第一章 (charpter1.md);</description>
       <category>物理</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 量子力学笔记</h1>
 <ul>
 <li><a href="/physics/quatum/charpter1.html" target="blank">第一章</a></li>
@@ -3486,7 +3451,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">热力学与统计物理笔记</source>
       <description>目录 定义 (definition.md); 第一章 (charpter1.md); 第二章 (charpter2.md); 第三章 (charpter3.md);</description>
       <category>物理</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 目录</h2>
 <ul>
 <li>
@@ -3608,7 +3573,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">Git</source>
       <description>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。在开发中分布式文件管理系统，可以便于多人协作开发。 交互式学习 如果您觉得本文太枯燥，这里有一个 交互式的分支演示与学习网站。您可以在这里领略 Git 的魅力。 但 Mr.Hope 仍建议您操作完再系统的学习并阅读以下内容。</description>
       <category>Git</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。在开发中分布式文件管理系统，可以便于多人协作开发。</p>
 <div class="hint-container info">
 <p class="hint-container-title">交互式学习</p>
@@ -3701,7 +3666,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <guid>https://mister-hope.com/software/tool/</guid>
       <source url="https://mister-hope.com/rss.xml">工具软件</source>
       <description>目录 PowerToys (power-toys.md): Windows 实用工具合集; PasteEx (https://github.com/huiyadanli/PasteEx): Paste As File 把剪贴板的内容直接粘贴为文件; typora (https://www.typora.io/): 一个页面很漂亮的 Markdown 编...</description>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 目录</h2>
 <ul>
 <li>
@@ -3732,7 +3697,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">VS Code</source>
       <description>Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可在您的桌面上运行，并且可用于 Windows，macOS 和 Linux。它具有对 JavaScript，TypeScript 和 Node.js 的内置支持，并具有丰富的其他语言 (例如 C ++，C＃，Java，Python，PHP，Go) 和运行时 (例如 .NET 和...</description>
       <category>VS Code</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可在您的桌面上运行，并且可用于 Windows，macOS 和 Linux。它具有对 JavaScript，TypeScript 和 Node.js 的内置支持，并具有丰富的其他语言 (例如 C ++，C＃，Java，Python，PHP，Go) 和运行时 (例如 .NET 和 Unity) 扩展的生态系统。由微软出品，因其开源，可扩展和众多插件成为全球最受欢迎的代码编辑器。</p>
 <h2> 特点</h2>
 <ul>
@@ -3865,7 +3830,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">C 语言教程</source>
       <description>提示 正在完善中...</description>
       <category>C</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>正在完善中...</p>
@@ -3880,7 +3845,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">C++ 教程</source>
       <description>提示 正在完善中...</description>
       <category>C++</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>正在完善中...</p>
@@ -3921,7 +3886,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">Java 教程</source>
       <description>提示 正在完善中...</description>
       <category>Java</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>正在完善中...</p>
@@ -4098,7 +4063,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">Markdown</source>
       <description>Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。 Markdown 的目标是实现「易读易写」。 Markdown 的主要目的是用来作为一种网络内容的写作用语言。</description>
       <category>Markdown</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
 <p>Markdown 的目标是实现「易读易写」。</p>
 <p>Markdown 的主要目的是用来作为一种网络内容的<strong>写作用语言</strong>。</p>
@@ -4123,7 +4088,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">PHP 语言教程</source>
       <description>::: tip 正在完善中... :::</description>
       <category>PHP</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>正在完善中...</p>
@@ -4262,7 +4227,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">TypeScript 教程</source>
       <description>TypeScript 是一种由微软开发的自由和开源的编程语言，它是 JavaScript 的一个超集，扩展了 JavaScript 的语法。</description>
       <category>TypeScript</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>TypeScript 是一种由微软开发的自由和开源的编程语言，它是 JavaScript 的一个超集，扩展了 JavaScript 的语法。</p>
 <!-- more -->
 <h2> 语法特性</h2>
@@ -4436,7 +4401,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">小程序框架说明</source>
       <description>开发框架优点 1. 将界面开发的复杂过程转换为编写简单的 yaml 文件。开发门槛低， 1. 拥有详细的开发文档说明，简单易懂，页面文件自述性高，没有开发基础的人也可以经过简单阅读后看懂页面文件大体描述内容。查看例子点这里 (demo.md) 1. 开发者无需着眼于界面样式或是功能的实现，只需着眼于在 yaml 文件中添加渲染界面所需参数并赋值，即可完...</description>
       <category>小程序</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 开发框架优点</h2>
 <ol>
 <li>
@@ -4612,7 +4577,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">工具使用</source>
       <description>工具 工具页面简介 (interface.md); 调试 (debug.md); npm (npm.md); 体验评分 (audit.md);</description>
       <category>小程序</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 工具</h2>
 <ul>
 <li>
@@ -4637,7 +4602,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <source url="https://mister-hope.com/rss.xml">Vue Router</source>
       <description>Vue Router 是 Vue 官方出品的路由组件，托管整个 Vue 项目路由。</description>
       <category>Vue</category>
-      <pubDate>Sun, 06 Feb 2022 16:01:38 GMT</pubDate>
+      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>Vue Router 是 Vue 官方出品的路由组件，托管整个 Vue 项目路由。</p>
 <!-- more -->
 <h2> 目录</h2>
