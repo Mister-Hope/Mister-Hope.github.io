@@ -1,4 +1,5 @@
 ---
+date: 2021-01-18
 title: 自动部署
 icon: network
 category: GitHub

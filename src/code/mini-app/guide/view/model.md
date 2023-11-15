@@ -1,4 +1,5 @@
 ---
+date: 2021-00-18
 title: 简易双向绑定
 icon: async
 category: 小程序

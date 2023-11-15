@@ -1,4 +1,5 @@
 ---
+date: 2022-01-07
 title: Bash 教程
 icon: shell
 author: 阮一峰

@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 枚举
 icon: enum
 category: TypeScript

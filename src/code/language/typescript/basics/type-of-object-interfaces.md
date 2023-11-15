@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 对象的类型——接口
 icon: api
 category: TypeScript

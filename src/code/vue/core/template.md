@@ -1,4 +1,5 @@
 ---
+date: 2023-02-26
 title: 模板语法
 icon: object
 order: 4

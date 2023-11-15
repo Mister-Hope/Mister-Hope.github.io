@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: Hello TypeScript
 icon: creative
 category: TypeScript

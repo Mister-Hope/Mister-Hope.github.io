@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: Bash 函数
 icon: function
 author: 阮一峰

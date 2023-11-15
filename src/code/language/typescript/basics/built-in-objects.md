@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 内置对象
 icon: object
 category: TypeScript

@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 任意值
 icon: any
 category: TypeScript

@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 字符串字面量类型
 icon: string
 category: TypeScript

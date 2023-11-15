@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 字符串操作
 icon: string
 author: 阮一峰

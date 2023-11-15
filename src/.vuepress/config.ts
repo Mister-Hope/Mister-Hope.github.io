@@ -1,5 +1,6 @@
 import { defineUserConfig } from "@vuepress/cli";
-import docsearchPlugin from "@vuepress/plugin-docsearch";
+import { docsearchPlugin } from "@vuepress/plugin-docsearch";
+import { appendDatePlugin } from "vuepress-plugin-append-date";
 import theme from "./theme.js";
 
 export default defineUserConfig({
@@ -38,6 +39,7 @@ export default defineUserConfig({
   theme,
 
   plugins: [
+    appendDatePlugin(),
     docsearchPlugin({
       appId: "LDBQGQC8Q9",
       apiKey: "5c3a7145aeba231c3b85b742d24fc24f",

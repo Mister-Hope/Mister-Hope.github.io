@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: Bash 启动环境
 icon: leaf
 author: 阮一峰

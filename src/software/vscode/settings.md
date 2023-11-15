@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 配置 VS Code
 icon: config
 category: VS Code

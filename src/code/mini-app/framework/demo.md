@@ -1,4 +1,5 @@
 ---
+date: 2020-10-09
 title: YAML 文件案例
 icon: discover
 category: 小程序

@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 函数的属性和方法
 icon: list
 category: JavaScript

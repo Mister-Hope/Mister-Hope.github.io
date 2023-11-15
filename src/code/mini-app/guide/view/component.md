@@ -1,4 +1,5 @@
 ---
+date: 2020-10-09
 title: 基础组件
 icon: plugin
 category: 小程序

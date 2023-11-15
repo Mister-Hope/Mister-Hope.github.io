@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: set 命令
 icon: set
 author: 阮一峰

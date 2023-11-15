@@ -1,7 +1,4 @@
-# lpr
+---
+date: 2020-05-04
+---
 
-`lpr` 命令用于打印文件。
-
-```bash
-lpr filename
-```

@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: Bash 的算术运算
 icon: calculate
 author: 阮一峰

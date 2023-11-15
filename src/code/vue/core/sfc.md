@@ -1,4 +1,5 @@
 ---
+date: 2023-02-26
 title: Vue 单文件组件
 icon: vue
 category: Vue

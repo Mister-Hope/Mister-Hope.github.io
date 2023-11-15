@@ -1,4 +1,5 @@
 ---
+date: 2020-10-09
 title: 小程序简易开发指南
 icon: creative
 category: 小程序

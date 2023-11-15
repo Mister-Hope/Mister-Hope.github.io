@@ -1,4 +1,5 @@
 ---
+date: 2020-08-18
 title: 命令行
 icon: shell
 category: VS Code

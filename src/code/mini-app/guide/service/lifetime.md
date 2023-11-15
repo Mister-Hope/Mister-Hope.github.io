@@ -1,4 +1,5 @@
 ---
+date: 2020-10-09
 title: 生命周期
 icon: state
 category: 小程序

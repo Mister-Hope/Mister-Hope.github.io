@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 什么是 TypeScript
 icon: info
 category: TypeScript

@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 类型断言
 icon: boolean
 category: TypeScript

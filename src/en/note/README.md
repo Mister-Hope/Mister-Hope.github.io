@@ -1,4 +1,5 @@
 ---
+date: 2022-01-07
 title: Notes
 icon: note
 ---
