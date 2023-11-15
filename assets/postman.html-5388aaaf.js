@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vue_export-helper-c27b6911.js";import{o as t,c as o}from"./app-fd69f1a1.js";const c={};function r(n,_){return t(),o("div")}const m=e(c,[["render",r],["__file","postman.html.vue"]]);export{m as default};
