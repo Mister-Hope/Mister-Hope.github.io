@@ -5,7 +5,7 @@
   <subtitle>Where there is light, there is hope.</subtitle>
   <icon>https://mister-hope.com/favicon.ico</icon>
   <rights>基于 MIT 协议，© 2019-至今 Mr.Hope</rights>
-  <updated>2023-11-28T06:02:59.797Z</updated>
+  <updated>2023-11-28T10:02:01.816Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://mister-hope.com/atom.xml"/>
   <link rel="alternate" href="https://mister-hope.com/"/>
@@ -407,7 +407,7 @@
     <title type="text">应用基础知识</title>
     <id>https://mister-hope.com/code/android/base.html</id>
     <link href="https://mister-hope.com/code/android/base.html"/>
-    <updated>2023-03-24T09:43:26.000Z</updated>
+    <updated>2023-11-28T09:55:14.000Z</updated>
     <summary type="html"><![CDATA[<p>本章包含了一些关于 Android 开发的基础内容。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>本章包含了一些关于 Android 开发的基础内容。</p>
@@ -555,9 +555,10 @@
 <p>如需详细了解如何为您的应用构建清单文件，请参阅 AndroidManifest.xml 文件文档。</p>
 <h3> 声明组件功能</h3>
 <p>如上文启动组件中所述，您可以使用 Intent 来启动 Activity、服务和广播接收器。您可以通过在 Intent 中显式命名目标组件(使用组件类名)来使用 Intent。您还可使用隐式 Intent，通过它来描述要执行的操作类型和待操作数据(可选)。借助隐式 Intent，系统能够在设备上找到可执行该操作的组件，并启动该组件。如果有多个组件可以执行 Intent 所描述的操作，则由用户选择使用哪一个组件。</p>
-<p>::: danger</p>
+<div class="hint-container caution">
+<p class="hint-container-title">警告</p>
 <p>如果您使用 Intent 来启动 Service，请使用显式 Intent 来确保应用的安全性。使用隐式 Intent 启动服务存在安全隐患，因为您无法确定哪些服务将响应 Intent，且用户无法看到哪些服务已启动。从 Android 5.0 (API 级别 21) 开始，如果使用隐式 Intent 调用 <code>bindService()</code>，系统会抛出异常。请勿为您的服务声明 Intent 过滤器。</p>
-<p>:::</p>
+</div>
 <p>通过将收到的 Intent 与设备上其他应用的清单文件中提供的 Intent 过滤器进行比较，系统便可识别能响应 Intent 的组件。</p>
 <p>在应用的清单文件中声明 Activity 时，您可以选择性地加入声明 Activity 功能的 Intent 过滤器，以便响应来自其他应用的 Intent。您可以将 <code>&lt;intent-filter&gt;</code> 元素作为组件声明元素的子项进行添加，从而为您的组件声明 Intent 过滤器。</p>
 <p>例如，如果您构建的电子邮件应用包含用于撰写新电子邮件的 Activity，则可通过声明 Intent 过滤器来响应 “send” Intent(目的是发送新电子邮件)，如下方示例所示:</p>
@@ -582,7 +583,7 @@
     <title type="text">应用资源概览</title>
     <id>https://mister-hope.com/code/android/resource.html</id>
     <link href="https://mister-hope.com/code/android/resource.html"/>
-    <updated>2023-03-24T09:43:26.000Z</updated>
+    <updated>2023-11-28T09:55:14.000Z</updated>
     <summary type="html"><![CDATA[<p>资源是指代码使用的附加文件和静态内容，例如位图、布局定义、界面字符串、动画说明等。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>资源是指代码使用的附加文件和静态内容，例如位图、布局定义、界面字符串、动画说明等。</p>
@@ -647,9 +648,10 @@
 </tr>
 </tbody>
 </table>
-<p>::: danger</p>
+<div class="hint-container caution">
+<p class="hint-container-title">警告</p>
 <p>切勿将资源文件直接保存在 <code>res/</code> 目录内，因为这样会造成编译错误。</p>
-<p>:::</p>
+</div>
 ]]></content>
     <category term="Android"/>
     <published>2020-04-09T00:00:00.000Z</published>
@@ -2055,7 +2057,7 @@ memory=8GB
     <title type="text">AJAX</title>
     <id>https://mister-hope.com/code/language/js/browser/ajax.html</id>
     <link href="https://mister-hope.com/code/language/js/browser/ajax.html"/>
-    <updated>2022-02-12T05:50:30.000Z</updated>
+    <updated>2023-11-28T09:55:14.000Z</updated>
     <summary type="html"><![CDATA[<p>Ajax 不是 JavaScript 的规范，它只是一个哥们“发明”的缩写: Asynchronous JavaScript and XML，意思就是用 JavaScript 执行异步网络请求。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>Ajax 不是 JavaScript 的规范，它只是一个哥们“发明”的缩写: Asynchronous JavaScript and XML，意思就是用 JavaScript 执行异步网络请求。</p>
@@ -2071,9 +2073,10 @@ memory=8GB
 <div class="language-javascript" data-ext="js"></div><p>通过检测 <code>window</code> 对象是否有 <code>XMLHttpRequest</code> 属性来确定浏览器是否支持标准的 <code>XMLHttpRequest</code>。注意，不要根据浏览器的 <code>navigator.userAgent</code> 来检测浏览器是否支持某个 JavaScript 特性，一是因为这个字符串本身可以伪造，二是通过 IE 版本判断 JavaScript 特性将非常复杂。</p>
 <p>当创建了 <code>XMLHttpRequest</code> 对象后，要先设置 <code>onreadystatechange</code> 的回调函数。在回调函数中，通常我们只需通过 <code>readyState === 4</code> 判断请求是否完成，如果已完成，再根据 <code>status === 200</code> 判断是否是一个成功的响应。</p>
 <p><code>XMLHttpRequest</code> 对象的 <code>open()</code> 方法有 3 个参数，第一个参数指定是 GET 还是 POST，第二个参数指定 URL 地址，第三个参数指定是否使用异步，默认是 <code>true</code>，所以不用写。</p>
-<p>::: danger</p>
+<div class="hint-container caution">
+<p class="hint-container-title">警告</p>
 <p>千万不要把第三个参数指定为 <code>false</code>，否则浏览器将停止响应，直到 Ajax 请求完成。如果这个请求耗时 10 秒，那么 10 秒内您会发现浏览器处于“假死”状态。</p>
-<p>:::</p>
+</div>
 <p>最后调用 <code>send()</code> 方法才真正发送请求。GET 请求不需要参数，POST 请求需要把 body 部分以字符串或者 <code>FormData</code> 对象传进去。</p>
 <h2> 安全限制</h2>
 <p>上面代码的 URL 使用的是相对路径。如果您把它改为 <code>'https://www.sina.com.cn/'</code>，再运行，肯定报错。在 Chrome 的控制台里，还可以看到错误信息。</p>
