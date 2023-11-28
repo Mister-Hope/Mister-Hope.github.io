@@ -29,7 +29,7 @@ GitHub Pages 站点共有三种类型: 项目，用户和组织。
 
 ## 发布源文件到 GitHub Pages
 
-::: danger
+::: caution
 
 GitHub Pages 站点 默认在互联网上公开，即使站点的仓库是私有的。
 

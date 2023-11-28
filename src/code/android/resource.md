@@ -51,7 +51,7 @@ MyProject/
 | xml/      | 可在运行时通过调用 Resources.getXML() 读取的任意 XML 文件。各种 XML 配置文件(如可搜索配置)都必须保存在此处。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | font/     | 带有扩展名的字体文件(如 .ttf、.otf 或 .ttc)，或包含 `<font-family>` 元素的 XML 文件。如需详细了解作为资源的字体，请参阅 XML 中的字体。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-::: danger
+::: caution
 
 切勿将资源文件直接保存在 `res/` 目录内，因为这样会造成编译错误。
 

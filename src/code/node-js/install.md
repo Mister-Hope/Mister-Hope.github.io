@@ -100,7 +100,7 @@ npm install <foo>  add the <foo> dependency to your project
 npm config set registry https://registry.npmmirror.com/
 ```
 
-::: danger
+::: caution
 
 `https://registry.npm.taobao.org/` 是老的淘宝源地址，现已停止维护，请不要使用!!!
 
