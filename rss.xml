@@ -6,16 +6,16 @@
     <link>https://mister-hope.com/</link>
     <description>Where there is light, there is hope.</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 28 Nov 2023 10:02:01 GMT</pubDate>
-    <lastBuildDate>Tue, 28 Nov 2023 10:02:01 GMT</lastBuildDate>
+    <pubDate>Mon, 04 Dec 2023 11:01:44 GMT</pubDate>
+    <lastBuildDate>Mon, 04 Dec 2023 11:01:44 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>基于 MIT 协议，© 2019-至今 Mr.Hope</copyright>
+    <category>基础</category>
     <category>Vue</category>
     <category>Android</category>
     <category>快速上手</category>
     <category>HTML</category>
-    <category>基础</category>
     <category>Git</category>
     <category>后端</category>
     <category>Node.js</category>
@@ -43,6 +43,53 @@
     <category>YAML</category>
     <category>CSS</category>
     <category>Emmet</category>
+    <item>
+      <title>Windows 开发</title>
+      <link>https://mister-hope.com/code/windows/developers.html</link>
+      <guid>https://mister-hope.com/code/windows/developers.html</guid>
+      <source url="https://mister-hope.com/rss.xml">Windows 开发</source>
+      <description>本文主要介绍 Windows 11 系统下，与开发相关的功能。 WSL WSL 是 Windows Subsystem for Linux 的缩写，即 Windows 的 Linux 子系统。Windows 11 支持 WSL2，同时支持 wslg，即 WSL 图形化。 你可以很方便的启用 Windows For Linux 子系统，然后在 Windo...</description>
+      <category>基础</category>
+      <pubDate>Mon, 04 Dec 2023 10:54:35 GMT</pubDate>
+      <content:encoded><![CDATA[<p>本文主要介绍 Windows 11 系统下，与开发相关的功能。</p>
+<h2> WSL</h2>
+<p>WSL 是 Windows Subsystem for Linux 的缩写，即 Windows 的 Linux 子系统。Windows 11 支持 WSL2，同时支持 wslg，即 WSL 图形化。</p>
+<p>你可以很方便的启用 Windows For Linux 子系统，然后在 Windows 11 上安装 Linux 发行版，如 Ubuntu、Debian、Kali 等，然后在 Linux 环境下进行开发，同时启用 wslg，即可在 Windows 11 上使用 Linux 图形化应用如 Firefox 等进行调试。</p>
+<h3> 安装 WSL</h3>
+<p>你可以使用单个命令安装运行 WSL 所需的一切内容。 在管理员模式下打开 PowerShell 或 Windows 命令提示符，方法是右键单击并选择“以管理员身份运行”，输入 <code>wsl --install</code> 命令，然后重启计算机。</p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
+<p>有关 WSL 的详细内容，详见 <a href="https://learn.microsoft.com/zh-cn/windows/wsl/" target="_blank" rel="noopener noreferrer">WSL 官方文档</a>。</p>
+</div>
+<h2> WSA</h2>
+<p>WSA 是 Windows Subsystem for Android 的缩写，即 Windows 的 Android 子系统。Windows 11 支持 WSA，你可以在 Windows 11 上安装 Android 应用，如微信、QQ、抖音等，然后在 Windows 11 上使用。</p>
+<p>默认情况下，你只能通过 WSA 内置的 Amazon 应用商店安装应用，但是你可以打开开发者模式通过 adb 安装任意应用的 APK。</p>
+<div class="hint-container info">
+<p class="hint-container-title">相关信息</p>
+<p>有关 WSA 的详细内容，详见 <a href="https://learn.microsoft.com/zh-cn/windows/android/wsa/" target="_blank" rel="noopener noreferrer">WSA 官方文档</a>。</p>
+</div>
+<h2> Windows 终端</h2>
+<p>Windows 终端是一个新式主机应用程序，它面向你喜爱的命令行 shell，如命令提示符、PowerShell 和 bash（通过适用于 Linux 的 Windows 子系统 (WSL)）。 它的主要功能包括多个选项卡、窗格、Unicode 和 UTF-8 字符支持、GPU 加速文本呈现引擎，你还可用它来创建你自己的主题并自定义文本、颜色、背景和快捷方式。</p>
+<p>更多内容详见 <a href="/software/tool/terminal/" target="blank">软件 → Windows 终端</a>。</p>
+<h2> PowerToys</h2>
+<p>Microsoft PowerToys 是一组实用工具，可帮助高级用户调整和简化其 Windows 体验，从而提高工作效率。</p>
+<p>更多内容详见 <a href="/software/tool/power-toys.html" target="blank">软件 → PowerToys</a>。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Windows 版本</title>
+      <link>https://mister-hope.com/code/windows/version.html</link>
+      <guid>https://mister-hope.com/code/windows/version.html</guid>
+      <source url="https://mister-hope.com/rss.xml">Windows 版本</source>
+      <description>简介 Microsoft Windows 操作系统是美国微软公司研发的一套操作系统，它问世于 1985 年，起初仅仅是 Microsoft-DOS 模拟环境，后续的系统版本由于微软不断的更新升级，不但易用，也当前应用最广泛的操作系统。 Windows 采用了图形化模式 GUI，比起从前的 DOS 需要输入指令使用的方式，更为人性化。随着计算机硬件和软件...</description>
+      <category>基础</category>
+      <pubDate>Mon, 04 Dec 2023 10:54:35 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 简介</h2>
+<p>Microsoft Windows 操作系统是美国微软公司研发的一套操作系统，它问世于 1985 年，起初仅仅是 Microsoft-DOS 模拟环境，后续的系统版本由于微软不断的更新升级，不但易用，也当前应用最广泛的操作系统。</p>
+<p>Windows 采用了图形化模式 GUI，比起从前的 DOS 需要输入指令使用的方式，更为人性化。随着计算机硬件和软件的不断升级，微软的 Windows也在不断升级，从架构的16位、32位再到64位,系统版本从最初的 Windows1.0到大家熟知的 Windows95、 Windows98、 Windows2000、 Windows XP、 Windows Vista、 Windows7、Windows8、Windows8.1、Windows10、Windows11 和 Windows Server 服务器企业级操作系统，不断持续更新.</p>
+<p>目前，最新的消费者版本是 Windows 11。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>创建 Vue 应用</title>
       <link>https://mister-hope.com/code/vue/core/app.html</link>
@@ -784,7 +831,7 @@
       <content:encoded><![CDATA[<p>在本节课中，您将学习如何使用 Android Studio 布局编辑器创建包含一个文本框和一个按钮的布局。这将为下一课打下基础，下节课将学习如何在点按该按钮时让应用将文本框的内容发送到其他 activity。</p>
 <!-- more -->
 <p>Android 应用的界面 (UI) 以布局和微件的层次结构形式构建而成。布局是 ViewGroup 对象，即控制其子视图在屏幕上的放置方式的容器。微件是 View 对象，即按钮和文本框等界面组件。</p>
-<p></p>
+<figure><figcaption>ViewGroup</figcaption></figure>
 <p>Android 提供了 ViewGroup 和 View 类的 XML 词汇表，因此界面的大部分内容都在 XML 文件中定义。不过，本节课将向您介绍如何使用 Android Studio 的布局编辑器创建布局，而不是教您编写 XML 代码。布局编辑器会在您拖放视图构建布局时为您编写 XML 代码。</p>
 <h2> 打开布局编辑器</h2>
 <p>首先，请按照以下步骤设置工作区：</p>
@@ -799,7 +846,7 @@
 <li>点击工具栏中的 (Device for Preview)，然后选择 5.5, 1440 × 2560, 560 dpi (Pixel XL)。</li>
 </ol>
 <p>您的布局编辑器现在如下图所示。</p>
-<p></p>
+<figure><figcaption>布局编辑器</figcaption></figure>
 <p>左下方的 Component Tree 面板显示布局的视图层次结构。在本例中，根视图是 ConstraintLayout，它仅包含一个 TextView 对象。</p>
 <p>ConstraintLayout 是一种布局，它根据同级视图和父布局的约束条件定义每个视图的位置。这样一来，使用扁平视图层次结构既可以创建简单布局，又可以创建复杂布局。这种布局无需嵌套布局。嵌套布局是布局内的布局（如图 2 所示），会增加绘制界面所需的时间。</p>
 <p>例如，您可以声明以下布局，如下图所示：</p>
@@ -809,7 +856,7 @@
 <li>视图 B 距离视图 A 右侧 16 dp。</li>
 <li>视图 B 与视图 A 顶部对齐。</li>
 </ul>
-<p></p>
+<figure><figcaption>布局示例</figcaption></figure>
 <h2> 添加文本框</h2>
 <p>请按照下面的步骤添加文本框：</p>
 <ol>
@@ -1014,86 +1061,86 @@
       <pubDate>Sun, 03 Nov 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 什么是 HTTP 协议</h2>
 <p>HTTP 协议全称 Hyper Text Transfer Protocol，翻译过来就是超文本传输协议，位于 TCP/IP 四层模型当中的应用层。</p>
-<p></p>
+<figure><figcaption>Http 漫画</figcaption></figure>
 <p>HTTP 协议通过 <strong>请求/响应</strong> 的方式，在客户端和服务端之间进行通信。</p>
-<p></p>
+<figure><figcaption>Http 漫画</figcaption></figure>
 <p>这一切看起来很美好，但是 HTTP 协议有一个致命的缺点: <strong>不够安全</strong>。</p>
 <p>HTTP 协议的信息传输完全以明文方式，不做任何加密，相当于是在网络上“裸奔”。这样会导致什么问题呢? 让我们打一个比方:</p>
 <p>小灰是客户端，小灰的同事小红是服务端，有一天小灰试图给小红发送请求。</p>
-<p></p>
+<figure><figcaption>Http 漫画</figcaption></figure>
 <p>但是，由于传输信息是明文，这个信息有可能被某个中间人恶意截获甚至篡改。这种行为叫做<strong>中间人攻击</strong>。</p>
-<p></p>
-<p></p>
-<p></p>
+<figure><figcaption>Http 漫画</figcaption></figure>
+<figure><figcaption>Http 漫画</figcaption></figure>
+<figure><figcaption>Http 漫画</figcaption></figure>
 <p>如何进行加密呢?</p>
 <p>小灰和小红可以事先约定一种<strong>对称加密</strong>方式，并且约定一个随机生成的密钥。后续的通信中，信息发送方都使用密钥对信息加密，而信息接收方通过同样的密钥对信息解密。</p>
-<p></p>
-<p></p>
+<figure><figcaption>Http 漫画</figcaption></figure>
+<figure><figcaption>Http 漫画</figcaption></figure>
 <p>这样做是不是就绝对安全了呢? 并不是。</p>
 <p>虽然我们在后续的通信中对明文进行了加密，但是第一次约定加密方式和密钥的通信仍然是明文，如果第一次通信就已经被拦截了，那么密钥就会泄露给中间人，中间人仍然可以解密后续所有的通信内容。</p>
-<p></p>
+<figure><figcaption>Http 漫画</figcaption></figure>
 <p>这可怎么办呢? 别担心，我们可以使用<strong>非对称加密</strong>，为密钥的传输做一层额外的保护。</p>
 <p>非对称加密的一组秘钥对中，包含一个公钥和一个私钥。明文既可以用公钥加密，用私钥解密；也可以用私钥加密，用公钥解密。</p>
 <p>在小灰和小红建立通信的时候，小红首先把自己的公钥 Key1 发给小灰:</p>
-<p></p>
+<figure><figcaption>Http 漫画</figcaption></figure>
 <p>收到小红的公钥以后，小灰自己生成一个用于对称加密的密钥 Key2，并且用刚才接收的公钥 Key1 对 Key2 进行加密(这里有点绕)，发送给小红:</p>
-<p></p>
+<figure><figcaption>Http 漫画</figcaption></figure>
 <p>小红利用自己非对称加密的私钥，解开了公钥 Key1 的加密，获得了 Key2 的内容。从此以后，两人就可以利用 Key2 进行对称加密的通信了。</p>
-<p></p>
+<figure><figcaption>Http 漫画</figcaption></figure>
 <p>在通信过程中，即使中间人在一开始就截获了公钥 Key1，由于不知道私钥是什么，也无从解密。</p>
-<p></p>
-<p></p>
+<figure><figcaption>Http 漫画</figcaption></figure>
+<figure><figcaption>Http 漫画</figcaption></figure>
 <p>是什么坏主意呢? 中间人虽然不知道小红的私钥是什么，但是在截获了小红的公钥 Key1 之后，却可以偷天换日，自己另外生成一对公钥私钥，把自己的公钥 Key3 发送给小灰。</p>
-<p></p>
+<figure><figcaption>Http 漫画</figcaption></figure>
 <p>小灰不知道公钥被偷偷换过，以为 Key3 就是小红的公钥。于是按照先前的流程，用 Key3 加密了自己生成的对称加密密钥 Key2，发送给小红。</p>
 <p>这一次通信再次被中间人截获，中间人先用自己的私钥解开了 Key3 的加密，获得 Key2，然后再用当初小红发来的 Key1 重新加密，再发给小红。</p>
-<p></p>
+<figure><figcaption>Http 漫画</figcaption></figure>
 <p>这样一来，两个人后续的通信尽管用 Key2 做了对称加密，但是中间人已经掌握了 Key2，所以可以轻松进行解密。</p>
-<p></p>
-<p></p>
+<figure><figcaption>Http 漫画</figcaption></figure>
+<figure><figcaption>Http 漫画</figcaption></figure>
 <p>是什么解决方案呢? 难道再把公钥进行一次加密吗? 这样只会陷入鸡生蛋蛋生鸡，永无止境的困局。</p>
 <p>这时候，我们有必要引入第三方，一个权威的证书颁发机构(CA)来解决。</p>
 <p>到底什么是证书呢? 证书包含如下信息:</p>
-<p></p>
+<figure><figcaption>Http 漫画</figcaption></figure>
 <p>为了便于说明，我们这里做了简化，只列出了一些关键信息。至于这些证书信息的用处，我们看看具体的通信流程就能够弄明白了。</p>
 <p>流程如下:</p>
 <ol>
 <li>
 <p>作为服务端的小红，首先把自己的公钥发给证书颁发机构，向证书颁发机构申请证书。</p>
-<p></p>
+<figure><figcaption>Http 漫画</figcaption></figure>
 </li>
 <li>
 <p>证书颁发机构自己也有一对公钥私钥。机构利用自己的私钥来加密 Key1，并且通过服务端网址等信息生成一个证书签名，证书签名同样经过机构的私钥加密。证书制作完成后，机构把证书发送给了服务端小红。</p>
-<p></p>
+<figure><figcaption>Http 漫画</figcaption></figure>
 </li>
 <li>
 <p>当小灰向小红请求通信的时候，小红不再直接返回自己的公钥，而是把自己申请的证书返回给小灰。</p>
-<p></p>
+<figure><figcaption>Http 漫画</figcaption></figure>
 </li>
 <li>
 <p>小灰收到证书以后，要做的第一件事情是验证证书的真伪。需要说明的是，各大浏览器和操作系统已经维护了所有权威证书机构的名称和公钥。所以小灰只需要知道是</p>
 <p>哪个机构颁布的证书，就可以从本地找到对应的机构公钥，解密出证书签名。</p>
 <p>接下来，小灰按照同样的签名规则，自己也生成一个证书签名，如果两个签名一致，说明证书是有效的。</p>
 <p>验证成功后，小灰就可以放心地再次利用机构公钥，解密出服务端小红的公钥 Key1。</p>
-<p></p>
+<figure><figcaption>Http 漫画</figcaption></figure>
 </li>
 <li>
 <p>像之前一样，小灰生成自己的对称加密密钥 Key2，并且用服务端公钥 Key1 加密 Key2，发送给小红。</p>
-<p></p>
+<figure><figcaption>Http 漫画</figcaption></figure>
 </li>
 <li>
 <p>最后，小红用自己的私钥解开加密，得到对称加密密钥 Key2。于是两人开始用 Key2 进行对称加密的通信。</p>
-<p></p>
+<figure><figcaption>Http 漫画</figcaption></figure>
 </li>
 </ol>
 <p>在这样的流程下，我们不妨想一想，中间人是否还具有使坏的空间呢?</p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
+<figure><figcaption>Http 漫画</figcaption></figure>
+<figure><figcaption>Http 漫画</figcaption></figure>
+<figure><figcaption>Http 漫画</figcaption></figure>
+<figure><figcaption>Http 漫画</figcaption></figure>
+<figure><figcaption>Http 漫画</figcaption></figure>
+<figure><figcaption>Http 漫画</figcaption></figure>
+<figure><figcaption>Http 漫画</figcaption></figure>
 <div class="hint-container info">
 <p class="hint-container-title">相关信息</p>
 <p>最新推出的 TLS 协议，是 SSL 3.0 协议的升级版，和 SSL 协议的大体原理是相同的。</p>
@@ -1187,7 +1234,7 @@
 <p>更多详情请见 <a href="/code/website/definition/url.html" target="blank">URL</a></p>
 </div>
 <h3> 关系</h3>
-<p></p>
+<figure><figcaption>URL方案分类图</figcaption></figure>
 <p>URL(定位符)和 URN(名称)方案属于 URI 的子类，URI 可以为 URL 或 URN 两者之一或同时是 URI 和 URN。技术上讲，URL 和 URN 属于资源 ID；但是，人们往往无法将某种方案归类于两者中的某一个: 所有的 URI 都可被作为名称看待，而某些方案同时体现了两者中的不同部分。
 URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(URN)如同一个人的名称，而统一资源定位符(URL)代表一个人的住址。换言之，URN 定义某事物的身份，而 URL 提供查找该事物的方法。</p>
 <div class="hint-container tip">
@@ -1240,14 +1287,14 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
       <category>基础</category>
       <pubDate>Sun, 08 Sep 2019 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>以 Windows 10 系统为例，直接在左下角搜索栏中输入“系统变量”</p>
-<p></p>
+<figure><figcaption>搜索</figcaption></figure>
 <p>在弹出的框中点击环境变量</p>
-<p></p>
+<figure><figcaption>系统变量</figcaption></figure>
 <p>如果你需要添加环境变量，直接添加即可。</p>
 <p>如果你只是希望添加到 Path，在弹出的新窗口中找到 path，选中并点击编辑</p>
-<p></p>
+<figure><figcaption>系统变量</figcaption></figure>
 <p>点击添加输入想要添加到 path 的路径或者执行文件名即可</p>
-<p></p>
+<figure><figcaption>系统变量</figcaption></figure>
 ]]></content:encoded>
     </item>
     <item>
@@ -1390,7 +1437,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
 </li>
 </ol>
 <p>打个比方，操作系统就好像是一个政府，其它软件都会被它管控；操作系统在给其他软件提供各种便利的同时，还会约束其他软件不能为所欲为。</p>
-<p></p>
+<figure><figcaption>操作系统结构示意图</figcaption></figure>
 <p>目前流行的服务器和 PC 端操作系统有 Linux、Windows、UNIX 等，手机操作系统有 Android、iOS，嵌入式操作系统有 Windows CE、PalmOS、eCos、uClinux 等。</p>
 ]]></content:encoded>
     </item>
@@ -1831,7 +1878,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
 <p>了解 CORS 前，我们先搞明白概念:</p>
 <p><strong>Origin</strong> 表示本域，也就是浏览器当前页面的域。当 JavaScript 向外域 (如 sina.com) 发起请求后，浏览器收到响应后，首先检查 <code>Access-Control-Allow-Origin</code> 是否包含本域，如果是，则此次跨域请求成功，如果不是，则请求失败，JavaScript 将无法获取到响应的任何数据。</p>
 <p>用一个图来表示就是:</p>
-<p></p>
+<figure><figcaption>js-cors</figcaption></figure>
 <p>假设本域是 <code>my.com</code>，外域是 <code>sina.com</code>，只要响应头 <code>Access-Control-Allow-Origin</code> 为 <code>https://my.com</code>，或者是 <code>*</code>，本次请求就可以成功。</p>
 <p>可见，跨域能否成功，取决于对方服务器是否愿意给您设置一个正确的 <code>Access-Control-Allow-Origin</code>，决定权始终在对方手中。</p>
 <p>上面这种跨域请求，称之为“简单请求”。简单请求包括 <code>GET</code>、<code>HEAD</code> 和 <code>POST</code> ( POST 的 <code>Content-Type</code> 类型
@@ -2592,7 +2639,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
 <ul>
 <li>
 <p><a href="https://github.com/wechat-miniprogram/miniprogram-demo" target="_blank" rel="noopener noreferrer">小程序实例源码</a></p>
-<p><img src="https://res.wx.qq.com/wxdoc/dist/assets/img/demo.ef5c5bef.jpg" alt="小程序示例二维码" loading="lazy"></p>
+<figure><img src="https://res.wx.qq.com/wxdoc/dist/assets/img/demo.ef5c5bef.jpg" alt="小程序示例二维码" tabindex="0" loading="lazy"><figcaption>小程序示例二维码</figcaption></figure>
 </li>
 </ul>
 <h2> 官方文档</h2>
@@ -2825,47 +2872,35 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
 <li>JavaScript 编写网页的行为</li>
 </ol>
 <!-- more -->
-<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
+<h2> 网站开发技术</h2>
 <p>一个大型的网站，很少是直接使用原生代码写的。</p>
-<p>最新的网站大多数都是用知名框架 (<a href="#angular"><strong>Angular</strong></a>、<a href="#react"><strong>React</strong></a>、<a href="#vue"><strong>Vue</strong></a>) 搭建，并引入 npm 上的 UI 库编写而成。</p>
-<p>稍微老的网站会使用其他框架作为辅助，比如 <a href="#bootstrap4"><strong>Bootstrap</strong></a>、<a href="#jquery"><strong>jQuery</strong></a> 等。</p>
-</div>
-<div class="hint-container info">
-<p class="hint-container-title">网页标准指定</p>
+<ul>
+<li>现代网站大多通过开源前端框架 (如 <a href="#react"><strong>React</strong></a>、<a href="#vue"><strong>Vue</strong></a>) 开发，并引入 npm 上的 UI 库编写而成。</li>
+<li>较老的网站 (或者政企) 可能会在原生开发基础上使用其他框架作为辅助，比如 <a href="#bootstrap4"><strong>Bootstrap</strong></a>、<a href="#jquery"><strong>jQuery</strong></a> 等。</li>
+</ul>
+<h2> 网页标准</h2>
 <p>互联网网页标准由 W3C 组织制定，它的全称是万维网联盟组织。</p>
-</div>
-<h2> HTML</h2>
+<h2> 网页基础</h2>
+<h3> HTML</h3>
 <p>HTML 指的是超文本标记语言 (Hyper Text Markup Language)，描述了网页的骨架(具体结构)。</p>
 <ul>
 <li><a href="/code/website/html/" target="blank">HTML 教程</a></li>
 </ul>
-<h2> CSS</h2>
+<h3> CSS</h3>
 <p>CSS 指层叠样式表 (Cascading Style Sheets)，声明了网页的样式(具体布局)。</p>
 <ul>
 <li><a href="/code/website/css/" target="blank">CSS 教程</a></li>
 </ul>
-<h2> Emmet</h2>
+<h3> Emmet</h3>
 <p>Emmet 是一种快速输入 HTML 和 CSS 的语法。</p>
 <ul>
 <li><a href="/code/website/emmet/" target="blank">Emmet 用法介绍</a></li>
 </ul>
-<h2> JavaScript</h2>
+<h3> JavaScript</h3>
 <p>JavaScript 是一种编程语言，声明了网页的交互逻辑。</p>
 <p>JavaScript 是一种轻量级的编程语言，为可插入 HTML 页面的编程代码。所有现代的 HTML 页面都使用 JavaScript。</p>
 <ul>
 <li><a href="/code/website/js.html" target="blank">JS 教程</a></li>
-</ul>
-<h3> TypeScript</h3>
-<p>TypeScript 是 JavaScript 的一个超集，使得 JS 变成了一种强定义语言。TypeScript 由于其诸多优良特性，目前在前端的份额越来越大。</p>
-<ul>
-<li><a href="/code/language/typescript/" target="blank">TypeScript 教程</a></li>
-</ul>
-<h2> Node.js</h2>
-<p>在深入了解并进行前端开发后，就避不开 Node。</p>
-<p>Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，拥有大量的模块。Node.js 主要以其丰富并及其容易导入的 Node.js package，以及其方便管理 npm (Node.js Package Manager)闻名。</p>
-<ul>
-<li><a href="/code/node-js/" target="blank">Node.js 教程</a></li>
 </ul>
 <h2> 现代前端框架</h2>
 <h3> Vue</h3>
@@ -2885,6 +2920,18 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
 <h3> Angular</h3>
 <ul>
 <li><a href="/code/angular/" target="blank">Angular 教程</a></li>
+</ul>
+<h2> 深入网页开发</h2>
+<h3> TypeScript</h3>
+<p>TypeScript 是 JavaScript 的一个超集，使得 JS 变成了一种强定义语言。TypeScript 由于其诸多优良特性，目前在前端的份额越来越大。</p>
+<ul>
+<li><a href="/code/language/typescript/" target="blank">TypeScript 教程</a></li>
+</ul>
+<h3> Node.js</h3>
+<p>在深入了解并进行前端开发后，就避不开 Node。</p>
+<p>Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，拥有大量的模块。Node.js 主要以其丰富并及其容易导入的 Node.js package，以及其方便管理 npm (Node.js Package Manager)闻名。</p>
+<ul>
+<li><a href="/code/node-js/" target="blank">Node.js 教程</a></li>
 </ul>
 <h2> 历史前端框架</h2>
 <h3> jQuery</h3>
@@ -2924,14 +2971,14 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
 ]]></content:encoded>
     </item>
     <item>
-      <title>基础知识</title>
+      <title>Windows 简介</title>
       <link>https://mister-hope.com/code/windows/</link>
       <guid>https://mister-hope.com/code/windows/</guid>
-      <source url="https://mister-hope.com/rss.xml">基础知识</source>
-      <description>以下是有关于 Windows 10 系统的一些基础知识。</description>
+      <source url="https://mister-hope.com/rss.xml">Windows 简介</source>
+      <description>以下是有关于 Windows 系统的一些基础知识。</description>
       <category>基础</category>
       <pubDate>Sat, 07 Sep 2019 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>以下是有关于 Windows 10 系统的一些基础知识。</p>
+      <content:encoded><![CDATA[<p>以下是有关于 Windows 系统的一些基础知识。</p>
 <!-- more -->
 ]]></content:encoded>
     </item>
@@ -4911,127 +4958,6 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
 <li>
 <p><a href="https://cn.comsol.com/video/shell-tube-heat-exchanger-model-tutorial" target="_blank" rel="noopener noreferrer">管壳式换热器模型教程</a></p>
 </li>
-</ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>网格</title>
-      <link>https://mister-hope.com/software/comsol/mesh/</link>
-      <guid>https://mister-hope.com/software/comsol/mesh/</guid>
-      <source url="https://mister-hope.com/rss.xml">网格</source>
-      <description>网格基础 网格划分和细化介绍 (intro.md); 内容 剖分方法 物理场控制; 用户控制; 剖分程度 从极粗化到极细化一共九个级别。 其他 可以进行定制。 基础 教程视频: 在 COMSOL Multiphysics^®^ 中为几何模型构建网格 (https://cn.comsol.com/video/building-the-mesh-for-a...</description>
-      <category>软件</category>
-      <pubDate>Tue, 02 Jun 2020 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 网格基础</h2>
-<ul>
-<li><a href="/software/comsol/mesh/intro.html" target="blank">网格划分和细化介绍</a></li>
-</ul>
-<h3> 内容</h3>
-<h4> 剖分方法</h4>
-<ul>
-<li>物理场控制</li>
-<li>用户控制</li>
-</ul>
-<h4> 剖分程度</h4>
-<p>从极粗化到极细化一共九个级别。</p>
-<h4> 其他</h4>
-<p>可以进行定制。</p>
-<h3> 基础</h3>
-<p>教程视频:</p>
-<ul>
-<li>
-<p><a href="https://cn.comsol.com/video/building-the-mesh-for-a-model-geometry-in-comsol-multiphysics" target="_blank" rel="noopener noreferrer">在 COMSOL Multiphysics<sup>®</sup> 中为几何模型构建网格</a></p>
-</li>
-<li>
-<p><a href="https://cn.comsol.com/video/meshing-in-comsol-multiphysics-tutorial-cn" target="_blank" rel="noopener noreferrer">在 COMSOL Multiphysics<sup>®</sup> 中剖分网格</a></p>
-</li>
-</ul>
-<p>博客:</p>
-<ul>
-<li>
-<p><a href="https://cn.comsol.com/blogs/improved-capabilities-for-meshing-with-tetrahedral-elements/" target="_blank" rel="noopener noreferrer">网格剖分原理介绍</a></p>
-</li>
-<li>
-<p><a href="https://cn.comsol.com/blogs/how-to-inspect-your-mesh-in-comsol-multiphysics/" target="_blank" rel="noopener noreferrer">如何检查 COMSOL Multiphysics<sup>®</sup> 中的网格</a></p>
-</li>
-</ul>
-<p>案例:</p>
-<ul>
-<li>
-<p><a href="https://cn.comsol.com/model/using-meshing-sequences-13869" target="_blank" rel="noopener noreferrer">使用网格划分序列</a></p>
-</li>
-<li>
-<p><a href="https://cn.comsol.com/blogs/efficiently-mesh-your-model-geometry-with-meshing-sequences/" target="_blank" rel="noopener noreferrer">借助网格剖分序列提升几何模型的网格剖分效率</a></p>
-</li>
-</ul>
-<h4> 进阶</h4>
-<p>视频教程:</p>
-<ul>
-<li>
-<p><a href="https://cn.comsol.com/video/meshing-techniques-in-comsol-multiphysics-webinar-cn" target="_blank" rel="noopener noreferrer">COMSOL® 网格剖分技巧</a></p>
-</li>
-<li>
-<p><a href="https://cn.comsol.com/video/meshing-tips-comsol-multiphysics" target="_blank" rel="noopener noreferrer">COMSOL® 网格剖分技巧</a></p>
-</li>
-<li>
-<p><a href="https://cn.comsol.com/video/automated-meshing-infinite-element-domains" target="_blank" rel="noopener noreferrer">对无限元域自动划分网格</a></p>
-</li>
-</ul>
-<p>其他文档:</p>
-<ul>
-<li><a href="https://wenku.baidu.com/view/8d2eebe4eff9aef8941e06fe.html" target="_blank" rel="noopener noreferrer">COMSOL Multiphysics 网格剖分 变形几何</a></li>
-</ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Windows Terminal</title>
-      <link>https://mister-hope.com/software/tool/terminal/</link>
-      <guid>https://mister-hope.com/software/tool/terminal/</guid>
-      <source url="https://mister-hope.com/rss.xml">Windows Terminal</source>
-      <description>Windows Terminal 是一个面向命令行工具和 shell(如命令提示符、PowerShell 和适用于 Linux 的 Windows 子系统 (WSL))用户的新式终端应用程序。</description>
-      <pubDate>Wed, 27 Jan 2021 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>Windows Terminal 是一个面向命令行工具和 shell(如命令提示符、PowerShell 和适用于 Linux 的 Windows 子系统 (WSL))用户的新式终端应用程序。</p>
-<!-- more -->
-<p></p>
-<h2> 特点</h2>
-<ul>
-<li>
-<p>多选项卡与窗格</p>
-<p>可以同时运行多个终端并自由布局与切换</p>
-</li>
-<li>
-<p>自定义方案和配置</p>
-<p>可在 Windows Terminal 中使用多种自定义命令，获得更加自然的体验。 如果不喜欢特定的键盘快捷方式，可以将其更改为您喜欢的方式。</p>
-</li>
-<li>
-<p>强大的可配置主题</p>
-<p>可以自由配置 Windows Terminal 的配色方案</p>
-<p>可以在 Windows Terminal 窗口中显示背景图像和 GIF</p>
-</li>
-<li>
-<p>扩展性，支持连接众多平台</p>
-<p>任何具有命令行接口的应用程序都可以在 Windows Terminal 中运行。 这包括从 PowerShell 和命令提示符到 Azure Cloud Shell 和任何 WSL 分发 (如 Ubuntu 或 Oh-My-Zsh) 的所有应用程序。</p>
-</li>
-<li>
-<p>Unicode 和 UTF-8 字符支持</p>
-<p>Windows Terminal 可以显示 Unicode 和 UTF-8 字符，如各种语言的表情符号和字符。</p>
-</li>
-<li>
-<p>GPU 加速文本呈现引擎</p>
-<p>Windows Terminal 使用 GPU 来呈现其文本，从而提供比默认 Windows 命令行体验更好的性能。</p>
-</li>
-<li>
-<p>开源</p>
-</li>
-</ul>
-<h2> 教程</h2>
-<ul>
-<li><a href="/software/tool/terminal/get-started.html" target="blank">快速上手</a></li>
-<li><a href="/software/tool/terminal/settings.html" target="blank">自定义设置</a></li>
-</ul>
-<h2> 官方文档</h2>
-<ul>
-<li><a href="https://aka.ms/terminal-documentation" target="_blank" rel="noopener noreferrer">官方文档</a></li>
 </ul>
 ]]></content:encoded>
     </item>
