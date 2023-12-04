@@ -1,1 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as c,c as r}from"./app-12Kq4ORq.js";const t={};function o(n,_){return c(),r("div")}const s=e(t,[["render",o],["__file","archiving.html.vue"]]);export{s as default};
