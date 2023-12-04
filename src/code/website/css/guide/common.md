@@ -2,9 +2,11 @@
 title: 常见属性说明
 icon: info
 date: 2019-09-06
+order: 6
 category: CSS
 tag:
   - 快速上手
+next: ../intro/selector.html
 ---
 
 本章节介绍 CSS 的最常见，也是最基础属性。

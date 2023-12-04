@@ -100,6 +100,7 @@ export default hopeTheme(
         align: true,
         codetabs: true,
         demo: true,
+        figure: true,
         flowchart: true,
         footnote: true,
         imgLazyload: true,

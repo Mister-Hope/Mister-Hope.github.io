@@ -3,6 +3,7 @@ title: 弹性模型
 author: 阮一峰
 icon: flex
 date: 2019-09-06
+order: 4
 category: CSS
 copyright: 自由转载-非商用-非衍生-保持署名 (创意共享3.0许可证)
 ---
@@ -790,7 +791,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 ```css
 .item {
-  flex: none | [ < "flex-grow" > < "flex-shrink" >? || < "flex-basis" > ];
+  flex: none | [ < "flex-grow" > < "flex-shrink" >? || < "flex-basis" >];
 }
 ```
 

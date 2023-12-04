@@ -4,7 +4,7 @@ icon: shell
 date: 2019-09-08
 category: 基础
 tag:
-  - Win10
+  - Windows
 order: 4
 ---
 

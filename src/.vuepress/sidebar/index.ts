@@ -15,7 +15,7 @@ import { note } from "./note.js";
 import { physics } from "./physics.js";
 import { comsol, software, vscode } from "./software/index.js";
 import { vue } from "./vue.js";
-import { css, jquery, website } from "./website/index.js";
+import { jquery, website } from "./website/index.js";
 
 export const zhSidebarConfig = sidebar({
   "/software/vscode/": vscode,
@@ -42,7 +42,7 @@ export const zhSidebarConfig = sidebar({
 
   "/code/website/html/": "structure",
 
-  "/code/website/css/": css,
+  "/code/website/css/": "structure",
 
   "/code/website/": website,
 

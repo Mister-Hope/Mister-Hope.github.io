@@ -94,7 +94,7 @@ LGPL 允许商业软件通过类库引用(link)的方式使用 LGPL 类库，而
 乌克兰程序员 Paul Bagwell 画了一张分析图，说明应该怎么选择开源协议，大家看了一目了然，真是清爽。
 
 ```flow
-st=>start: Start
+st=>start: 开始选择
 e=>end: End
 cond1=>condition: 他人修改源码后
 是否可以闭源
@@ -121,7 +121,7 @@ cond2(no)->cond3
 cond3(yes,right)->MIT
 cond3(no)->BSD
 cond4(yes)->GPL
-cond4(no,left)->cond5
+cond4(no,right)->cond5
 cond5(yes)->Mozilla
-cond5(no,left)->LGPL
+cond5(no)->LGPL
 ```

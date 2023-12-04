@@ -2,6 +2,7 @@
 title: 文字样式
 icon: format
 date: 2019-09-05
+order: 4
 category: CSS
 ---
 
@@ -196,8 +197,11 @@ text-shadow: 4px 4px 5px red;
 您可以通过包含以逗号分隔的多个阴影值，将多个阴影应用于同一文本
 
 ```css
-text-shadow: -1px -1px 1px #aaa, 0px 4px 1px rgba(0, 0, 0, 0.5),
-  4px 4px 5px rgba(0, 0, 0, 0.7), 0px 0px 7px rgba(0, 0, 0, 0.4);
+text-shadow:
+  -1px -1px 1px #aaa,
+  0px 4px 1px rgba(0, 0, 0, 0.5),
+  4px 4px 5px rgba(0, 0, 0, 0.7),
+  0px 0px 7px rgba(0, 0, 0, 0.4);
 ```
 
 ## 文本布局
@@ -287,7 +291,10 @@ p::first-line {
 **案例**:
 
 ```css
-font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+font:
+  italic normal bold normal 3em/1.5 Helvetica,
+  Arial,
+  sans-serif;
 ```
 
 ## Web 字体

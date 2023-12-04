@@ -6,6 +6,7 @@ category: HTML
 tag:
   - 介绍
 order: 1
+prev: ../guide/tag.html
 ---
 
 1990 年，由于对 Web 未来发展的远见，Tim Berners-Lee 提出了**超文本**的概念，并在第二年在 SGML 的基础上将其正式定义为一个标记语言。IETF 于 1993 年正式开始制定 HTML 规范，并在经历了几个版本的草案后于 1995 年发布了 HTML 2.0 版本。1994 年，Berners-Lee 为了 Web 发展而成立了 W3C。1996 年，W3C 接管了 HTML 的标准化工作，并在 1 年后发布了 HTML 3.2 推荐标准。1999 年，HTML 4.0 发布，并在 2000 年成为 ISO 标准。

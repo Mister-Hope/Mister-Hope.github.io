@@ -8,6 +8,7 @@ tag:
 dir:
   collapsible: false
   order: 1
+prev: ../
 ---
 
 本章能让您快速了解 HTML 并学会编写它。
@@ -41,7 +42,7 @@ HTML 可以将这行文字封装成一个段落(**p**aragraph)元素来使其在
 ::: normal-demo HTML 段落
 
 ```html
-<p>Mr.Hope is handsome.</p>
+<p>Mr.Hope 很帅！</p>
 ```
 
 :::
@@ -77,7 +78,7 @@ An element is:
 ::: normal-demo 案例
 
 ```html
-<p>Mr.Hope is handsome.</p>
+<p>Mr.Hope 很帅！</p>
 ```
 
 :::
@@ -147,7 +148,7 @@ An element is:
 ::: normal-demo 标签的嵌套
 
 ```html
-<p>Mr.Hope is <strong>very</strong> handsome.</p>
+<p>Mr.Hope<strong>十分</strong>帅！</p>
 ```
 
 :::
@@ -228,7 +229,7 @@ HTML 文档的后缀名是 `.html`。
 一个符合最新标准的 HTML 文件，应该满足如下结构:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -277,8 +278,7 @@ HTML 文档的后缀名是 `.html`。
 ::: normal-demo 两个完全等价的段落
 
 ```html
-<p>狗    狗
-很 呆 萌。</p>
+<p>狗 狗 很 呆 萌。</p>
 
 <p>狗 狗 很 呆 萌。</p>
 ```

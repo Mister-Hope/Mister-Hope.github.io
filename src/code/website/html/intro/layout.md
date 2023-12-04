@@ -4,6 +4,7 @@ icon: layout
 date: 2019-09-02
 category: HTML
 order: 11
+next: ../../css/
 ---
 
 HTML 不仅能够定义网页的单独部分 (例如“段落”或“图片”)，还可以使用块级元素 (例如“标题栏”、“导航菜单”、“主内容列”) 来定义网站中的复合区域。本文将探讨如何规划基本的网站结构，并根据规划的结构来编写 HTML。
@@ -57,7 +58,7 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 ### 案例
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />

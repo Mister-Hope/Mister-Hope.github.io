@@ -2,6 +2,7 @@
 title: 优先级和继承
 icon: sort
 date: 2019-09-06
+order: 4
 category: CSS
 tag:
   - 快速上手

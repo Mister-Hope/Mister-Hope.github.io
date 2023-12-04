@@ -47,4 +47,8 @@ Windows Terminal 是一个面向命令行工具和 shell(如命令提示符、Po
 
 ## 官方文档
 
-- [官方文档](https://aka.ms/terminal-documentation)
+::: info
+
+有关 Windows 终端的详细内容，详见 [Windows 终端官方文档](https://docs.microsoft.com/zh-cn/windows/terminal/)。
+
+:::
