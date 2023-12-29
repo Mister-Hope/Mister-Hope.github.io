@@ -1,1 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as c,c as t}from"./app-SITrVpFt.js";const o={};function r(n,_){return c(),t("div")}const f=e(o,[["render",r],["__file","async.html.vue"]]);export{f as default};
