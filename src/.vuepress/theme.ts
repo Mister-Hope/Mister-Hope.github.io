@@ -90,6 +90,12 @@ export default hopeTheme(
         serverURL: "https://comment.mister-hope.com",
       },
 
+      docsearch: {
+        appId: "LDBQGQC8Q9",
+        apiKey: "5c3a7145aeba231c3b85b742d24fc24f",
+        indexName: "mrhope",
+      },
+
       feed: {
         atom: true,
         json: true,
