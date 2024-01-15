@@ -24,8 +24,8 @@ dependencies:
     specifier: 3.2.2
     version: 3.2.2
   mermaid:
-    specifier: 10.6.1
-    version: 10.6.1
+    specifier: 10.7.0
+    version: 10.7.0
   reveal.js:
     specifier: 5.0.4
     version: 5.0.4
@@ -46,7 +46,7 @@ dependencies:
     version: 2.0.0-rc.10(sass-loader@13.3.3)(vuepress-vite@2.0.0-rc.0)(vuepress-webpack@2.0.0-rc.0)
   vuepress-theme-hope:
     specifier: 2.0.0-rc.10
-    version: 2.0.0-rc.10(@vuepress/plugin-docsearch@2.0.0-rc.0)(@waline/client@3.0.0-alpha.9)(flowchart.ts@3.0.0)(markdown-it@13.0.2)(mathjax-full@3.2.2)(mermaid@10.6.1)(reveal.js@5.0.4)(sass-loader@13.3.3)(vuepress-plugin-feed2@2.0.0-rc.10)(vuepress-plugin-pwa2@2.0.0-rc.10)(vuepress-vite@2.0.0-rc.0)(vuepress-webpack@2.0.0-rc.0)
+    version: 2.0.0-rc.10(@vuepress/plugin-docsearch@2.0.0-rc.0)(@waline/client@3.0.0-alpha.9)(flowchart.ts@3.0.0)(markdown-it@13.0.2)(mathjax-full@3.2.2)(mermaid@10.7.0)(reveal.js@5.0.4)(sass-loader@13.3.3)(vuepress-plugin-feed2@2.0.0-rc.10)(vuepress-plugin-pwa2@2.0.0-rc.10)(vuepress-vite@2.0.0-rc.0)(vuepress-webpack@2.0.0-rc.0)
   vuepress-vite:
     specifier: 2.0.0-rc.0
     version: 2.0.0-rc.0(@vuepress/client@2.0.0-rc.0)(sass-loader@13.3.3)(vue@3.4.1)
@@ -4430,8 +4430,8 @@ packages:
     resolution: {integrity: sha512-/bKPPcgZVUziECqDc+0HkT87+0zhaWSZHNXqF8FLd2lQcptpmUFwoCSWjCdOng9Gdq+afKArPdEg/0ZW461Eng==}
     dev: false
 
-  /elkjs@0.8.2:
-    resolution: {integrity: sha512-L6uRgvZTH+4OF5NE/MBbzQx/WYpru1xCBE9respNj6qznEewGUIfhzmm7horWWxbNO2M0WckQypGctR8lH79xQ==}
+  /elkjs@0.9.1:
+    resolution: {integrity: sha512-JWKDyqAdltuUcyxaECtYG6H4sqysXSLeoXuGUBfRNESMTkj+w+qdb0jya8Z/WI0jVd03WQtCGhS6FOFtlhD5FQ==}
     dev: false
 
   /emoji-regex@10.3.0:
@@ -5987,8 +5987,8 @@ packages:
     engines: {node: '>= 8'}
     dev: false
 
-  /mermaid@10.6.1:
-    resolution: {integrity: sha512-Hky0/RpOw/1il9X8AvzOEChfJtVvmXm+y7JML5C//ePYMy0/9jCEmW1E1g86x9oDfW9+iVEdTV/i+M6KWRNs4A==}
+  /mermaid@10.7.0:
+    resolution: {integrity: sha512-PsvGupPCkN1vemAAjScyw4pw34p4/0dZkSrqvAB26hUvJulOWGIwt35FZWmT9wPIi4r0QLa5X0PB4YLIGn0/YQ==}
     dependencies:
       '@braintree/sanitize-url': 6.0.4
       '@types/d3-scale': 4.0.8
@@ -6001,7 +6001,7 @@ packages:
       dagre-d3-es: 7.0.10
       dayjs: 1.11.10
       dompurify: 3.0.6
-      elkjs: 0.8.2
+      elkjs: 0.9.1
       khroma: 2.1.0
       lodash-es: 4.17.21
       mdast-util-from-markdown: 1.3.1
@@ -8206,7 +8206,7 @@ packages:
       - typescript
     dev: false
 
-  /vuepress-plugin-md-enhance@2.0.0-rc.10(flowchart.ts@3.0.0)(markdown-it@13.0.2)(mathjax-full@3.2.2)(mermaid@10.6.1)(reveal.js@5.0.4)(sass-loader@13.3.3)(vuepress-vite@2.0.0-rc.0)(vuepress-webpack@2.0.0-rc.0):
+  /vuepress-plugin-md-enhance@2.0.0-rc.10(flowchart.ts@3.0.0)(markdown-it@13.0.2)(mathjax-full@3.2.2)(mermaid@10.7.0)(reveal.js@5.0.4)(sass-loader@13.3.3)(vuepress-vite@2.0.0-rc.0)(vuepress-webpack@2.0.0-rc.0):
     resolution: {integrity: sha512-bZJs7MWv8GdGdC3OxjEU1kAnmOp9odiq+jYKr85mS4TkqH7aVYRrhuJcUErRKCSO7shBhBFpm1zVwnIGkx41Jw==}
     engines: {node: '>=18.16.0', npm: '>=8', pnpm: '>=7', yarn: '>=2'}
     peerDependencies:
@@ -8293,7 +8293,7 @@ packages:
       flowchart.ts: 3.0.0
       js-yaml: 4.1.0
       mathjax-full: 3.2.2
-      mermaid: 10.6.1
+      mermaid: 10.7.0
       reveal.js: 5.0.4
       sass-loader: 13.3.3(webpack@5.89.0)
       vue: 3.4.1
@@ -8559,7 +8559,7 @@ packages:
       - typescript
     dev: false
 
-  /vuepress-theme-hope@2.0.0-rc.10(@vuepress/plugin-docsearch@2.0.0-rc.0)(@waline/client@3.0.0-alpha.9)(flowchart.ts@3.0.0)(markdown-it@13.0.2)(mathjax-full@3.2.2)(mermaid@10.6.1)(reveal.js@5.0.4)(sass-loader@13.3.3)(vuepress-plugin-feed2@2.0.0-rc.10)(vuepress-plugin-pwa2@2.0.0-rc.10)(vuepress-vite@2.0.0-rc.0)(vuepress-webpack@2.0.0-rc.0):
+  /vuepress-theme-hope@2.0.0-rc.10(@vuepress/plugin-docsearch@2.0.0-rc.0)(@waline/client@3.0.0-alpha.9)(flowchart.ts@3.0.0)(markdown-it@13.0.2)(mathjax-full@3.2.2)(mermaid@10.7.0)(reveal.js@5.0.4)(sass-loader@13.3.3)(vuepress-plugin-feed2@2.0.0-rc.10)(vuepress-plugin-pwa2@2.0.0-rc.10)(vuepress-vite@2.0.0-rc.0)(vuepress-webpack@2.0.0-rc.0):
     resolution: {integrity: sha512-rco6FT3Fqj77VYCjLyfU80doK4jW7PfJGSLYEyTCwocwsJhpOROGP4glLbqEnC59VrMWgFE/WfB8pfBfQkEZJg==}
     engines: {node: '>=18.16.0', npm: '>=8', pnpm: '>=7', yarn: '>=2'}
     peerDependencies:
@@ -8626,7 +8626,7 @@ packages:
       vuepress-plugin-components: 2.0.0-rc.10(sass-loader@13.3.3)(vuepress-vite@2.0.0-rc.0)(vuepress-webpack@2.0.0-rc.0)
       vuepress-plugin-copy-code2: 2.0.0-rc.10(sass-loader@13.3.3)(vuepress-vite@2.0.0-rc.0)(vuepress-webpack@2.0.0-rc.0)
       vuepress-plugin-feed2: 2.0.0-rc.10(vuepress-vite@2.0.0-rc.0)(vuepress-webpack@2.0.0-rc.0)
-      vuepress-plugin-md-enhance: 2.0.0-rc.10(flowchart.ts@3.0.0)(markdown-it@13.0.2)(mathjax-full@3.2.2)(mermaid@10.6.1)(reveal.js@5.0.4)(sass-loader@13.3.3)(vuepress-vite@2.0.0-rc.0)(vuepress-webpack@2.0.0-rc.0)
+      vuepress-plugin-md-enhance: 2.0.0-rc.10(flowchart.ts@3.0.0)(markdown-it@13.0.2)(mathjax-full@3.2.2)(mermaid@10.7.0)(reveal.js@5.0.4)(sass-loader@13.3.3)(vuepress-vite@2.0.0-rc.0)(vuepress-webpack@2.0.0-rc.0)
       vuepress-plugin-photo-swipe: 2.0.0-rc.10(sass-loader@13.3.3)(vuepress-vite@2.0.0-rc.0)(vuepress-webpack@2.0.0-rc.0)
       vuepress-plugin-pwa2: 2.0.0-rc.10(sass-loader@13.3.3)(vuepress-vite@2.0.0-rc.0)(vuepress-webpack@2.0.0-rc.0)
       vuepress-plugin-reading-time2: 2.0.0-rc.10(vuepress-vite@2.0.0-rc.0)(vuepress-webpack@2.0.0-rc.0)
