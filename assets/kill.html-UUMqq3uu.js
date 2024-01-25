@@ -1,2 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as a,c as l,b as c}from"./app-fvsXVV1m.js";const s={},t=c(`<h1 id="kill" tabindex="-1"><a class="header-anchor" href="#kill" aria-hidden="true">#</a> kill</h1><p><code>kill</code> 命令用户终止指定进程。</p><div class="language-bash" data-ext="sh"><pre class="language-bash"><code><span class="token function">kill</span> PID
-</code></pre></div>`,3),o=[t];function n(i,r){return a(),l("div",null,o)}const h=e(s,[["render",n],["__file","kill.html.vue"]]);export{h as default};
