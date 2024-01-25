@@ -650,7 +650,7 @@ function f([z,(x)]) { return x; }
        crossDomain = false,
        global = true,
        // ... more config
-     } = {}
+     } = {},
    ) {
      // ... do stuff
    };

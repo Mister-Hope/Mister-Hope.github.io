@@ -1,4 +1,5 @@
 ---
+date: 2022-01-07
 title: Mr.Hope 的随笔
 icon: note
 category: 随笔

@@ -354,7 +354,7 @@ $("#result").append(
     "items in your basket, " +
     "<em>" +
     basket.onSale +
-    "</em> are on sale!"
+    "</em> are on sale!",
 );
 ```
 
@@ -411,7 +411,7 @@ $("#list").html(
   <li>first</li>
   <li>second</li>
 </ul>
-`.trim()
+`.trim(),
 );
 ```
 
@@ -427,7 +427,7 @@ function authorize(user, action) {
       // + ' is not authorized to do '
       // + action
       // + '.'
-      `User ${user.name} is not authorized to do ${action}.`
+      `User ${user.name} is not authorized to do ${action}.`,
     );
   }
 }
@@ -488,7 +488,7 @@ const tmpl = (addrs) => `
       (addr) => `
     <tr><td>${addr.first}</td></tr>
     <tr><td>${addr.last}</td></tr>
-  `
+  `,
     )
     .join("")}
   </table>

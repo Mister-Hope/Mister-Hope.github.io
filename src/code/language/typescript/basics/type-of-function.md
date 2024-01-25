@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 函数的类型
 icon: function
 category: TypeScript
@@ -67,7 +68,7 @@ let mySum = function (x: number, y: number): number {
 ```ts
 let mySum: (x: number, y: number) => number = function (
   x: number,
-  y: number
+  y: number,
 ): number {
   return x + y;
 };

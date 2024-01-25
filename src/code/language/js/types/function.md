@@ -162,7 +162,7 @@ const f = function f() {};
 })()(
   (function () {
     /* code */
-  })()
+  })(),
 );
 ```
 

@@ -1,4 +1,5 @@
 ---
+date: 2020-10-09
 title: 小程序运行机制
 icon: play
 category: 小程序

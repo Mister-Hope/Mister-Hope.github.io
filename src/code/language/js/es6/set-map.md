@@ -1083,7 +1083,7 @@ myElement.addEventListener(
     let logoData = myWeakmap.get(myElement);
     logoData.timesClicked++;
   },
-  false
+  false,
 );
 ```
 

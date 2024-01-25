@@ -1,4 +1,5 @@
 ---
+date: 2020-05-05
 title: Git 原理
 icon: creative
 order: 13

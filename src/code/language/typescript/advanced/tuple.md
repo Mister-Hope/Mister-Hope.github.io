@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 元组
 icon: list
 category: TypeScript

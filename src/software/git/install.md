@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 安装与配置
 icon: install
 order: 1

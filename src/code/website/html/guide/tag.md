@@ -6,6 +6,7 @@ category: HTML
 tag:
   - 快速上手
 order: 2
+next: ../intro/history.html
 ---
 
 ## HTML 标题

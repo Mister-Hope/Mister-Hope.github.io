@@ -1,4 +1,5 @@
 ---
+date: 2020-10-09
 title: 评分方法
 icon: rank
 category: 小程序

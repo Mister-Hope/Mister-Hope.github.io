@@ -1,4 +1,5 @@
 ---
+date: 2021-00-19
 title: 列表渲染
 icon: loop
 category: 小程序
@@ -123,7 +124,7 @@ Page({
     const length = this.data.objectArray.length;
 
     this.data.objectArray = [{ id: length, unique: `unique_${length}` }].concat(
-      this.data.objectArray
+      this.data.objectArray,
     );
     this.setData({
       objectArray: this.data.objectArray,
@@ -131,7 +132,7 @@ Page({
   },
   addNumberToFront(e) {
     this.data.numberArray = [this.data.numberArray.length + 1].concat(
-      this.data.numberArray
+      this.data.numberArray,
     );
     this.setData({
       numberArray: this.data.numberArray,

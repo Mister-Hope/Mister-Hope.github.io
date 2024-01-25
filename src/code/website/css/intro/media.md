@@ -2,9 +2,11 @@
 title: 媒体查询
 icon: search
 date: 2019-09-05
+order: 10
 category: CSS
 tag:
   - CSS
+next: ../layout/intro.html
 ---
 
 **媒体查询** (Media queries) 非常实用，尤其是当您想要根据设备的大致类型 (如打印设备与带屏幕的设备) 或者特定的特征和设备参数 (例如屏幕分辨率和浏览器视窗宽度) 来修改网站或应用程序时。

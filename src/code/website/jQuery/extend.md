@@ -117,7 +117,7 @@ const opts = $.extend(
     backgroundColor: "#00a8e6",
     color: "#ffffff",
   },
-  options
+  options,
 );
 ```
 

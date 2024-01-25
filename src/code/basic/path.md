@@ -75,7 +75,7 @@ d:\wwwroot\html\photo\ours\d.html
 
 ## 绝对路径
 
-绝对路径的英文全称是 Absolute Path，它就是带有网址的路径。比如您有一个域名 www.example.com，其域名指向 d:\wwwroot，那么上面的四个文件就可以这么表示:
+绝对路径的英文全称是 Absolute Path，它就是带有网址的路径。比如您有一个域名 `www.example.com`，其域名指向 `d:\wwwroot`，那么上面的四个文件就可以这么表示:
 
 ```html
 <a href="http://www.example.com/html/a.html">链接到a.html</a>

@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 类与接口
 icon: api
 category: TypeScript

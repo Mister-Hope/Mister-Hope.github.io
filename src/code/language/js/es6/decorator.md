@@ -830,7 +830,7 @@ class MyClass {}
 
 ```js
 @traits(
-  TExample::as({ excludes: ["foo", "bar"], alias: { baz: "exampleBaz" } })
+  TExample::as({ excludes: ["foo", "bar"], alias: { baz: "exampleBaz" } }),
 )
 class MyClass {}
 ```

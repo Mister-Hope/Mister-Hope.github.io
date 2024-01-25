@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 安装 TypeScript
 icon: install
 category: TypeScript

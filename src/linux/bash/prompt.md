@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 命令提示符
 icon: shell
 author: 阮一峰

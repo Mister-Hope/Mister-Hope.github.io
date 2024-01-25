@@ -181,7 +181,7 @@ document.cookie; // 'v=123; remember=true; prefer=zh'
 </html>
 ```
 
-如果引入的第三方的 JavaScript 中存在恶意代码，则 www.foo.com 网站将直接获取到 www.example.com 网站的用户登录信息。
+如果引入的第三方的 JavaScript 中存在恶意代码，则 `www.foo.com` 网站将直接获取到 `www.example.com` 网站的用户登录信息。
 
 为了解决这个问题，服务器在设置 Cookie 时可以使用 `httpOnly`，设定了 httpOnly 的 Cookie 将不能被 JavaScript 读取。这个行为由浏览器实现，主流浏览器均支持 httpOnly 选项，IE 从 IE6 SP1 开始支持
 

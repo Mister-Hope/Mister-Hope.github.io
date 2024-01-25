@@ -1354,7 +1354,7 @@ Promise.resolve(step1)
     },
     function (error) {
       // Handle any error from step1 through step4
-    }
+    },
   )
   .done();
 ```

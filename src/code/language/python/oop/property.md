@@ -97,7 +97,7 @@ class Student(object):
 
 总的来说就是，Python 本身没有任何机制阻止您干坏事，一切全靠自觉。
 
-::: danger 错误写法
+::: caution 错误写法
 
 ```py
 >>> bart = Student('Bart Simpson', 59)

@@ -1,4 +1,5 @@
 ---
+date: 2023-02-26
 title: 快速上手 Vue.js
 icon: creative
 category: Vue

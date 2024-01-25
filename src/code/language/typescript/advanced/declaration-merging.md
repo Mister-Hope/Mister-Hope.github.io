@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 声明合并
 icon: merge
 category: TypeScript

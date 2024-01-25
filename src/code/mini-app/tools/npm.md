@@ -1,4 +1,5 @@
 ---
+date: 2020-10-09
 title: npm 支持
 icon: npm
 category: 小程序

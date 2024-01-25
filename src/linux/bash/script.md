@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: Bash 脚本入门
 icon: code
 author: 阮一峰

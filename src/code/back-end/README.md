@@ -7,6 +7,12 @@ category: 后端
 
 ## 后端入门
 
+::: warning
+
+2023 年后端还是 Java 比较多
+
+:::
+
 ### PHP
 
 PHP 是一种创建动态交互性站点的强有力的服务器端脚本语言，免费，并且使用非常广泛。PHP (全称 Hypertext Preprocessor，即超文本预处理器)是一种通用开源脚本语言。

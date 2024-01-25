@@ -1,4 +1,5 @@
 ---
+date: 2020-10-09
 title: Page 插件
 icon: page
 category: 小程序

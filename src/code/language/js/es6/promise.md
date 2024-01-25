@@ -59,7 +59,7 @@ promise.then(
   },
   function (error) {
     // failure
-  }
+  },
 );
 ```
 
@@ -156,7 +156,7 @@ getJSON("/posts.json").then(
   },
   function (error) {
     console.error("出错了", error);
-  }
+  },
 );
 ```
 
@@ -250,7 +250,7 @@ getJSON("/post/1.json")
     },
     function funcB(err) {
       console.log("rejected: ", err);
-    }
+    },
   );
 ```
 
@@ -263,7 +263,7 @@ getJSON("/post/1.json")
   .then((post) => getJSON(post.commentURL))
   .then(
     (comments) => console.log("resolved: ", comments),
-    (err) => console.log("rejected: ", err)
+    (err) => console.log("rejected: ", err),
   );
 ```
 
@@ -286,12 +286,12 @@ getJSON("/posts.json")
 
 ```js
 p.then((val) => console.log("fulfilled:", val)).catch((err) =>
-  console.log("rejected", err)
+  console.log("rejected", err),
 );
 
 // 等同于
 p.then((val) => console.log("fulfilled:", val)).then(null, (err) =>
-  console.log("rejected:", err)
+  console.log("rejected:", err),
 );
 ```
 
@@ -379,7 +379,7 @@ promise.then(
   },
   function (err) {
     // error
-  }
+  },
 );
 
 // good
@@ -572,7 +572,7 @@ promise.then(
   (error) => {
     // 语句
     throw error;
-  }
+  },
 );
 ```
 
@@ -588,7 +588,7 @@ Promise.prototype.finally = function (callback) {
     (reason) =>
       P.resolve(callback()).then(() => {
         throw reason;
-      })
+      }),
   );
 };
 ```
@@ -601,7 +601,7 @@ Promise.prototype.finally = function (callback) {
 // resolve 的值是 undefined
 Promise.resolve(2).then(
   () => {},
-  () => {}
+  () => {},
 );
 
 // resolve 的值是 2
@@ -610,7 +610,7 @@ Promise.resolve(2).finally(() => {});
 // reject 的值是 undefined
 Promise.reject(3).then(
   () => {},
-  () => {}
+  () => {},
 );
 
 // reject 的值是 3
@@ -662,7 +662,7 @@ const booksPromise = databasePromise.then(findAllBooks);
 const userPromise = databasePromise.then(getCurrentUser);
 
 Promise.all([booksPromise, userPromise]).then(([books, user]) =>
-  pickTopRecommentations(books, user)
+  pickTopRecommentations(books, user),
 );
 ```
 
@@ -922,7 +922,7 @@ function run(generator) {
       },
       function (error) {
         return go(it.throw(error));
-      }
+      },
     );
   }
 

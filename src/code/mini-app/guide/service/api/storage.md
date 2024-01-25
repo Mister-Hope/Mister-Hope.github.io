@@ -1,4 +1,5 @@
 ---
+date: 2020-10-09
 title: 数据缓存 API
 icon: storage
 category: 小程序

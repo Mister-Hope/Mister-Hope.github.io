@@ -2,9 +2,13 @@
 title: 快速上手
 icon: creative
 date: 2019-09-05
+dir:
+  collapsible: false
+  order: 1
 category: CSS
 tag:
   - 快速上手
+prev: ../
 ---
 
 CSS 指层叠样式表 (**C**ascading **S**tyle **S**heets)。

@@ -1,4 +1,5 @@
 ---
+date: 2022-01-07
 title: 电磁学笔记
 category: 物理
 tag:

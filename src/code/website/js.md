@@ -3,6 +3,8 @@ icon: javascript
 title: JavaScript 教程
 date: 2019-09-01
 category: JavaScript
+prev: ./emmet/css.html
+next: ../language/js/
 ---
 
 ## 初学者教程
@@ -28,8 +30,6 @@ ES6 是 JavaScript 的 2015 标注，现已基本被广泛使用和支持；
 
 ::: tip
 
-此教程由阮一峰老师书写(**真·大佬**)，建议深刻理解 JavaScript 原理(大概一年左右)之后再看。
+此教程由阮一峰老师书写(**真·大佬**)，建议深刻理解 JavaScript 原理(一个月左右) 之后再看。
 
 :::
-
-> 开始下一章学习前，您需要跳转到 [JS 快速入门章节](../language/js/guide/README.md) 了解 JavaScript，或 [深入学习 JavaScript](../language/js/README.md) 后，方能进入 jQuery 学习。

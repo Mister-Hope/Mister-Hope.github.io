@@ -820,7 +820,7 @@ String(obj); // 'str'
 
 ```js
 // 例一
-({ [Symbol.toStringTag]: "Foo" }.toString());
+({ [Symbol.toStringTag]: "Foo" }).toString();
 // "[object Foo]"
 
 // 例二

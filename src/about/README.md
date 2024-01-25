@@ -1,4 +1,5 @@
 ---
+date: 2022-01-07
 layout: Slide
 title: Mr.Hope 介绍
 icon: people

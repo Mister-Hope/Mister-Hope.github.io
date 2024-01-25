@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 类型推论
 icon: extend
 category: TypeScript

@@ -3,7 +3,7 @@ title: 记事本的遗留问题
 icon: warn
 date: 2019-09-07
 tag:
-  - Win10
+  - Windows
 index: false
 ---
 

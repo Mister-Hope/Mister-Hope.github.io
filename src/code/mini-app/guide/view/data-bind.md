@@ -1,4 +1,5 @@
 ---
+date: 2021-00-19
 title: 数据绑定
 icon: rank
 category: 小程序
@@ -64,7 +65,7 @@ Page({
 <checkbox checked="{{false}}"> </checkbox>
 ```
 
-::: danger
+::: caution
 
 不要直接写 `checked="false"`，其计算结果是一个字符串，转成 `boolean` 类型后代表真值。
 

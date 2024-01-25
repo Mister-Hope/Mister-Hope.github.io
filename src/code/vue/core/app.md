@@ -1,4 +1,5 @@
 ---
+date: 2023-02-26
 title: 创建 Vue 应用
 icon: app
 order: 3

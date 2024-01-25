@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 脚本除错
 icon: debug
 author: 阮一峰

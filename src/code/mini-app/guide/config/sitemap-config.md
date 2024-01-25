@@ -1,4 +1,5 @@
 ---
+date: 2020-10-09
 title: 小程序内索引
 icon: search
 category: 小程序

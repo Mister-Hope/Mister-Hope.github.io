@@ -240,15 +240,10 @@ foo(undefined, null);
 指定了默认值以后，函数的 `length` 属性，将返回没有指定默认值的参数个数。也就是说，指定了默认值后，`length` 属性将失真。
 
 ```js
-(function (a) {}
-  .length(
-    // 1
-    function (a = 5) {}
-  )
-  .length(
-    // 0
-    function (a, b, c = 5) {}
-  ).length); // 2
+(function (a) {}).length; // 1
+
+(function (a = 5) {}).length; // 0
+(function (a, b, c = 5) {}).length; // 2
 ```
 
 上面代码中，`length` 属性的返回值，等于函数的参数个数减去指定了默认值的参数个数。比如，上面最后一个函数，定义了 3 个参数，其中有一个参数 `c` 指定了默认值，因此 `length` 属性等于 `3` 减去 `1`，最后得到 `2`。
@@ -256,16 +251,14 @@ foo(undefined, null);
 这是因为 `length` 属性的含义是，该函数预期传入的参数个数。某个参数指定默认值以后，预期传入的参数个数就不包括这个参数了。同理，后文的 rest 参数也不会计入 `length` 属性。
 
 ```js
-(function (...args) {}.length); // 0
+(function (...args) {}).length; // 0
 ```
 
 如果设置了默认值的参数不是尾参数，那么 `length` 属性也不再计入后面的参数了。
 
 ```js
-(function (a = 0, b, c) {}.length(
-  // 0
-  function (a, b = 1, c) {}
-).length); // 1
+(function (a = 0, b, c) {}).length; // 0
+(function (a, b = 1, c) {}).length; // 1
 ```
 
 ### 作用域
@@ -479,15 +472,9 @@ function f(a, ...b, c) {
 函数的 `length` 属性，不包括 rest 参数。
 
 ```js
-(function (a) {}
-  .length(
-    // 1
-    function (...a) {}
-  )
-  .length(
-    // 0
-    function (a, ...b) {}
-  ).length); // 1
+(function (a) {}).length; // 1
+(function (...a) {}).length; // 0
+(function (a, ...b) {}).length; // 1
 ```
 
 ## 严格模式
@@ -888,7 +875,7 @@ foo(2, 4, 6, 8);
 ```js
 (function () {
   return [(() => this.x).bind({ x: "inner" })()];
-}.call({ x: "outer" }));
+}).call({ x: "outer" });
 // ['outer']
 ```
 

@@ -192,7 +192,7 @@ async function f() {
 
 f().then(
   (v) => console.log(v),
-  (e) => console.log(e)
+  (e) => console.log(e),
 );
 // Error: 出错了
 ```
@@ -525,7 +525,7 @@ function spawn(genF) {
           step(function () {
             return gen.throw(e);
           });
-        }
+        },
       );
     }
     step(function () {

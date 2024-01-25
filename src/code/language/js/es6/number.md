@@ -29,7 +29,7 @@ ES6 提供了二进制和八进制数值的新的写法，分别用前缀 `0b` (
   function () {
     "use strict";
     console.log(0o11 === 011);
-  }
+  },
 )(); // Uncaught SyntaxError: Octal literals are not allowed in strict mode.
 ```
 

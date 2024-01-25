@@ -25,7 +25,7 @@ var obj = new Proxy(
       console.log(`setting ${key}!`);
       return Reflect.set(target, key, value, receiver);
     },
-  }
+  },
 );
 ```
 
@@ -59,7 +59,7 @@ var proxy = new Proxy(
     get: function (target, property) {
       return 35;
     },
-  }
+  },
 );
 
 proxy.time; // 35
@@ -98,7 +98,7 @@ var proxy = new Proxy(
     get: function (target, property) {
       return 35;
     },
-  }
+  },
 );
 
 let obj = Object.create(proxy);
@@ -196,7 +196,7 @@ let proto = new Proxy(
       console.log("GET " + propertyKey);
       return target[propertyKey];
     },
-  }
+  },
 );
 
 let obj = Object.create(proto);
@@ -248,7 +248,7 @@ var pipe = (function () {
           funcStack.push(window[fnName]);
           return oproxy;
         },
-      }
+      },
     );
 
     return oproxy;
@@ -285,7 +285,7 @@ const dom = new Proxy(
         return el;
       };
     },
-  }
+  },
 );
 
 const el = dom.div(
@@ -297,8 +297,8 @@ const el = dom.div(
     {},
     dom.li({}, "The web"),
     dom.li({}, "Food"),
-    dom.li({}, "…actually that's it")
-  )
+    dom.li({}, "…actually that's it"),
+  ),
 );
 
 document.body.appendChild(el);
@@ -313,7 +313,7 @@ const proxy = new Proxy(
     get: function (target, property, receiver) {
       return receiver;
     },
-  }
+  },
 );
 proxy.getReceiver === proxy; // true
 ```
@@ -327,7 +327,7 @@ const proxy = new Proxy(
     get: function (target, property, receiver) {
       return receiver;
     },
-  }
+  },
 );
 
 const d = Object.create(proxy);
@@ -347,7 +347,7 @@ const target = Object.defineProperties(
       writable: false,
       configurable: false,
     },
-  }
+  },
 );
 
 const handler = {
@@ -756,7 +756,7 @@ var p = new Proxy(
     getPrototypeOf(target) {
       return proto;
     },
-  }
+  },
 );
 Object.getPrototypeOf(p) === proto; // true
 ```
@@ -777,7 +777,7 @@ var p = new Proxy(
       console.log("called");
       return true;
     },
-  }
+  },
 );
 
 Object.isExtensible(p);
@@ -804,7 +804,7 @@ var p = new Proxy(
     isExtensible: function (target) {
       return false;
     },
-  }
+  },
 );
 
 Object.isExtensible(p); // 报错
@@ -908,7 +908,7 @@ var p = new Proxy(
     ownKeys: function (target) {
       return ["a", "b", "c"];
     },
-  }
+  },
 );
 
 Object.getOwnPropertyNames(p);
@@ -1005,7 +1005,7 @@ var p = new Proxy(
     preventExtensions: function (target) {
       return true;
     },
-  }
+  },
 );
 
 Object.preventExtensions(p); // 报错
@@ -1024,7 +1024,7 @@ var p = new Proxy(
       Object.preventExtensions(target);
       return true;
     },
-  }
+  },
 );
 
 Object.preventExtensions(p);
@@ -1170,7 +1170,7 @@ function createWebService(baseUrl) {
       get(target, propKey, receiver) {
         return () => httpGet(baseUrl + "/" + propKey);
       },
-    }
+    },
   );
 }
 ```

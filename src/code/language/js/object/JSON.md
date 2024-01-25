@@ -154,7 +154,7 @@ JSON.parse("123.45"); // 123.45
 "use strict";
 
 const obj = JSON.parse('{"name":"小明","age":14}', (key, value) =>
-  key === "name" ? `${value}同学` : value
+  key === "name" ? `${value}同学` : value,
 );
 
 console.log(JSON.stringify(obj)); // {name: '小明同学', age: 14}

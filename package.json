@@ -16,7 +16,7 @@
     "dev:webpack-debug": "cross-env DEBUG=vuepress* vuepress-webpack dev src",
     "lint": "prettier --check --write .",
     "lint:check": "prettier --check .",
-    "lint-md": "markdownlint **/*.md --ignore node_modules --fix",
+    "lint:md": "markdownlint-cli2 **/*.md",
     "test": "echo \"Warning: no test specified\" && exit 0"
   },
   "author": "Mr.Hope",
@@ -25,25 +25,28 @@
     "vuepress",
     "personal-blog"
   ],
-  "packageManager": "pnpm@8.10.2",
+  "packageManager": "pnpm@8.14.3",
   "dependencies": {
-    "@vuepress/cli": "2.0.0-beta.68",
-    "@vuepress/client": "2.0.0-beta.68",
-    "@vuepress/plugin-docsearch": "2.0.0-beta.68",
-    "@waline/client": "2.15.8",
-    "flowchart.ts": "1.0.1",
+    "@vuepress/cli": "2.0.0-rc.0",
+    "@vuepress/client": "2.0.0-rc.0",
+    "@vuepress/plugin-docsearch": "2.0.0-rc.0",
+    "@waline/client": "3.0.0-alpha.10",
+    "flowchart.ts": "3.0.0",
     "mathjax-full": "3.2.2",
-    "mermaid": "10.6.1",
-    "reveal.js": "5.0.2",
-    "sass-loader": "13.3.2",
-    "vue": "3.3.8",
-    "vuepress-theme-hope": "2.0.0-beta.250",
-    "vuepress-vite": "2.0.0-beta.68",
-    "vuepress-webpack": "2.0.0-beta.68"
+    "mermaid": "10.7.0",
+    "reveal.js": "5.0.4",
+    "sass-loader": "13.3.3",
+    "vue": "3.4.15",
+    "vuepress-plugin-append-date": "2.0.0-rc.12",
+    "vuepress-plugin-feed2": "2.0.0-rc.12",
+    "vuepress-plugin-pwa2": "2.0.0-rc.12",
+    "vuepress-theme-hope": "2.0.0-rc.12",
+    "vuepress-vite": "2.0.0-rc.0",
+    "vuepress-webpack": "2.0.0-rc.0"
   },
   "devDependencies": {
     "cross-env": "7.0.3",
-    "markdownlint-cli": "0.37.0",
-    "prettier": "3.0.3"
+    "markdownlint-cli2": "0.12.1",
+    "prettier": "3.2.4"
   }
 }

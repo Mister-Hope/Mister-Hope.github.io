@@ -95,7 +95,7 @@ HTTPS 是 HTTP 的加密版本。您应该尽可能用 HTTPS 为您的网站提�
 
 未沙盒化 (Unsandboxed) 内容可以做得太多，如执行 JavaScript，提交表单，弹出窗口等。默认情况下，您应该使用没有参数的 `sandbox` 属性来强制执行所有可用的限制，如我们前面的示例所示。如果真的需要关闭某些限制，您可以逐个添加权限(在 `sandbox=""` 属性值内)。
 
-::: danger
+::: caution
 
 您永远不应该同时添加 `allow-scripts` 和 `allow-same-origin` 到您的 sandbox 属性中-在这种情况下，嵌入式内容可以绕过阻止站点执行脚本的同源安全策略，并使用 JavaScript 完全关闭沙盒。
 

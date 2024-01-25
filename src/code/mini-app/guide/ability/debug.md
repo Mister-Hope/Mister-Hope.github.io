@@ -1,4 +1,5 @@
 ---
+date: 2020-10-09
 title: 调试
 icon: debug
 category: 小程序

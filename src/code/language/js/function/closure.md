@@ -133,7 +133,7 @@ function count() {
       (
         (n) => () =>
           n * n
-      )(i)
+      )(i),
     );
 
   return arr;

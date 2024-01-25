@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 原始数据类型
 icon: type
 category: TypeScript

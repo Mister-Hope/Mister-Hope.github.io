@@ -79,11 +79,10 @@ order: 8
    常用的构建工具如下,
 
    - Jenkins
-   - Travis
-   - Codeship
    - Strider
+   - GitHub Actions
 
-   Jenkins 和 Strider 是开源软件， Travis 和 Codeship 对于开源项目可以免费使用。它们都会将构建和测试，在一次运行中执行完成。
+   Jenkins 和 Strider 是开源软件，GitHub Actions 是常用的线上构建工具。它们都会将构建和测试，在一次运行中执行完成。
 
 1. 测试 (第二轮)
 

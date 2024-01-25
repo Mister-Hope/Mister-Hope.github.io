@@ -1,4 +1,5 @@
 ---
+date: 2021-01-18
 title: 自动部署
 icon: network
 category: GitHub
@@ -111,7 +112,7 @@ jobs:
       # 第一步: 下载源码
       - name: Checkout
         # action 配置详见 https://github.com/actions/checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # 如果本项目包含了子模块 (git submodules)，需要将此项设置为 true
           # submodules: true
@@ -170,7 +171,7 @@ jobs:
     steps:
       # 检出网站代码
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # 检出 gh-pages 分支
           ref: gh-pages

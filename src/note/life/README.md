@@ -1,4 +1,5 @@
 ---
+date: 2022-01-07
 title: 笑谈人生
 icon: form
 category: 随笔

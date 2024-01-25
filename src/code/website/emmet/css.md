@@ -6,6 +6,7 @@ category: Emmet
 tag:
   - 快捷键
   - HTML
+next: ../js.html
 ---
 
 对于 CSS 语法，Emmet 为属性提供了许多预定义的代码段。

@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 数组
 icon: array
 author: 阮一峰

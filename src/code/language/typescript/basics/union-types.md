@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 联合类型
 icon: structure
 category: TypeScript

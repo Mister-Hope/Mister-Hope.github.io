@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 内置对象
 icon: object
 category: TypeScript
@@ -93,7 +94,7 @@ interface Document
   addEventListener(
     type: string,
     listener: (ev: MouseEvent) => any,
-    useCapture?: boolean
+    useCapture?: boolean,
   ): void;
 }
 ```

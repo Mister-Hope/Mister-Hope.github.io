@@ -646,10 +646,10 @@ ES5 的顶层对象，本身也是一个问题，因为它在各种实现里面�
 typeof window !== "undefined"
   ? window
   : typeof process === "object" &&
-    typeof require === "function" &&
-    typeof global === "object"
-  ? global
-  : this;
+      typeof require === "function" &&
+      typeof global === "object"
+    ? global
+    : this;
 
 // 方法二
 var getGlobal = function () {

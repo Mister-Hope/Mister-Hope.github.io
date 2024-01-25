@@ -2,6 +2,7 @@
 title: 背景与边框
 icon: frame
 date: 2019-09-06
+order: 3
 category: CSS
 ---
 
@@ -236,7 +237,9 @@ CSS 允许您有多个背景图像。您需要在 `background-image` 设置多�
 background-image: url(image1.png), url(image2.png), url(image3.png),
   url(image1.png);
 background-repeat: no-repeat, repeat-x, repeat;
-background-position: 10px 20px, top right;
+background-position:
+  10px 20px,
+  top right;
 ```
 
 不同属性的每个值，将与其他属性中相同位置的值匹配。例如，上面的 image1 的 `background-repeat` 值将是 `no-repeat`。
@@ -269,12 +272,14 @@ CSS `background` 属性是许多普通背景属性的简写，它允许您一次
 
 ```css
 .box {
-  background: linear-gradient(
+  background:
+    linear-gradient(
         105deg,
         rgba(255, 255, 255, 0.2) 39%,
         rgba(51, 56, 57, 1) 96%
-      ) center center / 400px 200px no-repeat, url(big-star.png) center
-      no-repeat, rebeccapurple;
+      ) center center / 400px 200px no-repeat,
+    url(big-star.png) center no-repeat,
+    rebeccapurple;
 }
 ```
 

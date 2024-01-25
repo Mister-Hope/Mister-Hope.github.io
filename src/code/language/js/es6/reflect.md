@@ -415,7 +415,7 @@ const p = new Proxy(
       console.log(descriptor);
       return Reflect.defineProperty(target, prop, descriptor);
     },
-  }
+  },
 );
 
 p.foo = "bar";

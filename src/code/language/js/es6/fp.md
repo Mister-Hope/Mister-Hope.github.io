@@ -191,7 +191,7 @@ f.zip = (...xs) => {
   let nple = [];
   let length = Math.min.apply(
     null,
-    xs.map((x) => x.length)
+    xs.map((x) => x.length),
   );
 
   for (let i = 0; i < length; i++) {

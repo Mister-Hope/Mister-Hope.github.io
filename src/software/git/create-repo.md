@@ -1,4 +1,5 @@
 ---
+date: 2020-05-05
 title: Git 仓库
 icon: repo
 order: 3
@@ -48,7 +49,7 @@ Initialized empty Git repository in /users/hope-studio/learngit/.git/
 
 也不一定必须在空目录下创建 Git 仓库，选择一个已经有东西的目录也是可以的。
 
-::: danger
+::: caution
 
 请不要用已经在使用的项目练习 Git!
 

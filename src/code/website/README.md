@@ -17,61 +17,44 @@ star: true
 
 <!-- more -->
 
-::: tip
+## 网站开发技术
 
 一个大型的网站，很少是直接使用原生代码写的。
 
-最新的网站大多数都是用知名框架 ([**Angular**](#angular)、[**React**](#react)、[**Vue**](#vue)) 搭建，并引入 npm 上的 UI 库编写而成。
+- 现代网站大多通过开源前端框架 (如 [**React**](#react)、[**Vue**](#vue)) 开发，并引入 npm 上的 UI 库编写而成。
+- 较老的网站 (或者政企) 可能会在原生开发基础上使用其他框架作为辅助，比如 [**Bootstrap**](#bootstrap4)、[**jQuery**](#jquery) 等。
 
-稍微老的网站会使用其他框架作为辅助，比如 [**Bootstrap**](#bootstrap4)、[**jQuery**](#jquery) 等。
-
-:::
-
-::: info 网页标准指定
+## 网页标准
 
 互联网网页标准由 W3C 组织制定，它的全称是万维网联盟组织。
 
-:::
+## 网页基础
 
-## HTML
+### HTML
 
 HTML 指的是超文本标记语言 (Hyper Text Markup Language)，描述了网页的骨架(具体结构)。
 
 - [HTML 教程](html/README.md)
 
-## CSS
+### CSS
 
 CSS 指层叠样式表 (Cascading Style Sheets)，声明了网页的样式(具体布局)。
 
 - [CSS 教程](css/README.md)
 
-## Emmet
+### Emmet
 
 Emmet 是一种快速输入 HTML 和 CSS 的语法。
 
 - [Emmet 用法介绍](emmet/README.md)
 
-## JavaScript
+### JavaScript
 
 JavaScript 是一种编程语言，声明了网页的交互逻辑。
 
 JavaScript 是一种轻量级的编程语言，为可插入 HTML 页面的编程代码。所有现代的 HTML 页面都使用 JavaScript。
 
 - [JS 教程](js.md)
-
-### TypeScript
-
-TypeScript 是 JavaScript 的一个超集，使得 JS 变成了一种强定义语言。TypeScript 由于其诸多优良特性，目前在前端的份额越来越大。
-
-- [TypeScript 教程](../language/typescript/README.md)
-
-## Node.js
-
-在深入了解并进行前端开发后，就避不开 Node。
-
-Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，拥有大量的模块。Node.js 主要以其丰富并及其容易导入的 Node.js package，以及其方便管理 npm (Node.js Package Manager)闻名。
-
-- [Node.js 教程](../node-js/README.md)
 
 ## 现代前端框架
 
@@ -90,6 +73,22 @@ Vue 是一套轻量化的前端渐进式框架框架。与其它大型框架不�
 ### Angular
 
 - [Angular 教程](../angular/README.md)
+
+## 深入网页开发
+
+### TypeScript
+
+TypeScript 是 JavaScript 的一个超集，使得 JS 变成了一种强定义语言。TypeScript 由于其诸多优良特性，目前在前端的份额越来越大。
+
+- [TypeScript 教程](../language/typescript/README.md)
+
+### Node.js
+
+在深入了解并进行前端开发后，就避不开 Node。
+
+Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，拥有大量的模块。Node.js 主要以其丰富并及其容易导入的 Node.js package，以及其方便管理 npm (Node.js Package Manager)闻名。
+
+- [Node.js 教程](../node-js/README.md)
 
 ## 历史前端框架
 

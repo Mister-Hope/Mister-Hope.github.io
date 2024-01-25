@@ -434,7 +434,7 @@ Object.assign(
   Object.defineProperty({}, "invisible", {
     enumerable: false,
     value: "hello",
-  })
+  }),
 );
 // { b: 'c' }
 ```
@@ -660,7 +660,7 @@ Object.getOwnPropertyDescriptor(
   class {
     foo() {}
   }.prototype,
-  "foo"
+  "foo",
 ).enumerable;
 // false
 ```
@@ -794,7 +794,7 @@ const shallowMerge = (target, source) =>
 ```js
 const clone = Object.create(
   Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(obj)
+  Object.getOwnPropertyDescriptors(obj),
 );
 
 // 或者
@@ -802,7 +802,7 @@ const clone = Object.create(
 const shallowClone = (obj) =>
   Object.create(
     Object.getPrototypeOf(obj),
-    Object.getOwnPropertyDescriptors(obj)
+    Object.getOwnPropertyDescriptors(obj),
   );
 ```
 
@@ -837,7 +837,7 @@ const obj = Object.create(
   prot,
   Object.getOwnPropertyDescriptors({
     foo: 123,
-  })
+  }),
 );
 ```
 
@@ -848,7 +848,7 @@ let mix = (object) => ({
   with: (...mixins) =>
     mixins.reduce(
       (c, mixin) => Object.create(c, Object.getOwnPropertyDescriptors(mixin)),
-      object
+      object,
     ),
 });
 
@@ -1174,7 +1174,7 @@ const obj = Object.create(
       value: 42,
       enumerable: true,
     },
-  }
+  },
 );
 Object.values(obj); // [42]
 ```
@@ -1395,7 +1395,7 @@ const clone2 = Object.assign(Object.create(Object.getPrototypeOf(obj)), obj);
 // 写法三
 const clone3 = Object.create(
   Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(obj)
+  Object.getOwnPropertyDescriptors(obj),
 );
 ```
 

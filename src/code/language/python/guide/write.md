@@ -64,7 +64,7 @@ hello, world
 如果当前目录下没有 hello.py 这个文件，运行 `python hello.py` 就会报错:
 
 ```sh
-C:/Users/MrHope> python hello.py
+C:/Users/Mister-Hope> python hello.py
 python: can't open file 'hello.py': [Errno 2] No such file or directory
 ```
 

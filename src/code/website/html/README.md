@@ -6,6 +6,7 @@ category: HTML
 tag:
   - 介绍
 star: true
+next: ./guide/
 ---
 
 HTML 指的是超文本标记语言 (Hyper Text Markup Language)，它不是一种编程语言，而是一种标记语言 (markup language)，它使用标记标签来描述网页。HTML5 是 HTML 最新的修订版本。

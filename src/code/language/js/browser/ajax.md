@@ -112,7 +112,7 @@ else request = new ActiveXObject("Microsoft.XMLHTTP");
 
 `XMLHttpRequest` 对象的 `open()` 方法有 3 个参数，第一个参数指定是 GET 还是 POST，第二个参数指定 URL 地址，第三个参数指定是否使用异步，默认是 `true`，所以不用写。
 
-::: danger
+::: caution
 
 千万不要把第三个参数指定为 `false`，否则浏览器将停止响应，直到 Ajax 请求完成。如果这个请求耗时 10 秒，那么 10 秒内您会发现浏览器处于“假死”状态。
 
@@ -126,7 +126,7 @@ else request = new ActiveXObject("Microsoft.XMLHTTP");
 
 这是因为浏览器的同源策略导致的。默认情况下，JavaScript 在发送 Ajax 请求时，URL 的域名必须和当前页面完全一致。
 
-完全一致的意思是，域名要相同 (www.example.com 和 example.com 不同)，协议要相同 (HTTP 和 HTTPS 不同)，端口号要相同(默认是 `:80` 端口，它和 `:8080` 就不同)。有的浏览器口子松一点，允许端口不同，大多数浏览器都会严格遵守这个限制。
+完全一致的意思是，域名要相同 (`www.example.com` 和 `example.com` 不同)，协议要相同 (HTTP 和 HTTPS 不同)，端口号要相同(默认是 `:80` 端口，它和 `:8080` 就不同)。有的浏览器口子松一点，允许端口不同，大多数浏览器都会严格遵守这个限制。
 
 那是不是用 JavaScript 无法请求外域(就是其他网站)的 URL 了呢? 方法还是有的，大概有这么几种:
 

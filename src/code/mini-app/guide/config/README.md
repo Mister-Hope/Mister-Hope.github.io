@@ -1,4 +1,5 @@
 ---
+date: 2022-01-07
 title: 配置
 icon: config
 category: 小程序

@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: Bash 的基本语法
 icon: quote
 author: 阮一峰

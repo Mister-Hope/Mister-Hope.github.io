@@ -79,7 +79,7 @@ div.animate(
     width: "256px",
     height: "256px",
   },
-  3000
+  3000,
 ); // 在 3 秒钟内 CSS 过渡到设定值
 ```
 
@@ -99,7 +99,7 @@ div.animate(
     console.log("动画已结束");
     // 恢复至初始状态:
     $(this).css("opacity", "1.0").css("width", "128px").css("height", "128px");
-  }
+  },
 );
 ```
 

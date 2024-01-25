@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: Vue 与小程序的异同
 icon: compare
 category: Vue

@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 泛型
 icon: generic
 category: TypeScript

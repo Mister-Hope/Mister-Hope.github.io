@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: Bash 的模式扩展
 icon: expansion
 author: 阮一峰

@@ -1,4 +1,5 @@
 ---
+date: 2020-10-09
 title: 注册
 icon: config
 category: 小程序
@@ -99,7 +100,7 @@ Page({
       },
       () => {
         // this is setData callback
-      }
+      },
     );
   },
   // 自由数据

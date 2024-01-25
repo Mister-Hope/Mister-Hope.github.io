@@ -165,4 +165,3 @@ Node.js 是一个著名的基于 JavaScript 的后端工具，可以很方便快
 1. 在 HTML 文件中右键选择 "Open with Live Server" 或者点击右下角的 Go Live，这会在 VSCode 内的 Tab 选项卡打开一个网页。
 
 1. 在 VS Code 编辑器中在需要的位置设置断点，按 F5 调试，运行与调试窗口就会显示变量数值，下方的调试控制台会显示输出内容。
-

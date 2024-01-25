@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: Bash 简介
 icon: info
 author: 阮一峰

@@ -1,4 +1,5 @@
 ---
+date: 2020-10-09
 title: 全局配置文档
 icon: app
 category: 小程序

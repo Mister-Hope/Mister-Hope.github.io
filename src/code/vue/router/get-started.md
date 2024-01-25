@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: 快速上手
 icon: router
 category: Vue

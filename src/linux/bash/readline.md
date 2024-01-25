@@ -1,4 +1,5 @@
 ---
+date: 2020-05-04
 title: Bash 行操作
 icon: line
 author: 阮一峰
