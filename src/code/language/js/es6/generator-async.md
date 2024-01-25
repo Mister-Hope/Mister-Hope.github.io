@@ -702,8 +702,8 @@ function next(ret) {
       "You may only yield a function, promise, generator, array, or object, " +
         'but the following object was passed: "' +
         String(ret.value) +
-        '"'
-    )
+        '"',
+    ),
   );
 }
 ```

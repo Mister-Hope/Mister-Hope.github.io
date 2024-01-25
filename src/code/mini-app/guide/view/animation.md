@@ -114,9 +114,9 @@ this.animate(
       { opacity: true, rotate: true },
       function () {
         console.log("清除了#container上的opacity和rotate属性");
-      }
+      },
     );
-  }.bind(this)
+  }.bind(this),
 );
 
 this.animate(
@@ -131,7 +131,7 @@ this.animate(
     this.clearAnimation(".block", function () {
       console.log("清除了.block上的所有动画属性");
     });
-  }.bind(this)
+  }.bind(this),
 );
 ```
 
@@ -208,7 +208,7 @@ this.animate(
     timeRange: 2000,
     startScrollOffset: 0,
     endScrollOffset: 85,
-  }
+  },
 );
 
 this.animate(
@@ -229,7 +229,7 @@ this.animate(
     timeRange: 1000,
     startScrollOffset: 120,
     endScrollOffset: 252,
-  }
+  },
 );
 ```
 

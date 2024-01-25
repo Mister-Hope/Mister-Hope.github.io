@@ -89,7 +89,7 @@ Page({
       },
       () => {
         // this is setData callback
-      }
+      },
     );
   },
   customData: {

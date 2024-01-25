@@ -353,7 +353,7 @@ function foo(
   x,
   y = function () {
     x = 2;
-  }
+  },
 ) {
   let x = 3;
   y();
@@ -374,7 +374,7 @@ function foo(
   x,
   y = function () {
     x = 2;
-  }
+  },
 ) {
   x = 3;
   y();
@@ -605,7 +605,7 @@ foo
   .name(
     // "bound foo"
 
-    function () {}
+    function () {},
   )
   .bind({}).name; // "bound "
 ```
@@ -797,7 +797,7 @@ let handler = {
     document.addEventListener(
       "click",
       (event) => this.doSomething(event.type),
-      false
+      false,
     );
   },
 
