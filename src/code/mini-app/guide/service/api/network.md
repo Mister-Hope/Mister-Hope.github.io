@@ -13,18 +13,18 @@ category: 小程序
 
 Object object
 
-| 属性                                 | 类型                      | 默认值 | 必填 | 说明                                           | 最低版本 |
-| ------------------------------------ | ------------------------- | ------ | ---- | ---------------------------------------------- | -------- |
-| url                                  | string                    |        | 是   | 开发者服务器接口地址                           |
-| data                                 | string/object/ArrayBuffer |        | 否   | 请求的参数                                     |
-| header                               | Object                    |        | 否   | 设置请求的 header，header 中不能设置 Referer。 |
-| content-type 默认为 application/json |
-| method                               | string                    | GET    | 否   | HTTP 请求方法                                  |
-| dataType                             | string                    | json   | 否   | 返回的数据格式                                 |
-| responseType                         | string                    | text   | 否   | 响应的数据类型                                 | 1.7.0    |
-| success                              | function                  |        | 否   | 接口调用成功的回调函数                         |
-| fail                                 | function                  |        | 否   | 接口调用失败的回调函数                         |
-| complete                             | function                  |        | 否   | 接口调用结束的回调函数(调用成功、失败都会执行) |
+| 属性         | 类型                      | 默认值           | 必填 | 说明                                           | 最低版本 |
+| ------------ | ------------------------- | ---------------- | ---- | ---------------------------------------------- | -------- |
+| url          | string                    |                  | 是   | 开发者服务器接口地址                           |          |
+| data         | string/object/ArrayBuffer |                  | 否   | 请求的参数                                     |          |
+| header       | Object                    |                  | 否   | 设置请求的 header，header 中不能设置 Referer。 |          |
+| content-type |                           | application/json |      |                                                |          |
+| method       | string                    | GET              | 否   | HTTP 请求方法                                  |          |
+| dataType     | string                    | json             | 否   | 返回的数据格式                                 |          |
+| responseType | string                    | text             | 否   | 响应的数据类型                                 | 1.7.0    |
+| success      | function                  |                  | 否   | 接口调用成功的回调函数                         |          |
+| fail         | function                  |                  | 否   | 接口调用失败的回调函数                         |          |
+| complete     | function                  |                  | 否   | 接口调用结束的回调函数(调用成功、失败都会执行) |          |
 
 object.method 的合法值
 
@@ -61,8 +61,8 @@ Object res
 
 | 属性       | 类型                      | 说明                                    | 最低版本 |
 | ---------- | ------------------------- | --------------------------------------- | -------- |
-| data       | string/Object/Arraybuffer | 开发者服务器返回的数据                  |
-| statusCode | number                    | 开发者服务器返回的 HTTP 状态码          |
+| data       | string/Object/Arraybuffer | 开发者服务器返回的数据                  |          |
+| statusCode | number                    | 开发者服务器返回的 HTTP 状态码          |          |
 | header     | Object                    | 开发者服务器返回的 HTTP Response Header | 1.2.0    |
 
 ### request 返回值
@@ -113,12 +113,12 @@ Object object
 
 | 属性     | 类型     | 必填 | 说明                                           | 最低版本 |
 | -------- | -------- | ---- | ---------------------------------------------- | -------- |
-| url      | string   | 是   | 下载资源的 url                                 |
-| header   | Object   | 否   | HTTP 请求的 Header，Header 中不能设置 Referer  |
+| url      | string   | 是   | 下载资源的 url                                 |          |
+| header   | Object   | 否   | HTTP 请求的 Header，Header 中不能设置 Referer  |          |
 | filePath | string   | 否   | 指定文件下载后存储的路径                       | 1.8.0    |
-| success  | function | 否   | 接口调用成功的回调函数                         |
-| fail     | function | 否   | 接口调用失败的回调函数                         |
-| complete | function | 否   | 接口调用结束的回调函数(调用成功、失败都会执行) |
+| success  | function | 否   | 接口调用成功的回调函数                         |          |
+| fail     | function | 否   | 接口调用失败的回调函数                         |          |
+| complete | function | 否   | 接口调用结束的回调函数(调用成功、失败都会执行) |          |
 
 object.success 回调函数
 

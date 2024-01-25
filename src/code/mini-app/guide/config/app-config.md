@@ -83,14 +83,14 @@ category: 小程序
 | ---------------------------- | -------- | -------- | ------------------------------------------------------------- | -------------------------------- |
 | navigationBarBackgroundColor | HexColor | #000000  | 导航栏背景颜色，如 #000000                                    |                                  |
 | navigationBarTextStyle       | string   | white    | 导航栏标题颜色，仅支持 black / white                          |                                  |
-| navigationBarTitleText       | string   |          | 导航栏标题文字内容                                            |
+| navigationBarTitleText       | string   |          | 导航栏标题文字内容                                            |                                  |
 | navigationStyle              | string   | default  | 导航栏样式，仅支持 `default` 默认样式 `custom` 自定义导航航栏 | 微信客户端 6.6.0                 |
 | backgroundColor              | HexColor | #ffffff  | 窗口的背景色                                                  |                                  |
 | backgroundTextStyle          | string   | dark     | 下拉 loading 的样式，仅支持 dark / light                      |                                  |
 | backgroundColorTop           | string   | #ffffff  | 顶部窗口的背景色，仅 iOS 支持                                 | 微信客户端 6.5.16                |
 | backgroundColorBottom        | string   | #ffffff  | 底部窗口的背景色，仅 iOS 支持                                 | 微信客户端 6.5.16                |
 | enablePullDownRefresh        | boolean  | false    | 是否开启全局的下拉刷新。                                      |                                  |
-| onReachBottomDistance        | number   | 50       | 页面上拉触底事件触发时距页面底部距离，单位为 px。             |
+| onReachBottomDistance        | number   | 50       | 页面上拉触底事件触发时距页面底部距离，单位为 px。             |                                  |
 | pageOrientation              | string   | portrait | 屏幕旋转设置，支持 auto / portrait / landscape                | 2.4.0 (auto) / 2.5.0 (landscape) |
 
 ```json
@@ -111,12 +111,12 @@ category: 小程序
 
 | 属性            | 类型     | 必填 | 默认值 | 描述                                                     | 最低版本 |
 | --------------- | -------- | ---- | ------ | -------------------------------------------------------- | -------- |
-| color           | HexColor | 是   |        | tab 上的文字默认颜色，仅支持十六进制颜色                 |
-| selectedColor   | HexColor | 是   |        | tab 上的文字选中时的颜色，仅支持十六进制颜色             |
-| backgroundColor | HexColor | 是   |        | tab 的背景色，仅支持十六进制颜色                         |
-| borderStyle     | string   | 否   | black  | tabbar 上边框的颜色， 仅支持 black / white               |
-| list            | Array    | 是   |        | tab 的列表，详见 list 属性说明，最少 2 个、最多 5 个 tab |
-| position        | string   | 否   | bottom | tabBar 的位置，仅支持 bottom / top                       |
+| color           | HexColor | 是   |        | tab 上的文字默认颜色，仅支持十六进制颜色                 |          |
+| selectedColor   | HexColor | 是   |        | tab 上的文字选中时的颜色，仅支持十六进制颜色             |          |
+| backgroundColor | HexColor | 是   |        | tab 的背景色，仅支持十六进制颜色                         |          |
+| borderStyle     | string   | 否   | black  | tabbar 上边框的颜色， 仅支持 black / white               |          |
+| list            | Array    | 是   |        | tab 的列表，详见 list 属性说明，最少 2 个、最多 5 个 tab |          |
+| position        | string   | 否   | bottom | tabBar 的位置，仅支持 bottom / top                       |          |
 | custom          | boolean  | 否   | false  | 自定义 tabBar                                            | 2.5.0    |
 
 其中 `list` 接受一个数组，只能配置最少 2 个、最多 5 个 tab。tab 按数组的顺序排序，每个项都是一个对象，其属性值如下:
@@ -253,7 +253,7 @@ PermissionObject 结构
 
 指明 sitemap.json 的位置；默认为 `'sitemap.json'` 即在 app.json 同级目录下名字的 sitemap.json 文件
 
-#### 配置示例
+::: details 配置示例
 
 ```json
 {
@@ -280,6 +280,8 @@ PermissionObject 结构
   "debug": true
 }
 ```
+
+:::
 
 ### style
 
@@ -362,10 +364,10 @@ PermissionObject 结构
 单页模式相关配置
 
 | 属性             | 类型   | 必填 | 默认值                                                                | 描述                                                                                                                          |
-| ---------------- | ------ | ---- | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| navigationBarFit | String | 否   | 默认自动调整，若原页面是自定义导航栏，则为 `float`，否则为 `squeezed` | 导航栏与页面的相交状态，值为 `float` 时表示导航栏浮在页面上，与页面相交；值为 `squeezed` 时表示页面被导航栏挤压，与页面不相交 |
+| ---------------- | ------ | ---- | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | --- |
+| navigationBarFit | String | 否   | 默认自动调整，若原页面是自定义导航栏，则为 `float`，否则为 `squeezed` | 导航栏与页面的相交状态，值为 `float` 时表示导航栏浮在页面上，与页面相交；值为 `squeezed` 时表示页面被导航栏挤压，与页面不相交 |     |
 
-## 配置示例
+::: details 配置示例
 
 ```json
 {
@@ -393,3 +395,5 @@ PermissionObject 结构
   "navigateToMiniProgramAppIdList": ["wxe5f52902cf4de896"]
 }
 ```
+
+:::

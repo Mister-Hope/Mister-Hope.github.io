@@ -21,10 +21,10 @@ App() 必须在 app.js 中调用，必须调用且只能调用一次。不然会
 
 | 属性                 | 类型     | 默认值 | 必填 | 说明                                   | 最低版本 |
 | -------------------- | -------- | ------ | ---- | -------------------------------------- | -------- |
-| onLaunch             | function |        | 否   | 生命周期回调——监听小程序初始化。       |
-| onShow               | function |        | 否   | 生命周期回调——监听小程序启动或切前台。 |
-| onHide               | function |        | 否   | 生命周期回调——监听小程序切后台。       |
-| onError              | function |        | 否   | 错误监听函数。                         |
+| onLaunch             | function |        | 否   | 生命周期回调——监听小程序初始化。       |          |
+| onShow               | function |        | 否   | 生命周期回调——监听小程序启动或切前台。 |          |
+| onHide               | function |        | 否   | 生命周期回调——监听小程序切后台。       |          |
+| onError              | function |        | 否   | 错误监听函数。                         |          |
 | onPageNotFound       | function |        | 否   | 页面不存在监听函数。                   | 1.9.90   |
 | onUnhandledRejection | function |        | 否   | 未处理的 Promise 拒绝事件监听函数。    | 2.10.0   |
 | onThemeChange        | function |        | 否   | 监听系统主题变化                       | 2.11.0   |

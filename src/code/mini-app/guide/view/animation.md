@@ -65,7 +65,7 @@ keyframes 中对象的结构
 | --------------- | ------------- | ------ | --------------------------------- | --------------------------------------- |
 | offset          | Number        |        | 否                                | 关键帧的偏移，范围[0-1]                 |
 | ease            | String        | linear | 否                                | 动画缓动函数                            |
-| transformOrigin | String        | 否     | 基点位置，即 CSS transform-origin |
+| transformOrigin | String        | 否     | 基点位置，即 CSS transform-origin |                                         |
 | backgroundColor | String        |        | 否                                | 背景颜色，即 CSS background-color       |
 | bottom          | Number/String |        | 否                                | 底边位置，即 CSS bottom                 |
 | height          | Number/String |        | 否                                | 高度，即 CSS height                     |
@@ -114,9 +114,9 @@ this.animate(
       { opacity: true, rotate: true },
       function () {
         console.log("清除了#container上的opacity和rotate属性");
-      },
+      }
     );
-  }.bind(this),
+  }.bind(this)
 );
 
 this.animate(
@@ -131,7 +131,7 @@ this.animate(
     this.clearAnimation(".block", function () {
       console.log("清除了.block上的所有动画属性");
     });
-  }.bind(this),
+  }.bind(this)
 );
 ```
 
@@ -208,7 +208,7 @@ this.animate(
     timeRange: 2000,
     startScrollOffset: 0,
     endScrollOffset: 85,
-  },
+  }
 );
 
 this.animate(
@@ -229,7 +229,7 @@ this.animate(
     timeRange: 1000,
     startScrollOffset: 120,
     endScrollOffset: 252,
-  },
+  }
 );
 ```
 

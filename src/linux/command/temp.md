@@ -90,11 +90,14 @@ chmod 600 id_rsa
 
 ### 管理用户组
 
+```sh
 groupadd groupname 　　添加用户组
 
 groupdel groupname 　　删除用户组
+```
 
-##　添加用户到用户组
+### 添加用户到用户组
+
 将一个用户添加到用户组中，千万不能直接用:
 
 ```sh

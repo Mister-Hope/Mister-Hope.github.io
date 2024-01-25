@@ -65,10 +65,10 @@ p {
 | --------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Arial           | sans-serif | 通常认为最佳做法还是添加 Helvetica 作为 Arial 的首选替代品，尽管它们的字体面几乎相同，但 Helvetica 被认为具有更好的形状，即使 Arial 更广泛地可用。 |
 | Courier New     | monospace  | 某些操作系统有一个 Courier New 字体的替代(可能较旧的)版本叫 Courier。使用 Courier New 作为 Courier 的首选替代方案，被认为是最佳做法。              |
-| Georgia         | serif      |
+| Georgia         | serif      |                                                                                                                                                    |
 | Times New Roman | serif      | 某些操作系统有一个 Times New Roman 字体的替代(可能较旧的)版本叫 Times。使用 Times 作为 Times New Roman 的首选替代方案，被认为是最佳做法。          |
 | Trebuchet MS    | sans-serif | 您应该小心使用这种字体——它在移动操作系统上并不广泛。                                                                                               |
-| Verdana         | sans-serif |
+| Verdana         | sans-serif |                                                                                                                                                    |
 
 #### 默认字体
 

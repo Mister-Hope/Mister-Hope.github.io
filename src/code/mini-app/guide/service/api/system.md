@@ -28,17 +28,17 @@ Object res
 | 属性                        | 类型    | 说明                                                                                                                                                 | 最低版本 |
 | --------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
 | brand                       | string  | 设备品牌                                                                                                                                             | 1.5.0    |
-| model                       | string  | 设备型号                                                                                                                                             |
-| pixelRatio                  | number  | 设备像素比                                                                                                                                           |
+| model                       | string  | 设备型号                                                                                                                                             |          |
+| pixelRatio                  | number  | 设备像素比                                                                                                                                           |          |
 | screenWidth                 | number  | 屏幕宽度，单位 px                                                                                                                                    | 1.1.0    |
 | screenHeight                | number  | 屏幕高度，单位 px                                                                                                                                    | 1.1.0    |
-| windowWidth                 | number  | 可使用窗口宽度，单位 px                                                                                                                              |
-| windowHeight                | number  | 可使用窗口高度，单位 px                                                                                                                              |
+| windowWidth                 | number  | 可使用窗口宽度，单位 px                                                                                                                              |          |
+| windowHeight                | number  | 可使用窗口高度，单位 px                                                                                                                              |          |
 | statusBarHeight             | number  | 状态栏的高度，单位 px                                                                                                                                | 1.9.0    |
-| language                    | string  | 微信设置的语言                                                                                                                                       |
-| version                     | string  | 微信版本号                                                                                                                                           |
-| system                      | string  | 操作系统及版本                                                                                                                                       |
-| platform                    | string  | 客户端平台                                                                                                                                           |
+| language                    | string  | 微信设置的语言                                                                                                                                       |          |
+| version                     | string  | 微信版本号                                                                                                                                           |          |
+| system                      | string  | 操作系统及版本                                                                                                                                       |          |
+| platform                    | string  | 客户端平台                                                                                                                                           |          |
 | fontSizeSetting             | number  | 用户字体大小(单位 px)。以微信客户端「我-设置-通用-字体大小」中的设置为准                                                                             | 1.5.0    |
 | SDKVersion                  | string  | 客户端基础库版本                                                                                                                                     | 1.1.0    |
 | benchmarkLevel              | number  | 设备性能等级(仅 Android 小游戏)。<br />取值为: -2 或 0(该设备无法运行小游戏)，-1(性能未知)，>=1(设备性能值，该值越高，设备性能越好，目前最高不到 50) | 1.8.0    |

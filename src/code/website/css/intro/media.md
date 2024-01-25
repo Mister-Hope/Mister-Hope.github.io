@@ -51,22 +51,22 @@ next: ../layout/intro.html
 媒体特性(Media features)描述了 user agent、输出设备，或是浏览环境的具体特征。媒体特性表达式是完全可选的，它负责测试这些特性或特征是否存在、值为多少。每条媒体特性表达式都必须用括号括起来。
 
 | 名称                         | 简介                                                                                       | 备注                                |
-| ---------------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------- |
+| ---------------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------- | --- |
 | any-hover                    | 是否有任何可用的输入机制允许用户(将鼠标等)悬停在元素上?                                    | 在 Media Queries Level 4 中被添加。 |
 | any-pointer                  | 可用的输入机制中是否有任何指针设备，如果有，它的精度如何?                                  | 在 Media Queries Level 4 中被添加。 |
-| aspect-ratio                 | 视窗(viewport)的宽高比                                                                     |
-| color                        | 输出设备每个像素的比特值，常见的有 8、16、32 位。如果设备不支持输出彩色，则该值为 0        |
+| aspect-ratio                 | 视窗(viewport)的宽高比                                                                     |                                     |     |
+| color                        | 输出设备每个像素的比特值，常见的有 8、16、32 位。如果设备不支持输出彩色，则该值为 0        |                                     |     |
 | color-gamut                  | 用户代理和输出设备大致程度上支持的色域                                                     | 在 Media Queries Level 4 中被添加。 |
 | color-index                  | 输出设备的颜色查询表(color lookup table)中的条目数量，如果设备不使用颜色查询表，则该值为 0 |
 | display-mode                 | 应用程序的显示模式，如 web app 的 manifest 中的 display 成员所指定                         | 在 Web App Manifest spec 被定义.    |
 | forced-colors                | 检测是 user agent 否限制调色板                                                             | 在 Media Queries Level 5 中被添加。 |
-| grid                         | 输出设备使用网格屏幕还是点阵屏幕?                                                          |
-| height                       | 视窗(viewport)的高度                                                                       |
+| grid                         | 输出设备使用网格屏幕还是点阵屏幕?                                                          |                                     |
+| height                       | 视窗(viewport)的高度                                                                       |                                     |
 | hover                        | 主要输入模式是否允许用户在元素上悬停                                                       | 在 Media Queries Level 4 中被添加。 |
 | inverted-colors              | user agent 或者底层操作系统是否反转了颜色                                                  | 在 Media Queries Level 5 中被添加。 |
 | light-level                  | 环境光亮度                                                                                 | 在 Media Queries Level 5 中被添加。 |
-| monochrome                   | 输出设备单色帧缓冲区中每个像素的位深度。如果设备并非黑白屏幕，则该值为 0                   |
-| orientation                  | 视窗(viewport)的旋转方向                                                                   |
+| monochrome                   | 输出设备单色帧缓冲区中每个像素的位深度。如果设备并非黑白屏幕，则该值为 0                   |                                     |
+| orientation                  | 视窗(viewport)的旋转方向                                                                   |                                     |
 | overflow-block               | 输出设备如何处理沿块轴溢出视窗(viewport)的内容                                             | 在 Media Queries Level 4 中被添加。 |
 | overflow-inline              | 沿内联轴溢出视窗(viewport)的内容是否可以滚动?                                              | 在 Media Queries Level 4 中被添加。 |
 | pointer                      | 主要输入机制是一个指针设备吗?如果是，它的精度如何?                                         | 在 Media Queries Level 4 中被添加。 |
@@ -74,8 +74,8 @@ next: ../layout/intro.html
 | prefers-contrast             | 探测用户是否有向系统要求提高或降低相近颜色之间的对比度                                     | 在 Media Queries Level 5 中被添加。 |
 | prefers-reduced-motion       | 用户是否希望页面上出现更少的动态效果                                                       | 在 Media Queries Level 5 中被添加。 |
 | prefers-reduced-transparency | 用户是否倾向于选择更低的透明度                                                             | 在 Media Queries Level 5 中被添加。 |
-| resolution                   | 输出设备的像素密度(分辨率)                                                                 |
-| scan                         | 输出设备的扫描过程(适用于电视等)                                                           |
+| resolution                   | 输出设备的像素密度(分辨率)                                                                 |                                     |
+| scan                         | 输出设备的扫描过程(适用于电视等)                                                           |                                     |
 | scripting                    | 探测脚本(例如 JavaScript)是否可用                                                          | 在 Media Queries Level 5 中被添加。 |
 | update                       | 输出设备更新内容的渲染结果的频率                                                           | 在 Media Queries Level 4 中被添加。 |
 | width                        | 视窗(viewport)的宽度，包括纵向滚动条的宽度                                                 |                                     |

@@ -52,15 +52,15 @@ var wxsFunction = function (event, ownerInstance) {
 
 | 方法                           | 参数                           | 描述                                                                                               | 最低版本 |
 | ------------------------------ | ------------------------------ | -------------------------------------------------------------------------------------------------- | -------- |
-| selectComponent                | selector 对象                  | 返回组件的 ComponentDescriptor 实例。                                                              |
-| selectAllComponents            | selector 对象数组              | 返回组件的 ComponentDescriptor 实例数组。                                                          |
-| setStyle                       | Object/string                  | 设置组件样式，支持 rpx。设置的样式优先级比组件 wxml 里面定义的样式高。不能设置最顶层页面的样式。   |
-| addClass/removeClass/ hasClass | string                         | 设置组件的 class。设置的 class 优先级比组件 wxml 里面定义的 class 高。不能设置最顶层页面的 class。 |
-| getDataset                     | 无                             | 返回当前组件/页面的 dataset 对象                                                                   |
-| callMethod                     | (funcName:string, args:object) | 调用当前组件/页面在逻辑层(App Service)定义的函数。funcName 表示函数名称，args 表示函数的参数。     |
-| requestAnimationFrame          | Function                       | 和原生 requestAnimationFrame 一样。用于设置动画。                                                  |
-| getState                       | 无                             | 返回一个 object 对象，当有局部变量需要存储起来后续使用的时候用这个方法。                           |
-| triggerEvent                   | (eventName, detail)            | 和组件的 triggerEvent 一致。                                                                       |
+| selectComponent                | selector 对象                  | 返回组件的 ComponentDescriptor 实例。                                                              |          |
+| selectAllComponents            | selector 对象数组              | 返回组件的 ComponentDescriptor 实例数组。                                                          |          |
+| setStyle                       | Object/string                  | 设置组件样式，支持 rpx。设置的样式优先级比组件 wxml 里面定义的样式高。不能设置最顶层页面的样式。   |          |
+| addClass/removeClass/ hasClass | string                         | 设置组件的 class。设置的 class 优先级比组件 wxml 里面定义的 class 高。不能设置最顶层页面的 class。 |          |
+| getDataset                     | 无                             | 返回当前组件/页面的 dataset 对象                                                                   |          |
+| callMethod                     | (funcName:string, args:object) | 调用当前组件/页面在逻辑层(App Service)定义的函数。funcName 表示函数名称，args 表示函数的参数。     |          |
+| requestAnimationFrame          | Function                       | 和原生 requestAnimationFrame 一样。用于设置动画。                                                  |          |
+| getState                       | 无                             | 返回一个 object 对象，当有局部变量需要存储起来后续使用的时候用这个方法。                           |          |
+| triggerEvent                   | (eventName, detail)            | 和组件的 triggerEvent 一致。                                                                       |          |
 | getComputedStyle               | string[]                       | 参数与 SelectorQuery 的 computedStyle 一致。                                                       | 2.11.2   |
 
 ### 使用方法

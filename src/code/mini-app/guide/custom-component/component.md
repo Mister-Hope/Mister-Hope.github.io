@@ -12,19 +12,19 @@ category: 小程序
 
 | 定义段           | 类型         | 是否必填 | 描述                                                                                          | 最低版本 |
 | ---------------- | ------------ | -------- | --------------------------------------------------------------------------------------------- | -------- |
-| properties       | Object Map   | 否       | 组件的对外属性，是属性名到属性设置的映射表                                                    |
-| data             | Object       | 否       | 组件的内部数据，和 properties 一同用于组件的模板渲染                                          |
+| properties       | Object Map   | 否       | 组件的对外属性，是属性名到属性设置的映射表                                                    |          |
+| data             | Object       | 否       | 组件的内部数据，和 properties 一同用于组件的模板渲染                                          |          |
 | observers        | Object       | 否       | 组件数据字段监听器，用于监听 properties 和 data 的变化，参见 数据监听器                       | 2.6.1    |
-| methods          | Object       | 否       | 组件的方法，包括事件响应函数和任意的自定义方法，关于事件响应函数的使用，参见 组件间通信与事件 |
-| behaviors        | String Array | 否       | 类似于 mixins 和 traits 的组件间代码复用机制，参见 behaviors                                  |
-| created          | Function     | 否       | 组件生命周期函数-在组件实例刚刚被创建时执行，注意此时不能调用 setData )                       |
-| attached         | Function     | 否       | 组件生命周期函数-在组件实例进入页面节点树时执行)                                              |
-| ready            | Function     | 否       | 组件生命周期函数-在组件布局完成后执行)                                                        |
-| moved            | Function     | 否       | 组件生命周期函数-在组件实例被移动到节点树另一个位置时执行)                                    |
-| detached         | Function     | 否       | 组件生命周期函数-在组件实例被从页面节点树移除时执行)                                          |
-| relations        | Object       | 否       | 组件间关系定义，参见 组件间关系                                                               |
-| externalClasses  | String Array | 否       | 组件接受的外部样式类，参见 外部样式类                                                         |
-| options          | Object Map   | 否       | 一些选项(文档中介绍相关特性时会涉及具体的选项设置，这里暂不列举)                              |
+| methods          | Object       | 否       | 组件的方法，包括事件响应函数和任意的自定义方法，关于事件响应函数的使用，参见 组件间通信与事件 |          |
+| behaviors        | String Array | 否       | 类似于 mixins 和 traits 的组件间代码复用机制，参见 behaviors                                  |          |
+| created          | Function     | 否       | 组件生命周期函数-在组件实例刚刚被创建时执行，注意此时不能调用 setData                         |          |
+| attached         | Function     | 否       | 组件生命周期函数-在组件实例进入页面节点树时执行                                               |          |
+| ready            | Function     | 否       | 组件生命周期函数-在组件布局完成后执行                                                         |          |
+| moved            | Function     | 否       | 组件生命周期函数-在组件实例被移动到节点树另一个位置时执行                                     |          |
+| detached         | Function     | 否       | 组件生命周期函数-在组件实例被从页面节点树移除时执行                                           |          |
+| relations        | Object       | 否       | 组件间关系定义，参见 组件间关系                                                               |          |
+| externalClasses  | String Array | 否       | 组件接受的外部样式类，参见 外部样式类                                                         |          |
+| options          | Object Map   | 否       | 一些选项(文档中介绍相关特性时会涉及具体的选项设置，这里暂不列举)                              |          |
 | lifetimes        | Object       | 否       | 组件生命周期声明对象，参见 组件生命周期                                                       | 2.2.3    |
 | pageLifetimes    | Object       | 否       | 组件所在页面的生命周期声明对象，参见 组件生命周期                                             | 2.2.3    |
 | definitionFilter | Function     | 否       | 定义段过滤器，用于自定义组件扩展，参见 自定义组件扩展                                         | 2.2.3    |
@@ -41,16 +41,16 @@ category: 小程序
 
 | 方法名                       | 参数                                                                 | 描述                                                                                                                                 | 最低版本 |
 | ---------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | -------- |
-| setData                      | Object newData                                                       | 设置 data 并执行视图层渲染                                                                                                           |
-| hasBehavior                  | Object behavior                                                      | 检查组件是否具有 behavior (检查时会递归检查被直接或间接引入的所有 behavior)                                                          |
-| triggerEvent                 | String name, Object detail, Object options                           | 触发事件，参见 组件间通信与事件                                                                                                      |
-| createSelectorQuery          |                                                                      | 创建一个 SelectorQuery 对象，选择器选取范围为这个组件实例内                                                                          |
-| createIntersectionObserver   |                                                                      | 创建一个 IntersectionObserver 对象，选择器选取范围为这个组件实例内                                                                   |
+| setData                      | Object newData                                                       | 设置 data 并执行视图层渲染                                                                                                           |          |
+| hasBehavior                  | Object behavior                                                      | 检查组件是否具有 behavior (检查时会递归检查被直接或间接引入的所有 behavior)                                                          |          |
+| triggerEvent                 | String name, Object detail, Object options                           | 触发事件，参见 组件间通信与事件                                                                                                      |          |
+| createSelectorQuery          |                                                                      | 创建一个 SelectorQuery 对象，选择器选取范围为这个组件实例内                                                                          |          |
+| createIntersectionObserver   |                                                                      | 创建一个 IntersectionObserver 对象，选择器选取范围为这个组件实例内                                                                   |          |
 | createMediaQueryObserver     |                                                                      | 创建一个 MediaQueryObserver 对象                                                                                                     | 2.11.1   |
-| selectComponent              | String selector                                                      | 使用选择器选择组件实例节点，返回匹配到的第一个组件实例对象(会被 wx://component-export 影响)                                          |
-| selectAllComponents          | String selector                                                      | 使用选择器选择组件实例节点，返回匹配到的全部组件实例对象组成的数组(会被 wx://component-export 影响)                                  |
+| selectComponent              | String selector                                                      | 使用选择器选择组件实例节点，返回匹配到的第一个组件实例对象(会被 wx://component-export 影响)                                          |          |
+| selectAllComponents          | String selector                                                      | 使用选择器选择组件实例节点，返回匹配到的全部组件实例对象组成的数组(会被 wx://component-export 影响)                                  |          |
 | selectOwnerComponent         |                                                                      | 选取当前组件节点所在的组件实例(即组件的引用者)，返回它的组件实例对象(会被 wx://component-export 影响)                                | 2.8.2    |
-| getRelationNodes             | String relationKey                                                   | 获取这个关系所对应的所有关联节点，参见 组件间关系                                                                                    |
+| getRelationNodes             | String relationKey                                                   | 获取这个关系所对应的所有关联节点，参见 组件间关系                                                                                    |          |
 | groupSetData                 | Function callback                                                    | 立刻执行 callback ，其中的多个 setData 之间不会触发界面绘制(只有某些特殊场景中需要，如用于在不同组件同时 setData 时进行界面绘制同步) | 2.4.0    |
 | getTabBar                    |                                                                      | 返回当前页面的 custom-tab-bar 的组件实例，详见自定义 tabBar                                                                          | 2.6.2    |
 | getPageId                    |                                                                      | 返回页面标识符(一个字符串)，可以用来判断几个自定义组件实例是不是在同一个页面内                                                       | 2.7.1    |
@@ -118,7 +118,7 @@ Component({
 | ------------- | -------- | -------- | ------------------------ | -------- |
 | type          |          | 是       | 属性的类型               |          |
 | optionalTypes | Array    | 否       | 属性的类型(可以指定多个) | 2.6.5    |
-| value         |          | 否       | 属性的初始值             |
+| value         |          | 否       | 属性的初始值             |          |
 | observer      | Function | 否       | 属性值变化时的回调函数   |          |
 
 ::: warning
