@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as t,c as o,d as s}from"./app-W9Dk-dRG.js";const n={},c=s("p",null,"Postman 是一个强大的抓包与网络调试工具。",-1),_=[c];function a(r,l){return t(),o("div",null,_)}const f=e(n,[["render",a],["__file","postman.html.vue"]]);export{f as default};
