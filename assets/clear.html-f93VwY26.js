@@ -1,0 +1,2 @@
+import{_ as e}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as a,c,b as s}from"./app-odku2cZ-.js";const t={},r=s(`<h1 id="clear" tabindex="-1"><a class="header-anchor" href="#clear"><span>clear</span></a></h1><p><code>clear</code> 命令用来清除当前屏幕的显示，运行后会只留下一个提示符。</p><div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code><span class="token function">clear</span>
+</code></pre></div>`,3),n=[r];function o(l,d){return a(),c("div",null,n)}const h=e(t,[["render",o],["__file","clear.html.vue"]]);export{h as default};

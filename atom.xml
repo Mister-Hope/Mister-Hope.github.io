@@ -5,8 +5,8 @@
   <subtitle>Where there is light, there is hope.</subtitle>
   <icon>https://mister-hope.com/favicon.ico</icon>
   <rights>基于 MIT 协议，© 2019-至今 Mr.Hope</rights>
-  <updated>2024-01-28T16:55:41.680Z</updated>
-  <generator>vuepress-plugin-feed2</generator>
+  <updated>2024-02-02T17:16:58.253Z</updated>
+  <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://mister-hope.com/atom.xml"/>
   <link rel="alternate" href="https://mister-hope.com/"/>
   <category term="基础"/>
@@ -81,10 +81,10 @@
 </div>
 <h2>Windows 终端</h2>
 <p>Windows 终端是一个新式主机应用程序，它面向你喜爱的命令行 shell，如命令提示符、PowerShell 和 bash（通过适用于 Linux 的 Windows 子系统 (WSL)）。 它的主要功能包括多个选项卡、窗格、Unicode 和 UTF-8 字符支持、GPU 加速文本呈现引擎，你还可用它来创建你自己的主题并自定义文本、颜色、背景和快捷方式。</p>
-<p>更多内容详见 <a href="/software/tool/terminal/" target="blank">软件 → Windows 终端</a>。</p>
+<p>更多内容详见 <a href="/software/tool/terminal/" target="_blank">软件 → Windows 终端</a>。</p>
 <h2>PowerToys</h2>
 <p>Microsoft PowerToys 是一组实用工具，可帮助高级用户调整和简化其 Windows 体验，从而提高工作效率。</p>
-<p>更多内容详见 <a href="/software/tool/power-toys.html" target="blank">软件 → PowerToys</a>。</p>
+<p>更多内容详见 <a href="/software/tool/power-toys.html" target="_blank">软件 → PowerToys</a>。</p>
 ]]></content>
     <category term="基础"/>
     <published>2024-01-25T17:47:26.000Z</published>
@@ -153,7 +153,7 @@
 <div class="language-html" data-ext="html" data-title="html"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>count++<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>{{ count }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-</code></pre></div><div class="language-javascript line-numbers-mode" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createApp <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"vue"</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createApp <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"vue"</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">createApp</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -164,7 +164,7 @@
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 app<span class="token punctuation">.</span><span class="token function">mount</span><span class="token punctuation">(</span><span class="token string">"#app"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container tip">
+</code></pre></div><div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>当根组件没有设置 <code>template</code> 选项时，Vue 将自动使用容器的 <code>innerHTML</code> 作为模板。</p>
 </div>
@@ -217,7 +217,7 @@ app2<span class="token punctuation">.</span><span class="token function">mount</
 <p><a href="https://cn.vuejs.org/guide/quick-start.html" target="_blank" rel="noopener noreferrer">安装</a></p>
 <p>尝试 Vue.js 最简单的方法是使用 <a href="https://sfc.vuejs.org/" target="_blank" rel="noopener noreferrer">SFC Playground</a>。您可以在浏览器新标签页中打开它，跟着例子自己进行一些尝试。</p>
 <p>当然，由于大多数浏览器都支持 ES Module，你可以直接导入 Vue:</p>
-<div class="language-html line-numbers-mode" data-ext="html" data-title="html"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>{{ message }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<div class="language-html" data-ext="html" data-title="html"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>app<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>{{ message }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>module<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
   <span class="token keyword">import</span> <span class="token punctuation">{</span>
@@ -235,7 +235,7 @@ app2<span class="token punctuation">.</span><span class="token function">mount</
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">mount</span><span class="token punctuation">(</span><span class="token string">"#app"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container warning">
+</code></pre></div><div class="hint-container warning">
 <p class="hint-container-title">注意</p>
 <p><code>vue-cli</code> 已经过时，不建议在新项目中使用，请使用 <code>vite</code></p>
 </div>
@@ -256,7 +256,7 @@ app2<span class="token punctuation">.</span><span class="token function">mount</
     <summary type="html"><![CDATA[<h2>环境准备</h2>
 <h3>VS Code 安装</h3>
 <ul>
-<li><a href="/software/vscode/install.html" target="blank">安装 VS Code</a></li>
+<li><a href="/software/vscode/install.html" target="_blank">安装 VS Code</a></li>
 </ul>
 <h4>开发指南</h4>
 <ol>
@@ -277,7 +277,7 @@ app2<span class="token punctuation">.</span><span class="token function">mount</
     <content type="html"><![CDATA[<h2>环境准备</h2>
 <h3>VS Code 安装</h3>
 <ul>
-<li><a href="/software/vscode/install.html" target="blank">安装 VS Code</a></li>
+<li><a href="/software/vscode/install.html" target="_blank">安装 VS Code</a></li>
 </ul>
 <h4>开发指南</h4>
 <ol>
@@ -297,16 +297,16 @@ app2<span class="token punctuation">.</span><span class="token function">mount</
 </ol>
 <h3>Git 安装</h3>
 <ul>
-<li><a href="/software/git/install.html" target="blank">安装 Git</a></li>
+<li><a href="/software/git/install.html" target="_blank">安装 Git</a></li>
 </ul>
 <h3>Node.js 环境安装</h3>
 <p>请先安装 Node.js 并将 npm 与 Node.js 添加至 path。</p>
 <ul>
 <li>
-<p><a href="/code/node-js/install.html" target="blank">安装 Node.js</a></p>
+<p><a href="/code/node-js/install.html" target="_blank">安装 Node.js</a></p>
 </li>
 <li>
-<p><a href="/code/windows/env-variable.html" target="blank">添加到 path</a></p>
+<p><a href="/code/windows/env-variable.html" target="_blank">添加到 path</a></p>
 </li>
 </ul>
 <h2>开发工具安装</h2>
@@ -326,7 +326,7 @@ app2<span class="token punctuation">.</span><span class="token function">mount</
     <updated>2024-01-25T17:47:26.000Z</updated>
     <summary type="html"><![CDATA[<h2>介绍</h2>
 <p>Vue 的单文件组件 (即 <code>*.vue</code> 文件，简称 <strong>SFC</strong>) 是一种特殊的文件格式，使我们能够将一个 Vue 组件的模板、逻辑与样式封装在单个文件中。下面是一个单文件组件的示例：</p>
-<div class="language-vue line-numbers-mode" data-ext="vue" data-title="vue"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<div class="language-vue" data-ext="vue" data-title="vue"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
   <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">{</span>
@@ -346,10 +346,10 @@ app2<span class="token punctuation">.</span><span class="token function">mount</
   <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></summary>
+</code></pre></div>]]></summary>
     <content type="html"><![CDATA[<h2>介绍</h2>
 <p>Vue 的单文件组件 (即 <code>*.vue</code> 文件，简称 <strong>SFC</strong>) 是一种特殊的文件格式，使我们能够将一个 Vue 组件的模板、逻辑与样式封装在单个文件中。下面是一个单文件组件的示例：</p>
-<div class="language-vue line-numbers-mode" data-ext="vue" data-title="vue"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<div class="language-vue" data-ext="vue" data-title="vue"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
   <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">{</span>
@@ -369,12 +369,12 @@ app2<span class="token punctuation">.</span><span class="token function">mount</
   <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如你所见，Vue 的单文件组件是 HTML、CSS 和 JavaScript 三种元素的自然延伸。<code>&lt;template&gt;</code>、<code>&lt;script&gt;</code> 和 <code>&lt;style&gt;</code> 三个块在同一个文件中封装、组合了组件的视图、逻辑和样式。</p>
+</code></pre></div><p>如你所见，Vue 的单文件组件是 HTML、CSS 和 JavaScript 三种元素的自然延伸。<code>&lt;template&gt;</code>、<code>&lt;script&gt;</code> 和 <code>&lt;style&gt;</code> 三个块在同一个文件中封装、组合了组件的视图、逻辑和样式。</p>
 <h2>总览</h2>
 <h2>总览 {#overview}</h2>
 <p>一个 Vue 单文件组件 (SFC)，通常使用 <code>*.vue</code> 作为文件扩展名，它是一种使用了类似 HTML 语法的自定义文件格式，用于定义 Vue 组件。一个 Vue 单文件组件在语法上是兼容 HTML 的。</p>
 <p>每一个 <code>*.vue</code> 文件都由三种顶层语块构成：<code>&lt;template&gt;</code>、<code>&lt;script&gt;</code> 和 <code>&lt;style&gt;</code>，以及一些其他的自定义块：</p>
-<div class="language-vue line-numbers-mode" data-ext="vue" data-title="vue"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+<div class="language-vue" data-ext="vue" data-title="vue"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>{{ msg }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
 
@@ -397,7 +397,7 @@ app2<span class="token punctuation">.</span><span class="token function">mount</
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>custom1</span><span class="token punctuation">&gt;</span></span>
   This could be e.g. documentation for the component.
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>custom1</span><span class="token punctuation">&gt;</span></span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>相应语言块 {#language-blocks}</h2>
+</code></pre></div><h2>相应语言块 {#language-blocks}</h2>
 <h3><code>&lt;template&gt;</code> {#template}</h3>
 <ul>
 <li>
@@ -410,13 +410,13 @@ app2<span class="token punctuation">.</span><span class="token function">mount</
 <h3><code>&lt;script&gt;</code> {#script}</h3>
 <ul>
 <li>
-<p>每个 <code>*.vue</code> 文件最多可以包含一个 <code>&lt;script&gt;</code> 块。(使用 <a href="/api/sfc-script-setup.html" target="blank"><code>&lt;script setup&gt;</code></a> 的情况除外)</p>
+<p>每个 <code>*.vue</code> 文件最多可以包含一个 <code>&lt;script&gt;</code> 块。(使用 <a href="/api/sfc-script-setup.html" target="_blank"><code>&lt;script setup&gt;</code></a> 的情况除外)</p>
 </li>
 <li>
 <p>这个脚本代码块将作为 ES 模块执行。</p>
 </li>
 <li>
-<p><strong>默认导出</strong>应该是 Vue 的组件选项对象，可以是一个对象字面量或是 <a href="/api/general.html#definecomponent" target="blank">defineComponent</a> 函数的返回值。</p>
+<p><strong>默认导出</strong>应该是 Vue 的组件选项对象，可以是一个对象字面量或是 <a href="/api/general.html#definecomponent" target="_blank">defineComponent</a> 函数的返回值。</p>
 </li>
 </ul>
 <h3><code>&lt;script setup&gt;</code> {#script-setup}</h3>
@@ -444,7 +444,7 @@ app2<span class="token punctuation">.</span><span class="token function">mount</
 <li><a href="https://github.com/wheatjs/vite-plugin-vue-gql" target="_blank" rel="noopener noreferrer">vite-plugin-vue-gql：<code>&lt;gql&gt;</code></a></li>
 <li><a href="https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n#i18n-custom-block" target="_blank" rel="noopener noreferrer">vue-i18n：<code>&lt;i18n&gt;</code></a></li>
 </ul>
-<p>自定义块的处理需要依赖工具链。如果你想要在构建中集成你的自定义语块，请参见<a href="/guide/scaling-up/tooling.html#sfc-custom-block-integrations" target="blank">相关工具链指南</a>获取更多细节。</p>
+<p>自定义块的处理需要依赖工具链。如果你想要在构建中集成你的自定义语块，请参见<a href="/guide/scaling-up/tooling.html#sfc-custom-block-integrations" target="_blank">相关工具链指南</a>获取更多细节。</p>
 <h2>自动名称推导 {#automatic-name-inference}</h2>
 <p>SFC 在以下场景中会根据<strong>文件名</strong>自动推导其组件名：</p>
 <ul>
@@ -458,7 +458,7 @@ app2<span class="token punctuation">.</span><span class="token function">mount</
   // use TypeScript
 &lt;/script&gt;
 </code></pre></div><p><code>lang</code> 在任意块上都能使用，比如我们可以在 <code>&lt;style&gt;</code> 标签上使用 <a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer">SASS</a> 或是 <code>&lt;template&gt;</code> 上使用 <a href="https://pugjs.org/api/getting-started.html" target="_blank" rel="noopener noreferrer">Pug</a>：</p>
-<div class="language-vue-html line-numbers-mode" data-ext="vue-html" data-title="vue-html"><pre class="language-vue-html"><code>&lt;template lang="pug"&gt;
+<div class="language-vue-html" data-ext="vue-html" data-title="vue-html"><pre class="language-vue-html"><code>&lt;template lang="pug"&gt;
 p {{ msg }}
 &lt;/template&gt;
 
@@ -468,7 +468,7 @@ p {{ msg }}
     color: $primary-color;
   }
 &lt;/style&gt;
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>注意对各种不同的预处理的集成会导致工具链的不同，你应该查看相应的工具链文档了解细节：</p>
+</code></pre></div><p>注意对各种不同的预处理的集成会导致工具链的不同，你应该查看相应的工具链文档了解细节：</p>
 <ul>
 <li><a href="https://vitejs.dev/guide/features.html#css-pre-processors" target="_blank" rel="noopener noreferrer">Vite</a></li>
 <li><a href="https://cli.vuejs.org/guide/css.html#pre-processors" target="_blank" rel="noopener noreferrer">Vue CLI</a></li>
@@ -738,7 +738,7 @@ p {{ msg }}
 <p>外部化应用资源后，您便可使用在项目 R 类中生成的资源 ID 来访问这些资源。本文档会介绍如何对 Android 项目中的资源进行分组，如何为特定的设备配置提供备用资源，以及如何从您的应用代码或其他 XML 文件访问这些资源。</p>
 <h2>分组资源类型</h2>
 <p>您应将各类资源放入项目 <code>res/</code> 目录的特定子目录中。例如，以下是一个简单项目的文件层次结构:</p>
-<div class="language-text line-numbers-mode" data-ext="text" data-title="text"><pre class="language-text"><code>MyProject/
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>MyProject/
   src/
     MyActivity.java
   res/
@@ -751,7 +751,7 @@ p {{ msg }}
       icon.png
     values/
       strings.xml
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如此示例所示，<code>res/</code> 目录包含所有资源(在子目录中): 一个图像资源、两个布局资源、启动器图标的 <code>mipmap/</code> 目录以及一个字符串资源文件。资源目录名称非常重要，具体说明请见表 1。</p>
+</code></pre></div><p>如此示例所示，<code>res/</code> 目录包含所有资源(在子目录中): 一个图像资源、两个布局资源、启动器图标的 <code>mipmap/</code> 目录以及一个字符串资源文件。资源目录名称非常重要，具体说明请见表 1。</p>
 <p>表 1. 项目 <code>res/</code> 目录中支持的资源目录。</p>
 <p>| 目录      | 资源类型                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |</p>
@@ -1249,31 +1249,31 @@ p {{ msg }}
     <summary type="html"><![CDATA[<h2>定义列表</h2>
 <ul>
 <li>
-<p><a href="/code/website/definition/uri.html" target="blank">URI 统一资源标识符</a></p>
+<p><a href="/code/website/definition/uri.html" target="_blank">URI 统一资源标识符</a></p>
 </li>
 <li>
-<p><a href="/code/website/definition/url.html" target="blank">URL 统一资源定位符</a></p>
+<p><a href="/code/website/definition/url.html" target="_blank">URL 统一资源定位符</a></p>
 </li>
 <li>
-<p><a href="/code/website/definition/seo.html" target="blank">SEO 搜索引擎优化</a></p>
+<p><a href="/code/website/definition/seo.html" target="_blank">SEO 搜索引擎优化</a></p>
 </li>
 <li>
-<p><a href="/code/website/definition/mime.html" target="blank">MIME Type 媒体类型</a></p>
+<p><a href="/code/website/definition/mime.html" target="_blank">MIME Type 媒体类型</a></p>
 </li>
 </ul>]]></summary>
     <content type="html"><![CDATA[<h2>定义列表</h2>
 <ul>
 <li>
-<p><a href="/code/website/definition/uri.html" target="blank">URI 统一资源标识符</a></p>
+<p><a href="/code/website/definition/uri.html" target="_blank">URI 统一资源标识符</a></p>
 </li>
 <li>
-<p><a href="/code/website/definition/url.html" target="blank">URL 统一资源定位符</a></p>
+<p><a href="/code/website/definition/url.html" target="_blank">URL 统一资源定位符</a></p>
 </li>
 <li>
-<p><a href="/code/website/definition/seo.html" target="blank">SEO 搜索引擎优化</a></p>
+<p><a href="/code/website/definition/seo.html" target="_blank">SEO 搜索引擎优化</a></p>
 </li>
 <li>
-<p><a href="/code/website/definition/mime.html" target="blank">MIME Type 媒体类型</a></p>
+<p><a href="/code/website/definition/mime.html" target="_blank">MIME Type 媒体类型</a></p>
 </li>
 </ul>
 ]]></content>
@@ -1479,7 +1479,7 @@ p {{ msg }}
 <p><strong>统一资源定位符</strong>(英语: Uniform Resource Locator，缩写: URL；或称统一资源定位器、定位地址、URL 地址，俗称网页地址或简称网址)是因特网上标准的资源的地址(Address)，如同在网络上的门牌。</p>
 <div class="hint-container info">
 <p class="hint-container-title">相关信息</p>
-<p>更多详情请见 <a href="/code/website/definition/url.html" target="blank">URL</a></p>
+<p>更多详情请见 <a href="/code/website/definition/url.html" target="_blank">URL</a></p>
 </div>
 <h3>关系</h3>
 <figure><figcaption>URL方案分类图</figcaption></figure>
@@ -1493,7 +1493,7 @@ URI 可被视为定位符(URL)，名称(URN)或两者兼备。统一资源名(UR
 <p>URL 是一种 URI，它标识一个互联网资源，并指定对其进行操作或获取该资源的方法。可能通过对主要访问手段的描述，也可能通过网络“位置”进行标识。例如，<a href="http://www.wikipedia.org/" target="_blank" rel="noopener noreferrer">http://www.wikipedia.org/</a> 这个 URL，标识一个特定资源(首页)并表示该资源的某种形式(例如以编码字符表示的，首页的 HTML 代码)是可以通过 HTTP 协议从 <code>www.wikipedia.org</code> 这个网络主机获得的。URN 是基于某名字空间通过名称指定资源的 URI。人们可以通过 URN 来指出某个资源，而无需指出其位置和获得方式。资源无需是基于互联网的。例如，URN <code>urn:ISBN 0-395-36341-1</code> 指定标识系统(即国际标准书号 ISBN)和某资源在该系统中的唯一表示的 URI。它可以允许人们在不指出其位置和获得方式的情况下谈论这本书。</p>
 <p>技术刊物，特别是 IETF 和 W3C 发布的标准中，通常不再使用“URL”这一术语，因为很少需要区别 URL 和 URI。但是，在非技术文献和万维网软件中，URL 这一术语仍被广泛使用。此外，术语“网址”(没有正式定义)在非技术文献中时常作为 URL 或 URI 的同义词出现，虽然往往其指代的只是“http”和“https”协议。</p>
 <h2>文法格式</h2>
-<div class="language-text line-numbers-mode" data-ext="text" data-title="text"><pre class="language-text"><code>                    hierarchical part
+<div class="language-text" data-ext="text" data-title="text"><pre class="language-text"><code>                    hierarchical part
         ┌───────────────────┴─────────────────────┐
                     authority               path
         ┌───────────────┴───────────────┐┌───┴────┐
@@ -1504,7 +1504,7 @@ scheme  user information     host     port                  query         fragme
   urn:example:mammal:monotreme:echidna
   └┬┘ └──────────────┬───────────────┘
 scheme              path
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content>
+</code></pre></div>]]></content>
     <category term="HTML"/>
     <published>2019-09-02T00:00:00.000Z</published>
   </entry>
@@ -1576,12 +1576,12 @@ scheme              path
     <id>https://mister-hope.com/note/flutter/</id>
     <link href="https://mister-hope.com/note/flutter/"/>
     <updated>2024-01-25T17:47:26.000Z</updated>
-    <summary type="html"><![CDATA[<h1>Update Flutter Project Deps</h1>
+    <summary type="html"><![CDATA[
 <h2>Gradle</h2>
 <p>Versions can be found here: <a href="https://gradle.org/releases/" target="_blank" rel="noopener noreferrer">https://gradle.org/releases/</a></p>
 <h2>Kotlin Plugin</h2>
 <p>Versions can be found here: <a href="https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm" target="_blank" rel="noopener noreferrer">https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm</a></p>]]></summary>
-    <content type="html"><![CDATA[<h1>Update Flutter Project Deps</h1>
+    <content type="html"><![CDATA[
 <h2>Gradle</h2>
 <p>Versions can be found here: <a href="https://gradle.org/releases/" target="_blank" rel="noopener noreferrer">https://gradle.org/releases/</a></p>
 <h2>Kotlin Plugin</h2>
@@ -1635,7 +1635,7 @@ systemd=true
 <div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code>ssh-keygen <span class="token parameter variable">-t</span> rsa <span class="token parameter variable">-C</span> <span class="token string">"mister-hope@outlook.com"</span>
 </code></pre></div><h3>使用 Windows 代理</h3>
 <p>可以在 <code>.bashrc</code> 中加入以下内容:</p>
-<div class="language-bash line-numbers-mode" data-ext="sh" data-title="sh"><pre class="language-bash"><code><span class="token comment"># add for proxy</span>
+<div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code><span class="token comment"># add for proxy</span>
 <span class="token builtin class-name">export</span> <span class="token assign-left variable">hostIP</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">ip</span> route <span class="token operator">|</span> <span class="token function">grep</span> default <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">'{print $3}'</span><span class="token variable">)</span></span>
 <span class="token builtin class-name">export</span> <span class="token assign-left variable">socks5Port</span><span class="token operator">=</span><span class="token number">10810</span>
 <span class="token builtin class-name">export</span> <span class="token assign-left variable">httpPort</span><span class="token operator">=</span><span class="token number">10811</span>
@@ -1677,7 +1677,7 @@ Host ssh.github.com
   sudo sed -i -e '</span>/Acquire::http::Proxy/d<span class="token string">' /etc/apt/apt.conf.d/proxy.conf;
   sudo sed -i -e '</span>/Acquire::https::Proxy/d<span class="token string">' /etc/apt/apt.conf.d/proxy.conf;
 '</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这样就可以快速地使用 proxy 和 unproxy 命令。</p>
+</code></pre></div><p>这样就可以快速地使用 proxy 和 unproxy 命令。</p>
 <h3>安装 nvm 和 Node.js</h3>
 <div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code><span class="token function">curl</span> -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh <span class="token operator">|</span> <span class="token function">bash</span>
 </code></pre></div><ol>
@@ -1721,11 +1721,11 @@ Host ssh.github.com
 <p>上述做法仅对当前终端有效，如果需要永久生效，可以将上述命令添加到系统环境变量 (Windows) 或 <code>~/.bashrc</code> (Linux) 中。</p>
 <div class="hint-container tip">
 <p class="hint-container-title">提示</p>
-<p><a href="/code/windows/env-variable.html" target="blank">Windows 添加环境变量</a></p>
+<p><a href="/code/windows/env-variable.html" target="_blank">Windows 添加环境变量</a></p>
 </div>
 <h2>SSH 配置</h2>
 <p>如果你在使用 22 端口通过 SSH 使用 Git，那么你需要在用户目录下的 <code>.ssh</code> 目录新建 <code>config</code> 文件，并输入以下内容:</p>
-<div class="language-conf line-numbers-mode" data-ext="conf" data-title="conf"><pre class="language-conf"><code>Host github.com
+<div class="language-conf" data-ext="conf" data-title="conf"><pre class="language-conf"><code>Host github.com
   User git
   Port 22
   Hostname github.com
@@ -1749,7 +1749,7 @@ Host ssh.github.com
   # Windows 可以改为 Git 安装目录下的 connect，如
   # ProxyCommand "C:\Program Files\Git\mingw64\bin\connect" -S 127.0.0.1:10808 -a none %h %p
 
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="hint-container tip">
+</code></pre></div><div class="hint-container tip">
 <p class="hint-container-title">提示</p>
 <p>如果在 WSL 使用，获取 Windows 的 IP 地址命令为 <code>ip route | grep default | awk '{print $3}'</code>。</p>
 <p>特别注意，如不进行额外配置，每次重启后主机地址都会发生变化。</p>
@@ -1976,7 +1976,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>所以，Node.js 利用 JavaScript 的函数式编程的特性，轻而易举地实现了模块的隔离。</p>
 <p>但是，模块的输出 <code>module.exports</code> 怎么实现?</p>
 <p>这个也很容易实现，Node.js 可以先准备一个对象 <code>module</code>:</p>
-<div class="language-javascript line-numbers-mode" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token comment">// 准备module对象:</span>
+<div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token comment">// 准备module对象:</span>
 <span class="token keyword">const</span> module <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token literal-property property">id</span><span class="token operator">:</span> <span class="token string">"hello"</span><span class="token punctuation">,</span>
   <span class="token literal-property property">exports</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -1994,7 +1994,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token keyword">const</span> exported <span class="token operator">=</span> <span class="token function">load</span><span class="token punctuation">(</span>module<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">// 保存module:</span>
 <span class="token function">save</span><span class="token punctuation">(</span>module<span class="token punctuation">,</span> exported<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>可见，变量 module 是 Node.js 在加载 js 文件前准备的一个变量，并将其传入加载函数，我们在 <code>hello.js</code> 中可以直接使用变量 <code>module</code> 原因就在于它实际上是函数的一个参数:</p>
+</code></pre></div><p>可见，变量 module 是 Node.js 在加载 js 文件前准备的一个变量，并将其传入加载函数，我们在 <code>hello.js</code> 中可以直接使用变量 <code>module</code> 原因就在于它实际上是函数的一个参数:</p>
 <div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> greet<span class="token punctuation">;</span>
 </code></pre></div><p>通过把参数 <code>module</code> 传递给 <code>load()</code> 函数，<code>hello.js</code> 就顺利地把一个变量传递给了 Node.js 执行环境，Node.js 会把 module 变量保存到某个地方。</p>
 <p>由于 Node.js 保存了所有导入的 module，当我们用 <code>require()</code> 获取 module 时，Node.js 找到对应的 module，把这个 module 的 <code>exports</code> 变量返回，这样，另一个模块就顺利拿到了模块的输出:</p>
@@ -2003,7 +2003,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <h2>module.exports vs exports</h2>
 <p>很多时候，您会看到，在 Node.js 环境中，有两种方法可以在一个模块中输出变量:</p>
 <p>方法一: 对 module.exports 赋值:</p>
-<div class="language-javascript line-numbers-mode" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token comment">// hello.js</span>
+<div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token comment">// hello.js</span>
 
 <span class="token keyword">function</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Hello, world!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -2017,8 +2017,8 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   <span class="token literal-property property">hello</span><span class="token operator">:</span> hello<span class="token punctuation">,</span>
   <span class="token literal-property property">greet</span><span class="token operator">:</span> greet<span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>方法二: 直接使用 exports:</p>
-<div class="language-javascript line-numbers-mode" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token comment">// hello.js</span>
+</code></pre></div><p>方法二: 直接使用 exports:</p>
+<div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token comment">// hello.js</span>
 
 <span class="token keyword">function</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Hello, world!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -2034,7 +2034,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 
 exports<span class="token punctuation">.</span>hello <span class="token operator">=</span> hello<span class="token punctuation">;</span>
 exports<span class="token punctuation">.</span>greet <span class="token operator">=</span> greet<span class="token punctuation">;</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>但是您不可以直接对 exports 赋值:</p>
+</code></pre></div><p>但是您不可以直接对 exports 赋值:</p>
 <div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token comment">// 代码可以执行，但是模块并没有输出任何变量:</span>
 exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token literal-property property">hello</span><span class="token operator">:</span> hello<span class="token punctuation">,</span>
@@ -2171,14 +2171,14 @@ module<span class="token punctuation">.</span>exports<span class="token punctuat
     <updated>2024-01-25T17:47:26.000Z</updated>
     <summary type="html"><![CDATA[<h2>目录</h2>
 <ul>
-<li><a href="/software/mysql/intro.html" target="blank">介绍</a></li>
-<li><a href="/software/mysql/compare.html" target="blank">5.7 版本与 8 的比较</a></li>
+<li><a href="/software/mysql/intro.html" target="_blank">介绍</a></li>
+<li><a href="/software/mysql/compare.html" target="_blank">5.7 版本与 8 的比较</a></li>
 </ul>
 ]]></summary>
     <content type="html"><![CDATA[<h2>目录</h2>
 <ul>
-<li><a href="/software/mysql/intro.html" target="blank">介绍</a></li>
-<li><a href="/software/mysql/compare.html" target="blank">5.7 版本与 8 的比较</a></li>
+<li><a href="/software/mysql/intro.html" target="_blank">介绍</a></li>
+<li><a href="/software/mysql/compare.html" target="_blank">5.7 版本与 8 的比较</a></li>
 </ul>
 ]]></content>
     <author>
@@ -2197,12 +2197,12 @@ module<span class="token punctuation">.</span>exports<span class="token punctuat
     <updated>2022-02-12T05:50:30.000Z</updated>
     <summary type="html"><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">章节过时</p>
-<p>目前，一套代码已经可以在多个浏览器上运行良好了，所以 jQuery 的意义并不大。在 Node.js 中，我们使用 <a href="/code/node-js/package/axois.html" target="blank">axios</a> 来进行请求。</p>
+<p>目前，一套代码已经可以在多个浏览器上运行良好了，所以 jQuery 的意义并不大。在 Node.js 中，我们使用 <a href="/code/node-js/package/axois.html" target="_blank">axios</a> 来进行请求。</p>
 </div>
 ]]></summary>
     <content type="html"><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">章节过时</p>
-<p>目前，一套代码已经可以在多个浏览器上运行良好了，所以 jQuery 的意义并不大。在 Node.js 中，我们使用 <a href="/code/node-js/package/axois.html" target="blank">axios</a> 来进行请求。</p>
+<p>目前，一套代码已经可以在多个浏览器上运行良好了，所以 jQuery 的意义并不大。在 Node.js 中，我们使用 <a href="/code/node-js/package/axois.html" target="_blank">axios</a> 来进行请求。</p>
 </div>
 <!-- more -->
 <p>用 JavaScript 写 Ajax 前面已经介绍过了，主要问题就是不同浏览器需要写不同代码，并且状态和错误处理写起来很麻烦。</p>
@@ -2236,7 +2236,7 @@ module<span class="token punctuation">.</span>exports<span class="token punctuat
 <span class="token comment">// 请求已经发送了</span>
 </code></pre></div><p>不过，如何用回调函数处理返回的数据和出错时的响应呢?</p>
 <p>还记得 Promise 对象吗? jQuery 的 <code>jqXHR</code> 对象类似一个 Promise 对象，我们可以用链式写法来处理各种回调:</p>
-<div class="language-javascript line-numbers-mode" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token string">"use strict"</span><span class="token punctuation">;</span>
+<div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token string">"use strict"</span><span class="token punctuation">;</span>
 
 <span class="token keyword">function</span> <span class="token function">ajaxLog</span><span class="token punctuation">(</span><span class="token parameter">s</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> txt <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#test-response-text"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -2257,7 +2257,7 @@ module<span class="token punctuation">.</span>exports<span class="token punctuat
   <span class="token punctuation">.</span><span class="token function">always</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">ajaxLog</span><span class="token punctuation">(</span><span class="token string">"请求完成: 无论成功或失败都会调用"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>get</h2>
+</code></pre></div><h2>get</h2>
 <p>对常用的 Ajax 操作，jQuery 提供了一些辅助方法。由于 GET 请求最常见，所以 jQuery 提供了 <code>get()</code> 方法，可以这么写:</p>
 <div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token keyword">const</span> jqxhr <span class="token operator">=</span> $<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"/path/to/resource"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
   <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Bob Lee"</span><span class="token punctuation">,</span>
@@ -2320,7 +2320,7 @@ module<span class="token punctuation">.</span>exports<span class="token punctuat
 </code></pre></div><p>然后，调用 <code>append()</code> 传入 HTML 片段:</p>
 <div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code>ul<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"&lt;li&gt;&lt;span&gt;Haskell&lt;/span&gt;&lt;/li&gt;"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre></div><p>除了接受字符串，<code>append()</code> 还可以传入原始的 DOM 对象，jQuery 对象和函数对象:</p>
-<div class="language-javascript line-numbers-mode" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token comment">// 创建DOM对象:</span>
+<div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token comment">// 创建DOM对象:</span>
 <span class="token keyword">const</span> ps <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"li"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 ps<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">"&lt;span&gt;Pascal&lt;/span&gt;"</span><span class="token punctuation">;</span>
 <span class="token comment">// 添加DOM对象:</span>
@@ -2333,7 +2333,7 @@ ul<span class="token punctuation">.</span><span class="token function">append</s
 ul<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">index<span class="token punctuation">,</span> html</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">return</span> <span class="token string">"&lt;li&gt;&lt;span&gt;Language - "</span> <span class="token operator">+</span> index <span class="token operator">+</span> <span class="token string">"&lt;/span&gt;&lt;/li&gt;"</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>传入函数时，要求返回一个字符串、DOM 对象或者 jQuery 对象。因为 jQuery 的 <code>append()</code> 可能作用于一组 DOM 节点，只有传入函数才能针对每个 DOM 生成不同的子节点。</p>
+</code></pre></div><p>传入函数时，要求返回一个字符串、DOM 对象或者 jQuery 对象。因为 jQuery 的 <code>append()</code> 可能作用于一组 DOM 节点，只有传入函数才能针对每个 DOM 生成不同的子节点。</p>
 <p><code>append()</code> 把 DOM 添加到最后，<code>prepend()</code> 则把 DOM 添加到最前。</p>
 <p>另外注意，如果要添加的 DOM 节点已经存在于 HTML 文档中，它会首先从文档移除，然后再添加，也就是说，用 <code>append()</code>，您可以移动一个 DOM 节点。</p>
 <p>如果要把新节点插入到指定位置，例如，JavaScript 和 Python 之间，那么，可以先定位到 JavaScript，然后用 <code>after()</code> 方法:</p>
@@ -2433,7 +2433,7 @@ a<span class="token punctuation">.</span><span class="token function">show</span
 </code></pre></div><p>注意，隐藏 DOM 节点并未改变 DOM 树的结构，它只影响 DOM 节点的显示。这和删除 DOM 节点是不同的。</p>
 <h2>获取 DOM 信息</h2>
 <p>利用 jQuery 对象的若干方法，我们直接可以获取 DOM 的高宽等信息，而无需针对不同浏览器编写特定代码:</p>
-<div class="language-javascript line-numbers-mode" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token comment">// 浏览器可视窗口大小:</span>
+<div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token comment">// 浏览器可视窗口大小:</span>
 <span class="token function">$</span><span class="token punctuation">(</span>window<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">width</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 800</span>
 <span class="token function">$</span><span class="token punctuation">(</span>window<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">height</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 600</span>
 
@@ -2447,7 +2447,7 @@ div<span class="token punctuation">.</span><span class="token function">width</s
 div<span class="token punctuation">.</span><span class="token function">height</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 300</span>
 div<span class="token punctuation">.</span><span class="token function">width</span><span class="token punctuation">(</span><span class="token number">400</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 设置 CSS 属性 width: 400px，是否生效要看 CSS 是否有效</span>
 div<span class="token punctuation">.</span><span class="token function">height</span><span class="token punctuation">(</span><span class="token string">"200px"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 设置 CSS 属性 height: 200px，是否生效要看 CSS 是否有效</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code>attr()</code> 和 <code>removeAttr()</code> 方法用于操作 DOM 节点的属性:</p>
+</code></pre></div><p><code>attr()</code> 和 <code>removeAttr()</code> 方法用于操作 DOM 节点的属性:</p>
 <div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token comment">// &lt;div id="test-div" name="Test" start="1"&gt;...&lt;/div&gt;</span>
 <span class="token keyword">const</span> div <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#test-div"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 div<span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"data"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// undefined, 属性不存在</span>
@@ -2469,7 +2469,7 @@ radio<span class="token punctuation">.</span><span class="token function">is</sp
 </code></pre></div><p>类似的属性还有 <code>selected</code>，处理时最好用 <code>is(':selected')</code>。</p>
 <h2>操作表单</h2>
 <p>对于表单元素，jQuery 对象统一提供 <code>val()</code> 方法获取和设置对应的 <code>value</code> 属性:</p>
-<div class="language-javascript line-numbers-mode" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token comment">/*
+<div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token comment">/*
     &lt;input id="test-input" name="email" value=""&gt;
     &lt;select id="test-select" name="city"&gt;
         &lt;option value="BJ" selected&gt;Beijing&lt;/option&gt;
@@ -2490,7 +2490,7 @@ select<span class="token punctuation">.</span><span class="token function">val</
 
 textarea<span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 'Hello'</span>
 textarea<span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token string">"Hi"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 文本区域已更新为 'Hi'</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>可见，一个 <code>val()</code> 就统一了各种输入框的取值和赋值的问题。</p>
+</code></pre></div><p>可见，一个 <code>val()</code> 就统一了各种输入框的取值和赋值的问题。</p>
 ]]></content>
     <category term="jQuery"/>
     <published>2019-11-03T00:00:00.000Z</published>
@@ -2510,7 +2510,7 @@ textarea<span class="token punctuation">.</span><span class="token function">val
 <p>最早大规模使用 Ajax 的就是 Gmail，Gmail 的页面在首次加载后，剩下的所有数据都依赖于 Ajax 来更新。</p>
 <p>用 JavaScript 写一个完整的 Ajax 代码并不复杂，但是需要注意: Ajax 请求是异步执行的，也就是说，要通过回调函数获得响应。</p>
 <p>在现代浏览器上写 Ajax 主要依靠 XMLHttpRequest 对象:</p>
-<div class="language-javascript line-numbers-mode" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token string">"use strict"</span><span class="token punctuation">;</span>
+<div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token string">"use strict"</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">success</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">text</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> textarea <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#test-response-text"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -2544,8 +2544,8 @@ request<span class="token punctuation">.</span><span class="token function">open
 request<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"请求已发送，请等待响应..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>对于低版本的 IE，需要换一个 ActiveXObject 对象:</p>
-<div class="language-javascript line-numbers-mode" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token string">"use strict"</span><span class="token punctuation">;</span>
+</code></pre></div><p>对于低版本的 IE，需要换一个 ActiveXObject 对象:</p>
+<div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token string">"use strict"</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> <span class="token function-variable function">success</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">text</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> textarea <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"#test-ie-response-text"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -2579,7 +2579,7 @@ request<span class="token punctuation">.</span><span class="token function">open
 request<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"请求已发送，请等待响应..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果您想把标准写法和 IE 写法混在一起，可以这么写:</p>
+</code></pre></div><p>如果您想把标准写法和 IE 写法混在一起，可以这么写:</p>
 <div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token keyword">const</span> request<span class="token punctuation">;</span>
 
 <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>XMLHttpRequest<span class="token punctuation">)</span> request <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -2718,7 +2718,7 @@ request<span class="token punctuation">.</span><span class="token function">send
 <p>在历史上，使用的方法是 <code>document.getElementById()</code> 和 <code>document.getElementsByTagName()</code>，以及 CSS 选择器 <code>document.getElementsByClassName()</code>。</p>
 <p>由于 ID 在 HTML 文档中是唯一的，所以 <code>document.getElementById()</code> 可以直接定位唯一的一个 DOM 节点。<code>document.getElementsByTagName()</code> 和 <code>document.getElementsByClassName()</code> 总是返回一组 DOM 节点。要精确地选择 DOM，可以先定位父节点，再从父节点开始选择，以缩小范围。</p>
 <p>例如:</p>
-<div class="language-javascript line-numbers-mode" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token comment">// 返回ID为 'test' 的节点:</span>
+<div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token comment">// 返回ID为 'test' 的节点:</span>
 <span class="token keyword">const</span> test <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"test"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">// 先定位ID为'test-table'的节点，再返回其内部所有tr节点:</span>
@@ -2733,7 +2733,7 @@ request<span class="token punctuation">.</span><span class="token function">send
 <span class="token comment">// 获取节点 test 下第一个、最后一个子节点:</span>
 <span class="token keyword">const</span> first <span class="token operator">=</span> test<span class="token punctuation">.</span>firstElementChild<span class="token punctuation">;</span>
 <span class="token keyword">const</span> last <span class="token operator">=</span> test<span class="token punctuation">.</span>lastElementChild<span class="token punctuation">;</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div>
+</code></pre></div></div>
 <p>严格地讲，我们这里的 DOM 节点是指 <code>Element</code>，但是 DOM 节点实际上是 <code>Node</code>，在 HTML 中，<code>Node</code> 包括 <code>Element</code>、<code>Comment</code>、<code>CDATA_SECTION</code> 等很多种，以及根节点 <code>Document</code> 类型，但是，绝大多数时候我们只关心 <code>Element</code>，也就是实际控制页面结构的 <code>Node</code>，其他类型的 <code>Node</code> 忽略即可。根节点 Document 已经自动绑定为全局变量 <code>document</code>。</p>
 <h2>更新 DOM</h2>
 <p>拿到一个 DOM 节点后，我们可以对它进行更新。</p>
@@ -2881,7 +2881,6 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <id>https://mister-hope.com/about/</id>
     <link href="https://mister-hope.com/about/"/>
     <updated>2024-01-25T17:47:26.000Z</updated>
-    <summary type="text">slidestart 基本信息 性别: 男; 年龄: 25; 婚姻情况: 未婚; 单身: 否; 爱好: 钓鱼、国际象棋、花体英文、羽毛球、编程; 性格比较开朗随和，热爱帮助他人，喜欢平时写一些开源项目。 学历经历 本科东北师范大学就读物理学; 现在在东北师范大学就读理论物理硕士; 暂无特别突出的科研成果; 联系方式 你可以通过我的 QQ 1178522...</summary>
     <published>2022-01-07T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2897,64 +2896,64 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <h3>基础</h3>
 <ul>
 <li>
-<p><a href="/code/basic/" target="blank">基础知识</a></p>
+<p><a href="/code/basic/" target="_blank">基础知识</a></p>
 </li>
 <li>
-<p><a href="/code/windows/" target="blank">Windows 基础</a></p>
+<p><a href="/code/windows/" target="_blank">Windows 基础</a></p>
 </li>
 <li>
-<p><a href="/code/github/" target="blank">GitHub 介绍</a></p>
+<p><a href="/code/github/" target="_blank">GitHub 介绍</a></p>
 </li>
 </ul>
 <h3>前端开发</h3>
 <ul>
 <li>
-<p><a href="/code/website/" target="blank">网站相关</a></p>
+<p><a href="/code/website/" target="_blank">网站相关</a></p>
 </li>
 <li>
-<p><a href="/code/vue/" target="blank">Vue 相关</a></p>
+<p><a href="/code/vue/" target="_blank">Vue 相关</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/" target="blank">小程序教程</a></p>
+<p><a href="/code/mini-app/" target="_blank">小程序教程</a></p>
 </li>
 <li>
-<p><a href="/code/node-js/" target="blank">Node.js</a></p>
+<p><a href="/code/node-js/" target="_blank">Node.js</a></p>
 </li>
 </ul>
 <h3>代码学习</h3>
 <ul>
 <li>
-<p><a href="/code/language/" target="blank">代码学习</a></p>
+<p><a href="/code/language/" target="_blank">代码学习</a></p>
 </li>
 <li>
-<p><a href="/code/language/learning.html" target="blank">如何学习一门语言</a></p>
+<p><a href="/code/language/learning.html" target="_blank">如何学习一门语言</a></p>
 </li>
 <li>
-<p><a href="/code/language/js/" target="blank">JavaScript 教程</a></p>
+<p><a href="/code/language/js/" target="_blank">JavaScript 教程</a></p>
 </li>
 <li>
-<p><a href="/code/language/typescript/" target="blank">TypeScript 教程</a></p>
+<p><a href="/code/language/typescript/" target="_blank">TypeScript 教程</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/" target="blank">Python 教程</a> (编写中...)</p>
+<p><a href="/code/language/python/" target="_blank">Python 教程</a> (编写中...)</p>
 </li>
 <li>
-<p><a href="/code/language/markdown/" target="blank">Markdown 教程</a></p>
+<p><a href="/code/language/markdown/" target="_blank">Markdown 教程</a></p>
 </li>
 <li>
-<p><a href="/code/language/yaml/" target="blank">YAML 教程</a></p>
+<p><a href="/code/language/yaml/" target="_blank">YAML 教程</a></p>
 </li>
 <li>
-<p><a href="/code/language/json/" target="blank">JSON 教程</a></p>
+<p><a href="/code/language/json/" target="_blank">JSON 教程</a></p>
 </li>
 </ul>
 <h3>APP</h3>
 <ul>
-<li><a href="/code/android/" target="blank">Android 开发</a></li>
+<li><a href="/code/android/" target="_blank">Android 开发</a></li>
 </ul>
 <h3>后端开发</h3>
 <ul>
-<li><a href="/code/back-end/" target="blank">后端开发</a></li>
+<li><a href="/code/back-end/" target="_blank">后端开发</a></li>
 </ul>
 <h3>代码学习网站</h3>
 <h3>优质网站</h3>
@@ -3000,10 +2999,10 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <h2>相关教程</h2>
 <ul>
 <li>
-<p><a href="/design/icon/" target="blank">图标设计教程</a></p>
+<p><a href="/design/icon/" target="_blank">图标设计教程</a></p>
 </li>
 <li>
-<p><a href="/design/navigation/" target="blank">导航设计教程</a></p>
+<p><a href="/design/navigation/" target="_blank">导航设计教程</a></p>
 </li>
 </ul>
 <h2>配色</h2>
@@ -3024,7 +3023,7 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <p><a href="https://developer.apple.com/design/" target="_blank" rel="noopener noreferrer">Apple 设计</a></p>
 </li>
 <li>
-<p><a href="/design/APP.html" target="blank">App 组件设计规范</a></p>
+<p><a href="/design/APP.html" target="_blank">App 组件设计规范</a></p>
 </li>
 </ul>
 <h2>网站组件</h2>
@@ -3069,65 +3068,65 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <summary type="html"><![CDATA[<h2>Linux 教程</h2>
 <ul>
 <li>
-<p><a href="/linux/intro/" target="blank">Linux 介绍</a></p>
+<p><a href="/linux/intro/" target="_blank">Linux 介绍</a></p>
 <ul>
 <li>
-<p><a href="/linux/intro/intro.html" target="blank">Linux 介绍</a></p>
+<p><a href="/linux/intro/intro.html" target="_blank">Linux 介绍</a></p>
 </li>
 <li>
-<p><a href="/linux/intro/history.html" target="blank">Linux 历史</a></p>
+<p><a href="/linux/intro/history.html" target="_blank">Linux 历史</a></p>
 </li>
 <li>
-<p><a href="/linux/intro/language.html" target="blank">Linux 编写语言</a></p>
+<p><a href="/linux/intro/language.html" target="_blank">Linux 编写语言</a></p>
 </li>
 <li>
-<p><a href="/linux/intro/advantage.html" target="blank">Linux 优势</a></p>
+<p><a href="/linux/intro/advantage.html" target="_blank">Linux 优势</a></p>
 </li>
 <li>
-<p><a href="/linux/intro/desktop.html" target="blank">Linux 桌面环境</a></p>
+<p><a href="/linux/intro/desktop.html" target="_blank">Linux 桌面环境</a></p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="/linux/file/" target="blank">Linux 文件</a></p>
+<p><a href="/linux/file/" target="_blank">Linux 文件</a></p>
 <ul>
 <li>
-<p><a href="/linux/file/file.html" target="blank">Linux 文件</a></p>
+<p><a href="/linux/file/file.html" target="_blank">Linux 文件</a></p>
 </li>
 <li>
-<p><a href="/linux/file/dir.html" target="blank">Linux 目录</a></p>
+<p><a href="/linux/file/dir.html" target="_blank">Linux 目录</a></p>
 </li>
 <li>
-<p><a href="/linux/file/mount.html" target="blank">挂载</a></p>
+<p><a href="/linux/file/mount.html" target="_blank">挂载</a></p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="/linux/command/" target="blank">Linux 命令</a></p>
+<p><a href="/linux/command/" target="_blank">Linux 命令</a></p>
 <ul>
 <li>
-<p><a href="/linux/command/command.html" target="blank">命令格式简介</a></p>
+<p><a href="/linux/command/command.html" target="_blank">命令格式简介</a></p>
 </li>
 <li>
-<p><a href="/linux/command/dir.html" target="blank">目录相关</a></p>
+<p><a href="/linux/command/dir.html" target="_blank">目录相关</a></p>
 </li>
 <li>
-<p><a href="/linux/command/file.html" target="blank">文件相关</a></p>
+<p><a href="/linux/command/file.html" target="_blank">文件相关</a></p>
 </li>
 <li>
-<p><a href="/linux/command/other.html" target="blank">其他命令</a></p>
+<p><a href="/linux/command/other.html" target="_blank">其他命令</a></p>
 </li>
 <li>
-<p><a href="/linux/command/add.html" target="blank">命令的自动补全</a></p>
+<p><a href="/linux/command/add.html" target="_blank">命令的自动补全</a></p>
 </li>
 <li>
-<p><a href="/linux/command/excu.html" target="blank">命令的执行</a></p>
+<p><a href="/linux/command/excu.html" target="_blank">命令的执行</a></p>
 </li>
 <li>
-<p><a href="/linux/command/path.html" target="blank">环境变量</a></p>
+<p><a href="/linux/command/path.html" target="_blank">环境变量</a></p>
 </li>
 <li>
-<p><a href="/linux/command/ln.html" target="blank">创建链接</a></p>
+<p><a href="/linux/command/ln.html" target="_blank">创建链接</a></p>
 </li>
 </ul>
 </li>
@@ -3135,80 +3134,80 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <content type="html"><![CDATA[<h2>Linux 教程</h2>
 <ul>
 <li>
-<p><a href="/linux/intro/" target="blank">Linux 介绍</a></p>
+<p><a href="/linux/intro/" target="_blank">Linux 介绍</a></p>
 <ul>
 <li>
-<p><a href="/linux/intro/intro.html" target="blank">Linux 介绍</a></p>
+<p><a href="/linux/intro/intro.html" target="_blank">Linux 介绍</a></p>
 </li>
 <li>
-<p><a href="/linux/intro/history.html" target="blank">Linux 历史</a></p>
+<p><a href="/linux/intro/history.html" target="_blank">Linux 历史</a></p>
 </li>
 <li>
-<p><a href="/linux/intro/language.html" target="blank">Linux 编写语言</a></p>
+<p><a href="/linux/intro/language.html" target="_blank">Linux 编写语言</a></p>
 </li>
 <li>
-<p><a href="/linux/intro/advantage.html" target="blank">Linux 优势</a></p>
+<p><a href="/linux/intro/advantage.html" target="_blank">Linux 优势</a></p>
 </li>
 <li>
-<p><a href="/linux/intro/desktop.html" target="blank">Linux 桌面环境</a></p>
+<p><a href="/linux/intro/desktop.html" target="_blank">Linux 桌面环境</a></p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="/linux/file/" target="blank">Linux 文件</a></p>
+<p><a href="/linux/file/" target="_blank">Linux 文件</a></p>
 <ul>
 <li>
-<p><a href="/linux/file/file.html" target="blank">Linux 文件</a></p>
+<p><a href="/linux/file/file.html" target="_blank">Linux 文件</a></p>
 </li>
 <li>
-<p><a href="/linux/file/dir.html" target="blank">Linux 目录</a></p>
+<p><a href="/linux/file/dir.html" target="_blank">Linux 目录</a></p>
 </li>
 <li>
-<p><a href="/linux/file/mount.html" target="blank">挂载</a></p>
+<p><a href="/linux/file/mount.html" target="_blank">挂载</a></p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="/linux/command/" target="blank">Linux 命令</a></p>
+<p><a href="/linux/command/" target="_blank">Linux 命令</a></p>
 <ul>
 <li>
-<p><a href="/linux/command/command.html" target="blank">命令格式简介</a></p>
+<p><a href="/linux/command/command.html" target="_blank">命令格式简介</a></p>
 </li>
 <li>
-<p><a href="/linux/command/dir.html" target="blank">目录相关</a></p>
+<p><a href="/linux/command/dir.html" target="_blank">目录相关</a></p>
 </li>
 <li>
-<p><a href="/linux/command/file.html" target="blank">文件相关</a></p>
+<p><a href="/linux/command/file.html" target="_blank">文件相关</a></p>
 </li>
 <li>
-<p><a href="/linux/command/other.html" target="blank">其他命令</a></p>
+<p><a href="/linux/command/other.html" target="_blank">其他命令</a></p>
 </li>
 <li>
-<p><a href="/linux/command/add.html" target="blank">命令的自动补全</a></p>
+<p><a href="/linux/command/add.html" target="_blank">命令的自动补全</a></p>
 </li>
 <li>
-<p><a href="/linux/command/excu.html" target="blank">命令的执行</a></p>
+<p><a href="/linux/command/excu.html" target="_blank">命令的执行</a></p>
 </li>
 <li>
-<p><a href="/linux/command/path.html" target="blank">环境变量</a></p>
+<p><a href="/linux/command/path.html" target="_blank">环境变量</a></p>
 </li>
 <li>
-<p><a href="/linux/command/ln.html" target="blank">创建链接</a></p>
+<p><a href="/linux/command/ln.html" target="_blank">创建链接</a></p>
 </li>
 </ul>
 </li>
 </ul>
 <h2>ubuntu</h2>
 <ul>
-<li><a href="/linux/ubuntu/" target="blank">点击前往</a></li>
+<li><a href="/linux/ubuntu/" target="_blank">点击前往</a></li>
 </ul>
 <h2>CentOS</h2>
 <ul>
-<li><a href="/linux/centos.html" target="blank">点击前往</a></li>
+<li><a href="/linux/centos.html" target="_blank">点击前往</a></li>
 </ul>
 <h2>WSL</h2>
 <ul>
-<li><a href="/linux/WSL.html" target="blank">点击前往</a></li>
+<li><a href="/linux/WSL.html" target="_blank">点击前往</a></li>
 </ul>
 ]]></content>
     <category term="Linux"/>
@@ -3229,16 +3228,16 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 </div>
 <ul>
 <li>
-<p><a href="/note/fall/catalog.html" target="blank">秋之思</a></p>
+<p><a href="/note/fall/catalog.html" target="_blank">秋之思</a></p>
 </li>
 <li>
-<p><a href="/note/winter/note.html" target="blank">冬之语</a></p>
+<p><a href="/note/winter/note.html" target="_blank">冬之语</a></p>
 </li>
 <li>
-<p><a href="/note/spring/1.html" target="blank">春之诗</a></p>
+<p><a href="/note/spring/1.html" target="_blank">春之诗</a></p>
 </li>
 <li>
-<p><a href="/note/summer/1.html" target="blank">夏之歌</a></p>
+<p><a href="/note/summer/1.html" target="_blank">夏之歌</a></p>
 </li>
 </ul>]]></summary>
     <content type="html"><![CDATA[<p>这里是 Mr.Hope 的一些随笔，后续被整理进博客中。</p>
@@ -3251,16 +3250,16 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 </div>
 <ul>
 <li>
-<p><a href="/note/fall/catalog.html" target="blank">秋之思</a></p>
+<p><a href="/note/fall/catalog.html" target="_blank">秋之思</a></p>
 </li>
 <li>
-<p><a href="/note/winter/note.html" target="blank">冬之语</a></p>
+<p><a href="/note/winter/note.html" target="_blank">冬之语</a></p>
 </li>
 <li>
-<p><a href="/note/spring/1.html" target="blank">春之诗</a></p>
+<p><a href="/note/spring/1.html" target="_blank">春之诗</a></p>
 </li>
 <li>
-<p><a href="/note/summer/1.html" target="blank">夏之歌</a></p>
+<p><a href="/note/summer/1.html" target="_blank">夏之歌</a></p>
 </li>
 </ul>
 <div class="hint-container tip">
@@ -3274,7 +3273,7 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <p>近日将其作为少年回忆，整理在博客中。</p>
 </div>
 <ul>
-<li><a href="/note/life/" target="blank">点击前往</a></li>
+<li><a href="/note/life/" target="_blank">点击前往</a></li>
 </ul>
 <h2>轻言细语</h2>
 <div class="hint-container tip">
@@ -3283,11 +3282,11 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <p>近日将其作为少年回忆，整理在博客中。</p>
 </div>
 <ul>
-<li><a href="/note/poem/" target="blank">点击前往</a></li>
+<li><a href="/note/poem/" target="_blank">点击前往</a></li>
 </ul>
 <h2>Node.js 相关</h2>
 <ul>
-<li><a href="/note/node-js/current-path.html" target="blank">current-path 相关</a></li>
+<li><a href="/note/node-js/current-path.html" target="_blank">current-path 相关</a></li>
 </ul>
 ]]></content>
     <category term="随笔"/>
@@ -3301,31 +3300,31 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <summary type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/physics/electromagnetism/" target="blank">电磁学</a></p>
+<p><a href="/physics/electromagnetism/" target="_blank">电磁学</a></p>
 </li>
 <li>
-<p><a href="/physics/optism/" target="blank">光学</a></p>
+<p><a href="/physics/optism/" target="_blank">光学</a></p>
 </li>
 <li>
-<p><a href="/physics/tsp/" target="blank">热力学与统计物理</a></p>
+<p><a href="/physics/tsp/" target="_blank">热力学与统计物理</a></p>
 </li>
 <li>
-<p><a href="/physics/quatum/" target="blank">量子力学</a></p>
+<p><a href="/physics/quatum/" target="_blank">量子力学</a></p>
 </li>
 </ul>]]></summary>
     <content type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/physics/electromagnetism/" target="blank">电磁学</a></p>
+<p><a href="/physics/electromagnetism/" target="_blank">电磁学</a></p>
 </li>
 <li>
-<p><a href="/physics/optism/" target="blank">光学</a></p>
+<p><a href="/physics/optism/" target="_blank">光学</a></p>
 </li>
 <li>
-<p><a href="/physics/tsp/" target="blank">热力学与统计物理</a></p>
+<p><a href="/physics/tsp/" target="_blank">热力学与统计物理</a></p>
 </li>
 <li>
-<p><a href="/physics/quatum/" target="blank">量子力学</a></p>
+<p><a href="/physics/quatum/" target="_blank">量子力学</a></p>
 </li>
 </ul>
 ]]></content>
@@ -3339,56 +3338,56 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <updated>2024-01-25T17:47:26.000Z</updated>
     <summary type="html"><![CDATA[<h2>代码编辑器</h2>
 <ul>
-<li><a href="/software/editor.html" target="blank">编辑器介绍</a></li>
+<li><a href="/software/editor.html" target="_blank">编辑器介绍</a></li>
 </ul>
 <h2>团队协作</h2>
 <p>开发项目的代码版本管理以及多人协作使用 Git 软件</p>
 <ul>
 <li>
-<p><a href="/software/git/" target="blank">Git 教程</a></p>
+<p><a href="/software/git/" target="_blank">Git 教程</a></p>
 </li>
 <li>
-<p><a href="/code/github/" target="blank">GitHub 介绍</a></p>
+<p><a href="/code/github/" target="_blank">GitHub 介绍</a></p>
 </li>
 </ul>
 <h2>浏览器</h2>]]></summary>
     <content type="html"><![CDATA[<h2>代码编辑器</h2>
 <ul>
-<li><a href="/software/editor.html" target="blank">编辑器介绍</a></li>
+<li><a href="/software/editor.html" target="_blank">编辑器介绍</a></li>
 </ul>
 <h2>团队协作</h2>
 <p>开发项目的代码版本管理以及多人协作使用 Git 软件</p>
 <ul>
 <li>
-<p><a href="/software/git/" target="blank">Git 教程</a></p>
+<p><a href="/software/git/" target="_blank">Git 教程</a></p>
 </li>
 <li>
-<p><a href="/code/github/" target="blank">GitHub 介绍</a></p>
+<p><a href="/code/github/" target="_blank">GitHub 介绍</a></p>
 </li>
 </ul>
 <h2>浏览器</h2>
 <p>在开发中，调试网页推荐使用 Chrome。</p>
 <ul>
-<li><a href="/software/chrome.html" target="blank">Chrome 介绍</a></li>
+<li><a href="/software/chrome.html" target="_blank">Chrome 介绍</a></li>
 </ul>
 <h2>后端</h2>
 <h3>Http Server</h3>
 <p>网站已经停止使用 Apache Lounge 编译的 httpd Apache。目前迁移到更加轻量，并发性能更好的 Nginx 上。</p>
 <ul>
 <li>
-<p><a href="/software/apache.html" target="blank">Apache</a> </p>
+<p><a href="/software/apache.html" target="_blank">Apache</a> </p>
 </li>
 <li>
-<p><a href="/software/nginx.html" target="blank">Nginx</a></p>
+<p><a href="/software/nginx.html" target="_blank">Nginx</a></p>
 </li>
 </ul>
 <h3>抓包与 API 调试</h3>
 <ul>
-<li><a href="/software/postman.html" target="blank">Postman</a></li>
+<li><a href="/software/postman.html" target="_blank">Postman</a></li>
 </ul>
 <h2>工具软件</h2>
 <ul>
-<li><a href="/software/tool/" target="blank">查看详情</a></li>
+<li><a href="/software/tool/" target="_blank">查看详情</a></li>
 </ul>
 <h2>手机 APP</h2>
 <h3>soloLearn</h3>
@@ -3430,62 +3429,62 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <link href="https://mister-hope.com/code/language/"/>
     <updated>2024-01-25T17:47:26.000Z</updated>
     <summary type="html"><![CDATA[<ul>
-<li><a href="/code/language/learning.html" target="blank">如何学习一门语言</a></li>
+<li><a href="/code/language/learning.html" target="_blank">如何学习一门语言</a></li>
 </ul>
 <h2>教程目录</h2>
 <ul>
 <li>
-<p><a href="/code/language/js/" target="blank">JavaScript 教程</a></p>
+<p><a href="/code/language/js/" target="_blank">JavaScript 教程</a></p>
 </li>
 <li>
-<p><a href="/code/language/typescript/" target="blank">TypeScript 教程</a></p>
+<p><a href="/code/language/typescript/" target="_blank">TypeScript 教程</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/" target="blank">Python 教程</a> (编写中...)</p>
+<p><a href="/code/language/python/" target="_blank">Python 教程</a> (编写中...)</p>
 </li>
 <li>
 <p><a href="https://www.liaoxuefeng.com/wiki/1252599548343744" target="_blank" rel="noopener noreferrer">Java 教程</a>(廖雪峰的博客)</p>
 </li>
 <li>
-<p><a href="/code/language/markdown/" target="blank">Markdown 教程</a></p>
+<p><a href="/code/language/markdown/" target="_blank">Markdown 教程</a></p>
 </li>
 <li>
-<p><a href="/code/language/yaml/" target="blank">YAML 教程</a></p>
+<p><a href="/code/language/yaml/" target="_blank">YAML 教程</a></p>
 </li>
 <li>
-<p><a href="/code/language/json/" target="blank">JSON 教程</a></p>
+<p><a href="/code/language/json/" target="_blank">JSON 教程</a></p>
 </li>
 </ul>]]></summary>
     <content type="html"><![CDATA[<ul>
-<li><a href="/code/language/learning.html" target="blank">如何学习一门语言</a></li>
+<li><a href="/code/language/learning.html" target="_blank">如何学习一门语言</a></li>
 </ul>
 <h2>教程目录</h2>
 <ul>
 <li>
-<p><a href="/code/language/js/" target="blank">JavaScript 教程</a></p>
+<p><a href="/code/language/js/" target="_blank">JavaScript 教程</a></p>
 </li>
 <li>
-<p><a href="/code/language/typescript/" target="blank">TypeScript 教程</a></p>
+<p><a href="/code/language/typescript/" target="_blank">TypeScript 教程</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/" target="blank">Python 教程</a> (编写中...)</p>
+<p><a href="/code/language/python/" target="_blank">Python 教程</a> (编写中...)</p>
 </li>
 <li>
 <p><a href="https://www.liaoxuefeng.com/wiki/1252599548343744" target="_blank" rel="noopener noreferrer">Java 教程</a>(廖雪峰的博客)</p>
 </li>
 <li>
-<p><a href="/code/language/markdown/" target="blank">Markdown 教程</a></p>
+<p><a href="/code/language/markdown/" target="_blank">Markdown 教程</a></p>
 </li>
 <li>
-<p><a href="/code/language/yaml/" target="blank">YAML 教程</a></p>
+<p><a href="/code/language/yaml/" target="_blank">YAML 教程</a></p>
 </li>
 <li>
-<p><a href="/code/language/json/" target="blank">JSON 教程</a></p>
+<p><a href="/code/language/json/" target="_blank">JSON 教程</a></p>
 </li>
 </ul>
 <h2>Linter</h2>
 <ul>
-<li><a href="/code/language/linter/" target="blank">Linter 介绍</a></li>
+<li><a href="/code/language/linter/" target="_blank">Linter 介绍</a></li>
 </ul>
 <div class="hint-container tip">
 <p class="hint-container-title">提示</p>
@@ -3502,12 +3501,12 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <updated>2022-02-12T05:50:30.000Z</updated>
     <summary type="html"><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">提示</p>
-<p>在开发小程序之前。应当掌握 <a href="/code/website/html/" target="blank">HTML</a>、<a href="/code/website/css/" target="blank">CSS</a>、<a href="/code/language/js/guide/" target="blank">JavaScript 基础</a> 以及 <a href="/code/language/js/es6/" target="blank">ES6</a>。</p>
+<p>在开发小程序之前。应当掌握 <a href="/code/website/html/" target="_blank">HTML</a>、<a href="/code/website/css/" target="_blank">CSS</a>、<a href="/code/language/js/guide/" target="_blank">JavaScript 基础</a> 以及 <a href="/code/language/js/es6/" target="_blank">ES6</a>。</p>
 </div>
 ]]></summary>
     <content type="html"><![CDATA[<div class="hint-container tip">
 <p class="hint-container-title">提示</p>
-<p>在开发小程序之前。应当掌握 <a href="/code/website/html/" target="blank">HTML</a>、<a href="/code/website/css/" target="blank">CSS</a>、<a href="/code/language/js/guide/" target="blank">JavaScript 基础</a> 以及 <a href="/code/language/js/es6/" target="blank">ES6</a>。</p>
+<p>在开发小程序之前。应当掌握 <a href="/code/website/html/" target="_blank">HTML</a>、<a href="/code/website/css/" target="_blank">CSS</a>、<a href="/code/language/js/guide/" target="_blank">JavaScript 基础</a> 以及 <a href="/code/language/js/es6/" target="_blank">ES6</a>。</p>
 </div>
 <!-- more -->
 <h2>小程序基础简介</h2>
@@ -3521,129 +3520,129 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <h2>教程目录</h2>
 <ul>
 <li>
-<p><a href="/code/mini-app/guide/file-structure.html" target="blank">文件结构</a></p>
+<p><a href="/code/mini-app/guide/file-structure.html" target="_blank">文件结构</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/env.html" target="blank">运行环境</a></p>
+<p><a href="/code/mini-app/guide/env.html" target="_blank">运行环境</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/config/" target="blank">小程序配置</a></p>
+<p><a href="/code/mini-app/guide/config/" target="_blank">小程序配置</a></p>
 <ul>
 <li>
-<p><a href="/code/mini-app/guide/config/app-config.html" target="blank">全局配置</a></p>
+<p><a href="/code/mini-app/guide/config/app-config.html" target="_blank">全局配置</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/config/page-config.html" target="blank">页面配置</a></p>
+<p><a href="/code/mini-app/guide/config/page-config.html" target="_blank">页面配置</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/config/sitemap-config.html" target="blank">sitemap 配置</a></p>
+<p><a href="/code/mini-app/guide/config/sitemap-config.html" target="_blank">sitemap 配置</a></p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/frame/" target="blank">小程序框架</a></p>
+<p><a href="/code/mini-app/guide/frame/" target="_blank">小程序框架</a></p>
 <ul>
 <li>
-<p><a href="/code/mini-app/guide/frame/intro.html" target="blank">框架介绍</a></p>
+<p><a href="/code/mini-app/guide/frame/intro.html" target="_blank">框架介绍</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/frame/scene.html" target="blank">场景值</a> </p>
+<p><a href="/code/mini-app/guide/frame/scene.html" target="_blank">场景值</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/frame/env.html" target="blank">运行环境</a> </p>
+<p><a href="/code/mini-app/guide/frame/env.html" target="_blank">运行环境</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/frame/mechanism.html" target="blank">运行机制</a> </p>
+<p><a href="/code/mini-app/guide/frame/mechanism.html" target="_blank">运行机制</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/frame/update.html" target="blank">更新机制</a> </p>
+<p><a href="/code/mini-app/guide/frame/update.html" target="_blank">更新机制</a> </p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/" target="blank">逻辑层</a></p>
+<p><a href="/code/mini-app/guide/service/" target="_blank">逻辑层</a></p>
 <ul>
 <li>
-<p><a href="/code/mini-app/guide/service/lifetime.html" target="blank">生命周期</a></p>
+<p><a href="/code/mini-app/guide/service/lifetime.html" target="_blank">生命周期</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/route.html" target="blank">路由</a></p>
+<p><a href="/code/mini-app/guide/service/route.html" target="_blank">路由</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/register.html" target="blank">注册</a></p>
+<p><a href="/code/mini-app/guide/service/register.html" target="_blank">注册</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/app.html" target="blank">App()</a></p>
+<p><a href="/code/mini-app/guide/service/app.html" target="_blank">App()</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/page.html" target="blank">Page()</a></p>
+<p><a href="/code/mini-app/guide/service/page.html" target="_blank">Page()</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/run.html" target="blank">运行</a></p>
+<p><a href="/code/mini-app/guide/service/run.html" target="_blank">运行</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/module.html" target="blank">模块化</a></p>
+<p><a href="/code/mini-app/guide/service/module.html" target="_blank">模块化</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/api/" target="blank">API</a></p>
+<p><a href="/code/mini-app/guide/service/api/" target="_blank">API</a></p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/" target="blank">视图层</a></p>
+<p><a href="/code/mini-app/guide/view/" target="_blank">视图层</a></p>
 <ul>
 <li>
-<p><a href="/code/mini-app/guide/view/wxml.html" target="blank">WXML</a></p>
+<p><a href="/code/mini-app/guide/view/wxml.html" target="_blank">WXML</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/wxss.html" target="blank">WXSS</a></p>
+<p><a href="/code/mini-app/guide/view/wxss.html" target="_blank">WXSS</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/wxs.html" target="blank">WXS</a></p>
+<p><a href="/code/mini-app/guide/view/wxs.html" target="_blank">WXS</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/event.html" target="blank">事件</a></p>
+<p><a href="/code/mini-app/guide/view/event.html" target="_blank">事件</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/component.html" target="blank">基础组件</a></p>
+<p><a href="/code/mini-app/guide/view/component.html" target="_blank">基础组件</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/animation.html" target="blank">动画</a> </p>
+<p><a href="/code/mini-app/guide/view/animation.html" target="_blank">动画</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/wxs.html" target="blank">WXS</a> </p>
+<p><a href="/code/mini-app/guide/view/wxs.html" target="_blank">WXS</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/wxs-event.html" target="blank">WXS 事件</a> </p>
+<p><a href="/code/mini-app/guide/view/wxs-event.html" target="_blank">WXS 事件</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/model.html" target="blank">建议双向绑定</a> </p>
+<p><a href="/code/mini-app/guide/view/model.html" target="_blank">建议双向绑定</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/selector.html" target="blank">获取界面上的节点信息</a> </p>
+<p><a href="/code/mini-app/guide/view/selector.html" target="_blank">获取界面上的节点信息</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/selector.html" target="blank">相应显示区域变化</a> </p>
+<p><a href="/code/mini-app/guide/view/selector.html" target="_blank">相应显示区域变化</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/rendering-cache.html" target="blank">初始渲染缓存</a> </p>
+<p><a href="/code/mini-app/guide/view/rendering-cache.html" target="_blank">初始渲染缓存</a> </p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/ability/" target="blank">小程序能力</a></p>
+<p><a href="/code/mini-app/guide/ability/" target="_blank">小程序能力</a></p>
 <ul>
 <li>
-<p><a href="/code/mini-app/guide/ability/network.html" target="blank">网络请求</a></p>
+<p><a href="/code/mini-app/guide/ability/network.html" target="_blank">网络请求</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/ability/storage.html" target="blank">存储</a></p>
+<p><a href="/code/mini-app/guide/ability/storage.html" target="_blank">存储</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/ability/file-system.html" target="blank">文件系统</a></p>
+<p><a href="/code/mini-app/guide/ability/file-system.html" target="_blank">文件系统</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/ability/debug.html" target="blank">调试</a></p>
+<p><a href="/code/mini-app/guide/ability/debug.html" target="_blank">调试</a></p>
 </li>
 </ul>
 </li>
@@ -3651,16 +3650,16 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <h2>开发者工具</h2>
 <ul>
 <li>
-<p><a href="/code/mini-app/tools/interface.html" target="blank">工具界面简介</a></p>
+<p><a href="/code/mini-app/tools/interface.html" target="_blank">工具界面简介</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/tools/debug.html" target="blank">调试</a></p>
+<p><a href="/code/mini-app/tools/debug.html" target="_blank">调试</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/tools/npm.html" target="blank">npm</a></p>
+<p><a href="/code/mini-app/tools/npm.html" target="_blank">npm</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/tools/audit.html" target="blank">体验评分</a></p>
+<p><a href="/code/mini-app/tools/audit.html" target="_blank">体验评分</a></p>
 </li>
 </ul>
 <h2>官方教程</h2>
@@ -3674,19 +3673,19 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <h2>Mr.Hope 框架说明</h2>
 <ul>
 <li>
-<p><a href="/code/mini-app/framework/" target="blank">小程序框架使用说明</a></p>
+<p><a href="/code/mini-app/framework/" target="_blank">小程序框架使用说明</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/framework/tag-list.html" target="blank">tag 值参数表</a></p>
+<p><a href="/code/mini-app/framework/tag-list.html" target="_blank">tag 值参数表</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/framework/page.html" target="blank">setPage 库使用说明</a></p>
+<p><a href="/code/mini-app/framework/page.html" target="_blank">setPage 库使用说明</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/framework/simple-debug.html" target="blank">界面简单开发学习指南</a></p>
+<p><a href="/code/mini-app/framework/simple-debug.html" target="_blank">界面简单开发学习指南</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/qr-code.html" target="blank">分享相关</a></p>
+<p><a href="/code/mini-app/qr-code.html" target="_blank">分享相关</a></p>
 </li>
 </ul>
 <h2>学习视频</h2>
@@ -3732,7 +3731,7 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <p><a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html" target="_blank" rel="noopener noreferrer">下载地址</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/tools/" target="blank">开发者工具教程</a></p>
+<p><a href="/code/mini-app/tools/" target="_blank">开发者工具教程</a></p>
 </li>
 <li>
 <p><a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html" target="_blank" rel="noopener noreferrer">官方使用指南</a></p>
@@ -3754,19 +3753,19 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <h2>教程目录</h2>
 <ul>
 <li>
-<p><a href="/code/node-js/intro.html" target="blank">Node.js 介绍</a></p>
+<p><a href="/code/node-js/intro.html" target="_blank">Node.js 介绍</a></p>
 </li>
 <li>
-<p><a href="/code/node-js/install.html" target="blank">Node.js 与 npm 安装</a></p>
+<p><a href="/code/node-js/install.html" target="_blank">Node.js 与 npm 安装</a></p>
 </li>
 <li>
-<p><a href="/code/node-js/environment.html" target="blank">Node.js 环境</a></p>
+<p><a href="/code/node-js/environment.html" target="_blank">Node.js 环境</a></p>
 </li>
 <li>
-<p><a href="/code/node-js/program.html" target="blank">编程</a></p>
+<p><a href="/code/node-js/program.html" target="_blank">编程</a></p>
 </li>
 <li>
-<p><a href="/code/node-js/cjs.html" target="blank">Node.js CJS 模块</a></p>
+<p><a href="/code/node-js/cjs.html" target="_blank">Node.js CJS 模块</a></p>
 </li>
 </ul>
 <p>以上，就是 Node.js 的简易介绍，系统学习可以查看下方的详细教程。</p>
@@ -3881,25 +3880,25 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <h2>Vue.js 教程目录</h2>
 <ul>
 <li>
-<p><a href="/code/vue/core/install.html" target="blank">开发环境安装</a></p>
+<p><a href="/code/vue/core/install.html" target="_blank">开发环境安装</a></p>
 </li>
 <li>
-<p><a href="/code/vue/core/get-started.html" target="blank">起步上手</a></p>
+<p><a href="/code/vue/core/get-started.html" target="_blank">起步上手</a></p>
 </li>
 <li>
-<p><a href="/code/vue/core/app.html" target="blank">创建 Vue 应用</a></p>
+<p><a href="/code/vue/core/app.html" target="_blank">创建 Vue 应用</a></p>
 </li>
 <li>
-<p><a href="/code/vue/core/template.html" target="blank">模板语法</a></p>
+<p><a href="/code/vue/core/template.html" target="_blank">模板语法</a></p>
 </li>
 <li>
-<p><a href="/code/vue/core/sfc.html" target="blank">Vue 单文件组件说明</a></p>
+<p><a href="/code/vue/core/sfc.html" target="_blank">Vue 单文件组件说明</a></p>
 </li>
 </ul>
 <h2>Vue 生态</h2>
 <h3>Vue Router</h3>
 <ul>
-<li><a href="/code/vue/router/" target="blank">Vue Router 概述</a></li>
+<li><a href="/code/vue/router/" target="_blank">Vue Router 概述</a></li>
 </ul>
 <!-- TODO: Add pinia and vite -->
 <h3>其他 Vue 生态</h3>
@@ -3952,30 +3951,30 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <h3>HTML</h3>
 <p>HTML 指的是超文本标记语言 (Hyper Text Markup Language)，描述了网页的骨架(具体结构)。</p>
 <ul>
-<li><a href="/code/website/html/" target="blank">HTML 教程</a></li>
+<li><a href="/code/website/html/" target="_blank">HTML 教程</a></li>
 </ul>
 <h3>CSS</h3>
 <p>CSS 指层叠样式表 (Cascading Style Sheets)，声明了网页的样式(具体布局)。</p>
 <ul>
-<li><a href="/code/website/css/" target="blank">CSS 教程</a></li>
+<li><a href="/code/website/css/" target="_blank">CSS 教程</a></li>
 </ul>
 <h3>Emmet</h3>
 <p>Emmet 是一种快速输入 HTML 和 CSS 的语法。</p>
 <ul>
-<li><a href="/code/website/emmet/" target="blank">Emmet 用法介绍</a></li>
+<li><a href="/code/website/emmet/" target="_blank">Emmet 用法介绍</a></li>
 </ul>
 <h3>JavaScript</h3>
 <p>JavaScript 是一种编程语言，声明了网页的交互逻辑。</p>
 <p>JavaScript 是一种轻量级的编程语言，为可插入 HTML 页面的编程代码。所有现代的 HTML 页面都使用 JavaScript。</p>
 <ul>
-<li><a href="/code/website/js.html" target="blank">JS 教程</a></li>
+<li><a href="/code/website/js.html" target="_blank">JS 教程</a></li>
 </ul>
 <h2>现代前端框架</h2>
 <h3>Vue</h3>
 <p>Vue 是一套轻量化的前端渐进式框架框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。</p>
 <ul>
 <li>
-<p><a href="/code/vue/" target="blank">Vue 学习教程</a></p>
+<p><a href="/code/vue/" target="_blank">Vue 学习教程</a></p>
 </li>
 <li>
 <p><a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener noreferrer">Vue 官方文档</a></p>
@@ -3983,23 +3982,23 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 </ul>
 <h3>React</h3>
 <ul>
-<li><a href="/code/react/" target="blank">React 教程</a></li>
+<li><a href="/code/react/" target="_blank">React 教程</a></li>
 </ul>
 <h3>Angular</h3>
 <ul>
-<li><a href="/code/angular/" target="blank">Angular 教程</a></li>
+<li><a href="/code/angular/" target="_blank">Angular 教程</a></li>
 </ul>
 <h2>深入网页开发</h2>
 <h3>TypeScript</h3>
 <p>TypeScript 是 JavaScript 的一个超集，使得 JS 变成了一种强定义语言。TypeScript 由于其诸多优良特性，目前在前端的份额越来越大。</p>
 <ul>
-<li><a href="/code/language/typescript/" target="blank">TypeScript 教程</a></li>
+<li><a href="/code/language/typescript/" target="_blank">TypeScript 教程</a></li>
 </ul>
 <h3>Node.js</h3>
 <p>在深入了解并进行前端开发后，就避不开 Node。</p>
 <p>Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，拥有大量的模块。Node.js 主要以其丰富并及其容易导入的 Node.js package，以及其方便管理 npm (Node.js Package Manager)闻名。</p>
 <ul>
-<li><a href="/code/node-js/" target="blank">Node.js 教程</a></li>
+<li><a href="/code/node-js/" target="_blank">Node.js 教程</a></li>
 </ul>
 <h2>历史前端框架</h2>
 <h3>jQuery</h3>
@@ -4008,7 +4007,7 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <p>由于 MVVM 的兴起，目前 jQuery 已逐步被前端三大框架所取代。</p>
 <ul>
 <li>
-<p><a href="/code/website/jQuery/" target="blank">jQuery 教程</a></p>
+<p><a href="/code/website/jQuery/" target="_blank">jQuery 教程</a></p>
 </li>
 <li>
 <p><a href="http://www.w3school.com.cn/jquery/index.asp" target="_blank" rel="noopener noreferrer">W3School</a></p>
@@ -4030,11 +4029,11 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 </ul>
 <h2>定义列表</h2>
 <ul>
-<li><a href="/code/website/definition/uri.html" target="blank">URI 统一资源标识符</a></li>
-<li><a href="/code/website/definition/url.html" target="blank">URL 统一资源定位符</a></li>
-<li><a href="/code/website/definition/seo.html" target="blank">SEO 搜索引擎优化</a></li>
-<li><a href="/code/website/definition/mime.html" target="blank">MIME Type 媒体类型</a></li>
-<li><a href="/code/website/definition/https.html" target="blank">HTTPS 介绍</a></li>
+<li><a href="/code/website/definition/uri.html" target="_blank">URI 统一资源标识符</a></li>
+<li><a href="/code/website/definition/url.html" target="_blank">URL 统一资源定位符</a></li>
+<li><a href="/code/website/definition/seo.html" target="_blank">SEO 搜索引擎优化</a></li>
+<li><a href="/code/website/definition/mime.html" target="_blank">MIME Type 媒体类型</a></li>
+<li><a href="/code/website/definition/https.html" target="_blank">HTTPS 介绍</a></li>
 </ul>
 ]]></content>
     <category term="前端"/>
@@ -4061,26 +4060,25 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <summary type="html"><![CDATA[<h2>文章列表</h2>
 <ul>
 <li>
-<p><a href="/design/articles/gestalt-principle.html" target="blank">格式塔原则</a></p>
+<p><a href="/design/articles/gestalt-principle.html" target="_blank">格式塔原则</a></p>
 </li>
 <li>
-<p><a href="/design/articles/left-or-right.html" target="blank">布局中的左和右</a></p>
+<p><a href="/design/articles/left-or-right.html" target="_blank">布局中的左和右</a></p>
 </li>
 <li>
-<p><a href="/design/articles/infomation-flow.html" target="blank">信息流介绍</a></p>
+<p><a href="/design/articles/infomation-flow.html" target="_blank">信息流介绍</a></p>
 </li>
-</ul>
-]]></summary>
+</ul>]]></summary>
     <content type="html"><![CDATA[<h2>文章列表</h2>
 <ul>
 <li>
-<p><a href="/design/articles/gestalt-principle.html" target="blank">格式塔原则</a></p>
+<p><a href="/design/articles/gestalt-principle.html" target="_blank">格式塔原则</a></p>
 </li>
 <li>
-<p><a href="/design/articles/left-or-right.html" target="blank">布局中的左和右</a></p>
+<p><a href="/design/articles/left-or-right.html" target="_blank">布局中的左和右</a></p>
 </li>
 <li>
-<p><a href="/design/articles/infomation-flow.html" target="blank">信息流介绍</a></p>
+<p><a href="/design/articles/infomation-flow.html" target="_blank">信息流介绍</a></p>
 </li>
 </ul>
 ]]></content>
@@ -4110,40 +4108,40 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <p>图标是 UI 的设计体系最重要的组成部分之一，是任何 UI 界面中都不可或缺的视觉元素。了解图标相关的概念，以及正确绘制的方法，是入门 UI 设计的必备条件。</p>
 <ul>
 <li>
-<p><a href="/design/icon/intro.html" target="blank">图标介绍</a></p>
+<p><a href="/design/icon/intro.html" target="_blank">图标介绍</a></p>
 </li>
 <li>
-<p><a href="/design/icon/type.html" target="blank">图标种类</a></p>
+<p><a href="/design/icon/type.html" target="_blank">图标种类</a></p>
 </li>
 <li>
-<p><a href="/design/icon/guide.html" target="blank">图标设计指南</a></p>
+<p><a href="/design/icon/guide.html" target="_blank">图标设计指南</a></p>
 </li>
 <li>
-<p><a href="/design/icon/software.html" target="blank">图标设计软件</a></p>
+<p><a href="/design/icon/software.html" target="_blank">图标设计软件</a></p>
 </li>
 <li>
-<p><a href="/design/icon/draw.html" target="blank">图标绘制流程</a></p>
+<p><a href="/design/icon/draw.html" target="_blank">图标绘制流程</a></p>
 </li>
 <li>
-<p><a href="/design/icon/rule.html" target="blank">图标设计准则</a></p>
+<p><a href="/design/icon/rule.html" target="_blank">图标设计准则</a></p>
 </li>
 <li>
-<p><a href="/design/icon/line.html" target="blank">线性图标设计演示</a></p>
+<p><a href="/design/icon/line.html" target="_blank">线性图标设计演示</a></p>
 </li>
 <li>
-<p><a href="/design/icon/flour.html" target="blank">面性图标设计指南</a></p>
+<p><a href="/design/icon/flour.html" target="_blank">面性图标设计指南</a></p>
 </li>
 <li>
-<p><a href="/design/icon/decorative.html" target="blank">装饰性图标设计指南</a></p>
+<p><a href="/design/icon/decorative.html" target="_blank">装饰性图标设计指南</a></p>
 </li>
 <li>
-<p><a href="/design/icon/start.html" target="blank">启动图标设计指南</a></p>
+<p><a href="/design/icon/start.html" target="_blank">启动图标设计指南</a></p>
 </li>
 <li>
-<p><a href="/design/icon/skill.html" target="blank">图标设计技巧</a></p>
+<p><a href="/design/icon/skill.html" target="_blank">图标设计技巧</a></p>
 </li>
 <li>
-<p><a href="/design/icon/apply.html" target="blank">图标实践注意事项</a></p>
+<p><a href="/design/icon/apply.html" target="_blank">图标实践注意事项</a></p>
 </li>
 </ul>
 <h2>相关要求</h2>
@@ -4186,20 +4184,20 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <summary type="html"><![CDATA[<h2>文章列表</h2>
 <ul>
 <li>
-<p><a href="/design/interact/search.html" target="blank">搜索框</a></p>
+<p><a href="/design/interact/search.html" target="_blank">搜索框</a></p>
 </li>
 <li>
-<p><a href="/design/interact/text-field.html" target="blank">文本框</a></p>
+<p><a href="/design/interact/text-field.html" target="_blank">文本框</a></p>
 </li>
 </ul>
 ]]></summary>
     <content type="html"><![CDATA[<h2>文章列表</h2>
 <ul>
 <li>
-<p><a href="/design/interact/search.html" target="blank">搜索框</a></p>
+<p><a href="/design/interact/search.html" target="_blank">搜索框</a></p>
 </li>
 <li>
-<p><a href="/design/interact/text-field.html" target="blank">文本框</a></p>
+<p><a href="/design/interact/text-field.html" target="_blank">文本框</a></p>
 </li>
 </ul>
 ]]></content>
@@ -4214,43 +4212,43 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <summary type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/design/navigation/intro.html" target="blank">导航设计介绍</a></p>
+<p><a href="/design/navigation/intro.html" target="_blank">导航设计介绍</a></p>
 </li>
 <li>
-<p><a href="/design/navigation/navbar.html" target="blank">导航栏概述与设计方式</a></p>
+<p><a href="/design/navigation/navbar.html" target="_blank">导航栏概述与设计方式</a></p>
 </li>
 <li>
-<p><a href="/design/navigation/navbar-design.html" target="blank">导航栏设计技巧</a></p>
+<p><a href="/design/navigation/navbar-design.html" target="_blank">导航栏设计技巧</a></p>
 </li>
 <li>
-<p><a href="/design/navigation/sidebar-navigate.html" target="blank">侧边导航设计</a></p>
+<p><a href="/design/navigation/sidebar-navigate.html" target="_blank">侧边导航设计</a></p>
 </li>
 <li>
-<p><a href="/design/navigation/tabbar.html" target="blank">标签导航设计</a></p>
+<p><a href="/design/navigation/tabbar.html" target="_blank">标签导航设计</a></p>
 </li>
 <li>
-<p><a href="/design/navigation/tabbar-design.html" target="blank">标签导航设计技巧</a></p>
+<p><a href="/design/navigation/tabbar-design.html" target="_blank">标签导航设计技巧</a></p>
 </li>
 </ul>]]></summary>
     <content type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/design/navigation/intro.html" target="blank">导航设计介绍</a></p>
+<p><a href="/design/navigation/intro.html" target="_blank">导航设计介绍</a></p>
 </li>
 <li>
-<p><a href="/design/navigation/navbar.html" target="blank">导航栏概述与设计方式</a></p>
+<p><a href="/design/navigation/navbar.html" target="_blank">导航栏概述与设计方式</a></p>
 </li>
 <li>
-<p><a href="/design/navigation/navbar-design.html" target="blank">导航栏设计技巧</a></p>
+<p><a href="/design/navigation/navbar-design.html" target="_blank">导航栏设计技巧</a></p>
 </li>
 <li>
-<p><a href="/design/navigation/sidebar-navigate.html" target="blank">侧边导航设计</a></p>
+<p><a href="/design/navigation/sidebar-navigate.html" target="_blank">侧边导航设计</a></p>
 </li>
 <li>
-<p><a href="/design/navigation/tabbar.html" target="blank">标签导航设计</a></p>
+<p><a href="/design/navigation/tabbar.html" target="_blank">标签导航设计</a></p>
 </li>
 <li>
-<p><a href="/design/navigation/tabbar-design.html" target="blank">标签导航设计技巧</a></p>
+<p><a href="/design/navigation/tabbar-design.html" target="_blank">标签导航设计技巧</a></p>
 </li>
 </ul>
 ]]></content>
@@ -4265,127 +4263,127 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <summary type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/linux/bash/intro.html" target="blank">简介</a></p>
+<p><a href="/linux/bash/intro.html" target="_blank">简介</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/grammar.html" target="blank">基本语法</a></p>
+<p><a href="/linux/bash/grammar.html" target="_blank">基本语法</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/expansion.html" target="blank">模式扩展</a></p>
+<p><a href="/linux/bash/expansion.html" target="_blank">模式扩展</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/quotation.html" target="blank">引号和转义</a></p>
+<p><a href="/linux/bash/quotation.html" target="_blank">引号和转义</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/variable.html" target="blank">变量</a></p>
+<p><a href="/linux/bash/variable.html" target="_blank">变量</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/string.html" target="blank">字符串操作</a></p>
+<p><a href="/linux/bash/string.html" target="_blank">字符串操作</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/arithmetic.html" target="blank">算术运算</a></p>
+<p><a href="/linux/bash/arithmetic.html" target="_blank">算术运算</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/readline.html" target="blank">行操作</a></p>
+<p><a href="/linux/bash/readline.html" target="_blank">行操作</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/stack.html" target="blank">目录堆栈</a></p>
+<p><a href="/linux/bash/stack.html" target="_blank">目录堆栈</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/script.html" target="blank">脚本入门</a></p>
+<p><a href="/linux/bash/script.html" target="_blank">脚本入门</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/read.html" target="blank">read 命令</a></p>
+<p><a href="/linux/bash/read.html" target="_blank">read 命令</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/condition.html" target="blank">条件判断</a></p>
+<p><a href="/linux/bash/condition.html" target="_blank">条件判断</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/loop.html" target="blank">循环</a></p>
+<p><a href="/linux/bash/loop.html" target="_blank">循环</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/function.html" target="blank">函数</a></p>
+<p><a href="/linux/bash/function.html" target="_blank">函数</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/array.html" target="blank">数组</a></p>
+<p><a href="/linux/bash/array.html" target="_blank">数组</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/set.html" target="blank">set 命令</a></p>
+<p><a href="/linux/bash/set.html" target="_blank">set 命令</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/debug.html" target="blank">脚本除错</a></p>
+<p><a href="/linux/bash/debug.html" target="_blank">脚本除错</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/mktemp.html" target="blank">mktemp 命令，trap 命令</a></p>
+<p><a href="/linux/bash/mktemp.html" target="_blank">mktemp 命令，trap 命令</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/startup.html" target="blank">启动环境</a></p>
+<p><a href="/linux/bash/startup.html" target="_blank">启动环境</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/prompt.html" target="blank">命令提示符</a></p>
+<p><a href="/linux/bash/prompt.html" target="_blank">命令提示符</a></p>
 </li>
 </ul>]]></summary>
     <content type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/linux/bash/intro.html" target="blank">简介</a></p>
+<p><a href="/linux/bash/intro.html" target="_blank">简介</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/grammar.html" target="blank">基本语法</a></p>
+<p><a href="/linux/bash/grammar.html" target="_blank">基本语法</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/expansion.html" target="blank">模式扩展</a></p>
+<p><a href="/linux/bash/expansion.html" target="_blank">模式扩展</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/quotation.html" target="blank">引号和转义</a></p>
+<p><a href="/linux/bash/quotation.html" target="_blank">引号和转义</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/variable.html" target="blank">变量</a></p>
+<p><a href="/linux/bash/variable.html" target="_blank">变量</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/string.html" target="blank">字符串操作</a></p>
+<p><a href="/linux/bash/string.html" target="_blank">字符串操作</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/arithmetic.html" target="blank">算术运算</a></p>
+<p><a href="/linux/bash/arithmetic.html" target="_blank">算术运算</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/readline.html" target="blank">行操作</a></p>
+<p><a href="/linux/bash/readline.html" target="_blank">行操作</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/stack.html" target="blank">目录堆栈</a></p>
+<p><a href="/linux/bash/stack.html" target="_blank">目录堆栈</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/script.html" target="blank">脚本入门</a></p>
+<p><a href="/linux/bash/script.html" target="_blank">脚本入门</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/read.html" target="blank">read 命令</a></p>
+<p><a href="/linux/bash/read.html" target="_blank">read 命令</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/condition.html" target="blank">条件判断</a></p>
+<p><a href="/linux/bash/condition.html" target="_blank">条件判断</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/loop.html" target="blank">循环</a></p>
+<p><a href="/linux/bash/loop.html" target="_blank">循环</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/function.html" target="blank">函数</a></p>
+<p><a href="/linux/bash/function.html" target="_blank">函数</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/array.html" target="blank">数组</a></p>
+<p><a href="/linux/bash/array.html" target="_blank">数组</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/set.html" target="blank">set 命令</a></p>
+<p><a href="/linux/bash/set.html" target="_blank">set 命令</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/debug.html" target="blank">脚本除错</a></p>
+<p><a href="/linux/bash/debug.html" target="_blank">脚本除错</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/mktemp.html" target="blank">mktemp 命令，trap 命令</a></p>
+<p><a href="/linux/bash/mktemp.html" target="_blank">mktemp 命令，trap 命令</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/startup.html" target="blank">启动环境</a></p>
+<p><a href="/linux/bash/startup.html" target="_blank">启动环境</a></p>
 </li>
 <li>
-<p><a href="/linux/bash/prompt.html" target="blank">命令提示符</a></p>
+<p><a href="/linux/bash/prompt.html" target="_blank">命令提示符</a></p>
 </li>
 </ul>
 ]]></content>
@@ -4407,55 +4405,55 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <summary type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/linux/command/command.html" target="blank">命令格式简介</a></p>
+<p><a href="/linux/command/command.html" target="_blank">命令格式简介</a></p>
 </li>
 <li>
-<p><a href="/linux/command/dir.html" target="blank">目录相关</a></p>
+<p><a href="/linux/command/dir.html" target="_blank">目录相关</a></p>
 </li>
 <li>
-<p><a href="/linux/command/file.html" target="blank">文件相关</a></p>
+<p><a href="/linux/command/file.html" target="_blank">文件相关</a></p>
 </li>
 <li>
-<p><a href="/linux/command/other.html" target="blank">其他命令</a></p>
+<p><a href="/linux/command/other.html" target="_blank">其他命令</a></p>
 </li>
 <li>
-<p><a href="/linux/command/add.html" target="blank">命令的自动补全</a></p>
+<p><a href="/linux/command/add.html" target="_blank">命令的自动补全</a></p>
 </li>
 <li>
-<p><a href="/linux/command/excu.html" target="blank">命令的执行</a></p>
+<p><a href="/linux/command/excu.html" target="_blank">命令的执行</a></p>
 </li>
 <li>
-<p><a href="/linux/command/path.html" target="blank">环境变量</a></p>
+<p><a href="/linux/command/path.html" target="_blank">环境变量</a></p>
 </li>
 <li>
-<p><a href="/linux/command/ln.html" target="blank">创建链接</a></p>
+<p><a href="/linux/command/ln.html" target="_blank">创建链接</a></p>
 </li>
 </ul>]]></summary>
     <content type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/linux/command/command.html" target="blank">命令格式简介</a></p>
+<p><a href="/linux/command/command.html" target="_blank">命令格式简介</a></p>
 </li>
 <li>
-<p><a href="/linux/command/dir.html" target="blank">目录相关</a></p>
+<p><a href="/linux/command/dir.html" target="_blank">目录相关</a></p>
 </li>
 <li>
-<p><a href="/linux/command/file.html" target="blank">文件相关</a></p>
+<p><a href="/linux/command/file.html" target="_blank">文件相关</a></p>
 </li>
 <li>
-<p><a href="/linux/command/other.html" target="blank">其他命令</a></p>
+<p><a href="/linux/command/other.html" target="_blank">其他命令</a></p>
 </li>
 <li>
-<p><a href="/linux/command/add.html" target="blank">命令的自动补全</a></p>
+<p><a href="/linux/command/add.html" target="_blank">命令的自动补全</a></p>
 </li>
 <li>
-<p><a href="/linux/command/excu.html" target="blank">命令的执行</a></p>
+<p><a href="/linux/command/excu.html" target="_blank">命令的执行</a></p>
 </li>
 <li>
-<p><a href="/linux/command/path.html" target="blank">环境变量</a></p>
+<p><a href="/linux/command/path.html" target="_blank">环境变量</a></p>
 </li>
 <li>
-<p><a href="/linux/command/ln.html" target="blank">创建链接</a></p>
+<p><a href="/linux/command/ln.html" target="_blank">创建链接</a></p>
 </li>
 </ul>
 ]]></content>
@@ -4470,26 +4468,26 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <summary type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/linux/file/file.html" target="blank">Linux 文件</a></p>
+<p><a href="/linux/file/file.html" target="_blank">Linux 文件</a></p>
 </li>
 <li>
-<p><a href="/linux/file/dir.html" target="blank">Linux 目录</a></p>
+<p><a href="/linux/file/dir.html" target="_blank">Linux 目录</a></p>
 </li>
 <li>
-<p><a href="/linux/file/mount.html" target="blank">挂载</a></p>
+<p><a href="/linux/file/mount.html" target="_blank">挂载</a></p>
 </li>
 </ul>
 ]]></summary>
     <content type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/linux/file/file.html" target="blank">Linux 文件</a></p>
+<p><a href="/linux/file/file.html" target="_blank">Linux 文件</a></p>
 </li>
 <li>
-<p><a href="/linux/file/dir.html" target="blank">Linux 目录</a></p>
+<p><a href="/linux/file/dir.html" target="_blank">Linux 目录</a></p>
 </li>
 <li>
-<p><a href="/linux/file/mount.html" target="blank">挂载</a></p>
+<p><a href="/linux/file/mount.html" target="_blank">挂载</a></p>
 </li>
 </ul>
 ]]></content>
@@ -4501,40 +4499,40 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <id>https://mister-hope.com/linux/intro/</id>
     <link href="https://mister-hope.com/linux/intro/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<h1>Linux 简介</h1>
+    <summary type="html"><![CDATA[
 <ul>
 <li>
-<p><a href="/linux/intro/intro.html" target="blank">Linux 介绍</a></p>
+<p><a href="/linux/intro/intro.html" target="_blank">Linux 介绍</a></p>
 </li>
 <li>
-<p><a href="/linux/intro/history.html" target="blank">Linux 历史</a></p>
+<p><a href="/linux/intro/history.html" target="_blank">Linux 历史</a></p>
 </li>
 <li>
-<p><a href="/linux/intro/language.html" target="blank">Linux 编写语言</a></p>
+<p><a href="/linux/intro/language.html" target="_blank">Linux 编写语言</a></p>
 </li>
 <li>
-<p><a href="/linux/intro/advantage.html" target="blank">Linux 优势</a></p>
+<p><a href="/linux/intro/advantage.html" target="_blank">Linux 优势</a></p>
 </li>
 <li>
-<p><a href="/linux/intro/desktop.html" target="blank">Linux 桌面环境</a></p>
+<p><a href="/linux/intro/desktop.html" target="_blank">Linux 桌面环境</a></p>
 </li>
 </ul>]]></summary>
-    <content type="html"><![CDATA[<h1>Linux 简介</h1>
+    <content type="html"><![CDATA[
 <ul>
 <li>
-<p><a href="/linux/intro/intro.html" target="blank">Linux 介绍</a></p>
+<p><a href="/linux/intro/intro.html" target="_blank">Linux 介绍</a></p>
 </li>
 <li>
-<p><a href="/linux/intro/history.html" target="blank">Linux 历史</a></p>
+<p><a href="/linux/intro/history.html" target="_blank">Linux 历史</a></p>
 </li>
 <li>
-<p><a href="/linux/intro/language.html" target="blank">Linux 编写语言</a></p>
+<p><a href="/linux/intro/language.html" target="_blank">Linux 编写语言</a></p>
 </li>
 <li>
-<p><a href="/linux/intro/advantage.html" target="blank">Linux 优势</a></p>
+<p><a href="/linux/intro/advantage.html" target="_blank">Linux 优势</a></p>
 </li>
 <li>
-<p><a href="/linux/intro/desktop.html" target="blank">Linux 桌面环境</a></p>
+<p><a href="/linux/intro/desktop.html" target="_blank">Linux 桌面环境</a></p>
 </li>
 </ul>
 ]]></content>
@@ -4546,34 +4544,34 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <id>https://mister-hope.com/linux/ubuntu/</id>
     <link href="https://mister-hope.com/linux/ubuntu/"/>
     <updated>2022-02-06T16:46:58.000Z</updated>
-    <summary type="html"><![CDATA[<h1>ubuntu</h1>
+    <summary type="html"><![CDATA[
 <ul>
 <li>
-<p><a href="/linux/ubuntu/manage.html" target="blank">管理包</a></p>
+<p><a href="/linux/ubuntu/manage.html" target="_blank">管理包</a></p>
 </li>
 <li>
-<p><a href="/linux/ubuntu/debug.html" target="blank">开发软件</a></p>
+<p><a href="/linux/ubuntu/debug.html" target="_blank">开发软件</a></p>
 </li>
 <li>
-<p><a href="/linux/ubuntu/webserver.html" target="blank">网络服务器相关</a></p>
+<p><a href="/linux/ubuntu/webserver.html" target="_blank">网络服务器相关</a></p>
 </li>
 <li>
-<p><a href="/linux/ubuntu/lang.html" target="blank">语言切换</a></p>
+<p><a href="/linux/ubuntu/lang.html" target="_blank">语言切换</a></p>
 </li>
 </ul>]]></summary>
-    <content type="html"><![CDATA[<h1>ubuntu</h1>
+    <content type="html"><![CDATA[
 <ul>
 <li>
-<p><a href="/linux/ubuntu/manage.html" target="blank">管理包</a></p>
+<p><a href="/linux/ubuntu/manage.html" target="_blank">管理包</a></p>
 </li>
 <li>
-<p><a href="/linux/ubuntu/debug.html" target="blank">开发软件</a></p>
+<p><a href="/linux/ubuntu/debug.html" target="_blank">开发软件</a></p>
 </li>
 <li>
-<p><a href="/linux/ubuntu/webserver.html" target="blank">网络服务器相关</a></p>
+<p><a href="/linux/ubuntu/webserver.html" target="_blank">网络服务器相关</a></p>
 </li>
 <li>
-<p><a href="/linux/ubuntu/lang.html" target="blank">语言切换</a></p>
+<p><a href="/linux/ubuntu/lang.html" target="_blank">语言切换</a></p>
 </li>
 </ul>
 ]]></content>
@@ -4636,12 +4634,12 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <updated>2024-01-25T17:47:26.000Z</updated>
     <summary type="html"><![CDATA[<h2>目录</h2>
 <ul>
-<li><a href="/note/node-js/current-path.html" target="blank">current-path 相关</a></li>
+<li><a href="/note/node-js/current-path.html" target="_blank">current-path 相关</a></li>
 </ul>
 ]]></summary>
     <content type="html"><![CDATA[<h2>目录</h2>
 <ul>
-<li><a href="/note/node-js/current-path.html" target="blank">current-path 相关</a></li>
+<li><a href="/note/node-js/current-path.html" target="_blank">current-path 相关</a></li>
 </ul>
 ]]></content>
     <published>2022-01-07T00:00:00.000Z</published>
@@ -4747,20 +4745,20 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <summary type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/physics/electromagnetism/charpter1.html" target="blank">第一章</a></p>
+<p><a href="/physics/electromagnetism/charpter1.html" target="_blank">第一章</a></p>
 </li>
 <li>
-<p><a href="/physics/electromagnetism/charpter2.html" target="blank">第二章</a></p>
+<p><a href="/physics/electromagnetism/charpter2.html" target="_blank">第二章</a></p>
 </li>
 </ul>
 ]]></summary>
     <content type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/physics/electromagnetism/charpter1.html" target="blank">第一章</a></p>
+<p><a href="/physics/electromagnetism/charpter1.html" target="_blank">第一章</a></p>
 </li>
 <li>
-<p><a href="/physics/electromagnetism/charpter2.html" target="blank">第二章</a></p>
+<p><a href="/physics/electromagnetism/charpter2.html" target="_blank">第二章</a></p>
 </li>
 </ul>
 ]]></content>
@@ -4772,14 +4770,14 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <id>https://mister-hope.com/physics/optism/</id>
     <link href="https://mister-hope.com/physics/optism/"/>
     <updated>2024-01-25T17:47:26.000Z</updated>
-    <summary type="html"><![CDATA[<h1>光学笔记</h1>
+    <summary type="html"><![CDATA[
 <ul>
-<li><a href="/physics/optism/charpter1.html" target="blank">第一章</a></li>
+<li><a href="/physics/optism/charpter1.html" target="_blank">第一章</a></li>
 </ul>
 ]]></summary>
-    <content type="html"><![CDATA[<h1>光学笔记</h1>
+    <content type="html"><![CDATA[
 <ul>
-<li><a href="/physics/optism/charpter1.html" target="blank">第一章</a></li>
+<li><a href="/physics/optism/charpter1.html" target="_blank">第一章</a></li>
 </ul>
 ]]></content>
     <category term="物理"/>
@@ -4790,14 +4788,14 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <id>https://mister-hope.com/physics/quatum/</id>
     <link href="https://mister-hope.com/physics/quatum/"/>
     <updated>2024-01-25T17:47:26.000Z</updated>
-    <summary type="html"><![CDATA[<h1>量子力学笔记</h1>
+    <summary type="html"><![CDATA[
 <ul>
-<li><a href="/physics/quatum/charpter1.html" target="blank">第一章</a></li>
+<li><a href="/physics/quatum/charpter1.html" target="_blank">第一章</a></li>
 </ul>
 ]]></summary>
-    <content type="html"><![CDATA[<h1>量子力学笔记</h1>
+    <content type="html"><![CDATA[
 <ul>
-<li><a href="/physics/quatum/charpter1.html" target="blank">第一章</a></li>
+<li><a href="/physics/quatum/charpter1.html" target="_blank">第一章</a></li>
 </ul>
 ]]></content>
     <category term="物理"/>
@@ -4811,31 +4809,31 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <summary type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/physics/tsp/definition.html" target="blank">定义</a></p>
+<p><a href="/physics/tsp/definition.html" target="_blank">定义</a></p>
 </li>
 <li>
-<p><a href="/physics/tsp/charpter1.html" target="blank">第一章</a></p>
+<p><a href="/physics/tsp/charpter1.html" target="_blank">第一章</a></p>
 </li>
 <li>
-<p><a href="/physics/tsp/charpter2.html" target="blank">第二章</a></p>
+<p><a href="/physics/tsp/charpter2.html" target="_blank">第二章</a></p>
 </li>
 <li>
-<p><a href="/physics/tsp/charpter3.html" target="blank">第三章</a></p>
+<p><a href="/physics/tsp/charpter3.html" target="_blank">第三章</a></p>
 </li>
 </ul>]]></summary>
     <content type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/physics/tsp/definition.html" target="blank">定义</a></p>
+<p><a href="/physics/tsp/definition.html" target="_blank">定义</a></p>
 </li>
 <li>
-<p><a href="/physics/tsp/charpter1.html" target="blank">第一章</a></p>
+<p><a href="/physics/tsp/charpter1.html" target="_blank">第一章</a></p>
 </li>
 <li>
-<p><a href="/physics/tsp/charpter2.html" target="blank">第二章</a></p>
+<p><a href="/physics/tsp/charpter2.html" target="_blank">第二章</a></p>
 </li>
 <li>
-<p><a href="/physics/tsp/charpter3.html" target="blank">第三章</a></p>
+<p><a href="/physics/tsp/charpter3.html" target="_blank">第三章</a></p>
 </li>
 </ul>
 ]]></content>
@@ -4859,45 +4857,45 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 </div>
 <ul>
 <li>
-<p><a href="/software/comsol/install.html" target="blank">软件下载与安装</a></p>
+<p><a href="/software/comsol/install.html" target="_blank">软件下载与安装</a></p>
 </li>
 <li>
-<p><a href="/software/comsol/intro.html" target="blank">有限元分析软件介绍</a></p>
+<p><a href="/software/comsol/intro.html" target="_blank">有限元分析软件介绍</a></p>
 </li>
 <li>
-<p><a href="/software/comsol/get-started.html" target="blank">快速上手 COMSOL</a></p>
+<p><a href="/software/comsol/get-started.html" target="_blank">快速上手 COMSOL</a></p>
 </li>
 <li>
-<p><a href="/software/comsol/geometry/" target="blank">几何</a></p>
+<p><a href="/software/comsol/geometry/" target="_blank">几何</a></p>
 <ul>
 <li>
-<p><a href="/software/comsol/geometry/view.html" target="blank">浏览几何</a></p>
+<p><a href="/software/comsol/geometry/view.html" target="_blank">浏览几何</a></p>
 </li>
 <li>
-<p><a href="/software/comsol/geometry/build.html" target="blank">构建几何</a></p>
+<p><a href="/software/comsol/geometry/build.html" target="_blank">构建几何</a></p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="/software/comsol/select.html" target="blank">选择</a></p>
+<p><a href="/software/comsol/select.html" target="_blank">选择</a></p>
 </li>
 <li>
-<p><a href="/software/comsol/material.html" target="blank">材料</a></p>
+<p><a href="/software/comsol/material.html" target="_blank">材料</a></p>
 </li>
 <li>
-<p><a href="/software/comsol/physic-field.html" target="blank">物理场</a></p>
+<p><a href="/software/comsol/physic-field.html" target="_blank">物理场</a></p>
 </li>
 <li>
-<p><a href="/software/comsol/mesh/" target="blank">网格</a></p>
+<p><a href="/software/comsol/mesh/" target="_blank">网格</a></p>
 </li>
 <li>
-<p><a href="/software/comsol/study.html" target="blank">研究</a></p>
+<p><a href="/software/comsol/study.html" target="_blank">研究</a></p>
 </li>
 <li>
-<p><a href="/software/comsol/result.html" target="blank">结果</a></p>
+<p><a href="/software/comsol/result.html" target="_blank">结果</a></p>
 </li>
 <li>
-<p><a href="/software/comsol/app.html" target="blank">APP</a></p>
+<p><a href="/software/comsol/app.html" target="_blank">APP</a></p>
 </li>
 </ul>
 <h2>文档</h2>
@@ -4961,60 +4959,60 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <!-- more -->
 <h2>Git 安装</h2>
 <ul>
-<li><a href="/software/git/install.html" target="blank">安装教程</a></li>
+<li><a href="/software/git/install.html" target="_blank">安装教程</a></li>
 </ul>
 <h2>Git 教程</h2>
 <ul>
 <li>
-<p><a href="/software/git/intro.html" target="blank">Git 介绍</a></p>
+<p><a href="/software/git/intro.html" target="_blank">Git 介绍</a></p>
 </li>
 <li>
-<p><a href="/software/git/create-repo.html" target="blank">创建版本库</a></p>
+<p><a href="/software/git/create-repo.html" target="_blank">创建版本库</a></p>
 </li>
 <li>
-<p><a href="/software/git/status.html" target="blank">纵向查看</a></p>
+<p><a href="/software/git/status.html" target="_blank">纵向查看</a></p>
 </li>
 <li>
-<p><a href="/software/git/recall.html" target="blank">撤销操作</a></p>
+<p><a href="/software/git/recall.html" target="_blank">撤销操作</a></p>
 </li>
 <li>
-<p><a href="/software/git/reset.html" target="blank">版本回退</a></p>
+<p><a href="/software/git/reset.html" target="_blank">版本回退</a></p>
 </li>
 <li>
-<p><a href="/software/git/working-directory.html" target="blank">工作区和暂存区</a></p>
+<p><a href="/software/git/working-directory.html" target="_blank">工作区和暂存区</a></p>
 </li>
 <li>
-<p><a href="/software/git/change.html" target="blank">修改管理</a></p>
+<p><a href="/software/git/change.html" target="_blank">修改管理</a></p>
 </li>
 <li>
-<p><a href="/software/git/remote.html" target="blank">远程仓库</a></p>
+<p><a href="/software/git/remote.html" target="_blank">远程仓库</a></p>
 </li>
 <li>
-<p><a href="/software/git/branch.html" target="blank">分支管理</a></p>
+<p><a href="/software/git/branch.html" target="_blank">分支管理</a></p>
 </li>
 <li>
-<p><a href="/software/git/tag.html" target="blank">标签管理</a></p>
+<p><a href="/software/git/tag.html" target="_blank">标签管理</a></p>
 </li>
 <li>
-<p><a href="/software/git/ignore.html" target="blank">忽略特殊文件</a></p>
+<p><a href="/software/git/ignore.html" target="_blank">忽略特殊文件</a></p>
 </li>
 </ul>
 <h2>深入 Git</h2>
 <ul>
 <li>
-<p><a href="/software/git/working.html" target="blank">Git 原理</a></p>
+<p><a href="/software/git/working.html" target="_blank">Git 原理</a></p>
 </li>
 <li>
-<p><a href="/software/git/custom.html" target="blank">自定义 Git</a></p>
+<p><a href="/software/git/custom.html" target="_blank">自定义 Git</a></p>
 </li>
 <li>
-<p><a href="/software/git/gitLFS.html" target="blank">大文件管理存储</a></p>
+<p><a href="/software/git/gitLFS.html" target="_blank">大文件管理存储</a></p>
 </li>
 <li>
-<p><a href="/software/git/server.html" target="blank">搭建 Git 服务器</a></p>
+<p><a href="/software/git/server.html" target="_blank">搭建 Git 服务器</a></p>
 </li>
 <li>
-<p><a href="/software/git/merge.html" target="blank">高级合并</a></p>
+<p><a href="/software/git/merge.html" target="_blank">高级合并</a></p>
 </li>
 </ul>
 <h2>扩展阅读</h2>
@@ -5049,7 +5047,7 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <summary type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/software/tool/power-toys.html" target="blank">PowerToys</a>: Windows 实用工具合集</p>
+<p><a href="/software/tool/power-toys.html" target="_blank">PowerToys</a>: Windows 实用工具合集</p>
 </li>
 <li>
 <p><a href="https://github.com/huiyadanli/PasteEx" target="_blank" rel="noopener noreferrer">PasteEx</a>: Paste As File 把剪贴板的内容直接粘贴为文件</p>
@@ -5061,16 +5059,16 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <p><a href="https://potplayer.daum.net/?lang=zh_CN" target="_blank" rel="noopener noreferrer">Potplayer</a>: 心目中最 NB 的视频播放器，没有之一</p>
 </li>
 <li>
-<p><a href="/software/tool/terminal/" target="blank">Terminal</a>: Windows 终端</p>
+<p><a href="/software/tool/terminal/" target="_blank">Terminal</a>: Windows 终端</p>
 </li>
 <li>
-<p><a href="/software/tool/powershell.html" target="blank">PowerShell</a>: Windows 的命令行外壳程序和脚本环境</p>
+<p><a href="/software/tool/powershell.html" target="_blank">PowerShell</a>: Windows 的命令行外壳程序和脚本环境</p>
 </li>
 </ul>]]></summary>
     <content type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/software/tool/power-toys.html" target="blank">PowerToys</a>: Windows 实用工具合集</p>
+<p><a href="/software/tool/power-toys.html" target="_blank">PowerToys</a>: Windows 实用工具合集</p>
 </li>
 <li>
 <p><a href="https://github.com/huiyadanli/PasteEx" target="_blank" rel="noopener noreferrer">PasteEx</a>: Paste As File 把剪贴板的内容直接粘贴为文件</p>
@@ -5082,10 +5080,10 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <p><a href="https://potplayer.daum.net/?lang=zh_CN" target="_blank" rel="noopener noreferrer">Potplayer</a>: 心目中最 NB 的视频播放器，没有之一</p>
 </li>
 <li>
-<p><a href="/software/tool/terminal/" target="blank">Terminal</a>: Windows 终端</p>
+<p><a href="/software/tool/terminal/" target="_blank">Terminal</a>: Windows 终端</p>
 </li>
 <li>
-<p><a href="/software/tool/powershell.html" target="blank">PowerShell</a>: Windows 的命令行外壳程序和脚本环境</p>
+<p><a href="/software/tool/powershell.html" target="_blank">PowerShell</a>: Windows 的命令行外壳程序和脚本环境</p>
 </li>
 </ul>
 ]]></content>
@@ -5123,57 +5121,57 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <h2>目录</h2>
 <ul>
 <li>
-<p><a href="/software/vscode/install.html" target="blank">安装</a></p>
+<p><a href="/software/vscode/install.html" target="_blank">安装</a></p>
 </li>
 <li>
-<p><a href="/software/vscode/get-started.html" target="blank">快速上手</a></p>
+<p><a href="/software/vscode/get-started.html" target="_blank">快速上手</a></p>
 </li>
 <li>
-<p><a href="/software/vscode/guide/" target="blank">指南</a></p>
+<p><a href="/software/vscode/guide/" target="_blank">指南</a></p>
 <ul>
 <li>
-<p><a href="/software/vscode/guide/basic.html" target="blank">基础介绍</a></p>
+<p><a href="/software/vscode/guide/basic.html" target="_blank">基础介绍</a></p>
 </li>
 <li>
-<p><a href="/software/vscode/guide/customization.html" target="blank">个性化介绍</a></p>
+<p><a href="/software/vscode/guide/customization.html" target="_blank">个性化介绍</a></p>
 </li>
 <li>
-<p><a href="/software/vscode/guide/extension.html" target="blank">扩展介绍</a></p>
+<p><a href="/software/vscode/guide/extension.html" target="_blank">扩展介绍</a></p>
 </li>
 <li>
-<p><a href="/software/vscode/guide/file.html" target="blank">文件介绍</a></p>
+<p><a href="/software/vscode/guide/file.html" target="_blank">文件介绍</a></p>
 </li>
 <li>
-<p><a href="/software/vscode/guide/edit.html" target="blank">编辑技巧</a></p>
+<p><a href="/software/vscode/guide/edit.html" target="_blank">编辑技巧</a></p>
 </li>
 <li>
-<p><a href="/software/vscode/guide/intellisense.html" target="blank">智能补全</a></p>
+<p><a href="/software/vscode/guide/intellisense.html" target="_blank">智能补全</a></p>
 </li>
 <li>
-<p><a href="/software/vscode/guide/git.html" target="blank">Git 支持</a></p>
+<p><a href="/software/vscode/guide/git.html" target="_blank">Git 支持</a></p>
 </li>
 <li>
-<p><a href="/software/vscode/guide/debug.html" target="blank">调试介绍</a></p>
+<p><a href="/software/vscode/guide/debug.html" target="_blank">调试介绍</a></p>
 </li>
 <li>
-<p><a href="/software/vscode/guide/task.html" target="blank">任务介绍</a></p>
+<p><a href="/software/vscode/guide/task.html" target="_blank">任务介绍</a></p>
 </li>
 <li>
-<p><a href="/software/vscode/guide/command.html" target="blank">命令行介绍</a></p>
+<p><a href="/software/vscode/guide/command.html" target="_blank">命令行介绍</a></p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="/software/vscode/ui.html" target="blank">VS Code 用户界面</a></p>
+<p><a href="/software/vscode/ui.html" target="_blank">VS Code 用户界面</a></p>
 </li>
 <li>
-<p><a href="/software/vscode/shortcut-key.html" target="blank">VS Code 快捷键</a></p>
+<p><a href="/software/vscode/shortcut-key.html" target="_blank">VS Code 快捷键</a></p>
 </li>
 <li>
-<p><a href="/software/vscode/settings.html" target="blank">VS Code 设置</a></p>
+<p><a href="/software/vscode/settings.html" target="_blank">VS Code 设置</a></p>
 </li>
 <li>
-<p><a href="/software/vscode/extension.html" target="blank">VS Code 推荐扩展</a></p>
+<p><a href="/software/vscode/extension.html" target="_blank">VS Code 推荐扩展</a></p>
 </li>
 </ul>
 <h2>官方文档</h2>
@@ -5200,43 +5198,43 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <summary type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/code/github/actions/intro.html" target="blank">GitHub Actions 介绍</a></p>
+<p><a href="/code/github/actions/intro.html" target="_blank">GitHub Actions 介绍</a></p>
 </li>
 <li>
-<p><a href="/code/github/actions/config.html" target="blank">Workflow 配置</a></p>
+<p><a href="/code/github/actions/config.html" target="_blank">Workflow 配置</a></p>
 </li>
 </ul>
 <h2>常用 GitHub Action</h2>
 <ul>
 <li>
-<p><a href="/code/github/actions/checkout.html" target="blank">checkout</a></p>
+<p><a href="/code/github/actions/checkout.html" target="_blank">checkout</a></p>
 </li>
 <li>
-<p><a href="/code/github/actions/cache.html" target="blank">cache</a></p>
+<p><a href="/code/github/actions/cache.html" target="_blank">cache</a></p>
 </li>
 <li>
-<p><a href="/code/github/actions/gh-pages-deploy.html" target="blank">GitHub Pages 部署</a></p>
+<p><a href="/code/github/actions/gh-pages-deploy.html" target="_blank">GitHub Pages 部署</a></p>
 </li>
 </ul>]]></summary>
     <content type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/code/github/actions/intro.html" target="blank">GitHub Actions 介绍</a></p>
+<p><a href="/code/github/actions/intro.html" target="_blank">GitHub Actions 介绍</a></p>
 </li>
 <li>
-<p><a href="/code/github/actions/config.html" target="blank">Workflow 配置</a></p>
+<p><a href="/code/github/actions/config.html" target="_blank">Workflow 配置</a></p>
 </li>
 </ul>
 <h2>常用 GitHub Action</h2>
 <ul>
 <li>
-<p><a href="/code/github/actions/checkout.html" target="blank">checkout</a></p>
+<p><a href="/code/github/actions/checkout.html" target="_blank">checkout</a></p>
 </li>
 <li>
-<p><a href="/code/github/actions/cache.html" target="blank">cache</a></p>
+<p><a href="/code/github/actions/cache.html" target="_blank">cache</a></p>
 </li>
 <li>
-<p><a href="/code/github/actions/gh-pages-deploy.html" target="blank">GitHub Pages 部署</a></p>
+<p><a href="/code/github/actions/gh-pages-deploy.html" target="_blank">GitHub Pages 部署</a></p>
 </li>
 </ul>
 <h2>官方文档</h2>
@@ -5310,9 +5308,9 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <!-- more -->
 <h2>dart 快速入门</h2>
 <ul>
-<li><a href="/code/language/dart/samples/samples.html" target="blank">案例</a></li>
-<li><a href="/code/language/dart/samples/cheatsheet.html" target="blank">概要介绍</a></li>
-<li><a href="/code/language/dart/samples/iterable.html" target="blank">遍历</a></li>
+<li><a href="/code/language/dart/samples/samples.html" target="_blank">案例</a></li>
+<li><a href="/code/language/dart/samples/cheatsheet.html" target="_blank">概要介绍</a></li>
+<li><a href="/code/language/dart/samples/iterable.html" target="_blank">遍历</a></li>
 </ul>
 <h2>官网</h2>
 <ul>
@@ -5359,51 +5357,51 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <!-- more -->
 <h2>JavaScript 是什么</h2>
 <ul>
-<li><a href="/code/language/js/intro/" target="blank">导论</a></li>
+<li><a href="/code/language/js/intro/" target="_blank">导论</a></li>
 </ul>
 <div class="hint-container tip">
 <p class="hint-container-title">有趣的历史</p>
 <p>1995 年网景公司正凭借其 Navigator 浏览器成为 Web 时代开启时最著名的第一代互联网公司。由于网景公司希望能在静态 HTML 页面上添加一些动态效果，于是叫 Brendan Eich 这哥们在两周之内设计出了 JavaScript 语言。您没看错，这哥们只用了 10 天时间 (这也是为什么至今也有人也在吐槽 JavaScript 垃圾的原因)。</p>
 <p>为什么起名叫 JavaScript? 原因是当时 Java 语言非常红火，所以网景公司就来碰瓷了，实际上两者没任何关系。</p>
 <ul>
-<li><a href="/code/language/js/intro/history.html" target="blank">更多历史介绍</a></li>
+<li><a href="/code/language/js/intro/history.html" target="_blank">更多历史介绍</a></li>
 </ul>
 </div>
 <h2>入门教程</h2>
 <ul>
-<li><a href="/code/language/js/guide/" target="blank">快速上手</a></li>
+<li><a href="/code/language/js/guide/" target="_blank">快速上手</a></li>
 </ul>
 <h2>更多教程</h2>
 <ul>
 <li>
-<p><a href="/code/language/js/types/" target="blank">数据类型</a></p>
+<p><a href="/code/language/js/types/" target="_blank">数据类型</a></p>
 </li>
 <li>
-<p><a href="/code/language/js/operators/" target="blank">运算符</a></p>
+<p><a href="/code/language/js/operators/" target="_blank">运算符</a></p>
 </li>
 <li>
-<p><a href="/code/language/js/function/" target="blank">函数</a></p>
+<p><a href="/code/language/js/function/" target="_blank">函数</a></p>
 </li>
 <li>
-<p><a href="/code/language/js/object/" target="blank">对象</a></p>
+<p><a href="/code/language/js/object/" target="_blank">对象</a></p>
 </li>
 <li>
-<p><a href="/code/language/js/browser/" target="blank">浏览器</a></p>
+<p><a href="/code/language/js/browser/" target="_blank">浏览器</a></p>
 </li>
 </ul>
 <h2>进阶</h2>
 <ul>
 <li>
-<p><a href="/code/language/js/es6/" target="blank">ES6 教程</a></p>
+<p><a href="/code/language/js/es6/" target="_blank">ES6 教程</a></p>
 </li>
 <li>
-<p><a href="/code/website/jQuery/" target="blank">JQuery</a></p>
+<p><a href="/code/website/jQuery/" target="_blank">JQuery</a></p>
 </li>
 <li>
-<p><a href="/code/language/js/error.html" target="blank">错误处理</a></p>
+<p><a href="/code/language/js/error.html" target="_blank">错误处理</a></p>
 </li>
 <li>
-<p><a href="/code/node-js/" target="blank">node.js</a></p>
+<p><a href="/code/node-js/" target="_blank">node.js</a></p>
 </li>
 </ul>
 <h2>在线教程</h2>
@@ -5527,7 +5525,7 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <h2>clang-format</h2>
 <p>clang-format 是 C/ C++ / Object-C 最流行的代码格式化工具，提供多种预设的代码风格。</p>
 <ul>
-<li><a href="/code/language/linter/clang-format.html" target="blank">查看详情</a></li>
+<li><a href="/code/language/linter/clang-format.html" target="_blank">查看详情</a></li>
 </ul>
 <h2>checkStyle</h2>
 <p>checkStyle 是比较流行的 Java linter</p>
@@ -5549,14 +5547,14 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <!-- more -->
 <h2>目录</h2>
 <ul>
-<li><a href="/code/language/markdown/intro.html" target="blank">简介</a></li>
-<li><a href="/code/language/markdown/block.html" target="blank">块元素</a></li>
-<li><a href="/code/language/markdown/inline.html" target="blank">行内元素</a></li>
-<li><a href="/code/language/markdown/extend.html" target="blank">扩展与其他内容</a></li>
+<li><a href="/code/language/markdown/intro.html" target="_blank">简介</a></li>
+<li><a href="/code/language/markdown/block.html" target="_blank">块元素</a></li>
+<li><a href="/code/language/markdown/inline.html" target="_blank">行内元素</a></li>
+<li><a href="/code/language/markdown/extend.html" target="_blank">扩展与其他内容</a></li>
 </ul>
 <h2>Markdown 效果演示</h2>
 <ul>
-<li><a href="/code/language/markdown/demo.html" target="blank">查看详情</a></li>
+<li><a href="/code/language/markdown/demo.html" target="_blank">查看详情</a></li>
 </ul>
 ]]></content>
     <category term="Markdown"/>
@@ -5602,103 +5600,103 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <h2>Python 简介</h2>
 <ul>
 <li>
-<p><a href="/code/language/python/intro/intro.html" target="blank">Python 介绍</a></p>
+<p><a href="/code/language/python/intro/intro.html" target="_blank">Python 介绍</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/intro/install.html" target="blank">Python 安装</a></p>
+<p><a href="/code/language/python/intro/install.html" target="_blank">Python 安装</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/intro/interpreter.html" target="blank">Python 解释器</a></p>
+<p><a href="/code/language/python/intro/interpreter.html" target="_blank">Python 解释器</a></p>
 </li>
 </ul>
 <h2>Python 快速入门</h2>
 <ul>
 <li>
-<p><a href="/code/language/python/guide/write.html" target="blank">第一个 Python 程序</a></p>
+<p><a href="/code/language/python/guide/write.html" target="_blank">第一个 Python 程序</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/guide/io.html" target="blank">输入与输出</a></p>
+<p><a href="/code/language/python/guide/io.html" target="_blank">输入与输出</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/guide/basic.html" target="blank">基础语法</a></p>
+<p><a href="/code/language/python/guide/basic.html" target="_blank">基础语法</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/guide/string.html" target="blank">字符串</a></p>
+<p><a href="/code/language/python/guide/string.html" target="_blank">字符串</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/guide/list-and-tuple.html" target="blank">List 和 Tuple</a></p>
+<p><a href="/code/language/python/guide/list-and-tuple.html" target="_blank">List 和 Tuple</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/guide/condition.html" target="blank">条件判断</a></p>
+<p><a href="/code/language/python/guide/condition.html" target="_blank">条件判断</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/guide/loop.html" target="blank">循环</a></p>
+<p><a href="/code/language/python/guide/loop.html" target="_blank">循环</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/guide/dict-and-set.html" target="blank">Dictionary 和 Set</a></p>
+<p><a href="/code/language/python/guide/dict-and-set.html" target="_blank">Dictionary 和 Set</a></p>
 </li>
 </ul>
 <h2>Python 函数</h2>
 <ul>
 <li>
-<p><a href="/code/language/python/function/intro.html" target="blank">函数介绍</a></p>
+<p><a href="/code/language/python/function/intro.html" target="_blank">函数介绍</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/function/define.html" target="blank">函数定义</a></p>
+<p><a href="/code/language/python/function/define.html" target="_blank">函数定义</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/function/call.html" target="blank">函数调用</a></p>
+<p><a href="/code/language/python/function/call.html" target="_blank">函数调用</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/function/argument.html" target="blank">函数参数</a></p>
+<p><a href="/code/language/python/function/argument.html" target="_blank">函数参数</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/function/recursive.html" target="blank">递归调用</a></p>
+<p><a href="/code/language/python/function/recursive.html" target="_blank">递归调用</a></p>
 </li>
 </ul>
 <h2>Python 高级语法</h2>
 <ul>
 <li>
-<p><a href="/code/language/python/advance/slice.html" target="blank">切片</a></p>
+<p><a href="/code/language/python/advance/slice.html" target="_blank">切片</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/advance/iteration.html" target="blank">迭代</a></p>
+<p><a href="/code/language/python/advance/iteration.html" target="_blank">迭代</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/advance/list-comprehensions.html" target="blank">列表生成式</a></p>
+<p><a href="/code/language/python/advance/list-comprehensions.html" target="_blank">列表生成式</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/advance/generator.html" target="blank">生成器</a></p>
+<p><a href="/code/language/python/advance/generator.html" target="_blank">生成器</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/advance/iterator.html" target="blank">迭代器</a></p>
+<p><a href="/code/language/python/advance/iterator.html" target="_blank">迭代器</a></p>
 </li>
 </ul>
 <h2>函数式编程</h2>
 <ul>
 <li>
-<p><a href="/code/language/python/functional-programming/high-order-function/intro.html" target="blank">高阶函数介绍</a></p>
+<p><a href="/code/language/python/functional-programming/high-order-function/intro.html" target="_blank">高阶函数介绍</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/functional-programming/high-order-function/map-and-reduce.html" target="blank">map / reduce</a></p>
+<p><a href="/code/language/python/functional-programming/high-order-function/map-and-reduce.html" target="_blank">map / reduce</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/functional-programming/high-order-function/filter.html" target="blank">filter</a></p>
+<p><a href="/code/language/python/functional-programming/high-order-function/filter.html" target="_blank">filter</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/functional-programming/high-order-function/sorted.html" target="blank">sorted</a></p>
+<p><a href="/code/language/python/functional-programming/high-order-function/sorted.html" target="_blank">sorted</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/functional-programming/return-function.html" target="blank">返回函数</a></p>
+<p><a href="/code/language/python/functional-programming/return-function.html" target="_blank">返回函数</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/functional-programming/anonymous-function.html" target="blank">匿名函数</a></p>
+<p><a href="/code/language/python/functional-programming/anonymous-function.html" target="_blank">匿名函数</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/functional-programming/decorator.html" target="blank">装饰器</a></p>
+<p><a href="/code/language/python/functional-programming/decorator.html" target="_blank">装饰器</a></p>
 </li>
 <li>
-<p><a href="/code/language/python/functional-programming/parital-function.html" target="blank">偏函数</a></p>
+<p><a href="/code/language/python/functional-programming/parital-function.html" target="_blank">偏函数</a></p>
 </li>
 </ul>
 <h2>相关工具</h2>
@@ -5740,46 +5738,46 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <h2>目录</h2>
 <ul>
 <li>
-<p><a href="/code/language/typescript/intro/" target="blank">简介</a></p>
+<p><a href="/code/language/typescript/intro/" target="_blank">简介</a></p>
 <ul>
-<li><a href="/code/language/typescript/intro/what-is-typescript.html" target="blank">什么是 TypeScript</a></li>
-<li><a href="/code/language/typescript/intro/get-typescript.html" target="blank">安装 TypeScript</a></li>
-<li><a href="/code/language/typescript/intro/hello-typescript.html" target="blank">Hello TypeScript</a></li>
+<li><a href="/code/language/typescript/intro/what-is-typescript.html" target="_blank">什么是 TypeScript</a></li>
+<li><a href="/code/language/typescript/intro/get-typescript.html" target="_blank">安装 TypeScript</a></li>
+<li><a href="/code/language/typescript/intro/hello-typescript.html" target="_blank">Hello TypeScript</a></li>
 </ul>
 </li>
 <li>
-<p><a href="/code/language/typescript/basics/" target="blank">基础</a></p>
+<p><a href="/code/language/typescript/basics/" target="_blank">基础</a></p>
 <ul>
-<li><a href="/code/language/typescript/basics/primitive-data-types.html" target="blank">原始数据类型</a></li>
-<li><a href="/code/language/typescript/basics/any.html" target="blank">任意值</a></li>
-<li><a href="/code/language/typescript/basics/type-inference.html" target="blank">类型推论</a></li>
-<li><a href="/code/language/typescript/basics/union-types.html" target="blank">联合类型</a></li>
-<li><a href="/code/language/typescript/basics/type-of-object-interfaces.html" target="blank">对象的类型——接口</a></li>
-<li><a href="/code/language/typescript/basics/type-of-array.html" target="blank">数组的类型</a></li>
-<li><a href="/code/language/typescript/basics/type-of-function.html" target="blank">函数的类型</a></li>
-<li><a href="/code/language/typescript/basics/type-assertion.html" target="blank">类型断言</a></li>
-<li><a href="/code/language/typescript/basics/declaration-files.html" target="blank">声明文件</a></li>
-<li><a href="/code/language/typescript/basics/built-in-objects.html" target="blank">内置对象</a></li>
+<li><a href="/code/language/typescript/basics/primitive-data-types.html" target="_blank">原始数据类型</a></li>
+<li><a href="/code/language/typescript/basics/any.html" target="_blank">任意值</a></li>
+<li><a href="/code/language/typescript/basics/type-inference.html" target="_blank">类型推论</a></li>
+<li><a href="/code/language/typescript/basics/union-types.html" target="_blank">联合类型</a></li>
+<li><a href="/code/language/typescript/basics/type-of-object-interfaces.html" target="_blank">对象的类型——接口</a></li>
+<li><a href="/code/language/typescript/basics/type-of-array.html" target="_blank">数组的类型</a></li>
+<li><a href="/code/language/typescript/basics/type-of-function.html" target="_blank">函数的类型</a></li>
+<li><a href="/code/language/typescript/basics/type-assertion.html" target="_blank">类型断言</a></li>
+<li><a href="/code/language/typescript/basics/declaration-files.html" target="_blank">声明文件</a></li>
+<li><a href="/code/language/typescript/basics/built-in-objects.html" target="_blank">内置对象</a></li>
 </ul>
 </li>
 <li>
-<p><a href="/code/language/typescript/advanced/" target="blank">进阶</a></p>
+<p><a href="/code/language/typescript/advanced/" target="_blank">进阶</a></p>
 <ul>
-<li><a href="/code/language/typescript/advanced/type-aliases.html" target="blank">类型别名</a></li>
-<li><a href="/code/language/typescript/advanced/string-literal-types.html" target="blank">字符串字面量类型</a></li>
-<li><a href="/code/language/typescript/advanced/tuple.html" target="blank">元组</a></li>
-<li><a href="/code/language/typescript/advanced/enum.html" target="blank">枚举</a></li>
-<li><a href="/code/language/typescript/advanced/class.html" target="blank">类</a></li>
-<li><a href="/code/language/typescript/advanced/class-and-interfaces.html" target="blank">类与接口</a></li>
-<li><a href="/code/language/typescript/advanced/generics.html" target="blank">泛型</a></li>
-<li><a href="/code/language/typescript/advanced/declaration-merging.html" target="blank">声明合并</a></li>
-<li><a href="/code/language/typescript/advanced/further-reading.html" target="blank">扩展阅读</a></li>
+<li><a href="/code/language/typescript/advanced/type-aliases.html" target="_blank">类型别名</a></li>
+<li><a href="/code/language/typescript/advanced/string-literal-types.html" target="_blank">字符串字面量类型</a></li>
+<li><a href="/code/language/typescript/advanced/tuple.html" target="_blank">元组</a></li>
+<li><a href="/code/language/typescript/advanced/enum.html" target="_blank">枚举</a></li>
+<li><a href="/code/language/typescript/advanced/class.html" target="_blank">类</a></li>
+<li><a href="/code/language/typescript/advanced/class-and-interfaces.html" target="_blank">类与接口</a></li>
+<li><a href="/code/language/typescript/advanced/generics.html" target="_blank">泛型</a></li>
+<li><a href="/code/language/typescript/advanced/declaration-merging.html" target="_blank">声明合并</a></li>
+<li><a href="/code/language/typescript/advanced/further-reading.html" target="_blank">扩展阅读</a></li>
 </ul>
 </li>
 <li>
-<p><a href="/code/language/typescript/engineering/" target="blank">工程</a></p>
+<p><a href="/code/language/typescript/engineering/" target="_blank">工程</a></p>
 <ul>
-<li><a href="/code/language/typescript/engineering/lint.html" target="blank">代码检查</a></li>
+<li><a href="/code/language/typescript/engineering/lint.html" target="_blank">代码检查</a></li>
 </ul>
 </li>
 </ul>
@@ -5832,7 +5830,7 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <li>纯量(scalars): 单个的、不可再分的值</li>
 </ul>
 <h2>如何打开或编辑 yaml</h2>
-<p>推荐使用 VS Code，具体详见<a href="/software/vscode/simple.html" target="blank">VS Code 简单介绍</a>。</p>
+<p>推荐使用 VS Code，具体详见<a href="/software/vscode/simple.html" target="_blank">VS Code 简单介绍</a>。</p>
 <h2>数据结构介绍</h2>
 <h3>对象</h3>
 <p>对象的一组键值对，使用冒号结构表示。</p>
@@ -5866,7 +5864,7 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <span class="token punctuation">}</span>
 </code></pre></div><h3>复合结构</h3>
 <p>对象和数组可以结合使用，形成复合结构。</p>
-<div class="language-yaml line-numbers-mode" data-ext="yml" data-title="yml"><pre class="language-yaml"><code><span class="token key atrule">languages</span><span class="token punctuation">:</span>
+<div class="language-yaml" data-ext="yml" data-title="yml"><pre class="language-yaml"><code><span class="token key atrule">languages</span><span class="token punctuation">:</span>
   <span class="token punctuation">-</span> Ruby
   <span class="token punctuation">-</span> Perl
   <span class="token punctuation">-</span> Python
@@ -5876,8 +5874,8 @@ parent<span class="token punctuation">.</span><span class="token function">remov
   <span class="token key atrule">Ruby</span><span class="token punctuation">:</span> ruby<span class="token punctuation">-</span>lang.org
   <span class="token key atrule">Python</span><span class="token punctuation">:</span> python.org
   <span class="token key atrule">Perl</span><span class="token punctuation">:</span> use.perl.org
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>转为 JavaScript 如下。</p>
-<div class="language-yaml line-numbers-mode" data-ext="yml" data-title="yml"><pre class="language-yaml"><code><span class="token punctuation">{</span>
+</code></pre></div><p>转为 JavaScript 如下。</p>
+<div class="language-yaml" data-ext="yml" data-title="yml"><pre class="language-yaml"><code><span class="token punctuation">{</span>
   <span class="token key atrule">languages</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"Ruby"</span><span class="token punctuation">,</span> <span class="token string">"Perl"</span><span class="token punctuation">,</span> <span class="token string">"Python"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token key atrule">websites</span><span class="token punctuation">:</span>
     <span class="token punctuation">{</span>
@@ -5887,7 +5885,7 @@ parent<span class="token punctuation">.</span><span class="token function">remov
       <span class="token key atrule">Perl</span><span class="token punctuation">:</span> <span class="token string">"use.perl.org"</span><span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>纯量</h3>
+</code></pre></div><h3>纯量</h3>
 <p>纯量是最基本的、不可再分的值。以下数据类型都属于 JavaScript 的纯量。</p>
 <ul>
 <li>字符串</li>
@@ -5988,7 +5986,7 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token punctuation">{</span> <span class="token literal-property property">s1</span><span class="token operator">:</span> <span class="token string">'Foo\n'</span><span class="token punctuation">,</span> <span class="token literal-property property">s2</span><span class="token operator">:</span> <span class="token string">'Foo\n\n\n'</span><span class="token punctuation">,</span> <span class="token literal-property property">s3</span><span class="token operator">:</span> <span class="token string">'Foo'</span> <span class="token punctuation">}</span>
 </code></pre></div><h2>引用</h2>
 <p>锚点 <code>&amp;</code> 和别名 <code>*</code>，可以用来引用。</p>
-<div class="language-yaml line-numbers-mode" data-ext="yml" data-title="yml"><pre class="language-yaml"><code><span class="token key atrule">defaults</span><span class="token punctuation">:</span> <span class="token important">&amp;defaults</span>
+<div class="language-yaml" data-ext="yml" data-title="yml"><pre class="language-yaml"><code><span class="token key atrule">defaults</span><span class="token punctuation">:</span> <span class="token important">&amp;defaults</span>
   <span class="token key atrule">adapter</span><span class="token punctuation">:</span> postgres
   <span class="token key atrule">host</span><span class="token punctuation">:</span> localhost
 
@@ -5999,8 +5997,8 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <span class="token key atrule">test</span><span class="token punctuation">:</span>
   <span class="token key atrule">database</span><span class="token punctuation">:</span> myapp_test
   <span class="token key atrule">&lt;&lt;</span><span class="token punctuation">:</span> <span class="token important">*defaults</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>等同于下面的代码。</p>
-<div class="language-yaml line-numbers-mode" data-ext="yml" data-title="yml"><pre class="language-yaml"><code><span class="token key atrule">defaults</span><span class="token punctuation">:</span>
+</code></pre></div><p>等同于下面的代码。</p>
+<div class="language-yaml" data-ext="yml" data-title="yml"><pre class="language-yaml"><code><span class="token key atrule">defaults</span><span class="token punctuation">:</span>
   <span class="token key atrule">adapter</span><span class="token punctuation">:</span> postgres
   <span class="token key atrule">host</span><span class="token punctuation">:</span> localhost
 
@@ -6013,7 +6011,7 @@ parent<span class="token punctuation">.</span><span class="token function">remov
   <span class="token key atrule">database</span><span class="token punctuation">:</span> myapp_test
   <span class="token key atrule">adapter</span><span class="token punctuation">:</span> postgres
   <span class="token key atrule">host</span><span class="token punctuation">:</span> localhost
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code>&amp;</code> 用来建立锚点(defaults)，<code>&lt;&lt;</code> 表示合并到当前数据，<code>*</code> 用来引用锚点。</p>
+</code></pre></div><p><code>&amp;</code> 用来建立锚点(defaults)，<code>&lt;&lt;</code> 表示合并到当前数据，<code>*</code> 用来引用锚点。</p>
 <p>下面是另一个例子。</p>
 <div class="language-yaml" data-ext="yml" data-title="yml"><pre class="language-yaml"><code><span class="token punctuation">-</span> <span class="token important">&amp;showell</span> Steve
 <span class="token punctuation">-</span> Clark
@@ -6039,7 +6037,7 @@ parent<span class="token punctuation">.</span><span class="token function">remov
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre></div><p>从 JavaScript 对象还原到 yaml 文件的代码如下。</p>
-<div class="language-javascript line-numbers-mode" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token keyword">var</span> yaml <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"js-yaml"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<div class="language-javascript" data-ext="js" data-title="js"><pre class="language-javascript"><code><span class="token keyword">var</span> yaml <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"js-yaml"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">var</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"fs"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
@@ -6054,7 +6052,7 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content>
+</code></pre></div>]]></content>
     <category term="YAML"/>
     <published>2020-07-26T00:00:00.000Z</published>
   </entry>
@@ -6069,7 +6067,7 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <p>将界面开发的复杂过程转换为编写简单的 yaml 文件。开发门槛低，</p>
 </li>
 <li>
-<p>拥有详细的开发文档说明，简单易懂，页面文件自述性高，没有开发基础的人也可以经过简单阅读后看懂页面文件大体描述内容。<a href="/code/mini-app/framework/demo.html" target="blank">查看例子点这里</a></p>
+<p>拥有详细的开发文档说明，简单易懂，页面文件自述性高，没有开发基础的人也可以经过简单阅读后看懂页面文件大体描述内容。<a href="/code/mini-app/framework/demo.html" target="_blank">查看例子点这里</a></p>
 </li>
 <li>
 <p>开发者无需着眼于界面样式或是功能的实现，只需着眼于在 yaml 文件中添加渲染界面所需参数并赋值，即可完成界面编写。开发者只需在开发过程中按照开发说明录入参数，并注意格式即可。</p>
@@ -6081,7 +6079,7 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <p>将界面开发的复杂过程转换为编写简单的 yaml 文件。开发门槛低，</p>
 </li>
 <li>
-<p>拥有详细的开发文档说明，简单易懂，页面文件自述性高，没有开发基础的人也可以经过简单阅读后看懂页面文件大体描述内容。<a href="/code/mini-app/framework/demo.html" target="blank">查看例子点这里</a></p>
+<p>拥有详细的开发文档说明，简单易懂，页面文件自述性高，没有开发基础的人也可以经过简单阅读后看懂页面文件大体描述内容。<a href="/code/mini-app/framework/demo.html" target="_blank">查看例子点这里</a></p>
 </li>
 <li>
 <p>开发者无需着眼于界面样式或是功能的实现，只需着眼于在 yaml 文件中添加渲染界面所需参数并赋值，即可完成界面编写。开发者只需在开发过程中按照开发说明录入参数，并注意格式即可。</p>
@@ -6099,143 +6097,143 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <summary type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/code/mini-app/guide/file-structure.html" target="blank">文件结构</a></p>
+<p><a href="/code/mini-app/guide/file-structure.html" target="_blank">文件结构</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/env.html" target="blank">运行环境</a></p>
+<p><a href="/code/mini-app/guide/env.html" target="_blank">运行环境</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/config/" target="blank">小程序配置</a></p>
+<p><a href="/code/mini-app/guide/config/" target="_blank">小程序配置</a></p>
 <ul>
 <li>
-<p><a href="/code/mini-app/guide/config/app-config.html" target="blank">全局配置</a></p>
+<p><a href="/code/mini-app/guide/config/app-config.html" target="_blank">全局配置</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/config/page-config.html" target="blank">页面配置</a></p>
+<p><a href="/code/mini-app/guide/config/page-config.html" target="_blank">页面配置</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/config/sitemap-config.html" target="blank">sitemap 配置</a></p>
+<p><a href="/code/mini-app/guide/config/sitemap-config.html" target="_blank">sitemap 配置</a></p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/frame/" target="blank">小程序框架</a></p>
+<p><a href="/code/mini-app/guide/frame/" target="_blank">小程序框架</a></p>
 <ul>
 <li>
-<p><a href="/code/mini-app/guide/frame/intro.html" target="blank">框架介绍</a></p>
+<p><a href="/code/mini-app/guide/frame/intro.html" target="_blank">框架介绍</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/frame/scene.html" target="blank">场景值</a> </p>
+<p><a href="/code/mini-app/guide/frame/scene.html" target="_blank">场景值</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/frame/env.html" target="blank">运行环境</a> </p>
+<p><a href="/code/mini-app/guide/frame/env.html" target="_blank">运行环境</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/frame/mechanism.html" target="blank">运行机制</a> </p>
+<p><a href="/code/mini-app/guide/frame/mechanism.html" target="_blank">运行机制</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/frame/update.html" target="blank">更新机制</a> </p>
+<p><a href="/code/mini-app/guide/frame/update.html" target="_blank">更新机制</a> </p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/" target="blank">逻辑层</a></p>
+<p><a href="/code/mini-app/guide/service/" target="_blank">逻辑层</a></p>
 <ul>
 <li>
-<p><a href="/code/mini-app/guide/service/lifetime.html" target="blank">生命周期</a></p>
+<p><a href="/code/mini-app/guide/service/lifetime.html" target="_blank">生命周期</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/route.html" target="blank">路由</a></p>
+<p><a href="/code/mini-app/guide/service/route.html" target="_blank">路由</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/register.html" target="blank">注册</a></p>
+<p><a href="/code/mini-app/guide/service/register.html" target="_blank">注册</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/app.html" target="blank">App()</a></p>
+<p><a href="/code/mini-app/guide/service/app.html" target="_blank">App()</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/page.html" target="blank">Page()</a></p>
+<p><a href="/code/mini-app/guide/service/page.html" target="_blank">Page()</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/run.html" target="blank">运行</a></p>
+<p><a href="/code/mini-app/guide/service/run.html" target="_blank">运行</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/module.html" target="blank">模块化</a></p>
+<p><a href="/code/mini-app/guide/service/module.html" target="_blank">模块化</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/api/" target="blank">API</a></p>
+<p><a href="/code/mini-app/guide/service/api/" target="_blank">API</a></p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/" target="blank">视图层</a></p>
+<p><a href="/code/mini-app/guide/view/" target="_blank">视图层</a></p>
 <ul>
 <li>
-<p><a href="/code/mini-app/guide/view/wxml.html" target="blank">WXML</a></p>
+<p><a href="/code/mini-app/guide/view/wxml.html" target="_blank">WXML</a></p>
 <ul>
 <li>
-<p><a href="/code/mini-app/guide/view/data-bind.html" target="blank">数据绑定</a></p>
+<p><a href="/code/mini-app/guide/view/data-bind.html" target="_blank">数据绑定</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/condition-render.html" target="blank">条件渲染</a></p>
+<p><a href="/code/mini-app/guide/view/condition-render.html" target="_blank">条件渲染</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/list-render.html" target="blank">列表渲染</a></p>
+<p><a href="/code/mini-app/guide/view/list-render.html" target="_blank">列表渲染</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/template.html" target="blank">模板</a></p>
+<p><a href="/code/mini-app/guide/view/template.html" target="_blank">模板</a></p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/wxss.html" target="blank">WXSS</a></p>
+<p><a href="/code/mini-app/guide/view/wxss.html" target="_blank">WXSS</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/wxs.html" target="blank">WXS</a></p>
+<p><a href="/code/mini-app/guide/view/wxs.html" target="_blank">WXS</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/event.html" target="blank">事件</a></p>
+<p><a href="/code/mini-app/guide/view/event.html" target="_blank">事件</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/component.html" target="blank">基础组件</a></p>
+<p><a href="/code/mini-app/guide/view/component.html" target="_blank">基础组件</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/animation.html" target="blank">动画</a> </p>
+<p><a href="/code/mini-app/guide/view/animation.html" target="_blank">动画</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/wxs.html" target="blank">WXS</a> </p>
+<p><a href="/code/mini-app/guide/view/wxs.html" target="_blank">WXS</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/wxs-event.html" target="blank">WXS 事件</a> </p>
+<p><a href="/code/mini-app/guide/view/wxs-event.html" target="_blank">WXS 事件</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/model.html" target="blank">建议双向绑定</a> </p>
+<p><a href="/code/mini-app/guide/view/model.html" target="_blank">建议双向绑定</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/selector.html" target="blank">获取界面上的节点信息</a> </p>
+<p><a href="/code/mini-app/guide/view/selector.html" target="_blank">获取界面上的节点信息</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/selector.html" target="blank">相应显示区域变化</a> </p>
+<p><a href="/code/mini-app/guide/view/selector.html" target="_blank">相应显示区域变化</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/rendering-cache.html" target="blank">初始渲染缓存</a> </p>
+<p><a href="/code/mini-app/guide/view/rendering-cache.html" target="_blank">初始渲染缓存</a> </p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/ability/" target="blank">小程序能力</a></p>
+<p><a href="/code/mini-app/guide/ability/" target="_blank">小程序能力</a></p>
 <ul>
 <li>
-<p><a href="/code/mini-app/guide/ability/network.html" target="blank">网络请求</a></p>
+<p><a href="/code/mini-app/guide/ability/network.html" target="_blank">网络请求</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/ability/storage.html" target="blank">存储</a></p>
+<p><a href="/code/mini-app/guide/ability/storage.html" target="_blank">存储</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/ability/file-system.html" target="blank">文件系统</a></p>
+<p><a href="/code/mini-app/guide/ability/file-system.html" target="_blank">文件系统</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/ability/debug.html" target="blank">调试</a></p>
+<p><a href="/code/mini-app/guide/ability/debug.html" target="_blank">调试</a></p>
 </li>
 </ul>
 </li>
@@ -6243,143 +6241,143 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <content type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/code/mini-app/guide/file-structure.html" target="blank">文件结构</a></p>
+<p><a href="/code/mini-app/guide/file-structure.html" target="_blank">文件结构</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/env.html" target="blank">运行环境</a></p>
+<p><a href="/code/mini-app/guide/env.html" target="_blank">运行环境</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/config/" target="blank">小程序配置</a></p>
+<p><a href="/code/mini-app/guide/config/" target="_blank">小程序配置</a></p>
 <ul>
 <li>
-<p><a href="/code/mini-app/guide/config/app-config.html" target="blank">全局配置</a></p>
+<p><a href="/code/mini-app/guide/config/app-config.html" target="_blank">全局配置</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/config/page-config.html" target="blank">页面配置</a></p>
+<p><a href="/code/mini-app/guide/config/page-config.html" target="_blank">页面配置</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/config/sitemap-config.html" target="blank">sitemap 配置</a></p>
+<p><a href="/code/mini-app/guide/config/sitemap-config.html" target="_blank">sitemap 配置</a></p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/frame/" target="blank">小程序框架</a></p>
+<p><a href="/code/mini-app/guide/frame/" target="_blank">小程序框架</a></p>
 <ul>
 <li>
-<p><a href="/code/mini-app/guide/frame/intro.html" target="blank">框架介绍</a></p>
+<p><a href="/code/mini-app/guide/frame/intro.html" target="_blank">框架介绍</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/frame/scene.html" target="blank">场景值</a> </p>
+<p><a href="/code/mini-app/guide/frame/scene.html" target="_blank">场景值</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/frame/env.html" target="blank">运行环境</a> </p>
+<p><a href="/code/mini-app/guide/frame/env.html" target="_blank">运行环境</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/frame/mechanism.html" target="blank">运行机制</a> </p>
+<p><a href="/code/mini-app/guide/frame/mechanism.html" target="_blank">运行机制</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/frame/update.html" target="blank">更新机制</a> </p>
+<p><a href="/code/mini-app/guide/frame/update.html" target="_blank">更新机制</a> </p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/" target="blank">逻辑层</a></p>
+<p><a href="/code/mini-app/guide/service/" target="_blank">逻辑层</a></p>
 <ul>
 <li>
-<p><a href="/code/mini-app/guide/service/lifetime.html" target="blank">生命周期</a></p>
+<p><a href="/code/mini-app/guide/service/lifetime.html" target="_blank">生命周期</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/route.html" target="blank">路由</a></p>
+<p><a href="/code/mini-app/guide/service/route.html" target="_blank">路由</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/register.html" target="blank">注册</a></p>
+<p><a href="/code/mini-app/guide/service/register.html" target="_blank">注册</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/app.html" target="blank">App()</a></p>
+<p><a href="/code/mini-app/guide/service/app.html" target="_blank">App()</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/page.html" target="blank">Page()</a></p>
+<p><a href="/code/mini-app/guide/service/page.html" target="_blank">Page()</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/run.html" target="blank">运行</a></p>
+<p><a href="/code/mini-app/guide/service/run.html" target="_blank">运行</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/module.html" target="blank">模块化</a></p>
+<p><a href="/code/mini-app/guide/service/module.html" target="_blank">模块化</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/service/api/" target="blank">API</a></p>
+<p><a href="/code/mini-app/guide/service/api/" target="_blank">API</a></p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/" target="blank">视图层</a></p>
+<p><a href="/code/mini-app/guide/view/" target="_blank">视图层</a></p>
 <ul>
 <li>
-<p><a href="/code/mini-app/guide/view/wxml.html" target="blank">WXML</a></p>
+<p><a href="/code/mini-app/guide/view/wxml.html" target="_blank">WXML</a></p>
 <ul>
 <li>
-<p><a href="/code/mini-app/guide/view/data-bind.html" target="blank">数据绑定</a></p>
+<p><a href="/code/mini-app/guide/view/data-bind.html" target="_blank">数据绑定</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/condition-render.html" target="blank">条件渲染</a></p>
+<p><a href="/code/mini-app/guide/view/condition-render.html" target="_blank">条件渲染</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/list-render.html" target="blank">列表渲染</a></p>
+<p><a href="/code/mini-app/guide/view/list-render.html" target="_blank">列表渲染</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/template.html" target="blank">模板</a></p>
+<p><a href="/code/mini-app/guide/view/template.html" target="_blank">模板</a></p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/wxss.html" target="blank">WXSS</a></p>
+<p><a href="/code/mini-app/guide/view/wxss.html" target="_blank">WXSS</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/wxs.html" target="blank">WXS</a></p>
+<p><a href="/code/mini-app/guide/view/wxs.html" target="_blank">WXS</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/event.html" target="blank">事件</a></p>
+<p><a href="/code/mini-app/guide/view/event.html" target="_blank">事件</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/component.html" target="blank">基础组件</a></p>
+<p><a href="/code/mini-app/guide/view/component.html" target="_blank">基础组件</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/animation.html" target="blank">动画</a> </p>
+<p><a href="/code/mini-app/guide/view/animation.html" target="_blank">动画</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/wxs.html" target="blank">WXS</a> </p>
+<p><a href="/code/mini-app/guide/view/wxs.html" target="_blank">WXS</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/wxs-event.html" target="blank">WXS 事件</a> </p>
+<p><a href="/code/mini-app/guide/view/wxs-event.html" target="_blank">WXS 事件</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/model.html" target="blank">建议双向绑定</a> </p>
+<p><a href="/code/mini-app/guide/view/model.html" target="_blank">建议双向绑定</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/selector.html" target="blank">获取界面上的节点信息</a> </p>
+<p><a href="/code/mini-app/guide/view/selector.html" target="_blank">获取界面上的节点信息</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/selector.html" target="blank">相应显示区域变化</a> </p>
+<p><a href="/code/mini-app/guide/view/selector.html" target="_blank">相应显示区域变化</a> </p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/view/rendering-cache.html" target="blank">初始渲染缓存</a> </p>
+<p><a href="/code/mini-app/guide/view/rendering-cache.html" target="_blank">初始渲染缓存</a> </p>
 </li>
 </ul>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/ability/" target="blank">小程序能力</a></p>
+<p><a href="/code/mini-app/guide/ability/" target="_blank">小程序能力</a></p>
 <ul>
 <li>
-<p><a href="/code/mini-app/guide/ability/network.html" target="blank">网络请求</a></p>
+<p><a href="/code/mini-app/guide/ability/network.html" target="_blank">网络请求</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/ability/storage.html" target="blank">存储</a></p>
+<p><a href="/code/mini-app/guide/ability/storage.html" target="_blank">存储</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/ability/file-system.html" target="blank">文件系统</a></p>
+<p><a href="/code/mini-app/guide/ability/file-system.html" target="_blank">文件系统</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/guide/ability/debug.html" target="blank">调试</a></p>
+<p><a href="/code/mini-app/guide/ability/debug.html" target="_blank">调试</a></p>
 </li>
 </ul>
 </li>
@@ -6396,31 +6394,31 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <summary type="html"><![CDATA[<h2>工具</h2>
 <ul>
 <li>
-<p><a href="/code/mini-app/tools/interface.html" target="blank">工具页面简介</a></p>
+<p><a href="/code/mini-app/tools/interface.html" target="_blank">工具页面简介</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/tools/debug.html" target="blank">调试</a></p>
+<p><a href="/code/mini-app/tools/debug.html" target="_blank">调试</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/tools/npm.html" target="blank">npm</a></p>
+<p><a href="/code/mini-app/tools/npm.html" target="_blank">npm</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/tools/audit.html" target="blank">体验评分</a></p>
+<p><a href="/code/mini-app/tools/audit.html" target="_blank">体验评分</a></p>
 </li>
 </ul>]]></summary>
     <content type="html"><![CDATA[<h2>工具</h2>
 <ul>
 <li>
-<p><a href="/code/mini-app/tools/interface.html" target="blank">工具页面简介</a></p>
+<p><a href="/code/mini-app/tools/interface.html" target="_blank">工具页面简介</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/tools/debug.html" target="blank">调试</a></p>
+<p><a href="/code/mini-app/tools/debug.html" target="_blank">调试</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/tools/npm.html" target="blank">npm</a></p>
+<p><a href="/code/mini-app/tools/npm.html" target="_blank">npm</a></p>
 </li>
 <li>
-<p><a href="/code/mini-app/tools/audit.html" target="blank">体验评分</a></p>
+<p><a href="/code/mini-app/tools/audit.html" target="_blank">体验评分</a></p>
 </li>
 </ul>
 ]]></content>
@@ -6438,7 +6436,7 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <!-- more -->
 <h2>目录</h2>
 <ul>
-<li><a href="/code/vue/router/get-started.html" target="blank">快速上手 Vue Router</a></li>
+<li><a href="/code/vue/router/get-started.html" target="_blank">快速上手 Vue Router</a></li>
 </ul>
 <h2>官方文档</h2>
 <ul>
@@ -6470,21 +6468,21 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <h2>目录</h2>
 <ul>
 <li>
-<p><a href="/code/website/css/guide/" target="blank">快速上手</a></p>
+<p><a href="/code/website/css/guide/" target="_blank">快速上手</a></p>
 <ul>
-<li><a href="/code/website/css/guide/selector.html" target="blank">CSS 选择器</a></li>
-<li><a href="/code/website/css/guide/declaration.html" target="blank">CSS 声明</a></li>
-<li><a href="/code/website/css/guide/import.html" target="blank">CSS 引入</a></li>
-<li><a href="/code/website/css/guide/common.html" target="blank">CSS 常用属性介绍</a></li>
-<li><a href="/code/website/css/guide/box.html" target="blank">CSS 盒模型</a></li>
+<li><a href="/code/website/css/guide/selector.html" target="_blank">CSS 选择器</a></li>
+<li><a href="/code/website/css/guide/declaration.html" target="_blank">CSS 声明</a></li>
+<li><a href="/code/website/css/guide/import.html" target="_blank">CSS 引入</a></li>
+<li><a href="/code/website/css/guide/common.html" target="_blank">CSS 常用属性介绍</a></li>
+<li><a href="/code/website/css/guide/box.html" target="_blank">CSS 盒模型</a></li>
 </ul>
 </li>
 <li>
-<p><a href="/code/website/css/layout/" target="blank">CSS 布局介绍</a></p>
+<p><a href="/code/website/css/layout/" target="_blank">CSS 布局介绍</a></p>
 <ul>
-<li><a href="/code/website/css/layout/flex.html" target="blank">CSS 弹性模型</a></li>
-<li><a href="/code/website/css/layout/exercise.html" target="blank">CSS 布局实战</a></li>
-<li><a href="/code/website/css/layout/grid.html" target="blank">CSS 网格模型</a></li>
+<li><a href="/code/website/css/layout/flex.html" target="_blank">CSS 弹性模型</a></li>
+<li><a href="/code/website/css/layout/exercise.html" target="_blank">CSS 布局实战</a></li>
+<li><a href="/code/website/css/layout/grid.html" target="_blank">CSS 网格模型</a></li>
 </ul>
 </li>
 <li>
@@ -6568,11 +6566,11 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <!-- more -->
 <h2>HTML</h2>
 <ul>
-<li><a href="/code/website/emmet/html.html" target="blank">HTML Emmet 语法</a></li>
+<li><a href="/code/website/emmet/html.html" target="_blank">HTML Emmet 语法</a></li>
 </ul>
 <h2>CSS</h2>
 <ul>
-<li><a href="/code/website/emmet/css.html" target="blank">CSS Emmet 语法</a></li>
+<li><a href="/code/website/emmet/css.html" target="_blank">CSS Emmet 语法</a></li>
 </ul>
 <h2>其他功能</h2>
 <p>Emmet 还提供了很多内置功能，在 VS Code 中，您可以按下 <code>F1</code> 并输入 <code>emmet</code> 来查看功能列表。详细的功能列表说明请见 <a href="https://docs.emmet.io/actions/" target="_blank" rel="noopener noreferrer">Emmet 文档</a></p>
@@ -6595,22 +6593,22 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 </div>
 <h2>初学者教程</h2>
 <ul>
-<li><a href="/code/website/html/guide/" target="blank">HTML 快速入门</a></li>
-<li><a href="/code/website/html/guide/tag.html" target="blank">HTML 常用标签</a></li>
+<li><a href="/code/website/html/guide/" target="_blank">HTML 快速入门</a></li>
+<li><a href="/code/website/html/guide/tag.html" target="_blank">HTML 常用标签</a></li>
 </ul>
 <h2>HTML 教程</h2>
 <ul>
-<li><a href="/code/website/html/intro/history.html" target="blank">历史</a></li>
-<li><a href="/code/website/html/intro/head.html" target="blank">Head 标签</a></li>
-<li><a href="/code/website/html/intro/basic.html" target="blank">基本标签</a></li>
-<li><a href="/code/website/html/intro/link.html" target="blank">链接</a></li>
-<li><a href="/code/website/html/intro/image.html" target="blank">图片</a></li>
-<li><a href="/code/website/html/intro/svg.html" target="blank">矢量图形</a></li>
-<li><a href="/code/website/html/intro/media.html" target="blank">视频与音频</a></li>
-<li><a href="/code/website/html/intro/table.html" target="blank">表格</a></li>
-<li><a href="/code/website/html/intro/embed.html" target="blank">嵌入</a></li>
-<li><a href="/code/website/html/intro/format.html" target="blank">格式化文档</a></li>
-<li><a href="/code/website/html/intro/layout.html" target="blank">网站布局</a></li>
+<li><a href="/code/website/html/intro/history.html" target="_blank">历史</a></li>
+<li><a href="/code/website/html/intro/head.html" target="_blank">Head 标签</a></li>
+<li><a href="/code/website/html/intro/basic.html" target="_blank">基本标签</a></li>
+<li><a href="/code/website/html/intro/link.html" target="_blank">链接</a></li>
+<li><a href="/code/website/html/intro/image.html" target="_blank">图片</a></li>
+<li><a href="/code/website/html/intro/svg.html" target="_blank">矢量图形</a></li>
+<li><a href="/code/website/html/intro/media.html" target="_blank">视频与音频</a></li>
+<li><a href="/code/website/html/intro/table.html" target="_blank">表格</a></li>
+<li><a href="/code/website/html/intro/embed.html" target="_blank">嵌入</a></li>
+<li><a href="/code/website/html/intro/format.html" target="_blank">格式化文档</a></li>
+<li><a href="/code/website/html/intro/layout.html" target="_blank">网站布局</a></li>
 </ul>
 <h2>HTML 参考</h2>
 <ul>
@@ -6658,7 +6656,7 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <p class="hint-container-title">提示</p>
 <p>由于目前前端应用的愈加复杂，前端开发者大多数转向 MVVM 框架，目前世界比较流行的三大 MVVM 框架是 Vue React Angular。可以说，在 2023 年，<strong>jQuery 已经过时了</strong>!</p>
 <p>不过 jQuery 无论说从代码实现还是从写法上，到今天都是值得借鉴的。</p>
-<p>所以如果您只想简单了解并掌握前端开发，而不是深入地从事相关行业，您可以直接 <a href="/code/vue/" target="blank">跳过本章节</a>。</p>
+<p>所以如果您只想简单了解并掌握前端开发，而不是深入地从事相关行业，您可以直接 <a href="/code/vue/" target="_blank">跳过本章节</a>。</p>
 <p>本章节应以理解写法与思路为主，无需刻意记忆。</p>
 </div>
 ]]></summary>
@@ -6667,35 +6665,35 @@ parent<span class="token punctuation">.</span><span class="token function">remov
 <p class="hint-container-title">提示</p>
 <p>由于目前前端应用的愈加复杂，前端开发者大多数转向 MVVM 框架，目前世界比较流行的三大 MVVM 框架是 Vue React Angular。可以说，在 2023 年，<strong>jQuery 已经过时了</strong>!</p>
 <p>不过 jQuery 无论说从代码实现还是从写法上，到今天都是值得借鉴的。</p>
-<p>所以如果您只想简单了解并掌握前端开发，而不是深入地从事相关行业，您可以直接 <a href="/code/vue/" target="blank">跳过本章节</a>。</p>
+<p>所以如果您只想简单了解并掌握前端开发，而不是深入地从事相关行业，您可以直接 <a href="/code/vue/" target="_blank">跳过本章节</a>。</p>
 <p>本章节应以理解写法与思路为主，无需刻意记忆。</p>
 </div>
 <!-- more -->
 <h2>教程目录</h2>
 <ul>
 <li>
-<p><a href="/code/website/jQuery/intro.html" target="blank">jQuery 简介</a></p>
+<p><a href="/code/website/jQuery/intro.html" target="_blank">jQuery 简介</a></p>
 </li>
 <li>
-<p><a href="/code/website/jQuery/selector.html" target="blank">选择器</a></p>
+<p><a href="/code/website/jQuery/selector.html" target="_blank">选择器</a></p>
 </li>
 <li>
-<p><a href="/code/website/jQuery/operate-dom.html" target="blank">操作 DOM</a></p>
+<p><a href="/code/website/jQuery/operate-dom.html" target="_blank">操作 DOM</a></p>
 </li>
 <li>
-<p><a href="/code/website/jQuery/modify-dom.html" target="blank">修改 DOM 结构</a></p>
+<p><a href="/code/website/jQuery/modify-dom.html" target="_blank">修改 DOM 结构</a></p>
 </li>
 <li>
-<p><a href="/code/website/jQuery/event.html" target="blank">事件</a></p>
+<p><a href="/code/website/jQuery/event.html" target="_blank">事件</a></p>
 </li>
 <li>
-<p><a href="/code/website/jQuery/animation.html" target="blank">动画</a></p>
+<p><a href="/code/website/jQuery/animation.html" target="_blank">动画</a></p>
 </li>
 <li>
-<p><a href="/code/website/jQuery/ajax.html" target="blank">Ajax</a></p>
+<p><a href="/code/website/jQuery/ajax.html" target="_blank">Ajax</a></p>
 </li>
 <li>
-<p><a href="/code/website/jQuery/extend.html" target="blank">扩展</a></p>
+<p><a href="/code/website/jQuery/extend.html" target="_blank">扩展</a></p>
 </li>
 </ul>
 ]]></content>
@@ -6710,10 +6708,10 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <summary type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/software/comsol/geometry/view.html" target="blank">浏览几何</a></p>
+<p><a href="/software/comsol/geometry/view.html" target="_blank">浏览几何</a></p>
 </li>
 <li>
-<p><a href="/software/comsol/geometry/build.html" target="blank">构建几何</a></p>
+<p><a href="/software/comsol/geometry/build.html" target="_blank">构建几何</a></p>
 </li>
 </ul>
 <h2>官方文档</h2>
@@ -6735,10 +6733,10 @@ parent<span class="token punctuation">.</span><span class="token function">remov
     <content type="html"><![CDATA[<h2>目录</h2>
 <ul>
 <li>
-<p><a href="/software/comsol/geometry/view.html" target="blank">浏览几何</a></p>
+<p><a href="/software/comsol/geometry/view.html" target="_blank">浏览几何</a></p>
 </li>
 <li>
-<p><a href="/software/comsol/geometry/build.html" target="blank">构建几何</a></p>
+<p><a href="/software/comsol/geometry/build.html" target="_blank">构建几何</a></p>
 </li>
 </ul>
 <h2>官方文档</h2>

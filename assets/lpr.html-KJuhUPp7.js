@@ -1,2 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as a,c as s,b as t}from"./app-W9Dk-dRG.js";const c={},n=t(`<h1 id="lpr" tabindex="-1"><a class="header-anchor" href="#lpr"><span>lpr</span></a></h1><p><code>lpr</code> 命令用于打印文件。</p><div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code><span class="token function">lpr</span> filename
-</code></pre></div>`,3),r=[n];function o(l,p){return a(),s("div",null,r)}const _=e(c,[["render",o],["__file","lpr.html.vue"]]);export{_ as default};

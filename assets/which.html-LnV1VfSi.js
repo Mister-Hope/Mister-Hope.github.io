@@ -1,3 +1,0 @@
-import{_ as e}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as c,c as a,b as s}from"./app-W9Dk-dRG.js";const n={},o=s(`<h1 id="which" tabindex="-1"><a class="header-anchor" href="#which"><span>which</span></a></h1><p><code>which</code> 命令根据 <code>PATH</code> 环境变量指定的顺序，返回最早发现某个命令的位置。即不指定路径时，实际执行的命令的完整路径。</p><div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code>$ <span class="token function">which</span> <span class="token function">node</span>
-/usr/bin/node
-</code></pre></div>`,3),t=[o];function h(i,d){return c(),a("div",null,t)}const _=e(n,[["render",h],["__file","which.html.vue"]]);export{_ as default};
