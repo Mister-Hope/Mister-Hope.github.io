@@ -24,8 +24,8 @@ dependencies:
     specifier: 3.2.2
     version: 3.2.2
   mermaid:
-    specifier: 10.7.0
-    version: 10.7.0
+    specifier: 10.8.0
+    version: 10.8.0
   reveal.js:
     specifier: 5.0.4
     version: 5.0.4
@@ -49,7 +49,7 @@ dependencies:
     version: 2.0.0-rc.16(sass-loader@14.0.0)(vuepress@2.0.0-rc.2)
   vuepress-theme-hope:
     specifier: 2.0.0-rc.16
-    version: 2.0.0-rc.16(@vuepress/plugin-docsearch@2.0.0-rc.1)(@waline/client@3.0.0-alpha.10)(flowchart.ts@3.0.0)(markdown-it@14.0.0)(mathjax-full@3.2.2)(mermaid@10.7.0)(reveal.js@5.0.4)(sass-loader@14.0.0)(vuepress-plugin-feed2@2.0.0-rc.16)(vuepress-plugin-pwa2@2.0.0-rc.16)(vuepress@2.0.0-rc.2)
+    version: 2.0.0-rc.16(@vuepress/plugin-docsearch@2.0.0-rc.1)(@waline/client@3.0.0-alpha.10)(flowchart.ts@3.0.0)(markdown-it@14.0.0)(mathjax-full@3.2.2)(mermaid@10.8.0)(reveal.js@5.0.4)(sass-loader@14.0.0)(vuepress-plugin-feed2@2.0.0-rc.16)(vuepress-plugin-pwa2@2.0.0-rc.16)(vuepress@2.0.0-rc.2)
 
 devDependencies:
   cross-env:
@@ -3595,12 +3595,6 @@ packages:
       layout-base: 1.0.2
     dev: false
 
-  /cose-base@2.2.0:
-    resolution: {integrity: sha512-AzlgcsCbUMymkADOJtQm3wO9S3ltPfYOFD5033keQn9NJzIbtnZj+UdBJe7DYml/8TdbtHJW3j58SOnKhWY/5g==}
-    dependencies:
-      layout-base: 2.0.1
-    dev: false
-
   /cosmiconfig@9.0.0:
     resolution: {integrity: sha512-itvL5h8RETACmOTFc4UfIyB2RfEHi71Ax6E/PivVxq9NseKbOWpeyHEOIbmAw1rs8Ak0VursQNww7lf7YtUwzg==}
     engines: {node: '>=14'}
@@ -3714,15 +3708,6 @@ packages:
       cytoscape: ^3.2.0
     dependencies:
       cose-base: 1.0.3
-      cytoscape: 3.28.1
-    dev: false
-
-  /cytoscape-fcose@2.2.0(cytoscape@3.28.1):
-    resolution: {integrity: sha512-ki1/VuRIHFCzxWNrsshHYPs6L7TvLu3DL+TyIGEsRcvVERmxokbf5Gdk7mFxZnTdiGtnA4cfSmjZJMviqSuZrQ==}
-    peerDependencies:
-      cytoscape: ^3.2.0
-    dependencies:
-      cose-base: 2.2.0
       cytoscape: 3.28.1
     dev: false
 
@@ -5461,10 +5446,6 @@ packages:
     resolution: {integrity: sha512-8h2oVEZNktL4BH2JCOI90iD1yXwL6iNW7KcCKT2QZgQJR2vbqDsldCTPRU9NifTCqHZci57XvQQ15YTu+sTYPg==}
     dev: false
 
-  /layout-base@2.0.1:
-    resolution: {integrity: sha512-dp3s92+uNI1hWIpPGH3jK2kxE2lMjdXdr+DH8ynZHpd6PUlH6x6cbuXnoMmiNumznqaNO31xu9e79F0uuZ0JFg==}
-    dev: false
-
   /leven@3.1.0:
     resolution: {integrity: sha512-qsda+H8jTaUaN/x5vzW2rzc+8Rw4TAQ/4KjB46IwK5VH+IlVeeeje/EoZRpiXvIqjFgK84QffqPztGI3VBLG1A==}
     engines: {node: '>=6'}
@@ -5721,15 +5702,14 @@ packages:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
 
-  /mermaid@10.7.0:
-    resolution: {integrity: sha512-PsvGupPCkN1vemAAjScyw4pw34p4/0dZkSrqvAB26hUvJulOWGIwt35FZWmT9wPIi4r0QLa5X0PB4YLIGn0/YQ==}
+  /mermaid@10.8.0:
+    resolution: {integrity: sha512-9CzfSreRjdDJxX796+jW4zjEq0DVw5xVF0nWsqff8OTbrt+ml0TZ5PyYUjjUZJa2NYxYJZZXewEquxGiM8qZEA==}
     dependencies:
       '@braintree/sanitize-url': 6.0.4
       '@types/d3-scale': 4.0.8
       '@types/d3-scale-chromatic': 3.0.3
       cytoscape: 3.28.1
       cytoscape-cose-bilkent: 4.1.0(cytoscape@3.28.1)
-      cytoscape-fcose: 2.2.0(cytoscape@3.28.1)
       d3: 7.8.5
       d3-sankey: 0.12.3
       dagre-d3-es: 7.0.10
@@ -7802,7 +7782,7 @@ packages:
       - typescript
     dev: false
 
-  /vuepress-plugin-md-enhance@2.0.0-rc.16(flowchart.ts@3.0.0)(markdown-it@14.0.0)(mathjax-full@3.2.2)(mermaid@10.7.0)(reveal.js@5.0.4)(sass-loader@14.0.0)(vuepress@2.0.0-rc.2):
+  /vuepress-plugin-md-enhance@2.0.0-rc.16(flowchart.ts@3.0.0)(markdown-it@14.0.0)(mathjax-full@3.2.2)(mermaid@10.8.0)(reveal.js@5.0.4)(sass-loader@14.0.0)(vuepress@2.0.0-rc.2):
     resolution: {integrity: sha512-3XfVUnTBoOk7c77LLZ79keQm2cKVZmGEEggOwpLnmZDr/qZQ5KFDqE1U0OturUwF/tfiyTB8Z9phpuuJ52u6lg==}
     engines: {node: '>=18.16.0', npm: '>=8', pnpm: '>=7', yarn: '>=2'}
     peerDependencies:
@@ -7881,7 +7861,7 @@ packages:
       flowchart.ts: 3.0.0
       js-yaml: 4.1.0
       mathjax-full: 3.2.2
-      mermaid: 10.7.0
+      mermaid: 10.8.0
       reveal.js: 5.0.4
       sass-loader: 14.0.0(webpack@5.90.0)
       vue: 3.4.15
@@ -8042,7 +8022,7 @@ packages:
       - typescript
     dev: false
 
-  /vuepress-theme-hope@2.0.0-rc.16(@vuepress/plugin-docsearch@2.0.0-rc.1)(@waline/client@3.0.0-alpha.10)(flowchart.ts@3.0.0)(markdown-it@14.0.0)(mathjax-full@3.2.2)(mermaid@10.7.0)(reveal.js@5.0.4)(sass-loader@14.0.0)(vuepress-plugin-feed2@2.0.0-rc.16)(vuepress-plugin-pwa2@2.0.0-rc.16)(vuepress@2.0.0-rc.2):
+  /vuepress-theme-hope@2.0.0-rc.16(@vuepress/plugin-docsearch@2.0.0-rc.1)(@waline/client@3.0.0-alpha.10)(flowchart.ts@3.0.0)(markdown-it@14.0.0)(mathjax-full@3.2.2)(mermaid@10.8.0)(reveal.js@5.0.4)(sass-loader@14.0.0)(vuepress-plugin-feed2@2.0.0-rc.16)(vuepress-plugin-pwa2@2.0.0-rc.16)(vuepress@2.0.0-rc.2):
     resolution: {integrity: sha512-FoqrZKljD9AxQXjfXTb4nvjQbCwDbGj7TryRDi1rEKSG5bWyhdN4pAJEhHlw4dbpVqOh784M/aERna5mZsiWFQ==}
     engines: {node: '>=18.16.0', npm: '>=8', pnpm: '>=7', yarn: '>=2'}
     peerDependencies:
@@ -8097,7 +8077,7 @@ packages:
       vuepress-plugin-copy-code2: 2.0.0-rc.16(sass-loader@14.0.0)(vuepress@2.0.0-rc.2)
       vuepress-plugin-copyright2: 2.0.0-rc.16(vuepress@2.0.0-rc.2)
       vuepress-plugin-feed2: 2.0.0-rc.16(vuepress@2.0.0-rc.2)
-      vuepress-plugin-md-enhance: 2.0.0-rc.16(flowchart.ts@3.0.0)(markdown-it@14.0.0)(mathjax-full@3.2.2)(mermaid@10.7.0)(reveal.js@5.0.4)(sass-loader@14.0.0)(vuepress@2.0.0-rc.2)
+      vuepress-plugin-md-enhance: 2.0.0-rc.16(flowchart.ts@3.0.0)(markdown-it@14.0.0)(mathjax-full@3.2.2)(mermaid@10.8.0)(reveal.js@5.0.4)(sass-loader@14.0.0)(vuepress@2.0.0-rc.2)
       vuepress-plugin-photo-swipe: 2.0.0-rc.16(sass-loader@14.0.0)(vuepress@2.0.0-rc.2)
       vuepress-plugin-pwa2: 2.0.0-rc.16(sass-loader@14.0.0)(vuepress@2.0.0-rc.2)
       vuepress-plugin-reading-time2: 2.0.0-rc.16(vuepress@2.0.0-rc.2)
