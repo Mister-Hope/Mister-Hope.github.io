@@ -1,0 +1,2 @@
+import{_ as l}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as a,c as e,b as s}from"./app-TnzoJgBu.js";const t={},c=s(`<h1 id="killall" tabindex="-1"><a class="header-anchor" href="#killall"><span>killall</span></a></h1><p><code>killall</code> 命令终止给定名字的一系列相关进程。</p><div class="language-bash" data-ext="sh" data-title="sh"><pre class="language-bash"><code><span class="token function">killall</span> processname
+</code></pre></div>`,3),n=[c];function o(i,r){return a(),e("div",null,n)}const h=l(t,[["render",o],["__file","killall.html.vue"]]);export{h as default};
