@@ -12,4 +12,4 @@ prev: ../
 
 <!-- more -->
 
-<AutoCatalog />
+<Catalog />

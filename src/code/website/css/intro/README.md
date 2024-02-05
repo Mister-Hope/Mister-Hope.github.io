@@ -9,7 +9,7 @@ index: false
 category: CSS
 ---
 
-<AutoCatalog />
+<Catalog />
 
 ## 样式化详解
 
