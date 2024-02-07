@@ -11,9 +11,6 @@ head:
   - - meta
     - name: baidu-site-verification
       content: codeva-sKKGEe5DI8
-  - - meta
-    - name: baidu-site-verification
-      content: codeva-K0eh4YtP4t
 
 # Special thank to @mo7
 bgImage: https://file.mo7.cc/api/public/bz
