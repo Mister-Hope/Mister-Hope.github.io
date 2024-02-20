@@ -24,7 +24,7 @@ projects:
   - name: VuePress Theme Hope
     desc: 一个功能强大的 VuePress 主题✨
     link: https://theme-hope.vuejs.press/zh/
-    icon: https://theme-hope.vuejs.press/logo.svg
+    icon: https://theme-hope-assets.vuejs.press/logo.svg
 
   - name: Waline
     desc: 一个安全轻量的评论系统
@@ -32,7 +32,7 @@ projects:
     icon: https://waline.js.org/logo.png
 
   - name: in 东师
-    desc: 80 万字的东师攻略，全方位的东师生活介绍，东师新生们的最佳入学指南❤
+    desc: 100 万字的东师攻略，全方位的东师生活介绍，东师新生们的最佳入学指南❤
     link: https://innenu.com
     icon: /assets/img/inNENU.png
 
@@ -44,7 +44,7 @@ projects:
   - name: vuepress-plugin-md-enhance
     desc: VuePress Markdown 增强插件
     link: https://plugin-md-enhance.vuejs.press/zh/
-    icon: https://plugin-md-enhance.vuejs.press/logo.svg
+    icon: https://theme-hope-assets.vuejs.press/logo.svg
 
   - name: bcrypt-ts
     icon: project
