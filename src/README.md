@@ -11,6 +11,9 @@ head:
   - - meta
     - name: baidu-site-verification
       content: codeva-sKKGEe5DI8
+  - - meta
+    - name: msvalidate.01
+      content: BFA4352248B0F52F3D36FFB45E3ADF6E
 
 # Special thank to @mo7
 bgImage: https://file.mo7.cc/api/public/bz
