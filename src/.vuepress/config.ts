@@ -1,6 +1,6 @@
+import { appendDatePlugin } from "@vuepress/plugin-append-date";
 import type { UserConfig } from "vuepress";
 import { defineUserConfig } from "vuepress";
-import { appendDatePlugin } from "vuepress-plugin-append-date";
 
 import theme from "./theme.js";
 

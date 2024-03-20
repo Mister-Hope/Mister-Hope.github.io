@@ -91,9 +91,9 @@ export default hopeTheme(
       },
 
       docsearch: {
-        appId: "LDBQGQC8Q9",
-        apiKey: "5c3a7145aeba231c3b85b742d24fc24f",
-        indexName: "mrhope",
+        appId: "92EXITUA7H",
+        apiKey: "f3baa8bf57757347da048381cd9c295a",
+        indexName: "mister-hope",
       },
 
       feed: {
@@ -223,5 +223,5 @@ export default hopeTheme(
       },
     },
   },
-  false,
+  false
 );
