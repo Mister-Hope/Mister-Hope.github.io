@@ -1,0 +1,1 @@
+import{u as o,_ as n}from"./app-D-RL0DTC.js";const s=async()=>{const t=o();try{const{pageviewCount:e}=await n(()=>import("./app-D-RL0DTC.js").then(r=>r.N),[]);return e({serverURL:t.serverURL})}catch{console.error("@waline/client is not installed!")}};export{s as updatePageview};
