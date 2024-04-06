@@ -20,21 +20,18 @@ jobs:
         with:
           submodules: true
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v1
         with:
-          run_install: true
+          bun-version: latest
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          cache: pnpm
+      - name: Install deps
+        run: bun install
 
       - name: Build Blog with ${{ matrix.bundler }}
         env:
           NODE_OPTIONS: --max_old_space_size=4096
-        run: pnpm run build:${{ matrix.bundler }}
+        run: bun run --bun build:${{ matrix.bundler }}
 
   linter-test:
     runs-on: ubuntu-latest
@@ -44,16 +41,13 @@ jobs:
         with:
           submodules: true
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v1
         with:
-          run_install: true
+          bun-version: latest
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          cache: pnpm
+      - name: Install deps
+        run: bun install
 
       - name: Linter test
-        run: pnpm run lint
+        run: bun run --bun lint
