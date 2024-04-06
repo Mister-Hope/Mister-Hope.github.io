@@ -14,7 +14,7 @@ export const code = arraySidebar([
       "website/",
       "node-js/",
       "vue/",
-      "Angular/",
+      "angular/",
       "react/",
       "mini-app/",
     ],

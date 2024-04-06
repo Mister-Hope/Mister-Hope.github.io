@@ -2,7 +2,7 @@
 date: 2022-01-07
 title: C++ 教程
 icon: c
-category: C++
+category: Cpp
 ---
 
 ::: tip

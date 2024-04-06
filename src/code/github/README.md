@@ -7,7 +7,7 @@ category: GitHub
 
 ## 快速上手
 
-<AutoCatalog />
+<Catalog />
 
 ## 官方文档
 
