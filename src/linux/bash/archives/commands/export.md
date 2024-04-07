@@ -1,3 +1,7 @@
+---
+date: 2020-06-04
+---
+
 # export
 
 `export` 命令用于向子 Shell 输出变量。

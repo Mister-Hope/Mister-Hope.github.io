@@ -1,3 +1,7 @@
+---
+date: 2020-06-04
+---
+
 # awk
 
 [`awk`](https://en.wikipedia.org/wiki/AWK)是处理文本文件的一个应用程序，几乎所有 Linux 系统都自带这个程序。
