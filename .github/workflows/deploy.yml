@@ -15,18 +15,21 @@ jobs:
           submodules: true
           fetch-depth: 0
 
-      - name: Setup bun
-        uses: oven-sh/setup-bun@v1
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
         with:
-          bun-version: latest
+          run_install: true
 
-      - name: Install deps
-        run: bun install
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
 
       - name: Build Blog
         env:
           NODE_OPTIONS: --max_old_space_size=4096
-        run: bun run --bun build:vite
+        run: pnpm run build:vite
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
