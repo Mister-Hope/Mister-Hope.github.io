@@ -39,8 +39,8 @@ importers:
         specifier: 10.9.0
         version: 10.9.0
       reveal.js:
-        specifier: 5.0.5
-        version: 5.0.5
+        specifier: 5.1.0
+        version: 5.1.0
       sass-loader:
         specifier: 14.2.1
         version: 14.2.1(sass@1.75.0)(webpack@5.91.0)
@@ -52,7 +52,7 @@ importers:
         version: 2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23)
       vuepress-theme-hope:
         specifier: 2.0.0-rc.37
-        version: 2.0.0-rc.37(@vuepress/plugin-docsearch@2.0.0-rc.26(@algolia/client-search@4.23.3)(search-insights@2.13.0)(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23)))(@vuepress/plugin-feed@2.0.0-rc.26(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23)))(@vuepress/plugin-pwa@2.0.0-rc.26(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23)))(@waline/client@3.1.3)(flowchart.ts@3.0.0)(katex@0.16.10)(markdown-it@14.1.0)(mathjax-full@3.2.2)(mermaid@10.9.0)(reveal.js@5.0.5)(sass-loader@14.2.1(sass@1.75.0)(webpack@5.91.0))(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23))
+        version: 2.0.0-rc.37(@vuepress/plugin-docsearch@2.0.0-rc.26(@algolia/client-search@4.23.3)(search-insights@2.13.0)(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23)))(@vuepress/plugin-feed@2.0.0-rc.26(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23)))(@vuepress/plugin-pwa@2.0.0-rc.26(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23)))(@waline/client@3.1.3)(flowchart.ts@3.0.0)(katex@0.16.10)(markdown-it@14.1.0)(mathjax-full@3.2.2)(mermaid@10.9.0)(reveal.js@5.1.0)(sass-loader@14.2.1(sass@1.75.0)(webpack@5.91.0))(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23))
     devDependencies:
       cross-env:
         specifier: 7.0.3
@@ -3883,8 +3883,8 @@ packages:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
 
-  reveal.js@5.0.5:
-    resolution: {integrity: sha512-MPWPV/cRlkZhh72dAGYv/bUCr9ulwM2/ucCqiL/KN4tvhb6VvN49iwOyWHE08wppj8lMQXi2xbS3kyKgfyTYqg==}
+  reveal.js@5.1.0:
+    resolution: {integrity: sha512-KDt7m0+xwKV6nAZt4CNPVFBf42sTKRQapg0bGGKB5PKO5XvChnMfwlZkybydHiQJ7p5+6LbHKRGrhXODdoNIaA==}
     engines: {node: '>=18.0.0'}
 
   rimraf@5.0.5:
@@ -9210,7 +9210,7 @@ snapshots:
 
   reusify@1.0.4: {}
 
-  reveal.js@5.0.5: {}
+  reveal.js@5.1.0: {}
 
   rimraf@5.0.5:
     dependencies:
@@ -9814,7 +9814,7 @@ snapshots:
       - '@vue/composition-api'
       - typescript
 
-  vuepress-plugin-md-enhance@2.0.0-rc.37(flowchart.ts@3.0.0)(katex@0.16.10)(markdown-it@14.1.0)(mathjax-full@3.2.2)(mermaid@10.9.0)(reveal.js@5.0.5)(sass-loader@14.2.1(sass@1.75.0)(webpack@5.91.0))(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23)):
+  vuepress-plugin-md-enhance@2.0.0-rc.37(flowchart.ts@3.0.0)(katex@0.16.10)(markdown-it@14.1.0)(mathjax-full@3.2.2)(mermaid@10.9.0)(reveal.js@5.1.0)(sass-loader@14.2.1(sass@1.75.0)(webpack@5.91.0))(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23)):
     dependencies:
       '@mdit/plugin-alert': 0.9.0(markdown-it@14.1.0)
       '@mdit/plugin-align': 0.9.0(markdown-it@14.1.0)
@@ -9852,7 +9852,7 @@ snapshots:
       katex: 0.16.10
       mathjax-full: 3.2.2
       mermaid: 10.9.0
-      reveal.js: 5.0.5
+      reveal.js: 5.1.0
       sass-loader: 14.2.1(sass@1.75.0)(webpack@5.91.0)
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -9888,7 +9888,7 @@ snapshots:
       - '@vue/composition-api'
       - typescript
 
-  ? vuepress-theme-hope@2.0.0-rc.37(@vuepress/plugin-docsearch@2.0.0-rc.26(@algolia/client-search@4.23.3)(search-insights@2.13.0)(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23)))(@vuepress/plugin-feed@2.0.0-rc.26(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23)))(@vuepress/plugin-pwa@2.0.0-rc.26(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23)))(@waline/client@3.1.3)(flowchart.ts@3.0.0)(katex@0.16.10)(markdown-it@14.1.0)(mathjax-full@3.2.2)(mermaid@10.9.0)(reveal.js@5.0.5)(sass-loader@14.2.1(sass@1.75.0)(webpack@5.91.0))(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23))
+  ? vuepress-theme-hope@2.0.0-rc.37(@vuepress/plugin-docsearch@2.0.0-rc.26(@algolia/client-search@4.23.3)(search-insights@2.13.0)(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23)))(@vuepress/plugin-feed@2.0.0-rc.26(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23)))(@vuepress/plugin-pwa@2.0.0-rc.26(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23)))(@waline/client@3.1.3)(flowchart.ts@3.0.0)(katex@0.16.10)(markdown-it@14.1.0)(mathjax-full@3.2.2)(mermaid@10.9.0)(reveal.js@5.1.0)(sass-loader@14.2.1(sass@1.75.0)(webpack@5.91.0))(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23))
   : dependencies:
       '@vuepress/helper': 2.0.0-rc.26(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23))
       '@vuepress/plugin-active-header-links': 2.0.0-rc.26(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23))
@@ -9918,7 +9918,7 @@ snapshots:
       vue: 3.4.23
       vuepress: 2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23)
       vuepress-plugin-components: 2.0.0-rc.37(sass-loader@14.2.1(sass@1.75.0)(webpack@5.91.0))(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23))
-      vuepress-plugin-md-enhance: 2.0.0-rc.37(flowchart.ts@3.0.0)(katex@0.16.10)(markdown-it@14.1.0)(mathjax-full@3.2.2)(mermaid@10.9.0)(reveal.js@5.0.5)(sass-loader@14.2.1(sass@1.75.0)(webpack@5.91.0))(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23))
+      vuepress-plugin-md-enhance: 2.0.0-rc.37(flowchart.ts@3.0.0)(katex@0.16.10)(markdown-it@14.1.0)(mathjax-full@3.2.2)(mermaid@10.9.0)(reveal.js@5.1.0)(sass-loader@14.2.1(sass@1.75.0)(webpack@5.91.0))(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23))
       vuepress-plugin-sass-palette: 2.0.0-rc.37(sass-loader@14.2.1(sass@1.75.0)(webpack@5.91.0))(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23))
       vuepress-shared: 2.0.0-rc.37(vuepress@2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9(@types/node@20.12.7)(jiti@1.21.0)(sass@1.75.0)(terser@5.30.3))(@vuepress/bundler-webpack@2.0.0-rc.9)(vue@3.4.23))
     optionalDependencies:
