@@ -1,8 +1,7 @@
 import { onMounted } from "vue";
-import type { ClientConfig } from "vuepress/client";
 import { defineClientConfig } from "vuepress/client";
 
-export default <ClientConfig>defineClientConfig({
+export default defineClientConfig({
   setup() {
     onMounted(() => {
       console.log(String.raw`
