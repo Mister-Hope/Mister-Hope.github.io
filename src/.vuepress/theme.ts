@@ -223,5 +223,5 @@ export default hopeTheme(
       },
     },
   },
-  false
+  false,
 );
