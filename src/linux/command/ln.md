@@ -13,7 +13,7 @@ category: Linux
 
 我们再来建立一个硬链接文件，然后看看这两个文件的特点。
 
-```shell-session
+```shellsession
 [root@localhost ~]# touch test
 #建立源文件
 [root@localhost ~]# ln /root/test /tmp/test-hard
@@ -58,7 +58,7 @@ hard
 
 软链接也称作符号链接，相比硬链接来讲，软链接就要常用多了。我们先建立一个软链接，再来看看软链接的特点。
 
-```shell-session
+```shellsession
 [root@localhost ~]# touch check
 #建立源文件
 [root@localhost ~]# ln -s /root/check /tmp/check-soft

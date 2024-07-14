@@ -59,7 +59,7 @@ class Student(object):
 
 有了 **init** 方法，在创建实例的时候，就不能传入空的参数了，必须传入与 **init** 方法匹配的参数，但 self 不需要传，Python 解释器自己会把实例变量传进去:
 
-```pt
+```py
 >>> bart = Student('Bart Simpson', 59)
 >>> bart.name
 'Bart Simpson'

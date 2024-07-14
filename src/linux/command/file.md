@@ -17,7 +17,7 @@ Linux 系统中，每个文件主要拥有 3 个时间参数(通过 stat 命令�
 
 touch 命令的基本格式如下:
 
-```shell-session
+```shellsession
 [root@localhost ~]# touch [选项] 文件名
 ```
 
@@ -55,7 +55,7 @@ ln 命令用于给文件创建链接，根据 Linux 系统存储文件的特点�
 
 ln 命令的基本格式如下:
 
-```shell-session
+```shellsession
 [root@localhost ~]# ln [选项] 源文件 目标文件
 ```
 

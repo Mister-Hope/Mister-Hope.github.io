@@ -23,7 +23,7 @@ date: 2019-11-22
 
   至少要更改:
 
-  ```ini
+  ```conf
   write_enable=YES
   utf8_filesystem=YES
   ```
@@ -105,13 +105,13 @@ index index.php index.html;
 
 需要注意的是，Nginx 将端口转发给 php 默认的 9000 端口。而通过 apt-get 安装的 php 默认使用本地 sock 文件通信，需要对 php 的配置进行修改。要修改的文件位于: `/etc/php/7.2/fpm/pool.d/www.conf`，将
 
-```ini
+```conf
 listen = /run/php/php7.0-fpm.sock
 ```
 
 改成:
 
-```ini
+```conf
 listen = 127.0.0.1:9000
 ```
 

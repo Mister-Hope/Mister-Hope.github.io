@@ -28,7 +28,7 @@ Apache 通过引入各种模块来完成不同的功能。
 
 Apache 通过 conf 文件夹下的 httpd.conf 来配置。
 
-```apacheconf
+```apache
 # 此处填入 Apache 的路径
 Define SRVROOT "U:/Apache"
 ServerRoot "${SRVROOT}"

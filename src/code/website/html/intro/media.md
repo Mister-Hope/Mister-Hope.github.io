@@ -182,7 +182,7 @@ WebVTT 是一个格式，用来编写文本文件，这个文本文件包含了�
 
 一个典型的 WebVTT 文件如下:
 
-```WebVTT
+```txt title="example.vtt"
 WEBVTT
 
 1

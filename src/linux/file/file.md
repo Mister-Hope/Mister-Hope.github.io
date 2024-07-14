@@ -32,7 +32,7 @@ category: Linux
 
 但是，不同颜色所代表的文件类型不一定是这样，更准确的对应方式还取决于配置文件 `/etc/DIR_COLORS` 中的规定。因此，如果想详细了解不同文件类型所对应的颜色，可以使用 `man` 命令，例如:
 
-```shell-session
+```shellsession
 [root@localhost ~]# man dir_colors
 ```
 
@@ -40,7 +40,7 @@ category: Linux
 
 在此基础上，如果不想每次使用 `ls` 命令时，都显式附带 `--color=auto`，可以执行如下命令:
 
-```shell-session
+```shellsession
 [root@localhost ~]# alias ls = 'ls --color=auto'
 ```
 

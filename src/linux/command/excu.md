@@ -19,14 +19,14 @@ category: Linux
 
    例如，我们经常使用的 `rm` 命令，其实就是 `rm -i` 这个整体的别名:
 
-   ```shell-session
+   ```shellsession
    [root@localhost ~]# alias rm
    alias rm='rm -i'
    ```
 
    这使得当使用 rm 命令删除指定文件时，Linux 系统会要求我们再次确认是否执行删除操作。例如:
 
-   ```shell-session
+   ```shellsession
    [root@localhost ~]# rm a.txt <-- 假定当前目录中已经存在 a.txt 文件
    rm: remove regular file 'a.txt'? y  <-- 手动输入 y，即确定删除
    [root@localhost ~]#
@@ -34,7 +34,7 @@ category: Linux
 
    这里可以使用 `unalias` 命令，将 Linux 系统设置的 `rm` 别名删除掉，执行命令如下:
 
-   ```shell-session
+   ```shellsession
    [root@localhost ~]# alias rm
    alias rm='rm -i'
    [root@localhost ~]# unalias rm
@@ -49,7 +49,7 @@ category: Linux
 
    判断一个命令属于内部命令还是外部命令，可以使用 `type` 命令实现。例如:
 
-   ```shell-session
+   ```shellsession
    [root@localhost ~]# type pwd
    pwd is a shell builtin  <-- pwd是内部命令
    [root@localhost ~]# type top

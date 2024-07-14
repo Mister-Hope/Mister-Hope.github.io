@@ -31,12 +31,6 @@ export default <UserConfig>defineUserConfig({
     },
   },
 
-  markdown: {
-    code: {
-      lineNumbers: 10,
-    },
-  },
-
   theme,
 
   plugins: [appendDatePlugin()],

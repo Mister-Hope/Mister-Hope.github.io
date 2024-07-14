@@ -221,6 +221,13 @@ export default hopeTheme(
           ],
         },
       },
+
+      shiki: {
+        lineNumbers: 10,
+        langAlias: {
+          conf: "ini",
+        },
+      },
     },
   },
   false,

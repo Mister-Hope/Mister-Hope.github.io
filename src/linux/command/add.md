@@ -13,7 +13,7 @@ category: Linux
 
 举个例子，在 `/etc` 目录下，执行如下命令:
 
-```shell-session
+```shellsession
 [root@localhost ~]# cd /etc
 [root@localhost etc]# cd fs <-- 按一次 Tab 键
 ```
@@ -24,7 +24,7 @@ category: Linux
 
 例如，还是在 `/etc` 目录下，执行如下命令:
 
-```shell-session
+```shellsession
 [root@localhost etc]# cd b <-- 连续按两次 Tab 键
 bash_completion.d/      blkid/          bonobo-activation/
 bashrc                  bluetooth
@@ -34,7 +34,7 @@ bashrc                  bluetooth
 
 事实上，Shell 提供的命令行补全功能不仅适用于补全文件名，也同样适用于所有 Linux 命令。举个例子，当输入 `ca` 并连续按下 2 次 Tab 键时，Shell 会罗列出所有以 "ca" 开头的 Linux 命令，如下所示:
 
-```shell-session
+```shellsession
 [root@localhost etc]# ca <--连续按两次 Tab 键
 cacertdir_rehash    cache_restore       capsh       catchsegv
 cache_check         cal                 captoinfo
@@ -50,7 +50,7 @@ cache_repair        canberra-gtk-play   cat
 
 为了学习这些通配符的用法，首先需要建立一个空目录(如 test)，并在该目录中创建一些文件(供测试用)，执行命令如下:
 
-```shell-session
+```shellsession
 [root@localhost etc]# makdir test
 [root@localhost etc]# cd test
 [root@localhost test]# touch apple banana grape grapefruit watermelon
@@ -60,7 +60,7 @@ apple banana grape grapefruit watermelon
 
 在此基础上，继续执行如下命令:
 
-```shell-session
+```shellsession
 [root@localhost test]# ls a* <--匹配所有以 a 字符开头的文件名
 apple
 [root@localhost test]# ls g*t <--匹配所有以 g 字符开头，以 t 字符结尾的文件名
@@ -75,7 +75,7 @@ banana watermelon
 
 接下来，列举一下使用 ? 匹配文件名的示例:
 
-```shell-session
+```shellsession
 [root@localhost test]# ls ????e
 apple grape
 [root@localhost test]# ls g???e*
@@ -86,7 +86,7 @@ grape grapefruit
 
 最后，列举一些使用括号 `[]` 匹配文件名的示例:
 
-```shell-session
+```shellsession
 [root@localhost test]# ls [abw]*
 apple banana watermelon
 [root@localhost test]# ls [agw]*[ne]
@@ -97,7 +97,7 @@ apple grape watermelon
 
 不仅如此，`[]` 中还可以通过 -(短横线)表示一定范围内的任意字符(或数字)，例如:
 
-```shell-session
+```shellsession
 [root@localhost test]# ls [a-g]*
 apple banana grape grapefruit
 ```

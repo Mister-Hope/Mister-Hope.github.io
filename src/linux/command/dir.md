@@ -13,7 +13,7 @@ category: Linux
 
 pwd 命令，是 Print Working Directory (打印工作目录)的缩写，功能是显示用户当前所处的工作目录。该命令的基本格式为:
 
-```shell-session
+```shellsession
 [root@localhost ~]# pwd
 ```
 
@@ -25,7 +25,7 @@ Linux 命令按照来源方式，可分为两种，分别是 Shell 内置命令�
 
 cd 命令的基本格式如下:
 
-```shell-session
+```shellsession
 [root@localhost ~]# cd [相对路径或绝对路径]
 ```
 
@@ -49,7 +49,7 @@ cd 命令的基本格式如下:
 
 ls 命令，list 的缩写，是最常见的目录操作命令，其主要功能是显示当前目录下的内容。此命令的基本格式为:
 
-```shell-session
+```shellsession
 [root@localhost ~]# ls [选项] 目录名称
 ```
 
@@ -98,7 +98,7 @@ mkdir 命令，是 make directories 的缩写，用于创建新目录，此命�
 
 mkdir 命令的基本格式为:
 
-```shell-session
+```shellsession
 [root@localhost ~]# mkdir [-mp] 目录名
 ```
 
@@ -109,7 +109,7 @@ mkdir 命令的基本格式为:
 
 和 mkdir 命令(创建空目录)恰好相反，rmdir(remove empty directories 的缩写)命令用于删除空目录，此命令的基本格式为:
 
-```shell-session
+```shellsession
 [root@localhost ~]# rmdir [-p] 目录名
 ```
 

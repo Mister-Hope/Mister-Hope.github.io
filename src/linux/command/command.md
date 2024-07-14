@@ -9,7 +9,7 @@ category: Linux
 
 登录系统后，第一眼看到的内容是:
 
-```shell-session
+```shellsession
 [root@localhost ~]#
 ```
 
@@ -28,7 +28,7 @@ category: Linux
 
 用户在自己的家目录中拥有完整权限，所以我们也建议操作实验可以放在家目录中进行。我们切换一下用户所在目录，看看有什么效果。
 
-```shell-session
+```shellsession
 [root@localhost ~]# cd /usr/local
 [root@localhost local]#
 ```
@@ -39,7 +39,7 @@ category: Linux
 
 接下来看看 Linux 命令的基本格式:
 
-```shell-session
+```shellsession
 [root@localhost ~]# 命令[选项][参数]
 ```
 

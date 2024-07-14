@@ -11,7 +11,7 @@ cp 命令，主要用来复制文件和目录，同时借助某些选项，还�
 
 cp 命令的基本格式如下:
 
-```shell-session
+```shellsession
 [root@localhost ~]# cp [选项] 源文件 目标文件
 ```
 
@@ -32,7 +32,7 @@ cp 命令的基本格式如下:
 
 cp 命令既可以复制文件，也可以复制目录。我们先来看看如何复制文件，例如:
 
-```shell-session
+```shellsession
 [root@localhost ~]# touch cangls
 #建立源文件
 [root@localhost ~]# cp cangls /tmp/
@@ -41,14 +41,14 @@ cp 命令既可以复制文件，也可以复制目录。我们先来看看如�
 
 如果需要改名复制，则命令如下:
 
-```shell-session
+```shellsession
 [root@localhost ~]# cp cangls /tmp/bols
 #改名复制
 ```
 
 如果复制的目标位置已经存在同名的文件，则会提示是否覆盖，因为 cp 命令默认执行的是 `cp -i` 的别名，例如:
 
-```shell-session
+```shellsession
 [root@localhost ~]# cp cangls /tmp/
 cp:是否覆盖"/tmp/cangls"?y
 #目标位置有同名文件，所以会提示是否覆盖
@@ -56,7 +56,7 @@ cp:是否覆盖"/tmp/cangls"?y
 
 接下来我们看看如何复制目录，其实复制目录只需使用 `-r` 选项即可，例如:
 
-```shell-session
+```shellsession
 [root@localhost ~]# mkdir movie
 #建立测试目录
 [root@localhost ~]# cp -r /root/movie/ /tmp/
@@ -67,7 +67,7 @@ cp:是否覆盖"/tmp/cangls"?y
 
 如果源文件不是一个普通文件，而是一个软链接文件，那么是否可以复制软链接的属性呢? 我们试试:
 
-```shell-session
+```shellsession
 [root@localhost ~]# ln -s /root/cangls /tmp/cangls_slink
 #建立一个测试软链接文件/tmp/cangls_slink
 [root@localhost ~]# ll /tmp/cangls_slink
@@ -90,7 +90,7 @@ lrwxrwxrwx 1 root root 12 6 月 14 05:56/tmp/ cangls_t2-> /root/cangls
 
 我们发现，在执行复制命令后，目标文件的时间会变成复制命令的执行时间，而不是源文件的时间。例如:
 
-```shell-session
+```shellsession
 [root@localhost ~]# cp /var/lib/mlocate/mlocate.db /tmp/
 [root@localhost ~]# ll /var/lib/mlocate/mlocate.db
 -rw-r-----1 root slocate2328027 6月 14 02:08/var/lib/mlocate/mlocate.db
@@ -102,7 +102,7 @@ lrwxrwxrwx 1 root root 12 6 月 14 05:56/tmp/ cangls_t2-> /root/cangls
 
 而当我们执行备份、曰志备份的时候，这些文件的时间可能是一个重要的参数，这就需执行 `-p` 选项了。这个选项会保留源文件的属性，包括所有者、所属组和时间。例如:
 
-```shell-session
+```shellsession
 [root@localhost ~]# cp -p /var/lib/mlocate/mlocate.db /tmp/mlocate.db_2
 #使用"-p"选项
 [root@localhost ~]# ll /var/lib/mlocate/mlocate.db /tmp/mlocate.db_2
@@ -119,7 +119,7 @@ lrwxrwxrwx 1 root root 12 6 月 14 05:56/tmp/ cangls_t2-> /root/cangls
 
 这两个选项和 `-d` 选项是不同的，`d` 选项要求源文件必须是软链接，目标文件才会复制为软链接；而 `-l` 和 `-s` 选项的源文件只需是普通文件，目标文件就可以直接复制为硬链接和软链接。例如:
 
-```shell-session
+```shellsession
 [root@localhost ~]# touch bols
 #建立测试文件
 [root@localhost ~]# ll -i bols
@@ -141,7 +141,7 @@ lrwxrwxrwx 1 root root 12 6 月 14 05:56/tmp/ cangls_t2-> /root/cangls
 
 rm 是强大的删除命令，它可以永久性地删除文件系统中指定的文件或目录。在使用 rm 命令删除文件或目录时，系统不会产生任何提示信息。此命令的基本格式为:
 
-```shell-session
+```shellsession
 [root@localhost ~]# rm[选项] 文件或目录
 ```
 
@@ -161,7 +161,7 @@ rm 命令是一个具有破坏性的命令，因为 rm 命令会永久性地删�
 
 rm 命令如果任何选项都不加，则默认执行的是 `rm -i 文件名`，也就是在删除一个文件之前会先询问是否删除。例如:
 
-```shell-session
+```shellsession
 [root@localhost ~]# touch cangls
 [root@localhost ~]# rm cangls
 rm:是否删除普通空文件"cangls"?y
@@ -172,7 +172,7 @@ rm:是否删除普通空文件"cangls"?y
 
 如果需要删除目录，则需要使用 `-r` 选项。例如:
 
-```shell-session
+```shellsession
 [root@localhost ~]# mkdir -p /test/lm/movie/jp
 #递归建立测试目录
 [root@localhost ~]# rm /test
@@ -194,7 +194,7 @@ rm:是否删除目录"/test"?y
 
 如果要删除的目录中有 1 万个子目录或子文件，那么普通的 rm 删除最少需要确认 1 万次。所以，在真正删除文件的时候，我们会选择强制删除。例如:
 
-```shell-session
+```shellsession
 [root@localhost ~]# mkdir -p /test/lm/movie/jp
 #重新建立测试目录
 [root@localhost ~]# rm -rf /test
@@ -209,7 +209,7 @@ rm:是否删除目录"/test"?y
 
 mv 命令(move 的缩写)，既可以在不同的目录之间移动文件或目录，也可以对文件和目录进行重命名。该命令的基本格式如下:
 
-```shell-session
+```shellsession
 [root@localhost ~]# mv 【选项】 源文件 目标文件
 ```
 
@@ -225,7 +225,7 @@ mv 命令(move 的缩写)，既可以在不同的目录之间移动文件或目�
 
 ### 移动文件或目录
 
-```shell-session
+```shellsession
 [root@localhost ~]# mv cangls /tmp
 #移动之后，源文件会被删除，类似剪切
 [root@localhost ~]# mkdir movie
@@ -235,7 +235,7 @@ mv 命令(move 的缩写)，既可以在不同的目录之间移动文件或目�
 
 如果移动的目标位置已经存在同名的文件，则同样会提示是否覆盖，因为 mv 命令默认执行的也是 `mv -i` 的别名，例如:
 
-```shell-session
+```shellsession
 [root@localhost ~]# touch cangls
 #重新建立文件
 [root@localhost ~]# mv cangls /tmp
@@ -249,7 +249,7 @@ mv:县否覆盖"tmp/cangls"? y
 
 如果我们确认需要覆盖已经存在的同名文件，则可以使用 `-f` 选项进行强制移动，这就不再需要用户手工确认了。例如:
 
-```shell-session
+```shellsession
 [root@localhost ~]# touch cangls
 #重新建立文件
 [root@localhost ~]# mv -f cangls /tmp
@@ -260,7 +260,7 @@ mv:县否覆盖"tmp/cangls"? y
 
 既然可以强制覆盖移动，那也有可能需要不覆盖的移动。如果需要移动几百个同名文件，但是不想覆盖，这时就需要 `-n` 选项的帮助了。例如:
 
-```shell-session
+```shellsession
 [root@localhost ~]# ls /tmp
 /tmp/bols /tmp/cangls
 #在/tmp/目录下已经存在bols、cangls文件了
@@ -273,7 +273,7 @@ mv:县否覆盖"tmp/cangls"? y
 
 如果源文件和目标文件在同一目录中，那就是改名。例如:
 
-```shell-session
+```shellsession
 [root@localhost ~]# mv bols lmls
 #把 bols 改名为 lmls
 ```
@@ -284,7 +284,7 @@ mv:县否覆盖"tmp/cangls"? y
 
 如果我们想要知道在移动过程中到底有哪些文件进行了移动，则可以使用 `-v` 选项来查看详细的移动信息。例如:
 
-```shell-session
+```shellsession
 [root@localhost ~]# touch test1.txt test2.txt test3.txt
 #建立三个测试文件
 [root@localhost ~]# mv -v *.txt /tmp

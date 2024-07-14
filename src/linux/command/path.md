@@ -13,7 +13,7 @@ category: Linux
 
 我们可以使用 env 命令来查看到 Linux 系统中所有的环境变量，执行命令如下:
 
-```shell-session
+```shellsession
 [root@localhost ~]# env
 ORBIT_SOCKETDIR=/tmp/orbit-root
 HOSTNAME=livecd.centos
@@ -42,7 +42,7 @@ Linux 作为一个多用户多任务的操作系统，能够为每个用户提�
 
 例如，使用下述命令来查看 `HOME` 变量在不同用户身份下都有哪些值:
 
-```shell-session
+```shellsession
 [root@localhost ~]# echo $HOME
 /root
 [root@localhost ~]# su - user1  <--切换到 user1 用户身份
@@ -54,7 +54,7 @@ Linux 作为一个多用户多任务的操作系统，能够为每个用户提�
 
 其实，环境变量是由固定的变量名与用户或系统设置的变量值两部分组成的，我们完全可以自行创建环境变量来满足工作需求。例如，设置一个名称为 `WORKDIR` 的环境变量，方便用户更轻松地进入一个层次较深的目录，执行命令如下:
 
-```shell-session
+```shellsession
 [root@localhost ~]# mkdir /home/work1
 [root@localhost ~]# WORKDIR=/home/work1
 [root@localhost ~]# cd $WORKDIR
@@ -64,7 +64,7 @@ Linux 作为一个多用户多任务的操作系统，能够为每个用户提�
 
 但是，这样的环境变量不具有全局性，作用范围也有限，默认情况下不能被其他用户使用。如果工作需要，可以使用 `export` 命令将其提升为全局环境变量，这样其他用户就可以使用它了:
 
-```shell-session
+```shellsession
 [root@localhost work1]# su user1  <-- 切换到 user1，发现无法使用 WORKDIR 自定义变量
 [user1@localhost ~]$ cd $WORKDIR
 [user1@localhost ~]$ echo $WORKDIR
@@ -81,7 +81,7 @@ Linux 作为一个多用户多任务的操作系统，能够为每个用户提�
 
 在讲解 PATH 环境变量之前，首先介绍一下 `which` 命令，它用于查找某个命令所在的绝对路径。例如:
 
-```shell-session
+```shellsession
 [root@localhost ~]# which rm
 /bin/rm
 [root@localhost ~]# which rmdir
@@ -97,7 +97,7 @@ alias ls='ls --color=auto'
 
 首先，执行如下命令:
 
-```shell-session
+```shellsession
 [root@localhost ~]# echo $PATH
 /usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/root/bin
 ```
@@ -109,7 +109,7 @@ alias ls='ls --color=auto'
 
 为了印证以上观点，下面举个反例，如果我们将 `ls` 命令移动到 `/root` 目录下，由于 PATH 环境变量中没有包含此目录，所有当直接使用 `ls` 命令名执行时，Linux 将无法找到此命令的可执行文件，并提示 `No such file or directory`，示例命令如下:
 
-```shell-session
+```shellsession
 [root@localhost ~]# mv /bin/ls /root
 [root@localhost ~]# ls
 bash: /bin/ls: No such file or directory
@@ -117,7 +117,7 @@ bash: /bin/ls: No such file or directory
 
 此时，如果仍想使用 `ls` 命令，有 2 种方法，一种是直接将 `/root` 添加到 PATH 环境变量中，例如:
 
-```shell-session
+```shellsession
 [root@localhost ~]# PATH=$PATH:/root
 [root@localhost ~]# echo $PATH
 /usr/local/sbin:/usr/sbin:/usr/local/bin:/usr/bin:/bin:/root/bin:/root
@@ -130,7 +130,7 @@ Documents  ls           Pictures post-install.org Templates
 
 另一种方法是以绝对路径的方式使用此命令，例如:
 
-```shell-session
+```shellsession
 [root@localhost ~]# /root/ls
 Desktop    Downloads    Music    post-install     Public    Videos
 Documents  ls           Pictures post-install.org Templates
@@ -138,6 +138,6 @@ Documents  ls           Pictures post-install.org Templates
 
 为了不影响系统的正常使用，强烈建议大家将移动后的 `ls` 文件还原，命令如下:
 
-```shell-session
+```shellsession
 [root@localhost ~]# mv /root/ls /bin
 ```
