@@ -58,6 +58,5 @@ jobs:
 
       - name: Deploy
         run: |
-          ssh git@mister-hope.com "git config --global --add safe.directory /www/wwwroot/mrhope"
-          git push -f git@mister-hope.com:/www/wwwroot/mrhope gh-pages
-          ssh git@mister-hope.com "cd /www/wwwroot/mrhope && git reset --hard HEAD"
+          git push -f git@mister-hope.com:/www/wwwroot/mister-hope gh-pages
+          ssh git@mister-hope.com "cd /www/wwwroot/mister-hope && git reset --hard HEAD"
