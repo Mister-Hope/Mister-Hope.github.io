@@ -1,6 +1,6 @@
 ---
 date: 2022-01-07
-layout: Slide
+layout: SlidePage
 title: Mr.Hope Intro
 icon: people
 tag:

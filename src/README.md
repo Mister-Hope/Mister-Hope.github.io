@@ -34,7 +34,7 @@ projects:
     link: https://waline.js.org/
     icon: https://waline.js.org/logo.png
 
-  - name: in 东师
+  - name: inNENU
     desc: 100 万字的东师攻略，全方位的东师生活介绍，东师新生们的最佳入学指南❤
     link: https://innenu.com
     icon: /assets/img/inNENU.png
