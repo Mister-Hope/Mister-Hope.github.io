@@ -63,8 +63,8 @@ importers:
         specifier: 2.0.0-rc.17
         version: 2.0.0-rc.17(@vuepress/bundler-vite@2.0.0-rc.17(@types/node@22.7.4)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.79.4)(terser@5.34.1))(@vuepress/bundler-webpack@2.0.0-rc.17)(vue@3.5.10)
       vuepress-theme-hope:
-        specifier: 2.0.0-rc.57
-        version: 2.0.0-rc.57(pdemz6x6mr72pxikn2z5z3wxzu)
+        specifier: 2.0.0-rc.58
+        version: 2.0.0-rc.58(pdemz6x6mr72pxikn2z5z3wxzu)
     devDependencies:
       cross-env:
         specifier: 7.0.3
@@ -1292,55 +1292,46 @@ packages:
     resolution: {integrity: sha512-PNqXYmdNFyWNg0ma5LdY8wP+eQfdvyaBAojAXgO7/gs0Q/6TQJVXAXe8gwW9URjbS0YAammur0fynYGiWsKlXw==}
     cpu: [arm]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm-musleabihf@4.22.5':
     resolution: {integrity: sha512-kSSCZOKz3HqlrEuwKd9TYv7vxPYD77vHSUvM2y0YaTGnFc8AdI5TTQRrM1yIp3tXCKrSL9A7JLoILjtad5t8pQ==}
     cpu: [arm]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-arm64-gnu@4.22.5':
     resolution: {integrity: sha512-oTXQeJHRbOnwRnRffb6bmqmUugz0glXaPyspp4gbQOPVApdpRrY/j7KP3lr7M8kTfQTyrBUzFjj5EuHAhqH4/w==}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-arm64-musl@4.22.5':
     resolution: {integrity: sha512-qnOTIIs6tIGFKCHdhYitgC2XQ2X25InIbZFor5wh+mALH84qnFHvc+vmWUpyX97B0hNvwNUL4B+MB8vJvH65Fw==}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-linux-powerpc64le-gnu@4.22.5':
     resolution: {integrity: sha512-TMYu+DUdNlgBXING13rHSfUc3Ky5nLPbWs4bFnT+R6Vu3OvXkTkixvvBKk8uO4MT5Ab6lC3U7x8S8El2q5o56w==}
     cpu: [ppc64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-gnu@4.22.5':
     resolution: {integrity: sha512-PTQq1Kz22ZRvuhr3uURH+U/Q/a0pbxJoICGSprNLAoBEkyD3Sh9qP5I0Asn0y0wejXQBbsVMRZRxlbGFD9OK4A==}
     cpu: [riscv64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-s390x-gnu@4.22.5':
     resolution: {integrity: sha512-bR5nCojtpuMss6TDEmf/jnBnzlo+6n1UhgwqUvRoe4VIotC7FG1IKkyJbwsT7JDsF2jxR+NTnuOwiGv0hLyDoQ==}
     cpu: [s390x]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-x64-gnu@4.22.5':
     resolution: {integrity: sha512-N0jPPhHjGShcB9/XXZQWuWBKZQnC1F36Ce3sDqWpujsGjDz/CQtOL9LgTrJ+rJC8MJeesMWrMWVLKKNR/tMOCA==}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@rollup/rollup-linux-x64-musl@4.22.5':
     resolution: {integrity: sha512-uBa2e28ohzNNwjr6Uxm4XyaA1M/8aTgfF2T7UIlElLaeXkgpmIJ2EitVNQxjO9xLLLy60YqAgKn/AqSpCUkE9g==}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@rollup/rollup-win32-arm64-msvc@4.22.5':
     resolution: {integrity: sha512-RXT8S1HP8AFN/Kr3tg4fuYrNxZ/pZf1HemC5Tsddc6HzgGnJm0+Lh5rAHJkDuW3StI0ynNXukidROMXYl6ew8w==}
@@ -3493,28 +3484,24 @@ packages:
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   lightningcss-linux-arm64-musl@1.27.0:
     resolution: {integrity: sha512-rCGBm2ax7kQ9pBSeITfCW9XSVF69VX+fm5DIpvDZQl4NnQoMQyRwhZQm9pd59m8leZ1IesRqWk2v/DntMo26lg==}
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   lightningcss-linux-x64-gnu@1.27.0:
     resolution: {integrity: sha512-Dk/jovSI7qqhJDiUibvaikNKI2x6kWPN79AQiD/E/KeQWMjdGe9kw51RAgoWFDi0coP4jinaH14Nrt/J8z3U4A==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   lightningcss-linux-x64-musl@1.27.0:
     resolution: {integrity: sha512-QKjTxXm8A9s6v9Tg3Fk0gscCQA1t/HMoF7Woy1u68wCk5kS4fR+q3vXa1p3++REW784cRAtkYKrPy6JKibrEZA==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   lightningcss-win32-arm64-msvc@1.27.0:
     resolution: {integrity: sha512-/wXegPS1hnhkeG4OXQKEMQeJd48RDC3qdh+OA8pCuOPCyvnm/yEayrJdJVqzBsqpy1aJklRCVxscpFur80o6iQ==}
@@ -5193,8 +5180,8 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.17
 
-  vuepress-theme-hope@2.0.0-rc.57:
-    resolution: {integrity: sha512-/5Go2v6RTDMdZ4ESu0eAMBwhIg9HBlcku8PW1Yw9Rv9KwcNTgV6/TjY8qI/YPGbaaOaHDgeO7HZlxi6jM3IWUw==}
+  vuepress-theme-hope@2.0.0-rc.58:
+    resolution: {integrity: sha512-7C2UEhtNm1+ILoDLXyS+wNDz3Exjq6dwJnKbMIB1JnyZI+90kTmfZ/MtK1vCXBsA8Y4lbZE6dHxbhDLowwHypw==}
     engines: {node: '>=18.19.0', npm: '>=8', pnpm: '>=7', yarn: '>=2'}
     peerDependencies:
       '@vuepress/plugin-docsearch': 2.0.0-rc.52
@@ -7002,7 +6989,7 @@ snapshots:
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 22.7.4
 
   '@types/send@0.17.4':
     dependencies:
@@ -11096,7 +11083,7 @@ snapshots:
       - '@vue/composition-api'
       - typescript
 
-  vuepress-theme-hope@2.0.0-rc.57(pdemz6x6mr72pxikn2z5z3wxzu):
+  vuepress-theme-hope@2.0.0-rc.58(pdemz6x6mr72pxikn2z5z3wxzu):
     dependencies:
       '@vuepress/helper': 2.0.0-rc.52(vuepress@2.0.0-rc.17(@vuepress/bundler-vite@2.0.0-rc.17(@types/node@22.7.4)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.79.4)(terser@5.34.1))(@vuepress/bundler-webpack@2.0.0-rc.17)(vue@3.5.10))
       '@vuepress/plugin-active-header-links': 2.0.0-rc.52(vuepress@2.0.0-rc.17(@vuepress/bundler-vite@2.0.0-rc.17(@types/node@22.7.4)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.79.4)(terser@5.34.1))(@vuepress/bundler-webpack@2.0.0-rc.17)(vue@3.5.10))
