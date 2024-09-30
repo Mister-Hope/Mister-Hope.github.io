@@ -26,6 +26,7 @@ export default <UserConfig>defineUserConfig({
     },
 
     "/en/": {
+      lang: "en-US",
       title: "My name is Mr.Hope",
       description: "Mr.Hope personal blog",
     },
