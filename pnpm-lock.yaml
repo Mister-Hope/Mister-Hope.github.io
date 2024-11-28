@@ -42,8 +42,8 @@ importers:
         specifier: 3.2.2
         version: 3.2.2
       mermaid:
-        specifier: 11.4.0
-        version: 11.4.0
+        specifier: 11.4.1
+        version: 11.4.1
       reveal.js:
         specifier: 5.1.0
         version: 5.1.0
@@ -64,7 +64,7 @@ importers:
         version: 2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.8)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.80.6)(terser@5.36.0))(@vuepress/bundler-webpack@2.0.0-rc.18)(vue@3.5.13)
       vuepress-theme-hope:
         specifier: 2.0.0-rc.59
-        version: 2.0.0-rc.59(ylwt35c3akmljexqunc64psmd4)
+        version: 2.0.0-rc.59(cuj7fkbvatrit2grby3bvkgsjm)
     devDependencies:
       cross-env:
         specifier: 7.0.3
@@ -1417,9 +1417,6 @@ packages:
   '@types/debug@4.1.12':
     resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
 
-  '@types/dompurify@3.0.5':
-    resolution: {integrity: sha512-1Wg0g3BtQF7sSb27fJQAKck1HECM6zV1EB66j8JH9i3LCjYabJa0FSdiSgsD5K/RbrsR0SiraKacLB+T8ZVYAg==}
-
   '@types/estree@0.0.39':
     resolution: {integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==}
 
@@ -2690,8 +2687,8 @@ packages:
     resolution: {integrity: sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==}
     engines: {node: '>= 4'}
 
-  dompurify@3.1.6:
-    resolution: {integrity: sha512-cTOAhc36AalkjtBpfG6O8JimdTMWNXjiePT2xQH/ppBGi/4uIpmj8eKyIkMJErXWARyINV/sB38yf8JCLF5pbQ==}
+  dompurify@3.2.1:
+    resolution: {integrity: sha512-NBHEsc0/kzRYQd+AY6HR6B/IgsqzBABrqJbpCDQII/OK6h7B7LXzweZTDsqSW2LkTRpoxf18YUP+YjGySk6B3w==}
 
   domutils@2.8.0:
     resolution: {integrity: sha512-w96Cjofp72M5IIhpjgobBimYEfoPjx1Vx0BSX9P30WBdZW2WIKU0T1Bd0kz2eNZ9ikjKgHbEyKx8BB6H1L3h3A==}
@@ -3687,8 +3684,8 @@ packages:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
 
-  mermaid@11.4.0:
-    resolution: {integrity: sha512-mxCfEYvADJqOiHfGpJXLs4/fAjHz448rH0pfY5fAoxiz70rQiDSzUUy4dNET2T08i46IVpjohPd6WWbzmRHiPA==}
+  mermaid@11.4.1:
+    resolution: {integrity: sha512-Mb01JT/x6CKDWaxigwfZYuYmDZ6xtrNwNlidKZwkSrDaY9n90tdrJTV5Umk+wP1fZscGptmKFXHsXMDEVZ+Q6A==}
 
   methods@1.1.2:
     resolution: {integrity: sha512-iclAHeNqNm68zFtnZ0e+1L2yUIdvzNoauKU4WBA3VvH/vPFieF7qfRlwUZU+DA9P9bPXIS90ulxoUoCH23sV2w==}
@@ -6919,10 +6916,6 @@ snapshots:
     dependencies:
       '@types/ms': 0.7.34
 
-  '@types/dompurify@3.0.5':
-    dependencies:
-      '@types/trusted-types': 2.0.7
-
   '@types/estree@0.0.39': {}
 
   '@types/estree@1.0.6': {}
@@ -8638,7 +8631,9 @@ snapshots:
     dependencies:
       domelementtype: 2.3.0
 
-  dompurify@3.1.6: {}
+  dompurify@3.2.1:
+    optionalDependencies:
+      '@types/trusted-types': 2.0.7
 
   domutils@2.8.0:
     dependencies:
@@ -9688,13 +9683,12 @@ snapshots:
 
   merge2@1.4.1: {}
 
-  mermaid@11.4.0:
+  mermaid@11.4.1:
     dependencies:
       '@braintree/sanitize-url': 7.1.0
       '@iconify/utils': 2.1.33
       '@mermaid-js/parser': 0.3.0
       '@types/d3': 7.4.3
-      '@types/dompurify': 3.0.5
       cytoscape: 3.30.2
       cytoscape-cose-bilkent: 4.1.0(cytoscape@3.30.2)
       cytoscape-fcose: 2.2.0(cytoscape@3.30.2)
@@ -9702,7 +9696,7 @@ snapshots:
       d3-sankey: 0.12.3
       dagre-d3-es: 7.0.11
       dayjs: 1.11.13
-      dompurify: 3.1.6
+      dompurify: 3.2.1
       katex: 0.16.11
       khroma: 2.1.0
       lodash-es: 4.17.21
@@ -11089,7 +11083,7 @@ snapshots:
       - '@vue/composition-api'
       - typescript
 
-  vuepress-plugin-md-enhance@2.0.0-rc.59(flowchart.ts@3.0.1)(markdown-it@14.1.0)(mermaid@11.4.0)(sass-embedded@1.80.6)(sass-loader@16.0.3(sass-embedded@1.80.6)(webpack@5.95.0))(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.8)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.80.6)(terser@5.36.0))(@vuepress/bundler-webpack@2.0.0-rc.18)(vue@3.5.13)):
+  vuepress-plugin-md-enhance@2.0.0-rc.59(flowchart.ts@3.0.1)(markdown-it@14.1.0)(mermaid@11.4.1)(sass-embedded@1.80.6)(sass-loader@16.0.3(sass-embedded@1.80.6)(webpack@5.95.0))(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.8)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.80.6)(terser@5.36.0))(@vuepress/bundler-webpack@2.0.0-rc.18)(vue@3.5.13)):
     dependencies:
       '@mdit/plugin-alert': 0.13.1(markdown-it@14.1.0)
       '@mdit/plugin-align': 0.13.1(markdown-it@14.1.0)
@@ -11117,7 +11111,7 @@ snapshots:
       vuepress-shared: 2.0.0-rc.59(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.8)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.80.6)(terser@5.36.0))(@vuepress/bundler-webpack@2.0.0-rc.18)(vue@3.5.13))
     optionalDependencies:
       flowchart.ts: 3.0.1
-      mermaid: 11.4.0
+      mermaid: 11.4.1
       sass-embedded: 1.80.6
       sass-loader: 16.0.3(sass-embedded@1.80.6)(webpack@5.95.0)
     transitivePeerDependencies:
@@ -11136,7 +11130,7 @@ snapshots:
       - '@vue/composition-api'
       - typescript
 
-  vuepress-theme-hope@2.0.0-rc.59(ylwt35c3akmljexqunc64psmd4):
+  vuepress-theme-hope@2.0.0-rc.59(cuj7fkbvatrit2grby3bvkgsjm):
     dependencies:
       '@vuepress/helper': 2.0.0-rc.56(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.8)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.80.6)(terser@5.36.0))(@vuepress/bundler-webpack@2.0.0-rc.18)(vue@3.5.13))
       '@vuepress/plugin-active-header-links': 2.0.0-rc.55(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.8)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.80.6)(terser@5.36.0))(@vuepress/bundler-webpack@2.0.0-rc.18)(vue@3.5.13))
@@ -11171,7 +11165,7 @@ snapshots:
       vue: 3.5.13
       vuepress: 2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.8)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.80.6)(terser@5.36.0))(@vuepress/bundler-webpack@2.0.0-rc.18)(vue@3.5.13)
       vuepress-plugin-components: 2.0.0-rc.59(sass-embedded@1.80.6)(sass-loader@16.0.3(sass-embedded@1.80.6)(webpack@5.95.0))(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.8)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.80.6)(terser@5.36.0))(@vuepress/bundler-webpack@2.0.0-rc.18)(vue@3.5.13))
-      vuepress-plugin-md-enhance: 2.0.0-rc.59(flowchart.ts@3.0.1)(markdown-it@14.1.0)(mermaid@11.4.0)(sass-embedded@1.80.6)(sass-loader@16.0.3(sass-embedded@1.80.6)(webpack@5.95.0))(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.8)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.80.6)(terser@5.36.0))(@vuepress/bundler-webpack@2.0.0-rc.18)(vue@3.5.13))
+      vuepress-plugin-md-enhance: 2.0.0-rc.59(flowchart.ts@3.0.1)(markdown-it@14.1.0)(mermaid@11.4.1)(sass-embedded@1.80.6)(sass-loader@16.0.3(sass-embedded@1.80.6)(webpack@5.95.0))(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.8)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.80.6)(terser@5.36.0))(@vuepress/bundler-webpack@2.0.0-rc.18)(vue@3.5.13))
       vuepress-shared: 2.0.0-rc.59(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.8)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.80.6)(terser@5.36.0))(@vuepress/bundler-webpack@2.0.0-rc.18)(vue@3.5.13))
     optionalDependencies:
       '@vuepress/plugin-docsearch': 2.0.0-rc.56(@algolia/client-search@4.24.0)(search-insights@2.17.2)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.8)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.80.6)(terser@5.36.0))(@vuepress/bundler-webpack@2.0.0-rc.18)(vue@3.5.13))
