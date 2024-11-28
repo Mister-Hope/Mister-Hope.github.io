@@ -18,8 +18,8 @@ importers:
         specifier: 2.0.0-rc.56
         version: 2.0.0-rc.56(@vuepress/plugin-git@2.0.0-rc.54(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.8)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.80.6)(terser@5.36.0))(@vuepress/bundler-webpack@2.0.0-rc.18)(vue@3.5.13)))(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.8)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.80.6)(terser@5.36.0))(@vuepress/bundler-webpack@2.0.0-rc.18)(vue@3.5.13))
       '@vuepress/plugin-cache':
-        specifier: 2.0.0-rc.54
-        version: 2.0.0-rc.54(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.8)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.80.6)(terser@5.36.0))(@vuepress/bundler-webpack@2.0.0-rc.18)(vue@3.5.13))
+        specifier: 2.0.0-rc.61
+        version: 2.0.0-rc.61(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.8)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.80.6)(terser@5.36.0))(@vuepress/bundler-webpack@2.0.0-rc.18)(vue@3.5.13))
       '@vuepress/plugin-docsearch':
         specifier: 2.0.0-rc.56
         version: 2.0.0-rc.56(@algolia/client-search@4.24.0)(search-insights@2.17.2)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.8)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.80.6)(terser@5.36.0))(@vuepress/bundler-webpack@2.0.0-rc.18)(vue@3.5.13))
@@ -1669,8 +1669,8 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.18
 
-  '@vuepress/plugin-cache@2.0.0-rc.54':
-    resolution: {integrity: sha512-0EwYIxwJXTnhy6261hzffdmr2HqY+/JUrgfKoYbZyI0qlbjhxqHqsPHj01HAacdEseP27Y9m+bgsMU96IyzCfQ==}
+  '@vuepress/plugin-cache@2.0.0-rc.61':
+    resolution: {integrity: sha512-/BnujCnR72U9ZJdHzow157Iv1yIk7s85ogFcQGYc0X8PpD/wa2Q+pQ29sU42QwZDWSWcabBbCHR7s8bahSNsig==}
     peerDependencies:
       vuepress: 2.0.0-rc.18
 
@@ -2171,8 +2171,8 @@ packages:
     resolution: {integrity: sha512-NIxF55hv4nSqQswkAeiOi1r83xy8JldOFDTWiug55KBu9Jnblncd2U6ViHmYgHf01TPZS77NJBhBMKdWj9HQMQ==}
     engines: {node: '>=8'}
 
-  ci-info@4.0.0:
-    resolution: {integrity: sha512-TdHqgGf9odd8SXNuxtUBVx8Nv+qZOejE6qyqiy5NtbYYQOeFa6zmHkxlPzmaLxWWHsU6nJmB7AETdVPi+2NBUg==}
+  ci-info@4.1.0:
+    resolution: {integrity: sha512-HutrvTNsF48wnxkzERIXOe5/mlcfFcbfCmwcg6CJnizbSue78AbDt+1cgl26zwn61WFxhcPykPfZrbqjGmBb4A==}
     engines: {node: '>=8'}
 
   clean-css@5.3.3:
@@ -7354,9 +7354,9 @@ snapshots:
       - '@vue/composition-api'
       - typescript
 
-  '@vuepress/plugin-cache@2.0.0-rc.54(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.8)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.80.6)(terser@5.36.0))(@vuepress/bundler-webpack@2.0.0-rc.18)(vue@3.5.13))':
+  '@vuepress/plugin-cache@2.0.0-rc.61(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.8)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.80.6)(terser@5.36.0))(@vuepress/bundler-webpack@2.0.0-rc.18)(vue@3.5.13))':
     dependencies:
-      ci-info: 4.0.0
+      ci-info: 4.1.0
       lru-cache: 10.4.3
       vuepress: 2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.8)(jiti@1.21.6)(lightningcss@1.27.0)(sass-embedded@1.80.6)(terser@5.36.0))(@vuepress/bundler-webpack@2.0.0-rc.18)(vue@3.5.13)
 
@@ -8101,7 +8101,7 @@ snapshots:
 
   ci-info@3.9.0: {}
 
-  ci-info@4.0.0: {}
+  ci-info@4.1.0: {}
 
   clean-css@5.3.3:
     dependencies:
