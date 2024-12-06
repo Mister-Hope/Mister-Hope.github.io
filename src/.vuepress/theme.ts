@@ -80,6 +80,31 @@ export default hopeTheme(
     displayFooter: true,
     copyright: "Copyright © 2019-present Mr.Hope",
 
+    markdown: {
+      align: true,
+      codeTabs: true,
+      demo: true,
+      figure: true,
+      flowchart: true,
+      highlighter: {
+        type: "shiki",
+        lineNumbers: 10,
+        langAlias: {
+          conf: "ini",
+        },
+      },
+      imgLazyload: true,
+      imgMark: true,
+      imgSize: true,
+      footnote: true,
+      mermaid: true,
+      revealjs: true,
+      sub: true,
+      sup: true,
+      tabs: true,
+      vPre: true,
+    },
+
     plugins: {
       blog: {
         excerptLength: 0,
@@ -100,30 +125,6 @@ export default hopeTheme(
         atom: true,
         json: true,
         rss: true,
-      },
-
-      markdownImage: {
-        figure: true,
-        lazyload: true,
-        mark: true,
-        size: true,
-      },
-
-      markdownMath: {
-        type: "mathjax",
-      },
-
-      markdownTab: true,
-
-      mdEnhance: {
-        align: true,
-        demo: true,
-        flowchart: true,
-        footnote: true,
-        mermaid: true,
-        sub: true,
-        sup: true,
-        vPre: true,
       },
 
       pwa: {
@@ -227,15 +228,6 @@ export default hopeTheme(
           ],
         },
       },
-
-      shiki: {
-        lineNumbers: 10,
-        langAlias: {
-          conf: "ini",
-        },
-      },
-
-      revealjs: true,
     },
   },
   false,
