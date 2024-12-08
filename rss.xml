@@ -6,8 +6,8 @@
     <link>https://mister-hope.com/</link>
     <description>Where there is light, there is hope.</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 28 Nov 2024 08:18:41 GMT</pubDate>
-    <lastBuildDate>Thu, 28 Nov 2024 08:18:41 GMT</lastBuildDate>
+    <pubDate>Sun, 08 Dec 2024 02:48:44 GMT</pubDate>
+    <lastBuildDate>Sun, 08 Dec 2024 02:48:44 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>基于 MIT 协议，© 2019-至今 Mr.Hope</copyright>
@@ -1383,7 +1383,7 @@
       <link>https://mister-hope.com/math/differential-equation.html</link>
       <guid>https://mister-hope.com/math/differential-equation.html</guid>
       <source url="https://mister-hope.com/rss.xml">微分方程</source>
-      <description>概念 微分方程表示未知函数，未知函数的导数与自变量之间的关系的方程。 阶: 未知函数的最高阶的导数叫阶数 一般形式: 如果最高阶导数可以被解出，则有 解: 找到令方程变为恒等式的函数 通解: 解中含有任意常数，且常数的个数与阶数相同 初值条件: 给出特定 下， 的值，此时求出的解为该条件下的特解。 可分离变量: 形如 的形式 如果 , 连续，且有 ，则...</description>
+      <description>概念 微分方程表示未知函数，未知函数的导数与自变量之间的关系的方程。 阶: 未知函数的最高阶的导数叫阶数 一般形式: $F(x,y,y&amp;apos;,\dots,y^{(n)})$ 如果最高阶导数可以被解出，则有 $y^{(n)} = f(x,y,y&amp;apos;,\dots,y^{(n-1)})$ 解: 找到令方程变为恒等式的函数 通解: 解中含有任意常数，且常数的个数与阶...</description>
       <pubDate>Mon, 19 Apr 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2>概念</h2>
 <ul>
@@ -1394,8 +1394,8 @@
 <p>阶: 未知函数的最高阶的导数叫阶数</p>
 </li>
 <li>
-<p>一般形式: </p>
-<p>如果最高阶导数可以被解出，则有 </p>
+<p>一般形式: $F(x,y,y',\dots,y^{(n)})$</p>
+<p>如果最高阶导数可以被解出，则有 $y^{(n)} = f(x,y,y',\dots,y^{(n-1)})$</p>
 </li>
 <li>
 <p>解: 找到令方程变为恒等式的函数</p>
@@ -1404,12 +1404,12 @@
 <p>通解: 解中含有任意常数，且常数的个数与阶数相同</p>
 </li>
 <li>
-<p>初值条件: 给出特定  下，  的值，此时求出的解为该条件下的特解。</p>
+<p>初值条件: 给出特定 $x$ 下， $y,y',\dots,y^{(n)}$ 的值，此时求出的解为该条件下的特解。</p>
 </li>
 <li>
-<p>可分离变量: 形如  的形式</p>
-<p>如果 ,  连续，且有 ，则可以积分出 </p>
-<p>令 ，则  即为通解。</p>
+<p>可分离变量: 形如 $g(y)dy = f(x)dx$ 的形式</p>
+<p>如果 $f(x)$, $g(y)$ 连续，且有 $g(y)\not =0$，则可以积分出 $G(y) = F(x) + C$</p>
+<p>令 $\varPhi(x) = \cfrac{F'(x)}{G'(y)}=\cfrac{f(x)}{g(y)}$，则 $y=\varPhi(x)$ 即为通解。</p>
 </li>
 <li>
 <p>齐次方程: 可化为</p>
@@ -1436,7 +1436,7 @@
 <p>热力学温标: 不依赖于任何具体物质特性的温标。</p>
 <h2>热力学定律</h2>
 <h3>热平衡定律(热力学第零定律)</h3>
-<p>如果  和  同时与  达到热平衡，则  和  也处于热平衡。</p>
+<p>如果 $A$ 和 $B$ 同时与 $C$ 达到热平衡，则 $A$ 和 $B$ 也处于热平衡。</p>
 <h3>热力学第一定律(能量守恒定律)</h3>
 <p>自然界一切物质都具有能量，能量有各种不同的形式，可以从一种形式转化为另一种形式，从一个物体传递到另一个物体，在传递和优化中能量的数量不变。</p>
 <p>另一种表述: 第一类永动机是不可能造成的。</p>
@@ -1456,14 +1456,14 @@
 </blockquote>
 </div>
 <h3>热力学第三定律(能氏定律)</h3>
-<p>凝聚系的熵在等温过程中的改变随热力学温度趋于零，即 </p>
+<p>凝聚系的熵在等温过程中的改变随热力学温度趋于零，即 $\lim\limits_{x\to0}(\Delta S)_T = 0$</p>
 <h2>卡诺定理</h2>
 <p>所有工作与两个一定温度之间的热机，以可逆机的效率为最高。</p>
 <p>推论: 所有工作与两个一定温度之间的可逆热机的效率相等。</p>
 <h2>等概率原理</h2>
-<p>处在平衡状态的孤立系统，系统的各个可能出现的概率是相等的。既然这些围观都满足具有确定 ,, 的宏观条件，没有理由认为哪一个状态出现的概率应当更大一些，这些微观状态是平权的。</p>
+<p>处在平衡状态的孤立系统，系统的各个可能出现的概率是相等的。既然这些围观都满足具有确定 $N$,$E$,$V$ 的宏观条件，没有理由认为哪一个状态出现的概率应当更大一些，这些微观状态是平权的。</p>
 <h2>能量均分定理</h2>
-<p>对于处在温度为  的平衡状态系统，粒子能量中每个平方项的平均值是 </p>
+<p>对于处在温度为 $T$ 的平衡状态系统，粒子能量中每个平方项的平均值是 $\cfrac{1}{2}kT^2$</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -4597,11 +4597,11 @@
       <link>https://mister-hope.com/code/language/python/functional-programming/anonymous-function.html</link>
       <guid>https://mister-hope.com/code/language/python/functional-programming/anonymous-function.html</guid>
       <source url="https://mister-hope.com/rss.xml">匿名函数</source>
-      <description>当我们在传入函数时，有些时候，不需要显式地定义函数，直接传入匿名函数更方便。 在 Python 中，对匿名函数提供了有限支持。还是以 map() 函数为例，计算 时，除了定义一个 的函数外，还可以直接传入匿名函数: 通过对比可以看出，匿名函数 lambda x: x* x 实际上就是: 关键字 lambda 表示匿名函数，冒号前面的 x 表示函数参数。...</description>
+      <description>当我们在传入函数时，有些时候，不需要显式地定义函数，直接传入匿名函数更方便。 在 Python 中，对匿名函数提供了有限支持。还是以 map() 函数为例，计算 $f(x)=x^2$ 时，除了定义一个 $f(x)$ 的函数外，还可以直接传入匿名函数: 通过对比可以看出，匿名函数 lambda x: x* x 实际上就是: 关键字 lambda 表示匿名...</description>
       <category>Python</category>
       <pubDate>Mon, 15 Mar 2021 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>当我们在传入函数时，有些时候，不需要显式地定义函数，直接传入匿名函数更方便。</p>
-<p>在 Python 中，对匿名函数提供了有限支持。还是以 <code>map()</code> 函数为例，计算  时，除了定义一个  的函数外，还可以直接传入匿名函数:</p>
+<p>在 Python 中，对匿名函数提供了有限支持。还是以 <code>map()</code> 函数为例，计算 $f(x)=x^2$ 时，除了定义一个 $f(x)$ 的函数外，还可以直接传入匿名函数:</p>
 <div class="language-py" data-highlighter="shiki" data-ext="py" data-title="py" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">&gt;&gt;&gt;</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> list</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">map</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">lambda</span><span style="--shiki-light:#986801;--shiki-light-font-style:inherit;--shiki-dark:#D19A66;--shiki-dark-font-style:italic"> x</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">: x </span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">*</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">x, [</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">2</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">3</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">4</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">5</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">6</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">7</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">8</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">9</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">]))</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">[</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">4</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">9</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">16</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">25</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">36</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">49</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">64</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">81</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">]</span></span></code></pre>
 </div><p>通过对比可以看出，匿名函数 <code>lambda x: x* x</code> 实际上就是:</p>
@@ -7130,24 +7130,80 @@ MySQL 会将该命令的配置保存到数据目录下的 <code>mysqld-auto.cnf<
       <link>https://mister-hope.com/physics/electromagnetism/charpter1.html</link>
       <guid>https://mister-hope.com/physics/electromagnetism/charpter1.html</guid>
       <source url="https://mister-hope.com/rss.xml">第一章</source>
-      <description>电场与电势 点电荷 电偶极子 , 由 到 提示 对于电偶极子、电四极子这类题，主要利用 的条件，将结果变为包含 ，合理舍去高阶小量。 虚功原理也可以用来解决电偶极子一类题: 高斯定理 对于无限长线电荷密度为 的线，其电场强度 对于无限大面电荷密度为 的线，其电场强度 静电场的环路定理: 相互作用能 对于连续分布:</description>
+      <description>电场与电势 $$ k = \frac{1}{4\pi\varepsilon_0} = \frac{\mu_0}{4\pi} $$ $$ F_{12} = k \frac{q_1q_2}{r^2}\overrightharpoon{e_{12}} $$ $$ E = \frac{F}{q_0} $$ $$ \overrightharpoon{E} = -...</description>
       <category>物理</category>
       <pubDate>Sun, 27 Dec 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2>电场与电势</h2>
+<p>$$
+k = \frac{1}{4\pi\varepsilon_0} = \frac{\mu_0}{4\pi}
+$$</p>
+<p>$$
+F_{12} = k \frac{q_1q_2}{r^2}\overrightharpoon{e_{12}}
+$$</p>
+<p>$$
+E = \frac{F}{q_0}
+$$</p>
+<p>$$
+\overrightharpoon{E} = - \nabla U
+$$</p>
+<p>$$
+U = \int_P^\infty\overrightharpoon{E}\cdot\overrightharpoon{dl}
+$$</p>
 <h3>点电荷</h3>
+<p>$$
+E = \frac{Q}{4\pi\varepsilon_0r^2}
+$$</p>
+<p>$$
+U = \frac{Q}{4\pi\varepsilon_0r}
+$$</p>
 <h3>电偶极子</h3>
-<p>,  由  到 </p>
+<p>$\overrightharpoon{p} = q \overrightharpoon{l}$, $l$ 由 $-q$ 到 $q$</p>
+<p>$$
+U = \frac{1}{4\pi\varepsilon_0}\frac{\overrightharpoon{p}\cdot\overrightharpoon{e_r}}{r^2}
+$$</p>
+<p>$$
+E = \begin{cases}
+\frac{1}{4\pi\varepsilon}\frac{2p}{r^3} &amp;\text{中垂线}\
+\frac{1}{4\pi\varepsilon}\frac{p}{r^3} &amp;\text{延长线}
+\end{cases}
+$$</p>
 <div class="hint-container tip">
 <p class="hint-container-title">提示</p>
-<p>对于电偶极子、电四极子这类题，主要利用  的条件，将结果变为包含 ，合理舍去高阶小量。</p>
+<p>对于电偶极子、电四极子这类题，主要利用 $a \gg b$ 的条件，将结果变为包含 $\frac{b}{a}$，合理舍去高阶小量。</p>
 <p>虚功原理也可以用来解决电偶极子一类题:</p>
+<p>$$
+F_l = \frac{\partial w}{\partial l}
+$$</p>
+<p>$$
+L_\theta = \frac{\partial w}{\partial\theta}
+$$</p>
 </div>
 <h2>高斯定理</h2>
-<p>对于无限长线电荷密度为  的线，其电场强度</p>
-<p>对于无限大面电荷密度为  的线，其电场强度</p>
+<p>$$
+\varPhi_E = \oiint_s \overrightharpoon{E}\cdot\overrightharpoon{dS} = \frac{1}{\varepsilon_0}\sum_iq_i
+$$</p>
+<p>对于无限长线电荷密度为 $\eta_e$ 的线，其电场强度</p>
+<p>$$E = \frac{\eta_e}{2\pi\varepsilon_0r}$$</p>
+<p>对于无限大面电荷密度为 $\sigma_e$ 的线，其电场强度</p>
+<p>$$E = \frac{\sigma_e}{2\varepsilon_0}$$</p>
 <p>静电场的环路定理:</p>
+<p>$$
+\oint_LE\cdot dl = 0
+$$</p>
 <h2>相互作用能</h2>
+<p>$$
+W_{\text{互}} = \frac{1}{4\pi\varepsilon_0}\sum_{i=1}<sup>n\sum_{j=1}</sup>{i-1}\frac{q_iq_j}{r_{ij}} \= \frac{1}{8\pi\varepsilon_0}\sum_{i=1}<sup>n\sum_{j=1}</sup>n\frac{q_iq_j}{r_{ij}} (i\ne j) \= \frac{1}{2}\sum_iq_iU_i
+$$</p>
 <p>对于连续分布:</p>
+<p>$$
+W_e = \frac{1}{2}\int_V\rho_eUdV \tag{体}
+$$</p>
+<p>$$
+W_e = \frac{1}{2}\int_S\sigma_eUdS \tag{面}
+$$</p>
+<p>$$
+W_e = \frac{1}{2}\int_l\eta_eUdl \tag{线}
+$$</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -7155,7 +7211,7 @@ MySQL 会将该命令的配置保存到数据目录下的 <code>mysqld-auto.cnf<
       <link>https://mister-hope.com/physics/electromagnetism/charpter2.html</link>
       <guid>https://mister-hope.com/physics/electromagnetism/charpter2.html</guid>
       <source url="https://mister-hope.com/rss.xml">第二章</source>
-      <description>导体 导体表面为等势面。 对于孤立导体，空腔内表面无电荷、无电场。 若内部含有其他带电体，则内表面会感应出相反的电荷量。 电容 ，单位符号为 ，单位名称法拉。 常见电容 电容器并联满足: 电容器串联满足: 电容器能量: 电极化密度 符号为 ，单位</description>
+      <description>导体 导体表面为等势面。 对于孤立导体，空腔内表面无电荷、无电场。 若内部含有其他带电体，则内表面会感应出相反的电荷量。 电容 $C = \frac{Q}{U}$，单位符号为 $F$，单位名称法拉。 常见电容 $$4\pi\varepsilon_0R \tag{孤立球}$$ $$\frac{\varepsilon_0S}{d} \tag{平行板}$$ ...</description>
       <category>物理</category>
       <pubDate>Sat, 28 Nov 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2>导体</h2>
@@ -7163,15 +7219,31 @@ MySQL 会将该命令的配置保存到数据目录下的 <code>mysqld-auto.cnf<
 <p>对于孤立导体，空腔内表面无电荷、无电场。</p>
 <p>若内部含有其他带电体，则内表面会感应出相反的电荷量。</p>
 <h2>电容</h2>
-<p>，单位符号为 ，单位名称法拉。</p>
+<p>$C = \frac{Q}{U}$，单位符号为 $F$，单位名称法拉。</p>
 <div class="hint-container info">
 <p class="hint-container-title">常见电容</p>
+<p>$$4\pi\varepsilon_0R \tag{孤立球}$$</p>
+<p>$$\frac{\varepsilon_0S}{d} \tag{平行板}$$</p>
+<p>$$\frac{4\pi\varepsilon_0R_AR_B}{R_b-R_A} \tag{同心球}$$</p>
+<p>$$\frac{2\pi\varepsilon_ol}{ln\frac{R_B}{R_A}} \tag{同轴圆筒}$$</p>
 </div>
 <p>电容器并联满足:</p>
+<p>$$
+C_{\text{并}} = C_1 + C_2 + \dots + C_n
+$$</p>
 <p>电容器串联满足:</p>
+<p>$$
+C_{\text{串}}= \frac{1}{\frac{1}{C_1} + \frac{1}{C_2} + \dots + \frac{1}{C_n}}
+$$</p>
 <p>电容器能量:</p>
+<p>$$
+W_e = \int_0^QUdq = \frac{1}{2}\frac{Q^2}{C} = \frac{1}{2}CU^2 = \frac{1}{2}QU
+$$</p>
 <h2>电极化密度</h2>
-<p>符号为 ，单位 </p>
+<p>$$
+P = \frac{\sum p_{\text{分子}}}{\varDelta V}
+$$</p>
+<p>符号为 $P$，单位 $C/m^2$</p>
 ]]></content:encoded>
     </item>
     <item>
