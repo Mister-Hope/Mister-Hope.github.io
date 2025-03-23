@@ -5,7 +5,7 @@
   <subtitle>Where there is light, there is hope.</subtitle>
   <icon>https://mister-hope.com/favicon.ico</icon>
   <rights>基于 MIT 协议，© 2019-至今 Mr.Hope</rights>
-  <updated>2025-03-09T07:24:16.284Z</updated>
+  <updated>2025-03-23T17:59:08.519Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://mister-hope.com/atom.xml"/>
   <link rel="alternate" href="https://mister-hope.com/"/>
@@ -3472,28 +3472,16 @@
 <p>一个段落由一个及以上相连接的行句组成。</p>
 <p>一个即以上的空行则会切分出不同的段落，一般的段落不需要用空白或断行缩进。</p>
 <div class="hint-container tip">
-<p class="hint-container-title">空行</p><hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></li>
-<li id="footnote2" class="footnote-item"> <a href="#footnote-ref2" class="footnote-backref">↩︎</a></li>
-</ol>
-</section>
-<p></p>
+<p class="hint-container-title">空行</p>
 <p>空行的定义是显示上看起来像是空行，便会被视为空行。</p>
 <p>也就是若某一行只包含空白和 tab，则该行也会被视为空行。</p>
-</div>]]></summary>
+</div>
+<p>「一个及以上相连接的行句组成」这句话其实暗示了 Markdown 允许段落内的强迫断行，其它的格式会把每个断行都转成 <code>&lt;br /&gt;</code> 标签。</p>]]></summary>
     <content type="html"><![CDATA[<h2>段落和换行</h2>
 <p>一个段落由一个及以上相连接的行句组成。</p>
 <p>一个即以上的空行则会切分出不同的段落，一般的段落不需要用空白或断行缩进。</p>
 <div class="hint-container tip">
-<p class="hint-container-title">空行</p><hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></li>
-</ol>
-</section>
-<p></p>
+<p class="hint-container-title">空行</p>
 <p>空行的定义是显示上看起来像是空行，便会被视为空行。</p>
 <p>也就是若某一行只包含空白和 tab，则该行也会被视为空行。</p>
 </div>
@@ -3513,13 +3501,7 @@
 <li>H6: <code>###### Header 6</code></li>
 </ul>
 <div class="hint-container tip">
-<p class="hint-container-title">最佳实践</p><hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></li>
-</ol>
-</section>
-<p></p>
+<p class="hint-container-title">最佳实践</p>
 <p>为了使内容可读性更强，Markdown 最佳实践要求标题应使用 Atx 写法，并且每个标题应被空行隔开。 (第一行的大标题不需要向上空行)</p>
 </div>
 <p>Setext<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup> 格式不推荐使用。</p>
