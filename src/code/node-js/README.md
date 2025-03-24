@@ -36,37 +36,38 @@ Node.js 是一款全球使用广泛的框架，可以用在前端与后端上，
 
 - [地址](https://nodejs.org/dist/latest-v14.x/docs/api/)
 
-## Yarn
+## 包管理器
 
-快速、可靠、安全的依赖管理工具。
+自从 Node.js 18 以来，Node.js 自带了 Corepack 来处理项目使用何种包管理器，目前支持 `npm`, `yarn` 和 `pnpm`。它是默认禁用的，可以通过以下命令启用：
 
-- Yarn 缓存了每个下载过的包，所以再次使用时无需重复下载。同时利用并行下载以最大化资源利用率，因此安装速度更快。
-- 在执行代码之前，Yarn 会通过算法校验每个安装包的完整性。
-- 使用详细、简洁的锁文件格式和明确的安装算法，Yarn 能够保证在不同系统上无差异的工作。
+```bash
+corepack enable
+```
 
-- [下载地址](https://www.yarnpkg.com/zh-Hans/docs/install#windows-stable)
-- [官方文档](https://www.yarnpkg.com/zh-Hans/docs)
+如果希望在全局范围内使用某个包管理器，可以使用以下命令：
 
-### 命令
+```bash
+# 可以使用 npm, yarn, pnpm，并指定各种版本
+corepack prepare pnpm@latest --activate
+```
 
-- `yarn install`: 执行安装
+如果想为某个项目指定包管理器，可以使用以下命令：
 
-- `yarn upgrade`: 执行升级
+```bash
+# 可以使用 npm, yarn, pnpm，并指定各种版本
+corepack use pnpm@latest
+```
 
-- `yarn add <package>`: 添加一个包
+::: tip
 
-- `yarn config set cache-folder <path>`: 更改缓存文件夹
+在国内，如果你不能为 npm 配置代理，建议换成 npmmirror。 <https://registry.npmmirror.com>
 
-- `yarn config set registry <registry>`: 更改源
+在项目的 `.npmrc` 文件中添加:
 
-  ::: tip
+```
+registry=https://registry.npmmirror.com
+```
 
-  在国内，建议换成淘宝源 <https://registry.npm.taobao.org>
+同时，你也设置环境变量 `NPM_CONFIG_REGISTRY` 为 `https://registry.npmmirror.com`。
 
-  即执行
-
-  ```sh
-  yarn config set registry https://registry.npm.taobao.org
-  ```
-
-  :::
+:::
