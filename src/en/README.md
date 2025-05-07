@@ -1,7 +1,7 @@
 ---
 date: 2022-01-07
 home: true
-layout: BlogHome
+layout: Blog
 icon: home
 title: Home
 heroImage: /logo.svg

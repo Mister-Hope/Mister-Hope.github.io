@@ -101,6 +101,9 @@ export default hopeTheme(
       sup: true,
       tabs: true,
       vPre: true,
+      math: {
+        type: "mathjax",
+      },
     },
 
     plugins: {
