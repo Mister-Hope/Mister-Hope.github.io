@@ -1,5 +1,5 @@
 ---
-date: 2021-00-19
+date: 2021-01-19
 title: JavaScript 支持情况
 icon: javascript
 category: 小程序

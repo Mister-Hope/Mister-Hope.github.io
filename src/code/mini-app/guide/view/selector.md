@@ -1,5 +1,5 @@
 ---
-date: 2021-00-19
+date: 2021-01-19
 title: 获取界面上的节点信息
 icon: select
 category: 小程序

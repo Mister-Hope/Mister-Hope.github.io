@@ -1,5 +1,5 @@
 ---
-date: 2021-00-19
+date: 2021-01-19
 title: 小程序更新机制
 icon: update
 category: 小程序

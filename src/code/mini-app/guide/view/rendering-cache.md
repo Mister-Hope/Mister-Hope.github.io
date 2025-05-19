@@ -1,5 +1,5 @@
 ---
-date: 2021-00-19
+date: 2021-01-19
 title: 初始渲染缓存
 icon: cache
 category: 小程序

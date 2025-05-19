@@ -1,5 +1,5 @@
 ---
-date: 2021-00-19
+date: 2021-01-19
 title: 数据绑定
 icon: rank
 category: 小程序
