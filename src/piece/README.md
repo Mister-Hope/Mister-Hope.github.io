@@ -58,7 +58,3 @@ sticky: 9
 :::
 
 - [点击前往](poem/README.md)
-
-## Node.js 相关
-
-- [current-path 相关](node-js/current-path.md)

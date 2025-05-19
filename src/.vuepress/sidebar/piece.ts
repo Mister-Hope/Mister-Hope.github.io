@@ -1,6 +1,6 @@
 import { arraySidebar } from "vuepress-theme-hope";
 
-export const note = arraySidebar([
+export const piece = arraySidebar([
   "",
   {
     text: "秋之思",
@@ -140,5 +140,4 @@ export const note = arraySidebar([
       "14",
     ],
   },
-  "node-js/",
 ]);

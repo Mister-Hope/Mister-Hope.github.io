@@ -11,7 +11,7 @@ import {
 } from "./language/index.js";
 import { linux } from "./linux.js";
 import { miniapp } from "./mini-app/index.js";
-import { note } from "./note.js";
+import { piece } from "./piece.js";
 import { physics } from "./physics.js";
 import { comsol, software, vscode } from "./software/index.js";
 import { vue } from "./vue.js";
@@ -30,7 +30,9 @@ export const zhSidebarConfig = sidebar({
 
   "/note/innenu/": ["", "yaml", "tag-list", "get-started"],
 
-  "/note/": note,
+  "/piece/": piece,
+
+  "/note/": "structure",
 
   "/linux/": linux,
 
