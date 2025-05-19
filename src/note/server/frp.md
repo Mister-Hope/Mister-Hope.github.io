@@ -4,7 +4,7 @@ title: frp
 
 [frp](https://github.com/fatedier/frp) 是一个高性能的反向代理应用，主要用于内网穿透。它可以将内网服务暴露到公网上，方便外部访问。
 
-frp 的文档可以参照 [frp 文档](https://gofrp.org/zh-cn/docs/) 或
+frp 的文档可以参照 [frp 文档](https://gofrp.org/zh-cn/docs/) 或 [frp GitHub](https://github.com/fatedier/frp)
 
 ## Linux 安装
 
@@ -47,6 +47,13 @@ sudo systemctl start frps
 sudo systemctl status frps
 # 开机启动
 sudo systemctl enable frps
+```
+
+如果想要查看日志，可以使用 `journalctl` 命令：
+
+```bash
+# 查看日志
+sudo journalctl -u frps
 ```
 
 ## Windows 安装
