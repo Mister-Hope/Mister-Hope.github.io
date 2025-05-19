@@ -6,8 +6,8 @@
     <link>https://mister-hope.com/</link>
     <description>Where there is light, there is hope.</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 17 May 2025 05:48:57 GMT</pubDate>
-    <lastBuildDate>Sat, 17 May 2025 05:48:57 GMT</lastBuildDate>
+    <pubDate>Mon, 19 May 2025 10:29:10 GMT</pubDate>
+    <lastBuildDate>Mon, 19 May 2025 10:29:10 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>基于 MIT 协议，© 2019-至今 Mr.Hope</copyright>
@@ -287,33 +287,14 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>Docker</title>
-      <link>https://mister-hope.com/note/server/docker.html</link>
-      <guid>https://mister-hope.com/note/server/docker.html</guid>
-      <source url="https://mister-hope.com/rss.xml">Docker</source>
-      <description>安装 Docker Desktop 在设置中的 General 选择 Use the WSL 2 based engine 作为后端并勾选 Add the *.docker.internal names to the host&amp;apos;s /etc/hosts file (Requires password) 在设置中的 Resources 在 Advance...</description>
-      <pubDate>Sun, 20 Apr 2025 18:10:56 GMT</pubDate>
-      <content:encoded><![CDATA[<ol>
-<li>安装 Docker Desktop</li>
-<li>在设置中的 <code>General</code> 选择 <code>Use the WSL 2 based engine</code> 作为后端并勾选 <code>Add the *.docker.internal names to the host's /etc/hosts file (Requires password)</code></li>
-<li>在设置中的 <code>Resources</code>
-<ol>
-<li>在 <code>Advanced</code> 中变更 <code>Disk image location</code>，最好移动到空间较大的盘去。</li>
-<li>在 <code>WSL Integration</code> 中选择需要集成的 Linux 发行版</li>
-</ol>
-</li>
-</ol>
-]]></content:encoded>
-    </item>
-    <item>
       <title>frp</title>
       <link>https://mister-hope.com/note/server/frp.html</link>
       <guid>https://mister-hope.com/note/server/frp.html</guid>
       <source url="https://mister-hope.com/rss.xml">frp</source>
-      <description>frp 是一个高性能的反向代理应用，主要用于内网穿透。它可以将内网服务暴露到公网上，方便外部访问。 frp 的文档可以参照 frp 文档 或 Linux 安装 frp 适合放置在 /usr/local/frp 目录下。 确保 systemd 已经安装： 创建 frpc 或 frps 服务： 写入服务配置： 进行其他配置，配置好后启用 Windows 安...</description>
+      <description>frp 是一个高性能的反向代理应用，主要用于内网穿透。它可以将内网服务暴露到公网上，方便外部访问。 frp 的文档可以参照 frp 文档 或 frp GitHub Linux 安装 frp 适合放置在 /usr/local/frp 目录下。 确保 systemd 已经安装： 创建 frpc 或 frps 服务： 写入服务配置： 进行其他配置，配置好后启...</description>
       <pubDate>Sun, 20 Apr 2025 18:10:56 GMT</pubDate>
       <content:encoded><![CDATA[<p><a href="https://github.com/fatedier/frp" target="_blank" rel="noopener noreferrer">frp</a> 是一个高性能的反向代理应用，主要用于内网穿透。它可以将内网服务暴露到公网上，方便外部访问。</p>
-<p>frp 的文档可以参照 <a href="https://gofrp.org/zh-cn/docs/" target="_blank" rel="noopener noreferrer">frp 文档</a> 或</p>
+<p>frp 的文档可以参照 <a href="https://gofrp.org/zh-cn/docs/" target="_blank" rel="noopener noreferrer">frp 文档</a> 或 <a href="https://github.com/fatedier/frp" target="_blank" rel="noopener noreferrer">frp GitHub</a></p>
 <h2>Linux 安装</h2>
 <p>frp 适合放置在 <code>/usr/local/frp</code> 目录下。</p>
 <p>确保 systemd 已经安装：</p>
@@ -339,6 +320,9 @@
 <span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> systemctl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> status</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> frps</span></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 开机启动</span></span>
 <span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> systemctl</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> enable</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> frps</span></span></code></pre>
+</div><p>如果想要查看日志，可以使用 <code>journalctl</code> 命令：</p>
+<div class="language-bash" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 查看日志</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> journalctl</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -u</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> frps</span></span></code></pre>
 </div><h2>Windows 安装</h2>
 <p>可以放置在 <code>C:\frp</code> 目录下。</p>
 <p>创建 Windows 服务模板:</p>
@@ -366,6 +350,25 @@
 </div><p>通过 <code>WinSW-x64.exe</code> 创建 <code>frpc</code> 或 <code>frps</code> 服务：</p>
 <div class="language-bash" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">C:\frp\WinSW-x64.exe</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> frpc.xml</span></span></code></pre>
 </div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>https://mister-hope.com/note/wsl/docker.html</link>
+      <guid>https://mister-hope.com/note/wsl/docker.html</guid>
+      <source url="https://mister-hope.com/rss.xml">Docker</source>
+      <description>安装 Docker Desktop 在设置中的 General 选择 Use the WSL 2 based engine 作为后端并勾选 Add the *.docker.internal names to the host&amp;apos;s /etc/hosts file (Requires password) 在设置中的 Resources 在 Advance...</description>
+      <pubDate>Sun, 20 Apr 2025 18:10:56 GMT</pubDate>
+      <content:encoded><![CDATA[<ol>
+<li>安装 Docker Desktop</li>
+<li>在设置中的 <code>General</code> 选择 <code>Use the WSL 2 based engine</code> 作为后端并勾选 <code>Add the *.docker.internal names to the host's /etc/hosts file (Requires password)</code></li>
+<li>在设置中的 <code>Resources</code>
+<ol>
+<li>在 <code>Advanced</code> 中变更 <code>Disk image location</code>，最好移动到空间较大的盘去。</li>
+<li>在 <code>WSL Integration</code> 中选择需要集成的 Linux 发行版</li>
+</ol>
+</li>
+</ol>
+]]></content:encoded>
     </item>
     <item>
       <title>LLM + RAG：智能问答实战</title>
