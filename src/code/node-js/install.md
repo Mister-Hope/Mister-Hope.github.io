@@ -10,13 +10,9 @@ tag:
   - 安装
 ---
 
-由于 Node.js 平台是在后端运行 JavaScript 代码，所以，必须首先在本机安装 Node.js 环境。
-
-<!-- more -->
-
 ## 安装 Node.js
 
-目前 Node.js 的 LTS 版本是 18.15.0。首先，从 Node.js 官网下载对应平台的安装程序。点击**长期维护版**的下载按钮。
+目前 Node.js 的 LTS 版本是 22.15.1。首先，从 Node.js 官网下载对应平台的安装程序。点击**下载 Node.js (LTS)** 按钮。
 
 - [Node.js 官网](https://nodejs.org/zh-cn/)
 
@@ -29,8 +25,8 @@ tag:
   安装完成后，在 Windows 环境下，请打开命令提示符，然后输入 `node -v` ，如果安装正常，您应该看到 `v18.15.0` 这样的输出:
 
   ```bash
-  C:\Users\IEUser>node -v
-  v18.15.0
+  C:\Users\Mister-Hope>node -v
+  v22.15.1
   ```
 
   继续在命令提示符输入 node，此刻您将进入 Node.js 的交互环境。在交互环境下，您可以输入任意 JavaScript 语句，例如 `100 + 200`，回车后将得到输出结果。
@@ -41,7 +37,7 @@ tag:
 
   ```sh
   $ node -v
-  v18.15.0
+  v22.15.1
   ```
 
 ## npm
@@ -58,7 +54,7 @@ npm 是 Node.js 的包管理工具(package manager)。
 
 ```bash
 C:\>npm -v
-9.6.0
+11.4.0
 ```
 
 > 如果版本号太小，说明 npm 版本较低，请使用此命令升级到最新版本: `npm i -g npm`。
@@ -110,7 +106,7 @@ npm config set registry https://registry.npmmirror.com/
 
 Node.js 自带的包管理工具 npm 并不是那么的强大，其安装速度也很慢，所以社区开发了一些其他的包管理工具如 `yarn` 和 `pnpm`，它们有自己的优势。
 
-Mr.Hope 推荐使用 pnpm 进行包管理，因为它使用硬链接索引包文件，安装速度更快而且节省磁盘空间。
+我推荐使用 pnpm 进行包管理，因为它使用硬链接索引包文件，安装速度更快而且节省磁盘空间。
 
 从 v16 开始，Node.js 引入了 Corepack 工具，并在 package.json 支持了 `packageManager` 选项以支持第三方管理工具。
 
@@ -124,12 +120,12 @@ corepack enable
 
 ::: info 设置全局的 packageManager
 
-你可以使用 `corepack prepare packageManager@semver` 来全局准备一个 packageManager 版本，并使用 `--activate` 选新娘 全局激活。
+你可以使用 `corepack prepare packageManager@semver` 来全局准备一个 packageManager 版本，并使用 `--activate` 进行全局激活。
 
-比如以下命令下载 `pnpm@7.30.3` 并将其作为默认的全局包管理器:
+比如以下命令会下载最新的 `pnpm` 并将其作为默认的全局包管理器:
 
 ```bash
-corepack prepare pnpm@7.30.3 --activate
+corepack prepare pnpm@latest --activate
 ```
 
 :::

@@ -9,7 +9,7 @@ tag:
   - 软件
 ---
 
-由于 Node.js 需要编码、运行、调试，我们需要一个 IDE 集成开发环境，这样就可以大大提升开发效率。综合考察后，Mr.Hope 隆重向大家推荐 Node.js 集成开发环境: **Visual Studio Code**。它启动速度快，执行简单，调试方便这三点上。当然，免费使用是一个加分项。
+由于 Node.js 需要编码、运行、调试，我们需要一个 IDE 集成开发环境，这样就可以大大提升开发效率。我个人推荐 **Visual Studio Code**。它启动速度快，执行简单，调试方便这三点上。当然，免费使用是一个加分项。
 
 <!-- more -->
 
@@ -66,7 +66,3 @@ hello/ <-- workspace dir
 ```
 
 有了配置文件，即可使用 VS Code 调试 JavaScript。
-
-## 视频演示
-
-- [视频演示](https://www.bilibili.com/video/av5827351/)
