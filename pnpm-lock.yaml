@@ -21,8 +21,8 @@ importers:
         specifier: 2.0.0-rc.102
         version: 2.0.0-rc.102(@vuepress/plugin-git@2.0.0-rc.102(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.17)(jiti@1.21.7)(lightningcss@1.29.3)(sass-embedded@1.87.0)(terser@5.39.0))(@vuepress/bundler-webpack@2.0.0-rc.22)(vue@3.5.15)))(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.17)(jiti@1.21.7)(lightningcss@1.29.3)(sass-embedded@1.87.0)(terser@5.39.0))(@vuepress/bundler-webpack@2.0.0-rc.22)(vue@3.5.15))
       '@vuepress/plugin-cache':
-        specifier: 2.0.0-rc.99
-        version: 2.0.0-rc.99(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.17)(jiti@1.21.7)(lightningcss@1.29.3)(sass-embedded@1.87.0)(terser@5.39.0))(@vuepress/bundler-webpack@2.0.0-rc.22)(vue@3.5.15))
+        specifier: 2.0.0-rc.103
+        version: 2.0.0-rc.103(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.17)(jiti@1.21.7)(lightningcss@1.29.3)(sass-embedded@1.87.0)(terser@5.39.0))(@vuepress/bundler-webpack@2.0.0-rc.22)(vue@3.5.15))
       '@vuepress/plugin-docsearch':
         specifier: 2.0.0-rc.102
         version: 2.0.0-rc.102(@algolia/client-search@5.24.0)(search-insights@2.17.3)(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.17)(jiti@1.21.7)(lightningcss@1.29.3)(sass-embedded@1.87.0)(terser@5.39.0))(@vuepress/bundler-webpack@2.0.0-rc.22)(vue@3.5.15))
@@ -1725,10 +1725,10 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.22
 
-  '@vuepress/plugin-cache@2.0.0-rc.99':
-    resolution: {integrity: sha512-/TdPwBoAK8iAfP39JssQnvhvI8jhxIlKZm21gp85WGry0XK9DWyq0cmtIzZqixrJfthNxPYp+teg/U4rRr+yLg==}
+  '@vuepress/plugin-cache@2.0.0-rc.103':
+    resolution: {integrity: sha512-KHo1ahf1kpJlXun8r/8ENMSxdiIxFYusK6pPE3peK9AGJ1m+VnOf2bXPWFpWwa8CR+A/cgQenqh0621dfo+EsA==}
     peerDependencies:
-      vuepress: 2.0.0-rc.22
+      vuepress: 2.0.0-rc.23
 
   '@vuepress/plugin-catalog@2.0.0-rc.102':
     resolution: {integrity: sha512-l7snMK61FOSYiNsjEe5fd31Tf7md9eDKolcguTkNHZvtSwuPYDD22vUsrb9hy8ntzyfQTQMJ3OTpiR9xhSbUyw==}
@@ -7617,7 +7617,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@vuepress/plugin-cache@2.0.0-rc.99(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.17)(jiti@1.21.7)(lightningcss@1.29.3)(sass-embedded@1.87.0)(terser@5.39.0))(@vuepress/bundler-webpack@2.0.0-rc.22)(vue@3.5.15))':
+  '@vuepress/plugin-cache@2.0.0-rc.103(vuepress@2.0.0-rc.22(@vuepress/bundler-vite@2.0.0-rc.22(@types/node@22.15.17)(jiti@1.21.7)(lightningcss@1.29.3)(sass-embedded@1.87.0)(terser@5.39.0))(@vuepress/bundler-webpack@2.0.0-rc.22)(vue@3.5.15))':
     dependencies:
       ci-info: 4.2.0
       lru-cache: 11.1.0
