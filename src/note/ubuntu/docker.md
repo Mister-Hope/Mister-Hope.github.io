@@ -87,10 +87,14 @@ systemctl --user start docker
 systemctl --user stop docker
 ```
 
-对于国内用户，可以在 `/etc/docker/daemon.json` (如果是 Rootless 模式，则为 `~/.config/docker/daemon.json`) 配置国内源。
+对于国内用户，可以在 `/etc/docker/daemon.json` (如果是 Rootless 模式，则为 `~/.config/docker/daemon.json`) 配置国内源，并且为 Docker 设置代理。
 
 ```json
 {
+  "proxies": {
+    "http-proxy": "http://127.0.0.1:10808",
+    "no-proxy": "127.0.0.0/8"
+  },
   "registry-mirrors": [
     "https://docker.1ms.run",
     "https://docker.xuanyuan.me",
@@ -116,6 +120,15 @@ systemctl --user stop docker
 sudo ufw allow in on docker0 from 172.17.0.0/16
 sudo ufw allow out on docker0 to 172.17.0.0/16
 sudo ufw reload
+```
+
+对于 Rootless Docker 服务，可以通过 `~/.config/systemd/user/docker.service.d/override.conf` 进行配置：
+
+```ini
+# 在这里，我们修改了网络设置和端口驱动
+[Service]
+Environment="DOCKERD_ROOTLESS_ROOTLESSKIT_NET=pasta"
+Environment="DOCKERD_ROOTLESS_ROOTLESSKIT_PORT_DRIVER=implicit"
 ```
 
 ## 管理 Docker
