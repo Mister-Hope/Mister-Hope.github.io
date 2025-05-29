@@ -5,7 +5,7 @@
   <subtitle>Where there is light, there is hope.</subtitle>
   <icon>https://mister-hope.com/favicon.ico</icon>
   <rights>基于 MIT 协议，© 2019-至今 Mr.Hope</rights>
-  <updated>2025-05-28T05:11:44.182Z</updated>
+  <updated>2025-05-29T13:36:27.405Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://mister-hope.com/atom.xml"/>
   <link rel="alternate" href="https://mister-hope.com/"/>
@@ -416,26 +416,29 @@
     <title type="text">frp</title>
     <id>https://mister-hope.com/note/server/frp.html</id>
     <link href="https://mister-hope.com/note/server/frp.html"/>
-    <updated>2025-05-19T09:58:12.000Z</updated>
+    <updated>2025-05-29T13:32:54.000Z</updated>
     <summary type="html"><![CDATA[<p><a href="https://github.com/fatedier/frp" target="_blank" rel="noopener noreferrer">frp</a> 是一个高性能的反向代理应用，主要用于内网穿透。它可以将内网服务暴露到公网上，方便外部访问。</p>
 <p>frp 的文档可以参照 <a href="https://gofrp.org/zh-cn/docs/" target="_blank" rel="noopener noreferrer">frp 文档</a> 或 <a href="https://github.com/fatedier/frp" target="_blank" rel="noopener noreferrer">frp GitHub</a></p>]]></summary>
     <content type="html"><![CDATA[<p><a href="https://github.com/fatedier/frp" target="_blank" rel="noopener noreferrer">frp</a> 是一个高性能的反向代理应用，主要用于内网穿透。它可以将内网服务暴露到公网上，方便外部访问。</p>
 <p>frp 的文档可以参照 <a href="https://gofrp.org/zh-cn/docs/" target="_blank" rel="noopener noreferrer">frp 文档</a> 或 <a href="https://github.com/fatedier/frp" target="_blank" rel="noopener noreferrer">frp GitHub</a></p>
-<h2>Linux 安装</h2>
-<p>frp 适合放置在 <code>/usr/local/frp</code> 目录下。</p>
+<h2>Linux 安装服务端</h2>
+<p>标准的做法，是将 frps 放置在 <code>/usr/local/bin</code> 目录下。</p>
 <p>确保 systemd 已经安装：</p>
 <div class="language-bash" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">apt</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> systemd</span></span></code></pre>
 </div><p>创建 <code>frpc</code> 或 <code>frps</code> 服务：</p>
 <div class="language-bash" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> vim</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /etc/systemd/system/frps.service</span></span></code></pre>
 </div><p>写入服务配置：</p>
 <div class="language-conf" data-highlighter="shiki" data-ext="conf" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-conf"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">[Unit]</span></span>
-<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">Description</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> frp server</span></span>
-<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">After</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> network.target syslog.target</span></span>
-<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">Wants</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> network.target</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">Description</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> FRP Server</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">After</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> network.target</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">[Service]</span></span>
 <span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">Type</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> simple</span></span>
-<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">ExecStart</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> /usr/local/frp/frps -c /usr/local/frp/frps.toml</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">ExecStart</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">/usr/local/bin/frps -c /etc/frp/frps.toml</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">Restart</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> on-failure</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">RestartSec</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> 5s</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">StandardOutput</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> file:/var/log/frp/frps.log</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">StandardError</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">file:/var/log/frp/frps.error.log</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">[Install]</span></span>
 <span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">WantedBy</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> multi-user.target</span></span></code></pre>
@@ -449,6 +452,25 @@
 </div><p>如果想要查看日志，可以使用 <code>journalctl</code> 命令：</p>
 <div class="language-bash" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># 查看日志</span></span>
 <span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> journalctl</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -u</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> frps</span></span></code></pre>
+</div><h2>Linux 安装客户端</h2>
+<p>标准的做法，是将 frpc 放置在 <code>/usr/local/bin</code> 目录下。</p>
+<p>创建 <code>frpc</code> 服务：</p>
+<div class="language-bash" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> vim</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /etc/systemd/system/frpc.service</span></span></code></pre>
+</div><p>写入服务配置：</p>
+<div class="language-conf" data-highlighter="shiki" data-ext="conf" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-conf"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">[Unit]</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">Description</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> FRP Client</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">After</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> network.target</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">[Service]</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">Type</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> simple</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">ExecStart</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379">/usr/local/bin/frpc -c /etc/frp/frpc.toml</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">Restart</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> on-failure</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">RestartSec</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> 5s</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">StandardOutput</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> file:/var/log/frp/frpc.log</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">StandardError</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> file:/var/log/frp/frpc.error.log</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">[Install]</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#C678DD">WantedBy</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#98C379"> multi-user.target</span></span></code></pre>
 </div><h2>Windows 安装</h2>
 <p>可以放置在 <code>C:\frp</code> 目录下。</p>
 <p>创建 Windows 服务模板:</p>
