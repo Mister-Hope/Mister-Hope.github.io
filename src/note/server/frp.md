@@ -6,9 +6,9 @@ title: frp
 
 frp 的文档可以参照 [frp 文档](https://gofrp.org/zh-cn/docs/) 或 [frp GitHub](https://github.com/fatedier/frp)
 
-## Linux 安装
+## Linux 安装服务端
 
-frp 适合放置在 `/usr/local/frp` 目录下。
+标准的做法，是将 frps 放置在 `/usr/local/bin` 目录下。
 
 确保 systemd 已经安装：
 
@@ -26,13 +26,16 @@ sudo vim /etc/systemd/system/frps.service
 
 ```conf
 [Unit]
-Description = frp server
-After = network.target syslog.target
-Wants = network.target
+Description = FRP Server
+After = network.target
 
 [Service]
 Type = simple
-ExecStart = /usr/local/frp/frps -c /usr/local/frp/frps.toml
+ExecStart=/usr/local/bin/frps -c /etc/frp/frps.toml
+Restart = on-failure
+RestartSec = 5s
+StandardOutput = file:/var/log/frp/frps.log
+StandardError =file:/var/log/frp/frps.error.log
 
 [Install]
 WantedBy = multi-user.target
@@ -54,6 +57,35 @@ sudo systemctl enable frps
 ```bash
 # 查看日志
 sudo journalctl -u frps
+```
+
+## Linux 安装客户端
+
+标准的做法，是将 frpc 放置在 `/usr/local/bin` 目录下。
+
+创建 `frpc` 服务：
+
+```bash
+sudo vim /etc/systemd/system/frpc.service
+```
+
+写入服务配置：
+
+```conf
+[Unit]
+Description = FRP Client
+After = network.target
+
+[Service]
+Type = simple
+ExecStart=/usr/local/bin/frpc -c /etc/frp/frpc.toml
+Restart = on-failure
+RestartSec = 5s
+StandardOutput = file:/var/log/frp/frpc.log
+StandardError = file:/var/log/frp/frpc.error.log
+
+[Install]
+WantedBy = multi-user.target
 ```
 
 ## Windows 安装
