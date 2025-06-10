@@ -5,7 +5,7 @@
   <subtitle>Mr.Hope personal blog</subtitle>
   <icon>https://mister-hope.com/favicon.ico</icon>
   <rights>MIT Licensed, © 2019-present Mr.Hope</rights>
-  <updated>2025-06-06T16:46:50.709Z</updated>
+  <updated>2025-06-10T15:54:08.342Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://mister-hope.com/en/atom.xml"/>
   <link rel="alternate" href="https://mister-hope.com/en/"/>
@@ -257,7 +257,7 @@
 <h2>Setting Up FastCGI Proxying</h2>
 <p>Nginx can be used to route requests to FastCGI servers which run applications built with various frameworks and programming languages such as PHP.</p>
 <p>The most basic nginx configuration to work with a FastCGI server includes using the <code>fastcgi_pass</code> directive instead of the <code>proxy_pass</code> directive, and <code>fastcgi_param</code> directives to set parameters passed to a FastCGI server. Suppose the FastCGI server is accessible on <code>localhost:9000</code>. Taking the proxy configuration from the previous section as a basis, replace the <code>proxy_pass</code> directive with the fastcgi_pass directive and change the parameter to <code>localhost:9000</code>. In PHP, the <code>SCRIPT_FILENAME</code> parameter is used for determining the script name, and the <code>QUERY_STRING</code> parameter is used to pass request parameters. The resulting configuration would be:</p>
-<div class="language-nginx" data-highlighter="shiki" data-ext="nginx" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-nginx"><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">server</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
+<div class="language-nginx line-numbers-mode" data-highlighter="shiki" data-ext="nginx" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-nginx"><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">server</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
 <span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">    location</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> / {</span></span>
 <span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        fastcgi_pass </span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> localhost:9000;</span></span>
 <span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        fastcgi_param </span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">SCRIPT_FILENAME $</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">document_root</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">$</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">fastcgi_script_name</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
@@ -268,7 +268,7 @@
 <span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">        root </span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">/data/images;</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    }</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
-</div><p>This will set up a server that will route all requests except for requests for static images to the proxied server operating on <code>localhost:9000</code> through the FastCGI protocol.</p>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>This will set up a server that will route all requests except for requests for static images to the proxied server operating on <code>localhost:9000</code> through the FastCGI protocol.</p>
 <h2>Official Docs</h2>
 <ul>
 <li><a href="https://docs.nginx.com/nginx/admin-guide/" target="_blank" rel="noopener noreferrer">Navigate</a></li>
