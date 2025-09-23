@@ -22,13 +22,13 @@ Recently, I moved it as a teenager’s memory in my blog.
 
 :::
 
-- [Autumn Thought](../../note/fall/README.md)
+- [Autumn Thought](../../piece/fall/README.md)
 
-- [Winter Words](../../note/winter/README.md)
+- [Winter Words](../../piece/winter/README.md)
 
-- [Spring Poetry](../../note/spring/README.md)
+- [Spring Poetry](../../piece/spring/README.md)
 
-- [Summer Songs](../../note/summer/README.md)
+- [Summer Songs](../../piece/summer/README.md)
 
 ::: tip
 
@@ -46,7 +46,7 @@ Recently, I moved it as a teenager’s memory in my blog.
 
 :::
 
-- [Details](../../note/life/README.md)
+- [Details](../../piece/life/README.md)
 
 ## Whisper
 
@@ -58,4 +58,4 @@ Recently, I moved it as a teenager’s memory in my blog.
 
 :::
 
-- [Details](../../note/poem/README.md)
+- [Details](../../piece/poem/README.md)

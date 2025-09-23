@@ -53,10 +53,6 @@ next: ./basic/
 
 - [Android 开发](android/README.md)
 
-### 后端开发
-
-- [后端开发](back-end/README.md)
-
 ### 代码学习网站
 
 ### 优质网站

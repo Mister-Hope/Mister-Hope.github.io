@@ -95,6 +95,7 @@ export default hopeTheme(
       imgMark: true,
       imgSize: true,
       footnote: true,
+      mark: true,
       mermaid: true,
       revealjs: true,
       sub: true,

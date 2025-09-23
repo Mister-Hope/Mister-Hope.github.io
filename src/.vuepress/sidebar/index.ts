@@ -18,6 +18,8 @@ import { vue } from "./vue.js";
 import { jquery, website } from "./website/index.js";
 
 export const zhSidebarConfig = sidebar({
+  "/teaching": "structure",
+
   "/software/vscode/": vscode,
 
   "/software/git/": "structure",
