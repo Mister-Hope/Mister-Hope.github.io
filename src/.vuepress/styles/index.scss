@@ -1,0 +1,10 @@
+// FIXME: Remove once normalize supports this
+[vp-content] {
+  ol ol {
+    list-style-type: lower-roman;
+
+    ol {
+      list-style-type: lower-alpha;
+    }
+  }
+}
