@@ -33,7 +33,7 @@ export default hopeTheme(
         copyright: "基于 MIT 协议，© 2019-至今 Mr.Hope",
 
         blog: {
-          description: "理论物理硕士在读，前端开发者，开源项目贡献者",
+          description: "理论物理硕士，高中物理教师，前端开发者，开源项目贡献者",
           intro: "/about/",
           medias: {
             GitHub: "https://github.com/Mister-Hope",
@@ -62,7 +62,7 @@ export default hopeTheme(
 
         blog: {
           description:
-            "VuePress project member, front-end developer, studying for a master's degree in theoretical physics",
+            "VuePress project member, front-end developer, master's degree in theoretical physics, high school physics teacher",
           intro: "/en/about/",
           medias: {
             Gmail: "mailto:mister-hope@outlook.com",

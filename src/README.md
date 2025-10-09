@@ -64,5 +64,10 @@ projects:
     link: https://github.com/miniapp-tool/mptool
     icon: https://miniapp-tool.github.io/logo.png
 
+  - name: 个人网盘
+    desc: 有部分公开文件
+    link: https://drive.mister-hope.com
+    icon: /logo.svg
+
 footer: '<a href="http://beian.miit.gov.cn/" rel="noopener noreferrer" target="_blank" style="color:inherit;text-decoration:none;white-space:nowrap;">辽ICP备 18007023 号</a> / <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=21030202000276" rel="noopener noreferrer" target="_blank" style="color:inherit;text-decoration:none;white-space:nowrap;"><img src="/ghs.png" style="width:1rem;vertical-align:middle;"> 辽公网安备 21030202000276 号</a> | <a href="/about/site.html">关于网站</a>'
 ---
