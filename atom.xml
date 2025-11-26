@@ -5,7 +5,7 @@
   <subtitle>Where there is light, there is hope.</subtitle>
   <icon>https://mister-hope.com/favicon.ico</icon>
   <rights>基于 MIT 协议，© 2019-至今 Mr.Hope</rights>
-  <updated>2025-11-26T02:14:17.922Z</updated>
+  <updated>2025-11-26T03:42:16.587Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://mister-hope.com/atom.xml"/>
   <link rel="alternate" href="https://mister-hope.com/"/>
@@ -36,7 +36,7 @@
     <title type="text">斜抛最远距离问题</title>
     <id>https://mister-hope.com/physics/high-school/2.html</id>
     <link href="https://mister-hope.com/physics/high-school/2.html"/>
-    <updated>2025-11-26T02:10:51.000Z</updated>
+    <updated>2025-11-26T03:38:50.000Z</updated>
     <summary type="html"><![CDATA[<h2>题目一：高台抛射的最远水平距离</h2>
 <p>一小球从距水平地面高度为  的平台边缘以大小为  的初速度抛出。若忽略空气阻力，重力加速度为 ，试求：</p>
 <ol>
@@ -138,7 +138,7 @@
 <p>最大射程为：</p>
 </details>
 ]]></content>
-    <published>2025-11-26T01:52:27.000Z</published>
+    <published>2025-11-26T03:38:50.000Z</published>
   </entry>
   <entry>
     <title type="text">国际单位制</title>
@@ -8569,6 +8569,40 @@ MySQL 会将该命令的配置保存到数据目录下的 <code>mysqld-auto.cnf<
     <published>2021-02-18T00:00:00.000Z</published>
   </entry>
   <entry>
+    <title type="text">加速 GitHub 克隆</title>
+    <id>https://mister-hope.com/code/github/speedup.html</id>
+    <link href="https://mister-hope.com/code/github/speedup.html"/>
+    <updated>2024-01-25T17:47:26.000Z</updated>
+    <summary type="html"><![CDATA[<p>由于 GFW 的存在，GitHub 的访问速度在大部分国内地区都很慢，甚至不稳定。如果需要克隆体积比较大的项目，可能需要很长时间，也很大概率会在中途因为网络波动、终端问题导致克隆失败。</p>
+<p>本文介绍如何使用 Gitee 加快 GitHub 项目克隆。</p>
+<h2>Gitee</h2>
+<p>Gitee 又称码云，是一个国内的代码托管商，国内访问 Gitee 的速度是十分 Amazing 的。</p>
+<h3>注册</h3>
+<p>Gitee 账户可以很方便的通过 GitHub 账户 + 绑定手机号注册。</p>
+<h3>添加公钥</h3>
+<p>完成注册后，您需要上传本地公钥，以保证可以从 Gitee 上拉取或克隆，其步骤与 GitHub 大致相同。</p>]]></summary>
+    <content type="html"><![CDATA[<p>由于 GFW 的存在，GitHub 的访问速度在大部分国内地区都很慢，甚至不稳定。如果需要克隆体积比较大的项目，可能需要很长时间，也很大概率会在中途因为网络波动、终端问题导致克隆失败。</p>
+<p>本文介绍如何使用 Gitee 加快 GitHub 项目克隆。</p>
+<h2>Gitee</h2>
+<p>Gitee 又称码云，是一个国内的代码托管商，国内访问 Gitee 的速度是十分 Amazing 的。</p>
+<h3>注册</h3>
+<p>Gitee 账户可以很方便的通过 GitHub 账户 + 绑定手机号注册。</p>
+<h3>添加公钥</h3>
+<p>完成注册后，您需要上传本地公钥，以保证可以从 Gitee 上拉取或克隆，其步骤与 GitHub 大致相同。</p>
+<h3>导入 GitHub 仓库</h3>
+<p>码云的企业专线访问 GitHub 的速度很快，而码云在新建仓库的时候提供了导入选项，这就给我们的加速提供了方式。</p>
+<p>我们只需要在码云上新建仓库，选择导入，然后输入自己想要克隆的 GitHub 仓库地址，交给码云完成导入即可。</p>
+<p>稍等片刻后，码云即会将 GitHub 的仓库同步到自己的服务器上，此时我们只需要克隆码云上的这个仓库地址，就可以高速克隆这个项目。</p>
+<h3>远程库地址修改</h3>
+<p>在克隆完毕后，本地的 origin 远程库会默认为 Gitee 的仓库，此时我们需要使用 <code>git remote rename origin gitee</code> 命令，将码云的远程仓库重命名为 <code>gitee</code>，并使用 <code>git remote add origin &lt;github url&gt;</code> 命令重新添加 GitHub 的远程仓库为 origin。</p>
+<p>这样我们稍后在做出本地提交后，即可直接推送到 GitHub 仓库。</p>
+<h3>同步仓库</h3>
+<p>如果以导入的形式创建码云仓库。则可以随时点击仓库页面上的同步图标，让码云随时拉取最新的 gitee 代码，以便在本地通过 <code>git fetch gitee</code>，通过码云服务器高速拉取最新代码。</p>
+]]></content>
+    <category term="GitHub"/>
+    <published>2021-02-18T00:00:00.000Z</published>
+  </entry>
+  <entry>
     <title type="text">Glob</title>
     <id>https://mister-hope.com/code/basic/glob.html</id>
     <link href="https://mister-hope.com/code/basic/glob.html"/>
@@ -8638,40 +8672,6 @@ MySQL 会将该命令的配置保存到数据目录下的 <code>mysqld-auto.cnf<
     </contributor>
     <published>2021-02-18T00:00:00.000Z</published>
     <rights>Copyright by 陈慧玲</rights>
-  </entry>
-  <entry>
-    <title type="text">加速 GitHub 克隆</title>
-    <id>https://mister-hope.com/code/github/speedup.html</id>
-    <link href="https://mister-hope.com/code/github/speedup.html"/>
-    <updated>2024-01-25T17:47:26.000Z</updated>
-    <summary type="html"><![CDATA[<p>由于 GFW 的存在，GitHub 的访问速度在大部分国内地区都很慢，甚至不稳定。如果需要克隆体积比较大的项目，可能需要很长时间，也很大概率会在中途因为网络波动、终端问题导致克隆失败。</p>
-<p>本文介绍如何使用 Gitee 加快 GitHub 项目克隆。</p>
-<h2>Gitee</h2>
-<p>Gitee 又称码云，是一个国内的代码托管商，国内访问 Gitee 的速度是十分 Amazing 的。</p>
-<h3>注册</h3>
-<p>Gitee 账户可以很方便的通过 GitHub 账户 + 绑定手机号注册。</p>
-<h3>添加公钥</h3>
-<p>完成注册后，您需要上传本地公钥，以保证可以从 Gitee 上拉取或克隆，其步骤与 GitHub 大致相同。</p>]]></summary>
-    <content type="html"><![CDATA[<p>由于 GFW 的存在，GitHub 的访问速度在大部分国内地区都很慢，甚至不稳定。如果需要克隆体积比较大的项目，可能需要很长时间，也很大概率会在中途因为网络波动、终端问题导致克隆失败。</p>
-<p>本文介绍如何使用 Gitee 加快 GitHub 项目克隆。</p>
-<h2>Gitee</h2>
-<p>Gitee 又称码云，是一个国内的代码托管商，国内访问 Gitee 的速度是十分 Amazing 的。</p>
-<h3>注册</h3>
-<p>Gitee 账户可以很方便的通过 GitHub 账户 + 绑定手机号注册。</p>
-<h3>添加公钥</h3>
-<p>完成注册后，您需要上传本地公钥，以保证可以从 Gitee 上拉取或克隆，其步骤与 GitHub 大致相同。</p>
-<h3>导入 GitHub 仓库</h3>
-<p>码云的企业专线访问 GitHub 的速度很快，而码云在新建仓库的时候提供了导入选项，这就给我们的加速提供了方式。</p>
-<p>我们只需要在码云上新建仓库，选择导入，然后输入自己想要克隆的 GitHub 仓库地址，交给码云完成导入即可。</p>
-<p>稍等片刻后，码云即会将 GitHub 的仓库同步到自己的服务器上，此时我们只需要克隆码云上的这个仓库地址，就可以高速克隆这个项目。</p>
-<h3>远程库地址修改</h3>
-<p>在克隆完毕后，本地的 origin 远程库会默认为 Gitee 的仓库，此时我们需要使用 <code>git remote rename origin gitee</code> 命令，将码云的远程仓库重命名为 <code>gitee</code>，并使用 <code>git remote add origin &lt;github url&gt;</code> 命令重新添加 GitHub 的远程仓库为 origin。</p>
-<p>这样我们稍后在做出本地提交后，即可直接推送到 GitHub 仓库。</p>
-<h3>同步仓库</h3>
-<p>如果以导入的形式创建码云仓库。则可以随时点击仓库页面上的同步图标，让码云随时拉取最新的 gitee 代码，以便在本地通过 <code>git fetch gitee</code>，通过码云服务器高速拉取最新代码。</p>
-]]></content>
-    <category term="GitHub"/>
-    <published>2021-02-18T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">函数</title>
