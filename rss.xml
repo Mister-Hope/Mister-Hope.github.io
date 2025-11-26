@@ -6,8 +6,8 @@
     <link>https://mister-hope.com/</link>
     <description>Where there is light, there is hope.</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 26 Nov 2025 01:47:11 GMT</pubDate>
-    <lastBuildDate>Wed, 26 Nov 2025 01:47:11 GMT</lastBuildDate>
+    <pubDate>Wed, 26 Nov 2025 01:55:52 GMT</pubDate>
+    <lastBuildDate>Wed, 26 Nov 2025 01:55:52 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>基于 MIT 协议，© 2019-至今 Mr.Hope</copyright>
@@ -22,6 +22,92 @@
     <category>GitHub</category>
     <category>JavaScript</category>
     <category>小程序</category>
+    <item>
+      <title>斜抛最远距离问题</title>
+      <link>https://mister-hope.com/physics/high-school/2.html</link>
+      <guid>https://mister-hope.com/physics/high-school/2.html</guid>
+      <source url="https://mister-hope.com/rss.xml">斜抛最远距离问题</source>
+      <description>题目一：高台抛射的最远水平距离 如图所示，一小球从距水平地面高度为 的平台边缘以大小为 的初速度抛出。若忽略空气阻力，重力加速度为 ，试求： 为使小球落地点与抛出点的水平距离 最大，小球抛出时速度方向与水平面的夹角 应满足什么条件？ 该最大的水平距离 是多少？ 答案 出手角度满足 。 最远水平距离 。 思路： 建立直角坐标系，原点 为抛出点，水平向右为...</description>
+      <pubDate>Wed, 26 Nov 2025 01:52:27 GMT</pubDate>
+      <content:encoded><![CDATA[<h3>题目一：高台抛射的最远水平距离</h3>
+<p>如图所示，一小球从距水平地面高度为  的平台边缘以大小为  的初速度抛出。若忽略空气阻力，重力加速度为 ，试求：</p>
+<ol>
+<li>为使小球落地点与抛出点的水平距离  最大，小球抛出时速度方向与水平面的夹角  应满足什么条件？</li>
+<li>该最大的水平距离  是多少？</li>
+</ol>
+<details class="hint-container details"><summary>答案</summary>
+<ol>
+<li>出手角度满足 。</li>
+<li>最远水平距离 。</li>
+</ol>
+<p><strong>思路</strong>：</p>
+<p>建立直角坐标系，原点  为抛出点，水平向右为  轴，竖直向上为  轴。</p>
+<p>小球的运动轨迹方程为（消去时间 ）：</p>
+<p>利用三角恒等式 ，轨迹方程变为关于  的方程：</p>
+<p>小球落在地面上，即 。代入并整理，得到一个关于  的一元二次方程：</p>
+<p>若要存在这样的抛射角  使小球能到达距离  处，则该关于  的方程必须有实数解，即判别式 ：</p>
+<p>化简不等式（约去 ，因为 ）：</p>
+<p>解得：</p>
+<p>此时 ，方程有唯一解：</p>
+<p>代入  可得：</p>
+</details>
+<h2>题目二：定高越障的最远后撤距离</h2>
+<p>在水平地面上投掷一物体，初速度大小恒为 。前方有一高度为  的竖直墙壁（）。为了使物体能够越过该墙壁，投掷点距离墙壁的水平距离  最大不能超过多少？此时投掷角  为多少？</p>
+<details class="hint-container details"><summary>答案</summary>
+<ol>
+<li>最远后撤距离 。</li>
+<li>出手角度满足 。</li>
+</ol>
+<p><strong>思路</strong>：</p>
+<p>此题即求解：当轨迹经过点  时， 的最大值。</p>
+<p>沿用题目一中的轨迹方程，此时令 （注意正负号变化）：</p>
+<p>整理为关于  的一元二次方程：</p>
+<p>同理，利用判别式 ：</p>
+<p>化简得：</p>
+<p>解得：</p>
+<p>即最远距离：</p>
+<p>对应的角度同样由  时的根确定：</p>
+</details>
+<h2>题目三：斜面顶端抛射的最远射程</h2>
+<p>倾角为  的斜面，一物体从斜面顶端以大小为  的初速度抛出。求该物体在斜面上落点与抛出点的最大距离  以及此时初速度与水平方向的夹角 。（注：题目中斜面倾角为已知量 ，抛射角为待求量 ）。</p>
+<details class="hint-container details"><summary>答案</summary>
+<p><strong>答案：</strong></p>
+<ol>
+<li>最远距离 。</li>
+<li>出手角度（相对于水平面） 。
+<em>（即：抛射方向平分“竖直向上”与“斜面方向”的夹角）</em></li>
+</ol>
+<p><strong>思路</strong>：</p>
+<p>设抛出点为原点，水平向右为  轴。</p>
+<p>落点在斜面上，坐标满足 （注意  向下为负）。</p>
+<p>水平位移 ，竖直位移 。</p>
+<p>由 ，代入得：</p>
+<p>解得飞行时间 。</p>
+<p>斜面射程 。</p>
+<p>代入  并整理：</p>
+<p>利用积化和差公式 ：</p>
+<p>显然，当  时， 取最大值。</p>
+<p>即 。</p>
+<p>最大射程为：</p>
+</details>
+<h2>题目四：斜面底端抛射的最远射程</h2>
+<p>倾角为  的斜面，一物体从斜面底端以大小为  的初速度向斜面上方抛出。求该物体在斜面上落点与抛出点的最大距离  以及此时初速度与水平方向的夹角 。</p>
+<details class="hint-container details"><summary>答案</summary>
+<ol>
+<li>最远距离 。</li>
+<li>出手角度（相对于水平面） 。</li>
+</ol>
+<p><strong>思路</strong>：</p>
+<p>与题目三类似，只是落点坐标满足 （落点在  轴上方）。
+由  解得时间：</p>
+<p>射程 ，代入得：</p>
+<p>利用积化和差公式：</p>
+<p>当  时， 取最大值。
+即 。
+最大射程为：</p>
+</details>
+]]></content:encoded>
+    </item>
     <item>
       <title>国际单位制</title>
       <link>https://mister-hope.com/teaching/required-1/4/4.4.html</link>
@@ -8038,34 +8124,6 @@ MySQL 会将该命令的配置保存到数据目录下的 <code>mysqld-auto.cnf<
 <h3>定义</h3>
 <p>| 方法                           | 参数                           | 描述                                                                                               | 最低版本 |
 |</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>框架</title>
-      <link>https://mister-hope.com/code/mini-app/guide/frame/</link>
-      <guid>https://mister-hope.com/code/mini-app/guide/frame/</guid>
-      <source url="https://mister-hope.com/rss.xml">框架</source>
-      <description>目录</description>
-      <category>小程序</category>
-      <pubDate>Fri, 07 Jan 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2>目录</h2>
-<ul>
-<li>
-<p><a href="/code/mini-app/guide/frame/intro.html" target="_blank">小程序框架介绍</a></p>
-</li>
-<li>
-<p><a href="/code/mini-app/guide/frame/scene.html" target="_blank">场景值</a> </p>
-</li>
-<li>
-<p><a href="/code/mini-app/guide/frame/env.html" target="_blank">运行环境</a> </p>
-</li>
-<li>
-<p><a href="/code/mini-app/guide/frame/mechanism.html" target="_blank">运行机制</a> </p>
-</li>
-<li>
-<p><a href="/code/mini-app/guide/frame/update.html" target="_blank">更新机制</a> </p>
-</li>
-</ul>
 ]]></content:encoded>
     </item>
   </channel>
