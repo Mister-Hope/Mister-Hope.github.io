@@ -33,7 +33,7 @@ systemd=true
 ### 生成新的 RSA 密钥
 
 ```bash
-ssh-keygen -t rsa -C "mister-hope@outlook.com"
+ssh-keygen -t ed25519 -C "mister-hope@outlook.com"
 ```
 
 ### 使用 Windows 代理

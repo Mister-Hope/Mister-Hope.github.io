@@ -134,12 +134,12 @@ tag:
 1. 创建 SSH Key。打开 Shell (Windows 下打开 cmd)，创建 SSH Key:
 
    ```bash
-   ssh-keygen -t rsa -C "youremail@example.com"
+   ssh-keygen -t ed25519 -C "youremail@example.com"
    ```
 
    您需要把邮件地址换成您自己的邮件地址，然后一路回车，使用默认值即可，由于这个 Key 也不是用于军事目的，所以也无需设置密码。
 
-   如果一切顺利的话，可以在用户主目录里找到 .ssh 目录，里面有 id_rsa 和 id_rsa.pub 两个文件，这两个就是 SSH Key 的秘钥对，id_rsa 是私钥，不能泄露出去，id_rsa.pub 是公钥，可以放心地告诉任何人。
+   如果一切顺利的话，可以在用户主目录里找到 .ssh 目录，里面有 id_ed25519 和 id_ed25519.pub 两个文件，这两个就是 SSH Key 的秘钥对，id_ed25519 是私钥，不能泄露出去，id_ed25519.pub 是公钥，可以放心地告诉任何人。
 
    ::: tip
    - ssh-keygen 用来生成一堆密钥，作为您的身份识别信息，您可以放心的把公钥交给别人，留下自己的私钥。
@@ -165,3 +165,15 @@ tag:
    ![GitHub 界面简介](./assets/githubSSH.png)
 
    在标题中填写公钥的备注名称，把 id_rsa.pub 文件的内容粘贴到底下的输入框中，设置一个标识此电脑的备注。
+
+1. 最后，测试 SSH 连接:
+
+   ```bash
+   ssh -T git@github.com
+   ```
+
+   如果看到下面的提示，说明连接成功:
+
+   ```text
+   Hi username! You've successfully authenticated, but GitHub does not provide shell access.
+   ```
