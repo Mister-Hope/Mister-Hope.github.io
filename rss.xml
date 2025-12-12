@@ -6,8 +6,8 @@
     <link>https://mister-hope.com/</link>
     <description>Where there is light, there is hope.</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 12 Dec 2025 01:12:27 GMT</pubDate>
-    <lastBuildDate>Fri, 12 Dec 2025 01:12:27 GMT</lastBuildDate>
+    <pubDate>Fri, 12 Dec 2025 01:17:00 GMT</pubDate>
+    <lastBuildDate>Fri, 12 Dec 2025 01:17:00 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>基于 MIT 协议，© 2019-至今 Mr.Hope</copyright>
@@ -22,6 +22,107 @@
     <category>GitHub</category>
     <category>JavaScript</category>
     <category>小程序</category>
+    <item>
+      <title>平抛运动中的“极值”问题</title>
+      <link>https://mister-hope.com/physics/high-school/3.html</link>
+      <guid>https://mister-hope.com/physics/high-school/3.html</guid>
+      <source url="https://mister-hope.com/rss.xml">平抛运动中的“极值”问题</source>
+      <description>例题 1：圆心平抛致圆面速度最小值 题目： 在半径为 的圆心处以初速度 水平抛出一个小球，重力加速度为 。求小球落到圆周上的瞬时速度最小值 ，以及此时对应的初速度 。 答案 【解析】 1. 建立模型与约束 设圆心为原点 ，水平向右为 轴，竖直向下为 轴。 运动方程： 几何约束：落点在圆上 代入得： 解得 关于 的表达式： 2. 构建目标函数 设落点速度...</description>
+      <pubDate>Fri, 12 Dec 2025 01:13:32 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>例题 1：圆心平抛致圆面速度最小值</h2>
+<p><strong>题目</strong>：
+在半径为  的圆心处以初速度  水平抛出一个小球，重力加速度为 。求小球落到圆周上的瞬时速度最小值 ，以及此时对应的初速度 。</p>
+<details class="hint-container details"><summary>答案</summary>
+<p><strong>【解析】</strong></p>
+<p><strong>1. 建立模型与约束</strong>
+设圆心为原点 ，水平向右为  轴，竖直向下为  轴。</p>
+<ul>
+<li>运动方程：</li>
+<li>几何约束：落点在圆上 
+代入得：
+解得  关于  的表达式：</li>
+</ul>
+<p><strong>2. 构建目标函数</strong>
+设落点速度为 ，则 。
+将  代入：</p>
+<p><strong>3. 求解极值</strong>
+利用基本不等式 ：</p>
+<p>当且仅当 ，即  时取等号。</p>
+<p><strong>4. 求解对应的 </strong>
+将最佳时间  代回  的表达式：</p>
+</details>
+<h2>例题 2：斜面底部高 h 处平抛</h2>
+<p><strong>题目</strong>：
+在倾角为  的斜面底端正上方高度  处，以初速度  水平抛出一小球，小球落在斜面上。求落点速度的最小值  及对应的 。</p>
+<details class="hint-container details"><summary>答案</summary>
+<p><strong>【答案】</strong></p>
+<ul>
+<li>落点最小速度：</li>
+<li>对应的初速度：</li>
+</ul>
+<p><strong>【解析】</strong></p>
+<p><strong>1. 建立模型与约束</strong>
+设斜面底端为原点 ，抛出点为 。</p>
+<ul>
+<li>斜面方程：</li>
+<li>运动方程：</li>
+<li>几何约束：</li>
+</ul>
+<p><strong>2. 构建目标函数</strong></p>
+<p>令 ，展开并整理（利用 ）：</p>
+<p><strong>3. 求解极值</strong>
+利用基本不等式，第一项与第二项积为定值。
+最小速度平方为：</p>
+<p>化简根号内项：，提出系数：</p>
+<p><strong>4. 求解对应的 </strong>
+极值条件为两项相等，解得  后代回  表达式。经过化简（过程略），可得简洁形式。</p>
+</details>
+<h2>例题 3：高 h 处平抛至抛物面</h2>
+<p><strong>题目</strong>：
+在  轴上高度为  处（坐标 ）水平抛出一小球，落到抛物线  （）上。求落点速度的最小值  及对应的 。</p>
+<details class="hint-container details"><summary>答案</summary>
+<p> 时：</p>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<p> 时：</p>
+<ul>
+<li></li>
+<li></li>
+</ul>
+<p><strong>【解析】</strong></p>
+<p><strong>1. 建立模型与约束</strong></p>
+<ul>
+<li>运动方程：</li>
+<li>几何约束：</li>
+<li>反解 ：</li>
+</ul>
+<p><strong>2. 构建目标函数</strong></p>
+<p>设 ，则 。</p>
+<p><strong>3. 分类讨论与求解</strong>
+利用基本不等式，前两项的最小值为 。
+极值点条件：。</p>
+<p>此时，我们需要检查前提条件：<strong>初速度  必须有意义（即 ）。</strong></p>
+<p>要使 ，必须满足 ，即 <strong></strong>。</p>
+<h4><strong>情况 A：</strong></h4>
+<ul>
+<li>此时存在非零初速度解。</li>
+<li><strong>落点最小速度</strong>：</li>
+<li><strong>对应的初速度</strong>：</li>
+</ul>
+<h4><strong>情况 B：</strong></h4>
+<ul>
+<li>此时上述  算出为虚数。说明函数  在实数范围内单调递增。</li>
+<li> 越小， 越小。物理上  的最小值为 0（对应 ）。</li>
+<li><strong>结论</strong>：最小速度对应 <strong>自由落体 ()</strong>，小球直接落向顶点。</li>
+<li><strong>最小速度</strong>：</li>
+</ul>
+<h3><strong>难点突破：为什么  时应该自由落体？</strong></h3>
+<p><strong>平抛是一笔“交易”</strong>：我们支付水平速度（成本），换取落在更高位置以减少竖直速度（收益）。</p>
+</details>
+]]></content:encoded>
+    </item>
     <item>
       <title>斜抛最远距离问题</title>
       <link>https://mister-hope.com/physics/high-school/2.html</link>
@@ -6780,6 +6881,33 @@ MySQL 会将该命令的配置保存到数据目录下的 <code>mysqld-auto.cnf<
 ]]></content:encoded>
     </item>
     <item>
+      <title>加速 GitHub 克隆</title>
+      <link>https://mister-hope.com/code/github/speedup.html</link>
+      <guid>https://mister-hope.com/code/github/speedup.html</guid>
+      <source url="https://mister-hope.com/rss.xml">加速 GitHub 克隆</source>
+      <description>由于 GFW 的存在，GitHub 的访问速度在大部分国内地区都很慢，甚至不稳定。如果需要克隆体积比较大的项目，可能需要很长时间，也很大概率会在中途因为网络波动、终端问题导致克隆失败。 本文介绍如何使用 Gitee 加快 GitHub 项目克隆。 Gitee Gitee 又称码云，是一个国内的代码托管商，国内访问 Gitee 的速度是十分 Amazin...</description>
+      <category>GitHub</category>
+      <pubDate>Thu, 18 Feb 2021 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>由于 GFW 的存在，GitHub 的访问速度在大部分国内地区都很慢，甚至不稳定。如果需要克隆体积比较大的项目，可能需要很长时间，也很大概率会在中途因为网络波动、终端问题导致克隆失败。</p>
+<p>本文介绍如何使用 Gitee 加快 GitHub 项目克隆。</p>
+<h2>Gitee</h2>
+<p>Gitee 又称码云，是一个国内的代码托管商，国内访问 Gitee 的速度是十分 Amazing 的。</p>
+<h3>注册</h3>
+<p>Gitee 账户可以很方便的通过 GitHub 账户 + 绑定手机号注册。</p>
+<h3>添加公钥</h3>
+<p>完成注册后，您需要上传本地公钥，以保证可以从 Gitee 上拉取或克隆，其步骤与 GitHub 大致相同。</p>
+<h3>导入 GitHub 仓库</h3>
+<p>码云的企业专线访问 GitHub 的速度很快，而码云在新建仓库的时候提供了导入选项，这就给我们的加速提供了方式。</p>
+<p>我们只需要在码云上新建仓库，选择导入，然后输入自己想要克隆的 GitHub 仓库地址，交给码云完成导入即可。</p>
+<p>稍等片刻后，码云即会将 GitHub 的仓库同步到自己的服务器上，此时我们只需要克隆码云上的这个仓库地址，就可以高速克隆这个项目。</p>
+<h3>远程库地址修改</h3>
+<p>在克隆完毕后，本地的 origin 远程库会默认为 Gitee 的仓库，此时我们需要使用 <code>git remote rename origin gitee</code> 命令，将码云的远程仓库重命名为 <code>gitee</code>，并使用 <code>git remote add origin &lt;github url&gt;</code> 命令重新添加 GitHub 的远程仓库为 origin。</p>
+<p>这样我们稍后在做出本地提交后，即可直接推送到 GitHub 仓库。</p>
+<h3>同步仓库</h3>
+<p>如果以导入的形式创建码云仓库。则可以随时点击仓库页面上的同步图标，让码云随时拉取最新的 gitee 代码，以便在本地通过 <code>git fetch gitee</code>，通过码云服务器高速拉取最新代码。</p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>Glob</title>
       <link>https://mister-hope.com/code/basic/glob.html</link>
       <guid>https://mister-hope.com/code/basic/glob.html</guid>
@@ -6840,33 +6968,6 @@ MySQL 会将该命令的配置保存到数据目录下的 <code>mysqld-auto.cnf<
 <h2><code>.</code> 开头的文件与文件夹</h2>
 <p>由于以 <code>.</code> 开头的文件或文件夹在 Unix 中视为隐藏文件或文件夹，故 Glob 不会匹配任何以 <code>.</code> 开头的路径部分，如 <code>.github/dependabot.yml</code> 或 <code>.eslintrc.js</code>。</p>
 <p>如果的确想要匹配 <code>.</code> 开头的文件或文件夹，可以显示标注出来，如 <code>.*.js</code> 可以匹配 <code>.eslintrc.js</code>。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>加速 GitHub 克隆</title>
-      <link>https://mister-hope.com/code/github/speedup.html</link>
-      <guid>https://mister-hope.com/code/github/speedup.html</guid>
-      <source url="https://mister-hope.com/rss.xml">加速 GitHub 克隆</source>
-      <description>由于 GFW 的存在，GitHub 的访问速度在大部分国内地区都很慢，甚至不稳定。如果需要克隆体积比较大的项目，可能需要很长时间，也很大概率会在中途因为网络波动、终端问题导致克隆失败。 本文介绍如何使用 Gitee 加快 GitHub 项目克隆。 Gitee Gitee 又称码云，是一个国内的代码托管商，国内访问 Gitee 的速度是十分 Amazin...</description>
-      <category>GitHub</category>
-      <pubDate>Thu, 18 Feb 2021 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>由于 GFW 的存在，GitHub 的访问速度在大部分国内地区都很慢，甚至不稳定。如果需要克隆体积比较大的项目，可能需要很长时间，也很大概率会在中途因为网络波动、终端问题导致克隆失败。</p>
-<p>本文介绍如何使用 Gitee 加快 GitHub 项目克隆。</p>
-<h2>Gitee</h2>
-<p>Gitee 又称码云，是一个国内的代码托管商，国内访问 Gitee 的速度是十分 Amazing 的。</p>
-<h3>注册</h3>
-<p>Gitee 账户可以很方便的通过 GitHub 账户 + 绑定手机号注册。</p>
-<h3>添加公钥</h3>
-<p>完成注册后，您需要上传本地公钥，以保证可以从 Gitee 上拉取或克隆，其步骤与 GitHub 大致相同。</p>
-<h3>导入 GitHub 仓库</h3>
-<p>码云的企业专线访问 GitHub 的速度很快，而码云在新建仓库的时候提供了导入选项，这就给我们的加速提供了方式。</p>
-<p>我们只需要在码云上新建仓库，选择导入，然后输入自己想要克隆的 GitHub 仓库地址，交给码云完成导入即可。</p>
-<p>稍等片刻后，码云即会将 GitHub 的仓库同步到自己的服务器上，此时我们只需要克隆码云上的这个仓库地址，就可以高速克隆这个项目。</p>
-<h3>远程库地址修改</h3>
-<p>在克隆完毕后，本地的 origin 远程库会默认为 Gitee 的仓库，此时我们需要使用 <code>git remote rename origin gitee</code> 命令，将码云的远程仓库重命名为 <code>gitee</code>，并使用 <code>git remote add origin &lt;github url&gt;</code> 命令重新添加 GitHub 的远程仓库为 origin。</p>
-<p>这样我们稍后在做出本地提交后，即可直接推送到 GitHub 仓库。</p>
-<h3>同步仓库</h3>
-<p>如果以导入的形式创建码云仓库。则可以随时点击仓库页面上的同步图标，让码云随时拉取最新的 gitee 代码，以便在本地通过 <code>git fetch gitee</code>，通过码云服务器高速拉取最新代码。</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -8076,51 +8177,6 @@ MySQL 会将该命令的配置保存到数据目录下的 <code>mysqld-auto.cnf<
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果页面这样使用这个组件:</p>
 <div class="language-xml" data-highlighter="shiki" data-ext="xml" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-xml"><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">custom-component</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> model:my-value</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"{{pageValue}}"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> /&gt;</span></span></code></pre>
 </div><p>当组件使用 <code>setData</code> 更新 <code>myValue</code> 时，页面的 <code>this.data.pageValue</code> 也会同时变更，页面 WXML 中所有绑定了 <code>pageValue</code> 的位置也会被一同更新。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>WXS 事件</title>
-      <link>https://mister-hope.com/code/mini-app/guide/view/wxs-event.html</link>
-      <guid>https://mister-hope.com/code/mini-app/guide/view/wxs-event.html</guid>
-      <source url="https://mister-hope.com/rss.xml">WXS 事件</source>
-      <description>提示 此部分在初步学习小程序的时候直接略过即可。 背景 有频繁用户交互的效果在小程序上表现是比较卡顿的，例如页面有 2 个元素 A 和 B，用户在 A 上做 touchmove 手势，要求 B 也跟随移动，movable-view 就是一个典型的例子。一次 touchmove 事件的响应过程为: touchmove 事件从视图层(Webview)抛到逻...</description>
-      <category>小程序</category>
-      <pubDate>Mon, 18 Jan 2021 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p>此部分在初步学习小程序的时候直接略过即可。</p>
-</div>
-<h2>背景</h2>
-<p>有频繁用户交互的效果在小程序上表现是比较卡顿的，例如页面有 2 个元素 A 和 B，用户在 A 上做 <code>touchmove</code> 手势，要求 B 也跟随移动，<a href="https://developers.weixin.qq.com/miniprogram/dev/component/movable-view.html" target="_blank" rel="noopener noreferrer">movable-view</a> 就是一个典型的例子。一次 <code>touchmove</code> 事件的响应过程为:</p>
-<ol>
-<li>
-<p>touchmove 事件从视图层(Webview)抛到逻辑层(App Service)</p>
-</li>
-<li>
-<p>逻辑层(App Service)处理 touchmove 事件，再通过 setData 来改变 B 的位置</p>
-</li>
-</ol>
-<p>一次 touchmove 的响应需要经过 2 次的逻辑层和渲染层的通信以及一次渲染，通信的耗时比较大。此外 <code>setData</code> 渲染也会阻塞其它脚本执行，导致了整个用户交互的动画过程会有延迟。</p>
-<h2>实现方案</h2>
-<p>本方案基本的思路是减少通信的次数，让事件在视图层(Webview)响应。小程序的框架分为视图层(Webview)和逻辑层(App Service)，这样分层的目的是管控，开发者的代码只能运行在逻辑层(App Service)，而这个思路就必须要让开发者的代码运行在视图层(Webview)，如下图所示的流程:</p>
-<figure><figcaption>流程演示</figcaption></figure>
-<p>使用 WXS 函数用来响应小程序事件，目前只能响应内置组件的事件，不支持自定义组件事件。WXS 函数的除了纯逻辑的运算，还可以通过封装好的 <code>ComponentDescriptor</code> 实例来访问以及设置组件的 class 和样式，对于交互动画，设置 style 和 class 足够了。</p>
-<p>WXS 函数的例子如下:</p>
-<div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-js"><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">var</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> wxsFunction</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> function</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> (</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">event</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">ownerInstance</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) {</span></span>
-<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">  var</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75"> instance</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B"> ownerInstance</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">selectComponent</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">".classSelector"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">); </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">// 返回组件的实例</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">  instance</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">setStyle</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">({</span></span>
-<span class="line"><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">    "font-size"</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "14px"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">// 支持 rpx</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  });</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">  instance</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">getDataset</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">();</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">  instance</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">setClass</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">className</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">);</span></span>
-<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  // ...</span></span>
-<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">  return</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> false</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">; </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">// 不往上冒泡，相当于调用了同时调用了 stopPropagation 和 preventDefault</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">};</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>其中入参 <code>event</code> 是小程序事件对象基础上多了 <code>event.instance</code> 来表示触发事件的组件的 <code>ComponentDescriptor</code> 实例。<code>ownerInstance</code> 表示的是触发事件的组件所在的组件的 <code>ComponentDescriptor</code> 实例，如果触发事件的组件是在页面内的，<code>ownerInstance</code> 表示的是页面实例。</p>
-<h2>ComponentDescriptor</h2>
-<h3>定义</h3>
-<p>| 方法                           | 参数                           | 描述                                                                                               | 最低版本 |
-|</p>
 ]]></content:encoded>
     </item>
   </channel>
