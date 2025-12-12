@@ -19,7 +19,6 @@ CSS3 是最新的 CSS 标准，被拆分为"模块"。模块包括: 选择器、
 ## 目录
 
 - [快速上手](guide/README.md)
-
   - [CSS 选择器](guide/selector.md)
   - [CSS 声明](guide/declaration.md)
   - [CSS 引入](guide/import.md)
@@ -27,7 +26,6 @@ CSS3 是最新的 CSS 标准，被拆分为"模块"。模块包括: 选择器、
   - [CSS 盒模型](guide/box.md)
 
 - [CSS 布局介绍](layout/README.md)
-
   - [CSS 弹性模型](layout/flex.md)
   - [CSS 布局实战](layout/exercise.md)
   - [CSS 网格模型](layout/grid.md)
@@ -41,13 +39,11 @@ CSS3 是最新的 CSS 标准，被拆分为"模块"。模块包括: 选择器、
 ## 其他文档 <Badge text="不建议" type="warn" />
 
 - CSS
-
   - [W3CSchool 教程](https://www.w3cschool.cn/css/)
   - [W3School 教程](http://www.w3school.com.cn/css/index.asp)
   - [菜鸟教程](https://www.runoob.com/css/css-tutorial.html)
 
 - CSS3
-
   - [W3CSchool 教程](https://www.w3cschool.cn/css3/)
   - [W3School 教程](http://www.w3school.com.cn/css3/index.asp)
   - [菜鸟教程](https://www.runoob.com/css3/css3-tutorial.html)
@@ -62,7 +58,6 @@ CSS3 是最新的 CSS 标准，被拆分为"模块"。模块包括: 选择器、
 - Stylus
 
   带来更简单的写法，支持变量、函数等功能。
-
   - [中文文档](https://www.zhangxinxu.com/jq/stylus/)
   - [官方文档](http://stylus-lang.com/)
 
@@ -77,6 +72,5 @@ CSS3 是最新的 CSS 标准，被拆分为"模块"。模块包括: 选择器、
   SCSS 是 Sass3 版本当中引入的新语法特性,完全兼容 CSS3 的同时继承了 Sass 强大的动态功能。
 
   :::
-
   - [中文文档](https://sass.bootcss.com/)
   - [官方文档](https://sass-lang.com/)

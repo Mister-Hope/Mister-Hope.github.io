@@ -22,7 +22,6 @@ category: 小程序
 ## 文档
 
 - [WXML](wxml.md)
-
   - [数据绑定](data-bind.md)
 
   - [条件渲染](condition-render.md)

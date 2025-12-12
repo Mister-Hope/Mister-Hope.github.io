@@ -10,7 +10,6 @@ author: 李欣桐
 1. NoSql 存储
 
    Mysql 从 5.7 版本提供了 NoSQL 的存储功能,在 8.0 中这部分得到一些修改。
-
    - 关系型数据库 (SQL)
      通过外键关联来建立表与表之间的关系
 
@@ -83,7 +82,6 @@ author: 李欣桐
 1. InnoDB 性能提升
 
    废除 `buffer pool mutex`, 将原来一个 `mutex` 拆分成多个，提高并发拆分 `LOCK_thd_list` 和 `LOCK_thd_remove` 这两个 `mutex`，大约可提高线程链接效率 5%。
-
    1. 行缓存
 
       MySQL 8.0 的优化器可以估算将要读取的行数，因此可以提供给存储引擎一个合适大小的 `row buffer` 来存储需要的数据。大批量的连续数据扫描的性能将受益于更大的 `record buffer`。

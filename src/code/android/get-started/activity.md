@@ -59,14 +59,12 @@ tag:
    您可能会看到一条错误，因为 Android Studio 无法解析用作方法参数的 View 类。若要清除错误，请点击 View 声明，将光标置于其上，然后按 `Alt + Enter`（在 Mac 上则按 `Option + Enter`）进行快速修复。如果出现一个菜单，请选择 Import class。
 
 1. 返回到 activity_main.xml 文件，并从该按钮调用此方法:
-
    1. 选择布局编辑器中的相应按钮。
    1. 在 Attributes 窗口中，找到 onClick 属性，并从其下拉列表中选择 `sendMessage [MainActivity]`。
 
    现在，当用户点按该按钮时，系统将调用 `sendMessage()` 方法。
 
    请注意此方法中提供的详细信息。系统需要这些信息来识别此方法是否与 android:onClick 属性兼容。具体来说，此方法具有以下特性：
-
    1. 公开。
    1. 返回值为空，或在 Kotlin 中为隐式 Unit。
    1. View 是唯一的参数。这是您在第 1 步结束时点击的 View 对象。

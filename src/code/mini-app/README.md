@@ -35,7 +35,6 @@ QQ 小程序本质还是换汤不换药的，且 QQ 开发者工具兼容 `wxml`
 - [运行环境](guide/env.md)
 
 - [小程序配置](guide/config/README.md)
-
   - [全局配置](guide/config/app-config.md)
 
   - [页面配置](guide/config/page-config.md)
@@ -43,7 +42,6 @@ QQ 小程序本质还是换汤不换药的，且 QQ 开发者工具兼容 `wxml`
   - [sitemap 配置](guide/config/sitemap-config.md)
 
 - [小程序框架](guide/frame/README.md)
-
   - [框架介绍](guide/frame/intro.md)
 
   - [场景值](guide/frame/scene.md) <Badge type="grey" text="高级" />
@@ -55,7 +53,6 @@ QQ 小程序本质还是换汤不换药的，且 QQ 开发者工具兼容 `wxml`
   - [更新机制](guide/frame/update.md) <Badge type="grey" text="高级" />
 
 - [逻辑层](guide/service/README.md)
-
   - [生命周期](guide/service/lifetime.md)
 
   - [路由](guide/service/route.md)
@@ -73,7 +70,6 @@ QQ 小程序本质还是换汤不换药的，且 QQ 开发者工具兼容 `wxml`
   - [API](guide/service/api/README.md)
 
 - [视图层](guide/view/README.md)
-
   - [WXML](guide/view/wxml.md)
 
   - [WXSS](guide/view/wxss.md)
@@ -99,7 +95,6 @@ QQ 小程序本质还是换汤不换药的，且 QQ 开发者工具兼容 `wxml`
   - [初始渲染缓存](guide/view/rendering-cache.md) <Badge type="grey" text="高级" />
 
 - [小程序能力](guide/ability/README.md)
-
   - [网络请求](guide/ability/network.md)
 
   - [存储](guide/ability/storage.md)

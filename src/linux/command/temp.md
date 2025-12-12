@@ -210,7 +210,6 @@ Linux 服务管理两种方式 service 和 systemctl
 1. service 命令
 
    service 命令其实是去 `/etc/init.d` 目录下，去执行相关程序
-
    - service 命令启动 redis 脚本
 
    ```bash

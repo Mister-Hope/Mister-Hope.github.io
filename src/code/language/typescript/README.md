@@ -24,13 +24,11 @@ TypeScript 是一种由微软开发的自由和开源的编程语言，它是 Ja
 ## 目录
 
 - [简介](intro/README.md)
-
   - [什么是 TypeScript](intro/what-is-typescript.md)
   - [安装 TypeScript](intro/get-typescript.md)
   - [Hello TypeScript](intro/hello-typescript.md)
 
 - [基础](basics/README.md)
-
   - [原始数据类型](basics/primitive-data-types.md)
   - [任意值](basics/any.md)
   - [类型推论](basics/type-inference.md)
@@ -43,7 +41,6 @@ TypeScript 是一种由微软开发的自由和开源的编程语言，它是 Ja
   - [内置对象](basics/built-in-objects.md)
 
 - [进阶](advanced/README.md)
-
   - [类型别名](advanced/type-aliases.md)
   - [字符串字面量类型](advanced/string-literal-types.md)
   - [元组](advanced/tuple.md)
@@ -55,7 +52,6 @@ TypeScript 是一种由微软开发的自由和开源的编程语言，它是 Ja
   - [扩展阅读](advanced/further-reading.md)
 
 - [工程](engineering/README.md)
-
   - [代码检查](engineering/lint.md)
 
 ## JavaScript 与 TypeScript 的区别

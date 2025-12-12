@@ -5,13 +5,15 @@ icon: style
 category: TypeScript
 ---
 
-TypeScript 的代码检查应当使用 ESLint + `typescript-eslint-parser`。
+<!-- FIXME: Outdated -->
+
+TypeScript 的代码检查应当使用 ESLint + `@typescript-eslint/parser`。
 
 ## 什么是代码检查
 
 代码检查主要是用来发现代码错误、统一代码风格。
 
-在 JavaScript 项目中，我们一般使用 ESLint 来进行代码检查。它通过插件化的特性极大的丰富了适用范围，搭配 `typescript-eslint-parser` 之后，甚至可以用来检查 TypeScript 代码。
+在 JavaScript 项目中，我们一般使用 ESLint 来进行代码检查。它通过插件化的特性极大的丰富了适用范围，搭配 `@typescript-eslint/parser` 之后，甚至可以用来检查 TypeScript 代码。
 
 ## 为什么需要代码检查
 
@@ -55,7 +57,7 @@ console.log(`My name is ${myName}`);
 | 存在的问题                      | `tsc` 是否报错 | `eslint` 是否报错 |
 | ------------------------------- | -------------- | ----------------- |
 | `myName` 被误写成了 `myNane`    | ✅             | ✅                |
-| `toString` 被误写成了 `toStrng` | ✅️            | ❌                |
+| `toString` 被误写成了 `toStrng` | ✅️             | ❌                |
 | 少了一个分号                    | ❌             | ✅                |
 
 上例中，由于 `eslint` 无法识别 `myName` 存在哪些方法，所以对于拼写错误的 `toString` 没有检查出来。
@@ -76,13 +78,13 @@ ESLint 可以安装在当前项目中或全局环境下，因为代码检查是�
 npm install eslint --save-dev
 ```
 
-由于 ESLint 默认使用 [Espree](https://github.com/eslint/espree) 进行语法解析，无法识别 TypeScript 的一些语法，故我们需要安装 `typescript-eslint-parser`，替代掉默认的解析器，别忘了同时安装 `typescript`:
+由于 ESLint 默认使用 [Espree](https://github.com/eslint/espree) 进行语法解析，无法识别 TypeScript 的一些语法，故我们需要安装 `@typescript-eslint/parser`，替代掉默认的解析器，别忘了同时安装 `typescript`:
 
 ```bash
-npm install typescript typescript-eslint-parser --save-dev
+npm install typescript @typescript-eslint/parser --save-dev
 ```
 
-由于 `typescript-eslint-parser` 对一部分 ESLint 规则支持性不好，故我们需要安装 `eslint-plugin-typescript`，弥补一些支持性不好的规则。
+由于 `@typescript-eslint/parser` 对一部分 ESLint 规则支持性不好，故我们需要安装 `eslint-plugin-typescript`，弥补一些支持性不好的规则。
 
 ```bash
 npm install eslint-plugin-typescript --save-dev
@@ -98,7 +100,7 @@ ESLint 需要一个配置文件来决定对哪些规则进行检查，配置文�
 
 ```js
 module.exports = {
-  parser: "typescript-eslint-parser",
+  parser: "@typescript-eslint/parser",
   plugins: ["typescript"],
   rules: {
     // @fixable 必须使用 === 或 !==，禁止使用 == 或 !=，与 null 比较时除外
@@ -222,7 +224,7 @@ ESLint 原生的规则和 `eslint-plugin-typescript` 的规则太多了，而且
 安装:
 
 ```bash
-npm install --save-dev eslint typescript typescript-eslint-parser eslint-plugin-typescript eslint-config-alloy
+npm install --save-dev eslint typescript @typescript-eslint/parser eslint-plugin-typescript eslint-config-alloy
 ```
 
 在您的项目根目录下创建 `.eslintrc.js`，并将以下内容复制到文件中:
@@ -292,7 +294,7 @@ npm install --save-dev eslint-plugin-react
 
 ## Troubleshootings
 
-### Cannot find module typescript-eslint-parser
+### Cannot find module @typescript-eslint/parser
 
 您运行的是全局的 eslint，需要改为运行 `./node_modules/.bin/eslint`。
 
@@ -315,7 +317,7 @@ npm install --save-dev eslint-plugin-react
 
 ### 为什么 ESLint 无法检查出使用了未定义的变量(`no-undef` 规则为什么被关闭了)
 
-因为 `typescript-eslint-parser` [无法支持 `no-undef` 规则](https://github.com/eslint/typescript-eslint-parser/issues/416)。它针对正确的接口定义会报错。
+因为 `@typescript-eslint/parser` [无法支持 `no-undef` 规则](https://github.com/eslint/@typescript-eslint/parser/issues/416)。它针对正确的接口定义会报错。
 
 所以我们一般会关闭 `no-undef` 规则。
 

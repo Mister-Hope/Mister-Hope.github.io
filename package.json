@@ -22,7 +22,7 @@
     "dev:webpack-debug": "cross-env DEBUG=vuepress* vuepress-webpack dev src",
     "lint": "prettier --check --write .",
     "lint:check": "prettier --check .",
-    "lint:md": "markdownlint-cli2 **/*.md",
+    "lint:md": "markdownlint-cli2 \"**/*.md\"",
     "test": "echo \"Warning: no test specified\" && exit 0"
   },
   "dependencies": {

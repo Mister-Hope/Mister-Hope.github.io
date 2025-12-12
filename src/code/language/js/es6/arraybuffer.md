@@ -199,7 +199,6 @@ TypedArray 数组提供 9 种构造函数，用来生成相应类型的数组实
    上面代码在一段长度为 8 个字节的内存 (`b`) 之上，生成了三个视图: `v1`、`v2` 和 `v3`。
 
    视图的构造函数可以接受三个参数:
-
    - 第一个参数(必需): 视图对应的底层 `ArrayBuffer` 对象。
    - 第二个参数(可选): 视图开始的字节序号，默认从 0 开始。
    - 第三个参数(可选): 视图包含的数据个数，默认直到本段内存区域结束。
@@ -1237,7 +1236,6 @@ Atomics.add(ia, 112, 1); // 正确
 1. 其他方法
 
    `Atomics` 对象还有以下方法。
-
    - `Atomics.compareExchange(sharedArray, index, oldval, newval)`: 如果 `sharedArray[index]` 等于 `oldval`，就写入 `newval`，返回 `oldval`。
    - `Atomics.exchange(sharedArray, index, value)`: 设置 `sharedArray[index]` 的值，返回旧的值。
    - `Atomics.isLockFree(size)`: 返回一个布尔值，表示 `Atomics` 对象是否可以处理某个 `size` 的内存锁定。如果返回 `false`，应用程序就需要自己来实现锁定。

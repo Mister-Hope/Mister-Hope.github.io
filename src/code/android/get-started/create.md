@@ -20,7 +20,6 @@ tag:
 
 1. 在 Select a Project Template 窗口中，选择 Empty Activity，然后点击 Next。
 1. 在 Configure your project 窗口中，完成以下操作：
-
    - 在 Name 字段中输入“My First App”。
 
    - 在 Package name 字段中输入“com.example.myfirstapp”。
@@ -36,7 +35,6 @@ tag:
    点击 Help me choose 链接可打开 Android Platform/API Version Distribution 对话框。此对话框会提供有关各 Android 版本在设备间的分布情况的信息。您需要权衡的主要因素是，您想支持的 Android 设备所占的百分比，以及在这些设备所搭载的各个不同版本上维护应用所需的工作量。例如，如果您选择让应用与多个不同 Android 版本兼容，那么维护最旧版本与最新版本之间的兼容性所需的工作量就会增大。
 
    :::
-
    - 如果您的应用需要旧版库支持，请选中 Use legacy android.support libraries 复选框。
 
    - 其他选项保持原样。

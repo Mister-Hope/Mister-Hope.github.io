@@ -192,7 +192,6 @@ for (let key in o) {
     }
     ```
 
-
     ::: warning
 
     `for ... in` 对 Array 的循环得到的是 **`String`** 而不是 `Number`。

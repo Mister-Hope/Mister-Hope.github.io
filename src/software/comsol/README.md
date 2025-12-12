@@ -29,7 +29,6 @@ tag:
 - [快速上手 COMSOL](get-started.md)
 
 - [几何](geometry/README.md)
-
   - [浏览几何](geometry/view.md)
 
   - [构建几何](geometry/build.md)

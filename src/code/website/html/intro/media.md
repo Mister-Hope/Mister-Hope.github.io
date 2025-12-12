@@ -136,7 +136,6 @@ HTML5 标准推出了 `<video>` 和 `<audio>` 标签，以及一些 JavaScript �
 
 - preload
   这个属性被用来缓冲较大的文件，有 3 个值可选:
-
   - `none`: 不缓冲
   - `auto`: 页面加载后缓存媒体文件
   - `metadata`: 仅缓冲文件的元数据

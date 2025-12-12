@@ -12,7 +12,6 @@ category: 小程序
 - [运行环境](env.md)
 
 - [小程序配置](config/README.md)
-
   - [全局配置](config/app-config.md)
 
   - [页面配置](config/page-config.md)
@@ -20,7 +19,6 @@ category: 小程序
   - [sitemap 配置](config/sitemap-config.md)
 
 - [小程序框架](frame/README.md)
-
   - [框架介绍](frame/intro.md)
 
   - [场景值](frame/scene.md) <Badge type="grey" text="高级" />
@@ -32,7 +30,6 @@ category: 小程序
   - [更新机制](frame/update.md) <Badge type="grey" text="高级" />
 
 - [逻辑层](service/README.md)
-
   - [生命周期](service/lifetime.md)
 
   - [路由](service/route.md)
@@ -50,9 +47,7 @@ category: 小程序
   - [API](service/api/README.md)
 
 - [视图层](view/README.md)
-
   - [WXML](view/wxml.md)
-
     - [数据绑定](view/data-bind.md)
 
     - [条件渲染](view/condition-render.md)
@@ -84,7 +79,6 @@ category: 小程序
   - [初始渲染缓存](view/rendering-cache.md) <Badge type="grey" text="高级" />
 
 - [小程序能力](ability/README.md)
-
   - [网络请求](ability/network.md)
 
   - [存储](ability/storage.md)

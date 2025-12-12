@@ -6,7 +6,7 @@ order: 2
 category: CSS
 ---
 
-### 元素特性
+## 元素特性
 
 - 一个块级元素的内容宽度是其父元素的 100%，其高度与其内容高度一致。
 
@@ -14,7 +14,7 @@ category: CSS
 
 - 如果您想控制内联元素的尺寸，您需要为元素设置 `display: block;` 或 `display: inline-block`。`inline-block` 混合了 `inline` 和 `block` 的特性。
 
-### 摆放特性
+## 摆放特性
 
 正常布局流(在布局介绍里提到过)是一套在浏览器视口内放置、组织元素的系统。默认的，块级元素按照基于其父元素的书写顺序(默认值: `horizontal-tb`)的块流动方向(block flow direction)放置。
 

@@ -9,10 +9,10 @@ export default {
     },
     MD013: false,
     MD024: {
-      allow_different_nesting: true,
+      siblings_only: true,
     },
     MD033: {
-      allowed_elements: ["br", "AutoCatalog", "Badge"],
+      allowed_elements: ["br", "script", "Badge", "Catalog"],
     },
     MD035: {
       style: "---",
@@ -20,8 +20,6 @@ export default {
     MD040: false,
     MD046: false,
     MD049: false,
-    // FIXME: Wait for next release
-    MD060: false,
   },
   ignores: ["**/node_modules/**"],
 };

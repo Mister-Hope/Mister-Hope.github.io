@@ -234,8 +234,8 @@ CSS 允许您有多个背景图像。您需要在 `background-image` 设置多�
 **案例**:
 
 ```css
-background-image: url(image1.png), url(image2.png), url(image3.png),
-  url(image1.png);
+background-image:
+  url(image1.png), url(image2.png), url(image3.png), url(image1.png);
 background-repeat: no-repeat, repeat-x, repeat;
 background-position:
   10px 20px,

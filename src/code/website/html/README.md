@@ -55,13 +55,11 @@ HTML5 是 HTML 现行的最新修订版本，主要的新特性包括:
 ## 其他文档 <Badge text="不建议" type="warn" />
 
 - HTML
-
   - [W3CSchool 教程](https://www.w3cschool.cn/html/)
   - [菜鸟教程](https://www.runoob.com/html/html-tutorial.html)
   - [W3School 教程](http://www.w3school.com.cn/html/index.asp)
 
 - HTML5
-
   - [W3CSchool 教程](https://www.w3cschool.cn/html5/)
   - [菜鸟教程](https://www.runoob.com/html/html5-intro.html)
   - [W3School 教程](http://www.w3school.com.cn/html5/index.asp)

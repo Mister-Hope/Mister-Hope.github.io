@@ -56,7 +56,6 @@ isAdult(50); // true
 
     突然，您想起了文档上有这么一句话:flushed::
 
-
     :::center
 
     JavaScript 引擎遇到 `return` 语句，就直接返回 `return` 后面的那个表达式的值，
@@ -86,7 +85,6 @@ isAdult(50); // true
     ```js
     const functionName = (arg1, arg2, ...) => value;
     ```
-
 
     :::right
 

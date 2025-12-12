@@ -88,7 +88,6 @@ ConstraintLayout 是一种布局，它根据同级视图和父布局的约束条
 1. 点击 (Add Key) 可以创建一个新字符串作为文本框的“提示文本”。此时会打开如图 7 所示的窗口。
 
    在 Add Key 对话框中，完成以下步骤：
-
    - 在 Key 字段中输入“edit_message”。
    - 在 Default Value 字段中输入“Enter a message”。
    - 点击 OK。

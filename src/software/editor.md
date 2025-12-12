@@ -22,7 +22,6 @@ tag:
 - 其他代码编辑器
 
   在不同领域的开发者可能会偏向不同种类的开发工具。下面列举其他常见的代码编辑器。
-
   - WebStorm 是专业的 web 开发工具，提供格式化、代码补全等选项。
   - PhpStorm 是专业的 php 开发工具，提供格式化、代码补全等选项。
   - [notepad++](https://notepad-plus-plus.org/)

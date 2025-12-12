@@ -84,7 +84,6 @@ MySQL Community Server 是开源免费的，这也是我们通常用的 MySQL �
 ## 连接数据库
 
 1. 打开 MySQL 命令窗口
-
    - 在 DOS 命令行窗口进入 安装目录 `\mysql\bin`
    - 可设置环境变量，设置了环境变量，可以在任意目录打开
 
@@ -142,10 +141,8 @@ exit; 退出 Mysql
    ```
 
    注意: 为了不再显示的时候乱码，要修改数据库默认编码。以下以 `GBK` 编码页面为例进行说明:
-
    1. 修改 MYSQL 的配置文件: `my.ini` 里面修改 `default-character-set=gbk`
    1. 代码运行时修改:
-
       1. Java 代码: `jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=gbk`
       1. PHP 代码: `header("Content-Type:text/html;charset=gb2312");`
       1. C 语言代码: `int mysql_set_character_set( MYSQL * mysql, char * csname)；`
@@ -196,7 +193,6 @@ exit; 退出 Mysql
    ```
 
    MySQL 中 `SELECT` 命令类似于其他编程语言里的 `print` 或者 `write`，您可以用它来显示一个字符串、数字、数学表达式的结果等等,
-
    1. 显示 MYSQL 的版本
 
       ```sql
@@ -438,7 +434,6 @@ exit; 退出 Mysql
    - `WHERE`子句指定应更新哪些行。如果没有`WHERE`子句，则更新所有的行。
 
 1. 增加数据
-
    1. 增加字段
 
       ```sql
