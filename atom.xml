@@ -5,7 +5,7 @@
   <subtitle>Where there is light, there is hope.</subtitle>
   <icon>https://mister-hope.com/favicon.ico</icon>
   <rights>基于 MIT 协议，© 2019-至今 Mr.Hope</rights>
-  <updated>2025-12-07T13:06:02.789Z</updated>
+  <updated>2025-12-12T01:12:27.637Z</updated>
   <generator>@vuepress/plugin-feed</generator>
   <link rel="self" href="https://mister-hope.com/atom.xml"/>
   <link rel="alternate" href="https://mister-hope.com/"/>
@@ -302,7 +302,7 @@
     <title type="text">光滑滑块斜坡问题</title>
     <id>https://mister-hope.com/physics/high-school/1.html</id>
     <link href="https://mister-hope.com/physics/high-school/1.html"/>
-    <updated>2025-10-15T10:40:45.000Z</updated>
+    <updated>2025-12-12T01:09:00.000Z</updated>
     <summary type="html"><![CDATA[<h2>题目</h2>
 <p>一个质量为 、倾角为  的斜面静置于水平面上。一个质量为  的小物块从斜面上由静止开始释放。</p>
 <p>假设所有接触面（包括水平面与斜面之间、小物块与斜面之间）均光滑，在小物块滑离斜面前，斜面和小物块的加速度是多少？</p>
@@ -1174,7 +1174,7 @@
     <title type="text">LLM + RAG：智能问答实战</title>
     <id>https://mister-hope.com/note/book/ai-knowledge.html</id>
     <link href="https://mister-hope.com/note/book/ai-knowledge.html"/>
-    <updated>2025-04-19T18:35:28.000Z</updated>
+    <updated>2025-12-12T01:09:00.000Z</updated>
     <summary type="html"><![CDATA[<h2>相关知识点</h2>
 <h3>大语言模型（LLM，Large Language Model）</h3>
 <p>LLM 是基于深度学习（如Transformer架构）训练的超大规模语言模型，能够理解和生成自然语言文本。典型代表包括GPT、PaLM、LLaMA等。</p>
@@ -1378,7 +1378,7 @@
     <title type="text">脑科学与课堂 以脑为导向的教学模式读书笔记</title>
     <id>https://mister-hope.com/note/book/brain.html</id>
     <link href="https://mister-hope.com/note/book/brain.html"/>
-    <updated>2025-04-19T18:35:28.000Z</updated>
+    <updated>2025-12-12T01:09:00.000Z</updated>
     <summary type="html"><![CDATA[<h2>教育者应该了解的神经与认知科学知识</h2>
 <h3>教育领域中的神经迷思</h3>
 <ul>
@@ -1688,10 +1688,10 @@
 <p>学生能够在整洁的环境中达到更好的学习效果，因为他们能够在这些环境中得到舒适感与归属感，影响他们在学习中的注意和参与感。</p>
 </li>
 </ul>
-<h2>脑目标3 设计学习体验。</h2>
+<h2>脑目标3 设计学习体验</h2>
 <p>当学生在学习中可以得到一个更宽广的视野或者是一个整体图的时候，他们能够更好地理解以前的知识与新知识的联系，并且能够更好地体会到学习目标之间的关系，这和大脑的习性是一致的，因为大脑总是寻求最近出现的想法与存储在记忆中信息之间的相似模式与关联。因此在教学，我们应该为学生呈现一种整体的学习图式，并且要确定我们的学习内容，学生已经拥有相关的知识基础。</p>
 <p>随着年龄的增长，现有教学的学生会更多从整体上进行识别，这被称为整体思维。因此我们首先要为学生建立所学内容的整体图景，在这个环节中组织图尤其是思维导图是一个很好的工具。并且通过设计活动使学生充分参与学习，并最终长期记忆相关内容，同时我们还要建立合理的评估环节来对学生的表现进行评估。</p>
-<h2>脑目标4 教授掌握内容、技能和概念。</h2>
+<h2>脑目标4 教授掌握内容、技能和概念</h2>
 <p>掌握知识是很重要的，但学会思考也是教授的另一要点。在教授知识的同时，我们也应该培养学生利用知识解决其他问题的能力。</p>
 <h3>学习与记忆</h3>
 <p>学习是对新信息的掌握习得而既允许信息在存储一段时间后唤醒提取。一个广泛熟知的理论叫记忆加工理论。</p>
@@ -2047,7 +2047,7 @@
     <title type="text">模板语法</title>
     <id>https://mister-hope.com/code/vue/core/template.html</id>
     <link href="https://mister-hope.com/code/vue/core/template.html"/>
-    <updated>2024-07-14T07:19:43.000Z</updated>
+    <updated>2025-12-12T01:09:00.000Z</updated>
     <summary type="html"><![CDATA[<p>Vue 使用一种基于 HTML 的模板语法，使我们能够声明式地将其组件实例的数据绑定到呈现的 DOM 上。所有的 Vue 模板都是语法层面合法的 HTML，可以被符合规范的浏览器和 HTML 解析器解析。</p>
 <p>在底层机制中，Vue 会将模板编译成高度优化的 JavaScript 代码。结合响应式系统，当应用状态变更时，Vue 能够智能地推导出需要重新渲染的组件的最少数量，并应用最少的 DOM 操作。</p>
 <p>如果你对虚拟 DOM 的概念比较熟悉，并且偏好直接使用 JavaScript，你也可以结合可选的 JSX 支持直接手写渲染函数而不采用模板。但请注意，这将不会享受到和模板同等级别的编译时优化。</p>]]></summary>
@@ -2063,7 +2063,9 @@
 <div class="language-vue" data-highlighter="shiki" data-ext="vue" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-vue"><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">p</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;Using text interpolation: {{ rawHtml }}&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">p</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">p</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;Using v-html directive: &lt;span v-html="rawHtml"&gt;&lt;/span&gt;&lt;/p&gt;</span></span></code></pre>
 </div><p>Using text interpolation: {{ rawHtml }}</p>
+<!-- markdownlint-disable MD033 -->
 <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+<!-- markdownlint-enable MD033 -->
 <p>这里我们遇到了一个新的概念。这里看到的 <code>v-html</code> attribute 被称为一个指令。指令由 <code>v-</code> 作为前缀，表明它们是一些由 Vue 提供的特殊 attribute，你可能已经猜到了，它们将为渲染的 DOM 应用特殊的响应式行为。这里我们做的事情简单来说就是：在当前组件实例上，将此元素的 innerHTML 与 <code>rawHtml</code> 属性保持同步。</p>
 <p><code>span</code> 的内容将会被替换为 <code>rawHtml</code> 属性的值，插值为纯 HTML——数据绑定将会被忽略。</p>
 <div class="hint-container note">
@@ -2180,7 +2182,8 @@
 <h3>修饰符 Modifiers</h3>
 <p>修饰符是以点开头的特殊后缀，表明指令需要以一些特殊的方式被绑定。例如 <code>.prevent</code> 修饰符会告知 <code>v-on</code> 指令对触发的事件调用 <code>event.preventDefault()</code>：</p>
 <div class="language-vue" data-highlighter="shiki" data-ext="vue" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-vue"><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">form</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> @</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">submit</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">prevent</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">"</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">onSubmit</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;...&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">form</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span></code></pre>
-</div>]]></content>
+</div><!-- markdownlint-disable MD033 -->
+]]></content>
     <published>2023-02-26T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2396,7 +2399,7 @@
     <title type="text">启动另一个 activity</title>
     <id>https://mister-hope.com/code/android/get-started/activity.html</id>
     <link href="https://mister-hope.com/code/android/get-started/activity.html"/>
-    <updated>2023-03-24T09:43:26.000Z</updated>
+    <updated>2025-12-12T01:09:00.000Z</updated>
     <summary type="html"><![CDATA[<p>在本课中，您将向 MainActivity 添加一些代码，以便在用户点按 Send 按钮时启动一个显示消息的新 activity。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>在本课中，您将向 MainActivity 添加一些代码，以便在用户点按 Send 按钮时启动一个显示消息的新 activity。</p>
@@ -2509,7 +2512,7 @@
     <title type="text">创建项目</title>
     <id>https://mister-hope.com/code/android/get-started/create.html</id>
     <link href="https://mister-hope.com/code/android/get-started/create.html"/>
-    <updated>2023-03-24T09:43:26.000Z</updated>
+    <updated>2025-12-12T01:09:00.000Z</updated>
     <summary type="html"><![CDATA[<p>本课将介绍如何使用 Android Studio 创建新的 Android 项目，并介绍该项目中的一些文件。</p>
 <p>如需创建新的 Android 项目，请按以下步骤操作：</p>
 <ol>
@@ -2638,7 +2641,7 @@
     <title type="text">构建简单的界面</title>
     <id>https://mister-hope.com/code/android/get-started/interface.html</id>
     <link href="https://mister-hope.com/code/android/get-started/interface.html"/>
-    <updated>2023-03-24T09:43:26.000Z</updated>
+    <updated>2025-12-12T01:09:00.000Z</updated>
     <summary type="html"><![CDATA[<p>在本节课中，您将学习如何使用 Android Studio 布局编辑器创建包含一个文本框和一个按钮的布局。这将为下一课打下基础，下节课将学习如何在点按该按钮时让应用将文本框的内容发送到其他 activity。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>在本节课中，您将学习如何使用 Android Studio 布局编辑器创建包含一个文本框和一个按钮的布局。这将为下一课打下基础，下节课将学习如何在点按该按钮时让应用将文本框的内容发送到其他 activity。</p>
@@ -2753,7 +2756,7 @@
     <title type="text">基础知识</title>
     <id>https://mister-hope.com/code/android/get-started/intro.html</id>
     <link href="https://mister-hope.com/code/android/get-started/intro.html"/>
-    <updated>2023-03-24T09:43:26.000Z</updated>
+    <updated>2025-12-12T01:09:00.000Z</updated>
     <summary type="html"><![CDATA[<p>本部分介绍如何构建简单的 Android 应用。首先，您将了解如何通过 Android Studio 创建“Hello, World!”项目并运行它。然后，您将为应用创建一个新界面，该界面会接受用户输入，并切换到应用中的一个新屏幕以显示用户输入内容。</p>
 <p>开始之前，您需要了解有关 Android 应用的两个基本概念：它们如何提供多个入口点，以及它们如何适应不同的设备。</p>
 ]]></summary>
@@ -2764,11 +2767,11 @@
 <p>Android 应用都是将各种可单独调用的组件加以组合构建而成。例如，activity 是提供界面 (UI) 的一种应用组件。</p>
 <p>“主”activity 在用户点按您的应用图标时启动。您还可以将用户从其他位置（例如，从通知中，甚至从其他应用中）引导至某个 activity。</p>
 <p>其他组件（如 WorkManager）可使应用能够在没有界面的情况下执行后台任务。</p>
-<p>构建您的首个应用后，请参阅 [应用基础知识][] 来详细了解其他应用组件。</p>
+<p>构建您的首个应用后，请参阅 应用基础知识 来详细了解其他应用组件。</p>
 <h2>应用可适应不同的设备</h2>
 <p>Android 允许您为不同的设备提供不同的资源。例如，您可以针对不同的屏幕尺寸创建不同的布局。系统会根据当前设备的屏幕尺寸确定要使用的布局。</p>
 <p>如果应用的任何功能需要使用特定的硬件（例如摄像头），您可以在运行时查询该设备是否具有该硬件，如果没有，则停用相应的功能。您可以指定应用需要使用特定的硬件，这样，Google Play 就不会允许在没有这些硬件的设备上安装应用。</p>
-<p>构建您的首个应用后，请参阅 [设备兼容性概览][] 来详细了解设备配置。</p>
+<p>构建您的首个应用后，请参阅 设备兼容性概览 来详细了解设备配置。</p>
 ]]></content>
     <category term="Android"/>
     <category term="快速上手"/>
@@ -2778,15 +2781,12 @@
     <title type="text">运行应用</title>
     <id>https://mister-hope.com/code/android/get-started/run.html</id>
     <link href="https://mister-hope.com/code/android/get-started/run.html"/>
-    <updated>2023-03-24T09:43:26.000Z</updated>
+    <updated>2025-12-12T01:09:00.000Z</updated>
     <summary type="html"><![CDATA[<h2>在真实设备上运行</h2>
 <p>按照以下步骤设置设备：</p>
 <ol>
-<li>
-<p>使用一根 USB 线将设备连接到开发机器。如果您是在 Windows 上开发的，则可能需要为设备安装合适的 USB 驱动程序。</p>
-</li>
-<li>
-<p>执行以下步骤，在开发者选项窗口中启用 USB 调试：</p>
+<li>使用一根 USB 线将设备连接到开发机器。如果您是在 Windows 上开发的，则可能需要为设备安装合适的 USB 驱动程序。</li>
+<li>执行以下步骤，在开发者选项窗口中启用 USB 调试：
 <ol>
 <li>
 <p>打开设置应用。</p>
@@ -2812,11 +2812,8 @@
     <content type="html"><![CDATA[<h2>在真实设备上运行</h2>
 <p>按照以下步骤设置设备：</p>
 <ol>
-<li>
-<p>使用一根 USB 线将设备连接到开发机器。如果您是在 Windows 上开发的，则可能需要为设备安装合适的 USB 驱动程序。</p>
-</li>
-<li>
-<p>执行以下步骤，在开发者选项窗口中启用 USB 调试：</p>
+<li>使用一根 USB 线将设备连接到开发机器。如果您是在 Windows 上开发的，则可能需要为设备安装合适的 USB 驱动程序。</li>
+<li>执行以下步骤，在开发者选项窗口中启用 USB 调试：
 <ol>
 <li>
 <p>打开设置应用。</p>
@@ -3153,7 +3150,7 @@
     <title type="text">模块</title>
     <id>https://mister-hope.com/code/language/python/module/intro.html</id>
     <link href="https://mister-hope.com/code/language/python/module/intro.html"/>
-    <updated>2022-02-06T16:46:58.000Z</updated>
+    <updated>2025-12-12T01:09:00.000Z</updated>
     <summary type="html"><![CDATA[<p>在计算机程序的开发过程中，随着程序代码越写越多，在一个文件里代码就会越来越长，越来越不容易维护。为了编写可维护的代码，我们把很多函数分组，分别放到不同的文件里，这样，每个文件包含的代码就相对较少，很多编程语言都采用这种组织代码的方式。在 Python 中，一个 <code>.py</code> 文件就称之为一个模块 (Module) 。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>在计算机程序的开发过程中，随着程序代码越写越多，在一个文件里代码就会越来越长，越来越不容易维护。为了编写可维护的代码，我们把很多函数分组，分别放到不同的文件里，这样，每个文件包含的代码就相对较少，很多编程语言都采用这种组织代码的方式。在 Python 中，一个 <code>.py</code> 文件就称之为一个模块 (Module) 。</p>
@@ -4843,7 +4840,7 @@
     <title type="text">Markdown 扩展</title>
     <id>https://mister-hope.com/code/language/markdown/extend.html</id>
     <link href="https://mister-hope.com/code/language/markdown/extend.html"/>
-    <updated>2024-01-25T18:01:12.000Z</updated>
+    <updated>2025-12-12T01:09:00.000Z</updated>
     <summary type="html"><![CDATA[<h2>其他特性</h2>
 <h3>自动链接</h3>
 <p>Markdown 支持比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用尖括号包起来， Markdown 就会自动把它转成链接，链接的文字就和链接位置一样，例如:</p>
@@ -4862,7 +4859,7 @@
 <span class="line"><span style="--shiki-light:#986801;--shiki-dark:#D19A66">  href</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#x6D;</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#x61;</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">i</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#x6C;</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#x74;</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#x6F;</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">:</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#x61;</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#x64;</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#x64;</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#x72;</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#x65;</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#115;</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#115;</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#64;</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#101;</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#120;</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#x61;</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#109;</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#x70;</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#x6C;</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">e</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#x2E;</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#99;</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#111;</span><span style="--shiki-light:#50A14F;--shiki-dark:#E06C75">&amp;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">#109;</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  &gt;</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">&amp;#x61;&amp;#x64;&amp;#x64;&amp;#x72;&amp;#x65;&amp;#115;&amp;#115;&amp;#64;&amp;#101;&amp;#120;&amp;#x61;&amp;#109;&amp;#x70;&amp;#x6C;</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">e</span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">&amp;#x2E;&amp;#99;&amp;#111;&amp;#109;</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">a</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt;</span></span></code></pre>
-</div><p>在浏览器里面，这段字串会变成一个可以点击的 「address@example.com」 链接。</p>
+</div><p>在浏览器里面，这段字串会变成一个可以点击的 「<a href="mailto:address@example.com" target="_blank" rel="noopener noreferrer">address@example.com</a>」 链接。</p>
 <p>(这种作法虽然可以混淆不少的机器人，但并无法全部挡下来，不过这样也比什么都不做好些。无论如何，公开您的信箱终究会引来广告信件的。)</p>
 <h3>转义字符</h3>
 <p>Markdown 可以利用反斜线来插入一些在语法中有其它意义的符号，例如: 如果您想要用星号加在文字旁边的方式来做出强调效果 (但不用 <code>&lt;em&gt;</code> 标签) ，您可以在星号的前面加上反斜线:</p>
@@ -5148,7 +5145,7 @@
     <title type="text">Markdown 介绍</title>
     <id>https://mister-hope.com/code/language/markdown/intro.html</id>
     <link href="https://mister-hope.com/code/language/markdown/intro.html"/>
-    <updated>2024-01-25T17:47:26.000Z</updated>
+    <updated>2025-12-12T01:09:00.000Z</updated>
     <summary type="html"><![CDATA[<p>Markdown 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
 <p>Markdown 的目标是实现「易读易写」。它的扩展名为 <code>.md</code>。</p>
 ]]></summary>
@@ -5196,7 +5193,7 @@
 </div>
 <p>Markdown 即允许您直接使用这些符号。也允许您使用转义符号。</p>
 <p>比如您如果要在文件中插入一个著作权的符号，但是您又不想费力地输入这个不常见的特殊符号，您可以直接在 Markdown 中输入 <code>&amp;copy;</code>，Markdown 会推测出它是转移符号，并把它输出为 ©。</p>
-<p>类似的状况也会发生在 <code>&lt;</code> 符号上，因为 Markdown 支持 <a href="#%E8%A1%8C%E5%86%85-HTML">行内 HTML</a> ，如果您是使用 <code>&lt;</code> 符号作为 HTML 标签使用，那 Markdown 也不会对它做任何转换，但是如果您是写:</p>
+<p>类似的状况也会发生在 <code>&lt;</code> 符号上，因为 Markdown 支持 <a href="#%E8%A1%8C%E5%86%85-html">行内 HTML</a> ，如果您是使用 <code>&lt;</code> 符号作为 HTML 标签使用，那 Markdown 也不会对它做任何转换，但是如果您是写:</p>
 <div class="language-md" data-highlighter="shiki" data-ext="md" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-md"><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">4 &lt; 5</span></span></code></pre>
 </div><p>Markdown 将会把它转换为:</p>
 <div class="language-html" data-highlighter="shiki" data-ext="html" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-html"><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">4 </span><span style="--shiki-light:#986801;--shiki-dark:#E06C75">&amp;lt;</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 5</span></span></code></pre>
@@ -5243,7 +5240,7 @@
     <title type="text">Markdown示例</title>
     <id>https://mister-hope.com/code/language/markdown/demo.html</id>
     <link href="https://mister-hope.com/code/language/markdown/demo.html"/>
-    <updated>2024-01-25T17:47:26.000Z</updated>
+    <updated>2025-12-12T01:09:00.000Z</updated>
     <summary type="html"><![CDATA[<!-- markdownlint-disable -->
 <h1>一级标题</h1>
 <!-- markdownlint-restore -->
@@ -5321,7 +5318,6 @@
 </ul>
 <div class="language-md line-numbers-mode" data-highlighter="shiki" data-ext="md" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-md"><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">-</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 无序列表项</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">-</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 无序列表项</span></span>
-<span class="line"></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">  -</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 列表中的列表项</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">    -</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 更多的列表项</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">    -</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 更多的列表项</span></span>
@@ -5333,7 +5329,7 @@
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    甚至最后一个段落还包含了</span><span style="--shiki-light:#986801;--shiki-dark:#ABB2BF">[</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">链接</span><span style="--shiki-light:#986801;--shiki-dark:#ABB2BF">]</span><span style="--shiki-light:#A626A4;--shiki-dark:#E06C75">(</span><span style="--shiki-light:#A626A4;--shiki-light-text-decoration:inherit;--shiki-dark:#C678DD;--shiki-dark-text-decoration:underline">#链接</span><span style="--shiki-light:#A626A4;--shiki-dark:#E06C75">)</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">。</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">-</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> 无序列表项</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>有序列表</h3>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>有序列表</h3>
 <ol>
 <li>有序列表第一项</li>
 <li>有序列表第二项<br>
@@ -7714,7 +7710,7 @@
     <title type="text">5.7 与 8</title>
     <id>https://mister-hope.com/software/mysql/compare.html</id>
     <link href="https://mister-hope.com/software/mysql/compare.html"/>
-    <updated>2024-01-25T17:47:26.000Z</updated>
+    <updated>2025-12-12T01:09:00.000Z</updated>
     <summary type="html"><![CDATA[<h2>MySql 5.7 和 MySql 8 的区别</h2>
 <ol>
 <li>
@@ -7909,7 +7905,7 @@ MySQL 会将该命令的配置保存到数据目录下的 <code>mysqld-auto.cnf<
     <title type="text">简介</title>
     <id>https://mister-hope.com/software/mysql/intro.html</id>
     <link href="https://mister-hope.com/software/mysql/intro.html"/>
-    <updated>2024-01-25T17:47:26.000Z</updated>
+    <updated>2025-12-12T01:09:00.000Z</updated>
     <summary type="html"><![CDATA[<p>MySQL 是一个关系型数据库管理系统，由瑞典 MySQL AB 公司开发，属于 Oracle 旗下产品。</p>
 <p>它是最流行的关系型数据库管理系统之一，是最好的 RDBMS 关系数据库管理系统应用软件之一</p>
 <p>MySQL 使用 SQL 语言，分为社区版和商业版，由于其体积小、速度快、总体拥有成本低，尤其是开放源码这一特点，一般中小型网站都选择 MySQL 作为网站数据库。</p>
@@ -8051,11 +8047,8 @@ MySQL 会将该命令的配置保存到数据目录下的 <code>mysqld-auto.cnf<
 <div class="language-sql" data-highlighter="shiki" data-ext="sql" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-sql"><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">show databases;</span></span></code></pre>
 </div><p>注意: 为了不再显示的时候乱码，要修改数据库默认编码。以下以 <code>GBK</code> 编码页面为例进行说明:</p>
 <ol>
-<li>
-<p>修改 MYSQL 的配置文件: <code>my.ini</code> 里面修改 <code>default-character-set=gbk</code></p>
-</li>
-<li>
-<p>代码运行时修改:</p>
+<li>修改 MYSQL 的配置文件: <code>my.ini</code> 里面修改 <code>default-character-set=gbk</code></li>
+<li>代码运行时修改:
 <ol>
 <li>Java 代码: <code>jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=gbk</code></li>
 <li>PHP 代码: <code>header("Content-Type:text/html;charset=gb2312");</code></li>
@@ -8539,7 +8532,7 @@ MySQL 会将该命令的配置保存到数据目录下的 <code>mysqld-auto.cnf<
     <title type="text">持续集成</title>
     <id>https://mister-hope.com/code/basic/ci.html</id>
     <link href="https://mister-hope.com/code/basic/ci.html"/>
-    <updated>2024-01-25T17:47:26.000Z</updated>
+    <updated>2025-12-12T01:09:00.000Z</updated>
     <summary type="html"><![CDATA[<p>持续集成 (Continuous Integration) 指的是，频繁地 (一天多次) 将代码集成到主干，每次集成都通过自动化的构建 (包括编译，发布，自动化测试) 来验证，从而尽早地发现集成错误。</p>
 <p>持续集成的目的让产品可以快速迭代，同时还能保持高质量。就是说每完成一个完整的部分，就向下个环节交付，发现问题可以马上调整，使得问题不会放大到其他部分和后面的环节。</p>
 ]]></summary>
@@ -8572,7 +8565,7 @@ MySQL 会将该命令的配置保存到数据目录下的 <code>mysqld-auto.cnf<
     <title type="text">Glob</title>
     <id>https://mister-hope.com/code/basic/glob.html</id>
     <link href="https://mister-hope.com/code/basic/glob.html"/>
-    <updated>2023-03-12T09:46:14.000Z</updated>
+    <updated>2025-12-12T01:09:00.000Z</updated>
     <summary type="html"><![CDATA[<p>本文介绍 Glob 匹配。</p>
 ]]></summary>
     <content type="html"><![CDATA[<p>本文介绍 Glob 匹配。</p>
