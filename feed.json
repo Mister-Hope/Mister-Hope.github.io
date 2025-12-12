@@ -11,9 +11,9 @@
       "url": "https://mister-hope.com/physics/high-school/3.html",
       "id": "https://mister-hope.com/physics/high-school/3.html",
       "summary": "例题 1：圆心平抛致圆面速度最小值 题目： 在半径为 的圆心处以初速度 水平抛出一个小球，重力加速度为 。求小球落到圆周上的瞬时速度最小值 ，以及此时对应的初速度 。 答案 【解析】 1. 建立模型与约束 设圆心为原点 ，水平向右为 轴，竖直向下为 轴。 运动方程： 几何约束：落点在圆上 代入得： 解得 关于 的表达式： 2. 构建目标函数 设落点速度...",
-      "content_html": "<h2>例题 1：圆心平抛致圆面速度最小值</h2>\n<p><strong>题目</strong>：\n在半径为  的圆心处以初速度  水平抛出一个小球，重力加速度为 。求小球落到圆周上的瞬时速度最小值 ，以及此时对应的初速度 。</p>\n<details class=\"hint-container details\"><summary>答案</summary>\n<p><strong>【解析】</strong></p>\n<p><strong>1. 建立模型与约束</strong>\n设圆心为原点 ，水平向右为  轴，竖直向下为  轴。</p>\n<ul>\n<li>运动方程：</li>\n<li>几何约束：落点在圆上 \n代入得：\n解得  关于  的表达式：</li>\n</ul>\n<p><strong>2. 构建目标函数</strong>\n设落点速度为 ，则 。\n将  代入：</p>\n<p><strong>3. 求解极值</strong>\n利用基本不等式 ：</p>\n<p>当且仅当 ，即  时取等号。</p>\n<p><strong>4. 求解对应的 </strong>\n将最佳时间  代回  的表达式：</p>\n</details>\n<h2>例题 2：斜面底部高 h 处平抛</h2>\n<p><strong>题目</strong>：\n在倾角为  的斜面底端正上方高度  处，以初速度  水平抛出一小球，小球落在斜面上。求落点速度的最小值  及对应的 。</p>\n<details class=\"hint-container details\"><summary>答案</summary>\n<p><strong>【答案】</strong></p>\n<ul>\n<li>落点最小速度：</li>\n<li>对应的初速度：</li>\n</ul>\n<p><strong>【解析】</strong></p>\n<p><strong>1. 建立模型与约束</strong>\n设斜面底端为原点 ，抛出点为 。</p>\n<ul>\n<li>斜面方程：</li>\n<li>运动方程：</li>\n<li>几何约束：</li>\n</ul>\n<p><strong>2. 构建目标函数</strong></p>\n<p>令 ，展开并整理（利用 ）：</p>\n<p><strong>3. 求解极值</strong>\n利用基本不等式，第一项与第二项积为定值。\n最小速度平方为：</p>\n<p>化简根号内项：，提出系数：</p>\n<p><strong>4. 求解对应的 </strong>\n极值条件为两项相等，解得  后代回  表达式。经过化简（过程略），可得简洁形式。</p>\n</details>\n<h2>例题 3：高 h 处平抛至抛物面</h2>\n<p><strong>题目</strong>：\n在  轴上高度为  处（坐标 ）水平抛出一小球，落到抛物线  （）上。求落点速度的最小值  及对应的 。</p>\n<details class=\"hint-container details\"><summary>答案</summary>\n<p> 时：</p>\n<ul>\n<li></li>\n<li></li>\n</ul>\n<p> 时：</p>\n<ul>\n<li></li>\n<li></li>\n</ul>\n<p><strong>【解析】</strong></p>\n<p><strong>1. 建立模型与约束</strong></p>\n<ul>\n<li>运动方程：</li>\n<li>几何约束：</li>\n<li>反解 ：</li>\n</ul>\n<p><strong>2. 构建目标函数</strong></p>\n<p>设 ，则 。</p>\n<p><strong>3. 分类讨论与求解</strong>\n利用基本不等式，前两项的最小值为 。\n极值点条件：。</p>\n<p>此时，我们需要检查前提条件：<strong>初速度  必须有意义（即 ）。</strong></p>\n<p>要使 ，必须满足 ，即 <strong></strong>。</p>\n<h4><strong>情况 A：</strong></h4>\n<ul>\n<li>此时存在非零初速度解。</li>\n<li><strong>落点最小速度</strong>：</li>\n<li><strong>对应的初速度</strong>：</li>\n</ul>\n<h4><strong>情况 B：</strong></h4>\n<ul>\n<li>此时上述  算出为虚数。说明函数  在实数范围内单调递增。</li>\n<li> 越小， 越小。物理上  的最小值为 0（对应 ）。</li>\n<li><strong>结论</strong>：最小速度对应 <strong>自由落体 ()</strong>，小球直接落向顶点。</li>\n<li><strong>最小速度</strong>：</li>\n</ul>\n<h3><strong>难点突破：为什么  时应该自由落体？</strong></h3>\n<p><strong>平抛是一笔“交易”</strong>：我们支付水平速度（成本），换取落在更高位置以减少竖直速度（收益）。</p>\n</details>\n",
+      "content_html": "<h2>例题 1：圆心平抛致圆面速度最小值</h2>\n<p><strong>题目</strong>：\n在半径为  的圆心处以初速度  水平抛出一个小球，重力加速度为 。求小球落到圆周上的瞬时速度最小值 ，以及此时对应的初速度 。</p>\n<details class=\"hint-container details\"><summary>答案</summary>\n<p><strong>【解析】</strong></p>\n<p><strong>1. 建立模型与约束</strong>\n设圆心为原点 ，水平向右为  轴，竖直向下为  轴。</p>\n<ul>\n<li>运动方程：</li>\n<li>几何约束：落点在圆上 \n代入得：\n解得  关于  的表达式：</li>\n</ul>\n<p><strong>2. 构建目标函数</strong>\n设落点速度为 ，则 。\n将  代入：</p>\n<p><strong>3. 求解极值</strong>\n利用基本不等式 ：</p>\n<p>当且仅当 ，即  时取等号。</p>\n<p><strong>4. 求解对应的 </strong>\n将最佳时间  代回  的表达式：</p>\n</details>\n<h2>例题 2：斜面底部高 h 处平抛</h2>\n<p><strong>题目</strong>：\n在倾角为  的斜面底端正上方高度  处，以初速度  水平抛出一小球，小球落在斜面上。求落点速度的最小值  及对应的 。</p>\n<details class=\"hint-container details\"><summary>答案</summary>\n<p><strong>【答案】</strong></p>\n<ul>\n<li>落点最小速度：</li>\n<li>对应的初速度：</li>\n</ul>\n<p><strong>【解析】</strong></p>\n<p><strong>1. 建立模型与约束</strong>\n设斜面底端为原点 ，抛出点为 。</p>\n<ul>\n<li>斜面方程：</li>\n<li>运动方程：</li>\n<li>几何约束：</li>\n</ul>\n<p><strong>2. 构建目标函数</strong></p>\n<p>令 ，展开并整理（利用 ）：</p>\n<p><strong>3. 求解极值</strong>\n利用基本不等式，第一项与第二项积为定值。\n最小速度平方为：</p>\n<p>化简根号内项：，提出系数：</p>\n<p><strong>4. 求解对应的 </strong>\n极值条件为两项相等，解得  后代回  表达式。经过化简（过程略），可得简洁形式。</p>\n</details>\n<h2>例题 3：高 h 处平抛至抛物面</h2>\n<p><strong>题目</strong>：\n在  轴上高度为  处（坐标 ）水平抛出一小球，落到抛物线  （）上。求落点速度的最小值  及对应的 。</p>\n<details class=\"hint-container details\"><summary>答案</summary>\n<p> 时：</p>\n<ul>\n<li></li>\n<li></li>\n</ul>\n<p> 时：</p>\n<ul>\n<li></li>\n<li></li>\n</ul>\n<p><strong>【解析】</strong></p>\n<p><strong>1. 建立模型与约束</strong></p>\n<ul>\n<li>运动方程：</li>\n<li>几何约束：</li>\n<li>反解 ：</li>\n</ul>\n<p><strong>2. 构建目标函数</strong></p>\n<p>设 ，则 。</p>\n<p><strong>3. 分类讨论与求解</strong>\n利用基本不等式，前两项的最小值为 。\n极值点条件：。</p>\n<p>此时，我们需要检查前提条件：<strong>初速度  必须有意义（即 ）。</strong></p>\n<p>要使 ，必须满足 ，即 <strong></strong>。</p>\n<ul>\n<li>\n<p><strong>情况 A：</strong></p>\n<p>此时存在非零初速度解。</p>\n<ul>\n<li><strong>落点最小速度</strong>：</li>\n<li><strong>对应的初速度</strong>：</li>\n</ul>\n</li>\n<li>\n<p><strong>情况 B：</strong></p>\n<p>此时上述  算出为虚数。说明函数  在实数范围内单调递增。 越小， 越小。物理上  的最小值为 0（对应 ）。</p>\n<ul>\n<li><strong>最小速度</strong>：</li>\n<li><strong>对应的初速度</strong>：</li>\n</ul>\n</li>\n</ul>\n<p>为什么  时应该自由落体？</p>\n<p><strong>平抛是一笔“交易”</strong>：我们支付水平速度（成本），换取落在更高位置以减少竖直速度（收益）。</p>\n</details>\n",
       "date_published": "2025-12-12T01:13:32.000Z",
-      "date_modified": "2025-12-12T01:13:32.000Z",
+      "date_modified": "2025-12-12T01:20:21.000Z",
       "authors": [],
       "tags": []
     },
@@ -1067,19 +1067,6 @@
       ]
     },
     {
-      "title": "加速 GitHub 克隆",
-      "url": "https://mister-hope.com/code/github/speedup.html",
-      "id": "https://mister-hope.com/code/github/speedup.html",
-      "summary": "由于 GFW 的存在，GitHub 的访问速度在大部分国内地区都很慢，甚至不稳定。如果需要克隆体积比较大的项目，可能需要很长时间，也很大概率会在中途因为网络波动、终端问题导致克隆失败。 本文介绍如何使用 Gitee 加快 GitHub 项目克隆。 Gitee Gitee 又称码云，是一个国内的代码托管商，国内访问 Gitee 的速度是十分 Amazin...",
-      "content_html": "<p>由于 GFW 的存在，GitHub 的访问速度在大部分国内地区都很慢，甚至不稳定。如果需要克隆体积比较大的项目，可能需要很长时间，也很大概率会在中途因为网络波动、终端问题导致克隆失败。</p>\n<p>本文介绍如何使用 Gitee 加快 GitHub 项目克隆。</p>\n<h2>Gitee</h2>\n<p>Gitee 又称码云，是一个国内的代码托管商，国内访问 Gitee 的速度是十分 Amazing 的。</p>\n<h3>注册</h3>\n<p>Gitee 账户可以很方便的通过 GitHub 账户 + 绑定手机号注册。</p>\n<h3>添加公钥</h3>\n<p>完成注册后，您需要上传本地公钥，以保证可以从 Gitee 上拉取或克隆，其步骤与 GitHub 大致相同。</p>\n<h3>导入 GitHub 仓库</h3>\n<p>码云的企业专线访问 GitHub 的速度很快，而码云在新建仓库的时候提供了导入选项，这就给我们的加速提供了方式。</p>\n<p>我们只需要在码云上新建仓库，选择导入，然后输入自己想要克隆的 GitHub 仓库地址，交给码云完成导入即可。</p>\n<p>稍等片刻后，码云即会将 GitHub 的仓库同步到自己的服务器上，此时我们只需要克隆码云上的这个仓库地址，就可以高速克隆这个项目。</p>\n<h3>远程库地址修改</h3>\n<p>在克隆完毕后，本地的 origin 远程库会默认为 Gitee 的仓库，此时我们需要使用 <code>git remote rename origin gitee</code> 命令，将码云的远程仓库重命名为 <code>gitee</code>，并使用 <code>git remote add origin &lt;github url&gt;</code> 命令重新添加 GitHub 的远程仓库为 origin。</p>\n<p>这样我们稍后在做出本地提交后，即可直接推送到 GitHub 仓库。</p>\n<h3>同步仓库</h3>\n<p>如果以导入的形式创建码云仓库。则可以随时点击仓库页面上的同步图标，让码云随时拉取最新的 gitee 代码，以便在本地通过 <code>git fetch gitee</code>，通过码云服务器高速拉取最新代码。</p>\n",
-      "date_published": "2021-02-18T00:00:00.000Z",
-      "date_modified": "2024-01-25T17:47:26.000Z",
-      "authors": [],
-      "tags": [
-        "GitHub"
-      ]
-    },
-    {
       "title": "Glob",
       "url": "https://mister-hope.com/code/basic/glob.html",
       "id": "https://mister-hope.com/code/basic/glob.html",
@@ -1094,6 +1081,19 @@
       ],
       "tags": [
         "基础"
+      ]
+    },
+    {
+      "title": "加速 GitHub 克隆",
+      "url": "https://mister-hope.com/code/github/speedup.html",
+      "id": "https://mister-hope.com/code/github/speedup.html",
+      "summary": "由于 GFW 的存在，GitHub 的访问速度在大部分国内地区都很慢，甚至不稳定。如果需要克隆体积比较大的项目，可能需要很长时间，也很大概率会在中途因为网络波动、终端问题导致克隆失败。 本文介绍如何使用 Gitee 加快 GitHub 项目克隆。 Gitee Gitee 又称码云，是一个国内的代码托管商，国内访问 Gitee 的速度是十分 Amazin...",
+      "content_html": "<p>由于 GFW 的存在，GitHub 的访问速度在大部分国内地区都很慢，甚至不稳定。如果需要克隆体积比较大的项目，可能需要很长时间，也很大概率会在中途因为网络波动、终端问题导致克隆失败。</p>\n<p>本文介绍如何使用 Gitee 加快 GitHub 项目克隆。</p>\n<h2>Gitee</h2>\n<p>Gitee 又称码云，是一个国内的代码托管商，国内访问 Gitee 的速度是十分 Amazing 的。</p>\n<h3>注册</h3>\n<p>Gitee 账户可以很方便的通过 GitHub 账户 + 绑定手机号注册。</p>\n<h3>添加公钥</h3>\n<p>完成注册后，您需要上传本地公钥，以保证可以从 Gitee 上拉取或克隆，其步骤与 GitHub 大致相同。</p>\n<h3>导入 GitHub 仓库</h3>\n<p>码云的企业专线访问 GitHub 的速度很快，而码云在新建仓库的时候提供了导入选项，这就给我们的加速提供了方式。</p>\n<p>我们只需要在码云上新建仓库，选择导入，然后输入自己想要克隆的 GitHub 仓库地址，交给码云完成导入即可。</p>\n<p>稍等片刻后，码云即会将 GitHub 的仓库同步到自己的服务器上，此时我们只需要克隆码云上的这个仓库地址，就可以高速克隆这个项目。</p>\n<h3>远程库地址修改</h3>\n<p>在克隆完毕后，本地的 origin 远程库会默认为 Gitee 的仓库，此时我们需要使用 <code>git remote rename origin gitee</code> 命令，将码云的远程仓库重命名为 <code>gitee</code>，并使用 <code>git remote add origin &lt;github url&gt;</code> 命令重新添加 GitHub 的远程仓库为 origin。</p>\n<p>这样我们稍后在做出本地提交后，即可直接推送到 GitHub 仓库。</p>\n<h3>同步仓库</h3>\n<p>如果以导入的形式创建码云仓库。则可以随时点击仓库页面上的同步图标，让码云随时拉取最新的 gitee 代码，以便在本地通过 <code>git fetch gitee</code>，通过码云服务器高速拉取最新代码。</p>\n",
+      "date_published": "2021-02-18T00:00:00.000Z",
+      "date_modified": "2024-01-25T17:47:26.000Z",
+      "authors": [],
+      "tags": [
+        "GitHub"
       ]
     },
     {
