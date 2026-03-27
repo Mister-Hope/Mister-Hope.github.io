@@ -25,8 +25,6 @@ jobs:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v5
-        with:
-          run_install: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -34,9 +32,12 @@ jobs:
           node-version: 24
           cache: pnpm
 
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
       - name: Build Blog with ${{ matrix.bundler }}
         env:
-          NODE_OPTIONS: --max_old_space_size=5120
+          NODE_OPTIONS: --max_old_space_size=4096
         run: pnpm run build:${{ matrix.bundler }}
 
   linter-test:
@@ -49,14 +50,15 @@ jobs:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v5
-        with:
-          run_install: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: Linter test
         run: pnpm run lint

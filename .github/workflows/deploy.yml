@@ -20,8 +20,6 @@ jobs:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v5
-        with:
-          run_install: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -29,9 +27,10 @@ jobs:
           node-version: 24
           cache: pnpm
 
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
       - name: Build Blog
-        env:
-          NODE_OPTIONS: --max_old_space_size=4096
         run: pnpm run build:vite
 
       - name: Deploy
@@ -52,7 +51,7 @@ jobs:
 
       - name: Configuration environment
         env:
-          HOST: mister-hope.com
+          HOST: direct.mister-hope.com
           SSH_PORT: ${{ secrets.SSH_PORT }}
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
@@ -71,6 +70,9 @@ jobs:
           git config --global user.email 'mister-hope@outlook.com'
 
       - name: Deploy
+        env:
+          HOST: direct.mister-hope.com
+          DEST: /www/wwwroot/mister-hope
         run: |
-          git push -f git@mister-hope.com:/www/wwwroot/mister-hope gh-pages
-          ssh git@mister-hope.com "cd /www/wwwroot/mister-hope && git reset --hard HEAD"
+          git push -f git@$HOST:$DEST deploy
+          ssh git@$HOST "cd $DEST && git reset --hard HEAD"
