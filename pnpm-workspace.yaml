@@ -1,9 +1,9 @@
-onlyBuiltDependencies:
-  - "@parcel/watcher"
-  - esbuild
+allowBuilds:
+  "@parcel/watcher": true
+  esbuild: true
 
 overrides:
-  # FIXME: Vulnerable dependencies introduced by @vuepress/cli@2.0.0-rc.27
+  # FIXME: Vulnerable dependencies introduced by markdownlint-cli2@0.22.0
   "markdownlint-cli2@0.22.0>smol-toml": ^1.6.1
 
 patchedDependencies:
