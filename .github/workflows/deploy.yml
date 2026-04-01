@@ -74,5 +74,5 @@ jobs:
           HOST: direct.mister-hope.com
           DEST: /www/wwwroot/mister-hope
         run: |
-          git push -f git@$HOST:$DEST deploy
+          git push -f git@$HOST:$DEST gh-pages
           ssh git@$HOST "cd $DEST && git reset --hard HEAD"
