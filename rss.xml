@@ -6,8 +6,8 @@
     <link>https://mister-hope.com/</link>
     <description>Where there is light, there is hope.</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 01 Apr 2026 02:17:37 GMT</pubDate>
-    <lastBuildDate>Wed, 01 Apr 2026 02:17:37 GMT</lastBuildDate>
+    <pubDate>Wed, 01 Apr 2026 03:24:18 GMT</pubDate>
+    <lastBuildDate>Wed, 01 Apr 2026 03:24:18 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>基于 MIT 协议，© 2019-至今 Mr.Hope</copyright>
@@ -6904,6 +6904,33 @@ MySQL 会将该命令的配置保存到数据目录下的 <code>mysqld-auto.cnf<
 ]]></content:encoded>
     </item>
     <item>
+      <title>加速 GitHub 克隆</title>
+      <link>https://mister-hope.com/code/github/speedup.html</link>
+      <guid>https://mister-hope.com/code/github/speedup.html</guid>
+      <source url="https://mister-hope.com/rss.xml">加速 GitHub 克隆</source>
+      <description>由于 GFW 的存在，GitHub 的访问速度在大部分国内地区都很慢，甚至不稳定。如果需要克隆体积比较大的项目，可能需要很长时间，也很大概率会在中途因为网络波动、终端问题导致克隆失败。 本文介绍如何使用 Gitee 加快 GitHub 项目克隆。 Gitee Gitee 又称码云，是一个国内的代码托管商，国内访问 Gitee 的速度是十分 Amazin...</description>
+      <category>GitHub</category>
+      <pubDate>Thu, 18 Feb 2021 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>由于 GFW 的存在，GitHub 的访问速度在大部分国内地区都很慢，甚至不稳定。如果需要克隆体积比较大的项目，可能需要很长时间，也很大概率会在中途因为网络波动、终端问题导致克隆失败。</p>
+<p>本文介绍如何使用 Gitee 加快 GitHub 项目克隆。</p>
+<h2>Gitee</h2>
+<p>Gitee 又称码云，是一个国内的代码托管商，国内访问 Gitee 的速度是十分 Amazing 的。</p>
+<h3>注册</h3>
+<p>Gitee 账户可以很方便的通过 GitHub 账户 + 绑定手机号注册。</p>
+<h3>添加公钥</h3>
+<p>完成注册后，您需要上传本地公钥，以保证可以从 Gitee 上拉取或克隆，其步骤与 GitHub 大致相同。</p>
+<h3>导入 GitHub 仓库</h3>
+<p>码云的企业专线访问 GitHub 的速度很快，而码云在新建仓库的时候提供了导入选项，这就给我们的加速提供了方式。</p>
+<p>我们只需要在码云上新建仓库，选择导入，然后输入自己想要克隆的 GitHub 仓库地址，交给码云完成导入即可。</p>
+<p>稍等片刻后，码云即会将 GitHub 的仓库同步到自己的服务器上，此时我们只需要克隆码云上的这个仓库地址，就可以高速克隆这个项目。</p>
+<h3>远程库地址修改</h3>
+<p>在克隆完毕后，本地的 origin 远程库会默认为 Gitee 的仓库，此时我们需要使用 <code>git remote rename origin gitee</code> 命令，将码云的远程仓库重命名为 <code>gitee</code>，并使用 <code>git remote add origin &lt;github url&gt;</code> 命令重新添加 GitHub 的远程仓库为 origin。</p>
+<p>这样我们稍后在做出本地提交后，即可直接推送到 GitHub 仓库。</p>
+<h3>同步仓库</h3>
+<p>如果以导入的形式创建码云仓库。则可以随时点击仓库页面上的同步图标，让码云随时拉取最新的 gitee 代码，以便在本地通过 <code>git fetch gitee</code>，通过码云服务器高速拉取最新代码。</p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>Glob</title>
       <link>https://mister-hope.com/code/basic/glob.html</link>
       <guid>https://mister-hope.com/code/basic/glob.html</guid>
@@ -6964,33 +6991,6 @@ MySQL 会将该命令的配置保存到数据目录下的 <code>mysqld-auto.cnf<
 <h2><code>.</code> 开头的文件与文件夹</h2>
 <p>由于以 <code>.</code> 开头的文件或文件夹在 Unix 中视为隐藏文件或文件夹，故 Glob 不会匹配任何以 <code>.</code> 开头的路径部分，如 <code>.github/dependabot.yml</code> 或 <code>.eslintrc.js</code>。</p>
 <p>如果的确想要匹配 <code>.</code> 开头的文件或文件夹，可以显示标注出来，如 <code>.*.js</code> 可以匹配 <code>.eslintrc.js</code>。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>加速 GitHub 克隆</title>
-      <link>https://mister-hope.com/code/github/speedup.html</link>
-      <guid>https://mister-hope.com/code/github/speedup.html</guid>
-      <source url="https://mister-hope.com/rss.xml">加速 GitHub 克隆</source>
-      <description>由于 GFW 的存在，GitHub 的访问速度在大部分国内地区都很慢，甚至不稳定。如果需要克隆体积比较大的项目，可能需要很长时间，也很大概率会在中途因为网络波动、终端问题导致克隆失败。 本文介绍如何使用 Gitee 加快 GitHub 项目克隆。 Gitee Gitee 又称码云，是一个国内的代码托管商，国内访问 Gitee 的速度是十分 Amazin...</description>
-      <category>GitHub</category>
-      <pubDate>Thu, 18 Feb 2021 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>由于 GFW 的存在，GitHub 的访问速度在大部分国内地区都很慢，甚至不稳定。如果需要克隆体积比较大的项目，可能需要很长时间，也很大概率会在中途因为网络波动、终端问题导致克隆失败。</p>
-<p>本文介绍如何使用 Gitee 加快 GitHub 项目克隆。</p>
-<h2>Gitee</h2>
-<p>Gitee 又称码云，是一个国内的代码托管商，国内访问 Gitee 的速度是十分 Amazing 的。</p>
-<h3>注册</h3>
-<p>Gitee 账户可以很方便的通过 GitHub 账户 + 绑定手机号注册。</p>
-<h3>添加公钥</h3>
-<p>完成注册后，您需要上传本地公钥，以保证可以从 Gitee 上拉取或克隆，其步骤与 GitHub 大致相同。</p>
-<h3>导入 GitHub 仓库</h3>
-<p>码云的企业专线访问 GitHub 的速度很快，而码云在新建仓库的时候提供了导入选项，这就给我们的加速提供了方式。</p>
-<p>我们只需要在码云上新建仓库，选择导入，然后输入自己想要克隆的 GitHub 仓库地址，交给码云完成导入即可。</p>
-<p>稍等片刻后，码云即会将 GitHub 的仓库同步到自己的服务器上，此时我们只需要克隆码云上的这个仓库地址，就可以高速克隆这个项目。</p>
-<h3>远程库地址修改</h3>
-<p>在克隆完毕后，本地的 origin 远程库会默认为 Gitee 的仓库，此时我们需要使用 <code>git remote rename origin gitee</code> 命令，将码云的远程仓库重命名为 <code>gitee</code>，并使用 <code>git remote add origin &lt;github url&gt;</code> 命令重新添加 GitHub 的远程仓库为 origin。</p>
-<p>这样我们稍后在做出本地提交后，即可直接推送到 GitHub 仓库。</p>
-<h3>同步仓库</h3>
-<p>如果以导入的形式创建码云仓库。则可以随时点击仓库页面上的同步图标，让码云随时拉取最新的 gitee 代码，以便在本地通过 <code>git fetch gitee</code>，通过码云服务器高速拉取最新代码。</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -7682,6 +7682,142 @@ MySQL 会将该命令的配置保存到数据目录下的 <code>mysqld-auto.cnf<
 ]]></content:encoded>
     </item>
     <item>
+      <title>小程序的运行环境</title>
+      <link>https://mister-hope.com/code/mini-app/guide/frame/env.html</link>
+      <guid>https://mister-hope.com/code/mini-app/guide/frame/env.html</guid>
+      <source url="https://mister-hope.com/rss.xml">小程序的运行环境</source>
+      <description>微信小程序运行在多种平台上: iOS(iPhone/iPad)微信客户端、Android 微信客户端、PC 微信客户端、Mac 微信客户端和用于调试的微信开发者工具。 各平台脚本执行环境以及用于渲染非原生组件的环境是各不相同的: 在 iOS 上，小程序逻辑层的 JavaScript 代码运行在 JavaScriptCore 中，视图层是由 WKWebV...</description>
+      <category>小程序</category>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<p>微信小程序运行在多种平台上: iOS(iPhone/iPad)微信客户端、Android 微信客户端、PC 微信客户端、Mac 微信客户端和用于调试的微信开发者工具。</p>
+<p>各平台脚本执行环境以及用于渲染非原生组件的环境是各不相同的:</p>
+<ul>
+<li>
+<p>在 iOS 上，小程序逻辑层的 JavaScript 代码运行在 JavaScriptCore 中，视图层是由 WKWebView 来渲染的，环境有 iOS 12、iOS 13 等；</p>
+</li>
+<li>
+<p>在 Android 上，小程序逻辑层的 JavaScript 代码运行在 V8 中，视图层是由自研 XWeb 引擎基于 Mobile Chrome 内核来渲染的；</p>
+</li>
+<li>
+<p>在 开发工具上，小程序逻辑层的 JavaScript 代码是运行在 NW.js 中，视图层是由 Chromium Webview 来渲染的。</p>
+</li>
+<li>
+<p>在 PC 上，小程序逻辑层 JavaScript 和视图层 JavaScript 都是用 Chrome 内核</p>
+</li>
+<li>
+<p>在 Mac 上，小程序逻辑层的 JavaScript 代码运行在 JavaScriptCore 中，视图层是由 WKWebView 来渲染的，与 iOS 一致</p>
+</li>
+</ul>
+<h2>平台差异</h2>
+<p>尽管各运行环境是十分相似的，但是还是有些许区别:</p>
+<ul>
+<li>
+<p>JavaScript 语法和 API 支持不一致: 语法上开发者可以通过开启 ES6 转 ES5 的功能来规避 (<a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/codecompile.html#es6-%E8%BD%AC-es5" target="_blank" rel="noopener noreferrer">详情</a>)；此外，小程序基础库内置了必要的 Polyfill，来弥补 API 的差异 (<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/runtime/js-support.html" target="_blank" rel="noopener noreferrer">详情</a>)。</p>
+</li>
+<li>
+<p>WXSS 渲染表现不一致: 尽管可以通过开启 <a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/codecompile.html#%E6%A0%B7%E5%BC%8F%E8%A1%A5%E5%85%A8" target="_blank" rel="noopener noreferrer">样式补全</a> 来规避大部分的问题，还是建议开发者需要在 iOS 和 Android 上分别检查小程序的真实表现。</p>
+</li>
+<li>
+<p>开发者工具仅供调试使用，最终的表现以客户端为准。</p>
+</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>JavaScript 支持情况</title>
+      <link>https://mister-hope.com/code/mini-app/guide/frame/js-support.html</link>
+      <guid>https://mister-hope.com/code/mini-app/guide/frame/js-support.html</guid>
+      <source url="https://mister-hope.com/rss.xml">JavaScript 支持情况</source>
+      <description>运行限制 基于安全考虑，小程序中不支持动态执行 JS 代码，即: 不支持使用 eval 执行 JS 代码 不支持使用 new Function 创建函数 客户端 ES6 API 支持情况 微信小程序已经支持了绝大部分的 ES6 API，已支持的 API 如下(部分 API 依赖系统版本):</description>
+      <category>小程序</category>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>运行限制</h2>
+<p>基于安全考虑，小程序中不支持动态执行 JS 代码，即:</p>
+<ul>
+<li>不支持使用 <code>eval</code> 执行 JS 代码</li>
+<li>不支持使用 <code>new Function</code> 创建函数</li>
+</ul>
+<h2>客户端 ES6 API 支持情况</h2>
+<p>微信小程序已经支持了绝大部分的 ES6 API，已支持的 API 如下(部分 API 依赖系统版本):</p>
+<p>| String               | iOS10+ | Android |
+|</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>小程序运行机制</title>
+      <link>https://mister-hope.com/code/mini-app/guide/frame/mechanism.html</link>
+      <guid>https://mister-hope.com/code/mini-app/guide/frame/mechanism.html</guid>
+      <source url="https://mister-hope.com/rss.xml">小程序运行机制</source>
+      <description>前台/后台状态 小程序启动后，界面被展示给用户，此时小程序处于前台状态。 当用户点击右上角胶囊按钮关闭小程序，或者按了设备 Home 键离开微信时，小程序并没有完全终止运行，而是进入了后台状态，小程序还可以运行一小段时间。 当用户再次进入微信或再次打开小程序，小程序又会从后台进入前台。但如果用户很久没有再进入小程序，或者系统资源紧张，小程序可能被销毁，...</description>
+      <category>小程序</category>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>前台/后台状态</h2>
+<p>小程序启动后，界面被展示给用户，此时小程序处于前台状态。</p>
+<p>当用户点击右上角胶囊按钮关闭小程序，或者按了设备 Home 键离开微信时，小程序并没有完全终止运行，而是进入了后台状态，小程序还可以运行一小段时间。</p>
+<p>当用户再次进入微信或再次打开小程序，小程序又会从后台进入前台。但如果用户很久没有再进入小程序，或者系统资源紧张，小程序可能被销毁，即完全终止运行。</p>
+<h2>小程序启动</h2>
+<p>这样，小程序启动可以分为两种情况，一种是冷启动，一种是热启动。</p>
+<ul>
+<li>冷启动: 如果用户首次打开，或小程序销毁后被用户再次打开，此时小程序需要重新加载启动，即冷启动。</li>
+<li>热启动: 如果用户已经打开过某小程序，然后在一定时间内再次打开该小程序，此时小程序并未被销毁，只是从后台状态进入前台状态，这个过程就是热启动。</li>
+</ul>
+<h2>小程序销毁时机</h2>
+<p>通常，只有当小程序进入后台一定时间，或者系统资源占用过高，才会被销毁。具体而言包括以下几种情形:</p>
+<ul>
+<li>当小程序进入后台，可以维持一小段时间的运行状态，如果这段时间内都未进入前台，小程序会被销毁。</li>
+<li>当小程序占用系统资源过高，可能会被系统销毁或被微信客户端主动回收。
+<ul>
+<li>在 iOS 上，当微信客户端在一定时间间隔内连续收到系统内存告警时，会根据一定的策略，主动销毁小程序，并提示用户 「运行内存不足，请重新打开该小程序」。具体策略会持续进行调整优化。</li>
+<li>建议小程序在必要时使用 wx.onMemoryWarning 监听内存告警事件，进行必要的内存清理。</li>
+</ul>
+</li>
+</ul>
+<h2>启动场景分类</h2>
+<p>用户打开小程序时，场景可分为以下 A、B 两类:</p>
+<p>A. 保留上次的浏览状态。场景值有以下几项:</p>
+<p>| 场景值 ID | 说明                                                                                                   |
+|</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>小程序更新机制</title>
+      <link>https://mister-hope.com/code/mini-app/guide/frame/update.html</link>
+      <guid>https://mister-hope.com/code/mini-app/guide/frame/update.html</guid>
+      <source url="https://mister-hope.com/rss.xml">小程序更新机制</source>
+      <description>未启动时更新 开发者在管理后台发布新版本的小程序之后，如果某个用户本地有小程序的历史版本，此时打开的可能还是旧版本。微信客户端会有若干个时机去检查本地缓存的小程序有没有更新版本，如果有则会静默更新到新版本。总的来说，开发者在后台发布新版本之后，无法立刻影响到所有现网用户，但最差情况下，也在发布之后 24 小时之内下发新版本信息到用户。用户下次打开时会先...</description>
+      <category>小程序</category>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>未启动时更新</h2>
+<p>开发者在管理后台发布新版本的小程序之后，如果某个用户本地有小程序的历史版本，此时打开的可能还是旧版本。微信客户端会有若干个时机去检查本地缓存的小程序有没有更新版本，如果有则会静默更新到新版本。总的来说，开发者在后台发布新版本之后，无法立刻影响到所有现网用户，但最差情况下，也在发布之后 24 小时之内下发新版本信息到用户。用户下次打开时会先更新最新版本再打开。</p>
+<h2>启动时更新</h2>
+<p>小程序每次冷启动时，都会检查是否有更新版本，如果发现有新版本，将会异步下载新版本的代码包，并同时用客户端本地的包进行启动，即新版本的小程序需要等下一次冷启动才会应用上。</p>
+<p>如果需要马上应用最新版本，可以使用 <a href="https://developers.weixin.qq.com/miniprogram/dev/api/base/update/wx.getUpdateManager.html" target="_blank" rel="noopener noreferrer"><code>wx.getUpdateManager</code></a> API 进行处理。</p>
+<div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-js"><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">const</span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B"> updateManager</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B"> wx</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">getUpdateManager</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">updateManager</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">onCheckForUpdate</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">((</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">res</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">=></span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  // 请求完新版本信息的回调</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">  console</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">log</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">res</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">hasUpdate</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">);</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">});</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">updateManager</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">onUpdateReady</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(() </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">=></span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">  wx</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">showModal</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">({</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    title</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "更新提示"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    content</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "新版本已经准备好，是否重启应用？"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span></span>
+<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">    success</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">res</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) {</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">      if</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> (</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">res</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">confirm</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) {</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">        updateManager</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">applyUpdate</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">();</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      }</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    },</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  });</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">});</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">updateManager</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">onUpdateFailed</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(() </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">=></span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  // 新版本下载失败</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">});</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
+    </item>
+    <item>
       <title>初始渲染缓存</title>
       <link>https://mister-hope.com/code/mini-app/guide/view/rendering-cache.html</link>
       <guid>https://mister-hope.com/code/mini-app/guide/view/rendering-cache.html</guid>
@@ -7960,142 +8096,6 @@ MySQL 会将该命令的配置保存到数据目录下的 <code>mysqld-auto.cnf<
 <p>在自定义组件或包含自定义组件的页面中，推荐使用 <code>this.createIntersectionObserver</code> 来代替 <code>wx.createIntersectionObserver</code> ，这样可以确保在正确的范围内选择节点。</p>
 </div>
 ]]></content:encoded>
-    </item>
-    <item>
-      <title>小程序的运行环境</title>
-      <link>https://mister-hope.com/code/mini-app/guide/frame/env.html</link>
-      <guid>https://mister-hope.com/code/mini-app/guide/frame/env.html</guid>
-      <source url="https://mister-hope.com/rss.xml">小程序的运行环境</source>
-      <description>微信小程序运行在多种平台上: iOS(iPhone/iPad)微信客户端、Android 微信客户端、PC 微信客户端、Mac 微信客户端和用于调试的微信开发者工具。 各平台脚本执行环境以及用于渲染非原生组件的环境是各不相同的: 在 iOS 上，小程序逻辑层的 JavaScript 代码运行在 JavaScriptCore 中，视图层是由 WKWebV...</description>
-      <category>小程序</category>
-      <pubDate>Tue, 19 Jan 2021 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>微信小程序运行在多种平台上: iOS(iPhone/iPad)微信客户端、Android 微信客户端、PC 微信客户端、Mac 微信客户端和用于调试的微信开发者工具。</p>
-<p>各平台脚本执行环境以及用于渲染非原生组件的环境是各不相同的:</p>
-<ul>
-<li>
-<p>在 iOS 上，小程序逻辑层的 JavaScript 代码运行在 JavaScriptCore 中，视图层是由 WKWebView 来渲染的，环境有 iOS 12、iOS 13 等；</p>
-</li>
-<li>
-<p>在 Android 上，小程序逻辑层的 JavaScript 代码运行在 V8 中，视图层是由自研 XWeb 引擎基于 Mobile Chrome 内核来渲染的；</p>
-</li>
-<li>
-<p>在 开发工具上，小程序逻辑层的 JavaScript 代码是运行在 NW.js 中，视图层是由 Chromium Webview 来渲染的。</p>
-</li>
-<li>
-<p>在 PC 上，小程序逻辑层 JavaScript 和视图层 JavaScript 都是用 Chrome 内核</p>
-</li>
-<li>
-<p>在 Mac 上，小程序逻辑层的 JavaScript 代码运行在 JavaScriptCore 中，视图层是由 WKWebView 来渲染的，与 iOS 一致</p>
-</li>
-</ul>
-<h2>平台差异</h2>
-<p>尽管各运行环境是十分相似的，但是还是有些许区别:</p>
-<ul>
-<li>
-<p>JavaScript 语法和 API 支持不一致: 语法上开发者可以通过开启 ES6 转 ES5 的功能来规避 (<a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/codecompile.html#es6-%E8%BD%AC-es5" target="_blank" rel="noopener noreferrer">详情</a>)；此外，小程序基础库内置了必要的 Polyfill，来弥补 API 的差异 (<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/runtime/js-support.html" target="_blank" rel="noopener noreferrer">详情</a>)。</p>
-</li>
-<li>
-<p>WXSS 渲染表现不一致: 尽管可以通过开启 <a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/codecompile.html#%E6%A0%B7%E5%BC%8F%E8%A1%A5%E5%85%A8" target="_blank" rel="noopener noreferrer">样式补全</a> 来规避大部分的问题，还是建议开发者需要在 iOS 和 Android 上分别检查小程序的真实表现。</p>
-</li>
-<li>
-<p>开发者工具仅供调试使用，最终的表现以客户端为准。</p>
-</li>
-</ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>JavaScript 支持情况</title>
-      <link>https://mister-hope.com/code/mini-app/guide/frame/js-support.html</link>
-      <guid>https://mister-hope.com/code/mini-app/guide/frame/js-support.html</guid>
-      <source url="https://mister-hope.com/rss.xml">JavaScript 支持情况</source>
-      <description>运行限制 基于安全考虑，小程序中不支持动态执行 JS 代码，即: 不支持使用 eval 执行 JS 代码 不支持使用 new Function 创建函数 客户端 ES6 API 支持情况 微信小程序已经支持了绝大部分的 ES6 API，已支持的 API 如下(部分 API 依赖系统版本):</description>
-      <category>小程序</category>
-      <pubDate>Tue, 19 Jan 2021 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2>运行限制</h2>
-<p>基于安全考虑，小程序中不支持动态执行 JS 代码，即:</p>
-<ul>
-<li>不支持使用 <code>eval</code> 执行 JS 代码</li>
-<li>不支持使用 <code>new Function</code> 创建函数</li>
-</ul>
-<h2>客户端 ES6 API 支持情况</h2>
-<p>微信小程序已经支持了绝大部分的 ES6 API，已支持的 API 如下(部分 API 依赖系统版本):</p>
-<p>| String               | iOS10+ | Android |
-|</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>小程序运行机制</title>
-      <link>https://mister-hope.com/code/mini-app/guide/frame/mechanism.html</link>
-      <guid>https://mister-hope.com/code/mini-app/guide/frame/mechanism.html</guid>
-      <source url="https://mister-hope.com/rss.xml">小程序运行机制</source>
-      <description>前台/后台状态 小程序启动后，界面被展示给用户，此时小程序处于前台状态。 当用户点击右上角胶囊按钮关闭小程序，或者按了设备 Home 键离开微信时，小程序并没有完全终止运行，而是进入了后台状态，小程序还可以运行一小段时间。 当用户再次进入微信或再次打开小程序，小程序又会从后台进入前台。但如果用户很久没有再进入小程序，或者系统资源紧张，小程序可能被销毁，...</description>
-      <category>小程序</category>
-      <pubDate>Tue, 19 Jan 2021 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2>前台/后台状态</h2>
-<p>小程序启动后，界面被展示给用户，此时小程序处于前台状态。</p>
-<p>当用户点击右上角胶囊按钮关闭小程序，或者按了设备 Home 键离开微信时，小程序并没有完全终止运行，而是进入了后台状态，小程序还可以运行一小段时间。</p>
-<p>当用户再次进入微信或再次打开小程序，小程序又会从后台进入前台。但如果用户很久没有再进入小程序，或者系统资源紧张，小程序可能被销毁，即完全终止运行。</p>
-<h2>小程序启动</h2>
-<p>这样，小程序启动可以分为两种情况，一种是冷启动，一种是热启动。</p>
-<ul>
-<li>冷启动: 如果用户首次打开，或小程序销毁后被用户再次打开，此时小程序需要重新加载启动，即冷启动。</li>
-<li>热启动: 如果用户已经打开过某小程序，然后在一定时间内再次打开该小程序，此时小程序并未被销毁，只是从后台状态进入前台状态，这个过程就是热启动。</li>
-</ul>
-<h2>小程序销毁时机</h2>
-<p>通常，只有当小程序进入后台一定时间，或者系统资源占用过高，才会被销毁。具体而言包括以下几种情形:</p>
-<ul>
-<li>当小程序进入后台，可以维持一小段时间的运行状态，如果这段时间内都未进入前台，小程序会被销毁。</li>
-<li>当小程序占用系统资源过高，可能会被系统销毁或被微信客户端主动回收。
-<ul>
-<li>在 iOS 上，当微信客户端在一定时间间隔内连续收到系统内存告警时，会根据一定的策略，主动销毁小程序，并提示用户 「运行内存不足，请重新打开该小程序」。具体策略会持续进行调整优化。</li>
-<li>建议小程序在必要时使用 wx.onMemoryWarning 监听内存告警事件，进行必要的内存清理。</li>
-</ul>
-</li>
-</ul>
-<h2>启动场景分类</h2>
-<p>用户打开小程序时，场景可分为以下 A、B 两类:</p>
-<p>A. 保留上次的浏览状态。场景值有以下几项:</p>
-<p>| 场景值 ID | 说明                                                                                                   |
-|</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>小程序更新机制</title>
-      <link>https://mister-hope.com/code/mini-app/guide/frame/update.html</link>
-      <guid>https://mister-hope.com/code/mini-app/guide/frame/update.html</guid>
-      <source url="https://mister-hope.com/rss.xml">小程序更新机制</source>
-      <description>未启动时更新 开发者在管理后台发布新版本的小程序之后，如果某个用户本地有小程序的历史版本，此时打开的可能还是旧版本。微信客户端会有若干个时机去检查本地缓存的小程序有没有更新版本，如果有则会静默更新到新版本。总的来说，开发者在后台发布新版本之后，无法立刻影响到所有现网用户，但最差情况下，也在发布之后 24 小时之内下发新版本信息到用户。用户下次打开时会先...</description>
-      <category>小程序</category>
-      <pubDate>Tue, 19 Jan 2021 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2>未启动时更新</h2>
-<p>开发者在管理后台发布新版本的小程序之后，如果某个用户本地有小程序的历史版本，此时打开的可能还是旧版本。微信客户端会有若干个时机去检查本地缓存的小程序有没有更新版本，如果有则会静默更新到新版本。总的来说，开发者在后台发布新版本之后，无法立刻影响到所有现网用户，但最差情况下，也在发布之后 24 小时之内下发新版本信息到用户。用户下次打开时会先更新最新版本再打开。</p>
-<h2>启动时更新</h2>
-<p>小程序每次冷启动时，都会检查是否有更新版本，如果发现有新版本，将会异步下载新版本的代码包，并同时用客户端本地的包进行启动，即新版本的小程序需要等下一次冷启动才会应用上。</p>
-<p>如果需要马上应用最新版本，可以使用 <a href="https://developers.weixin.qq.com/miniprogram/dev/api/base/update/wx.getUpdateManager.html" target="_blank" rel="noopener noreferrer"><code>wx.getUpdateManager</code></a> API 进行处理。</p>
-<div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-js"><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">const</span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B"> updateManager</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B"> wx</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">getUpdateManager</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">();</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">updateManager</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">onCheckForUpdate</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">((</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">res</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">=></span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
-<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  // 请求完新版本信息的回调</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">  console</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">log</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">res</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">hasUpdate</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">);</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">});</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">updateManager</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">onUpdateReady</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(() </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">=></span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">  wx</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">showModal</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">({</span></span>
-<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    title</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "更新提示"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span></span>
-<span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">    content</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "新版本已经准备好，是否重启应用？"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">,</span></span>
-<span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">    success</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#E06C75;--shiki-dark-font-style:italic">res</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) {</span></span>
-<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">      if</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> (</span><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">res</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">confirm</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) {</span></span>
-<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">        // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">        updateManager</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">applyUpdate</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">();</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">      }</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">    },</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">  });</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">});</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E5C07B">updateManager</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">onUpdateFailed</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(() </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">=></span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> {</span></span>
-<span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">  // 新版本下载失败</span></span>
-<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">});</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
     </item>
     <item>
       <title>Behavior</title>
