@@ -73,6 +73,7 @@ jobs:
         env:
           HOST: direct.mister-hope.com
           DEST: /www/wwwroot/mister-hope
+          BRANCH: gh-pages
         run: |
-          git push -f git@$HOST:$DEST gh-pages
+          git push -f git@$HOST:$DEST $BRANCH
           ssh git@$HOST "cd $DEST && git reset --hard HEAD"
