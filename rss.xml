@@ -6,8 +6,8 @@
     <link>https://mister-hope.com/</link>
     <description>Where there is light, there is hope.</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 01 Apr 2026 03:27:07 GMT</pubDate>
-    <lastBuildDate>Wed, 01 Apr 2026 03:27:07 GMT</lastBuildDate>
+    <pubDate>Fri, 03 Apr 2026 07:49:06 GMT</pubDate>
+    <lastBuildDate>Fri, 03 Apr 2026 07:49:06 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>基于 MIT 协议，© 2019-至今 Mr.Hope</copyright>
@@ -909,6 +909,25 @@
 ]]></content:encoded>
     </item>
     <item>
+      <title>Docker</title>
+      <link>https://mister-hope.com/note/wsl/docker.html</link>
+      <guid>https://mister-hope.com/note/wsl/docker.html</guid>
+      <source url="https://mister-hope.com/rss.xml">Docker</source>
+      <description>安装 Docker Desktop 在设置中的 General 选择 Use the WSL 2 based engine 作为后端并勾选 Add the *.docker.internal names to the host&amp;apos;s /etc/hosts file (Requires password) 在设置中的 Resources 在 Advance...</description>
+      <pubDate>Sun, 20 Apr 2025 18:10:56 GMT</pubDate>
+      <content:encoded><![CDATA[<ol>
+<li>安装 Docker Desktop</li>
+<li>在设置中的 <code>General</code> 选择 <code>Use the WSL 2 based engine</code> 作为后端并勾选 <code>Add the *.docker.internal names to the host's /etc/hosts file (Requires password)</code></li>
+<li>在设置中的 <code>Resources</code>
+<ol>
+<li>在 <code>Advanced</code> 中变更 <code>Disk image location</code>，最好移动到空间较大的盘去。</li>
+<li>在 <code>WSL Integration</code> 中选择需要集成的 Linux 发行版</li>
+</ol>
+</li>
+</ol>
+]]></content:encoded>
+    </item>
+    <item>
       <title>部署宝塔</title>
       <link>https://mister-hope.com/note/server/bt.html</link>
       <guid>https://mister-hope.com/note/server/bt.html</guid>
@@ -1010,25 +1029,6 @@
 </div><p>通过 <code>WinSW-x64.exe</code> 创建 <code>frpc</code> 或 <code>frps</code> 服务：</p>
 <div class="language-bash" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">C:\frp\WinSW-x64.exe</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> frpc.xml</span></span></code></pre>
 </div>]]></content:encoded>
-    </item>
-    <item>
-      <title>Docker</title>
-      <link>https://mister-hope.com/note/wsl/docker.html</link>
-      <guid>https://mister-hope.com/note/wsl/docker.html</guid>
-      <source url="https://mister-hope.com/rss.xml">Docker</source>
-      <description>安装 Docker Desktop 在设置中的 General 选择 Use the WSL 2 based engine 作为后端并勾选 Add the *.docker.internal names to the host&amp;apos;s /etc/hosts file (Requires password) 在设置中的 Resources 在 Advance...</description>
-      <pubDate>Sun, 20 Apr 2025 18:10:56 GMT</pubDate>
-      <content:encoded><![CDATA[<ol>
-<li>安装 Docker Desktop</li>
-<li>在设置中的 <code>General</code> 选择 <code>Use the WSL 2 based engine</code> 作为后端并勾选 <code>Add the *.docker.internal names to the host's /etc/hosts file (Requires password)</code></li>
-<li>在设置中的 <code>Resources</code>
-<ol>
-<li>在 <code>Advanced</code> 中变更 <code>Disk image location</code>，最好移动到空间较大的盘去。</li>
-<li>在 <code>WSL Integration</code> 中选择需要集成的 Linux 发行版</li>
-</ol>
-</li>
-</ol>
-]]></content:encoded>
     </item>
     <item>
       <title>LLM + RAG：智能问答实战</title>
