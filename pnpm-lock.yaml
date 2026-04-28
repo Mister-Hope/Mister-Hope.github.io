@@ -75,8 +75,8 @@ importers:
         specifier: 0.22.0
         version: 0.22.0
       prettier:
-        specifier: 3.8.1
-        version: 3.8.1
+        specifier: 3.8.3
+        version: 3.8.3
 
 packages:
 
@@ -1716,6 +1716,7 @@ packages:
   '@xmldom/xmldom@0.9.8':
     resolution: {integrity: sha512-p96FSY54r+WJ50FIOsCOjyj/wavs8921hG5+kVMmZgKcvIKxMXHTrjNJvRgWa/zuX3B6t2lijLNFaOyuxUH+2A==}
     engines: {node: '>=14.6'}
+    deprecated: this version has critical issues, please update to the latest version
 
   '@xtuc/ieee754@1.2.0':
     resolution: {integrity: sha512-DX8nKgqcGwsc0eJSqYt5lwP4DH5FlHnmuWWBRy7X0NcaGR0ZtuyeESgMwTYVEtxmsNGY+qit4QYT/MIYTOTPeA==}
@@ -3842,8 +3843,8 @@ packages:
     resolution: {integrity: sha512-OW/rX8O/jXnm82Ey1k44pObPtdblfiuWnrd8X7GJ7emImCOstunGbXUpp7HdBrFQX6rJzn3sPT397Wp5aCwCHg==}
     engines: {node: ^10 || ^12 || >=14}
 
-  prettier@3.8.1:
-    resolution: {integrity: sha512-UOnG6LftzbdaHZcKoPFtOcCKztrQ57WkHDeRD9t/PTQtmT0NHSeWWepj6pS0z/N7+08BHFDQVUrfmfMRcZwbMg==}
+  prettier@3.8.3:
+    resolution: {integrity: sha512-7igPTM53cGHMW8xWuVTydi2KO233VFiTNyF5hLJqpilHfmn8C8gPf+PS7dUT64YcXFbiMGZxS9pCSxL/Dxm/Jw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -9204,7 +9205,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  prettier@3.8.1: {}
+  prettier@3.8.3: {}
 
   pretty-error@4.0.0:
     dependencies:
