@@ -6,8 +6,8 @@
     <link>https://mister-hope.com/</link>
     <description>Where there is light, there is hope.</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 03 Apr 2026 07:49:06 GMT</pubDate>
-    <lastBuildDate>Fri, 03 Apr 2026 07:49:06 GMT</lastBuildDate>
+    <pubDate>Tue, 28 Apr 2026 09:56:51 GMT</pubDate>
+    <lastBuildDate>Tue, 28 Apr 2026 09:56:51 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <copyright>基于 MIT 协议，© 2019-至今 Mr.Hope</copyright>
@@ -22,6 +22,22 @@
     <category>GitHub</category>
     <category>JavaScript</category>
     <category>小程序</category>
+    <item>
+      <title></title>
+      <link>https://mister-hope.com/physics/high-school/5.html</link>
+      <guid>https://mister-hope.com/physics/high-school/5.html</guid>
+      <source url="https://mister-hope.com/rss.xml"></source>
+      <description>投湖问题 期中考试前夕，某高中高一 13 班的 名同学（假设每人质量均为 ）被动量守恒压轴题折磨得精神濒临崩溃。为了表达抗议，大家（在穿戴好救生衣的情况下）坐上一艘质量为 的小船，来到了无风无浪、且完全没有任何水阻力和空气阻力的“理想静水湖”中央。 这群生无可恋的同学，想在投湖前，以让船最快的速度冲向岸边的物理老师（因为听说物理题就是他出的）！ 问题一...</description>
+      <pubDate>Tue, 28 Apr 2026 09:54:02 GMT</pubDate>
+      <content:encoded><![CDATA[<h2>投湖问题</h2>
+<p>期中考试前夕，某高中高一 13 班的  名同学（假设每人质量均为 ）被动量守恒压轴题折磨得精神濒临崩溃。为了表达抗议，大家（在穿戴好救生衣的情况下）坐上一艘质量为  的小船，来到了无风无浪、<strong>且完全没有任何水阻力和空气阻力</strong>的“理想静水湖”中央。</p>
+<p>这群生无可恋的同学，想在投湖前，以让船<strong>最快的速度</strong>冲向岸边的物理老师（因为听说物理题就是他出的）！</p>
+<p><strong>问题一：</strong> 假设每位同学弹跳能力极佳，能精准控制落地速度。若每个人跳水后，<strong>落水瞬间相对于水面（地面）的速度大小均为 </strong>。请问是  个人同时一起跳，还是依次一个个跳，能使小船最终获得的速度更大？</p>
+<p><strong>问题二：</strong> 假设每个人在起跳时，以<strong>自己起跳前瞬间小船的速度为参考系，其向后起跳的相对速度大小均为 </strong>。请问是同时一起跳，还是依次一个个跳，能使小船最终获得的速度更大？</p>
+<p><strong>问题三：</strong> 假设每个人在跳离小船的瞬间，以<strong>跳离后瞬间小船的速度为参考系，其向后分离的相对速度大小均为 </strong>。请问是同时一起跳，还是依次一个个跳，能使小船最终获得的速度更大？</p>
+<p><strong>问题四：</strong> 在真实的物理情境中（用力蹬船跳跃），以上三种假设哪一种最符合真实的人体发力规律？并请结合做功或能量转化简述你的理由。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>弹簧分离问题</title>
       <link>https://mister-hope.com/physics/high-school/4.html</link>
@@ -909,25 +925,6 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>Docker</title>
-      <link>https://mister-hope.com/note/wsl/docker.html</link>
-      <guid>https://mister-hope.com/note/wsl/docker.html</guid>
-      <source url="https://mister-hope.com/rss.xml">Docker</source>
-      <description>安装 Docker Desktop 在设置中的 General 选择 Use the WSL 2 based engine 作为后端并勾选 Add the *.docker.internal names to the host&amp;apos;s /etc/hosts file (Requires password) 在设置中的 Resources 在 Advance...</description>
-      <pubDate>Sun, 20 Apr 2025 18:10:56 GMT</pubDate>
-      <content:encoded><![CDATA[<ol>
-<li>安装 Docker Desktop</li>
-<li>在设置中的 <code>General</code> 选择 <code>Use the WSL 2 based engine</code> 作为后端并勾选 <code>Add the *.docker.internal names to the host's /etc/hosts file (Requires password)</code></li>
-<li>在设置中的 <code>Resources</code>
-<ol>
-<li>在 <code>Advanced</code> 中变更 <code>Disk image location</code>，最好移动到空间较大的盘去。</li>
-<li>在 <code>WSL Integration</code> 中选择需要集成的 Linux 发行版</li>
-</ol>
-</li>
-</ol>
-]]></content:encoded>
-    </item>
-    <item>
       <title>部署宝塔</title>
       <link>https://mister-hope.com/note/server/bt.html</link>
       <guid>https://mister-hope.com/note/server/bt.html</guid>
@@ -1029,6 +1026,25 @@
 </div><p>通过 <code>WinSW-x64.exe</code> 创建 <code>frpc</code> 或 <code>frps</code> 服务：</p>
 <div class="language-bash" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code class="language-bash"><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">C:\frp\WinSW-x64.exe</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> install</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> frpc.xml</span></span></code></pre>
 </div>]]></content:encoded>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>https://mister-hope.com/note/wsl/docker.html</link>
+      <guid>https://mister-hope.com/note/wsl/docker.html</guid>
+      <source url="https://mister-hope.com/rss.xml">Docker</source>
+      <description>安装 Docker Desktop 在设置中的 General 选择 Use the WSL 2 based engine 作为后端并勾选 Add the *.docker.internal names to the host&amp;apos;s /etc/hosts file (Requires password) 在设置中的 Resources 在 Advance...</description>
+      <pubDate>Sun, 20 Apr 2025 18:10:56 GMT</pubDate>
+      <content:encoded><![CDATA[<ol>
+<li>安装 Docker Desktop</li>
+<li>在设置中的 <code>General</code> 选择 <code>Use the WSL 2 based engine</code> 作为后端并勾选 <code>Add the *.docker.internal names to the host's /etc/hosts file (Requires password)</code></li>
+<li>在设置中的 <code>Resources</code>
+<ol>
+<li>在 <code>Advanced</code> 中变更 <code>Disk image location</code>，最好移动到空间较大的盘去。</li>
+<li>在 <code>WSL Integration</code> 中选择需要集成的 Linux 发行版</li>
+</ol>
+</li>
+</ol>
+]]></content:encoded>
     </item>
     <item>
       <title>LLM + RAG：智能问答实战</title>
@@ -8108,21 +8124,6 @@ MySQL 会将该命令的配置保存到数据目录下的 <code>mysqld-auto.cnf<
       <content:encoded><![CDATA[<p><code>Behavior</code> 注册一个 behavior，接受一个 Object 类型的参数。</p>
 <h2>参数</h2>
 <p>| 定义段     | 类型         | 是否必填 | 描述                |
-|</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>框架接口</title>
-      <link>https://mister-hope.com/code/mini-app/guide/custom-component/component.html</link>
-      <guid>https://mister-hope.com/code/mini-app/guide/custom-component/component.html</guid>
-      <source url="https://mister-hope.com/rss.xml">框架接口</source>
-      <description>Component 构造器用于创建自定义组件，接受一个 Object 类型的参数。</description>
-      <category>小程序</category>
-      <pubDate>Tue, 19 Jan 2021 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p><code>Component</code> 构造器用于创建自定义组件，接受一个 Object 类型的参数。</p>
-<!-- more -->
-<h2>参数</h2>
-<p>| 定义段           | 类型         | 是否必填 | 描述                                                                                          | 最低版本 |
 |</p>
 ]]></content:encoded>
     </item>
