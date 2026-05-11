@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   peer: true,
   upgrade: true,
   timeout: 360000,
