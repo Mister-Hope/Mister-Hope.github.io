@@ -24,7 +24,7 @@ jobs:
           submodules: true
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v5
+        uses: pnpm/action-setup@v6
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -37,7 +37,7 @@ jobs:
 
       - name: Build Blog with ${{ matrix.bundler }}
         env:
-          NODE_OPTIONS: --max_old_space_size=4096
+          NODE_OPTIONS: --max_old_space_size=8192
         run: pnpm run build:${{ matrix.bundler }}
 
   linter-test:
