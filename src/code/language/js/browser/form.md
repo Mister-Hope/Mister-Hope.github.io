@@ -43,9 +43,7 @@ input.value; // '用户输入的值'
 
 ````html
 <label><input type="radio" name="weekday" id="monday" value="1" />Monday</label>
-<label
-  ><input type="radio" name="weekday" id="tuesday" value="2" />Tuesday</label
->```
+<label><input type="radio" name="weekday" id="tuesday" value="2" />Tuesday</label>```
 ````
 
 ```js

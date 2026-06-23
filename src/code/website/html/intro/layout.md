@@ -67,10 +67,7 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
       href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
   </head>
 
@@ -154,8 +151,7 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 
 ```html
 <p>
-  国王喝得酩酊大醉，在凌晨 1 点时才回到自己的房间，踉跄地走过门口。<span
-    class="editor-note"
+  国王喝得酩酊大醉，在凌晨 1 点时才回到自己的房间，踉跄地走过门口。<span class="editor-note"
     >[编辑批注: 此刻舞台灯光应变暗]</span
   >.
 </p>
@@ -216,8 +212,7 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 ```html
 <p>
   原来这唐僧是个慈悯的圣僧。他见行者哀告，却也回心转意道:
-  “既如此说，且饶您这一次。再休无礼。如若仍前作恶，这咒语颠倒就念二十遍!
-  ”行者道:
+  “既如此说，且饶您这一次。再休无礼。如若仍前作恶，这咒语颠倒就念二十遍! ”行者道:
   “三十遍也由您，只是我不打人了。”却才伏侍唐僧上马，又将摘来桃子奉上。唐僧在马上也吃了几个，权且充饥。
 </p>
 <hr />

@@ -27,14 +27,7 @@ export const design = arraySidebar([
     icon: "navigate",
     collapsible: false,
     prefix: "navigation/",
-    children: [
-      "intro",
-      "navbar",
-      "navbar-design",
-      "sidebar-navigate",
-      "tabbar",
-      "tabbar-design",
-    ],
+    children: ["intro", "navbar", "navbar-design", "sidebar-navigate", "tabbar", "tabbar-design"],
   },
   {
     text: "交互",

@@ -109,13 +109,9 @@ this.animate(
   ],
   5000,
   function () {
-    this.clearAnimation(
-      "#container",
-      { opacity: true, rotate: true },
-      function () {
-        console.log("清除了#container上的opacity和rotate属性");
-      },
-    );
+    this.clearAnimation("#container", { opacity: true, rotate: true }, function () {
+      console.log("清除了#container上的opacity和rotate属性");
+    });
   }.bind(this),
 );
 

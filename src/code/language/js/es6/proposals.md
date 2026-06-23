@@ -131,11 +131,7 @@ class Product {
 
 ```js
 const firstName =
-  (message &&
-    message.body &&
-    message.body.user &&
-    message.body.user.firstName) ||
-  "default";
+  (message && message.body && message.body.user && message.body.user.firstName) || "default";
 ```
 
 这样的层层判断非常麻烦，因此现在有一个[提案](https://github.com/tc39/proposal-optional-chaining)，引入了“链判断运算符”(optional chaining operator)`?.`，简化上面的写法。

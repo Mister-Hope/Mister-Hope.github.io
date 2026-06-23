@@ -829,9 +829,7 @@ class MyClass {}
 `as` 方法则为上面的代码提供了另一种写法。
 
 ```js
-@traits(
-  TExample::as({ excludes: ["foo", "bar"], alias: { baz: "exampleBaz" } }),
-)
+@traits(TExample::as({ excludes: ["foo", "bar"], alias: { baz: "exampleBaz" } }))
 class MyClass {}
 ```
 

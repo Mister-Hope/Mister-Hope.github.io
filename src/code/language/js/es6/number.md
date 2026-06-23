@@ -199,8 +199,7 @@ Number.EPSILON.toFixed(20);
 因此，`Number.EPSILON` 的实质是一个可以接受的最小误差范围。
 
 ```js
-const withinErrorMargin = (left, right) =>
-  Math.abs(left - right) < Number.EPSILON * Math.pow(2, 2);
+const withinErrorMargin = (left, right) => Math.abs(left - right) < Number.EPSILON * Math.pow(2, 2);
 
 0.1 + 0.2 === 0.3; // false
 withinErrorMargin(0.1 + 0.2, 0.3); // true
@@ -298,11 +297,7 @@ Number.isSafeInteger(9007199254740993 - 990);
 
 ```js
 const trusty = (left, right, result) => {
-  if (
-    Number.isSafeInteger(left) &&
-    Number.isSafeInteger(right) &&
-    Number.isSafeInteger(result)
-  ) {
+  if (Number.isSafeInteger(left) && Number.isSafeInteger(right) && Number.isSafeInteger(result)) {
     return result;
   }
   throw new RangeError("Operation cannot be trusted!");

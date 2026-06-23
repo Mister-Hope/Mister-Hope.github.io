@@ -123,16 +123,7 @@ const r = arr.filter((element, index, self) => {
 "use strict";
 
 let r;
-const arr = [
-  "apple",
-  "strawberry",
-  "banana",
-  "pear",
-  "apple",
-  "orange",
-  "orange",
-  "strawberry",
-];
+const arr = ["apple", "strawberry", "banana", "pear", "apple", "orange", "orange", "strawberry"];
 
 r = arr.filter((element, index, self) => self.indexOf(element) === index);
 

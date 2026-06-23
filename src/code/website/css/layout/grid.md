@@ -1882,10 +1882,8 @@ Grid 布局的属性分成两类。一类定义在容器上面，称为容器属
 
 ```css
 .container {
-  justify-content: start | end | center | stretch | space-around | space-between
-    | space-evenly;
-  align-content: start | end | center | stretch | space-around | space-between |
-    space-evenly;
+  justify-content: start | end | center | stretch | space-around | space-between | space-evenly;
+  align-content: start | end | center | stretch | space-around | space-between | space-evenly;
 }
 ```
 

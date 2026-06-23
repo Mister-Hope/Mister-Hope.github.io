@@ -86,13 +86,8 @@ document.addEventListener("click", function (e) {
 上面的例子中，`addEventListener` 方法是在 TypeScript 核心库中定义的:
 
 ```ts
-interface Document
-  extends Node, GlobalEventHandlers, NodeSelector, DocumentEvent {
-  addEventListener(
-    type: string,
-    listener: (ev: MouseEvent) => any,
-    useCapture?: boolean,
-  ): void;
+interface Document extends Node, GlobalEventHandlers, NodeSelector, DocumentEvent {
+  addEventListener(type: string, listener: (ev: MouseEvent) => any, useCapture?: boolean): void;
 }
 ```
 

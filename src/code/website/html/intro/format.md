@@ -34,9 +34,7 @@ HTML 中有许多其他元素可以用于格式化文本。本文介绍标记引
     戏剧中，某个角色对自己的内心活动或感受进行念白表演，这些台词只面向观众，而其他角色不会听到。
   </dd>
   <dt>语言独白</dt>
-  <dd>
-    戏剧中，某个角色把自己的想法直接进行念白表演，观众和其他角色都可以听到。
-  </dd>
+  <dd>戏剧中，某个角色把自己的想法直接进行念白表演，观众和其他角色都可以听到。</dd>
   <dt>旁白</dt>
   <dd>
     戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。
@@ -75,20 +73,16 @@ HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决
 ```html
 <p>
   According to the
-  <a
-    href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"
-  >
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
     <cite>MDN blockquote page</cite></a
   >:
 </p>
 
-<blockquote
-  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"
->
+<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
   <p>
     The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
-    <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
-    an extended quotation.
+    <em>HTML Block Quotation Element</em>) indicates that the enclosed text is an extended
+    quotation.
   </p>
 </blockquote>
 
@@ -98,8 +92,7 @@ HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决
     >intended for short quotations that don't require paragraph breaks.</q
   >
   --
-  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
-    <cite>MDN q page</cite></a
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"> <cite>MDN q page</cite></a
   >.
 </p>
 ```
@@ -119,10 +112,7 @@ HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决
   来组织网页文档。
 </p>
 
-<p>
-  第 33 届 <abbr title="夏季奥林匹克运动会">奥运会</abbr> 将于 2024 年 8
-  月在法国巴黎举行。
-</p>
+<p>第 33 届 <abbr title="夏季奥林匹克运动会">奥运会</abbr> 将于 2024 年 8 月在法国巴黎举行。</p>
 ```
 
 :::
@@ -154,9 +144,7 @@ HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决
 ::: normal-demo 上标和下标
 
 ```html
-<p>
-  咖啡因的化学方程式是 C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>。
-</p>
+<p>咖啡因的化学方程式是 C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>。</p>
 <p>如果 x<sup>2</sup> 的值为 9，那么 x 的值必为 3 或 -3。</p>
 ```
 
@@ -211,9 +199,7 @@ HTML 还支持将时间和日期标记为可供机器识别的格式的 `<time>`
 <!-- 日期和时间 -->
 <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
 <!-- 含有时区偏移值的日期时间 -->
-<time datetime="2016-01-20T19:30+01:00"
-  >7.30pm, 20 January 2016 is 8.30pm in France</time
->
+<time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time>
 <!-- 调用特定的周 -->
 <time datetime="2016-W04">The fourth week of 2016</time>
 ```

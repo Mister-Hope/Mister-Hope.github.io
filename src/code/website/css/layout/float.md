@@ -27,15 +27,14 @@ category: CSS
 <div class="box">Float</div>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
-  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
-  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
-  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
-  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
-  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
-  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
-  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
-  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia
+  lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras
+  porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+  Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula
+  tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat.
+  Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare
+  egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
+  felis, eget fermentum sapien.
 </p>
 ```
 
@@ -58,9 +57,9 @@ category: CSS
 
 ```html
 <p>
-  This is my very important paragraph. I am a distinguished gentleman of such
-  renown that my paragraph needs to be styled in a manner befitting my majesty.
-  Bow before my splendour, dear students, and go forth and learn CSS!
+  This is my very important paragraph. I am a distinguished gentleman of such renown that my
+  paragraph needs to be styled in a manner befitting my majesty. Bow before my splendour, dear
+  students, and go forth and learn CSS!
 </p>
 ```
 
@@ -96,15 +95,13 @@ p::first-letter {
   <div>
     <h2>First column</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
-      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
-      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
-      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
-      Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula.
-      Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
-      convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
-      Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas
-      augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu
+      lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci.
+      Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+      at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur
+      vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+      volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue.
+      Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut
       id ornare felis, eget fermentum sapien.
     </p>
   </div>
@@ -112,13 +109,12 @@ p::first-letter {
   <div>
     <h2>Second column</h2>
     <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
-      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
-      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
-      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus
+      turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper
+      consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel.
+      Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+      vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et
+      magnis dis parturient montes, nascetur ridiculus mus.
     </p>
   </div>
 </div>
@@ -155,21 +151,20 @@ p::first-letter {
   <div>
     <h2>First column</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
-      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
-      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
-      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu
+      lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci.
+      Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+      at porta.
     </p>
   </div>
 
   <div>
     <h2>Second column</h2>
     <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
-      lectus sed lobortis finibus.
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus
+      turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper
+      consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel.
+      Mauris ultricies lectus sed lobortis finibus.
     </p>
   </div>
 
@@ -177,14 +172,12 @@ p::first-letter {
     <h2>Third column</h2>
 
     <p>
-      Nam consequat scelerisque mattis. Duis pulvinar dapibus magna, eget congue
-      purus mollis sit amet. Sed euismod lacus sit amet ex tempus, a semper
-      felis ultrices. Maecenas a efficitur metus. Nullam tempus pharetra
-      pharetra. Morbi in leo mauris. Nullam gravida ligula eros, lacinia
-      sagittis lorem fermentum ut. Praesent dapibus eros vel mi pretium, nec
-      convallis nibh blandit. Sed scelerisque justo ac ligula mollis laoreet. In
-      mattis, risus et porta scelerisque, augue neque hendrerit orci, sit amet
-      imperdiet risus neque vitae lectus.
+      Nam consequat scelerisque mattis. Duis pulvinar dapibus magna, eget congue purus mollis sit
+      amet. Sed euismod lacus sit amet ex tempus, a semper felis ultrices. Maecenas a efficitur
+      metus. Nullam tempus pharetra pharetra. Morbi in leo mauris. Nullam gravida ligula eros,
+      lacinia sagittis lorem fermentum ut. Praesent dapibus eros vel mi pretium, nec convallis nibh
+      blandit. Sed scelerisque justo ac ligula mollis laoreet. In mattis, risus et porta
+      scelerisque, augue neque hendrerit orci, sit amet imperdiet risus neque vitae lectus.
     </p>
   </div>
 
@@ -243,21 +236,20 @@ clear 可以取三个值:
   <div>
     <h2>First column</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
-      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
-      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
-      at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu
+      lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci.
+      Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+      at porta.
     </p>
   </div>
 
   <div>
     <h2>Second column</h2>
     <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
-      lectus sed lobortis finibus.
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus
+      turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper
+      consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel.
+      Mauris ultricies lectus sed lobortis finibus.
     </p>
   </div>
 
@@ -265,14 +257,12 @@ clear 可以取三个值:
     <h2>Third column</h2>
 
     <p>
-      Nam consequat scelerisque mattis. Duis pulvinar dapibus magna, eget congue
-      purus mollis sit amet. Sed euismod lacus sit amet ex tempus, a semper
-      felis ultrices. Maecenas a efficitur metus. Nullam tempus pharetra
-      pharetra. Morbi in leo mauris. Nullam gravida ligula eros, lacinia
-      sagittis lorem fermentum ut. Praesent dapibus eros vel mi pretium, nec
-      convallis nibh blandit. Sed scelerisque justo ac ligula mollis laoreet. In
-      mattis, risus et porta scelerisque, augue neque hendrerit orci, sit amet
-      imperdiet risus neque vitae lectus.
+      Nam consequat scelerisque mattis. Duis pulvinar dapibus magna, eget congue purus mollis sit
+      amet. Sed euismod lacus sit amet ex tempus, a semper felis ultrices. Maecenas a efficitur
+      metus. Nullam tempus pharetra pharetra. Morbi in leo mauris. Nullam gravida ligula eros,
+      lacinia sagittis lorem fermentum ut. Praesent dapibus eros vel mi pretium, nec convallis nibh
+      blandit. Sed scelerisque justo ac ligula mollis laoreet. In mattis, risus et porta
+      scelerisque, augue neque hendrerit orci, sit amet imperdiet risus neque vitae lectus.
     </p>
   </div>
 
@@ -398,20 +388,18 @@ footer {
   <div class="column">
     <h2>First column</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
-      aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
-      pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc,
-      at ultricies tellus laoreet sit amet.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu
+      lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci.
+      Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet.
     </p>
   </div>
 
   <div class="column">
     <h2>Second column</h2>
     <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-      tristique elit dolor, sed pretium metus suscipit vel.
+      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus
+      turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper
+      consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel.
     </p>
   </div>
 
@@ -419,12 +407,11 @@ footer {
     <h2>Third column</h2>
 
     <p>
-      Nam consequat scelerisque mattis. Duis pulvinar dapibus magna, eget congue
-      purus mollis sit amet. Sed euismod lacus sit amet ex tempus, a semper
-      felis ultrices. Maecenas a efficitur metus. Nullam tempus pharetra
-      pharetra. Morbi in leo mauris. Nullam gravida ligula eros, lacinia
-      sagittis lorem fermentum ut. Praesent dapibus eros vel mi pretium, nec
-      convallis nibh blandit. Sed scelerisque justo ac ligula mollis laoreet.
+      Nam consequat scelerisque mattis. Duis pulvinar dapibus magna, eget congue purus mollis sit
+      amet. Sed euismod lacus sit amet ex tempus, a semper felis ultrices. Maecenas a efficitur
+      metus. Nullam tempus pharetra pharetra. Morbi in leo mauris. Nullam gravida ligula eros,
+      lacinia sagittis lorem fermentum ut. Praesent dapibus eros vel mi pretium, nec convallis nibh
+      blandit. Sed scelerisque justo ac ligula mollis laoreet.
     </p>
   </div>
 

@@ -285,14 +285,10 @@ getJSON("/posts.json")
 上面代码中，`getJSON` 方法返回一个 Promise 对象，如果该对象状态变为 `resolved`，则会调用 `then` 方法指定的回调函数；如果异步操作抛出错误，状态就会变为 `rejected`，就会调用 `catch` 方法指定的回调函数，处理这个错误。另外，`then` 方法指定的回调函数，如果运行中抛出错误，也会被 `catch` 方法捕获。
 
 ```js
-p.then((val) => console.log("fulfilled:", val)).catch((err) =>
-  console.log("rejected", err),
-);
+p.then((val) => console.log("fulfilled:", val)).catch((err) => console.log("rejected", err));
 
 // 等同于
-p.then((val) => console.log("fulfilled:", val)).then(null, (err) =>
-  console.log("rejected:", err),
-);
+p.then((val) => console.log("fulfilled:", val)).then(null, (err) => console.log("rejected:", err));
 ```
 
 下面是一个例子。

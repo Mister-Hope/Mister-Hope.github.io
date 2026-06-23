@@ -261,12 +261,7 @@ declare enum Directions {
 ```ts
 // src/index.ts
 
-let directions = [
-  Directions.Up,
-  Directions.Down,
-  Directions.Left,
-  Directions.Right,
-];
+let directions = [Directions.Up, Directions.Down, Directions.Left, Directions.Right];
 ```
 
 与其他全局变量的类型声明一致，`declare enum` 仅用来定义类型，而不是具体的值。
@@ -274,12 +269,7 @@ let directions = [
 `Directions.d.ts` 仅仅会用于编译时的检查，声明文件里的内容在编译结果中会被删除。它编译结果是:
 
 ```js
-var directions = [
-  Directions.Up,
-  Directions.Down,
-  Directions.Left,
-  Directions.Right,
-];
+var directions = [Directions.Up, Directions.Down, Directions.Left, Directions.Right];
 ```
 
 其中 `Directions` 是由第三方库定义好的全局变量。
@@ -559,12 +549,7 @@ import { name, getName, Animal, Directions, Options } from "foo";
 console.log(name);
 let myName = getName();
 let cat = new Animal("Tom");
-let directions = [
-  Directions.Up,
-  Directions.Down,
-  Directions.Left,
-  Directions.Right,
-];
+let directions = [Directions.Up, Directions.Down, Directions.Left, Directions.Right];
 let options: Options = {
   data: {
     name: "foo",

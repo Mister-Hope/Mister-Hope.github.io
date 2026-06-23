@@ -310,8 +310,7 @@ f(1); // 1
 
       function foo(x) {
         console.log("x = " + x); // 10
-        for (let i = 0; i < arguments.length; i++)
-          console.log(`arg${i} = ${arguments[i]}`); // 10, 20, 30
+        for (let i = 0; i < arguments.length; i++) console.log(`arg${i} = ${arguments[i]}`); // 10, 20, 30
       }
       foo(10, 20, 30);
       ```
@@ -434,8 +433,7 @@ function foo(a, b) {
   let i;
   const rest = [];
 
-  if (arguments.length > 2)
-    for (i = 2; i < arguments.length; i++) rest.push(arguments[i]);
+  if (arguments.length > 2) for (i = 2; i < arguments.length; i++) rest.push(arguments[i]);
 
   console.log(`a = ${a}`);
   console.log(`b = ${b}`);

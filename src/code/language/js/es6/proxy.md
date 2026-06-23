@@ -293,12 +293,7 @@ const el = dom.div(
   "Hello, my name is ",
   dom.a({ href: "//example.com" }, "Mark"),
   ". I like:",
-  dom.ul(
-    {},
-    dom.li({}, "The web"),
-    dom.li({}, "Food"),
-    dom.li({}, "…actually that's it"),
-  ),
+  dom.ul({}, dom.li({}, "The web"), dom.li({}, "Food"), dom.li({}, "…actually that's it")),
 );
 
 document.body.appendChild(el);

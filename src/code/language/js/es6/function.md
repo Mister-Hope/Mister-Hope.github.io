@@ -794,11 +794,7 @@ let handler = {
   id: "123456",
 
   init: function () {
-    document.addEventListener(
-      "click",
-      (event) => this.doSomething(event.type),
-      false,
-    );
+    document.addEventListener("click", (event) => this.doSomething(event.type), false);
   },
 
   doSomething: function (type) {

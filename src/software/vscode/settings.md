@@ -280,13 +280,7 @@ tag:
 
   // eslint
   "eslint.packageManager": "pnpm",
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "vue",
-    "typescript",
-    "typescriptreact"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact", "vue", "typescript", "typescriptreact"],
 
   // Git Lens 设置
   "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm",

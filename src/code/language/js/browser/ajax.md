@@ -181,8 +181,7 @@ const getPrice = () => {
   const js = document.createElement("script");
   const head = document.getElementsByTagName("head")[0];
 
-  js.src =
-    "https://api.money.126.net/data/feed/0000001,1399001?callback=refreshPrice";
+  js.src = "https://api.money.126.net/data/feed/0000001,1399001?callback=refreshPrice";
   head.appendChild(js);
 };
 ```

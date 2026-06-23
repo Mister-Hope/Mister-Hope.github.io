@@ -792,18 +792,12 @@ const shallowMerge = (target, source) =>
 `Object.getOwnPropertyDescriptors` 方法的另一个用处，是配合 `Object.create` 方法，将对象属性克隆到一个新对象。这属于浅拷贝。
 
 ```js
-const clone = Object.create(
-  Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(obj),
-);
+const clone = Object.create(Object.getPrototypeOf(obj), Object.getOwnPropertyDescriptors(obj));
 
 // 或者
 
 const shallowClone = (obj) =>
-  Object.create(
-    Object.getPrototypeOf(obj),
-    Object.getOwnPropertyDescriptors(obj),
-  );
+  Object.create(Object.getPrototypeOf(obj), Object.getOwnPropertyDescriptors(obj));
 ```
 
 上面代码会克隆对象 `obj`。
@@ -846,10 +840,7 @@ const obj = Object.create(
 ```js
 let mix = (object) => ({
   with: (...mixins) =>
-    mixins.reduce(
-      (c, mixin) => Object.create(c, Object.getOwnPropertyDescriptors(mixin)),
-      object,
-    ),
+    mixins.reduce((c, mixin) => Object.create(c, Object.getOwnPropertyDescriptors(mixin)), object),
 });
 
 // multiple mixins example
@@ -1393,10 +1384,7 @@ const clone1 = {
 const clone2 = Object.assign(Object.create(Object.getPrototypeOf(obj)), obj);
 
 // 写法三
-const clone3 = Object.create(
-  Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(obj),
-);
+const clone3 = Object.create(Object.getPrototypeOf(obj), Object.getOwnPropertyDescriptors(obj));
 ```
 
 上面代码中，写法一的 `__proto__` 属性在非浏览器的环境不一定部署，因此推荐使用写法二和写法三。

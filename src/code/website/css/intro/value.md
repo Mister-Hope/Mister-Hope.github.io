@@ -400,11 +400,7 @@ RGBA 的工作方式与 RGB 完全相同，但有第四个值表示颜色的 alp
 }
 
 .gradient {
-  background-image: linear-gradient(
-    90deg,
-    rgba(119, 0, 255, 1) 39%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background-image: linear-gradient(90deg, rgba(119, 0, 255, 1) 39%, rgba(0, 212, 255, 1) 100%);
 }
 ```
 

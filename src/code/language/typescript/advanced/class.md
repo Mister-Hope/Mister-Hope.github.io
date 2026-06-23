@@ -326,8 +326,7 @@ var __extends =
     function __() {
       this.constructor = d;
     }
-    d.prototype =
-      b === null ? Object.create(b) : ((__.prototype = b.prototype), new __());
+    d.prototype = b === null ? Object.create(b) : ((__.prototype = b.prototype), new __());
   };
 var Animal = (function () {
   function Animal(name) {

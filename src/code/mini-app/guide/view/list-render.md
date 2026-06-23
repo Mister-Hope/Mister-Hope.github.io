@@ -131,9 +131,7 @@ Page({
     });
   },
   addNumberToFront(e) {
-    this.data.numberArray = [this.data.numberArray.length + 1].concat(
-      this.data.numberArray,
-    );
+    this.data.numberArray = [this.data.numberArray.length + 1].concat(this.data.numberArray);
     this.setData({
       numberArray: this.data.numberArray,
     });

@@ -428,8 +428,7 @@ axios.get("/user/12345").then(function (response) {
 ```js
 axios.defaults.baseURL = "https://api.example.com";
 axios.defaults.headers.common["Authorization"] = AUTH_TOKEN;
-axios.defaults.headers.post["Content-Type"] =
-  "application/x-www-form-urlencoded";
+axios.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 ```
 
 ### 自定义实例默认值

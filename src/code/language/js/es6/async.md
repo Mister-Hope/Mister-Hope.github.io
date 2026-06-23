@@ -927,8 +927,7 @@ async function* prefixLines(asyncIterable) {
 ```js
 function fetchRandom() {
   const url =
-    "https://www.random.org/decimal-fractions/" +
-    "?num=1&dec=10&col=1&format=plain&rnd=new";
+    "https://www.random.org/decimal-fractions/" + "?num=1&dec=10&col=1&format=plain&rnd=new";
   return fetch(url);
 }
 

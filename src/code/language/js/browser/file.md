@@ -25,11 +25,7 @@ const filename = f.value; // 'C:\fake-path\test.png'
 
 if (
   !filename ||
-  !(
-    filename.endsWith(".jpg") ||
-    filename.endsWith(".png") ||
-    filename.endsWith(".gif")
-  )
+  !(filename.endsWith(".jpg") || filename.endsWith(".png") || filename.endsWith(".gif"))
 ) {
   alert("Can only upload image file.");
   return false;
@@ -66,11 +62,7 @@ fileInput.addEventListener("change", () => {
   // 获取File信息:
   info.innerHTML = `文件: ${file.name}<br>大小: ${file.size}<br>修改: ${file.lastModifiedDate}`;
 
-  if (
-    file.type !== "image/jpeg" &&
-    file.type !== "image/png" &&
-    file.type !== "image/gif"
-  ) {
+  if (file.type !== "image/jpeg" && file.type !== "image/png" && file.type !== "image/gif") {
     alert("不是有效的图片文件!");
     return;
   }

@@ -21,9 +21,9 @@ category: CSS
 ```html
 <div class="word">Overflow</div>
 <div class="box">
-  This box has a height and a width. This means that if there is too much
-  content to be displayed within the assigned height, there will be an overflow
-  situation. If overflow is set to hidden then any overflow will not be visible.
+  This box has a height and a width. This means that if there is too much content to be displayed
+  within the assigned height, there will be an overflow situation. If overflow is set to hidden then
+  any overflow will not be visible.
 </div>
 
 <p>This content is outside of the box.</p>

@@ -224,12 +224,7 @@ const enum Directions {
   Right,
 }
 
-let directions = [
-  Directions.Up,
-  Directions.Down,
-  Directions.Left,
-  Directions.Right,
-];
+let directions = [Directions.Up, Directions.Down, Directions.Left, Directions.Right];
 ```
 
 常数枚举与普通枚举的区别是，它会在编译阶段被删除，并且不能包含计算成员。
@@ -264,12 +259,7 @@ declare enum Directions {
   Right,
 }
 
-let directions = [
-  Directions.Up,
-  Directions.Down,
-  Directions.Left,
-  Directions.Right,
-];
+let directions = [Directions.Up, Directions.Down, Directions.Left, Directions.Right];
 ```
 
 之前提到过，`declare` 定义的类型只会用于编译时的检查，编译结果中会被删除。
@@ -277,12 +267,7 @@ let directions = [
 上例的编译结果是:
 
 ```js
-var directions = [
-  Directions.Up,
-  Directions.Down,
-  Directions.Left,
-  Directions.Right,
-];
+var directions = [Directions.Up, Directions.Down, Directions.Left, Directions.Right];
 ```
 
 外部枚举与声明语句一样，常出现在声明文件中。
@@ -297,12 +282,7 @@ declare const enum Directions {
   Right,
 }
 
-let directions = [
-  Directions.Up,
-  Directions.Down,
-  Directions.Left,
-  Directions.Right,
-];
+let directions = [Directions.Up, Directions.Down, Directions.Left, Directions.Right];
 ```
 
 编译结果:

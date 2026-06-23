@@ -1,4 +1,5 @@
 export default {
+  cooldown: 1,
   peer: true,
   upgrade: true,
   timeout: 360000,

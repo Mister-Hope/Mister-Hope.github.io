@@ -1,18 +1,12 @@
 import { sidebar } from "vuepress-theme-hope";
+
 import { code } from "./code.js";
 import { design } from "./design.js";
-import {
-  dart,
-  javascript,
-  language,
-  markdown,
-  python,
-  typescript,
-} from "./language/index.js";
+import { dart, javascript, language, markdown, python, typescript } from "./language/index.js";
 import { linux } from "./linux.js";
 import { miniapp } from "./mini-app/index.js";
-import { piece } from "./piece.js";
 import { physics } from "./physics.js";
+import { piece } from "./piece.js";
 import { comsol, software, vscode } from "./software/index.js";
 import { vue } from "./vue.js";
 import { jquery, website } from "./website/index.js";

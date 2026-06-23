@@ -37,13 +37,7 @@ export const python = arraySidebar([
     icon: "advance",
     link: "advance/",
     prefix: "advance/",
-    children: [
-      "slice",
-      "iteration",
-      "list-comprehensions",
-      "generator",
-      "iterator",
-    ],
+    children: ["slice", "iteration", "list-comprehensions", "generator", "iterator"],
   },
   {
     text: "函数式编程",
@@ -76,14 +70,6 @@ export const python = arraySidebar([
     icon: "object",
     link: "oop/",
     prefix: "oop/",
-    children: [
-      "intro",
-      "instance",
-      "extend",
-      "property",
-      "info",
-      "customize",
-      "special",
-    ],
+    children: ["intro", "instance", "extend", "property", "info", "customize", "special"],
   },
 ]);

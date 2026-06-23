@@ -29,10 +29,7 @@ order: 2
 <div id="app">{{ message }}</div>
 
 <script type="module">
-  import {
-    createApp,
-    ref,
-  } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
+  import { createApp, ref } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
 
   createApp({
     setup() {

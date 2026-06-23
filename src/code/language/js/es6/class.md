@@ -683,10 +683,7 @@ class CustomHTMLElement {
   }
 }
 
-let descriptor = Object.getOwnPropertyDescriptor(
-  CustomHTMLElement.prototype,
-  "html",
-);
+let descriptor = Object.getOwnPropertyDescriptor(CustomHTMLElement.prototype, "html");
 
 "get" in descriptor; // true
 "set" in descriptor; // true
