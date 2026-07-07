@@ -5,7 +5,6 @@ import { design } from "./design.js";
 import { dart, javascript, language, markdown, python, typescript } from "./language/index.js";
 import { linux } from "./linux.js";
 import { miniapp } from "./mini-app/index.js";
-import { physics } from "./physics.js";
 import { piece } from "./piece.js";
 import { comsol, software, vscode } from "./software/index.js";
 import { vue } from "./vue.js";
@@ -22,7 +21,7 @@ export const zhSidebarConfig = sidebar({
 
   "/software/": software,
 
-  "/physics/": physics,
+  "/physics/": "structure",
 
   "/note/innenu/": ["", "yaml", "tag-list", "get-started"],
 
