@@ -38,6 +38,7 @@ jobs:
         with:
           branch: gh-pages
           folder: dist
+          single-commit: true
 
       - name: Trigger Hook
         run: curl -s "${{ secrets.BT_WEBHOOK_URL }}"
