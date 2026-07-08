@@ -39,41 +39,5 @@ jobs:
           branch: gh-pages
           folder: dist
 
-  deploy-server:
-    runs-on: ubuntu-latest
-    needs: deploy-gh-pages
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-        with:
-          ref: gh-pages
-          fetch-depth: 0
-
-      - name: Configuration environment
-        env:
-          HOST: direct.mister-hope.com
-          SSH_PORT: ${{ secrets.SSH_PORT }}
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        run: |
-          mkdir -p ~/.ssh/
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-
-          echo "Host $HOST" >> ~/.ssh/config
-          echo "  HostName $HOST" >> ~/.ssh/config
-          echo "  Port $SSH_PORT" >> ~/.ssh/config
-          echo "  User git" >> ~/.ssh/config
-          echo "  IdentityFile ~/.ssh/id_rsa" >> ~/.ssh/config
-          echo "  StrictHostKeyChecking no" >> ~/.ssh/config
-
-          git config --global user.name 'Mr.Hope'
-          git config --global user.email 'mister-hope@outlook.com'
-
-      - name: Deploy
-        env:
-          HOST: direct.mister-hope.com
-          DEST: /www/wwwroot/mister-hope
-          BRANCH: gh-pages
-        run: |
-          git push -f git@$HOST:$DEST $BRANCH
-          ssh git@$HOST "cd $DEST && git reset --hard HEAD"
+      - name: Trigger Hook
+        run: curl -s "${{ secrets.BT_WEBHOOK_URL }}"
