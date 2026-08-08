@@ -325,8 +325,8 @@ importers:
         specifier: 3.0.1
         version: 3.0.1
       mermaid:
-        specifier: 11.16.0
-        version: 11.16.0
+        specifier: 11.16.1
+        version: 11.16.1
       reveal.js:
         specifier: 6.0.1
         version: 6.0.1
@@ -344,7 +344,7 @@ importers:
         version: 2.0.0-rc.30(@vue/compiler-sfc@3.5.40)(@vuepress/bundler-vite@2.0.0-rc.30(@types/node@26.1.0)(@vue/compiler-sfc@3.5.40)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(webpack@5.108.4(esbuild@0.28.1)(lightningcss@1.32.0)(postcss@8.5.16))(yaml@2.9.0))(@vuepress/bundler-webpack@2.0.0-rc.30(@vue/compiler-sfc@3.5.40)(esbuild@0.28.1)(rolldown@1.1.4)(tslib@2.8.1)(vite@8.1.3(@types/node@26.1.0)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)))(esbuild@0.28.1)(rolldown@1.1.4)(vite@8.1.3(@types/node@26.1.0)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vue@3.5.40)(webpack@5.108.4(esbuild@0.28.1)(lightningcss@1.32.0)(postcss@8.5.16))
       vuepress-theme-hope:
         specifier: 2.0.0-rc.107
-        version: 2.0.0-rc.107(5d10d96b24ca1037e7cce0cc97c92dbc)
+        version: 2.0.0-rc.107(5efecfd4d8d50cdd8baba20b86cd1ad0)
     devDependencies:
       cross-env:
         specifier: 10.1.0
@@ -3851,8 +3851,8 @@ packages:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
 
-  mermaid@11.16.0:
-    resolution: {integrity: sha512-Zvm3kbstgdpvIJPPItlL7fppIZ3kibvc1oZIGxdvk9t6UFz6flv+Jw7FtRGKwfcI8OckmH04LqG6LlS6X4B1pA==}
+  mermaid@11.16.1:
+    resolution: {integrity: sha512-TQsq6u22fAn3rek5VOubrhKPo1g5hwC3FXUN9hiyupTckcYiGuuKGkNQrKYwGJkXUxZdojwRG46gsSCFZMDp4g==}
 
   methods@1.1.2:
     resolution: {integrity: sha512-iclAHeNqNm68zFtnZ0e+1L2yUIdvzNoauKU4WBA3VvH/vPFieF7qfRlwUZU+DA9P9bPXIS90ulxoUoCH23sV2w==}
@@ -7361,7 +7361,7 @@ snapshots:
       - '@vuepress/bundler-webpack'
       - typescript
 
-  '@vuepress/plugin-markdown-chart@2.0.0-rc.130(c68aa89aa82bcec28c96e9dd05043f51)':
+  '@vuepress/plugin-markdown-chart@2.0.0-rc.130(2b9445334f04e0f3367f4351fb034ac7)':
     dependencies:
       '@mdit/plugin-container': 0.23.2(markdown-it@14.3.0)
       '@mdit/plugin-plantuml': 0.24.2(markdown-it@14.3.0)
@@ -7371,7 +7371,7 @@ snapshots:
       vuepress: 2.0.0-rc.30(@vue/compiler-sfc@3.5.40)(@vuepress/bundler-vite@2.0.0-rc.30(@types/node@26.1.0)(@vue/compiler-sfc@3.5.40)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(webpack@5.108.4(esbuild@0.28.1)(lightningcss@1.32.0)(postcss@8.5.16))(yaml@2.9.0))(@vuepress/bundler-webpack@2.0.0-rc.30(@vue/compiler-sfc@3.5.40)(esbuild@0.28.1)(rolldown@1.1.4)(tslib@2.8.1)(vite@8.1.3(@types/node@26.1.0)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)))(esbuild@0.28.1)(rolldown@1.1.4)(vite@8.1.3(@types/node@26.1.0)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vue@3.5.40)(webpack@5.108.4(esbuild@0.28.1)(lightningcss@1.32.0)(postcss@8.5.16))
     optionalDependencies:
       flowchart.ts: 3.0.1
-      mermaid: 11.16.0
+      mermaid: 11.16.1
     transitivePeerDependencies:
       - '@vuepress/bundler-vite'
       - '@vuepress/bundler-webpack'
@@ -9411,7 +9411,7 @@ snapshots:
 
   merge2@1.4.1: {}
 
-  mermaid@11.16.0:
+  mermaid@11.16.1:
     dependencies:
       '@braintree/sanitize-url': 7.1.2
       '@iconify/utils': 3.1.4
@@ -10941,7 +10941,7 @@ snapshots:
       - '@vuepress/bundler-webpack'
       - typescript
 
-  vuepress-theme-hope@2.0.0-rc.107(5d10d96b24ca1037e7cce0cc97c92dbc):
+  vuepress-theme-hope@2.0.0-rc.107(5efecfd4d8d50cdd8baba20b86cd1ad0):
     dependencies:
       '@vuepress/helper': 2.0.0-rc.130(aa16407188aa22a413ed589b72e1cb57)
       '@vuepress/plugin-active-header-links': 2.0.0-rc.130(vuepress@2.0.0-rc.30(@vue/compiler-sfc@3.5.40)(@vuepress/bundler-vite@2.0.0-rc.30(@types/node@26.1.0)(@vue/compiler-sfc@3.5.40)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(webpack@5.108.4(esbuild@0.28.1)(lightningcss@1.32.0)(postcss@8.5.16))(yaml@2.9.0))(@vuepress/bundler-webpack@2.0.0-rc.30(@vue/compiler-sfc@3.5.40)(esbuild@0.28.1)(rolldown@1.1.4)(tslib@2.8.1)(vite@8.1.3(@types/node@26.1.0)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)))(esbuild@0.28.1)(rolldown@1.1.4)(vite@8.1.3(@types/node@26.1.0)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vue@3.5.40)(webpack@5.108.4(esbuild@0.28.1)(lightningcss@1.32.0)(postcss@8.5.16)))
@@ -10954,7 +10954,7 @@ snapshots:
       '@vuepress/plugin-git': 2.0.0-rc.130(aa16407188aa22a413ed589b72e1cb57)
       '@vuepress/plugin-icon': 2.0.0-rc.130(b8dd77eb1dc175835a3647b16d5518fa)
       '@vuepress/plugin-links-check': 2.0.0-rc.130(aa16407188aa22a413ed589b72e1cb57)
-      '@vuepress/plugin-markdown-chart': 2.0.0-rc.130(c68aa89aa82bcec28c96e9dd05043f51)
+      '@vuepress/plugin-markdown-chart': 2.0.0-rc.130(2b9445334f04e0f3367f4351fb034ac7)
       '@vuepress/plugin-markdown-ext': 2.0.0-rc.130(b8dd77eb1dc175835a3647b16d5518fa)
       '@vuepress/plugin-markdown-hint': 2.0.0-rc.130(97fd459c7718336cfff22a62cf9dc37e)
       '@vuepress/plugin-markdown-image': 2.0.0-rc.130(b8dd77eb1dc175835a3647b16d5518fa)
