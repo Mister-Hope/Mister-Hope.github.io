@@ -310,8 +310,8 @@ importers:
         specifier: 2.0.0-rc.130
         version: 2.0.0-rc.130(vuepress@2.0.0-rc.30(@vue/compiler-sfc@3.5.40)(@vuepress/bundler-vite@2.0.0-rc.30(@types/node@26.1.0)(@vue/compiler-sfc@3.5.40)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(webpack@5.108.4(esbuild@0.28.1)(lightningcss@1.32.0)(postcss@8.5.16))(yaml@2.9.0))(@vuepress/bundler-webpack@2.0.0-rc.30(@vue/compiler-sfc@3.5.40)(esbuild@0.28.1)(rolldown@1.1.4)(tslib@2.8.1)(vite@8.1.3(@types/node@26.1.0)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)))(esbuild@0.28.1)(rolldown@1.1.4)(vite@8.1.3(@types/node@26.1.0)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vue@3.5.40)(webpack@5.108.4(esbuild@0.28.1)(lightningcss@1.32.0)(postcss@8.5.16)))
       '@vuepress/plugin-docsearch':
-        specifier: 2.0.0-rc.130
-        version: 2.0.0-rc.130(aa16407188aa22a413ed589b72e1cb57)
+        specifier: 2.0.0-rc.132
+        version: 2.0.0-rc.132(aa16407188aa22a413ed589b72e1cb57)
       '@vuepress/plugin-feed':
         specifier: 2.0.0-rc.130
         version: 2.0.0-rc.130(aa16407188aa22a413ed589b72e1cb57)
@@ -344,7 +344,7 @@ importers:
         version: 2.0.0-rc.30(@vue/compiler-sfc@3.5.40)(@vuepress/bundler-vite@2.0.0-rc.30(@types/node@26.1.0)(@vue/compiler-sfc@3.5.40)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(webpack@5.108.4(esbuild@0.28.1)(lightningcss@1.32.0)(postcss@8.5.16))(yaml@2.9.0))(@vuepress/bundler-webpack@2.0.0-rc.30(@vue/compiler-sfc@3.5.40)(esbuild@0.28.1)(rolldown@1.1.4)(tslib@2.8.1)(vite@8.1.3(@types/node@26.1.0)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)))(esbuild@0.28.1)(rolldown@1.1.4)(vite@8.1.3(@types/node@26.1.0)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vue@3.5.40)(webpack@5.108.4(esbuild@0.28.1)(lightningcss@1.32.0)(postcss@8.5.16))
       vuepress-theme-hope:
         specifier: 2.0.0-rc.107
-        version: 2.0.0-rc.107(5efecfd4d8d50cdd8baba20b86cd1ad0)
+        version: 2.0.0-rc.107(dc82ed3c8d0fa625414c5110f2f4b15a)
     devDependencies:
       cross-env:
         specifier: 10.1.0
@@ -1974,6 +1974,18 @@ packages:
       '@vuepress/bundler-webpack':
         optional: true
 
+  '@vuepress/helper@2.0.0-rc.131':
+    resolution: {integrity: sha512-VlzJre0tJhlyoHpiRzclM9KntYzdip9rUWf8zaqfwlOV8A280fexTfWdxZwDkekgh9E3l6jJTqRJZpVDdXVFYg==}
+    peerDependencies:
+      '@vuepress/bundler-vite': 2.0.0-rc.30
+      '@vuepress/bundler-webpack': 2.0.0-rc.30
+      vuepress: 2.0.0-rc.30
+    peerDependenciesMeta:
+      '@vuepress/bundler-vite':
+        optional: true
+      '@vuepress/bundler-webpack':
+        optional: true
+
   '@vuepress/highlighter-helper@2.0.0-rc.130':
     resolution: {integrity: sha512-5tWF5I9gRFEcY8LIPUkPoe391LZeblMIrsJqhSSgJkoFUUe664DiEVpyBTpGGikd7q9+Wn9w8OWionBtR5POgg==}
     peerDependencies:
@@ -2043,8 +2055,8 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.30
 
-  '@vuepress/plugin-docsearch@2.0.0-rc.130':
-    resolution: {integrity: sha512-VwnFCURq1iFb7tiqNctSuZp1flVTn/yb5skZnhS7xFz5+c2EJ8G4kAixrUapfgZ5ptBS4UccwPihx460COhkkw==}
+  '@vuepress/plugin-docsearch@2.0.0-rc.132':
+    resolution: {integrity: sha512-DCEhR6yq7cOe7yhV/VkXAZgwdOPWA1fLmvbLW2vjJEaE7noGauN3NEh2XMPlbNlxVsnDnUsgBAuQBlXt26sNDA==}
     peerDependencies:
       vuepress: 2.0.0-rc.30
 
@@ -7182,6 +7194,21 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
+  '@vuepress/helper@2.0.0-rc.131(aa16407188aa22a413ed589b72e1cb57)':
+    dependencies:
+      '@vue/shared': 3.5.40
+      '@vueuse/core': 14.3.0(vue@3.5.40)
+      cheerio: 1.2.0
+      fflate: 0.8.3
+      gray-matter: 4.0.3
+      vue: 3.5.40
+      vuepress: 2.0.0-rc.30(@vue/compiler-sfc@3.5.40)(@vuepress/bundler-vite@2.0.0-rc.30(@types/node@26.1.0)(@vue/compiler-sfc@3.5.40)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(webpack@5.108.4(esbuild@0.28.1)(lightningcss@1.32.0)(postcss@8.5.16))(yaml@2.9.0))(@vuepress/bundler-webpack@2.0.0-rc.30(@vue/compiler-sfc@3.5.40)(esbuild@0.28.1)(rolldown@1.1.4)(tslib@2.8.1)(vite@8.1.3(@types/node@26.1.0)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)))(esbuild@0.28.1)(rolldown@1.1.4)(vite@8.1.3(@types/node@26.1.0)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vue@3.5.40)(webpack@5.108.4(esbuild@0.28.1)(lightningcss@1.32.0)(postcss@8.5.16))
+    optionalDependencies:
+      '@vuepress/bundler-vite': 2.0.0-rc.30(@types/node@26.1.0)(@vue/compiler-sfc@3.5.40)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(webpack@5.108.4(esbuild@0.28.1)(lightningcss@1.32.0)(postcss@8.5.16))(yaml@2.9.0)
+      '@vuepress/bundler-webpack': 2.0.0-rc.30(@vue/compiler-sfc@3.5.40)(esbuild@0.28.1)(rolldown@1.1.4)(tslib@2.8.1)(vite@8.1.3(@types/node@26.1.0)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))
+    transitivePeerDependencies:
+      - typescript
+
   '@vuepress/highlighter-helper@2.0.0-rc.130(@vuepress/helper@2.0.0-rc.130(aa16407188aa22a413ed589b72e1cb57))(@vueuse/core@14.3.0(vue@3.5.40))(vuepress@2.0.0-rc.30(@vue/compiler-sfc@3.5.40)(@vuepress/bundler-vite@2.0.0-rc.30(@types/node@26.1.0)(@vue/compiler-sfc@3.5.40)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(webpack@5.108.4(esbuild@0.28.1)(lightningcss@1.32.0)(postcss@8.5.16))(yaml@2.9.0))(@vuepress/bundler-webpack@2.0.0-rc.30(@vue/compiler-sfc@3.5.40)(esbuild@0.28.1)(rolldown@1.1.4)(tslib@2.8.1)(vite@8.1.3(@types/node@26.1.0)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)))(esbuild@0.28.1)(rolldown@1.1.4)(vite@8.1.3(@types/node@26.1.0)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vue@3.5.40)(webpack@5.108.4(esbuild@0.28.1)(lightningcss@1.32.0)(postcss@8.5.16)))':
     dependencies:
       '@vuepress/helper': 2.0.0-rc.130(aa16407188aa22a413ed589b72e1cb57)
@@ -7301,11 +7328,11 @@ snapshots:
       - '@vuepress/bundler-webpack'
       - typescript
 
-  '@vuepress/plugin-docsearch@2.0.0-rc.130(aa16407188aa22a413ed589b72e1cb57)':
+  '@vuepress/plugin-docsearch@2.0.0-rc.132(aa16407188aa22a413ed589b72e1cb57)':
     dependencies:
       '@docsearch/css': 4.6.3
       '@docsearch/js': 4.6.3
-      '@vuepress/helper': 2.0.0-rc.130(aa16407188aa22a413ed589b72e1cb57)
+      '@vuepress/helper': 2.0.0-rc.131(aa16407188aa22a413ed589b72e1cb57)
       '@vueuse/core': 14.3.0(vue@3.5.40)
       ts-debounce: 5.0.1
       vue: 3.5.40
@@ -10942,7 +10969,7 @@ snapshots:
       - '@vuepress/bundler-webpack'
       - typescript
 
-  vuepress-theme-hope@2.0.0-rc.107(5efecfd4d8d50cdd8baba20b86cd1ad0):
+  vuepress-theme-hope@2.0.0-rc.107(dc82ed3c8d0fa625414c5110f2f4b15a):
     dependencies:
       '@vuepress/helper': 2.0.0-rc.130(aa16407188aa22a413ed589b72e1cb57)
       '@vuepress/plugin-active-header-links': 2.0.0-rc.130(vuepress@2.0.0-rc.30(@vue/compiler-sfc@3.5.40)(@vuepress/bundler-vite@2.0.0-rc.30(@types/node@26.1.0)(@vue/compiler-sfc@3.5.40)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(webpack@5.108.4(esbuild@0.28.1)(lightningcss@1.32.0)(postcss@8.5.16))(yaml@2.9.0))(@vuepress/bundler-webpack@2.0.0-rc.30(@vue/compiler-sfc@3.5.40)(esbuild@0.28.1)(rolldown@1.1.4)(tslib@2.8.1)(vite@8.1.3(@types/node@26.1.0)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0)))(esbuild@0.28.1)(rolldown@1.1.4)(vite@8.1.3(@types/node@26.1.0)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.48.0)(yaml@2.9.0))(vue@3.5.40)(webpack@5.108.4(esbuild@0.28.1)(lightningcss@1.32.0)(postcss@8.5.16)))
@@ -10985,7 +11012,7 @@ snapshots:
       vuepress-plugin-md-enhance: 2.0.0-rc.107(b62b5ee312637cf1b5638a003e802d11)
       vuepress-shared: 2.0.0-rc.107(aa16407188aa22a413ed589b72e1cb57)
     optionalDependencies:
-      '@vuepress/plugin-docsearch': 2.0.0-rc.130(aa16407188aa22a413ed589b72e1cb57)
+      '@vuepress/plugin-docsearch': 2.0.0-rc.132(aa16407188aa22a413ed589b72e1cb57)
       '@vuepress/plugin-feed': 2.0.0-rc.130(aa16407188aa22a413ed589b72e1cb57)
       '@vuepress/plugin-revealjs': 2.0.0-rc.130(b8dd77eb1dc175835a3647b16d5518fa)
       sass: 1.100.0
