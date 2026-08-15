@@ -353,8 +353,8 @@ importers:
         specifier: 0.23.2
         version: 0.23.2
       oxc-config-hope:
-        specifier: 0.3.12
-        version: 0.3.12(oxfmt@0.62.0)
+        specifier: 0.3.13
+        version: 0.3.13(oxfmt@0.62.0)
       oxfmt:
         specifier: 0.62.0
         version: 0.62.0
@@ -2292,6 +2292,7 @@ packages:
   '@xmldom/xmldom@0.9.10':
     resolution: {integrity: sha512-A9gOqLdi6cV4ibazAjcQufGj0B1y/vDqYrcuP6d/6x8P27gRS8643Dj9o1dEKtB6O7fwxb2FgBmJS2mX7gpvdw==}
     engines: {node: '>=14.6'}
+    deprecated: this version has critical issues, please update to the latest version
 
   '@xtuc/ieee754@1.2.0':
     resolution: {integrity: sha512-DX8nKgqcGwsc0eJSqYt5lwP4DH5FlHnmuWWBRy7X0NcaGR0ZtuyeESgMwTYVEtxmsNGY+qit4QYT/MIYTOTPeA==}
@@ -4120,12 +4121,12 @@ packages:
     resolution: {integrity: sha512-6VlU9MLXbjVQD04AZCMX28hVtA5bUoadvUqO76MUCVA0ilwJbMiHsITRPfyVm6p/BC0Av/BXMujx39WCe1LEqw==}
     engines: {node: '>=20'}
 
-  oxc-config-hope@0.3.12:
-    resolution: {integrity: sha512-Wut02mDUQqHKZNehkBkOKNOOeBSlaqC3LNy3oBAnjM08dJ60P89PRdXTQ0x7olIVzMpi5xyPY6r/cw3V98jrZA==}
+  oxc-config-hope@0.3.13:
+    resolution: {integrity: sha512-b+L5lNvgEEx8e/73vZe/xB0Zz5YTWIPQrPAMaVzxjyeN5jQK3+Nq96HO/1le1bHBG07x+mVZAUFTVAN7NfbDqA==}
     engines: {node: '>=22.12.0'}
     peerDependencies:
-      oxfmt: '>=0.60.0'
-      oxlint: ^1.75.0
+      oxfmt: '>=0.63.0'
+      oxlint: ^1.78.0
       oxlint-tsgolint: '>=7.0.2'
     peerDependenciesMeta:
       oxfmt:
@@ -9748,7 +9749,7 @@ snapshots:
       stdin-discarder: 0.3.2
       string-width: 8.2.1
 
-  oxc-config-hope@0.3.12(oxfmt@0.62.0):
+  oxc-config-hope@0.3.13(oxfmt@0.62.0):
     optionalDependencies:
       oxfmt: 0.62.0
 
