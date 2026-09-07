@@ -2,10 +2,14 @@ allowBuilds:
   "@parcel/watcher": true
   esbuild: true
 
-configDependencies:
-  pacquet: ^0.11.12
-
 enableGlobalVirtualStore: true
+
+minimumReleaseAgeExclude:
+  - "@vuepress/*"
+  - vuepress-plugin-components
+  - vuepress-plugin-md-enhance
+  - vuepress-shared
+  - vuepress-theme-hope
 
 packageExtensions:
   # FIXME: This is a bug in mathjax

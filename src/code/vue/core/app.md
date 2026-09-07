@@ -12,9 +12,7 @@ order: 3
 ```js
 import { createApp } from "vue";
 
-const app = createApp({
-  /* 根组件选项 */
-});
+const app = createApp({/* 根组件选项 */});
 ```
 
 ## 根组件
@@ -119,14 +117,10 @@ app.component("TodoDeleteButton", TodoDeleteButton);
 应用实例并不只限于一个。`createApp` API 允许你在同一个页面中创建多个共存的 Vue 应用，而且每个应用都拥有自己的用于配置和全局资源的作用域。
 
 ```js
-const app1 = createApp({
-  /* ... */
-});
+const app1 = createApp({/* ... */});
 app1.mount("#container-1");
 
-const app2 = createApp({
-  /* ... */
-});
+const app2 = createApp({/* ... */});
 app2.mount("#container-2");
 ```
 
