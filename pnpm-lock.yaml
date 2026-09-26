@@ -124,8 +124,8 @@ importers:
         specifier: 2.0.0-rc.134
         version: 2.0.0-rc.134(7b47bfef8c2b8fcee1e898d842fedc75)
       '@vuepress/plugin-cache':
-        specifier: 2.0.0-rc.134
-        version: 2.0.0-rc.134(vuepress@2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524))
+        specifier: 2.0.0-rc.135
+        version: 2.0.0-rc.135(vuepress@2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524))
       '@vuepress/plugin-docsearch':
         specifier: 2.0.0-rc.134
         version: 2.0.0-rc.134(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.4.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(supports-color@8.1.1)(terser@5.51.2)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0)))(@vuepress/bundler-webpack@2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(esbuild@0.28.2)(html-minifier-terser@6.1.0)(rolldown@1.2.7)(supports-color@8.1.1)(svgo@4.1.0)(vite@8.2.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(terser@5.51.2)))(vuepress@2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524))
@@ -1617,8 +1617,8 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.31
 
-  '@vuepress/plugin-cache@2.0.0-rc.134':
-    resolution: {integrity: sha512-kyhrCZCXDwpYroZPZfrIs+ey8FwEjuI5G11XJySnk3T3zChtOrtxxb2iIS4c2JO4+MBzeJhRzJJpZUiV+U2Ncg==}
+  '@vuepress/plugin-cache@2.0.0-rc.135':
+    resolution: {integrity: sha512-53Z6+vWMB4aNHUmUuZAK+AqStV3ltFnjfwhk/D39AK1VtIFf3l294SF4IsM90C4SvETPGjZnSLjgVS0lqOJq8w==}
     peerDependencies:
       vuepress: 2.0.0-rc.31
 
@@ -3355,6 +3355,10 @@ packages:
 
   lru-cache@11.5.2:
     resolution: {integrity: sha512-4pfM1Ff0x50o0tQwb5ucw/RzNyD0/YJME6IVcStalZuMWxdt3sR3huStTtxz4PUmvZfRguvDejasvQ2kifR11g==}
+    engines: {node: 20 || >=22}
+
+  lru-cache@11.5.3:
+    resolution: {integrity: sha512-U4N8FgzmWxc8k1VH8Kr6lQg18U7Fjvby6wXHVRX/ZZ7IwWbRMgrRbP0Wrb5q5NVinryp4SQampHKdvtecItxUg==}
     engines: {node: 20 || >=22}
 
   magic-string-ast@1.0.3:
@@ -6681,10 +6685,10 @@ snapshots:
       - '@vuepress/bundler-webpack'
       - typescript
 
-  '@vuepress/plugin-cache@2.0.0-rc.134(vuepress@2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524))':
+  '@vuepress/plugin-cache@2.0.0-rc.135(vuepress@2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524))':
     dependencies:
       ci-info: 4.4.0
-      lru-cache: 11.5.2
+      lru-cache: 11.5.3
       vuepress: 2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524)
 
   '@vuepress/plugin-catalog@2.0.0-rc.134(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.4.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(supports-color@8.1.1)(terser@5.51.2)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0)))(@vuepress/bundler-webpack@2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(esbuild@0.28.2)(html-minifier-terser@6.1.0)(rolldown@1.2.7)(supports-color@8.1.1)(svgo@4.1.0)(vite@8.2.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(terser@5.51.2)))(vuepress@2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524))':
@@ -8712,6 +8716,8 @@ snapshots:
       tslib: 2.8.1
 
   lru-cache@11.5.2: {}
+
+  lru-cache@11.5.3: {}
 
   magic-string-ast@1.0.3:
     dependencies:
