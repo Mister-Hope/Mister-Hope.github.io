@@ -1,0 +1,1 @@
+var e=`/assets/promise-BpKMEUcI.png`;export{e as t};

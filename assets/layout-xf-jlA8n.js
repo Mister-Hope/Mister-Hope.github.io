@@ -1,0 +1,1 @@
+var e=`/assets/layout-Bp4jhuSY.jpg`;export{e as t};
