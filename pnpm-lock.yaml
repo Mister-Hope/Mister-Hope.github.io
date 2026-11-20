@@ -208,8 +208,8 @@ importers:
         specifier: 1.104.0
         version: 1.104.0
       sass-loader:
-        specifier: 17.0.1
-        version: 17.0.1(sass-embedded@1.104.0)(sass@1.104.0)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0))
+        specifier: 17.1.1
+        version: 17.1.1(sass-embedded@1.104.0)(sass@1.104.0)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0))
       vue:
         specifier: 3.5.42
         version: 3.5.42
@@ -218,7 +218,7 @@ importers:
         version: 2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524)
       vuepress-theme-hope:
         specifier: 2.0.0-rc.109
-        version: 2.0.0-rc.109(e6b2338cd59f731a24604eae636f71ca)
+        version: 2.0.0-rc.109(cdf37daca51772d3a83ab87f419e5eac)
     devDependencies:
       cross-env:
         specifier: 10.1.0
@@ -4464,8 +4464,8 @@ packages:
     engines: {node: '>=20.19.0'}
     hasBin: true
 
-  sass-loader@17.0.1:
-    resolution: {integrity: sha512-pgJMwCuLjVTSIWsv/2luVRXKlCeaViUGcgSe8dx95zMG4hUwqIMFmjbhq29ypFLflJU0GyiJZeLM9iI1n3KYAA==}
+  sass-loader@17.1.1:
+    resolution: {integrity: sha512-/0DqgO+5tTsXYdbnErt5XzPbRQqD+49brZ8+vKnzOTIRbrgPlPJGghGVFq6xgAjv9pf2TLHvLdrgEYYPEKGtGQ==}
     engines: {node: '>= 22.11.0'}
     peerDependencies:
       '@rspack/core': 0.x || ^1.0.0 || ^2.0.0-0
@@ -7091,7 +7091,7 @@ snapshots:
       - '@vuepress/bundler-webpack'
       - typescript
 
-  '@vuepress/plugin-sass-palette@2.0.0-rc.134(2ff0ebcaac153ec67df76cda2c7dd694)':
+  '@vuepress/plugin-sass-palette@2.0.0-rc.134(edc9d216b3c8729cc65eb87ff0c9615f)':
     dependencies:
       '@vuepress/helper': 2.0.0-rc.134(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.4.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(supports-color@8.1.1)(terser@5.51.2)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0)))(@vuepress/bundler-webpack@2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(esbuild@0.28.2)(html-minifier-terser@6.1.0)(rolldown@1.2.7)(supports-color@8.1.1)(svgo@4.1.0)(vite@8.2.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(terser@5.51.2)))(vuepress@2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524))
       chokidar: 5.0.0
@@ -7099,7 +7099,7 @@ snapshots:
     optionalDependencies:
       sass: 1.104.0
       sass-embedded: 1.104.0
-      sass-loader: 17.0.1(sass-embedded@1.104.0)(sass@1.104.0)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0))
+      sass-loader: 17.1.1(sass-embedded@1.104.0)(sass@1.104.0)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0))
     transitivePeerDependencies:
       - '@vuepress/bundler-vite'
       - '@vuepress/bundler-webpack'
@@ -9900,7 +9900,7 @@ snapshots:
       sass-embedded-win32-arm64: 1.104.0
       sass-embedded-win32-x64: 1.104.0
 
-  sass-loader@17.0.1(sass-embedded@1.104.0)(sass@1.104.0)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0)):
+  sass-loader@17.1.1(sass-embedded@1.104.0)(sass@1.104.0)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0)):
     optionalDependencies:
       sass: 1.104.0
       sass-embedded: 1.104.0
@@ -10407,11 +10407,11 @@ snapshots:
       '@vue/server-renderer': 3.5.42
       '@vue/shared': 3.5.42
 
-  vuepress-plugin-components@2.0.0-rc.109(2ff0ebcaac153ec67df76cda2c7dd694):
+  vuepress-plugin-components@2.0.0-rc.109(edc9d216b3c8729cc65eb87ff0c9615f):
     dependencies:
       '@stackblitz/sdk': 1.11.1
       '@vuepress/helper': 2.0.0-rc.134(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.4.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(supports-color@8.1.1)(terser@5.51.2)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0)))(@vuepress/bundler-webpack@2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(esbuild@0.28.2)(html-minifier-terser@6.1.0)(rolldown@1.2.7)(supports-color@8.1.1)(svgo@4.1.0)(vite@8.2.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(terser@5.51.2)))(vuepress@2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524))
-      '@vuepress/plugin-sass-palette': 2.0.0-rc.134(2ff0ebcaac153ec67df76cda2c7dd694)
+      '@vuepress/plugin-sass-palette': 2.0.0-rc.134(edc9d216b3c8729cc65eb87ff0c9615f)
       '@vueuse/core': 14.4.0(vue@3.5.42)
       balloon-css: 1.2.0
       create-codepen: 2.0.4
@@ -10422,19 +10422,19 @@ snapshots:
     optionalDependencies:
       sass: 1.104.0
       sass-embedded: 1.104.0
-      sass-loader: 17.0.1(sass-embedded@1.104.0)(sass@1.104.0)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0))
+      sass-loader: 17.1.1(sass-embedded@1.104.0)(sass@1.104.0)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0))
     transitivePeerDependencies:
       - '@vuepress/bundler-vite'
       - '@vuepress/bundler-webpack'
       - typescript
 
-  vuepress-plugin-md-enhance@2.0.0-rc.109(af73549f64ba5db3ad378e4d49c6fd11):
+  vuepress-plugin-md-enhance@2.0.0-rc.109(afcdbbbe58badf3167d6abb5b3037448):
     dependencies:
       '@mdit/plugin-container': 2.0.0(markdown-it@15.0.3)
       '@mdit/plugin-demo': 2.0.0(markdown-it@15.0.3)
       '@types/markdown-it': 14.2.0
       '@vuepress/helper': 2.0.0-rc.134(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.4.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(supports-color@8.1.1)(terser@5.51.2)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0)))(@vuepress/bundler-webpack@2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(esbuild@0.28.2)(html-minifier-terser@6.1.0)(rolldown@1.2.7)(supports-color@8.1.1)(svgo@4.1.0)(vite@8.2.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(terser@5.51.2)))(vuepress@2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524))
-      '@vuepress/plugin-sass-palette': 2.0.0-rc.134(2ff0ebcaac153ec67df76cda2c7dd694)
+      '@vuepress/plugin-sass-palette': 2.0.0-rc.134(edc9d216b3c8729cc65eb87ff0c9615f)
       '@vueuse/core': 14.4.0(vue@3.5.42)
       balloon-css: 1.2.0
       js-yaml: 5.4.1
@@ -10444,7 +10444,7 @@ snapshots:
     optionalDependencies:
       sass: 1.104.0
       sass-embedded: 1.104.0
-      sass-loader: 17.0.1(sass-embedded@1.104.0)(sass@1.104.0)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0))
+      sass-loader: 17.1.1(sass-embedded@1.104.0)(sass@1.104.0)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0))
     transitivePeerDependencies:
       - '@vuepress/bundler-vite'
       - '@vuepress/bundler-webpack'
@@ -10461,7 +10461,7 @@ snapshots:
       - '@vuepress/bundler-webpack'
       - typescript
 
-  vuepress-theme-hope@2.0.0-rc.109(e6b2338cd59f731a24604eae636f71ca):
+  vuepress-theme-hope@2.0.0-rc.109(cdf37daca51772d3a83ab87f419e5eac):
     dependencies:
       '@vuepress/helper': 2.0.0-rc.134(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.4.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(supports-color@8.1.1)(terser@5.51.2)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0)))(@vuepress/bundler-webpack@2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(esbuild@0.28.2)(html-minifier-terser@6.1.0)(rolldown@1.2.7)(supports-color@8.1.1)(svgo@4.1.0)(vite@8.2.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(terser@5.51.2)))(vuepress@2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524))
       '@vuepress/plugin-active-header-links': 2.0.0-rc.134(vuepress@2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524))
@@ -10489,7 +10489,7 @@ snapshots:
       '@vuepress/plugin-reading-time': 2.0.0-rc.134(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.4.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(supports-color@8.1.1)(terser@5.51.2)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0)))(@vuepress/bundler-webpack@2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(esbuild@0.28.2)(html-minifier-terser@6.1.0)(rolldown@1.2.7)(supports-color@8.1.1)(svgo@4.1.0)(vite@8.2.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(terser@5.51.2)))(vuepress@2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524))
       '@vuepress/plugin-redirect': 2.0.0-rc.134(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.4.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(supports-color@8.1.1)(terser@5.51.2)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0)))(@vuepress/bundler-webpack@2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(esbuild@0.28.2)(html-minifier-terser@6.1.0)(rolldown@1.2.7)(supports-color@8.1.1)(svgo@4.1.0)(vite@8.2.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(terser@5.51.2)))(vuepress@2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524))
       '@vuepress/plugin-rtl': 2.0.0-rc.134(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.4.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(supports-color@8.1.1)(terser@5.51.2)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0)))(@vuepress/bundler-webpack@2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(esbuild@0.28.2)(html-minifier-terser@6.1.0)(rolldown@1.2.7)(supports-color@8.1.1)(svgo@4.1.0)(vite@8.2.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(terser@5.51.2)))(vuepress@2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524))
-      '@vuepress/plugin-sass-palette': 2.0.0-rc.134(2ff0ebcaac153ec67df76cda2c7dd694)
+      '@vuepress/plugin-sass-palette': 2.0.0-rc.134(edc9d216b3c8729cc65eb87ff0c9615f)
       '@vuepress/plugin-seo': 2.0.0-rc.134(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.4.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(supports-color@8.1.1)(terser@5.51.2)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0)))(@vuepress/bundler-webpack@2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(esbuild@0.28.2)(html-minifier-terser@6.1.0)(rolldown@1.2.7)(supports-color@8.1.1)(svgo@4.1.0)(vite@8.2.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(terser@5.51.2)))(vuepress@2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524))
       '@vuepress/plugin-shiki': 2.0.0-rc.134(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.4.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(supports-color@8.1.1)(terser@5.51.2)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0)))(@vuepress/bundler-webpack@2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(esbuild@0.28.2)(html-minifier-terser@6.1.0)(rolldown@1.2.7)(supports-color@8.1.1)(svgo@4.1.0)(vite@8.2.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(terser@5.51.2)))(@vueuse/core@14.4.0(vue@3.5.42))(vuepress@2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524))
       '@vuepress/plugin-sitemap': 2.0.0-rc.134(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.4.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(supports-color@8.1.1)(terser@5.51.2)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0)))(@vuepress/bundler-webpack@2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(esbuild@0.28.2)(html-minifier-terser@6.1.0)(rolldown@1.2.7)(supports-color@8.1.1)(svgo@4.1.0)(vite@8.2.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(terser@5.51.2)))(vuepress@2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524))
@@ -10500,8 +10500,8 @@ snapshots:
       chokidar: 5.0.0
       vue: 3.5.42
       vuepress: 2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524)
-      vuepress-plugin-components: 2.0.0-rc.109(2ff0ebcaac153ec67df76cda2c7dd694)
-      vuepress-plugin-md-enhance: 2.0.0-rc.109(af73549f64ba5db3ad378e4d49c6fd11)
+      vuepress-plugin-components: 2.0.0-rc.109(edc9d216b3c8729cc65eb87ff0c9615f)
+      vuepress-plugin-md-enhance: 2.0.0-rc.109(afcdbbbe58badf3167d6abb5b3037448)
       vuepress-shared: 2.0.0-rc.109(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.4.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(supports-color@8.1.1)(terser@5.51.2)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0)))(@vuepress/bundler-webpack@2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(esbuild@0.28.2)(html-minifier-terser@6.1.0)(rolldown@1.2.7)(supports-color@8.1.1)(svgo@4.1.0)(vite@8.2.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(terser@5.51.2)))(vuepress@2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524))
     optionalDependencies:
       '@vuepress/plugin-docsearch': 2.0.0-rc.134(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.4.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(supports-color@8.1.1)(terser@5.51.2)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0)))(@vuepress/bundler-webpack@2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(esbuild@0.28.2)(html-minifier-terser@6.1.0)(rolldown@1.2.7)(supports-color@8.1.1)(svgo@4.1.0)(vite@8.2.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(terser@5.51.2)))(vuepress@2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524))
@@ -10509,7 +10509,7 @@ snapshots:
       '@vuepress/plugin-revealjs': 2.0.0-rc.134(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.4.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(supports-color@8.1.1)(terser@5.51.2)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0)))(@vuepress/bundler-webpack@2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(esbuild@0.28.2)(html-minifier-terser@6.1.0)(rolldown@1.2.7)(supports-color@8.1.1)(svgo@4.1.0)(vite@8.2.2(@types/node@26.4.1)(esbuild@0.28.2)(jiti@2.7.0)(sass-embedded@1.104.0)(sass@1.104.0)(terser@5.51.2)))(markdown-it@15.0.3)(vuepress@2.0.0-rc.31(45681faaf05fabda3fc719b7df9b4524))
       sass: 1.104.0
       sass-embedded: 1.104.0
-      sass-loader: 17.0.1(sass-embedded@1.104.0)(sass@1.104.0)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0))
+      sass-loader: 17.1.1(sass-embedded@1.104.0)(sass@1.104.0)(webpack@5.110.3(clean-css@5.3.3)(cssnano@7.1.9(postcss@8.5.28))(csso@5.0.5)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(lightningcss@1.33.0)(postcss@8.5.28)(svgo@4.1.0))
     transitivePeerDependencies:
       - '@mathjax/mathjax-newcm-font'
       - '@mathjax/src'
