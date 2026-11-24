@@ -9,14 +9,8 @@ permissions:
 
 jobs:
   build-test:
-    name: Test build using ${{ matrix.bundler }}
+    name: Test build
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        bundler:
-          - webpack
-          - vite
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -26,15 +20,15 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/setup@v3
         with:
-          runtime: node@^24.22.1
+          runtime: node@^26.13.1
 
       - name: Install dependencies
         run: pnpm ci
 
-      - name: Build Blog with ${{ matrix.bundler }}
+      - name: Build Blog
         env:
           NODE_OPTIONS: --max_old_space_size=8192
-        run: pnpm run build:${{ matrix.bundler }}
+        run: pnpm run build
 
   linter-test:
     runs-on: ubuntu-latest
@@ -47,7 +41,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/setup@v3
         with:
-          runtime: node@^24.22.1
+          runtime: node@^26.13.1
 
       - name: Install dependencies
         run: pnpm ci

@@ -21,13 +21,13 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/setup@v3
         with:
-          runtime: node@^24.22.1
+          runtime: node@^26.13.1
 
       - name: Install dependencies
         run: pnpm ci
 
       - name: Build Blog
-        run: pnpm run build:vite
+        run: pnpm run build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4

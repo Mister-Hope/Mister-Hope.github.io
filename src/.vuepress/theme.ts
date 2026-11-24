@@ -119,7 +119,7 @@ export default hopeTheme(
       docsearch: {
         appId: "92EXITUA7H",
         apiKey: "33b44aab931cbbd821d1cf25727c68aa",
-        indexName: "mister-hope",
+        indices: ["mister-hope"],
       },
 
       feed: {

@@ -141,7 +141,7 @@ copyFields(x, { b: 10, d: 20 });
 
 ## 泛型接口
 
-[之前学习过](../basics/type-of-function.md#接口中函数的定义)，可以使用接口的方式来定义一个函数需要符合的形状:
+[之前学习过](../basics/type-of-function.md#用接口定义函数的形状)，可以使用接口的方式来定义一个函数需要符合的形状:
 
 ```ts
 interface SearchFunc {

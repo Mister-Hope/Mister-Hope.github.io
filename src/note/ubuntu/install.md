@@ -1,4 +1,5 @@
 ---
+date: 2025-04-26
 title: 安装 Ubuntu
 ---
 
