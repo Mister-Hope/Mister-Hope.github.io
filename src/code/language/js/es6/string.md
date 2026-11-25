@@ -439,9 +439,7 @@ function authorize(user, action) {
 let x = 1;
 let y = 2;
 
-`${x} + ${y} = ${
-  x + y
-}` // "1 + 2 = 3"
+`${x} + ${y} = ${x + y}` // "1 + 2 = 3"
 `${x} + ${y * 2} = ${x + y * 2}`;
 // "1 + 4 = 5"
 

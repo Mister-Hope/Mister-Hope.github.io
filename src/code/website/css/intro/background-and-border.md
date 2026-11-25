@@ -47,8 +47,8 @@ span {
 
 ```html
 <div class="wrapper">
-  <div class="box a" />
-  <div class="box b" />
+  <div class="box a"></div>
+  <div class="box b"></div>
 </div>
 ```
 

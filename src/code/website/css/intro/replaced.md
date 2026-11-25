@@ -78,9 +78,9 @@ img {
 ```html
 <div class="wrapper">
   <img src="/assets/img/star.png" alt="star" />
-  <div />
-  <div />
-  <div />
+  <div></div>
+  <div></div>
+  <div></div>
 </div>
 ```
 

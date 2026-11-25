@@ -243,9 +243,9 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 ```html
 <div class="wrapper">
-  <div class="item1" />
-  <div class="item2" />
-  <div class="item3" />
+  <div class="item1"></div>
+  <div class="item2"></div>
+  <div class="item3"></div>
 </div>
 ```
 
@@ -280,9 +280,9 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 ```html
 <div class="wrapper">
-  <div class="item1" />
-  <div class="item2" />
-  <div class="item3" />
+  <div class="item1"></div>
+  <div class="item2"></div>
+  <div class="item3"></div>
 </div>
 ```
 
@@ -317,9 +317,9 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 ```html
 <div class="wrapper">
-  <div class="item1" />
-  <div class="item2" />
-  <div class="item3" />
+  <div class="item1"></div>
+  <div class="item2"></div>
+  <div class="item3"></div>
 </div>
 ```
 
@@ -354,9 +354,9 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 ```html
 <div class="wrapper">
-  <div class="item1" />
-  <div class="item2" />
-  <div class="item3" />
+  <div class="item1"></div>
+  <div class="item2"></div>
+  <div class="item3"></div>
 </div>
 ```
 
@@ -391,9 +391,9 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 ```html
 <div class="wrapper">
-  <div class="item1" />
-  <div class="item2" />
-  <div class="item3" />
+  <div class="item1"></div>
+  <div class="item2"></div>
+  <div class="item3"></div>
 </div>
 ```
 
@@ -428,9 +428,9 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 ```html
 <div class="wrapper">
-  <div class="item1" />
-  <div class="item2" />
-  <div class="item3" />
+  <div class="item1"></div>
+  <div class="item2"></div>
+  <div class="item3"></div>
 </div>
 ```
 
@@ -484,10 +484,9 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 ```html
 <div class="wrapper">
-  <div class="item1" />
-  <div class="item2" />
-  <div class="item3" />
-  <div class="item4" />
+  <div class="item1"></div>
+  <div class="item2"></div>
+  <div class="item3"></div>
 </div>
 ```
 
@@ -528,10 +527,9 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 ```html
 <div class="wrapper">
-  <div class="item1" />
-  <div class="item2" />
-  <div class="item3" />
-  <div class="item4" />
+  <div class="item1"></div>
+  <div class="item2"></div>
+  <div class="item3"></div>
 </div>
 ```
 
@@ -572,10 +570,9 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 ```html
 <div class="wrapper">
-  <div class="item1" />
-  <div class="item2" />
-  <div class="item3" />
-  <div class="item4" />
+  <div class="item1"></div>
+  <div class="item2"></div>
+  <div class="item3"></div>
 </div>
 ```
 
@@ -662,10 +659,9 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 ```html
 <div class="wrapper">
-  <div class="item1" />
-  <div class="item2" />
-  <div class="item3" />
-  <div class="item4" />
+  <div class="item1"></div>
+  <div class="item2"></div>
+  <div class="item3"></div>
 </div>
 ```
 
@@ -790,7 +786,7 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 ```css
 .item {
-  flex: none | [ < "flex-grow" > < "flex-shrink" >? || < "flex-basis" >];
+  flex: none | [< "flex-grow" > < "flex-shrink" >? || < "flex-basis" >];
 }
 ```
 

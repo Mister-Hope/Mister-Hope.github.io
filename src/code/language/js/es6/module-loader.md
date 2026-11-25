@@ -369,11 +369,9 @@ export default {
 // 写法一
 import baz from "./a";
 // baz = {foo: 'hello', bar: 'world'};
-
 // 写法二
 import { default as baz } from "./a";
 // baz = {foo: 'hello', bar: 'world'};
-
 // 写法三
 import * as baz from "./a";
 // baz = {
@@ -394,7 +392,6 @@ module.exports = null;
 // es.js
 import foo from "./b";
 // foo = null;
-
 import * as bar from "./b";
 // bar = { default:null };
 ```

@@ -106,7 +106,7 @@ SVG 也确实有一些缺点:
 您还可以使用 SVG 作为 CSS 背景图像，如下所示。 在下面的代码中，旧版浏览器会坚持他们理解的 PNG，而较新的浏览器将加载 SVG:
 
 ```css
- {
+{
   background: url("fallback.png") no-repeat center;
   background-image: url("image.svg");
   background-size: contain;

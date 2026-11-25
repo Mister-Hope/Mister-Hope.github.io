@@ -876,8 +876,8 @@ declare module "bar" {
 ```ts
 // src/index.ts
 
-import { Foo } from "foo";
 import * as bar from "bar";
+import { Foo } from "foo";
 
 let f: Foo;
 bar.bar();

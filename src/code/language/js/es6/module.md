@@ -288,7 +288,6 @@ import "lodash";
 ```js
 import { foo } from "my_module";
 import { bar } from "my_module";
-
 // 等同于
 import { foo, bar } from "my_module";
 ```
