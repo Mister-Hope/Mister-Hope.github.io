@@ -197,8 +197,8 @@ importers:
         specifier: 2.0.0-rc.139
         version: 2.0.0-rc.139(@vuepress/bundler-vite@2.0.0-rc.32(@types/node@26.6.6)(@vue/compiler-sfc@3.5.46)(sass-embedded@1.108.2)(sass@1.108.2)(supports-color@8.1.1))(@vuepress/plugin-git@2.0.0-rc.139(@vuepress/bundler-vite@2.0.0-rc.32(@types/node@26.6.6)(@vue/compiler-sfc@3.5.46)(sass-embedded@1.108.2)(sass@1.108.2)(supports-color@8.1.1))(vuepress@2.0.0-rc.32(@vue/compiler-sfc@3.5.46)(@vuepress/bundler-vite@2.0.0-rc.32(@types/node@26.6.6)(@vue/compiler-sfc@3.5.46)(sass-embedded@1.108.2)(sass@1.108.2)(supports-color@8.1.1))(rolldown@1.3.3)(supports-color@8.1.1)(vite@8.3.8(@types/node@26.6.6)(sass-embedded@1.108.2)(sass@1.108.2))(vue@3.5.46)))(vuepress@2.0.0-rc.32(@vue/compiler-sfc@3.5.46)(@vuepress/bundler-vite@2.0.0-rc.32(@types/node@26.6.6)(@vue/compiler-sfc@3.5.46)(sass-embedded@1.108.2)(sass@1.108.2)(supports-color@8.1.1))(rolldown@1.3.3)(supports-color@8.1.1)(vite@8.3.8(@types/node@26.6.6)(sass-embedded@1.108.2)(sass@1.108.2))(vue@3.5.46))
       '@vuepress/plugin-cache':
-        specifier: 2.0.0-rc.138
-        version: 2.0.0-rc.138(vuepress@2.0.0-rc.32(@vue/compiler-sfc@3.5.46)(@vuepress/bundler-vite@2.0.0-rc.32(@types/node@26.6.6)(@vue/compiler-sfc@3.5.46)(sass-embedded@1.108.2)(sass@1.108.2)(supports-color@8.1.1))(rolldown@1.3.3)(supports-color@8.1.1)(vite@8.3.8(@types/node@26.6.6)(sass-embedded@1.108.2)(sass@1.108.2))(vue@3.5.46))
+        specifier: 2.0.0-rc.142
+        version: 2.0.0-rc.142(vuepress@2.0.0-rc.32(@vue/compiler-sfc@3.5.46)(@vuepress/bundler-vite@2.0.0-rc.32(@types/node@26.6.6)(@vue/compiler-sfc@3.5.46)(sass-embedded@1.108.2)(sass@1.108.2)(supports-color@8.1.1))(rolldown@1.3.3)(supports-color@8.1.1)(vite@8.3.8(@types/node@26.6.6)(sass-embedded@1.108.2)(sass@1.108.2))(vue@3.5.46))
       '@vuepress/plugin-docsearch':
         specifier: 2.0.0-rc.139
         version: 2.0.0-rc.139(@vuepress/bundler-vite@2.0.0-rc.32(@types/node@26.6.6)(@vue/compiler-sfc@3.5.46)(sass-embedded@1.108.2)(sass@1.108.2)(supports-color@8.1.1))(vuepress@2.0.0-rc.32(@vue/compiler-sfc@3.5.46)(@vuepress/bundler-vite@2.0.0-rc.32(@types/node@26.6.6)(@vue/compiler-sfc@3.5.46)(sass-embedded@1.108.2)(sass@1.108.2)(supports-color@8.1.1))(rolldown@1.3.3)(supports-color@8.1.1)(vite@8.3.8(@types/node@26.6.6)(sass-embedded@1.108.2)(sass@1.108.2))(vue@3.5.46))
@@ -1425,10 +1425,10 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.32
 
-  '@vuepress/plugin-cache@2.0.0-rc.138':
-    resolution: {integrity: sha512-QmZ/UAJtPu5QIBsS+uDtPmBfdc7F9B4o/m189hEW1aG2WLuPnQjEv8l36N14GqqbHBa0aNQ+5UmihyvRVpyYuw==}
+  '@vuepress/plugin-cache@2.0.0-rc.142':
+    resolution: {integrity: sha512-lNdlT5SYOSW/lxQLNRfjNKOIoS6SPW+88S05GamPHTMh53VRS6mFQ3w0NPRx282hddqFjWOctMD1vWdHZJCKUg==}
     peerDependencies:
-      vuepress: 2.0.0-rc.32
+      vuepress: 2.0.0-rc.33
 
   '@vuepress/plugin-catalog@2.0.0-rc.139':
     resolution: {integrity: sha512-iKWU3DeH/eZr6KGa0zoccFIA8rnRoo7sGEXYPd1lan13blEvU435Z6ygDBBevdcA39/HaceGJz8zG3rA8CnBaw==}
@@ -4798,7 +4798,7 @@ snapshots:
       - '@vuepress/bundler-webpack'
       - typescript
 
-  '@vuepress/plugin-cache@2.0.0-rc.138(vuepress@2.0.0-rc.32(@vue/compiler-sfc@3.5.46)(@vuepress/bundler-vite@2.0.0-rc.32(@types/node@26.6.6)(@vue/compiler-sfc@3.5.46)(sass-embedded@1.108.2)(sass@1.108.2)(supports-color@8.1.1))(rolldown@1.3.3)(supports-color@8.1.1)(vite@8.3.8(@types/node@26.6.6)(sass-embedded@1.108.2)(sass@1.108.2))(vue@3.5.46))':
+  '@vuepress/plugin-cache@2.0.0-rc.142(vuepress@2.0.0-rc.32(@vue/compiler-sfc@3.5.46)(@vuepress/bundler-vite@2.0.0-rc.32(@types/node@26.6.6)(@vue/compiler-sfc@3.5.46)(sass-embedded@1.108.2)(sass@1.108.2)(supports-color@8.1.1))(rolldown@1.3.3)(supports-color@8.1.1)(vite@8.3.8(@types/node@26.6.6)(sass-embedded@1.108.2)(sass@1.108.2))(vue@3.5.46))':
     dependencies:
       ci-info: 4.5.0
       lru-cache: 11.5.3
